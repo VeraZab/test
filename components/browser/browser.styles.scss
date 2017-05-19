@@ -1,0 +1,53 @@
+@import "partials/abstract";
+
+.browser {
+  @include center-content;
+  &-wrapper {
+
+  }
+
+  box-shadow: $drop-shadow-l-light;
+
+  &-header {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background: white;
+    border-bottom: 1px solid $color-rhino-medium-2;
+    &-wrapper {
+      padding: 8px $unit;
+      display: flex;
+    }
+
+    &-buttons {
+      display: flex;
+    }
+
+    &-button {
+      $size: 14px;
+      width: $size;
+      height: $size;
+      border: 1px solid $color-rhino-medium-1;
+      border-radius: 50%;
+      background: $color-rhino-medium-2;
+
+      &:hover {
+        background: $color-dodger;
+        border-color: $color-dodger;
+      }
+
+      &:nth-of-type(1) {
+        //border: 1px solid $color-lavender;
+      }
+      &:nth-of-type(2) {
+        //border: 1px solid $color-dodger;
+      }
+      &:nth-of-type(3) {
+        //border: 1px solid $color-emerald;
+
+      }
+      & + & {
+        margin-left: $unit/2;
+      }
+    }
+  }
+}

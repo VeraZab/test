@@ -1,0 +1,281 @@
+.card {
+  &--simple {
+    border-radius: 8px;
+    background: white;
+    position: relative;
+
+    &.constrain-med {
+      max-width: 75%;
+
+      @include handheld {
+        max-width: 100%;
+      }
+      margin-top: $unit*4;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      left: 0%;
+      height: 100%;
+      border-radius: 40px;
+      box-shadow: 0px 8px 15px rgba($color-rhino-dark, 0.15);
+    }
+    .cardContent {
+      padding: $gutter;
+      .title-sm, .title-l {
+        color: $color-rhino-dark;
+      }
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include handheld {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.card {
+  position: relative;
+  min-width: 250px;
+
+  &-bg-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $gutter;
+    font-size: 5rem;
+    font-family: "Dosis", sans-serif;
+    opacity: 0.15;
+  }
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    padding: $gutter;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &-avatar {
+    $size: 68px;
+    background: white;
+    min-width: $size;
+    min-height: $size;
+    border-radius: 50%;
+
+    box-shadow: $drop-shadow-l;
+    @include desktop {
+      margin-right: $gutter;
+    }
+  }
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+  //----------------------------------------------------------------------------------------------------------------------
+  // Card Types
+  //----------------------------------------------------------------------------------------------------------------------
+  &-simple {
+    border-radius: 5px;
+    flex: 1;
+    text-align: left;
+    box-shadow: $drop-shadow-xl;
+    background: white;
+    color: $color-rhino-dark;
+    @include tablet {
+      flex: 1 1 calc(40% - 20px);
+      margin-bottom: $unit*2;
+    }
+    //min-width: 135px;
+    &:not(:last-of-type) {
+      @include desktop {
+        margin-right: $gutter;
+      }
+    }
+    &:not(:first-of-type):not(:last-of-type) {
+      @include desktop {
+        margin-right: $gutter;
+      }
+      @include tablet {
+        margin-left: $gutter;
+      }
+      @include handheld {
+        margin-left: 0;
+      }
+    }
+    // --
+    // Colors / Themes
+    // --
+    &.dark-blue {
+      @include linear-gradient(-135deg, #1d8ee8 0%, #1e427d 100%);
+      text-shadow: $text-shadow-default;
+      color: white;
+      .card-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      [class*="title-"] {
+        color: $color-aqua;
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &-with-image {
+    background: white;
+    box-shadow: $drop-shadow-l-light;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    @include desktop {
+      width: calc(50% - #{$gutter});
+    }
+    @include tablet{
+      & + .card-with-image{
+        margin-top:$gutter;
+      }
+    }
+    transition: $transition;
+    .card {
+      &-wrapper {
+        flex-direction: column;
+        padding: 0;
+        flex-wrap: wrap;
+
+      }
+      &-image {
+
+        @include desktop {
+          max-height: 400px;
+          height: 80vw;
+        }
+        @include tablet{
+          max-height:250px;
+        }
+        @include handheld{
+          min-height: 180px
+        }
+        width: 100%;
+        background-size: cover !important;
+        background-position: center center;
+        display: flex;
+        align-items: flex-end;
+        padding: $gutter;
+        &-label {
+          color: white;
+          @include title-l();
+          font-weight: bold;
+          font-family: 'Dosis', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+      &-body {
+        padding: $gutter*1.5;
+        text-align: left;
+        blockquote {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      &-action {
+        background: $color-dodger;
+        width: 100%;
+        padding: $unit;
+        display: flex;
+
+        transition: $transition;
+
+        @include desktop{
+          transform: translateY(30px);
+          &:hover {
+            background: $color-dodger-shade;
+          }
+        }
+
+
+
+        &-link {
+          transition: $transition;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent !important;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 19px;
+          text-shadow: $text-shadow-default;
+          letter-spacing: 2px;
+          color: white !important;
+
+          @include desktop{
+            transform: translateY(8px);
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &:hover {
+      @include desktop {
+        transform: translateY(-8px);
+        box-shadow: $drop-shadow-xl-light;
+        .card {
+          &-action {
+            transform: none;
+
+            &-link {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.bottom-blue {
+  position: relative;
+  .content-section-wrapper{
+    position: relative;
+    z-index:2;
+
+  }
+  &::before {
+    z-index: 1;
+    $top-height: 615px;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: $top-height;
+    height: calc(100% - #{$top-height});
+    @include linear-gradient(-90deg, #1d8ee8 0%, #1e427d 100%);
+  }
+}
+
+.cards.stories {
+  justify-content: space-between;
+}

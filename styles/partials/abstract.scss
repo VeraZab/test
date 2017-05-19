@@ -1,0 +1,22 @@
+//----------------------------------------------------------------------------------------------------------------------
+// Global
+//----------------------------------------------------------------------------------------------------------------------
+$unit: 12px;
+$gutter: $unit*2;
+
+$global-width: 1240px;
+
+$global-easing: cubic-bezier(.24, .8, 0, .97);
+
+$timing: 0.38s;
+$easing: $global-easing;
+$transition: $timing all $easing;
+
+$header-height: 72px;
+
+@import "mixins";
+@import "colors";
+@import "typography";
+@import "effects";
+
+@import "~include-media/dist/_include-media.scss";

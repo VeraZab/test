@@ -1,0 +1,212 @@
+//----------------------------------------------------------------------------------------------------------------------
+// Panes
+//----------------------------------------------------------------------------------------------------------------------
+.panes {
+  display: flex;
+  flex: 1;
+  max-width:100%;
+  @include tablet {
+    display: block;
+  }
+  &-half {
+    .pane {
+      @include desktop {
+        flex: 1 1 50%;
+        width: 50%;
+      }
+    }
+  }
+  .pane {
+    display: flex;
+    align-items: center;
+    color: $color-rhino-dark;
+
+    .content-section-header {
+      margin-bottom: $gutter;
+    }
+    p ~ .buttons {
+      margin-top: $gutter*1.5;
+    }
+
+    @include handheld {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    &-half {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      @include desktop {
+        flex: 1 1 50%;
+      }
+
+      &.center {
+        align-items: center;
+        justify-content: center;
+      }
+      p,
+      ul,
+      ol,
+      .content-section-header {
+        max-width: 460px;
+      }
+
+    }
+    &.column {
+      flex-direction: column;
+    }
+
+    &-quarter {
+      flex: 1 1 25%;
+    }
+    &-three-quarter {
+      flex: 1 1 75%;
+    }
+
+    &-5 {
+
+    }
+    &-10 {
+
+    }
+    &-15 {
+
+    }
+    &-20 {
+
+    }
+    &-25 {
+      flex: 1 1 25%;
+    }
+    &-30 {
+      flex: 1 1 40%;
+    }
+
+    &-40 {
+      flex: 1 1 40%;
+    }
+    &-45 {
+
+    }
+    &-50 {
+
+    }
+    &-55 {
+
+    }
+
+    &-60 {
+      flex: 1 1 60%;
+    }
+    &-65 {
+
+    }
+    &-70 {
+      flex: 1 1 60%;
+    }
+    &-75 {
+      flex: 1 1 75%;
+    }
+
+    &.title-content {
+      .content-section-header {
+        $width: 380px;
+        max-width: $width;
+        min-width: $width;
+      }
+    }
+  }
+
+}
+
+.grid {
+  display: flex;
+  @include desktop {
+    flex-wrap: wrap;
+  }
+  @include tablet {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  &-3x3 {
+
+
+    .grid-item {
+      @include desktop {
+        $size: calc(33.333% - 20px);
+        //flex: 1 1 $size;
+        //min-width: $size;
+        //max-width: $size;
+        //margin-left:$unit/2;
+        .card{
+          max-width:100%;
+          min-width: 100%;
+        }
+        &:nth-of-type(1){
+          margin-left:0;
+        }
+        &:nth-of-type(4){
+          margin-left:0;
+
+        }
+        &:nth-of-type(7){
+          margin-left:0;
+
+        }
+
+      }
+      @include tablet {
+        width: 80vw;
+      }
+    }
+  }
+
+  .grid-item {
+    padding: $gutter/2;
+
+    &:first-of-type {
+      @include tablet {
+        padding-left: $gutter;
+      }
+    }
+    &:last-of-type {
+      @include tablet {
+        padding-right: $gutter;
+      }
+    }
+    .card-simple {
+      background: white;
+      padding: $gutter $unit;
+      box-shadow: $drop-shadow-l-light;
+      transition: $transition;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        @include desktop {
+          box-shadow: $drop-shadow-xl-light;
+          transform: translateY(-6px);
+          cursor: pointer;
+          .card-label {
+            color: $color-dodger;
+          }
+        }
+      }
+      &:active {
+        transform: none;
+        box-shadow: $drop-shadow-pressed;
+        //background: lighten(whitesmoke, 2%);
+      }
+      .card-label {
+        color: $color-rhino-dark;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        transition: $transition;
+      }
+    }
+  }
+}
+

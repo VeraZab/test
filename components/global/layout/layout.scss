@@ -1,0 +1,178 @@
+@import "main";
+
+html {
+  background: $color-rhino-light-2;
+}
+
+body {
+  //@include animationFadein-med();
+  //background: #ffffff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+}
+
+.page {
+  //@include linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
+  //background-image: url("https://images.plot.ly/plotly-marketing-pages/images/new-branding/illustrations/heroes/hero-home@2x.png");
+  //background-repeat: no-repeat;
+  //background-position: 100% 76%;
+  background: white;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  &:not(.button):not(.nav-item-wrapper) {
+    text-decoration: none;
+    color: $color-lavender;
+    background-repeat: repeat-x;
+    background-size: 3px .16em;
+    background-position: 0 1.245em;
+    font-weight: 500;
+    &:link {
+      color: $color-lavender;
+      background-image: linear-gradient(to bottom, rgba($color-lavender, 0.5) 50%, rgba(0, 0, 0, 0) 50%);
+    }
+    &:hover {
+      color: rgba($color-dodger, 0.8) !important;
+      background-image: linear-gradient(to bottom, rgba($color-dodger, 0.3) 50%, rgba(0, 0, 0, 0) 50%);
+    }
+    &:visited {
+      background-image: linear-gradient(to bottom, currentColor 50%, rgba(0, 0, 0, 0) 50%);
+      color: $color-lavender;
+    }
+    &:active {
+      color: $color-aqua;
+      //background-image: linear-gradient(to bottom, currentColor 50%, rgba(0, 0, 0, 0) 50%);
+    }
+  }
+}
+
+.page {
+  overflow: hidden;
+  @include handheld {
+    //padding-top:72px;
+  }
+}
+
+.hidden {
+  opacity: 1 !important;
+}
+
+.animateIn {
+  //@include animationFadein-sm;
+}
+
+//
+//.hidden {
+//  transition: $transition;
+//  //opacity: 0;
+//  transition-duration: $timing-animation/1.5;
+//  transition-delay: 0s !important;
+//  animation-delay: 0s !important;
+//  //transform: translateY(40px);
+//
+//  &.in-view-enter {
+//    //transform: none;
+//    //opacity: 1;
+//    @include animationFadeAndSlideInFromTop-sm;
+//    animation-delay: 0s !important;
+//  }
+//
+//  &.in-view-exit {
+//    //transform: translateY(-10px) !important;
+//  }
+//
+//  &.hidden-up {
+//    &.in-view-enter {
+//      //transform: none;
+//      //opacity: 1;
+//      @include animationFadeAndSlideInFromBottom-sm;
+//      animation-delay: 0s !important;
+//    }
+//  }
+//
+//  &.delay-med {
+//    &.in-view-enter {
+//      animation-delay: 0.35s !important;
+//    }
+//  }
+//
+//  &.hidden-fade {
+//    &.in-view-enter {
+//      //transform: none;
+//      //opacity: 1;
+//      @include animationFadein;
+//      animation-delay: 0.35s !important;
+//    }
+//  }
+//}
+* {
+  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.not-mobile {
+  @include handheld {
+    display: none;
+  }
+}
+
+.bottom-light-bg {
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    height:200px;
+    background: #f2f4f5;
+    left:0;
+    width: 100%;
+  }
+}
+
+.desktop-only{
+  @include tablet{
+    display: none !important;
+  }
+}
+.mobile-only{
+  @include desktop{
+    display: none;
+  }
+}
+
+.cards-narrative{
+  @include handheld{
+    display: block;
+  }
+  .card{
+    max-width:calc(33.333% - 60px);
+    width:calc(33.333% - 60px);
+    min-width: 0 !important;
+    padding-right:$gutter*2;
+    //max-width:calc(33.333% - 60px);
+    display: flex;
+    &-wrapper{
+      flex:1;
+    }
+
+    @include tablet{
+      max-width:calc(50% - 60px);
+      width:calc(50% - 60px);
+    }
+    @include handheld{
+      max-width:calc(100%);
+      width:calc(100%);
+    }
+  }
+}

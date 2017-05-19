@@ -1,0 +1,222 @@
+@import "partials/abstract";
+
+.tabs {
+  //----------------------------------------------------------------------------------------------------------------------
+  // Tabs Header
+  //----------------------------------------------------------------------------------------------------------------------
+  &-header {
+    .sticky {
+      top: 72px !important;
+      background: white;
+      z-index: 99;
+    }
+    &-wrapper {
+      @include global-wrapper;
+      display: flex;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+    .tab {
+      &:not(.pagination) {
+        flex: 1;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $gutter*2 $gutter;
+      @include tablet {
+        padding: $gutter;
+      }
+      @include handheld {
+        padding: $unit;
+      }
+      transition: $transition;
+      @include bar-highlight;
+      * {
+        pointer-events: none;
+      }
+
+      &.not-clickable {
+        .tab-label {
+          opacity: 0.15;
+        }
+      }
+      &-icon {
+        $size: 48px;
+        background: $color-rhino-light-2;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        margin-right: $unit;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        img {
+          max-width: 30px;
+          display: block;
+        }
+      }
+      &-label {
+        font-family: 'Dosis', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: lighten($color-rhino-dark, 8%);
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        transition: $transition;
+        user-select: none;
+        //white-space:nowrap;
+
+        @include tablet {
+          font-size: 1.1rem;
+        }
+
+        @include handheld {
+          font-size: 1.1rem;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:hover, &.active {
+        .tab {
+          &-label {
+            color: $color-rhino-core;
+          }
+        }
+      }
+      &:not(.active) {
+        &:active {
+          .tab-icon {
+            @include active-state-transform;
+          }
+          .tab-label {
+            color: $color-dodger;
+            @include active-state-transform;
+          }
+        }
+      }
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+
+  //----------------------------------------------------------------------------------------------------------------------
+  // Tabs Content
+  //----------------------------------------------------------------------------------------------------------------------
+
+  .mobile-up {
+
+    .tabs-content {
+
+      &:not(.active) {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        pointer-events: none;
+      }
+
+      &.active {
+        .tabs-content-wrapper {
+
+          opacity: 0;
+          @include animationFadeAndSlideInFromTop-sm;
+
+        }
+      }
+    }
+
+  }
+  &-content {
+    background: $color-rhino-light-2;
+    overflow: hidden;
+
+    &-wrapper {
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      @include global-wrapper;
+
+      @include tablet{
+        padding-top:$gutter;
+        padding-bottom:$gutter;
+        .panes {
+          //display: block;
+          .pane {
+
+            &.padding-l {
+              padding: $unit;
+              padding-left:$gutter;
+
+            }
+          }
+        }
+      }
+
+      @include handheld {
+        .panes {
+          display: block;
+          .pane {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            &.padding-l {
+              padding: $unit;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+.padding-l {
+  padding: $gutter*4;
+}
+
+.mobile-up {
+  @include handheld {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @include handheld {
+    display: flex;
+  }
+  @include handheld-up{
+    display: none;
+  }
+}
+
+.mobile-tab-content{
+  background: $color-rhino-light-2;
+  padding-bottom:$gutter;
+  @include handheld-up{
+    position: fixed;
+    top: 0;
+    z-index:-999;
+    pointer-events:none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.sticky-bottom{
+  height:72px;
+}
+
+
+

@@ -1,0 +1,200 @@
+///////////-------------------------------------------------------------------------------------------------------------
+///---
+/// Buttons
+/// buttons.scss
+///---
+///////////-------------------------------------------------------------------------------------------------------------
+
+.buttons {
+  @include handheld-up {
+    display: flex;
+    align-items: center;
+
+    // --
+    // When there are multiple buttons in a row
+    // --
+    .button + .button {
+      margin-left: $unit;
+    }
+  }
+  @include handheld {
+    .button + .button {
+      margin-top: $unit;
+    }
+  }
+
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & + & {
+    margin-top: $gutter;
+  }
+
+  &.layout-align{
+
+    &-center{
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.button {
+  padding: $unit/1.5 $gutter;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: $transition;
+  user-select: none;
+  //display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  &-icon {
+    $size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-mdi{
+      transform: translateY(3px);
+    }
+
+    &-wrapper{
+
+      .mdi{
+        font-size:32px;
+      }
+    }
+    img {
+      display: block;
+    }
+  }
+
+  &-small {
+    padding: $unit/2 $unit;
+    font-size: 12px;
+  }
+
+  &-link {
+
+  }
+  // -- 
+  // Primary Button Styles
+  // --
+
+
+  &-primary {
+    background: $color-button-default;
+    box-shadow: $drop-shadow;
+    color: white !important;
+    text-shadow: $text-shadow-default;
+    &:hover {
+      background: $color-button-hover;
+      cursor: pointer;
+    }
+    &:visited{
+      color: white !important;
+    }
+    &:active {
+      background: $color-button-active;
+      box-shadow: $drop-shadow-pressed;
+    }
+  }
+  &-emerald {
+    background: $color-emerald;
+    box-shadow: $drop-shadow;
+    color: white !important;
+    text-shadow: $text-shadow-default;
+    &:hover {
+      background: lighten($color-emerald, 8%);
+      cursor: pointer;
+    }
+    &:active {
+      background: #07aca3;
+      box-shadow: $drop-shadow-pressed;
+    }
+  }
+
+  // --
+  // Secondary Button Styles
+  // --
+  &-secondary {
+    border: 1px solid $color-dodger;
+    color: $color-dodger !important;
+
+    &:hover{
+      border-color: $color-button-hover !important;
+      color: $color-button-hover !important;
+    }
+  }
+
+  // -- 
+  // Default hover + active states
+  // -- 
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    @include active-state-transform;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Hero buttons
+//----------------------------------------------------------------------------------------------------------------------
+.hero {
+  .button {
+    padding: $unit*1.5;
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    &-icon {
+
+    }
+    &-small {
+      padding: $unit/2 $unit;
+      font-size: 12px;
+    }
+    // --
+    // Primary Hero Button
+    // --
+    &-primary {
+      background: $color-emerald;
+      &:hover {
+        background: #04BA9E;
+      }
+      &:active {
+        background: #07ACA3;
+      }
+    }
+    // --
+    // Secondary Hero Button
+    // --
+    &-secondary {
+      border-color: white;
+      color: white !important;
+      border-width: 2px;
+      box-shadow: $drop-shadow;
+      text-shadow: $text-shadow-default;
+
+      &:hover{
+        background: white;
+        color: $color-rhino-dark !important;
+        text-shadow: none;
+        border-color: white !important;
+      }
+      &:active{
+        color: $color-lavender !important;
+      }
+    }
+
+  }
+}

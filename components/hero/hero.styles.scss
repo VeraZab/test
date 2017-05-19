@@ -1,0 +1,170 @@
+@import "partials/abstract";
+
+.hero {
+  display: flex;
+  padding-top: 72px;
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background: url(https://images-hoshi.nationalmachine.co/ineffable/uploads/8e24bc29d4dcbda1aa6f2a1dcdd4c0e6/background-dots.png) repeat center center, linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
+    background-size: 14.5px, cover;
+  }
+  &::after {
+
+  }
+  &:not(.no-fade){
+    .hero-background-image{
+      @include animationFadein-sm;
+    }
+  }
+  &-background-image {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  &-wrapper {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &-top,
+  &-bottom {
+    display: flex;
+    align-items: center;
+    &-wrapper {
+      flex: 1;
+      flex-direction: column;
+      @include global-wrapper;
+    }
+  }
+
+  &-top {
+    flex: 1;
+    padding-top: $gutter*4;
+    @include handheld {
+    }
+  }
+  &-bottom {
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    padding-bottom: $gutter;
+    padding-top: $gutter*4;
+    .clients-heading {
+      display: none;
+      @include handheld {
+        display: block;
+        @include center-content;
+        text-align: center;
+        color: rgba(white, 0.25);
+      }
+    }
+  }
+
+  &-messaging {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: white;
+      @include center-content;
+      margin-bottom: $gutter;
+      text-shadow: $text-shadow-default;
+      text-align: center;
+      //@include animationFadeAndSlideInFromTop-sm;
+    }
+    h2 {
+      @include center-content;
+      max-width: 480px;
+      color: white;
+      font-weight: 100;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: $gutter;
+      text-align: center;
+      text-shadow: $text-shadow-default;
+      //@include animationFadeAndSlideInFromBottom-sm;
+    }
+  }
+
+  &-actions {
+    padding-top: $unit;
+    //@include animationFadeAndSlideInFromBottom-sm;
+    .buttons {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .footnote {
+    text-align: center;
+    font-size: 0.85rem;
+    color: $color-rhino-medium-1;
+    margin-top: $gutter;
+    @include handheld {
+      margin-top: $gutter*2;
+    }
+    a {
+      color: currentColor;
+      text-decoration: underline;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+      &:active {
+        @include active-state-transform;
+      }
+    }
+  }
+
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Logos
+//----------------------------------------------------------------------------------------------------------------------
+.logos-display {
+  &-wrapper {
+    @include global-wrapper;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 $gutter;
+    @include handheld {
+      padding-top: $gutter;
+    }
+    .logo-item {
+      padding: $unit;
+      opacity: 0.8;
+    }
+    img {
+      max-width: 140px;
+      max-height: 70px;
+      filter: brightness(0) invert(1);
+
+      @include handheld {
+        max-width: 80px;
+      }
+    }
+  }
+}
