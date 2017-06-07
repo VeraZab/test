@@ -1,5 +1,5 @@
 import React from 'react'
-import {ContentSection, ContentPane, Title, Body} from '/components/content-section/content-section'
+import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section'
 import CodeExplorer from './code-explorer/code-explorer';
 
 export default () => (

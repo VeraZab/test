@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '/components/hero/hero.styles.scss';
+import styles from './hero.styles.scss';
 
 // Main wrapper
 export class Hero extends React.Component {
