@@ -10,6 +10,9 @@ import {
 } from '../../../../components/hero/hero';
 import Buttons from '../../../../components/buttons/buttons';
 import {ClientLogos} from '../../../../components/global/client-logos/client-logos';
+import styles from "./home-hero.styles.scss";
+import {Prismic} from 'prismic.io';
+import Link from 'next/link';
 
 const HeroWrapperStyle = {
     backgroundImage: 'url(https://images.plot.ly/plotly-marketing-pages/images/new-branding/illustrations/heroes/hero-home@2x.png)',

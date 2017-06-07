@@ -44,4 +44,3 @@ export default () => (
       </ContentPane>
     </ContentSection>
 )
-
