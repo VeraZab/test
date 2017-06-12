@@ -8,8 +8,10 @@ class CustomerServiceMain extends React.Component {
 
   render() {
     const story = this.props.story;
+    const spacing = this.props.spacing;
+
     return (
-            <div className="card card-with-image">
+            <div styclassName="card card-with-image">
               <div className="card-wrapper">
                 <div className="card-image" style={story.style}>
                   <div className="card-image-label">

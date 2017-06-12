@@ -3,8 +3,6 @@ import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, Hero
 import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
-
-
 const HeroWrapperStyle = {
     backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
     backgroundSize: '1640px',
