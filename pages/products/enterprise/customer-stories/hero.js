@@ -4,7 +4,7 @@ import Buttons from '../../../../components/buttons/buttons';
 import {Browser} from '../../../../components/browser/browser';
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(/static/images/banner-splash.jpg)',
+    // backgroundImage: 'url(/static/images/banner-splash.jpg)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'
@@ -62,23 +62,3 @@ class CustomerServiceHero extends React.Component {
     }
 }
 export default CustomerServiceHero;
-
-
-
-//
-// export default () => (
-//     <Hero heroWrapperStyle={HeroWrapperStyle}>
-//         <HeroTop>
-//             <HeroMessaging>
-//                 <HeroTitle>
-//                     C-12 Energy
-//                 </HeroTitle>
-//                 <HeroSubtitle>
-//                      Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions.
-//                 </HeroSubtitle>
-//             </HeroMessaging>
-//         </HeroTop>
-//         <HeroBottom style={HeroBottomStyles}>
-//         </HeroBottom>
-//     </Hero>
-// )
