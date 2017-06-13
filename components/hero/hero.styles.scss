@@ -20,11 +20,18 @@
   &::after {
 
   }
-  &:not(.no-fade){
-    .hero-background-image{
+  &:not(.no-fade) {
+    .hero-background-image {
       @include animationFadein-sm;
     }
   }
+  
+  &.no-dots{
+    &::before{
+      display: none;
+    }
+  }
+
   &-background-image {
     content: '';
     height: 100%;
@@ -41,6 +48,50 @@
     display: flex;
     flex-direction: column;
 
+  }
+
+  &.split-half {
+    .hero-top-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &.align-left {
+    text-align: left;
+    .hero-actions {
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      padding-bottom:$gutter*4;
+    }
+    .buttons {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #FFFFFF;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 36px;
+    }
+
+    p {
+      margin-top: $gutter;
+      font-size: 16px;
+      color: #FFFFFF;
+      line-height: 26px;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+      text-align: left;
+    }
+
+    .hero-graphic.dash{
+      transform: translateX(40px);
+    }
   }
 
   &-top,

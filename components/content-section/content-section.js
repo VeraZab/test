@@ -126,6 +126,9 @@ export class ContentPane extends React.Component {
         if ('half' in this.props) {
             classes += ' content-section-pane-half';
         }
+        if ('thirds' in this.props) {
+            classes += ' content-section-pane-third';
+        }
         if ('left' in this.props) {
             classes += ' content-section-pane-align-left';
         }

@@ -1,7 +1,7 @@
 import Layout from '../../../components/global/layout/layout';
 import Hero from './hero';
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '/components/content-section/content-section';
-import Buttons from '/components/buttons/buttons';
+import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '../../../components/content-section/content-section';
+import Buttons from '../../../components/buttons/buttons';
 
 import styles from '../cloud/pricing.styles.scss';
 const onPremData = [

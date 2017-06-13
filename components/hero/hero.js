@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '/components/hero/hero.styles.scss';
+import styles from './hero.styles.scss';
 
 // Main wrapper
 export class Hero extends React.Component {
@@ -15,6 +15,14 @@ export class Hero extends React.Component {
 
         let classes = '';
 
+
+
+        if (this.props.alignLeft) {
+            classes += ' align-left';
+        }
+        if (this.props.splitHalf) {
+            classes += ' split-half';
+        }
         if (this.props.className){
             classes += ' ' + this.props.className;
         }

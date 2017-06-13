@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './import.scss'
 
-import {ContentSection, ContentPane, Title, Subtitle, Body} from '/components/content-section/content-section'
+import {ContentSection, ContentPane, Title, Subtitle, Body} from '../../../../components/content-section/content-section'
 
 export default () => (
 
