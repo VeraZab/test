@@ -69,7 +69,7 @@ export default class HeroSection extends React.Component {
                             <Buttons items={HeroButtons[0]}/>
                         </HeroActions>
                     </HeroMessaging>
-                    
+
                     <div className="hero-graphic dash dash-graphic">
                         <img src="/static/images/dash/dash-hero-visual@2x.png" alt=""/>
                     </div>
