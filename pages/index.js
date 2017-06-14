@@ -26,9 +26,6 @@ class Index extends React.Component {
                     footnote: response.getStructuredText('home.hero_footnote').asHtml(),
                     clients: response.getGroup('home.hero_clients').toArray()
             };
-
-
-
             return {response, hero};
 
         }, function (err) {
