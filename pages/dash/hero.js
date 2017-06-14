@@ -58,7 +58,7 @@ export default class HeroSection extends React.Component {
                             Easily build beautiful web-based interfaces in&nbsp;Python
                         </HeroTitle>
                         <h3>
-                            Dash is a python framework that abstracts away the Javascript, CSS, and HTML that’s
+                            Dash is a Python framework that abstracts away the Javascript, CSS, and HTML that’s
                             necessary to build web&nbsp;applications.
                         </h3>
                         <p>

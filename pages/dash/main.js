@@ -63,7 +63,7 @@ export default () => (
                     Lightweight
                 </div>
                 <p>
-                    An app like this weighs in at just 80 lines of pure python, with graphs and dropdowns populated
+                    An app like this weighs in at just 80 lines of pure Python, with graphs and dropdowns populated
                     directly from Pandas dataframes.
                 </p>
             </ContentPane>
