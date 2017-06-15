@@ -18,7 +18,18 @@ const HeroButtons = [
             title: '',
             icon: null,
             target: '_self',
-            link: '/create',
+            link: '/dash',
+            button: {
+                classes: 'button button-primary button-white'
+            }
+        },
+        {
+            label: 'Read the Announcement',
+            subtitle: null,
+            title: '',
+            icon: null,
+            target: '_self',
+            link: '/dash',
             button: {
                 classes: 'button button-primary button-white'
             }
@@ -58,15 +69,18 @@ export default class HeroSection extends React.Component {
                             Easily build beautiful web-based interfaces in&nbsp;Python
                         </HeroTitle>
                         <h3>
-                            Dash is a Python framework that abstracts away the Javascript, CSS, and HTML that’s
-                            necessary to build web&nbsp;applications.
+                            Dash is a Python framework for building analytical
+                            web applications. No JavaScript required.
                         </h3>
                         <p>
-                            Built on top of React.js and Plotly.js, Dash is perfect for data-driven applications
-                            that require dropdowns, sliders, graphs, tables.
+                            Built on top of Plotly.js, React, and Flask,
+                            Dash ties modern UI elements like dropdowns,
+                            sliders, and graphs to your analytical
+                            Python code.
                         </p>
                         <HeroActions>
                             <Buttons items={HeroButtons[0]}/>
+                            <Buttons items={HeroButtons[1]}/>
                         </HeroActions>
                     </HeroMessaging>
 

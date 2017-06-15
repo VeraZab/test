@@ -125,3 +125,15 @@
     }
   }
 }
+
+pre {
+  text-align: left;
+  font-family: monospace;
+  color: #7FDBFF;
+  background-color: #444;
+  padding: 15px;
+  overflow-y: scroll;
+  max-height: 500px;
+  float: right;
+  font-size: 0.8rem;
+}
