@@ -283,7 +283,7 @@ export default () => (
                     App permissioning with LDAP and Active Directory,
                     all behind your corporate firewall.&nbsp;
                     <a href="#" className="special-link"><span className="special-link-label">
-                        Learn more →
+                        Request a Demo →
                     </span></a>
                 </p>
                 </Body>
@@ -297,7 +297,8 @@ export default () => (
                 <div className="cards stories">
                     <div className="card card-with-image">
                         <div className="card-wrapper">
-                            <div className="card-image" style={bg}>
+                            <div className="card-image"
+                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-sharing.png")'}}>
                                 <div className="card-image-label">
                                     Dash Enterprise Deployment
                                 </div>
@@ -307,8 +308,19 @@ export default () => (
                                     Managing apps and servers inside your
                                     enterprise is usually a full time job.
                                     Our goal with Dash Enterprise is to make
-                                    sharing a Dash app internally as easy and
-                                    secure as possible. No dev-ops required.
+                                    deploying and sharing a Dash app internally
+                                    as easy and secure as possible.
+                                    No dev-ops required.
+                                </blockquote>
+
+                                <blockquote>
+                                    Dash Enterprise handles all of the hard
+                                    parts about managing apps for you:
+                                    deployingment, managing updates,
+                                    error handling, URL routing, LDAP integration,
+                                    and more.
+                                    Deploy and share an app behind your
+                                    firewall in minutes.
                                 </blockquote>
                             </div>
                             <div className="card-action">
@@ -318,21 +330,20 @@ export default () => (
                     </div>
                     <div className="card card-with-image">
                         <div className="card-wrapper">
-                            <div className="card-image" style={bg}>
+                            <div className="card-image"
+                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-portal.png")'}}>
                                 <div className="card-image-label">
-                                    Dash Enterprise Permissioning
+                                    Dash Enterprise App Portal
                                 </div>
                             </div>
                             <div className="card-body">
                                 <blockquote>
-                                    Dash Enterprise handles the URL routing,
-                                    the monitoring, the failure handling,
-                                    the deployment, the versioning,
-                                    and the package management.
-                                    Dash Apps deployed with Dash Enterprise
-                                    can be provisioned through your
-                                    company’s Active Directory or LDAP
-                                    user accounts.
+                                    Dash Enterprise ties into Plotly Enterprise,
+                                    storing your
+                                    analytical Dash applications
+                                    with plotly graphs, datasets, SQL queries,
+                                    and dashboards in one company-wide
+                                    portal.
                                 </blockquote>
                             </div>
                             <div className="card-action">
