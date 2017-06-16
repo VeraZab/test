@@ -32,7 +32,7 @@ export default ({children, meta = defaultMeta}) => (
 
             <meta property="og:site_name" content={globalMeta.sitename} />
             <meta property="og:type" content={meta.type ? meta.type : defaultMeta.type} />
-            <meta property="og:title" content={meta.title ? meta.title + ' &bull; ' + defaultMeta.sitename : defaultMeta.title + ' • ' + defaultMeta.sitename} />
+            <meta property="og:title" content={meta.title ? meta.title + ' • ' + defaultMeta.sitename : defaultMeta.title + ' • ' + defaultMeta.sitename} />
             <meta property="og:description" content={meta.description ? meta.description : defaultMeta.description} />
             <meta property="og:url" content={meta.url ? meta.url : defaultMeta.url} />
             <meta property="og:image" content={meta.image ? meta.image : defaultMeta.image} />
