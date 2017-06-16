@@ -66,25 +66,25 @@ const navigationLeft = [
                             title: 'See all of our pricing options.',
                             icon: null,
                             target: '_self',
-                            link: '/products/online-chart-maker/'
+                            link: '/products/cloud/',
                         },
                         {
                             id: 11,
                             label: 'On Premise',
-                            slug: '/products/cloud/',
-                            title: 'See all of our pricing options.',
+                            slug: '/products/on-premise/',
+                            title: 'The behind-the-firewall version of Plotly Cloud.',
                             icon: null,
                             target: '_self',
-                            link: '/products/online-chart-maker/'
+                            link: '/products/on-premise/',
                         },
                         {
                             id: 12,
                             label: 'Support',
                             slug: '/products/cloud/',
-                            title: 'See all of our pricing options.',
+                            title: 'Learn about our dedicated support plan options.',
                             icon: null,
-                            target: '_self',
-                            link: '/products/online-chart-maker/'
+                            target: '_blank',
+                            link: 'http://support.plot.ly/'
                         }
                     ]
                 }
