@@ -1,6 +1,6 @@
 import React from 'react'
-import BrowserWrapper from '/components/elements/browser-wrapper/browser-wrapper'
-import {ContentSection, ContentPane, Title, Body} from '/components/content-section/content-section'
+import BrowserWrapper from '../../../../components/elements/browser-wrapper/browser-wrapper'
+import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section'
 
 export default () => (
     <ContentSection className="dark-blue center">

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './pricing.styles.scss';
-import Buttons from '/components/buttons/buttons';
+import Buttons from '../../../components/buttons/buttons';
 
 const pricingLevels = [
     {
@@ -8,7 +8,7 @@ const pricingLevels = [
         price: {
             monthly: '0',
             annually: null,
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -26,29 +26,29 @@ const pricingLevels = [
                 value: 'The <strong>Community&nbsp;Plan</strong> includes the following:'
             },
             {
-                value: '50 v1 API calls per day and 250 v2 API calls per day'
+                value: 'Community Support'
             },
             {
-                value: 'Connect to 7 data sources including SQL databases, MS Excel, and CSV files'
-            },
-            {
-                value: 'Unlimited public files'
+                value: 'Unlimited Public Files'
             },
             {
                 value: 'PNG & JPEG Export'
             },
             {
-                value: 'Support from community forum: <a href="https://community.plot.ly" target="_blank">community.plot.ly</a>'
+                value: '250 API Calls per day'
+            },
+            {
+                value: 'Connect to 7 Data Sources'
             }
         ]
     },
     {
-        label: "Personal",
-        message: '<a href="#">Student Discount Available</a>',
+        label: "Student",
+        message: "*.edu email required.",
         price: {
-            monthly: '33',
-            annually: '396',
-            frequency: 'per month',
+            monthly: '59',
+            annually: '59',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -66,19 +66,59 @@ const pricingLevels = [
                 value: 'Includes everything in the <strong>Community Plan</strong>'
             },
             {
-                value: '10,000 API calls per day'
+                value: 'Community Support'
             },
             {
-                value: 'Connect to 11 data sources including SQL databases, MS Excel, and CSV files'
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
             },
             {
-                value: 'Unlimited private and public files'
+                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
             },
             {
-                value: 'SVG, EPS, HTML & PDF Export'
+                value: '5000 API Calls per day'
             },
             {
-                value: 'Chat support for Plotly 2.0: the online <a href="/products/online-chart-maker">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a> (excludes student subscriptions)'
+                value: 'Connect to 11 Data Sources'
+            }
+        ]
+    },
+    {
+        label: "Personal",
+        message: null,
+        price: {
+            monthly: '33',
+            annually: '396',
+            frequency: 'per year',
+            users: 'per user'
+        },
+        actions: [
+            {
+                label: 'Sign Up',
+                link: 'https://plot.ly/accounts/login/?action=signup',
+                button: {
+                    classes: 'button button-primary'
+                },
+                target: '_blank'
+            }
+        ],
+        features: [
+            {
+                value: 'Includes everything in the <strong>Community Plan</strong>'
+            },
+            {
+                value: 'Community Support'
+            },
+            {
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+            },
+            {
+                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+            },
+            {
+                value: '5000 API Calls per day'
+            },
+            {
+                value: 'Connect to 11 Data Sources'
             }
         ]
     },
@@ -88,7 +128,7 @@ const pricingLevels = [
         price: {
             monthly: '79',
             annually: '948',
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -106,67 +146,26 @@ const pricingLevels = [
                 value: 'Includes everything in the <strong>Personal Plan</strong>'
             },
             {
-                value: '10,000 API calls per day'
+                value: 'Chat, Email and Phone Support'
             },
             {
-                value: 'Connect to 18 data sources including SQL databases, MS Excel, and CSV files'
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
             }
             ,
             {
-                value: 'Unlimited private and public files'
+                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
             }
             ,
             {
-                value: 'SVG, EPS, HTML & PDF Export'
+                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
             }
             ,
             {
-                value: 'Chat, email, and phone support for Plotly 2.0: the online <a href="https://plot.ly/online-chart-maker/">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a>'
+                value: '10,000 API Calls per day'
             }
-        ]
-    },
-    {
-        label: "On-Premise",
-        price: {
-            monthly: '829',
-            annually: '9,550',
-            frequency: 'per month',
-            users: 'covers 5 users'
-        },
-        actions: [
+            ,
             {
-                label: 'Learn More',
-                link: '/products/on-premise/',
-                button: {
-                    classes: 'button button-primary'
-                },
-                target: '_self'
-            }
-        ],
-        features: [
-            {
-                value: 'Includes everything in the <strong>Professional Plan</strong>'
-            },
-            {
-                value: 'Unlimited API calls'
-            },
-            {
-                value: 'Connect to 18 data sources and request custom connectors'
-            },
-            {
-                value: 'Unlimited private and public files'
-            },
-            {
-                value: 'SVG, EPS, HTML & PDF Export'
-            },
-            {
-                value: "Developer support for using Plotly's API with MATLAB, R, and Python"
-            },
-            {
-                value: 'Integrate with Exisisting LDAP & Active Directory Groups'
-            },
-            {
-                value: 'Behind-the-firewall Security'
+                value: 'Connect to 18 Data Sources'
             }
         ]
     }
@@ -195,7 +194,7 @@ export default class PricingDetails extends React.Component {
             } else {
                 return (<div className="price">
                     <div className="price-text">
-                        <span className="usd">$</span>{item.price.monthly}
+                        <span className="usd">$</span>{item.price.annually}
                     </div>
                 </div>)
             }

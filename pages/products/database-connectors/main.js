@@ -1,4 +1,4 @@
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '/components/content-section/content-section';
+import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '../../../components/content-section/content-section';
 import React from 'react';
 import Link from 'next/link';
 

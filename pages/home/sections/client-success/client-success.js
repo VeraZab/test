@@ -1,6 +1,6 @@
 import React from "react";
 import {ContentSection, ContentPane, Title, Body}
-  from "/components/content-section/content-section";
+  from "../../../../components/content-section/content-section";
 import Tweets from "../tweets/tweets";
 import styles from "./client-success.scss";
 // Styles

@@ -153,6 +153,23 @@
         padding: $unit;
       }
     }
+
+    &-full{
+      width: 100% !important;
+    }
+
+    &-third {
+      width: 33.3333%;
+      @include media('<=800px'){
+        width: 100%;
+      }
+      @include handheld {
+        width: 100%;
+      }
+      @at-root & .content-section-pane-wrapper {
+        padding: $unit;
+      }
+    }
     &-flex {
       flex: 1;
     }
@@ -167,6 +184,12 @@
     }
 
     &-graphic{
+
+      & + .content-section-pane-text{
+        @include desktop{
+          padding-left:$gutter;
+        }
+      }
       @include tablet{
         width: 35%;
       }

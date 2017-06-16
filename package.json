@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "New and improved branding and marketing pages with React and next.js.",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
+  },
+  "engines": {
+    "node": "7.10.0"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
@@ -30,7 +33,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lru-cache": "^4.0.2",
     "mdi": "^1.8.36",
-    "next": "beta",
+    "next": "latest",
     "next-url-prettifier": "^1.1.2",
     "node-sass": "^4.4.0",
     "normalize-scss": "^6.0.0",

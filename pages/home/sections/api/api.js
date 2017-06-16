@@ -1,5 +1,5 @@
 import React from 'react'
-import {ContentSection, ContentPane, Title, Body} from '/components/content-section/content-section'
+import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section'
 import CodeExplorer from './code-explorer/code-explorer';
 
 export default () => (
@@ -9,11 +9,14 @@ export default () => (
                 Develop
             </div>
             <Title>
-                Outstanding API
+                The fastest growing charting libraries for R, Python, and Javascript
             </Title>
             <Body>
-            <p>Sample API text, one or even two paragraphs of text to highlighting plotly api awesomeness.
-                Perform your analysis with the tools you know and love.</p>
+            <p>Plotly's open-source, interactive charting libraries for R, Python, and Javascript are the fastest
+                growing charting libraries in each language. Work entirely offline in IDEs like RStudio or Jupyter
+                notebook, or optionally host your work on Plotly Cloud or Plotly On-Premise. Hosting Plotly charts
+                online allows developers and data scientists to collaborate effortlessly with analysts who do not
+                code.</p>
             <CodeExplorer />
             </Body>
         </ContentPane>
