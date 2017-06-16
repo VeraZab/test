@@ -5,8 +5,8 @@ import {
     Subtitle,
     Body,
     Graphic
-} from '../../components/content-section/content-section';
-import Buttons from '../../components/buttons/buttons';
+} from '../../../components/content-section/content-section';
+import Buttons from '../../../components/buttons/buttons';
 
 
 const bg = {

@@ -7,8 +7,8 @@ import {
     HeroSubtitle,
     HeroActions,
     HeroBottom
-} from '../../components/hero/hero';
-import Buttons from '../../components/buttons/buttons';
+} from '../../../components/hero/hero';
+import Buttons from '../../../components/buttons/buttons';
 
 const HeroButtons = [
     [
