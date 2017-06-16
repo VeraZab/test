@@ -23,7 +23,7 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'The <strong>Community&nbsp;Plan</strong> includes the following:'
+                value: 'The <strong>Community&nbsp;Plan</strong> includes the&nbsp;following'
             },
             {
                 value: 'Community Support'
@@ -35,60 +35,22 @@ const pricingLevels = [
                 value: 'PNG & JPEG Export'
             },
             {
-                value: '250 API Calls per day'
+                value: '<strong>250</strong> API Calls per day'
             },
             {
-                value: 'Connect to 7 Data Sources'
-            }
-        ]
-    },
-    {
-        label: "Student",
-        message: "*.edu email required.",
-        price: {
-            monthly: '59',
-            annually: '59',
-            frequency: 'per year',
-            users: 'per user'
-        },
-        actions: [
-            {
-                label: 'Sign Up',
-                link: 'https://plot.ly/accounts/login/?action=signup',
-                button: {
-                    classes: 'button button-primary'
-                },
-                target: '_blank'
-            }
-        ],
-        features: [
-            {
-                value: 'Includes everything in the <strong>Community Plan</strong>'
-            },
-            {
-                value: 'Community Support'
-            },
-            {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
-            },
-            {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
-            },
-            {
-                value: '5000 API Calls per day'
-            },
-            {
-                value: 'Connect to 11 Data Sources'
+                value: 'Connect to <strong>7</strong> Data Sources'
             }
         ]
     },
     {
         label: "Personal",
-        message: null,
+        message: "Are you a student?",
+        messageHover : true,
+        messageAction: null,
         price: {
             monthly: '33',
             annually: '396',
-            frequency: 'per year',
+            frequency: 'per month',
             users: 'per user'
         },
         actions: [
@@ -103,7 +65,7 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Community Plan</strong>'
+                value: 'Includes everything in the<br /><strong>Community Plan</strong>'
             },
             {
                 value: 'Community Support'
@@ -115,20 +77,21 @@ const pricingLevels = [
                 value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
             },
             {
-                value: '5000 API Calls per day'
+                value: '<strong>5000</strong> API Calls per day'
             },
             {
-                value: 'Connect to 11 Data Sources'
+                value: 'Connect to <strong>11</strong> Data Sources'
             }
         ]
     },
     {
         label: "Professional",
         message: 'Our most popular plan!',
+        messageAction: null,
         price: {
             monthly: '79',
             annually: '948',
-            frequency: 'per year',
+            frequency: 'per month',
             users: 'per user'
         },
         actions: [
@@ -143,7 +106,7 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Personal Plan</strong>'
+                value: 'Includes everything in the<br /><strong>Personal Plan</strong>'
             },
             {
                 value: 'Chat, Email and Phone Support'
@@ -157,15 +120,11 @@ const pricingLevels = [
             }
             ,
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: '<strong>10,000</strong> API Calls per day'
             }
             ,
             {
-                value: '10,000 API Calls per day'
-            }
-            ,
-            {
-                value: 'Connect to 18 Data Sources'
+                value: 'Connect to <strong>18</strong> Data Sources'
             }
         ]
     }
@@ -173,16 +132,48 @@ const pricingLevels = [
 
 export default class PricingDetails extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            student: false
+        };
+
+        this.toggleStudentState = this.toggleStudentState.bind(this);
     }
 
     componentDidMount() {
 
     }
 
+    toggleStudentState() {
+        this.setState({
+            student: !this.state.student
+        });
+    }
+
     render() {
 
+        pricingLevels[1].messageAction = this.toggleStudentState;
 
+        if (this.state.student === true) {
+            pricingLevels[1].label = "Student";
+            pricingLevels[1].message = "See non-student pricing.";
+            pricingLevels[1].price = {
+                monthly: '5',
+                annually: '59',
+                frequency: 'per month',
+                users: 'per user'
+            }
+        };
+        if (this.state.student === false) {
+            pricingLevels[1].label = "Personal";
+            pricingLevels[1].message = "Are you a student?";
+            pricingLevels[1].price = {
+                monthly: '33',
+                    annually: '396',
+                    frequency: 'per month',
+                    users: 'per user'
+            }
+        };
 
         let pricingCardBodyPrice = (item) => {
             if (item.price.monthly === '0') {
@@ -194,7 +185,7 @@ export default class PricingDetails extends React.Component {
             } else {
                 return (<div className="price">
                     <div className="price-text">
-                        <span className="usd">$</span>{item.price.annually}
+                        <span className="usd">$</span>{item.price.monthly}
                     </div>
                 </div>)
             }
@@ -225,7 +216,13 @@ export default class PricingDetails extends React.Component {
         };
 
         let pricingCardHeaderMessage = (item) => {
-            if (item.message) {
+
+            if (item.message && item.messageHover === true) {
+                return (<div className="pricing-cards-headers-item-message hidden hidden-fade" onClick={item.messageAction}>
+                    <div className="pricing-cards-headers-item-message-text message-action"
+                         dangerouslySetInnerHTML={{__html: item.message}}/>
+                </div>)
+            } else if (item.message) {
                 return (<div className="pricing-cards-headers-item-message hidden hidden-fade">
                     <div className="pricing-cards-headers-item-message-text"
                          dangerouslySetInnerHTML={{__html: item.message}}/>
