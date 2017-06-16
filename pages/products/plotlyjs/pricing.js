@@ -1,19 +1,19 @@
 import React from 'react';
-import styles from './pricing.styles.scss';
+import styles from '../cloud/pricing.styles.scss';
 import Buttons from '../../../components/buttons/buttons';
 
 const pricingLevels = [
     {
-        label: "Community",
+        label: "Team Support",
         price: {
-            monthly: '0',
+            monthly: '19,500',
             annually: null,
-            frequency: 'per year',
-            users: 'per user'
+            frequency: 'one-time purchase',
+            users: 'per team'
         },
         actions: [
             {
-                label: 'Sign Up',
+                label: 'Purchase',
                 link: 'https://plot.ly/accounts/login/?action=signup',
                 button: {
                     classes: 'button button-primary'
@@ -23,73 +23,30 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'The <strong>Community&nbsp;Plan</strong> includes the following:'
+                value: 'Includes the following:'
             },
             {
-                value: 'Community Support'
+                value: 'Hands-on assistance with all of our Plotly API wrappers and PlotlyJS'
             },
             {
-                value: 'Unlimited Public Files'
+                value: 'Email, chat, and phone support for one year'
             },
             {
-                value: 'PNG & JPEG Export'
+                value: '2 hour response time (9-5 EST)'
             },
             {
-                value: '250 API Calls per day'
-            },
-            {
-                value: 'Connect to 7 Data Sources'
+                value: 'API support for online and offline use'
             }
         ]
     },
     {
-        label: "Student",
-        message: "*.edu email required.",
+        label: "Developer Support",
+        message: '<a href="#">Student Discount Available</a>',
         price: {
-            monthly: '59',
-            annually: '59',
-            frequency: 'per year',
-            users: 'per user'
-        },
-        actions: [
-            {
-                label: 'Sign Up',
-                link: 'https://plot.ly/accounts/login/?action=signup',
-                button: {
-                    classes: 'button button-primary'
-                },
-                target: '_blank'
-            }
-        ],
-        features: [
-            {
-                value: 'Includes everything in the <strong>Community Plan</strong>'
-            },
-            {
-                value: 'Community Support'
-            },
-            {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
-            },
-            {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
-            },
-            {
-                value: '5000 API Calls per day'
-            },
-            {
-                value: 'Connect to 11 Data Sources'
-            }
-        ]
-    },
-    {
-        label: "Personal",
-        message: null,
-        price: {
-            monthly: '33',
+            monthly: '499',
             annually: '396',
-            frequency: 'per year',
-            users: 'per user'
+            frequency: 'one-time purchase',
+            users: 'per developer'
         },
         actions: [
             {
@@ -103,32 +60,29 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Community Plan</strong>'
+                value: 'Includes the following'
             },
             {
-                value: 'Community Support'
+                value: 'Hands-on assistance with all of our Plotly API wrappers and PlotlyJS'
             },
             {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+                value: 'Email and chat support for one year'
             },
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: '24 hour response time (9-5 EST)'
             },
             {
-                value: '5000 API Calls per day'
-            },
-            {
-                value: 'Connect to 11 Data Sources'
+                value: 'API support for online and offline use'
             }
         ]
     },
     {
-        label: "Professional",
+        label: "Plotly.js Team workshops",
         message: 'Our most popular plan!',
         price: {
             monthly: '79',
             annually: '948',
-            frequency: 'per year',
+            frequency: 'per month',
             users: 'per user'
         },
         actions: [
@@ -146,26 +100,22 @@ const pricingLevels = [
                 value: 'Includes everything in the <strong>Personal Plan</strong>'
             },
             {
-                value: 'Chat, Email and Phone Support'
+                value: '10,000 API calls per day'
             },
             {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+                value: 'Connect to 18 data sources including SQL databases, MS Excel, and CSV files'
             }
             ,
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: 'Unlimited private and public files'
             }
             ,
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: 'SVG, EPS, HTML & PDF Export'
             }
             ,
             {
-                value: '10,000 API Calls per day'
-            }
-            ,
-            {
-                value: 'Connect to 18 Data Sources'
+                value: 'Chat, email, and phone support for Plotly 2.0: the online <a href="https://plot.ly/online-chart-maker/">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a>'
             }
         ]
     }
@@ -194,7 +144,7 @@ export default class PricingDetails extends React.Component {
             } else {
                 return (<div className="price">
                     <div className="price-text">
-                        <span className="usd">$</span>{item.price.annually}
+                        <span className="usd">$</span>{item.price.monthly}
                     </div>
                 </div>)
             }

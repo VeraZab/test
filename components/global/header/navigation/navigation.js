@@ -51,10 +51,45 @@ const navigationLeft = [
         slug: 'pricing',
         title: 'See all of our pricing options.',
         icon: null,
-        target: '_self',
-        link: '/products/cloud/',
+        target: null,
+        link: null,
         button: null,
-        submenu: null
+        submenu: {
+            sections: [
+                {
+                    label: null,
+                    items: [
+                        {
+                            id: 10,
+                            label: 'Cloud',
+                            slug: '/products/cloud/',
+                            title: 'See all of our pricing options.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/online-chart-maker/'
+                        },
+                        {
+                            id: 11,
+                            label: 'On Premise',
+                            slug: '/products/cloud/',
+                            title: 'See all of our pricing options.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/online-chart-maker/'
+                        },
+                        {
+                            id: 12,
+                            label: 'Support',
+                            slug: '/products/cloud/',
+                            title: 'See all of our pricing options.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/online-chart-maker/'
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         id: 5,
@@ -105,15 +140,6 @@ const navigationLeft = [
                             icon: 'sql-connector',
                             target: '_self',
                             link: '/products/database-connectors/'
-                        },
-                        {
-                            id: 10,
-                            label: 'Plotly On-Premise',
-                            slug: '/products/on-premise/',
-                            title: 'See all of our pricing options.',
-                            icon: 'matlab',
-                            target: '_self',
-                            link: '/products/on-premise/'
                         }
                     ]
                 },
@@ -155,15 +181,6 @@ const navigationLeft = [
                             icon: 'matlab',
                             target: '_blank',
                             link: 'https://plot.ly/matlab/'
-                        },
-                        {
-                            id: 15,
-                            label: 'Developer Support',
-                            slug: '/products/on-premise/',
-                            title: 'Learn about advanced support plans we offer',
-                            icon: 'matlab',
-                            target: '_blank',
-                            link: 'https://support.plot.ly/'
                         }
                     ]
 
@@ -325,8 +342,9 @@ export default class Navigation extends React.Component {
                     </div>
                     <div className={'nav-item-submenu' + classes}>
                         <div className="nav-item-submenu-wrapper">
-                            <div className="mobile-only close submenu-close" onClick={this.toggleProductSubmenu.bind(this)}>
-                               Close
+                            <div className="mobile-only close submenu-close"
+                                 onClick={this.toggleProductSubmenu.bind(this)}>
+                                Close
                             </div>
                             {navSubmenuSections(item.submenu.sections)}
                         </div>

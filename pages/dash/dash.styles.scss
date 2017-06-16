@@ -1,25 +1,23 @@
 @import "partials/abstract";
 
-
-
 .dash {
 
-  &-hero{
-    @include media('<=980px'){
-      .hero-top-wrapper{
+  &-hero {
+    @include media('<=980px') {
+      .hero-top-wrapper {
         flex-direction: column !important;
 
-        .dash-graphic{
+        .dash-graphic {
           transform: none !important;
-          padding-bottom:$gutter*4;
-          padding-top:0;
+          padding-bottom: $gutter*4;
+          padding-top: 0;
         }
       }
     }
   }
 
-  &-graphic{
-    padding-top:$gutter*4;
+  &-graphic {
+    padding-top: $gutter*4;
   }
 
   &-graphics {
@@ -30,8 +28,8 @@
 
   &-logo {
     width: 100%;
-    &-wrapper{
-      padding-bottom:$gutter*3;
+    &-wrapper {
+      padding-bottom: $gutter*3;
     }
     img {
       max-width: 177px;
@@ -40,7 +38,7 @@
 
   &-section {
 
-    p{
+    p {
       font-size: 22px;
       color: #516783;
       line-height: 36px;
@@ -59,12 +57,12 @@
 
       padding-top: $gutter*2;
 
-      @include desktop{
+      @include desktop {
         transform: translateY(-120px);
       }
 
-      @include tablet{
-        padding-bottom:$gutter*4;
+      @include tablet {
+        padding-bottom: $gutter*4;
       }
 
       .content-section-wrapper {
@@ -136,4 +134,15 @@ pre {
   max-height: 500px;
   float: right;
   font-size: 0.8rem;
+}
+
+.card.card-with-image {
+  display: flex !important;
+
+  .card-wrapper {
+    flex: 1;
+  }
+  .card-body {
+    flex: 1;
+  }
 }

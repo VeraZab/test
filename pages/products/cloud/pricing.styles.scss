@@ -52,7 +52,7 @@
           width: $width;
           min-width: $width;
 
-          &:nth-of-type(3) {
+          &:nth-of-type(6) {
             transform: translateY(-40px);
             //border: 2px solid $color-emerald;
           }
@@ -85,7 +85,7 @@
       width: $width;
       min-width: $width;
 
-      &:nth-of-type(3) {
+      &:nth-of-type(6) {
         transform: translateY(-40px);
         //border: 2px solid $color-emerald;
       }
@@ -115,7 +115,7 @@
       position: relative;
       z-index: 4;
 
-      &:nth-of-type(3) {
+      &:nth-of-type(4) {
 
         background: $color-emerald;
       }
@@ -292,6 +292,21 @@
   }
 }
 
+.on-prem-pricing-cards{
+  display: flex;
+
+  @include media('<=1000px'){
+    display: block;
+    .pricing-card-single{
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  .pricing-card-single{
+    flex: 1;
+  }
+}
+
 .pricing-card-single {
   flex: 1;
   width: 25%;
@@ -299,8 +314,8 @@
   min-width: 180px;
 
   &.full-width{
-    width: 100%;
-    min-width: 100%;
+    //width: 100%;
+    //min-width: 100%;
 
     .pricing-cards{
       &-headers,
@@ -330,9 +345,9 @@
         }
         &-item-value{
          &:not(:first-of-type){
-           width:50% !important;
-           max-width:50% !important;
-           min-width:50% !important;
+           //width:50% !important;
+           //max-width:50% !important;
+           //min-width:50% !important;
          }
         }
       }
