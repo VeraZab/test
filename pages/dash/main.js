@@ -30,6 +30,44 @@ const DemoButtons = [
     []
 ];
 
+const ExampleCodeBlock = `import dash
+from dash.dependencies import Input, Output
+import dash_core_components as dcc
+import dash_html_components as html
+from pandas_datareader import data as web
+from datetime import datetime as dt
+
+app = dash.Dash()
+
+app.layout = html.Div([
+    html.H1('Stock Tickers'),
+    dcc.Dropdown(
+        id='my-dropdown',
+        options=[
+            {'label': 'Coke', 'value': 'COKE'},
+            {'label': 'Tesla', 'value': 'TSLA'},
+            {'label': 'Apple', 'value': 'AAPL'}
+        ],
+        value='COKE'
+    ),
+    dcc.Graph(id='my-graph')
+])
+
+@app.callback(Output('my-graph', 'figure'), [Input('my-dropdown', 'value')])
+def update_graph(selected_dropdown_value):
+    df = web.DataReader(
+        selected_dropdown_value, data_source='google',
+        start=dt(2017, 1, 1), end=dt.now())
+    return {
+        'data': [{
+            'x': df.index,
+            'y': df.Close
+        }]
+    }
+
+if __name__ == '__main__':
+    app.run_server()`;
+
 export default () => (
     <div>
 
@@ -44,10 +82,12 @@ export default () => (
                 </p>
                 <div className="dash-graphics">
                     <div className="dash-graphics-wrapper">
-                        <img src="/static/images/dash/productive-image.png" alt=""/>
+                        <img src="/static/images/dash/hello-world.gif"
+                             alt="Example screenshot of a Dash app"
+                        />
                     </div>
                     <div className="graphics-wrapper">
-                        <img src="/static/images/dash/Code.png" alt=""/>
+                        <pre>{ExampleCodeBlock}</pre>
                     </div>
                 </div>
                 </Body>
@@ -63,8 +103,11 @@ export default () => (
                     Lightweight
                 </div>
                 <p>
-                    An app like this weighs in at just 80 lines of pure Python, with graphs and dropdowns populated
-                    directly from Pandas dataframes.
+                    Dash apps require very little boilerplate to get started:
+                    An app like this weighs in at just 40 lines of pure Python.
+                </p>
+                <p>
+
                 </p>
             </ContentPane>
             <ContentPane thirds center-vertically>
@@ -75,8 +118,9 @@ export default () => (
                     Direct Control
                 </div>
                 <p>
-                    Dash provides a direct interface between your data analysis code and the UI controls required to
-                    explore it.
+                    Dash provides a simple interface for tying UI controls,
+                    like sliders, dropdowns, and graphs, with
+                    your Python data analysis code.
                 </p>
             </ContentPane>
             <ContentPane thirds center-vertically>
@@ -84,11 +128,12 @@ export default () => (
                     <img src="/static/images/dash/composable-icon.png" alt="Dash is Composable and Modular"/>
                 </div>
                 <div className="title">
-                    Composable & modular
+                    Completely Customizable
                 </div>
                 <p>
-                    Dash apps require very little boilerplate to get started but scale out into large apps with many
-                    elements easily.
+                    Every aesthetic element of a Dash app is customizable.
+                    Dash apps are built and published in the Web, so the full
+                    power of CSS is available.
                 </p>
             </ContentPane>
         </ContentSection>
@@ -99,11 +144,9 @@ export default () => (
                 </Title>
                 <Body>
                 <p>
-                    Add a slider to chart, monitor your experiments, or roll your own business intelligence platform.
-                </p>
-                <p>
-                    Dash enables data scientists, analysts, and scientists working in Python to build their own
-                    interfaces.
+                    Explore data, tweak your models, monitor your experiments,
+                    or roll your own business intelligence platform.
+                    Dash is the frontend to your analytical Python backend.
                 </p>
                 </Body>
             </ContentPane>
@@ -116,12 +159,14 @@ export default () => (
                     Example App #1
                 </div>
                 <Title>
-                    Bank Repo Exploration
+                    Stock Tickers
                 </Title>
                 <Body>
                 <p>
-                    Drill down into the World Bank’s data repository with this app that includes dropdowns, sliders, and
-                    tables.
+                    Built in just under 100 lines of code, this app queries
+                    remote financial data from Google Finance and
+                    renders interactive candlestick charts.
+                    Pandas is used to compute upper and lower bollinger bands.
                 </p>
 
                 <Buttons className="gutter-top" items={DemoButtons[0]}/>
@@ -129,26 +174,36 @@ export default () => (
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
-                <Graphic
-                    image="/static/images/dash/example-app-1-graphic.png"/>
+                <a href={DemoButtons[0].link}>
+                    <Graphic
+                        image="/static/images/dash/stock-tickers.png"/>
+                </a>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="/static/images/dash/example-app-2-graphic.png"/>
+                    image="/static/images/dash/drug-discovery.gif"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <div className="pre-title">
                     Example App #2
                 </div>
                 <Title>
-                    Satelite Exploration
+                    Drug Discovery
                 </Title>
                 <Body>
                 <p>
-                    Explore satellites in real-time.
+                    Explore chemical properties with this drug discovery app.
+                    As you hover over points, rich meta information about
+                    the drug is displayed in real-time.
+                    Buttons above the chart allow you to switch between
+                    visualizations.
+                </p>
+                <p>
+                    Dash enables you to build apps that are tailor-made to your
+                    datasets and exploratory process.
                 </p>
                 <Buttons className="gutter-top" items={DemoButtons[0]}/>
                 </Body>
@@ -161,38 +216,51 @@ export default () => (
                     Example App #3
                 </div>
                 <Title>
-                    The recession in 255 charts
+                    Goldman Sachs Interactive Report
                 </Title>
                 <Body>
                 <p>
-                    How the recession reshaped the economy, in 255 charts. Build interactive reports and documents with
-                    dash.
+                    This Dash App is branded just like a Goldman Sachs report
+                    through the use of custom CSS. It includes a
+                    "Print to PDF" button and is formatted to great on the web
+                    and in PDF form. On the web version, the charts are
+                    interactive.
+                </p>
+                <p>
+                    With Dash, you can automate reports from Python and use
+                    the same platform for the web and for print.
                 </p>
                 <Buttons className="gutter-top" items={DemoButtons[0]}/>
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="/static/images/dash/example-app-3-graphic.png"/>
+                    image="/static/images/dash/goldman-sachs.png"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="/static/images/dash/example-app-4-graphic.png"/>
+                    image="/static/images/dash/uber-example.png"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <div className="pre-title">
                     Example App #4
                 </div>
                 <Title>
-                    Web-based spreadsheets
+                    NYC Uber Rides
                 </Title>
                 <Body>
                 <p>
-                    This dash app binds models to a web-based spreadsheet. We’re helping companies migrate away from VBA
-                    and Excel to Python and Dash.
+                    This Dash App displays the deparature of all Uber rides
+                    in 2017. A histogram below map displays the popularity of
+                    rides and selecting different hours filters data in the map.
+                </p>
+                <p>
+                    Dash apps are powered by Plotly.js, a fully featured
+                    charting library including maps like these, financial
+                    charts, scientific graphs, and more.
                 </p>
                 <Buttons className="gutter-top" items={DemoButtons[0]}/>
                 </Body>
@@ -210,8 +278,13 @@ export default () => (
                     source. Dash is MIT licensed. Run Dash on your desktop environment for free.
                 </p>
                 <p>
-                    Using dash inside your enterprise? Plotly offers 1-click deployment, permissioning, and more. <a
-                    href="#" className="special-link"><span className="special-link-label">Learn more →</span></a>
+                    Using dash inside your enterprise?
+                    Plotly offers Dash Enterprise for 1-click app deployment and
+                    App permissioning with LDAP and Active Directory,
+                    all behind your corporate firewall.&nbsp;
+                    <a href="#" className="special-link"><span className="special-link-label">
+                        Learn more →
+                    </span></a>
                 </p>
                 </Body>
             </ContentPane>
@@ -226,18 +299,20 @@ export default () => (
                         <div className="card-wrapper">
                             <div className="card-image" style={bg}>
                                 <div className="card-image-label">
-                                    Enterprise Deployment
+                                    Dash Enterprise Deployment
                                 </div>
                             </div>
                             <div className="card-body">
                                 <blockquote>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque deleniti
-                                    dolorem exercitationem explicabo fugiat id itaque laboriosam laborum maiores
-                                    molestias provident quam quidem quos, repudiandae soluta, sunt temporibus tenetur?
+                                    Managing apps and servers inside your
+                                    enterprise is usually a full time job.
+                                    Our goal with Dash Enterprise is to make
+                                    sharing a Dash app internally as easy and
+                                    secure as possible. No dev-ops required.
                                 </blockquote>
                             </div>
                             <div className="card-action">
-                                <a className="card-action-link" href="#">Learn More →</a>
+                                <a className="card-action-link" href="#">Request a Demo →</a>
                             </div>
                         </div>
                     </div>
@@ -245,18 +320,23 @@ export default () => (
                         <div className="card-wrapper">
                             <div className="card-image" style={bg}>
                                 <div className="card-image-label">
-                                    Web-based Spreadsheets
+                                    Dash Enterprise Permissioning
                                 </div>
                             </div>
                             <div className="card-body">
                                 <blockquote>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque deleniti
-                                    dolorem exercitationem explicabo fugiat id itaque laboriosam laborum maiores
-                                    molestias provident quam quidem quos, repudiandae soluta, sunt temporibus tenetur?
+                                    Dash Enterprise handles the URL routing,
+                                    the monitoring, the failure handling,
+                                    the deployment, the versioning,
+                                    and the package management.
+                                    Dash Apps deployed with Dash Enterprise
+                                    can be provisioned through your
+                                    company’s Active Directory or LDAP
+                                    user accounts.
                                 </blockquote>
                             </div>
                             <div className="card-action">
-                                <a className="card-action-link" href="#">Learn More →</a>
+                                <a className="card-action-link" href="#">Request a Demo →</a>
                             </div>
                         </div>
                     </div>
