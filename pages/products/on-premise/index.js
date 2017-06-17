@@ -116,16 +116,9 @@ export default class OnPrem extends React.Component {
             <Layout>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <Hero />
-                <ContentSection>
+                <ContentSection className="onprem-pricing">
                     <ContentPane full center center-vertically text>
-                        <Title>
-                            Safe and secure, behind your firewall
-                        </Title>
                         <Body>
-                        <p>
-                            Plotly On Premise provides the best of both worlds: web based collaboration and sharing
-                            capabilities with data and visualizations that never leave your corporate environment.
-                        </p>
                         <div className="on-prem-pricing-cards">
 
                             <div className="pricing-card-single full-width">

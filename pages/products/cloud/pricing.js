@@ -32,7 +32,7 @@ const pricingLevels = [
                 value: 'Unlimited Public Files'
             },
             {
-                value: 'PNG & JPEG Export'
+                value: 'PNG and JPEG Export'
             },
             {
                 value: '<strong>250</strong> API Calls per day'
@@ -50,7 +50,7 @@ const pricingLevels = [
         price: {
             monthly: '33',
             annually: '396',
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -68,13 +68,13 @@ const pricingLevels = [
                 value: 'Includes everything in the<br /><strong>Community Plan</strong>'
             },
             {
-                value: 'Community Support'
+                value: 'Community and Chat Support'
             },
             {
                 value: 'Unlimited Private Charts, Dashboards and Slide Decks'
             },
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
                 value: '<strong>5000</strong> API Calls per day'
@@ -91,7 +91,7 @@ const pricingLevels = [
         price: {
             monthly: '79',
             annually: '948',
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -116,7 +116,7 @@ const pricingLevels = [
             }
             ,
             {
-                value: 'SVG,EPS, HTML, PDF, PNG & JPEG Export'
+                value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             }
             ,
             {
@@ -160,7 +160,7 @@ export default class PricingDetails extends React.Component {
             pricingLevels[1].price = {
                 monthly: '5',
                 annually: '59',
-                frequency: 'per month',
+                frequency: 'per year',
                 users: 'per user'
             }
         };
@@ -170,7 +170,7 @@ export default class PricingDetails extends React.Component {
             pricingLevels[1].price = {
                 monthly: '33',
                     annually: '396',
-                    frequency: 'per month',
+                    frequency: 'per year',
                     users: 'per user'
             }
         };
@@ -185,7 +185,7 @@ export default class PricingDetails extends React.Component {
             } else {
                 return (<div className="price">
                     <div className="price-text">
-                        <span className="usd">$</span>{item.price.monthly}
+                        <span className="usd">$</span>{item.price.annually}
                     </div>
                 </div>)
             }
@@ -199,18 +199,18 @@ export default class PricingDetails extends React.Component {
                     <div className="details">
                         {item.price.frequency}, <strong>{item.price.users}</strong>
                     </div>
-                    <div className="billed-amount">
-                        Free forever.
-                    </div>
+                    {/*<div className="billed-amount">*/}
+                        {/*Free forever.*/}
+                    {/*</div>*/}
                 </div>)
             } else {
                 return (<div className="notes">
                     <div className="details">
                         {item.price.frequency}, <strong>{item.price.users}</strong>
                     </div>
-                    <div className="billed-amount">
-                        <span className="usd">$</span>{item.price.annually} billed yearly.
-                    </div>
+                    {/*<div className="billed-amount">*/}
+                        {/*Billed yearly.*/}
+                    {/*</div>*/}
                 </div>)
             }
         };
