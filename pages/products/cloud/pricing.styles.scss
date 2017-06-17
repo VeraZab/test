@@ -369,3 +369,26 @@
     min-width: 100%;
   }
 }
+
+.plotlyjs-pricing{
+  .content-section-wrapper{
+    padding-top:0;
+    padding-bottom:0;
+  }
+  .pricing-cards{
+    transform: translateY(-12px);
+    .pricing-cards-headers-item:nth-of-type(3){
+      background: $color-rhino-core;
+    }
+  }
+}
+.request-callback-section{
+  .button{
+    margin-top:$gutter;
+    &-wrapper{
+      .button-label{
+        font-size:1.5rem;
+      }
+    }
+  }
+}

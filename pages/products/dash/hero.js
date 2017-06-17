@@ -31,7 +31,7 @@ const HeroButtons = [
             target: '_self',
             link: '/dash',
             button: {
-                classes: 'button button-primary button-white'
+                classes: 'button button-secondary'
             }
         }
     ],

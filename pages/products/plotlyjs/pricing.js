@@ -4,44 +4,8 @@ import Buttons from '../../../components/buttons/buttons';
 
 const pricingLevels = [
     {
-        label: "Team Support",
-        price: {
-            monthly: '19,500',
-            annually: null,
-            frequency: 'one-time purchase',
-            users: 'per team'
-        },
-        actions: [
-            {
-                label: 'Purchase',
-                link: 'https://plot.ly/accounts/login/?action=signup',
-                button: {
-                    classes: 'button button-primary'
-                },
-                target: '_blank'
-            }
-        ],
-        features: [
-            {
-                value: 'Includes the following:'
-            },
-            {
-                value: 'Hands-on assistance with all of our Plotly API wrappers and PlotlyJS'
-            },
-            {
-                value: 'Email, chat, and phone support for one year'
-            },
-            {
-                value: '2 hour response time (9-5 EST)'
-            },
-            {
-                value: 'API support for online and offline use'
-            }
-        ]
-    },
-    {
         label: "Developer Support",
-        message: '<a href="#">Student Discount Available</a>',
+        message: null,
         price: {
             monthly: '499',
             annually: '396',
@@ -50,7 +14,7 @@ const pricingLevels = [
         },
         actions: [
             {
-                label: 'Sign Up',
+                label: 'Purchase',
                 link: 'https://plot.ly/accounts/login/?action=signup',
                 button: {
                     classes: 'button button-primary'
@@ -78,44 +42,62 @@ const pricingLevels = [
     },
     {
         label: "Plotly.js Team workshops",
-        message: 'Our most popular plan!',
+        message: null,
         price: {
-            monthly: '79',
+            monthly: '1,300',
             annually: '948',
-            frequency: 'per month',
-            users: 'per user'
+            frequency: 'one-time purchase',
+            users: 'per enrollee'
         },
         actions: [
             {
-                label: 'Sign Up',
+                label: 'Purchase',
                 link: 'https://plot.ly/accounts/login/?action=signup',
                 button: {
-                    classes: 'button button-emerald'
+                    classes: 'button button-primary'
                 },
                 target: '_blank'
             }
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Personal Plan</strong>'
+                value: 'For teams who want to level-up their chart and dashboard skils in JavaScript, Plotly holds 2-day workshops in NYC and the west coast twice per year. We can also hold a custom training on-site at your company.'
+            }
+        ]
+    },
+    {
+        label: "Team Support",
+        price: {
+            monthly: '19,500',
+            annually: null,
+            frequency: 'one-time purchase',
+            users: 'per team'
+        },
+        actions: [
+            {
+                label: 'Purchase',
+                link: 'https://plot.ly/accounts/login/?action=signup',
+                button: {
+                    classes: 'button button-primary'
+                },
+                target: '_blank'
+            }
+        ],
+        features: [
+            {
+                value: 'Includes the following'
             },
             {
-                value: '10,000 API calls per day'
+                value: 'Hands-on assistance with all of our Plotly API wrappers and PlotlyJS'
             },
             {
-                value: 'Connect to 18 data sources including SQL databases, MS Excel, and CSV files'
-            }
-            ,
+                value: 'Email, chat, and phone support for one year'
+            },
             {
-                value: 'Unlimited private and public files'
-            }
-            ,
+                value: '2 hour response time (9-5 EST)'
+            },
             {
-                value: 'SVG, EPS, HTML & PDF Export'
-            }
-            ,
-            {
-                value: 'Chat, email, and phone support for Plotly 2.0: the online <a href="https://plot.ly/online-chart-maker/">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a>'
+                value: 'API support for online and offline use'
             }
         ]
     }
@@ -166,9 +148,6 @@ export default class PricingDetails extends React.Component {
                 return (<div className="notes">
                     <div className="details">
                         {item.price.frequency}, <strong>{item.price.users}</strong>
-                    </div>
-                    <div className="billed-amount">
-                        <span className="usd">$</span>{item.price.annually} billed yearly.
                     </div>
                 </div>)
             }

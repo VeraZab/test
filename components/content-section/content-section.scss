@@ -323,6 +323,30 @@
     }
   }
 
+  blockquote{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #6e7d92;
+    margin-left:0;
+    border-left:15px solid rgba($color-dodger, 0.1);
+    //padding-left:$unit;
+    border: 1px solid $color-rhino-light-1;
+    //box-shadow:$drop-shadow-l-light;
+    padding:$unit;
+    //border-radius:8px;
+    background: rgba(whitesmoke, 0.8);
+    .quotee{
+      padding-top:$unit;
+      .who{
+        font-weight: bold;
+      }
+      .title{
+        font-style: italic;
+      }
+    }
+  }
+
 }
 
 .cards{
