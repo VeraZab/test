@@ -31,6 +31,7 @@
     "lru-cache": "^4.0.2",
     "mdi": "^1.8.36",
     "next": "beta",
+    "next-routes": "^1.0.27",
     "next-url-prettifier": "^1.1.2",
     "node-sass": "^4.4.0",
     "normalize-scss": "^6.0.0",

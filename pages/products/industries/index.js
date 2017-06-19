@@ -1,6 +1,6 @@
 import Layout from '../../../components/global/layout/layout';
 import {ContentSection, Body} from '../../../components/content-section/content-section';
-import Industries from  '../../../data/products/industries.json';
+import Industries from  '../../../data/products/industries/industries.json';
 import IndustriesHero from './hero';
 import IndustriesMain from './main';
 

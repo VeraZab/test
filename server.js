@@ -18,6 +18,11 @@ app.prepare()
             return res.sendfile('./static/robots.txt')
         })
 
+        server.get('/industries', (req, res) => {
+            return res.sendfile('./pages/products/industries/index.js')
+        })
+
+
         server.get('*', (req, res) => {
             return handle(req, res)
         })

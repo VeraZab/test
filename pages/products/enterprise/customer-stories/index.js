@@ -17,7 +17,7 @@ export default () => (
                 <p>{data.body.title}</p>
                   <div className="cards stories" style={data.storyCard.style}>
                     {data.stories.map((story, i) => {
-                      return (<CustomerServiceMain spacing={data.storyCard.style} style={data.storyCard.style} key={i} story={story} />);
+                      return (<CustomerServiceMain style={data.storyCard.style} key={i} story={story} />);
                     })}
                   </div>
               </Body>
