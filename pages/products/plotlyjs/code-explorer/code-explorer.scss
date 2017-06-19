@@ -1,0 +1,207 @@
+@import "partials/abstract";
+@import "hljs";
+
+.code-explorer {
+  &-wrapper {
+    display: flex;
+    border-radius: $unit/2;
+    overflow: hidden;
+    @include handheld{
+      flex-direction: column;
+    }
+
+  }
+  &-graphic {
+    width: 100%;
+    min-height: 500px !important;
+
+    @include desktop{
+     width: 500px;
+     max-width: 500px;
+   }
+    background: white;
+    display: flex;
+    &-wrapper {
+      flex: 1;
+      width: 100%;
+      background-size:cover !important;
+      background-position: center center;
+    }
+    img {
+      min-width: 100%;
+    }
+  }
+
+  &-editor {
+
+    background-color: $color-rhino-core;
+    padding: $gutter;
+    //flex: 1;
+    //width: 75%;
+    width: calc(100% - 500px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    @include handheld{
+      width: 100%;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    // --
+    // Header
+    // --
+    &-header {
+      background-color: #1E304E;
+      border: 5px solid #1E304E;
+      border-radius: 3px;
+      display: flex;
+      width: 100%;
+
+      @include handheld{
+        flex-wrap: wrap;
+      }
+
+    }
+    // --
+    // Tabs
+    // --
+    &-tab {
+      border-radius: 3px;
+      font-weight: 600;
+      color: $color-rhino-medium-1;
+      flex: 1;
+      text-align: center;
+      text-shadow: $text-shadow-default;
+      transition: $transition;
+      overflow: hidden;
+      display: flex;
+      &:not(:last-of-type) {
+        margin-right: $unit;
+      }
+
+      @include handheld{
+        &:nth-of-type(1),
+        &:nth-of-type(2){
+          margin-bottom:$unit;
+        }
+
+        &:nth-of-type(2){
+          margin-right:0;
+        }
+        min-width: 40%;
+        //width: 50%;
+        //min-width:
+        // flex40%;
+      }
+
+      &:not(.active) {
+        .code-explorer-editor-tab-label {
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background: $color-dodger;
+            width: 100%;
+            left: 0;
+            transition: $transition;
+            transform: scale(0);
+            transform-origin: center;
+          }
+        }
+      }
+
+      &-label {
+        transition: $timing transform $easing;
+        user-select: none;
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $unit/2 $unit;
+
+      }
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+        background-color: lighten(#1E304E, 5%);
+        .code-explorer-editor-tab-label {
+          &::after {
+            transform: none;
+          }
+        }
+
+      }
+      &:active {
+        &:not(.active) {
+          background-color: lighten(#1E304E, 2.5%);
+          .code-explorer-editor-tab-label {
+            @include active-state-transform;
+          }
+        }
+      }
+      &.active {
+        background-color: $color-rhino-light-1;
+        color: $color-rhino-dark;
+        text-shadow: none;
+        &:hover {
+          cursor: default;
+        }
+      }
+
+    }
+    // --
+    // Content
+    // --
+    &-content {
+      position: relative;
+      max-width: 100%;
+      min-height: 400px;
+      max-height: 400px;
+      overflow: auto;
+      flex: 1;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        border: 0;
+        background: #1E304E;
+
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba($color-dodger, 0.5);
+        border-radius: 0;
+        width: 5px;
+        border: 0;
+        &:hover {
+          background: $color-dodger;
+        }
+
+      }
+
+      pre {
+        //max-width: 300px;
+        overflow: visible !important;
+        background: transparent !important;
+        //overflow-x: auto;
+
+      }
+    }
+    // --
+    // Actions
+    // --
+    &-actions {
+      padding-top: $gutter;
+      .buttons {
+        justify-content: flex-end;
+      }
+
+    }
+  }
+}

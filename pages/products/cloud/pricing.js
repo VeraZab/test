@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './pricing.styles.scss';
-import Buttons from '/components/buttons/buttons';
+import Buttons from '../../../components/buttons/buttons';
 
 const pricingLevels = [
     {
@@ -8,7 +8,7 @@ const pricingLevels = [
         price: {
             monthly: '0',
             annually: null,
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -23,32 +23,34 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'The <strong>Community&nbsp;Plan</strong> includes the following:'
+                value: 'The <strong>Community&nbsp;Plan</strong> includes the&nbsp;following'
             },
             {
-                value: '50 v1 API calls per day and 250 v2 API calls per day'
+                value: 'Community Support'
             },
             {
-                value: 'Connect to 7 data sources including SQL databases, MS Excel, and CSV files'
+                value: 'Unlimited Public Files'
             },
             {
-                value: 'Unlimited public files'
+                value: 'PNG and JPEG Export'
             },
             {
-                value: 'PNG & JPEG Export'
+                value: '<strong>250</strong> API Calls per day'
             },
             {
-                value: 'Support from community forum: <a href="https://community.plot.ly" target="_blank">community.plot.ly</a>'
+                value: 'Connect to <strong>7</strong> Data Sources'
             }
         ]
     },
     {
         label: "Personal",
-        message: '<a href="#">Student Discount Available</a>',
+        message: "Are you a student?",
+        messageHover : true,
+        messageAction: null,
         price: {
             monthly: '33',
             annually: '396',
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -63,32 +65,33 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Community Plan</strong>'
+                value: 'Includes everything in the<br /><strong>Community Plan</strong>'
             },
             {
-                value: '10,000 API calls per day'
+                value: 'Community and Chat Support'
             },
             {
-                value: 'Connect to 11 data sources including SQL databases, MS Excel, and CSV files'
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
             },
             {
-                value: 'Unlimited private and public files'
+                value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
-                value: 'SVG, EPS, HTML & PDF Export'
+                value: '<strong>5000</strong> API Calls per day'
             },
             {
-                value: 'Chat support for Plotly 2.0: the online <a href="/products/online-chart-maker">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a> (excludes student subscriptions)'
+                value: 'Connect to <strong>11</strong> Data Sources'
             }
         ]
     },
     {
         label: "Professional",
         message: 'Our most popular plan!',
+        messageAction: null,
         price: {
             monthly: '79',
             annually: '948',
-            frequency: 'per month',
+            frequency: 'per year',
             users: 'per user'
         },
         actions: [
@@ -103,70 +106,25 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the <strong>Personal Plan</strong>'
+                value: 'Includes everything in the<br /><strong>Personal Plan</strong>'
             },
             {
-                value: '10,000 API calls per day'
+                value: 'Chat, Email and Phone Support'
             },
             {
-                value: 'Connect to 18 data sources including SQL databases, MS Excel, and CSV files'
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
             }
             ,
             {
-                value: 'Unlimited private and public files'
+                value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             }
             ,
             {
-                value: 'SVG, EPS, HTML & PDF Export'
+                value: '<strong>10,000</strong> API Calls per day'
             }
             ,
             {
-                value: 'Chat, email, and phone support for Plotly 2.0: the online <a href="https://plot.ly/online-chart-maker/">chart maker</a> and <a href="https://plot.ly/dashboards/">dashboard tool</a>'
-            }
-        ]
-    },
-    {
-        label: "On-Premise",
-        price: {
-            monthly: '829',
-            annually: '9,550',
-            frequency: 'per month',
-            users: 'covers 5 users'
-        },
-        actions: [
-            {
-                label: 'Learn More',
-                link: '/products/on-premise/',
-                button: {
-                    classes: 'button button-primary'
-                },
-                target: '_self'
-            }
-        ],
-        features: [
-            {
-                value: 'Includes everything in the <strong>Professional Plan</strong>'
-            },
-            {
-                value: 'Unlimited API calls'
-            },
-            {
-                value: 'Connect to 18 data sources and request custom connectors'
-            },
-            {
-                value: 'Unlimited private and public files'
-            },
-            {
-                value: 'SVG, EPS, HTML & PDF Export'
-            },
-            {
-                value: "Developer support for using Plotly's API with MATLAB, R, and Python"
-            },
-            {
-                value: 'Integrate with Exisisting LDAP & Active Directory Groups'
-            },
-            {
-                value: 'Behind-the-firewall Security'
+                value: 'Connect to <strong>18</strong> Data Sources'
             }
         ]
     }
@@ -174,16 +132,48 @@ const pricingLevels = [
 
 export default class PricingDetails extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            student: false
+        };
+
+        this.toggleStudentState = this.toggleStudentState.bind(this);
     }
 
     componentDidMount() {
 
     }
 
+    toggleStudentState() {
+        this.setState({
+            student: !this.state.student
+        });
+    }
+
     render() {
 
+        pricingLevels[1].messageAction = this.toggleStudentState;
 
+        if (this.state.student === true) {
+            pricingLevels[1].label = "Student";
+            pricingLevels[1].message = "See non-student pricing.";
+            pricingLevels[1].price = {
+                monthly: '5',
+                annually: '59',
+                frequency: 'per year',
+                users: 'per user'
+            }
+        };
+        if (this.state.student === false) {
+            pricingLevels[1].label = "Personal";
+            pricingLevels[1].message = "Are you a student?";
+            pricingLevels[1].price = {
+                monthly: '33',
+                    annually: '396',
+                    frequency: 'per year',
+                    users: 'per user'
+            }
+        };
 
         let pricingCardBodyPrice = (item) => {
             if (item.price.monthly === '0') {
@@ -195,7 +185,7 @@ export default class PricingDetails extends React.Component {
             } else {
                 return (<div className="price">
                     <div className="price-text">
-                        <span className="usd">$</span>{item.price.monthly}
+                        <span className="usd">$</span>{item.price.annually}
                     </div>
                 </div>)
             }
@@ -209,24 +199,30 @@ export default class PricingDetails extends React.Component {
                     <div className="details">
                         {item.price.frequency}, <strong>{item.price.users}</strong>
                     </div>
-                    <div className="billed-amount">
-                        Free forever.
-                    </div>
+                    {/*<div className="billed-amount">*/}
+                        {/*Free forever.*/}
+                    {/*</div>*/}
                 </div>)
             } else {
                 return (<div className="notes">
                     <div className="details">
                         {item.price.frequency}, <strong>{item.price.users}</strong>
                     </div>
-                    <div className="billed-amount">
-                        <span className="usd">$</span>{item.price.annually} billed yearly.
-                    </div>
+                    {/*<div className="billed-amount">*/}
+                        {/*Billed yearly.*/}
+                    {/*</div>*/}
                 </div>)
             }
         };
 
         let pricingCardHeaderMessage = (item) => {
-            if (item.message) {
+
+            if (item.message && item.messageHover === true) {
+                return (<div className="pricing-cards-headers-item-message hidden hidden-fade" onClick={item.messageAction}>
+                    <div className="pricing-cards-headers-item-message-text message-action"
+                         dangerouslySetInnerHTML={{__html: item.message}}/>
+                </div>)
+            } else if (item.message) {
                 return (<div className="pricing-cards-headers-item-message hidden hidden-fade">
                     <div className="pricing-cards-headers-item-message-text"
                          dangerouslySetInnerHTML={{__html: item.message}}/>

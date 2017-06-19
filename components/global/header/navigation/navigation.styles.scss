@@ -275,7 +275,7 @@
       }
       // Submenu Sections
       &-section {
-        &:not(:first-of-type) {
+        & + & {
           margin-left: $gutter;
         }
         &-label {

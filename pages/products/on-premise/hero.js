@@ -1,6 +1,6 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '/components/hero/hero';
-import Buttons from '/components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
+import Buttons from '../../../components/buttons/buttons';
 
 const HeroButtons = [
     {
@@ -23,7 +23,7 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-    paddingBottom: '130px',
+    paddingBottom: '100px',
     paddingTop: '20px'
 };
 
@@ -32,10 +32,11 @@ export default () => (
         <HeroTop>
             <HeroMessaging>
                 <HeroTitle>
-                    Ultimate Control of your Data
+                    Safe and secure, behind your firewall
                 </HeroTitle>
                 <HeroSubtitle>
-                    Plotly On-Premise is the behind-the-firewall version of Plotly Cloud. It's perfect for data science teams using Python, R, MATLAB, Tableau, and Excel to securely share beautiful reports and analysis with the company at large.
+                    Plotly On Premise provides the best of both worlds: web based collaboration and sharing
+                    capabilities with data and visualizations that never leave your corporate environment.
                 </HeroSubtitle>
             </HeroMessaging>
             <HeroActions>

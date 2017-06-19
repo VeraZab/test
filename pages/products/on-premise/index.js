@@ -1,64 +1,63 @@
 import Layout from '../../../components/global/layout/layout';
 import Hero from './hero';
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '/components/content-section/content-section';
-import Buttons from '/components/buttons/buttons';
+import {
+    ContentSection,
+    ContentPane,
+    Title,
+    Subtitle,
+    Body,
+    Graphic
+} from '../../../components/content-section/content-section';
+import Buttons from '../../../components/buttons/buttons';
 
 import styles from '../cloud/pricing.styles.scss';
 const onPremData = [
     {
         features: [{
-            value: 'Includes everything in the <strong>Professional Plan</strong>'
+            value: 'Includes everything in the <strong>Professional Plotly Plan</strong>'
         },
             {
-                value: 'Unlimited public files'
+                value: 'Email and Phone Support'
             },
             {
-                value: 'Unlimited private files'
+                value: 'Unlimited Charts, Dashboards and Slide Decks'
             },
             {
-                value: 'Community Support'
+                value: 'Unlimited Viewers'
             },
             {
-                value: 'Online chart creation & sharing'
+                value: 'LDAP Integration'
             },
             {
-                value: "Developer support for using Plotly's API with MATLAB, R, and Python"
+                value: "Plotly On Line API Support"
             },
             {
-                value: 'Excel, CSV, and xml upload'
+                value: 'Behind your firewall Security'
+            }
+        ],
+
+    }
+];
+
+const onPremDashata = [
+    {
+        features: [{
+            value: 'Includes everything in the <strong>On Premise Plan</strong>'
+        },
+            {
+                value: 'Email and Phone Support'
             },
             {
-                value: 'APIs (Python, R, MATLAB, Julia)'
+                value: 'Unlimited Applications'
             },
             {
-                value: 'ggplot2, matplotlib, MATLAB chart conversion'
+                value: 'Unlimited Viewers'
             },
             {
-                value: 'Add / remove team members'
+                value: 'Automatic Git based Deployment'
             },
             {
-                value: 'Vector export (pdf, svg, eps)'
-            },
-            {
-                value: 'Save custom themes'
-            },
-            {
-                value: 'Centralized billing'
-            },
-            {
-                value: 'HDF5, SAS, SPSS, MSAccess, zip file upload'
-            },
-            {
-                value: 'Searchable company graph feed'
-            },
-            {
-                value: 'LDAP, SAML, & Active Directory'
-            },
-            {
-                value: 'Behind-the-firewall security'
-            },
-            {
-                value: 'Configure default chart colors and fonts'
+                value: "Snapshot Application Views"
             }
         ],
 
@@ -117,48 +116,72 @@ export default class OnPrem extends React.Component {
             <Layout>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <Hero />
-                <ContentSection>
+                <ContentSection className="onprem-pricing">
                     <ContentPane full center center-vertically text>
-                        <Title>
-                            Hosted behind your firewall or by Plotly on a private AWS cloud
-                        </Title>
                         <Body>
-                        <p>
-                            Plotly On-Premise comes with everything in Plotly Cloud, but also allows LDAP integration,
-                            white
-                            labeling, hosting and publishing Dash apps, and behind the firewall security.
-                        </p>
-                        <div className="pricing-card-single full-width">
-                            <div className="pricing-cards-headers-item">
-                                <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                                    On Premise
-                                </div>
-                            </div>
-                            <div className="pricing-cards-bodies-item">
-                                <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
-                                    <div className="pricing-cards-bodies-item-content">
-                                        <div className="price">
-                                            <div className="price-text">
-                                                <span className="usd">$</span>829
-                                            </div>
-                                        </div>
-                                        <div class="details">per month, <strong>covers
-                                            5 users</strong></div>
-                                        <div class="billed-amount"><span class="usd">$</span>9,550
-                                            billed yearly.
-                                        </div>
+                        <div className="on-prem-pricing-cards">
+
+                            <div className="pricing-card-single full-width">
+                                <div className="pricing-cards-headers-item">
+                                    <div className="pricing-cards-headers-item-text hidden hidden-fade">
+                                        On Premise
                                     </div>
-                                    <Buttons items={actions}
-                                             className="pricing-cards-bodies-item-actions"/>
                                 </div>
-                            </div>
-                            <div className="pricing-cards-feature-lists">
-                                <div className="pricing-cards-feature-lists-wrapper">
-                                    {pricingCardFeatures(onPremData)}
+                                <div className="pricing-cards-bodies-item">
+                                    <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
+                                        <div className="pricing-cards-bodies-item-content">
+                                            <div className="price">
+                                                <div className="price-text">
+                                                    <span className="usd">$</span>9,950
+                                                </div>
+                                            </div>
+                                            <div class="details">per year, <strong>
+                                                5 User License </strong></div>
+                                        </div>
+                                        <Buttons items={actions}
+                                                 className="pricing-cards-bodies-item-actions"/>
+                                    </div>
                                 </div>
+                                <div className="pricing-cards-feature-lists">
+                                    <div className="pricing-cards-feature-lists-wrapper">
+                                        {pricingCardFeatures(onPremData)}
+                                    </div>
+                                </div>
+
                             </div>
 
+
+
+                            <div className="pricing-card-single full-width">
+                                <div className="pricing-cards-headers-item">
+                                    <div className="pricing-cards-headers-item-text hidden hidden-fade">
+                                        On Premise + Dash
+                                    </div>
+                                </div>
+                                <div className="pricing-cards-bodies-item">
+                                    <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
+                                        <div className="pricing-cards-bodies-item-content">
+                                            <div className="price">
+                                                <div className="price-text">
+                                                    <span className="usd">$</span>15,950
+                                                </div>
+                                            </div>
+                                            <div class="details">per year, <strong>
+                                                5 User License </strong></div>
+
+                                        </div>
+                                        <Buttons items={actions}
+                                                 className="pricing-cards-bodies-item-actions"/>
+                                    </div>
+                                </div>
+                                <div className="pricing-cards-feature-lists">
+                                    <div className="pricing-cards-feature-lists-wrapper">
+                                        {pricingCardFeatures(onPremDashata)}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
 
                         </Body>
                     </ContentPane>

@@ -15,6 +15,14 @@ export class Hero extends React.Component {
 
         let classes = '';
 
+
+
+        if (this.props.alignLeft) {
+            classes += ' align-left';
+        }
+        if (this.props.splitHalf) {
+            classes += ' split-half';
+        }
         if (this.props.className){
             classes += ' ' + this.props.className;
         }

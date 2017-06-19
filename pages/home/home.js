@@ -32,7 +32,7 @@ export default class Home extends React.Component {
 
         return (
             <Layout meta={meta}>
-                <Hero data={this.props.pageContent.hero} prismic={this.props.prismic} />
+                <Hero />
                 <HomeTabs />
                 <DataNarrative />
                 <ImportData />
