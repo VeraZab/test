@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "New and improved branding and marketing pages with React and next.js.",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -15,6 +15,7 @@
   "dependencies": {
     "antd": "^2.8.1",
     "autoprefixer": "6.7.6",
+    "axios": "^0.16.2",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-plugin-wrap-in-js": "^1.1.0",
@@ -31,7 +32,7 @@
     "in-view": "^0.6.1",
     "include-media": "^1.4.9",
     "isomorphic-fetch": "^2.2.1",
-    "lru-cache": "^4.0.2",
+    "lru-cache": "^4.1.1",
     "mdi": "^1.8.36",
     "next": "latest",
     "next-routes": "^1.0.27",
