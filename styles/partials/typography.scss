@@ -38,6 +38,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-xl {
+  @extend %font-smoothing;
+}
+
+.title-xl {
   font-size: 58px;
   line-height: 60px;
   @include handheld {
@@ -131,4 +135,9 @@ article.body {
 @mixin title-sm {
   font-size: 28px;
   line-height: 34px;
+}
+
+%font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
