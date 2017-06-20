@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "C-12 Energy"
+  },
+  "header": {
+    "title": "C-12 Energy",
+    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions."
+  },
+  "body": {
+    "title": "Plotly is making an impact in a wide range of industries",
+    "desc": "Plotly prides itself on being partnered with its clients. Numerous references of successful implementations across many lines of business are available from a dedicated and committed staff. Read what some of our partners have to say about Plotly."
+  },
+  "stories": [{
+      "id": "finance",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+      },
+      "label": "Energy",
+      "cta": "Read Stories →",
+      "cta-url": "/energy"
+    },
+    {
+      "id": "reseach-lab",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-insurance.9a3589a826b4.jpg)"
+      },
+      "label": "Reseach Lab",
+      "cta": "Read Stories →",
+      "cta-url": "/reseach-lab"
+    },
+    {
+      "id": "insurance",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-aerospace.f58359cdc8f8.jpg)"
+      },
+      "label": "Insurance",
+      "cta": "Read Stories →",
+      "cta-url": "/insurance"
+    }
+  ],
+  "storyCard": {
+    "style": {
+      "paddingTop": "20px",
+      "paddingBottom": "20px"
+    }
+  },
+  "footer": {
+    "title": "Interested in how Plotly can transform your business?",
+    "cta": [{
+        "label": "Request a demo",
+        "title": "See what you can create with Plotly!",
+        "icon": null,
+        "target": "_self",
+        "link": "/products/cloud/",
+        "button": {
+          "classes": "button button-secondary"
+        }
+      }
+    ]
+  }
+}

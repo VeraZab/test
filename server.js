@@ -35,14 +35,11 @@ app.prepare()
         })
 
         server.get('/products/industries', (req, res) => {
-          // renderAndCache(req, res, '/industries')
-          return res.sendfile('/industries')
           renderAndCache(req, res, '/industries')
         })
 
         server.get('/products/industries/:id', (req, res) => {
           const queryParams = { id: req.params.id }
-          console.log(queryParams);
           renderAndCache(req, res, '/single-industries', queryParams)
         })
 
