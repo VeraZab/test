@@ -38,7 +38,9 @@
       text-align: right;
     }
     &-item {
-      color: white;
+      color: white !important;
+      text-decoration: none !important;
+      background-image: none !important;
       text-transform: uppercase;
       letter-spacing:2px;
       padding-left:$gutter;

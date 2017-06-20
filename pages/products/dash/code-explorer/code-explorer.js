@@ -102,8 +102,13 @@ export default class CodeExplorer extends React.Component {
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <div className="code-explorer-wrapper">
                     <div className="code-explorer-graphic">
-                        <div className="code-explorer-graphic-wrapper" style={graphicStyles}>
-
+                        <div className="code-explorer-graphic-wrapper desktop-graphic">
+                        <iframe src="https://dash-hello-world.herokuapp.com/"></iframe>
+                        </div>
+                        <div className="code-explorer-graphic-wrapper mobile-graphic">
+                            <div className="graphic-img-wrapper">
+                                <img src={languages[0].graphic_src} alt=""/>
+                            </div>
                         </div>
                     </div>
                     <div className="code-explorer-editor">

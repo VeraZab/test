@@ -66,20 +66,19 @@ export default class HeroSection extends React.Component {
                           </div>
                       </div>
                       <div className="dash-navigation">
-                          <div className="dash-navigation-item">
+                          <a href="/products/on-premise/" target="_blank" className="dash-navigation-item">
                               Pricing
-                          </div>
-                          <div className="dash-navigation-item">
+                          </a>
+                          <a target="_blank" href="https://plot.ly/dash/" className="dash-navigation-item">
                               Docs
-                          </div>
-                          <div className="dash-navigation-item">
+                          </a>
+                          <a target="_self" href="/" className="dash-navigation-item">
                               Plotly
-                          </div>
+                          </a>
                       </div>
                   </div>
                 </div>
                 <HeroTop>
-
                     <HeroMessaging>
                         <HeroTitle>
                             Easily build beautiful web-based interfaces in&nbsp;Python
