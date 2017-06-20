@@ -58,13 +58,29 @@ export default class HeroSection extends React.Component {
     render() {
         return (
             <Hero className="no-dots dash-hero align-left split-half" style={HeroStyles}>
+                <div className="dash-header">
+                  <div className="dash-header-wrapper">
+                      <div className="dash-logo">
+                          <div className="dash-logo-wrapper">
+                              <img src="/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
+                          </div>
+                      </div>
+                      <div className="dash-navigation">
+                          <div className="dash-navigation-item">
+                              Pricing
+                          </div>
+                          <div className="dash-navigation-item">
+                              Docs
+                          </div>
+                          <div className="dash-navigation-item">
+                              Plotly
+                          </div>
+                      </div>
+                  </div>
+                </div>
                 <HeroTop>
+
                     <HeroMessaging>
-                        <div className="dash-logo">
-                            <div className="dash-logo-wrapper">
-                                <img src="/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
-                            </div>
-                        </div>
                         <HeroTitle>
                             Easily build beautiful web-based interfaces in&nbsp;Python
                         </HeroTitle>

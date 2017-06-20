@@ -61,7 +61,7 @@ const navigationLeft = [
                     items: [
                         {
                             id: 10,
-                            label: 'Cloud',
+                            label: 'Plotly Cloud',
                             slug: '/products/cloud/',
                             title: 'See all of our pricing options.',
                             icon: null,
@@ -70,7 +70,7 @@ const navigationLeft = [
                         },
                         {
                             id: 11,
-                            label: 'On Premise',
+                            label: 'Plotly On-Premise',
                             slug: '/products/on-premise/',
                             title: 'The behind-the-firewall version of Plotly Cloud.',
                             icon: null,
@@ -80,7 +80,7 @@ const navigationLeft = [
                         {
                             id: 12,
                             label: 'Support',
-                            slug: '/products/cloud/',
+                            slug: null,
                             title: 'Learn about our dedicated support plan options.',
                             icon: null,
                             target: '_blank',

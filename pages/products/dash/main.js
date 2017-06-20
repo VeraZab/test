@@ -8,6 +8,8 @@ import {
 } from '../../../components/content-section/content-section';
 import Buttons from '../../../components/buttons/buttons';
 
+import CodeExplorer from './code-explorer/code-explorer';
+
 
 const bg = {
     backgroundImage: "linear-gradient(27deg, #1E427D 0%, #1D9CFC 100%)"
@@ -69,7 +71,7 @@ if __name__ == '__main__':
     app.run_server()`;
 
 export default () => (
-    <div>
+    <div className="dash-content">
 
         <ContentSection className="dash-section-productive">
             <ContentPane full center-vertically center text>
@@ -80,20 +82,10 @@ export default () => (
                 <p>
                     Before dash, apps like these would require an entire team of engineers and designers to create.
                 </p>
-                <div className="dash-graphics">
-                    <div className="dash-graphics-wrapper">
-                        <img src="/static/images/dash/hello-world.gif"
-                             alt="Example screenshot of a Dash app"
-                        />
-                    </div>
-                    <div className="graphics-wrapper">
-                        <pre>{ExampleCodeBlock}</pre>
-                    </div>
-                </div>
+                <CodeExplorer></CodeExplorer>
                 </Body>
             </ContentPane>
         </ContentSection>
-        {/*2 graphics*/}
         <ContentSection className="dash-section-features-thirds">
             <ContentPane thirds center-vertically>
                 <div className="icon">
@@ -105,9 +97,6 @@ export default () => (
                 <p>
                     Dash apps require very little boilerplate to get started:
                     An app like this weighs in at just 40 lines of pure Python.
-                </p>
-                <p>
-
                 </p>
             </ContentPane>
             <ContentPane thirds center-vertically>
@@ -173,7 +162,7 @@ export default () => (
 
                 </Body>
             </ContentPane>
-            <ContentPane half graphic>
+            <ContentPane half graphic center-vertically>
                 <a href={DemoButtons[0].link}>
                     <Graphic
                         image="/static/images/dash/stock-tickers.png"/>
@@ -182,7 +171,7 @@ export default () => (
         </ContentSection>
 
         <ContentSection>
-            <ContentPane half graphic>
+            <ContentPane half graphic center-vertically>
                 <Graphic
                     image="/static/images/dash/drug-discovery.gif"/>
             </ContentPane>
@@ -233,14 +222,14 @@ export default () => (
                 <Buttons className="gutter-top" items={DemoButtons[0]}/>
                 </Body>
             </ContentPane>
-            <ContentPane half graphic>
+            <ContentPane half graphic center-vertically>
                 <Graphic
                     image="/static/images/dash/goldman-sachs.png"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
-            <ContentPane half graphic>
+            <ContentPane half graphic center-vertically>
                 <Graphic
                     image="/static/images/dash/uber-example.png"/>
             </ContentPane>
@@ -304,16 +293,16 @@ export default () => (
                                 </div>
                             </div>
                             <div className="card-body">
-                                <blockquote>
+                                <p>
                                     Managing apps and servers inside your
                                     enterprise is usually a full time job.
                                     Our goal with Dash Enterprise is to make
                                     deploying and sharing a Dash app internally
                                     as easy and secure as possible.
                                     No dev-ops required.
-                                </blockquote>
+                                </p>
 
-                                <blockquote>
+                                <p>
                                     Dash Enterprise handles all of the hard
                                     parts about managing apps for you:
                                     deployingment, managing updates,
@@ -321,7 +310,7 @@ export default () => (
                                     and more.
                                     Deploy and share an app behind your
                                     firewall in minutes.
-                                </blockquote>
+                                </p>
                             </div>
                             <div className="card-action">
                                 <a className="card-action-link" href="#">Request a Demo →</a>
@@ -337,14 +326,14 @@ export default () => (
                                 </div>
                             </div>
                             <div className="card-body">
-                                <blockquote>
+                                <p>
                                     Dash Enterprise ties into Plotly Enterprise,
                                     storing your
                                     analytical Dash applications
                                     with plotly graphs, datasets, SQL queries,
                                     and dashboards in one company-wide
                                     portal.
-                                </blockquote>
+                                </p>
                             </div>
                             <div className="card-action">
                                 <a className="card-action-link" href="#">Request a Demo →</a>

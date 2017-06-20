@@ -12,6 +12,16 @@ const HeroButtons = [
         button: {
             classes: 'button button-primary'
         }
+    },
+    {
+        label: 'Plotly On-Premise',
+        title: 'Looking for a behind-the-firewall solution? Deploy Plotly On-Premise on your secure, local network.',
+        icon: null,
+        target: '_self',
+        link: '/products/on-premise/',
+        button: {
+            classes: 'button button-secondary'
+        }
     }
 ];
 

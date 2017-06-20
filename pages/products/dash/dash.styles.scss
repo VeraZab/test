@@ -2,8 +2,79 @@
 
 .dash {
 
+  &-content{
+    .content-section{
+      &-title-wrapper{
+        /* Dash is productive: */
+        font-size: 38px !important;
+        color: #506784;
+        line-height: 46px !important;
+      }
+      p{
+        font-size: 22px !important;
+        line-height: 36px !important;
+      }
+    }
+  }
+
+  &-header {
+    &-wrapper {
+      @include global-wrapper;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+    }
+  }
+  &-navigation {
+    display: flex;
+
+    padding-top:$gutter;
+
+
+    @include media('<=600px'){
+      flex-direction: column;
+      padding-top:0;
+      text-align: right;
+    }
+    &-item {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing:2px;
+      padding-left:$gutter;
+      @include trans;
+      text-shadow: $text-shadow-default;
+      &:hover{
+
+        @include media('>600px'){
+          transform: translateY(-4px);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   &-hero {
-    @include media('<=980px') {
+    .hero-top {
+      padding-top: 0;
+    }
+    @include media('<=900px') {
+     .buttons{
+       flex-direction: column;
+       .button{
+         width: 100%;
+         margin-left:0;
+
+         & + .button{
+           margin-top:$gutter;
+         }
+       }
+     }
+    }
+    @include media('<=800px') {
+      .hero-actions{
+        justify-content: center;
+      }
       .hero-top-wrapper {
         flex-direction: column !important;
 
@@ -79,21 +150,22 @@
           }
         }
         .title { /* Lightweight: */
-          font-family: Dosis-Medium;
+          font-family: "Dosis", sans-serif;
+          font-weight:300;
           font-size: 28px;
           color: #FFFFFF;
           letter-spacing: 0;
           line-height: 21px;
           margin-top: $unit;
         }
+        p {
+          /* Dash provides a dire: */
+          font-size: 16px !important;
+          color: #FFFFFF;
+          line-height: 26px !important;
+        }
       }
-      p {
-        /* Dash provides a dire: */
-        font-family: OpenSans;
-        font-size: 16px !important;
-        color: #FFFFFF;
-        line-height: 26px !important;
-      }
+
     }
 
     &-dash-apps {
