@@ -4,8 +4,8 @@ import Buttons from '../../../components/buttons/buttons';
 
 const HeroButtons = [
     {
-        label: 'Contact our Sales Team',
-        title: 'See what you can create with Plotly!',
+        label: 'Contact Us',
+        title: 'A Plotly sales engineer will answer any questions you might have.',
         icon: null,
         target: '_blank',
         link: 'https://plotly.typeform.com/to/seG7Vb',

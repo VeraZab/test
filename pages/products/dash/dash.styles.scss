@@ -59,7 +59,15 @@
   &-hero {
     .hero-top {
       padding-top: 0;
+      &-wrapper{
+        display: flex;
+      }
     }
+
+    .buttons{
+      width: 100%;
+    }
+
     @include media('<=900px') {
      .buttons{
        flex-direction: column;
@@ -164,6 +172,7 @@
           /* Dash provides a dire: */
           font-size: 16px !important;
           color: #FFFFFF;
+          max-width:100%;
           line-height: 26px !important;
         }
       }
