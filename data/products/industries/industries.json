@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Industries"
+  },
+  "header": {
+    "title": "Industries",
+    "desc": "Plotly is the premium dashboard and reporting platform for companies in aerospace, materials science, energy prospecting, journalism, and dozens of other industries. Select your industry below to see how Plotly helps data scientists in your field build robust dashboards and reporting applications."
+  },
+  "stories": [
+    {
+      "id": "finance",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+      },
+      "label": "Finance",
+      "cta": "Learn More →",
+      "cta-url": "/finance"
+    },
+    {
+      "id": "insurance",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-insurance.9a3589a826b4.jpg)"
+      },
+      "label": "Insurance",
+      "cta": "Learn More →",
+      "cta-url": "/insurance"
+    },
+    {
+      "id": "aerospace",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-aerospace.f58359cdc8f8.jpg)"
+      },
+      "label": "Aerospace",
+      "cta": "Learn More →",
+      "cta-url": "/aerospace"
+    },
+    {
+      "id": "research-development",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-rnd.d1fda8f91ba5.jpg)"
+      },
+      "label": "Research And Development",
+      "cta": "Learn More →",
+      "cta-url": "/research-development"
+    },
+    {
+      "id": "automotive",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-automotive.e74dc7df9b70.jpg)"
+      },
+      "label": "Automotive",
+      "cta": "Learn More →",
+      "cta-url": "/automotive"
+    },
+    {
+      "id": "government",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-gov.0df4b0eaba36.jpg)"
+      },
+      "label": "Government, Civic Data and Public",
+      "cta": "Learn More →",
+      "cta-url": "/government"
+    },
+    {
+      "id": "pharma",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-pharma.ca4108335c3b.jpg)"
+      },
+      "label": "Pharma, Life Sciences & Computational Biology",
+      "cta": "Learn More →",
+      "cta-url": "/pharma"
+    },
+    {
+      "id": "journalism",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-journalism.fa93161565f1.jpg)"
+      },
+      "label": "Journalism",
+      "cta": "Learn More →",
+      "cta-url": "/journalism"
+    },
+    {
+      "id": "business-intelligence",
+      "style": {
+        "backgroundImage": "url(/static/images/industries/thumbnail-business-intel.b17d0578e3fd.jpg)"
+      },
+      "label": "Business Intelligence",
+      "cta": "Learn More →",
+      "cta-url": "/aerospace"
+    }
+  ]
+}
