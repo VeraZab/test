@@ -28,8 +28,8 @@ const HeroButtons = [
             subtitle: null,
             title: '',
             icon: null,
-            target: '_self',
-            link: 'https://medium.com/@plotlygraphs/introducing-dash-reactive-web-apps-for-python-5ecf7191b503',
+            target: '_blank',
+            link: 'https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503',
             button: {
                 classes: 'button button-secondary'
             }

@@ -78,7 +78,7 @@ const footerData = [
             {
                 label: 'Community Support',
                 icon: null,
-                url: 'https://support.plot.ly/'
+                url: 'https://community.plot.ly/'
             },
             {
                 label: 'Documentation',
@@ -128,12 +128,12 @@ const footerData = [
             {
                 label: 'Slide Decks',
                 icon: null,
-                url: 'https://images.plot.ly/uses-cases/Plotly+for+Dashboards.pdf'
+                url: 'https://plot.ly/powerpoint-online/'
             },
             {
                 label: 'Database Connectors',
                 icon: null,
-                url: 'https://plot.ly/online-chart-maker/'
+                url: 'https://marketing.plot.ly/database-connectors/'
             }
         ]
     }
