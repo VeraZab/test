@@ -81,6 +81,7 @@
       font-weight: 600;
       color: $color-dodger;
       padding-bottom: $unit;
+      @extend %font-smoothing;
 
     }
     &-links {

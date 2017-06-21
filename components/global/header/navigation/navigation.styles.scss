@@ -146,6 +146,7 @@
       position: relative;
       transition: $transition;
       white-space: nowrap;
+      @extend %font-smoothing;
 
 
       &-text {
