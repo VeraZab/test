@@ -3,6 +3,11 @@ const glob = require('glob')
 const chromatic = require("chromatic-sass")
 
 module.exports = {
+    exportPathMap: () => ({
+        "/": { page: "/" },
+        "/products/dash": { page: "/products/dash" },
+        "/products/on-premise": { page: "/products/on-premise" }
+    }),
     webpack: (config, {dev}) => {
         config.module.rules.push(
             {

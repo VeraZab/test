@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start"
   },
   "engines": {
@@ -33,7 +34,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lru-cache": "^4.0.2",
     "mdi": "^1.8.36",
-    "next": "latest",
+    "next": "beta",
     "next-url-prettifier": "^1.1.2",
     "node-sass": "^4.4.0",
     "normalize-scss": "^6.0.0",
