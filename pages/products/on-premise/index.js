@@ -76,6 +76,11 @@ const actions = [
     }
 ];
 
+const meta = {
+    title: 'Plotly On-Premise and Dash Pricing',
+    description: 'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
+    url: 'https://plot.ly/products/on-premise/'};
+
 export default class OnPrem extends React.Component {
     constructor(props) {
         super(props)

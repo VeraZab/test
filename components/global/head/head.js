@@ -10,7 +10,7 @@ const defaultMeta = {
     title: 'Visualize Data, Together',
     description: 'Plotly is the modern platform for agile business intelligence and data science.',
     url: 'https://plot.ly',
-    image: '',
+    image: 'https://now.plot.ly/static/images/meta/plotly-og@2x.png',
     tags: [],
     publisher: 'https://www.facebook.com/Plotly/',
     twitter: {
@@ -55,5 +55,6 @@ export default ({children, meta = defaultMeta}) => (
             {meta.twitter && meta.twitter.data2 ? (<meta name="twitter:data2" content={meta.twitter.data2} />) : null}
 
             <meta name="twitter:site" content={defaultMeta.twitter.site} />
+            <link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" />
         </Head>
 )
