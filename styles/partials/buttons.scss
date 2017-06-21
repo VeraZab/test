@@ -180,7 +180,7 @@
       background: white;
       .button-label {
         text-shadow: none;
-        color: $color-dodger;
+        color: $color-dodger !important;
       }
 
       &:hover {

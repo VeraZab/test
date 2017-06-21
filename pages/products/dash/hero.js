@@ -80,7 +80,7 @@ export default class HeroSection extends React.Component {
                 <HeroTop>
                     <HeroMessaging>
                         <HeroTitle>
-                            Easily build beautiful web-based interfaces in&nbsp;Python
+                            Build beautiful web-based interfaces in&nbsp;Python
                         </HeroTitle>
                         <h3>
                             Dash is a Python framework for building analytical
