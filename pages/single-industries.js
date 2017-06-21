@@ -5,7 +5,7 @@ import Layout from '../components/global/layout/layout';
 import {ContentSection, Body} from '../components/content-section/content-section';
 import IndustriesHero from './single-industries/hero';
 import IndustriesMain from './single-industries/main';
-import IndustriesRequest from './single-industries/request';
+import IndustriesRequestDemo from './single-industries/request-demo';
 
 
 
@@ -25,7 +25,7 @@ export default class extends React.Component {
       <Layout meta={data.header.title}>
         <IndustriesHero header={data.header} />
         <IndustriesMain mainData={data} />
-        <IndustriesRequest />
+        <IndustriesRequestDemo />
 
         {console.log(this.props)}
       </Layout>

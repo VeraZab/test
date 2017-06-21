@@ -1,9 +1,9 @@
-import Layout from '../../../../components/global/layout/layout';
-import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section';
-import Buttons from '../../../../components/buttons/buttons';
-import data from  '../../../../data/products/customer-stories.json';
-import CustomerServiceHero from './hero';
-import CustomerServiceMain from './main';
+import Layout from '../components/global/layout/layout';
+import {ContentSection, ContentPane, Title, Body} from '../components/content-section/content-section';
+import Buttons from '../components/buttons/buttons';
+import data from  '../static/data/products/highcharts-alternativejson';
+import CustomerServiceHero from './highcharts-alternative/hero';
+import CustomerServiceMain from './highcharts-alternative/main';
 
 export default () => (
     <Layout meta={data.meta}>
