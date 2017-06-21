@@ -286,8 +286,8 @@ export default () => (
                 </Title>
                 <Body>
                 <p>
-                    This Dash App displays the deparature of all Uber rides
-                    in 2017. A histogram below map displays the popularity of
+                    This Dash App displays the departure of all Uber rides
+                    in 2014. A histogram below map displays the popularity of
                     rides and selecting different hours filters data in the map.
                 </p>
                 <p>
