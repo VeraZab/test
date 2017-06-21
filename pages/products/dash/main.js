@@ -15,22 +15,62 @@ const bg = {
     backgroundImage: "linear-gradient(27deg, #1E427D 0%, #1D9CFC 100%)"
 };
 
-const DemoButtons = [
-    [
-        {
-            label: 'Live Demo →',
-            subtitle: null,
-            title: '',
-            icon: null,
-            target: '_self',
-            link: '#',
-            button: {
-                classes: 'button button-primary'
-            }
+const demoAppStock = [
+    {
+        label: 'Live Demo →',
+        subtitle: null,
+        title: 'EXAMPLE APP #1 -- Stock Tickers',
+        icon: null,
+        target: '_blank',
+        link: 'https://plot.ly/dash/gallery/stock-tickers/',
+        button: {
+            classes: 'button button-primary'
         }
-    ],
-    []
+    }
 ];
+
+const demoAppDrugs =  [
+    {
+        label: 'Live Demo →',
+        subtitle: null,
+        title: 'EXAMPLE APP #2 -- Drug Discovery',
+        icon: null,
+        target: '_blank',
+        link: 'https://plot.ly/dash/gallery/drug-explorer/',
+        button: {
+            classes: 'button button-primary'
+        }
+    }
+];
+const demoAppGold = [
+    {
+        label: 'Live Demo →',
+        subtitle: null,
+        title: 'EXAMPLE APP #3 -- Goldman Sachs Interactive Report',
+        icon: null,
+        target: '_blank',
+        link: 'https://plot.ly/dash/gallery/goldman-sachs-report/',
+        button: {
+            classes: 'button button-primary'
+        }
+    }
+];
+
+const demoAppUber = [
+    {
+        label: 'Live Demo →',
+        subtitle: null,
+        title: 'EXAMPLE APP #4 -- NYC Uber Rides',
+        icon: null,
+        target: '_blank',
+        link: 'https://plot.ly/dash/gallery/uber-rides/',
+        button: {
+            classes: 'button button-primary'
+        }
+    }
+];
+
+
 
 const ExampleCodeBlock = `import dash
 from dash.dependencies import Input, Output
@@ -89,7 +129,7 @@ export default () => (
         <ContentSection className="dash-section-features-thirds">
             <ContentPane thirds center-vertically>
                 <div className="icon">
-                    <img src="/static/images/dash/lightweight-icon.png" alt="Dash is Lightweight"/>
+                    <img src="https://now.plot.ly/static/images/dash/lightweight-icon.png" alt="Dash is Lightweight"/>
                 </div>
                 <div className="title">
                     Lightweight
@@ -101,7 +141,7 @@ export default () => (
             </ContentPane>
             <ContentPane thirds center-vertically>
                 <div className="icon">
-                    <img src="/static/images/dash/direct-control-icon.png" alt="Dash provides direct control"/>
+                    <img src="https://now.plot.ly/static/images/dash/direct-control-icon.png" alt="Dash provides direct control"/>
                 </div>
                 <div className="title">
                     Direct Control
@@ -114,7 +154,7 @@ export default () => (
             </ContentPane>
             <ContentPane thirds center-vertically>
                 <div className="icon">
-                    <img src="/static/images/dash/composable-icon.png" alt="Dash is Composable and Modular"/>
+                    <img src="https://now.plot.ly/static/images/dash/composable-icon.png" alt="Dash is Composable and Modular"/>
                 </div>
                 <div className="title">
                     Completely Customizable
@@ -158,22 +198,22 @@ export default () => (
                     Pandas is used to compute upper and lower bollinger bands.
                 </p>
 
-                <Buttons className="gutter-top" items={DemoButtons[0]}/>
+                <Buttons className="gutter-top" items={demoAppStock}/>
 
                 </Body>
             </ContentPane>
             <ContentPane half graphic center-vertically>
-                <a href={DemoButtons[0].link}>
-                    <Graphic
-                        image="/static/images/dash/stock-tickers.png"/>
-                </a>
+
+                    <Graphic link={demoAppStock[0].link}
+                        image="https://now.plot.ly/static/images/dash/stock-tickers.png"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic center-vertically>
-                <Graphic
-                    image="/static/images/dash/drug-discovery.gif"/>
+
+                <Graphic link={demoAppDrugs[0].link}
+                    image="https://now.plot.ly/static/images/dash/drug-discovery.gif"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <div className="pre-title">
@@ -194,7 +234,7 @@ export default () => (
                     Dash enables you to build apps that are tailor-made to your
                     datasets and exploratory process.
                 </p>
-                <Buttons className="gutter-top" items={DemoButtons[0]}/>
+                <Buttons className="gutter-top" items={demoAppDrugs}/>
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -219,19 +259,23 @@ export default () => (
                     With Dash, you can automate reports from Python and use
                     the same platform for the web and for print.
                 </p>
-                <Buttons className="gutter-top" items={DemoButtons[0]}/>
+                <Buttons className="gutter-top" items={demoAppGold}/>
                 </Body>
             </ContentPane>
             <ContentPane half graphic center-vertically>
-                <Graphic
-                    image="/static/images/dash/goldman-sachs.png"/>
+
+                <Graphic link={demoAppGold[0].link}
+                    image="https://now.plot.ly/static/images/dash/goldman-sachs.png"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic center-vertically>
+
                 <Graphic
-                    image="/static/images/dash/uber-example.png"/>
+                    link={demoAppUber[0].link}
+                    image="https://now.plot.ly/static/images/dash/uber-example.png"/>
+
             </ContentPane>
             <ContentPane half center-vertically text>
                 <div className="pre-title">
@@ -251,7 +295,7 @@ export default () => (
                     charting library including maps like these, financial
                     charts, scientific graphs, and more.
                 </p>
-                <Buttons className="gutter-top" items={DemoButtons[0]}/>
+                <Buttons className="gutter-top" items={demoAppUber}/>
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -267,11 +311,11 @@ export default () => (
                     source. Dash is MIT licensed. Run Dash on your desktop environment for free.
                 </p>
                 <p>
-                    Using dash inside your enterprise?
+                    Using Dash inside your enterprise?
                     Plotly offers Dash Enterprise for 1-click app deployment and
                     App permissioning with LDAP and Active Directory,
                     all behind your corporate firewall.&nbsp;
-                    <a href="#" className="special-link"><span className="special-link-label">
+                    <a href="https://plotly.typeform.com/to/seG7Vb" className="special-link"><span className="special-link-label">
                         Request a Demo →
                     </span></a>
                 </p>
@@ -280,70 +324,70 @@ export default () => (
         </ContentSection>
 
 
-        <ContentSection className="dash-section-more-details">
-            <ContentPane full center-vertically center text>
-                <Body>
-                <div className="cards stories">
-                    <div className="card card-with-image">
-                        <div className="card-wrapper">
-                            <div className="card-image"
-                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-sharing.png")'}}>
-                                <div className="card-image-label">
-                                    Dash Enterprise Deployment
-                                </div>
-                            </div>
-                            <div className="card-body">
-                                <p>
-                                    Managing apps and servers inside your
-                                    enterprise is usually a full time job.
-                                    Our goal with Dash Enterprise is to make
-                                    deploying and sharing a Dash app internally
-                                    as easy and secure as possible.
-                                    No dev-ops required.
-                                </p>
+        {/*<ContentSection className="dash-section-more-details">*/}
+            {/*<ContentPane full center-vertically center text>*/}
+                {/*<Body>*/}
+                {/*<div className="cards stories">*/}
+                    {/*<div className="card card-with-image">*/}
+                        {/*<div className="card-wrapper">*/}
+                            {/*<div className="card-image"*/}
+                                 {/*style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-sharing.png")'}}>*/}
+                                {/*<div className="card-image-label">*/}
+                                    {/*Dash Enterprise Deployment*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                            {/*<div className="card-body">*/}
+                                {/*<p>*/}
+                                    {/*Managing apps and servers inside your*/}
+                                    {/*enterprise is usually a full time job.*/}
+                                    {/*Our goal with Dash Enterprise is to make*/}
+                                    {/*deploying and sharing a Dash app internally*/}
+                                    {/*as easy and secure as possible.*/}
+                                    {/*No dev-ops required.*/}
+                                {/*</p>*/}
 
-                                <p>
-                                    Dash Enterprise handles all of the hard
-                                    parts about managing apps for you:
-                                    deployingment, managing updates,
-                                    error handling, URL routing, LDAP integration,
-                                    and more.
-                                    Deploy and share an app behind your
-                                    firewall in minutes.
-                                </p>
-                            </div>
-                            <div className="card-action">
-                                <a className="card-action-link" href="#">Request a Demo →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card card-with-image">
-                        <div className="card-wrapper">
-                            <div className="card-image"
-                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-portal.png")'}}>
-                                <div className="card-image-label">
-                                    Dash Enterprise App Portal
-                                </div>
-                            </div>
-                            <div className="card-body">
-                                <p>
-                                    Dash Enterprise ties into Plotly Enterprise,
-                                    storing your
-                                    analytical Dash applications
-                                    with plotly graphs, datasets, SQL queries,
-                                    and dashboards in one company-wide
-                                    portal.
-                                </p>
-                            </div>
-                            <div className="card-action">
-                                <a className="card-action-link" href="#">Request a Demo →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </Body>
-            </ContentPane>
-        </ContentSection>
+                                {/*<p>*/}
+                                    {/*Dash Enterprise handles all of the hard*/}
+                                    {/*parts about managing apps for you:*/}
+                                    {/*deployingment, managing updates,*/}
+                                    {/*error handling, URL routing, LDAP integration,*/}
+                                    {/*and more.*/}
+                                    {/*Deploy and share an app behind your*/}
+                                    {/*firewall in minutes.*/}
+                                {/*</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="card-action">*/}
+                                {/*<a className="card-action-link" href="#">Request a Demo →</a>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<div className="card card-with-image">*/}
+                        {/*<div className="card-wrapper">*/}
+                            {/*<div className="card-image"*/}
+                                 {/*style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-portal.png")'}}>*/}
+                                {/*<div className="card-image-label">*/}
+                                    {/*Dash Enterprise App Portal*/}
+                                {/*</div>*/}
+                            {/*</div>*/}
+                            {/*<div className="card-body">*/}
+                                {/*<p>*/}
+                                    {/*Dash Enterprise ties into Plotly Enterprise,*/}
+                                    {/*storing your*/}
+                                    {/*analytical Dash applications*/}
+                                    {/*with plotly graphs, datasets, SQL queries,*/}
+                                    {/*and dashboards in one company-wide*/}
+                                    {/*portal.*/}
+                                {/*</p>*/}
+                            {/*</div>*/}
+                            {/*<div className="card-action">*/}
+                                {/*<a className="card-action-link" href="#">Request a Demo →</a>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
+                {/*</Body>*/}
+            {/*</ContentPane>*/}
+        {/*</ContentSection>*/}
 
     </div>
 )

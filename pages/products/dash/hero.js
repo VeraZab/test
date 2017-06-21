@@ -29,7 +29,7 @@ const HeroButtons = [
             title: '',
             icon: null,
             target: '_self',
-            link: '/dash',
+            link: 'https://medium.com/@plotlygraphs/introducing-dash-reactive-web-apps-for-python-5ecf7191b503',
             button: {
                 classes: 'button button-secondary'
             }
@@ -39,7 +39,6 @@ const HeroButtons = [
 ];
 
 const HeroStyles = {
-    height: '70vh',
     background: 'linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important'
 
 };
@@ -62,7 +61,7 @@ export default class HeroSection extends React.Component {
                   <div className="dash-header-wrapper">
                       <div className="dash-logo">
                           <div className="dash-logo-wrapper">
-                              <img src="/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
+                              <img src="https://now.plot.ly/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
                           </div>
                       </div>
                       <div className="dash-navigation">
@@ -100,7 +99,7 @@ export default class HeroSection extends React.Component {
                     </HeroMessaging>
 
                     <div className="hero-graphic dash dash-graphic">
-                        <img src="/static/images/dash/dash-hero-visual@2x.png" alt=""/>
+                        <img src="https://now.plot.ly/static/images/dash/dash-hero-visual@2x.png" alt=""/>
                     </div>
 
                 </HeroTop>

@@ -67,7 +67,7 @@ const onPremDashata = [
 
 const actions = [
     {
-        label: 'Contact Sales',
+        label: 'Request a Demo',
         link: 'https://plotly.typeform.com/to/seG7Vb',
         button: {
             classes: 'button button-primary'

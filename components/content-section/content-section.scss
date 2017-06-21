@@ -31,7 +31,7 @@
   }
 
   &:nth-of-type(odd) {
-    //background: url('/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
+    //background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
     background-color: chromatic-color-luminance($color-rhino-core, 0.9);
   }
 
@@ -113,7 +113,7 @@
     }
   }
   &.background--tunnels {
-    background: url("/static/images/background_lines.png") center center no-repeat;
+    background: url("https://now.plot.ly/static/images/background_lines.png") center center no-repeat;
     background-size: cover;
   }
   &.background--dotted-lines {
@@ -139,8 +139,9 @@
     &-wrapper {
       display: flex;
       flex-direction: column;
-      flex: 1;
+      flex-grow: 1;
       max-width:100%;
+      width: 100%;
     }
 
 
@@ -171,7 +172,7 @@
       }
     }
     &-flex {
-      flex: 1;
+      flex-grow: 1;
     }
 
     &-text{
@@ -184,6 +185,11 @@
     }
 
     &-graphic{
+      display: block !important;
+      img{
+        width: 100%;
+        max-width:100%;
+      }
 
       & + .content-section-pane-text{
         @include desktop{
@@ -282,7 +288,7 @@
       padding-right: $unit*2;
       border: 1px solid chromatic-color-luminance($color-rhino-core, 0.75);
 
-      background: url('/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
+      background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
       color: chromatic-color-luminance($color-rhino-core, 0.1);
 
       li + li {

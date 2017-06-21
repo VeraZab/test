@@ -56,7 +56,7 @@
         }
       }
       iframe{
-        flex: 1;
+        height:640px;
         width: 100%;
         border: 0;
         overflow: hidden;
@@ -91,7 +91,7 @@
       width: 100%;
     }
     &-wrapper {
-      display: flex;
+      //display: flex;
       flex-direction: column;
       flex: 1;
     }
