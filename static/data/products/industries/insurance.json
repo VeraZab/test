@@ -1,0 +1,40 @@
+{
+  "id": "finance",
+  "meta": {
+    "title": "Insurance Analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Insurance Analytics",
+    "desc": "Plotly graphs are used in the dashboards, reports, and software products of insurance companies worldwide."
+  },
+  "style": {
+    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+  },
+  "quotes": [
+    {
+      "author": "- Goji, world's leading provider of automobile insurance",
+      "desc": " Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served. "
+    }
+  ],
+  "sections": [
+    {
+      "image": "",
+      "title": "",
+      "body": ""
+    }
+  ],
+  "learn-more": [{
+      "title": "VISUALIZING BLOOMBERG AND QUANDL DATA WITH PLOTLY",
+      "url": "http://plot.ly/ipython-notebooks/ukelectionbbg/"
+    },
+    {
+      "title": "VISUALIZING BLOOMBERG AND QUANDL DATA WITH PLOTLY",
+      "url": "http://plot.ly/ipython-notebooks/ukelectionbbg/"
+    },
+    {
+      "title": "VISUALIZING BLOOMBERG AND QUANDL DATA WITH PLOTLY",
+      "url": "http://plot.ly/ipython-notebooks/ukelectionbbg/"
+    }
+  ]
+}

@@ -43,6 +43,24 @@ app.prepare()
           renderAndCache(req, res, '/single-industries', queryParams)
         })
 
+        server.get('/products/enterprise/customer-stories', (req, res) => {
+          renderAndCache(req, res, '/customer-stories')
+        })
+
+        server.get('/products/enterprise/customer-stories/:id', (req, res) => {
+          const queryParams = { id: req.params.id }
+          renderAndCache(req, res, '/single-customer-stories', queryParams)
+        })
+
+        server.get('/tableau-alternative', (req, res) => {
+          renderAndCache(req, res, '/tableau-alternative')
+        })
+
+        server.get('/highcharts-alternative', (req, res) => {
+          renderAndCache(req, res, '/highcharts-alternative')
+        })
+
+
         server.get('*', (req, res) => {
             return handle(req, res)
         })
