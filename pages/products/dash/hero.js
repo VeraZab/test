@@ -69,7 +69,7 @@ export default class HeroSection extends React.Component {
                               Pricing
                           </a>
                           <a target="_blank" href="https://plot.ly/dash/" className="dash-navigation-item">
-                              Docs
+                              User Guide
                           </a>
                           <a target="_self" href="/" className="dash-navigation-item">
                               Plotly
