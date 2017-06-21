@@ -282,12 +282,12 @@ const navigationLeft = [
     },
     {
         id: 17,
-        label: 'Support Plans',
+        label: 'Support',
         slug: 'support',
         title: 'Learn about advanced support plans we offer.',
         icon: null,
         target: '_blank',
-        link: 'https://support.plot.ly/plans',
+        link: 'https://support.plot.ly',
         button: null,
         submenu: null
     },
