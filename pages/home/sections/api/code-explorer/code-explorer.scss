@@ -22,7 +22,7 @@
     background: white;
     display: flex;
     &-wrapper {
-      flex: 1;
+      flex-grow: 1;
       width: 100%;
       background-size:cover !important;
       background-position: center center;
@@ -36,7 +36,7 @@
 
     background-color: $color-rhino-core;
     padding: $gutter;
-    //flex: 1;
+    //flex-grow: 1;
     //width: 75%;
     width: calc(100% - 500px);
     display: flex;
@@ -48,7 +48,7 @@
     &-wrapper {
       display: flex;
       flex-direction: column;
-      flex: 1;
+      flex-grow: 1;
     }
     // --
     // Header
@@ -72,7 +72,7 @@
       border-radius: 3px;
       font-weight: 600;
       color: $color-rhino-medium-1;
-      flex: 1;
+      flex-grow: 1;
       text-align: center;
       text-shadow: $text-shadow-default;
       transition: $transition;
@@ -118,7 +118,7 @@
         transition: $timing transform $easing;
         user-select: none;
         position: relative;
-        flex: 1;
+        flex-grow: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -164,7 +164,7 @@
       min-height: 400px;
       max-height: 400px;
       overflow: auto;
-      flex: 1;
+      flex-grow: 1;
 
       &::-webkit-scrollbar {
         width: 8px;

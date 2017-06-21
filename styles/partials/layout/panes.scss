@@ -3,8 +3,8 @@
 //----------------------------------------------------------------------------------------------------------------------
 .panes {
   display: flex;
-  flex: 1;
-  max-width:100%;
+  //flex-grow: 1;
+  max-width: 100%;
   @include tablet {
     display: block;
   }
@@ -17,7 +17,7 @@
     }
   }
   .pane {
-    display: flex;
+    //display: flex;
     align-items: center;
     color: $color-rhino-dark;
 
@@ -120,38 +120,52 @@
 
 }
 
+.grids {
+  @include tablet {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
 .grid {
   display: flex;
   @include desktop {
     flex-wrap: wrap;
   }
-  @include tablet {
-    max-width: 100%;
-    overflow-x: auto;
-  }
+
   &-3x3 {
 
-
     .grid-item {
-      @include desktop {
-        $size: calc(33.333% - 20px);
+      flex-shrink: 1;
+      flex-grow: 1;
+      @include tablet {
+        $size: calc(320px);
         //flex: 1 1 $size;
-        //min-width: $size;
-        //max-width: $size;
+        min-width: $size;
+        width: $size;
+        max-width: $size;
+      }
+      @include desktop {
+        $size: calc(33.333%);
+        //flex: 1 1 $size;
+        min-width: $size;
+        width: $size;
+        max-width: $size;
         //margin-left:$unit/2;
-        .card{
-          max-width:100%;
+        .card {
+          max-width: 100%;
           min-width: 100%;
         }
-        &:nth-of-type(1){
-          margin-left:0;
+        &:nth-of-type(1) {
+          margin-left: 0;
         }
-        &:nth-of-type(4){
-          margin-left:0;
+        &:nth-of-type(4) {
+          margin-left: 0;
 
         }
-        &:nth-of-type(7){
-          margin-left:0;
+        &:nth-of-type(7) {
+          margin-left: 0;
 
         }
 

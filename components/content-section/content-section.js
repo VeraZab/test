@@ -80,6 +80,9 @@ export class Graphic extends React.Component {
                         src={this.props.videoPlaceholder}/></video>);
             classes += ' content-section-graphic-video';
         }
+        if (this.props.shadow ==='false') {
+            classes += ' content-section-graphic-image-noshadow';
+        }
 
         if (this.props.label) {
             if (this.props.link) {

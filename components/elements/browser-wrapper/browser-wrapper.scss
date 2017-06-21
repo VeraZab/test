@@ -46,7 +46,7 @@
   overflow: hidden;
   box-shadow: $drop-shadow-l;
   margin: $gutter 0;
-  display: flex;
+  //display: flex;
   flex-direction: column;
   width: auto;
   @include handheld {

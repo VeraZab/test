@@ -3,6 +3,7 @@ const glob = require('glob')
 const chromatic = require("chromatic-sass")
 
 module.exports = {
+    // assetPrefix: 'https://plotly.github.io/next-static',
     exportPathMap: () => ({
         "/": { page: "/" },
         "/products/dash": { page: "/products/dash" },

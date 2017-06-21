@@ -2,8 +2,11 @@
 
 .browser {
   @include center-content;
-  &-wrapper {
 
+  &-wrapper {
+img{
+  width: 100%;
+}
   }
 
   box-shadow: $drop-shadow-l-light;

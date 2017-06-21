@@ -92,7 +92,7 @@
   //----------------------------------------------------------------------------------------------------------------------
   &-simple {
     border-radius: 5px;
-    flex: 1;
+    flex-grow: 1;
     text-align: left;
     box-shadow: $drop-shadow-xl;
     background: white;
@@ -164,6 +164,9 @@
         flex-wrap: wrap;
         flex-grow: 1;
         align-items: stretch;
+        max-width:100%;
+        width: 100%;
+        //display: block;
 
       }
       &-image {
@@ -201,6 +204,8 @@
         p{
           padding: 0 !important;
           margin: 0 !important;
+          width: 100%;
+          max-width:100%;
         }
       }
       &-action {

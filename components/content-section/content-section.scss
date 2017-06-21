@@ -137,7 +137,7 @@
     display: flex;
     width: 100%;
     &-wrapper {
-      display: flex;
+      display: block;
       flex-direction: column;
       flex-grow: 1;
       max-width:100%;
@@ -152,6 +152,25 @@
       }
       @at-root & .content-section-pane-wrapper {
         padding: $unit;
+      }
+    }
+
+    &.sixy-five{
+      width: 65%;
+      @include handheld {
+        width: 100%;
+      }
+
+      .buttons{
+        @include handheld{
+          display: block;
+        }
+      }
+    }
+    &.thirty-five{
+      width: 35%;
+      @include handheld {
+        width: 100%;
       }
     }
 
@@ -309,6 +328,12 @@
       //background: white;
       //border-radius: 6px;
       //overflow: hidden;
+
+      &-noshadow{
+        img{
+          box-shadow: none !important;
+        }
+      }
     }
 
     &-video{

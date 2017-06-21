@@ -188,9 +188,9 @@ const navigationLeft = [
                     items: [
                         {
                             id: 6,
-                            label: 'Chart Maker',
+                            label: 'Charts',
                             slug: 'chart-maker',
-                            title: 'See all of our pricing options.',
+                            title: 'Explore the Plotly Chart Maker.',
                             icon: 'chart-maker',
                             target: '_self',
                             link: '/online-chart-maker/'
@@ -199,16 +199,16 @@ const navigationLeft = [
                             id: 7,
                             label: 'Dashboards',
                             slug: 'dashboards',
-                            title: 'See all of our pricing options.',
+                            title: 'See what you can make with Plotly Dashboards.',
                             icon: 'dashboards',
                             target: '_self',
                             link: '/dashboards/'
                         },
                         {
                             id: 8,
-                            label: 'Presentations',
-                            slug: 'presentations',
-                            title: 'See all of our pricing options.',
+                            label: 'Slide Decks',
+                            slug: 'slide-decks',
+                            title: 'See what you can make with Plotly Slide Decks!',
                             icon: 'presentations',
                             target: '_self',
                             link: '/powerpoint-online/'
