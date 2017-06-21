@@ -141,6 +141,7 @@
       flex-direction: column;
       flex-grow: 1;
       max-width:100%;
+      width: 100%;
     }
 
 
@@ -184,6 +185,11 @@
     }
 
     &-graphic{
+      display: block !important;
+      img{
+        width: 100%;
+        max-width:100%;
+      }
 
       & + .content-section-pane-text{
         @include desktop{

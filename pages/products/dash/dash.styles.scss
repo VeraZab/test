@@ -4,6 +4,14 @@
 
   &-content{
     .content-section{
+
+      .content-section-graphic-image-link{
+        @include trans;
+        display: block;
+        &:hover{
+          transform: translateY(-4px);
+        }
+      }
       &-title-wrapper{
         /* Dash is productive: */
         font-size: 38px !important;

@@ -64,7 +64,7 @@ export class Graphic extends React.Component {
             label = () => ('');
 
         if (this.props.link) {
-            graphic = graphic = () => (<a href={this.props.link} target="_blank"><img className="content-section-graphic-img" src={this.props.image}/></a>);
+            graphic = graphic = () => (<a href={this.props.link} className="content-section-graphic-image-link" target="_blank"><img className="content-section-graphic-img" src={this.props.image}/></a>);
             classes += ' content-section-graphic-image';
         }
         if (this.props.image && !this.props.link) {
