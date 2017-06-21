@@ -48,8 +48,8 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: '/static/images/dash/hello-world.gif',
-        example_url: '/static/images/javascript_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/dash/hello-world.gif',
+        example_url: 'https://now.plot.ly/static/images/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'http://google.com'
     }

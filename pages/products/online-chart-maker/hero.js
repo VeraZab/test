@@ -6,7 +6,7 @@ import {Browser} from '../../../components/browser/browser';
 
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(/static/images/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://now.plot.ly/static/images/hero-pricing@2x.png)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'

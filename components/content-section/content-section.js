@@ -63,7 +63,11 @@ export class Graphic extends React.Component {
         let graphic,
             label = () => ('');
 
-        if (this.props.image) {
+        if (this.props.link) {
+            graphic = graphic = () => (<a href={this.props.link} target="_blank"><img className="content-section-graphic-img" src={this.props.image}/></a>);
+            classes += ' content-section-graphic-image';
+        }
+        if (this.props.image && !this.props.link) {
             graphic = graphic = () => (<img className="content-section-graphic-img" src={this.props.image}/>);
             classes += ' content-section-graphic-image';
         }
@@ -76,8 +80,8 @@ export class Graphic extends React.Component {
                         src={this.props.videoPlaceholder}/></video>);
             classes += ' content-section-graphic-video';
         }
-        if (this.props.label) {
 
+        if (this.props.label) {
             if (this.props.link) {
                 label = label = () => (
                     <div className="content-section-graphic-label"><a href={this.props.link}>{this.props.label}</a>

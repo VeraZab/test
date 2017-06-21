@@ -6,13 +6,13 @@ const columnData = [
     {
         title: 'Support Open Source',
         message: 'These libraries are free forever. Your support helps to keep them top notch.',
-        graphic: '/static/images/illustrations/support_open_source@2x.png',
+        graphic: 'https://now.plot.ly/static/images/illustrations/support_open_source@2x.png',
         actions: null
     },
     {
         title: 'Engineering Support',
         message: 'Get chat and support from our awesome engineering team.',
-        graphic: '/static/images/illustrations/engineering_supoort@2x.png',
+        graphic: 'https://now.plot.ly/static/images/illustrations/engineering_supoort@2x.png',
         actions: [
             {
                 label: 'Get Advanced Support',
@@ -29,7 +29,7 @@ const columnData = [
     {
         title: 'Share Online',
         message: 'Share charts, dashboards, Jupyter notebooks, and presentations online.',
-        graphic: '/static/images/illustrations/share_online@2x.png',
+        graphic: 'https://now.plot.ly/static/images/illustrations/share_online@2x.png',
         actions: null
     }
 ];
