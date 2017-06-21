@@ -197,8 +197,42 @@
     // Nav Item with submenu
     //--
     &--with-submenu {
+      position: relative;
+
+      &.nav-item-button{
+        height:$header-height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:$unit;
+
+        &.not-mobile{
+          @include media('<=1060px'){
+            display: none !important;
+          }
+        }
+
+        .nav-item-icon{
+          margin-right:8px;
+          flex-shrink:0;
+        }
+      }
+
+      &.button{
+        //margin:$gutter 0;
+        .nav-item-submenu{
+          top:29px;
+          margin-top:$gutter;
+
+          .nav-item-label-text{
+            font-size:16px;
+          }
+
+        }
+      }
       // keep default pointer when over an item with submenu (item itself is not link)
       & > .nav-item-wrapper {
+        position: relative;
        @include desktop{
          &:hover {
            cursor: default;

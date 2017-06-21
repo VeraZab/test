@@ -3,47 +3,128 @@ import styles from './navigation.styles.scss'
 import Link from 'next/link';
 
 const navigationRight = [
-    {
-        id: 1,
-        label: 'Create',
-        slug: 'create',
-        title: 'See what you can create with Plotly!',
-        icon: null,
-        target: '_self',
-        link: 'https://plot.ly/create',
-        button: {
-            classes: 'button button-small button-primary'
-
+        {
+            id: 1,
+            label: 'Create',
+            slug: 'create',
+            title: 'See what you can create with Plotly!',
+            icon: null,
+            target: '_self',
+            link: 'https://plot.ly/create',
+            button: {
+                classes: 'nav-item--with-submenu button button-small button-primary not-mobile'
+            },
+            submenu: {
+                sections: [
+                    {
+                        label: null,
+                        items: [
+                            {
+                                id: 6,
+                                label: 'Chart',
+                                slug: 'chart-maker',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_chart.87676eabf8bc.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/create/'
+                            },
+                            {
+                                id: 7,
+                                label: 'Dashboard',
+                                slug: 'dashboard',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dashboard.52af779684ee.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/dashboard/create'
+                            },
+                            {
+                                id: 8,
+                                label: 'Slide Deck',
+                                slug: 'presentations',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_presentation.89a6f41d4cec.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/organize/home?create=presentation'
+                            },
+                            {
+                                id: 9,
+                                label: 'Database Query',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_database.0a26f1c68ebb.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/create/?upload=sql'
+                            },
+                            {
+                                id: 10,
+                                label: 'Dataset',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dataset.2c1316a036ab.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/organize/home?create=grid'
+                            },
+                            {
+                                id: 11,
+                                label: 'Jupyter Notebook',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_notebook.63db2bee0f9b.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/organize/home?create=notebook'
+                            },
+                            {
+                                id: 12,
+                                label: 'Folder',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_folder.07d7dfd25383.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: 'https://plot.ly/organize/home?create=folder'
+                            }
+                        ]
+                    }
+                ]
+            }
         },
-        submenu: null
-    },
-    {
-        id: 2,
-        label: 'Sign In',
-        slug: 'signin',
-        title: 'Sign in or Sign up with Plotly',
-        icon: null,
-        target: '_blank',
-        link: 'https://plot.ly/accounts/login/?action=login',
-        button: {
-            classes: 'button button-small button-secondary'
-        },
-        submenu: null
-    },
-    {
-        id: 3,
-        label: 'Request a Demo',
-        slug: 'request-a-demo',
-        title: 'Request a demo or contact our sales team.',
-        icon: null,
-        target: '_blank',
-        link: 'https://plotly.typeform.com/to/seG7Vb',
-        button: {
-            classes: 'button button-small button-secondary'
-        },
-        submenu: null
-    }
-];
+        {
+            id: 2,
+            label: 'Sign In',
+            slug: 'signin',
+            title: 'Sign in or Sign up with Plotly',
+            icon: null,
+            target: '_blank',
+            link: 'https://plot.ly/accounts/login/?action=login',
+            button: {
+                classes: 'button button-small button-secondary'
+            }
+            ,
+            submenu: null
+        }
+        ,
+        {
+            id: 3,
+            label: 'Request a Demo',
+            slug: 'request-a-demo',
+            title: 'Request a demo or contact our sales team.',
+            icon: null,
+            target: '_blank',
+            link: 'https://plotly.typeform.com/to/seG7Vb',
+            button: {
+                classes: 'button button-small button-secondary'
+            }
+            ,
+            submenu: null
+        }
+    ]
+;
 const navigationLeft = [
     {
         id: 4,
@@ -275,6 +356,15 @@ export default class Navigation extends React.Component {
 
         let isActive = '';
 
+        let navItemIcon = (item) => {
+
+            if(item.icon && item.icon_type){
+                return (<div className="nav-item-icon"><img src={item.icon} alt=""/></div>)
+            } else {
+                return null;
+            };
+        };
+
 
         // this will generate our nav items
         let generateNavItem = (items) => {
@@ -304,6 +394,7 @@ export default class Navigation extends React.Component {
                 // if the nav submenu section has a label,
                 // this will be the markup for it
                 let navSubmenuSectionLabel = (section) => {
+
                     return (
                         <div className="nav-item-submenu-section-label">
                             {section.label}
@@ -331,26 +422,55 @@ export default class Navigation extends React.Component {
             }
 
             // Now let's build the nav item with submenu
-            return (
-                <div className='nav-item nav-item--with-submenu' key={item.id}>
-                    <div title={item.title} className='nav-item-wrapper'>
-                        <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
-                            <div className='nav-item-label-text'>
-                                {item.label}
+
+
+            if (item.button) {
+                return (
+                    <div className='nav-item--with-submenu nav-item-button not-mobile' key={item.id}>
+                        <div className={item.button.classes}>
+                            <div title={item.title} className='nav-item-wrapper'>
+                                <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                                    <div className='nav-item-label-text button-label'>
+                                        {item.label}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={'nav-item-submenu' + classes}>
+                            <div className="nav-item-submenu-wrapper">
+                                <div className="mobile-only close submenu-close"
+                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                    Close
+                                </div>
+                                {navSubmenuSections(item.submenu.sections)}
                             </div>
                         </div>
                     </div>
-                    <div className={'nav-item-submenu' + classes}>
-                        <div className="nav-item-submenu-wrapper">
-                            <div className="mobile-only close submenu-close"
-                                 onClick={this.toggleProductSubmenu.bind(this)}>
-                                Close
+
+                )
+            } else {
+                return (
+                    <div className='nav-item nav-item--with-submenu' key={item.id}>
+                        <div title={item.title} className='nav-item-wrapper'>
+                            <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                                <div className='nav-item-label-text'>
+                                    {item.label}
+                                </div>
                             </div>
-                            {navSubmenuSections(item.submenu.sections)}
+                        </div>
+                        <div className={'nav-item-submenu' + classes}>
+                            <div className="nav-item-submenu-wrapper">
+                                <div className="mobile-only close submenu-close"
+                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                    Close
+                                </div>
+                                {navSubmenuSections(item.submenu.sections)}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )
+                )
+            }
+
         };
 
 
@@ -366,6 +486,7 @@ export default class Navigation extends React.Component {
                     <div className={'nav-item' + isActive} key={item.id}>
                         <a href={item.link} target={item.target} title={item.title} className='nav-item-wrapper'>
                             <div className='nav-item-label'>
+
                                 <div className='nav-item-label-text'>
                                     {item.label}
                                 </div>
@@ -386,6 +507,7 @@ export default class Navigation extends React.Component {
                             <a target={item.target} title={item.title}
                                className='nav-item-wrapper'>
                                 <div className='nav-item-label'>
+                                    {navItemIcon(item)}
                                     <div className='nav-item-label-text'>
                                         {item.label}
                                     </div>

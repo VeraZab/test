@@ -33,9 +33,9 @@
     margin-top: $gutter;
   }
 
-  &.layout-align{
+  &.layout-align {
 
-    &-center{
+    &-center {
       justify-content: center;
       align-items: center;
     }
@@ -64,14 +64,14 @@
     align-items: center;
     justify-content: center;
 
-    &-mdi{
+    &-mdi {
       transform: translateY(3px);
     }
 
-    &-wrapper{
+    &-wrapper {
 
-      .mdi{
-        font-size:32px;
+      .mdi {
+        font-size: 32px;
       }
     }
     img {
@@ -91,17 +91,18 @@
   // Primary Button Styles
   // --
 
-
   &-primary {
     background: $color-button-default;
     box-shadow: $drop-shadow;
-    color: white !important;
-    text-shadow: $text-shadow-default;
+    .button-label {
+      color: white !important;
+      text-shadow: $text-shadow-default;
+    }
     &:hover {
       background: $color-button-hover;
       cursor: pointer;
     }
-    &:visited{
+    &:visited {
       color: white !important;
     }
     &:active {
@@ -131,7 +132,7 @@
     border: 1px solid $color-dodger;
     color: $color-dodger !important;
 
-    &:hover{
+    &:hover {
       border-color: $color-button-hover !important;
       color: $color-button-hover !important;
     }
@@ -175,17 +176,17 @@
         background: #07ACA3;
       }
     }
-    &-white{
+    &-white {
       background: white;
-      .button-label{
+      .button-label {
         text-shadow: none;
         color: $color-dodger;
       }
 
-      &:hover{
+      &:hover {
         background: white;
         transform: translateY(-5px);
-        .button-label{
+        .button-label {
           text-shadow: none;
           color: $color-dodger;
         }
@@ -201,13 +202,13 @@
       border-width: 2px;
       box-shadow: $drop-shadow;
       text-shadow: $text-shadow-default;
-      &:hover{
+      &:hover {
         background: white;
         color: $color-rhino-dark !important;
         text-shadow: none;
         border-color: white !important;
       }
-      &:active{
+      &:active {
         color: $color-lavender !important;
       }
     }
@@ -215,39 +216,39 @@
   }
 }
 
-.special-link{
+.special-link {
   position: relative;
   text-decoration: none !important;
   color: white !important;
   background-image: none !important;
-  padding:0 4px;
-  &:active, &:visited{
+  padding: 0 4px;
+  &:active, &:visited {
     color: white !important;
   }
-  &:hover{
+  &:hover {
     color: white !important;
 
-    &::after{
-      height:100%;
+    &::after {
+      height: 100%;
     }
   }
 
-  &-label{
+  &-label {
     position: relative;
-    z-index:2;
+    z-index: 2;
     color: white !important;
     text-shadow: $text-shadow-default;
   }
 
-  &::after{
+  &::after {
     position: absolute;
     content: '';
     bottom: 0;
-    left:0;
-    width:100%;
-    height:2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
     background: $color-aqua;
-    z-index:1;
+    z-index: 1;
     @include trans;
   }
 }

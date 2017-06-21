@@ -25,7 +25,7 @@ const defaultMeta = {
 
 export default ({children, meta = defaultMeta}) => (
         <Head>
-            <title>{meta.title ? defaultMeta.sitename + ': ' + meta.title + ' • Make charts and dashboards online ' : defaultMeta.title + ' • Make charts and dashboards online - ' + defaultMeta.sitename}</title>
+            <title>{meta.title ? meta.title : defaultMeta.title + ' • Make charts and dashboards online - ' + defaultMeta.sitename}</title>
             <meta charSet='utf-8'/>
             <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
             <link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
