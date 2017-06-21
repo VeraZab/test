@@ -193,7 +193,7 @@ const navigationLeft = [
                             title: 'See all of our pricing options.',
                             icon: 'chart-maker',
                             target: '_self',
-                            link: '/products/online-chart-maker/'
+                            link: '/online-chart-maker/'
                         },
                         {
                             id: 7,
@@ -202,7 +202,7 @@ const navigationLeft = [
                             title: 'See all of our pricing options.',
                             icon: 'dashboards',
                             target: '_self',
-                            link: '/products/dashboards/'
+                            link: '/dashboards/'
                         },
                         {
                             id: 8,
@@ -211,7 +211,7 @@ const navigationLeft = [
                             title: 'See all of our pricing options.',
                             icon: 'presentations',
                             target: '_self',
-                            link: '/products/powerpoint-online/'
+                            link: '/powerpoint-online/'
                         },
                         {
                             id: 9,
@@ -220,7 +220,7 @@ const navigationLeft = [
                             title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                             icon: 'sql-connector',
                             target: '_self',
-                            link: '/products/database-connectors/'
+                            link: '/database-connectors/'
                         }
                     ]
                 },
