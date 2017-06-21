@@ -17,7 +17,7 @@ const HeroButtons = [
             subtitle: null,
             title: '',
             icon: null,
-            target: '_self',
+            target: '_blank',
             link: '/dash',
             button: {
                 classes: 'button button-primary button-white'
