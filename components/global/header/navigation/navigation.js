@@ -165,7 +165,7 @@ const navigationLeft = [
                             title: 'Learn about our dedicated support plan options.',
                             icon: null,
                             target: '_blank',
-                            link: 'http://support.plot.ly/'
+                            link: 'http://support.plot.ly/plans'
                         }
                     ]
                 }
@@ -287,7 +287,7 @@ const navigationLeft = [
         title: 'Learn about advanced support plans we offer.',
         icon: null,
         target: '_blank',
-        link: 'https://support.plot.ly/',
+        link: 'https://support.plot.ly/plans',
         button: null,
         submenu: null
     },
