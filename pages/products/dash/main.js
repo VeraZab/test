@@ -311,11 +311,11 @@ export default () => (
                     source. Dash is MIT licensed. Run Dash on your desktop environment for free.
                 </p>
                 <p>
-                    Using dash inside your enterprise?
+                    Using Dash inside your enterprise?
                     Plotly offers Dash Enterprise for 1-click app deployment and
                     App permissioning with LDAP and Active Directory,
                     all behind your corporate firewall.&nbsp;
-                    <a href="#" className="special-link"><span className="special-link-label">
+                    <a href="https://plotly.typeform.com/to/seG7Vb" className="special-link"><span className="special-link-label">
                         Request a Demo →
                     </span></a>
                 </p>
