@@ -59,7 +59,7 @@
     {
       "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-ipad.639dbce73735.svg",
       "title": "Live-updating, web-based charts for reports and dashboards",
-      "body": "Charts are created with tools that quants and strats like - Python, Excel and MATLAB - but Plotly draws them behind-the-scenes with D3.js, the gold standard of the web for interactive graphics."
+      "body": "Charts are created with tools that quants and strats like - Python, Excel and MATLAB - but Plotly draws them behind-the-scenes with D3.js, the gold standard of the web for interactive graphics. <a href='http://plot.ly/ipython-notebooks/ukelectionbbg/'>Visualizing Bloomberg and Quandl data with Plotly</a>"
     },
     {
       "image": "https://plot.ly/static/enterprise/img/industries/finance/portfolio-optimization2.d7ecfead4c14.svg",
