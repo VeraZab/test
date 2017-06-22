@@ -111,8 +111,6 @@ class IndustriesMain extends React.Component {
 
       {quoteItemTwo}
 
-      {sectionItems}
-
       {learnMoreItems}
     </div>
     )

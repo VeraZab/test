@@ -1,0 +1,91 @@
+{
+  "id": "pharma-analytics",
+  "meta": {
+    "title": "Pharma Analytics, Life Sciences & Computational Biology"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Pharma Analytics, Life Sciences & Computational Biology",
+    "desc": "Graphing and dashboards for bioinformatics, collaborative analytics, and the modern life sciences."
+  },
+  "style": {
+    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+  },
+  "sponsors": [{
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-lifecode.68c856d37cdd.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-smplbio.820dab3c3420.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nih.30010f024aea.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-pli.52456d205eef.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-helynx.b3d2598841ab.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-synthego.c0c23c5863ae.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-dtubio.0faccaa7b5b2.png",
+    "label": "Sponsor"
+  }],
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/insurance/rol2.838f92b39a32.svg",
+    "title": "Plotly serves the insurance industry with its collaborative analytics platform and open-source charting tools:",
+    "body": "Plotly's open-source graphing library, Plotly.js, powers the charting capabilities of many insurance and reinsurance analytics platforms.
+    Plotly 's collaborative analytics platform serves teams building internal dashboards and reports in Python, MATLAB, R, and Excel.
+    "
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/insurance/dealership-performance.b6980dd8ccc4.svg",
+    "title": "Car insurance sales with Plotly dashboards and Python (Goji)",
+    "body": "Car insurance provider Goji uses Plotly Enterprise and the Plotly Python client for all their internal dashboards on sales performance. By switching to internal tools built on Plotly Enterprise, they were able to save over a hundred thousand dollars in BI infrastructure because they no longer needed to pay for traditional data warehouse functionality. Read more in the full customer story linked below."
+  }],
+  "quotes": [{
+    "author": "- Chris Rivest, Lifecode CEO",
+    "desc": " Lifecode's research team shares and visualizes data with Plotly's Python API. Plotly is emerging as the leading cloud platform for visualization in computational biology."
+  }],
+  "learn-more": {
+    "name": "Learn More",
+    "links": [{
+      "title": "SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "NON-LINEAR REGRESSION ANALYSIS IN THE PLOTLY WEB APP",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "FITTING DATA WITH ERROR BARS",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "LATEX TYPESETTING",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "LATEX TYPESETTING",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "CONTINUOUS FILLED ERROR BARS",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "FITTING DATA WITH ERROR BARS",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "REGRESSION ANALYSIS",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "FITTING DATA TO CUSTOM FUNCTIONS",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "BASIC STATISTICS MEAN MEDIAN STANDARD DEVIATION",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }, {
+      "title": "CHI SQUARE TEST",
+      "url": "https://plot.ly/products/industries/pharma-analytics/"
+    }]
+  }
+}

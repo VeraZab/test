@@ -35,13 +35,22 @@
       "url": "/products/industries/aerospace"
     },
     {
+      "id": "energy",
+      "style": {
+        "backgroundImage": "url(//plot.ly/static/enterprise/img/industries/thumbnail-energy.d20a8a5e7c3e.jpg)"
+      },
+      "label": "Aerospace",
+      "cta": "Learn More →",
+      "url": "/products/industries/energy-analytics/"
+    },
+    {
       "id": "research-development",
       "style": {
         "backgroundImage": "url(/static/images/industries/thumbnail-rnd.d1fda8f91ba5.jpg)"
       },
       "label": "Research And Development",
       "cta": "Learn More →",
-      "url": "/products/industries/research-development"
+      "url": "/products/industries/research-and-development-analytics/"
     },
     {
       "id": "automotive",
@@ -50,25 +59,25 @@
       },
       "label": "Automotive",
       "cta": "Learn More →",
-      "url": "/products/industries/automotive"
+      "url": "/products/industries/automotive-analytics/"
     },
     {
-      "id": "government",
+      "id": "government-and-public-analytics",
       "style": {
         "backgroundImage": "url(/static/images/industries/thumbnail-gov.0df4b0eaba36.jpg)"
       },
       "label": "Government, Civic Data and Public",
       "cta": "Learn More →",
-      "url": "//products/industries/government"
+      "url": "/products/industries/government-and-public-analytics/"
     },
     {
-      "id": "pharma",
+      "id": "pharma-analytics",
       "style": {
         "backgroundImage": "url(/static/images/industries/thumbnail-pharma.ca4108335c3b.jpg)"
       },
       "label": "Pharma, Life Sciences & Computational Biology",
       "cta": "Learn More →",
-      "url": "/products/industries/pharma"
+      "url": "/products/industries/pharma-analytics"
     },
     {
       "id": "journalism",

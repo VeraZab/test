@@ -1,36 +1,28 @@
 {
-  "id": "finance",
+  "id": "aerospace",
   "meta": {
-    "title": "Finance"
+    "title": "Aerospace Analytics"
   },
   "header": {
     "group": "Industries",
-    "title": "Finance Analytics",
-    "desc": "Python, R, MATLAB, and Excel are the data analysis languages of choice at the world's largest banks. Plotly provides a reporting and collaborative analytics layer for these tools that works equally well in print or web formats."
+    "title": "Aerospace Analytics",
+    "desc": "Plotly brings dashboards and collaborative analytics to the aerospace industry for teams using MATLAB, Python, R, and Excel."
   },
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
   "sponsors": [
     {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nasa.eacb18642cfa.png",
+      "label": "Nasa"
     },
     {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-aerospace.1ce63084d4df.png",
+      "label": "Aerospace"
     },
     {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-airforce.bf356fdc56a5.png",
+      "label": "Airforce"
     }
   ],
   "quotes": [

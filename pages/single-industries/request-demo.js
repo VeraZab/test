@@ -14,7 +14,7 @@ const footer = {
       }
     }],
     "twitter": [{
-        "label": "Follow what we're working on",
+        "label": "<i class='mdi mdi-twitter'></i> Follow what we're working on",
         "title": "Follow what we're working on",
         "icon": null,
         "target": "_blank",
