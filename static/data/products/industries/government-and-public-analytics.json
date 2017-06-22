@@ -1,0 +1,67 @@
+{
+  "id": "government-and-public-analytics",
+  "meta": {
+    "title": "Government and Civic Data Analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Government and Civic Data Analytics",
+    "desc": "Plotly partners with government agencies globally to help them better share their to data to the public. Plotly's On-Premise products also help modernize data-driven reporting within government agencies while keeping data security paramount."
+  },
+
+  "style": {
+    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+  },
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/gov/life-expectancy.5196f2276cb6.gif",
+    "title": "Making public data more accessible",
+    "body": "Plotly is disseminating best-in-class stats and visualization tools to anyone with an Internet connection."
+  }],
+  "quotes": [{
+    "author": "- Data.gov press release",
+    "desc": " Data.gov is proud to announce integration with [Plotly] - making it possible to create graphs and dynamic maps with open government data in one click. "
+  }],
+  "learn-more": {
+    "name": "Learn More",
+    "links": [{
+      "title": "PLOTLY PARTNERS WITH DATA.GOV",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY EXPORT PARTNERS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PRESS RELEASE: PLOTLY AND WHITEHOUSE CLIMATE INITIATIVE",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "BALTIMORE VITAL SIGNS IPYTHON NOTEBOOK",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "MAKE A BUBBLE CHART WITH PLOTLY",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY FOR IPYTHON NOTEBOOKS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY WITH IPYTHON: BALTIMORE VITAL SIGNS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY PARTNERS WITH DATA.GOV",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY EXPORT PARTNERS",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "PLOTLY MAPS IN PYTHON",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }, {
+      "title": "REFORM THINK TANK PLOTLY PROFILE",
+      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+    }]
+  }
+}

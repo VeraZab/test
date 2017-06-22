@@ -1,0 +1,106 @@
+{
+  "id": "research-and-development-analytics",
+  "meta": {
+    "title": "Research and-development-analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Research And Development Analytics",
+    "desc": "Share, organize, and discover R&D results faster with Plotly's collaborative analytics platform. Share experiment and analysis results from Excel, MATLAB, R, and Python to technical and non-technical company stakeholders alike."
+  },
+
+  "style": {
+    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+  },
+  "sponsors": [{
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-google.b8c38cd8aee1.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-vtt.c3b5d5e96e42.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-smplbio.820dab3c3420.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ubeam.df18556a4309.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-plume.0bcfb13a0f3f.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-intel-iot.03d24df55b2b.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-airforceresearch.ba26c692f9d0.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nielbohr.29592cffc6fd.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nyu.dde34b01d9ad.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sandia.59836f2247cf.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-mcgill.220ecfbbf5ec.png",
+      "label": "Sponsor"
+    }, {
+      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-siemens.fcd7af0654fb.png",
+      "label": "Sponsor"
+    }
+
+  ],
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/insurance/rol2.838f92b39a32.svg",
+    "title": "Plotly serves the insurance industry with its collaborative analytics platform and open-source charting tools:",
+    "body": "Plotly's open-source graphing library, Plotly.js, powers the charting capabilities of many insurance and reinsurance analytics platforms.
+    Plotly 's collaborative analytics platform serves teams building internal dashboards and reports in Python, MATLAB, R, and Excel.
+    "
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/insurance/dealership-performance.b6980dd8ccc4.svg",
+    "title": "Car insurance sales with Plotly dashboards and Python (Goji)",
+    "body": "Car insurance provider Goji uses Plotly Enterprise and the Plotly Python client for all their internal dashboards on sales performance. By switching to internal tools built on Plotly Enterprise, they were able to save over a hundred thousand dollars in BI infrastructure because they no longer needed to pay for traditional data warehouse functionality. Read more in the full customer story linked below."
+  }],
+  "quotes": [{
+    "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. ",
+    "author": "- Dana Guernsey, Director of Corporate Development at Ambri"
+  }],
+  "learn-more": {
+    "name": "Learn More",
+    "links": [{
+      "title": "GOJI CASE STUDY",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "COMPUTATIONAL METHODS IN BAYESIAN ANALYSIS",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY BUBBLE MAPS IN PYTHON",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY BUBBLE MAPS IN JAVASCRIPT",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY MAPS IN PYTHON",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "GOJI CASE STUDY",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "COMPUTATIONAL METHODS IN BAYESIAN ANALYSIS",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY MAPS IN PYTHON",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY BUBBLE MAPS IN PYTHON",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }, {
+      "title": "PLOTLY BUBBLE MAPS IN JAVASCRIPT",
+      "url": "https://plot.ly/products/industries/insurance-analytics/"
+    }]
+  }
+}
