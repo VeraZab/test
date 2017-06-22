@@ -65,7 +65,7 @@ class IndustriesMain extends React.Component {
               </ContentPane>
               <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
                   <Title> {section.title}</Title>
-                  <Body><p>{section.body}</p></Body>
+                  <Body>{section.body}</Body>
               </ContentPane>
         </ContentSection>
       )
