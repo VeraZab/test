@@ -312,7 +312,7 @@ export default () => (
                 </p>
                 <p>
                     Using Dash inside your enterprise?
-                    Plotly offers Dash Enterprise for 1-click app deployment and
+                    Plotly offers Dash On-Premise for 1-click app deployment and
                     App permissioning with LDAP and Active Directory,
                     all behind your corporate firewall.&nbsp;
                     <a href="https://plotly.typeform.com/to/seG7Vb" className="special-link"><span className="special-link-label">
@@ -333,21 +333,21 @@ export default () => (
                             <div className="card-image"
                                  style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-sharing.png")'}}>
                                 <div className="card-image-label">
-                                    Dash Enterprise Deployment
+                                    Dash On-Premise Deployment
                                 </div>
                             </div>
                             <div className="card-body">
                                 <p>
                                     Managing apps and servers inside your
                                     enterprise is usually a full time job.
-                                    Our goal with Dash Enterprise is to make
+                                    Our goal with Dash On-Premise is to make
                                     deploying and sharing a Dash app internally
                                     as easy and secure as possible.
                                     No dev-ops required.
                                 </p>
 
                                 <p>
-                                    Dash Enterprise handles all of the hard
+                                    Dash On-Premise handles all of the hard
                                     parts about managing apps for you:
                                     deployingment, managing updates,
                                     error handling, URL routing, LDAP integration,
@@ -366,12 +366,12 @@ export default () => (
                             <div className="card-image"
                                  style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-portal.png")'}}>
                                 <div className="card-image-label">
-                                    Dash Enterprise App Portal
+                                    Dash On-Premise App Portal
                                 </div>
                             </div>
                             <div className="card-body">
                                 <p>
-                                    Dash Enterprise ties into Plotly Enterprise,
+                                    Dash On-Premise ties into Plotly On-Premise,
                                     storing your
                                     analytical Dash applications
                                     with plotly graphs, datasets, SQL queries,
