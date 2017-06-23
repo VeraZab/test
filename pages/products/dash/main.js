@@ -324,70 +324,70 @@ export default () => (
         </ContentSection>
 
 
-        {/*<ContentSection className="dash-section-more-details">*/}
-            {/*<ContentPane full center-vertically center text>*/}
-                {/*<Body>*/}
-                {/*<div className="cards stories">*/}
-                    {/*<div className="card card-with-image">*/}
-                        {/*<div className="card-wrapper">*/}
-                            {/*<div className="card-image"*/}
-                                 {/*style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-sharing.png")'}}>*/}
-                                {/*<div className="card-image-label">*/}
-                                    {/*Dash Enterprise Deployment*/}
-                                {/*</div>*/}
-                            {/*</div>*/}
-                            {/*<div className="card-body">*/}
-                                {/*<p>*/}
-                                    {/*Managing apps and servers inside your*/}
-                                    {/*enterprise is usually a full time job.*/}
-                                    {/*Our goal with Dash Enterprise is to make*/}
-                                    {/*deploying and sharing a Dash app internally*/}
-                                    {/*as easy and secure as possible.*/}
-                                    {/*No dev-ops required.*/}
-                                {/*</p>*/}
+        <ContentSection className="dash-section-more-details">
+            <ContentPane full center-vertically center text>
+                <Body>
+                <div className="cards stories">
+                    <div className="card card-with-image">
+                        <div className="card-wrapper">
+                            <div className="card-image"
+                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-sharing.png")'}}>
+                                <div className="card-image-label">
+                                    Dash Enterprise Deployment
+                                </div>
+                            </div>
+                            <div className="card-body">
+                                <p>
+                                    Managing apps and servers inside your
+                                    enterprise is usually a full time job.
+                                    Our goal with Dash Enterprise is to make
+                                    deploying and sharing a Dash app internally
+                                    as easy and secure as possible.
+                                    No dev-ops required.
+                                </p>
 
-                                {/*<p>*/}
-                                    {/*Dash Enterprise handles all of the hard*/}
-                                    {/*parts about managing apps for you:*/}
-                                    {/*deployingment, managing updates,*/}
-                                    {/*error handling, URL routing, LDAP integration,*/}
-                                    {/*and more.*/}
-                                    {/*Deploy and share an app behind your*/}
-                                    {/*firewall in minutes.*/}
-                                {/*</p>*/}
-                            {/*</div>*/}
-                            {/*<div className="card-action">*/}
-                                {/*<a className="card-action-link" href="#">Request a Demo →</a>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
-                    {/*</div>*/}
-                    {/*<div className="card card-with-image">*/}
-                        {/*<div className="card-wrapper">*/}
-                            {/*<div className="card-image"*/}
-                                 {/*style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-portal.png")'}}>*/}
-                                {/*<div className="card-image-label">*/}
-                                    {/*Dash Enterprise App Portal*/}
-                                {/*</div>*/}
-                            {/*</div>*/}
-                            {/*<div className="card-body">*/}
-                                {/*<p>*/}
-                                    {/*Dash Enterprise ties into Plotly Enterprise,*/}
-                                    {/*storing your*/}
-                                    {/*analytical Dash applications*/}
-                                    {/*with plotly graphs, datasets, SQL queries,*/}
-                                    {/*and dashboards in one company-wide*/}
-                                    {/*portal.*/}
-                                {/*</p>*/}
-                            {/*</div>*/}
-                            {/*<div className="card-action">*/}
-                                {/*<a className="card-action-link" href="#">Request a Demo →</a>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-                {/*</Body>*/}
-            {/*</ContentPane>*/}
-        {/*</ContentSection>*/}
+                                <p>
+                                    Dash Enterprise handles all of the hard
+                                    parts about managing apps for you:
+                                    deployingment, managing updates,
+                                    error handling, URL routing, LDAP integration,
+                                    and more.
+                                    Deploy and share an app behind your
+                                    firewall in minutes.
+                                </p>
+                            </div>
+                            <div className="card-action">
+                                <a className="card-action-link" href="#">Request a Demo →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card card-with-image">
+                        <div className="card-wrapper">
+                            <div className="card-image"
+                                 style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-portal.png")'}}>
+                                <div className="card-image-label">
+                                    Dash Enterprise App Portal
+                                </div>
+                            </div>
+                            <div className="card-body">
+                                <p>
+                                    Dash Enterprise ties into Plotly Enterprise,
+                                    storing your
+                                    analytical Dash applications
+                                    with plotly graphs, datasets, SQL queries,
+                                    and dashboards in one company-wide
+                                    portal.
+                                </p>
+                            </div>
+                            <div className="card-action">
+                                <a className="card-action-link" href="#">Request a Demo →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </Body>
+            </ContentPane>
+        </ContentSection>
 
     </div>
 )
