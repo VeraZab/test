@@ -69,7 +69,7 @@
     .hero-top {
       padding-top: 0;
       &-wrapper{
-        display: flex;
+        display: flex !important;
       }
     }
 

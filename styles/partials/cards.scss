@@ -158,6 +158,7 @@
     padding: 0;
     overflow: hidden;
     border-radius: 5px;
+    overflow: hidden;
     display: flex;
     @include desktop {
       width: calc(50% - #{$gutter});
@@ -193,6 +194,8 @@
         @include handheld{
           min-height: 180px
         }
+        border-top-right-radius:5px;
+        border-top-left-radius:5px;
         width: 100%;
         background-size: cover !important;
         background-position: center center;
