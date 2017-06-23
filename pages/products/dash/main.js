@@ -360,7 +360,7 @@ class DashMain extends React.Component {
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
                                     <div className="card-image"
-                                         style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-sharing.png")'}}>
+                                         style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-sharing.png")'}}>
                                         <div className="card-image-label">
                                             Dash On-Premise Deployment
                                         </div>
@@ -395,7 +395,7 @@ class DashMain extends React.Component {
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
                                     <div className="card-image"
-                                         style={{backgroundImage: 'url("/static/images/dash/dash-enterprise-portal.png")'}}>
+                                         style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-portal.png")'}}>
                                         <div className="card-image-label">
                                             Dash On-Premise App Portal
                                         </div>
