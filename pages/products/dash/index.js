@@ -1,6 +1,6 @@
 import Layout from '../../../components/global/layout/layout';
 import HeroSection from './hero';
-import Main from './main';
+import DashMain from './main';
 
 import styles from './dash.styles.scss';
 
@@ -15,6 +15,6 @@ export default () => (
     <Layout meta={meta} hideHeader="true">
         <style dangerouslySetInnerHTML={{__html: styles}}/>
         <HeroSection />
-        <Main />
+        <DashMain />
     </Layout>
 )
