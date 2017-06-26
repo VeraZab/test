@@ -57,6 +57,18 @@ class IndustriesMain extends React.Component {
         </ContentPane>
     </ContentSection> : null;
 
+    const quoteItemThree = (data.quotes[2]) ?
+    <ContentSection className="background-color-light-2">
+        <ContentPane full center-vertically text center>
+            <Title>
+                "{data.quotes[2].desc}"
+            </Title>
+            <Body>
+            <p>{data.quotes[2].author}</p>
+            </Body>
+        </ContentPane>
+    </ContentSection> : null;
+
     const sectionItems = (data.sections) ?
     data.sections.map( (section, key)=> {
       return(
@@ -114,6 +126,8 @@ class IndustriesMain extends React.Component {
       {sectionItems}
 
       {quoteItemTwo}
+
+      {quoteItemThree}
 
       {learnMoreItems}
     </div>
