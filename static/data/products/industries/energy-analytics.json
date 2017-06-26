@@ -56,6 +56,10 @@
     {
       "author": "— Dr. Jenya Kirshtein, Scientific Software Engineering at C12 ",
       "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
+    },
+    {
+      "author": "- Dana Guernsey, Director of Corporate Development at Ambri",
+      "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. "
     }
   ],
   "learnMore": {
