@@ -54,6 +54,11 @@
       "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line."
     },
     {
+      "image": "https://plot.ly/static/enterprise/img/industries/energy/wind-farm.856d53aa2241.svg",
+      "title": "Dashboards for wind farm prospecting",
+      "body": "The wind industry uses Plotly maps, line charts, and histograms to help prospect new wind turbine sites. Anemometer data is sent via cellular to a server which automatically updates a d3.js dashboard built with plotly graphs."
+    },
+    {
       "image":"https://plot.ly/static/enterprise/img/industries/energy/solar-radiation.b7716f79d8c0.svg",
       "title":"Analytics for the Solar Industry",
       "body": "Sighten has the industry's most advanced toolset for solar investment efficiency. Their online client dashboards use Plotly graphs drawn in D3.js to display RoR and insolation data."
