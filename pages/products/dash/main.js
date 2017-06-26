@@ -362,7 +362,7 @@ class DashMain extends React.Component {
                                     <div className="card-image"
                                          style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-sharing.png")'}}>
                                         <div className="card-image-label">
-                                            Dash On-Premise Deployment
+                                            Dash On-Premise<br/>App Deployment
                                         </div>
                                     </div>
                                     <div className="card-body">
@@ -378,7 +378,7 @@ class DashMain extends React.Component {
                                         <p>
                                             Dash On-Premise handles all of the hard
                                             parts about managing apps for you:
-                                            deployingment, managing updates,
+                                            deployment, managing updates,
                                             error handling, URL routing, LDAP integration,
                                             and more.
                                             Deploy and share an app behind your
@@ -397,7 +397,7 @@ class DashMain extends React.Component {
                                     <div className="card-image"
                                          style={{backgroundImage: 'url("https://now.plot.ly/static/images/dash/dash-enterprise-portal.png")'}}>
                                         <div className="card-image-label">
-                                            Dash On-Premise App Portal
+                                            Dash On-Premise<br/>App Portal
                                         </div>
                                     </div>
                                     <div className="card-body">
