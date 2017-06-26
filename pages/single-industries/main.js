@@ -18,12 +18,13 @@ class IndustriesMain extends React.Component {
     };
 
     const data = this.props.mainData;
+    const sponsors = data.sponsors.length;
 
-    const gridItems = (data.sponsors) ?
+    const gridItems = (sponsors > 0 ) ?
      data.sponsors.map((item, key) => {
         return (
             <GridItem key={key}>
-                <div className="grid-item-graphic">
+                <div className="grid-item-graphic sponsors">
                     <img src={item.graphic} alt={item.label} />
                 </div>
                 <div className="grid-item-label">
@@ -45,7 +46,7 @@ class IndustriesMain extends React.Component {
     </ContentSection> : null;
 
     const quoteItemTwo = (data.quotes[1]) ?
-    <ContentSection className="background-color-light-4">
+    <ContentSection className="background-color-light-2">
         <ContentPane full center-vertically text center>
             <Title>
                 "{data.quotes[1].desc}"
@@ -65,7 +66,7 @@ class IndustriesMain extends React.Component {
               </ContentPane>
               <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
                   <Title> {section.title}</Title>
-                  <Body>{section.body}</Body>
+                  <p dangerouslySetInnerHTML={{__html: section.body}}/>
               </ContentPane>
         </ContentSection>
       )
@@ -79,7 +80,7 @@ class IndustriesMain extends React.Component {
               </Title>
 
               <Body>
-                <Grid columns={2}>
+                <Grid columns={2} align-left>
                 {data.learnMore.links.map( (item, key)=> {
                     return (
                       <GridItem key={key}>
@@ -97,14 +98,17 @@ class IndustriesMain extends React.Component {
 
     return (
       <div>
-      <ContentSection>
-          <ContentPane full center>
-              <Body>
-                { gridItems ? <Grid columns={ (gridItems.length > 5) ? 4 : gridItems.length }>{gridItems}</Grid> : null}
-              </Body>
-          </ContentPane>
-      </ContentSection>
+        { gridItems ?
+            <ContentSection>
+              <ContentPane full center>
+                  <Body>
+                  <Grid columns={ (gridItems.length > 5) ? 4 : gridItems.length }>{gridItems}</Grid>
+                </Body>
+              </ContentPane>
+            </ContentSection>
 
+          : null
+        }
       {quoteItemOne}
 
       {sectionItems}

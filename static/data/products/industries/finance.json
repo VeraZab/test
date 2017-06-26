@@ -49,7 +49,6 @@
       "image": "https://plot.ly/static/enterprise/img/industries/finance/reports.076915abd820.svg",
       "title": "Automatic early warning indicator reports",
       "body": "A major US bank uses Plotly to create early warning indicator dashboards for its financials assets. The indicator data is pulled directly from Bloomberg and Quandl with Python scripts and the visualizations are drawn with Plotly's Python API to create D3-quality charts that can then be viewed by bank executives on mobile, tablet and laptop devices in real-time through a private portal. By using Plotly, the bank is able to both eliminate the need to email large excel spreadsheets back and forth and save its analysts hours of monotonous excel work every day."
-
     },
     {
       "image": "https://plot.ly/static/enterprise/img/industries/finance/livestream.37994c071ecb.svg",
@@ -71,7 +70,6 @@
       "title": "Plotly and Excel",
       "body": "Any Excel workbook can be uploaded to Plotly to create publication-quality charts or dashboards for web or print. Plotly can also be used in within Excel on Windows computers with the Plotly Charts MS Office app."
     },
-
     {
       "image": "https://plot.ly/static/enterprise/img/industries/finance/yield-curve.751311465dc2.jpg",
       "title": "Plotly & Pandas for financial data",

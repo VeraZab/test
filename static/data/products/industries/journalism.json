@@ -1,46 +1,59 @@
 {
-  "id": "finance",
+  "id": "aerospace",
   "meta": {
-    "title": "Finance"
+    "title": "Aerospace Analytics"
   },
   "header": {
     "group": "Industries",
-    "title": "Finance Analytics",
-    "desc": "Python, R, MATLAB, and Excel are the data analysis languages of choice at the world's largest banks. Plotly provides a reporting and collaborative analytics layer for these tools that works equally well in print or web formats."
+    "title": "Journalism",
+    "desc": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
   },
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
-  "sponsors": [
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    },
-    {
-      "graphic": "https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg",
-      "label": "Custom Chart Types"
-    }
-  ],
-  "quotes": [
-    {
-      "author": "- Kai Wu, Founding Partner of Kaleidoscope Capital",
-      "desc": " When I make investment decisions, I want the best tools in the world to graph, analyze, drill-down, slice, share, and understand my data. Plotly's interactive platform gives our team those features, integrates with our Python workflow, and easily connects to all our data sources. "
-    },
-    {
-      "author": "- Sharon Rapoport, Data Scientist at Plaid",
-      "desc": "[We] use plotly to share high-level data analysis and machine learning insights with our non-technical team."
-    }
-  ]
+  "sponsors": [{
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-washingtonpost.47df50bf33f1.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-fortune.f28adce08bb8.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-wired.4741a4a4eb66.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-gtm.49428e042ac0.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-bostonglobe.33d4d0cf1bc5.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-vice.e7df0217015a.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-maplight.7b04c6d3ad5b.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-dailyprogress.bf63206d935a.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sportsillustrated.9949f0963df1.png",
+    "label": "Sponsor"
+  }],
+  "quotes": [{
+    "author": "- Mike Munsell Manager, Research Marketing GreenTech Media Research",
+    "desc": " With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
+  }],
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
+    "title": "Whitelabel Platforms with Plotly Enterprise",
+    "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg",
+    "title": "Plotly Pew Research graph collection",
+    "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
+    "title": "Interactive maps like the New York Times",
+    "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times."
+  }]
 }
