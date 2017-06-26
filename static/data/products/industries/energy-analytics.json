@@ -13,23 +13,23 @@
   },
   "sponsors": [{
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
-      "label": "Sponsor",
+      "label": "Sponsor"
     },
     {
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-c12.153b8e641740.png",
-      "label": "Sponsor",
+      "label": "Sponsor"
     },
     {
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-gtm.49428e042ac0.png",
-      "label": "Sponsor",
+      "label": "Sponsor"
     },
     {
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-opower.8e9d13b5e40e.png",
-      "label": "Sponsor",
+      "label": "Sponsor"
     },
     {
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sighten.9c2d8d53cd16.png",
-      "label": "Sponsor",
+      "label": "Sponsor"
     }
 
   ],
@@ -45,64 +45,50 @@
     }
   ],
   "quotes": [{
-      "author": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. ",
-      "desc": "- Malina Kirn, PhDLead Engineer,Analytics at Opower",
+      "author": "- Malina Kirn, PhDL ead Engineer,Analytics at Opower ",
+      "desc": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. "
     },
     {
-      "author": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. ",
-      "desc": "- Dana Guernsey, Director of Corporate Development at Ambri",
-    },
-    {
-      "author": "
-      Sighten has developed a comprehensive enterprise SaaS platform
-      for residential and commercial solar sales,
-      operations,
-      financing,
-      and portfolio management.Using plotly,
-      Sighten is able to create simple charts
-      for solar proposals and complex visualizations
-      for advanced financial analytics.Data scientists and software engineers working in Python,
-      JavaScript and R thoroughly enjoy bringing Sighten 's growing dataset to life through plotly charts - providing powerful insights to a variety of companies across the solar energy and finance industries.",
-      "desc": "— David Villagra, Vice President Engineering at Sighten",
+      "author": "— Dr. Jenya Kirshtein Scientific Software Engineering at C12 ",
+      "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
     }
   ],
-  "learn-more": {
+  "learnMore": {
     "name": "Learn More",
-    "links": [{
-        "title": "READ THE C12 CASE STUDY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      },
+    "links": [
       {
-        "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "GREENTECH MEDIA PLOTLY PROFILE",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "READ THE C12 CASE STUDY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "GREENTECH MEDIA PLOTLY PROFILE",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }, {
-        "title": "PUBLIC PERCEPTION ON CLIMATE CHANGE",
-        "url": "https://plot.ly/products/industries/energy-analytics/"
-      }
-    ]
+      "title": "READ THE C12 CASE STUDY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "GREENTECH MEDIA PLOTLY PROFILE",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "READ THE C12 CASE STUDY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "GREENTECH MEDIA PLOTLY PROFILE",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }, {
+      "title": "PUBLIC PERCEPTION ON CLIMATE CHANGE",
+      "url": "https://plot.ly/products/industries/energy-analytics/"
+    }]
   }
 }

@@ -39,7 +39,7 @@
       "style": {
         "backgroundImage": "url(//plot.ly/static/enterprise/img/industries/thumbnail-energy.d20a8a5e7c3e.jpg)"
       },
-      "label": "Aerospace",
+      "label": "Energy",
       "cta": "Learn More →",
       "url": "/products/industries/energy-analytics/"
     },
@@ -95,7 +95,7 @@
       },
       "label": "Business Intelligence",
       "cta": "Learn More →",
-      "url": "/products/industries/aerospace"
+      "url": "/products/industries/business-intelligence"
     }
   ]
 }

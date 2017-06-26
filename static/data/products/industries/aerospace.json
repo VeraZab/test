@@ -11,8 +11,7 @@
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
-  "sponsors": [
-    {
+  "sponsors": [{
       "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nasa.eacb18642cfa.png",
       "label": "Nasa"
     },
@@ -25,14 +24,86 @@
       "label": "Airforce"
     }
   ],
-  "quotes": [
-    {
-      "author": "- Kai Wu, Founding Partner of Kaleidoscope Capital",
-      "desc": " When I make investment decisions, I want the best tools in the world to graph, analyze, drill-down, slice, share, and understand my data. Plotly's interactive platform gives our team those features, integrates with our Python workflow, and easily connects to all our data sources. "
+  "sections": [{
+      "image": "https://plot.ly/static/enterprise/img/industries/aerospace/graph1.84884a57d01f.svg",
+      "title": "Dashboards and cloud collaboration in the aerospace industry",
+      "body": "Users of MATLAB, Python, and Excel within the aerospace industry benefit from Plotly's cross-platform sharing and best-in-class scientific graphics. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>Creating online dashboards with MATLAB</a>"
     },
     {
-      "author": "- Sharon Rapoport, Data Scientist at Plaid",
-      "desc": "[We] use plotly to share high-level data analysis and machine learning insights with our non-technical team."
+      "image": "//plot.ly/static/enterprise/img/industries/videos/bluegraph.303c6a1a21b7.jpg",
+      "title": "Collaboration between MATLAB and Python",
+      "body": "The technical computing team at Aerospace Corporation uses Plotly to share data and figures between MATLAB and Python users without email. <a href='http://plot.ly/ipython-notebooks/collaboration/'>Sharing between IPython notebook and MATLAB through Plotly</a>"
+    },
+    {
+      "image": "https://plot.ly/static/enterprise/img/industries/aerospace/filewell.b2911b59fa48.jpg",
+      "title": "Research and teaching at Air Force Institute of Technology",
+      "body": "Plotly acts as a 'Sharepoint for engineers' at AFIT, helping build institutional memory and share results among researchers, students and teachers."
+    },
+    {
+      "image": "https://plot.ly/static/enterprise/img/industries/aerospace/maps.351f724327b7.jpg",
+      "title": "Dashboards of Satellite Data",
+      "body": "Aerospace engineers stream data to web dashboards using Plotly's APIs for MATLAB and Python. <a href='http://plot.ly/python/streaming-tutorial/'>Plotly Streaming API for Python</a> <a href='http://plot.ly/matlab/streaming-tutorial/'>Plotly Streaming API for MATLAB</a> <a href='http://plot.ly/python/#maps'>Plotly Maps in Python</a>"
+    },
+    {
+      "image": "https://plot.ly/static/enterprise/img/industries/aerospace/nasa-cube.4a6cfc5c3bc7.svg",
+      "title": "NASA Cube Satellite",
+      "body": "Dr. Carl Brandon launched one of NASA's cube satellites and has analyzed its progress in orbit with the help of Plotly. Plotly graphs have tracked the satellite's eccentricitiy, inclination, and mean motion in a 3-y axis plot over time.  Plotly was key for getting NASA approval to launch a CubeSat for space exploration. - Professor Carl Brandon, Vermont Technical College in NASA Cube Satellite. <a href='http://help.plot.ly/date-format-and-time-series/'>Graphing time series data in Plotly </a>"
+    },
+    {
+      "image": "//plot.ly/static/enterprise/img/industries/videos/globe.d5c6c719a45c.jpg",
+      "title": "3D Flightpaths in Plotly and MATLAB",
+      "body": "Plotly has the most advanced graphing library among aerospace vendors. Create dashboards and reports with MATLAB and Python that are publishable to corporate intranet as well as print. <a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>Plotting 3d flight paths in MATLAB</a>"
+    },
+    {
+      "image": "//plot.ly/static/enterprise/img/industries/videos/streaming.3b4a71b628c0.jpg",
+      "title": "Sensor streaming at Air Force Hackathon",
+      "body": "Plotly helped sponsor and instruct at the first ever US Air Force Hackathon. Participants were taught how to stream data from Arduino sensors to Plotly graphs. <a href='http://plot.ly/arduino/dht22-temperature-tutorial/'>Streaming data from Arduino to Plotly</a>"
     }
-  ]
+  ],
+  "learnMore": {
+    "name": "Learn More",
+
+    "links": [{
+        "title": "AIRFOIL ANALYSIS IN PLOTLY AND MATLAB",
+        "url": "http://plot.ly/ipython-notebooks/aircraft-pitch-analysis-matlab-plotly/"
+      },
+      {
+        "title": "CREATING ONLINE DASHBOARDS WITH MATLAB",
+        "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
+      },
+      {
+        "title": "STREAMLINE PLOTS IN PYTHON",
+        "url": "http://plot.ly/python/streamline-plots/"
+      },
+      {
+        "title": "QUIVER PLOTS IN PYTHON",
+        "url": "http://plot.ly/python/quiver-plots/"
+      },
+      {
+        "title": "SHARING BETWEEN IPYTHON NOTEBOOK AND MATLAB THROUGH PLOTLY",
+        "url": "http://plot.ly/ipython-notebooks/collaboration/"
+      },
+      {
+        "title": "PLOTLY STREAMING API FOR PYTHON",
+        "url": "http://plot.ly/python/streaming-tutorial/"
+      },
+      {
+        "title": "PLOTLY STREAMING API FOR MATLAB",
+        "url": "http://plot.ly/matlab/streaming-tutorial/"
+      },
+      {
+        "title": "PLOTLY MAPS IN PYTHON",
+        "url": "http://plot.ly/python/#maps"
+      },
+      {
+        "title": "PLOTTING 3D FLIGHT PATHS IN MATLAB",
+        "url": "http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/"
+      },
+      {
+        "title": "STREAMING DATA FROM ARDUINO TO PLOTLY",
+        "url": "http://plot.ly/arduino/dht22-temperature-tutorial/"
+      }
+    ]
+  },
+  "quotes": []
 }

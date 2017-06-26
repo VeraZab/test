@@ -8,40 +8,53 @@
     "title": "Automotive Analytics",
     "desc": "Plotly is the leading solution in the automotive industry for D3.js dashboards and collaborative analytics. Easily share your engineering analysis across MATLAB, Python, and Excel teams."
   },
-
+  "sponsors": [
+  ],
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
-  "sections": [],
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/automotive/vehicle-sensor.6bda8f45c885.jpg",
+    "title": "Dashboards for vehicle sensors, manufacturing, and racing results",
+    "body": "Plotly's interactive D3.js charts are used by automotive manufacturers and racing teams to explore, monitor, and analyze sensor channels from vehicle fleets and manufacturing lines."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/automotive/nascar.996dabfc5b6f.jpg",
+    "title": "Optimizing Race car performance for NASCAR",
+    "body": "A leading US NASCAR team used Plotly to replace desktop-based MATLAB dashboards with web-based ones."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/automotive/control-design.cefa9c079434.svg",
+    "title": "Analyzing sensor and manufacturing data in R and Python",
+    "body": "Plotly's clients for R and Python convert ggplot2 and matplotlib figures to interactive D3.js charts. These documents are the most popular way for data scientists and engineers to share their analysis with the rest of the company."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/automotive/root-locus.a2918f091d12.jpg",
+    "title": "Control design in Python, MATLAB, and Plotly",
+    "body": "Plotly has popular API clients for MATLAB and Python - the technical computing workhorses of the automotive industry."
+  }],
   "quotes": [{
     "author": "- Ben Parker, Dartmouth Formula 1 Racing",
-    "desc": " As a team of engineers who build race cars, Dartmouth Formula Racing is drawn to Plotly as a tool to share vehicle and test data with teammates anywhere, at any time, and to promote our vehicles’ performance with clear, captivating graphics. "
-
-  }],
-  "learn-more": [{
-      "title": "PLOTLY GGPLOT2 LIBRARY",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    },
-    {
-      "title": "PLOTLY MATPLOTLIB LIBRARY",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    },
-    {
-      "title": "CONTROL DESIGN IN PYTHON",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    },
-    {
-      "title": "AIRCRAFT PITCH ANALYSIS IN MATLAB AND PLOTLY",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    },
-    {
-      "title": "CONTROL DESIGN IN PYTHON",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    },
-    {
-      "title": "COMPUTATIONAL METHODS IN BAYESIAN ANALYSIS",
-      "url": "https://plot.ly/products/industries/automotive-analytics/"
-    }
-  ]
+    "desc": " As a team of engineers who build race cars, Dartmouth Formula Racing is drawn to Plotly as a tool to share vehicle and test data with teammates anywhere, at any time, and to promote our vehicles’ performance with clear, captivating graphics."
+  }
+],
+  "learnMore" : {
+  "name": "Learn More",
+  "links": [{
+    "title": "PLOTLY GGPLOT2 LIBRARY",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }, {
+    "title": "PLOTLY MATPLOTLIB LIBRARY",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }, {
+    "title": "CONTROL DESIGN IN PYTHON",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }, {
+    "title": "AIRCRAFT PITCH ANALYSIS IN MATLAB AND PLOTLY",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }, {
+    "title": "CONTROL DESIGN IN PYTHON",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }, {
+    "title": "COMPUTATIONAL METHODS IN BAYESIAN ANALYSIS",
+    "url": "https://plot.ly/products/industries/automotive-analytics/"
+  }]
 }
 }
