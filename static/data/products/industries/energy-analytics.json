@@ -42,6 +42,11 @@
       "image": "https://plot.ly/static/enterprise/img/industries/energy/c12-dashboard.e2892892a602.png",
       "title": "Dashboards for oil field investment",
       "body": "Plotly has built dashboards for C12 Energy that combine geographic, geological, and financial datasets, and that are critical to decisions on oil field purchasing."
+    },
+    {
+      "image": "https://plot.ly/static/enterprise/img/industries/energy/opower.c379c49f0ad3.svg",
+      "title": "Analyzing smart meter big data at Opower",
+      "body": "The analytics team at Opower uses Python to analyze smart meter data on electricity consumption. They then share their findings through reports and dashboards made with interactive Plotly graphs, all drawn in D3.js."
     }
   ],
   "quotes": [{
