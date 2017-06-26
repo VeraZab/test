@@ -45,11 +45,11 @@
     }
   ],
   "quotes": [{
-      "author": "- Malina Kirn, PhDL ead Engineer,Analytics at Opower ",
+      "author": "- Malina Kirn, PhD, Lead Engineer, Analytics at Opower ",
       "desc": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. "
     },
     {
-      "author": "— Dr. Jenya Kirshtein Scientific Software Engineering at C12 ",
+      "author": "— Dr. Jenya Kirshtein, Scientific Software Engineering at C12 ",
       "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
     }
   ],
