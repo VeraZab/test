@@ -18,9 +18,9 @@ class IndustriesMain extends React.Component {
     };
 
     const data = this.props.mainData;
-    const sponsors = data.sponsors.length;
+    const sponsors = data.sponsors;
 
-    const gridItems = (sponsors > 0 ) ?
+    const gridItems = (sponsors[0]) ?
      data.sponsors.map((item, key) => {
         return (
             <GridItem key={key}>

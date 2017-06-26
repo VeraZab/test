@@ -8,20 +8,20 @@
     "title": "Government and Civic Data Analytics",
     "desc": "Plotly partners with government agencies globally to help them better share their to data to the public. Plotly's On-Premise products also help modernize data-driven reporting within government agencies while keeping data security paramount."
   },
-
+  "sponsors": [
+  ],
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
   "sections": [{
-"image": "https://plot.ly/static/enterprise/img/industries/gov/noaa.7037fcde6f96.jpg",
-"title": "Atmospheric modeling at NOAA" ,
-"body": "Scientists employed government research agencies NOAA and NASA to use Plotly with IPython notebook for climate change modeling, satellite monitoring, and intraorganization data sharing."
-}
-, {
-"image": "https://plot.ly/static/enterprise/img/industries/gov/baltimore-vital-signs.4c9c04d77b79.svg",
-"title": "Baltimore Vital Signs Dataset" ,
-"body": "Justin Elszasz, researcher at Navigant, analyzed the Baltimore Vital Signs data set with PCA analysis in IPython notebook. The scatter plot at the right clusters Baltimore neighborhoods by similar Vital Signs metrics."
-}],
+    "image": "https://plot.ly/static/enterprise/img/industries/gov/noaa.7037fcde6f96.jpg",
+    "title": "Atmospheric modeling at NOAA",
+    "body": "Scientists employed government research agencies NOAA and NASA to use Plotly with IPython notebook for climate change modeling, satellite monitoring, and intraorganization data sharing."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/gov/baltimore-vital-signs.4c9c04d77b79.svg",
+    "title": "Baltimore Vital Signs Dataset",
+    "body": "Justin Elszasz, researcher at Navigant, analyzed the Baltimore Vital Signs data set with PCA analysis in IPython notebook. The scatter plot at the right clusters Baltimore neighborhoods by similar Vital Signs metrics."
+  }],
   "quotes": [{
     "author": "- Data.gov press release",
     "desc": " Data.gov is proud to announce integration with [Plotly] - making it possible to create graphs and dynamic maps with open government data in one click. "
