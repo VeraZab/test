@@ -95,37 +95,28 @@
     "links": [
       {
       "title": "READ THE C12 CASE STUDY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
+      "url": "https://plot.ly/products/enterprise/customer-stories/c12-energy/"
+      },
+      {
       "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
-      "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
-      "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
-      "title": "GREENTECH MEDIA PLOTLY PROFILE",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
+      },
+      {
       "title": "READ THE C12 CASE STUDY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
-      "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
-      "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
+      "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
+      },
+      {
       "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
+      "url": "https://plot.ly/javascript/"
+      },
+      {
       "title": "GREENTECH MEDIA PLOTLY PROFILE",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }, {
+      "url": "http://plot.ly/~greentechmedia"
+      },
+      {
       "title": "PUBLIC PERCEPTION ON CLIMATE CHANGE",
-      "url": "https://plot.ly/products/industries/energy-analytics/"
-    }]
+      "url": "http://blog.plot.ly/post/99540799397/eight-graphs-you-should-see-on-global-warming"
+      }
+    ]
   }
 }
