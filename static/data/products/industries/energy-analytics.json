@@ -75,6 +75,10 @@
     {
       "author": "- Dana Guernsey, Director of Corporate Development at Ambri",
       "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. "
+    },
+    {
+      "author": "- David Villagra, Vice President Engineering at Sighten",
+      "desc": " Sighten has developed a comprehensive enterprise SaaS platform for residential and commercial solar sales, operations, financing, and portfolio management. Using plotly, Sighten is able to create simple charts for solar proposals and complex visualizations for advanced financial analytics. Data scientists and software engineers working in Python, JavaScript and R thoroughly enjoy bringing Sighten's growing dataset to life through plotly charts - providing powerful insights to a variety of companies across the solar energy and finance industries. "
     }
   ],
   "learnMore": {
