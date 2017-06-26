@@ -62,6 +62,11 @@
       "image":"https://plot.ly/static/enterprise/img/industries/energy/solar-radiation.b7716f79d8c0.svg",
       "title":"Analytics for the Solar Industry",
       "body": "Sighten has the industry's most advanced toolset for solar investment efficiency. Their online client dashboards use Plotly graphs drawn in D3.js to display RoR and insolation data."
+    },
+    {
+      "image":"https://plot.ly/static/enterprise/img/industries/energy/utility-price.9486740d6e80.svg",
+      "title":"Energy research reporting",
+      "body": "Plotly graphs export to pdf, eps, svg, png, and are also publishable to the web as interactive, d3.js figures. Greentech Media embeds Plotly graphs in their online articles to provide their readers with highly engaging interactive charts."
     }
   ],
   "quotes": [{
