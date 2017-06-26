@@ -47,6 +47,11 @@
       "image": "https://plot.ly/static/enterprise/img/industries/energy/opower.c379c49f0ad3.svg",
       "title": "Analyzing smart meter big data at Opower",
       "body": "The analytics team at Opower uses Python to analyze smart meter data on electricity consumption. They then share their findings through reports and dashboards made with interactive Plotly graphs, all drawn in D3.js."
+    },
+    {
+      "image": "https://plot.ly/static/enterprise/img/industries/energy/batteries.732368ed9bad.svg",
+      "title": "Dashboards for utility-scale batteries",
+      "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line."
     }
   ],
   "quotes": [{
