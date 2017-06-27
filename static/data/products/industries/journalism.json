@@ -66,10 +66,10 @@
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg",
     "title": "Plotly Pew Research graph collection",
-    "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration."
+    "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration. <br><br><a href='http://plot.ly/~PewResearch'>PLOTLY PEW RESEARCH GRAPH COLLECTION</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
     "title": "Interactive maps like the New York Times",
-    "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times."
+    "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times. <br><br><a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>LEARN TO USE PLOTLY MAPS</a>"
   }]
 }
