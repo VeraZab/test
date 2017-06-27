@@ -18,7 +18,6 @@ export default class extends React.Component {
       return { data }
   }
 
-
   render () {
     const data = this.props.data;
     return (
