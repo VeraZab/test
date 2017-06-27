@@ -83,5 +83,35 @@
     "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
     "title": "Interactive maps like the New York Times",
     "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times. <br><br><a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>LEARN TO USE PLOTLY MAPS</a>"
-  }]
+  }],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [
+      {
+      "title": "PLOTLY GRAPHS AT THE WASHINGTON POST",
+      "url": "http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/"
+      }, {
+      "title": "MURDER RATE IN VICE NETHERLANDS",
+      "url": "http://www.vice.com/nl/read/deze-man-houdt-alle-moorden-in-de-hoofdstad-bij-161"
+      }, {
+      "title": "SUBREDDIT TOXICITY IN VICE MOTHERBOARD",
+      "url": "http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic"
+      }, {
+      "title": "PLOTLY ENTERPRISE",
+      "url": "https://plot.ly/product/enterprise/"
+      }, {
+      "title": "STEP BY STEP PLOTLY TUTORIALS TO GET YOU STARTED",
+      "url": "https://plot.ly/products/industries/journalism/help.plot.ly/tutorials"
+      }, {
+      "title": "PLOTLY PEW RESEARCH GRAPH COLLECTION",
+      "url": "http://plot.ly/~PewResearch"
+      }, {
+      "title": "LEARN TO USE PLOTLY MAPS",
+      "url": "http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/"
+      }, {
+      "title": "PLOTLY CHARTS IN THE BOSTON GLOBE",
+      "url": "http://www.bostonglobe.com/metro/2014/07/31/where-trucks-crash-storrow-and-memorial-drives/A1rQpXZtcV4PIPPmSDNxKI/story.html"
+      }
+    ]
+  }
 }
