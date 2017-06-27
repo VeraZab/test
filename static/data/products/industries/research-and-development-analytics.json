@@ -95,23 +95,17 @@
   "learnMore": {
     "name": "Learn More",
     "links": [{
-      "title": "VTT CASE STUDY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
-    }, {
-      "title": "BAND DIAGRAMS WITH PLOTLY AND PYTHON",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
-    }, {
       "title": "GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
     }, {
       "title": "VTT CASE STUDY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "https://plot.ly/products/enterprise/customer-stories/vtt-finland/"
     }, {
       "title": "BAND DIAGRAMS WITH PLOTLY AND PYTHON",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html"
     }, {
       "title": "PLOTLY GRAPHS ON BLUE ROBOTICS BLOG",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://www.bluerobotics.com/new-product-3d-printed-open-source-propeller-for-the-m100/"
     }]
   }
 }
