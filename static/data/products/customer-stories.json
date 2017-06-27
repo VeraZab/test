@@ -11,13 +11,13 @@
     "desc": "Plotly prides itself on being partnered with its clients. Numerous references of successful implementations across many lines of business are available from a dedicated and committed staff. Read what some of our partners have to say about Plotly."
   },
   "stories": [{
-      "id": "finance",
+      "id": "c12-energy",
       "style": {
         "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
       },
       "label": "Energy",
       "cta": "Read Stories →",
-      "cta-url": "/energy"
+      "url": "/products/enterprise/customer-stories/c12-energy"
     },
     {
       "id": "reseach-lab",
@@ -26,7 +26,7 @@
       },
       "label": "Reseach Lab",
       "cta": "Read Stories →",
-      "cta-url": "/reseach-lab"
+      "url": "/products/enterprise/customer-stories/vtt-finland"
     },
     {
       "id": "insurance",
@@ -35,7 +35,7 @@
       },
       "label": "Insurance",
       "cta": "Read Stories →",
-      "cta-url": "/insurance"
+      "url": "/products/enterprise/customer-stories/goji/"
     }
   ],
   "storyCard": {

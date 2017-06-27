@@ -11,7 +11,7 @@ class CustomerServiceMain extends React.Component {
     const spacing = this.props.spacing;
 
     return (
-            <div styclassName="card card-with-image">
+            <div className="card card-with-image">
               <div className="card-wrapper">
                 <div className="card-image" style={story.style}>
                   <div className="card-image-label">
@@ -19,7 +19,7 @@ class CustomerServiceMain extends React.Component {
                   </div>
                 </div>
                 <div className="card-action">
-                  <a className="card-action-link" href="#">{story.cta}</a>
+                  <a className="card-action-link" href={story.url}>{story.cta}</a>
                 </div>
               </div>
             </div>
