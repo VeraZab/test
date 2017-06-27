@@ -14,7 +14,7 @@ export default () => (
                   {data.body.title}
               </Title>
               <Body align-center>
-                <p>{data.body.title}</p>
+                <p>{data.body.desc}</p>
                   <div className="cards stories" style={data.storyCard.style}>
                     {data.stories.map((story, i) => {
                       return (<CustomerServiceMain style={data.storyCard.style} key={i} story={story} />);
