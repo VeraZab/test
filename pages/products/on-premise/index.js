@@ -200,7 +200,7 @@ export default class OnPrem extends React.Component {
                 <ContentSection>
                     <ContentPane half center-vertically text>
                         <div className="pre-title">
-                            Suopport Open-Source
+                            Support Open-Source
                         </div>
                         <Title>
                             Built on the Shoulders of Giants
