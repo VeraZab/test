@@ -76,4 +76,9 @@ npm-debug.log.*
 
 ehthumbs.db
 
-Thumbs.db`
+Thumbs.db
+
+out/*
+out.dropbox
+.dropbox
+
