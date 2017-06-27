@@ -72,46 +72,37 @@
     "name": "Learn More",
     "links": [{
       "title": "GOJI CUSTOMER STORY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "VIEW DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "GOJI CUSTOMER STORY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "https://plot.ly/products/enterprise/customer-stories/goji/"
     }, {
       "title": "DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/salesforce/"
     }, {
       "title": "PLOTTING SPARK DATAFRAMES WITH PLOTLY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/apache-spark/"
     }, {
       "title": "BIG DATA ANALYTICS WITH PANDAS AND SQLITE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/big-data-analytics-with-pandas-and-sqlite/"
     }, {
       "title": "R, PYTHON, MATLAB, & EXCEL DASHBOARDS & GRAPHS WITH D3.JS & WEBGL",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
     }, {
       "title": "PLOTLY IPYTHON NOTEBOOKS - BUSINESS INTELLIGENCE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/#business-intelligence"
     }, {
       "title": "IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/amazon-redshift/"
     }, {
       "title": "DASH ON GITHUB",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://github.com/chriddyp/dash/"
     }, {
       "title": "GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
     }, {
       "title": "UPDATE PLOTLY CHARTS WITH CRON JOBS AND PYTHON",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/"
     }, {
       "title": "CREATE A PLOTLY DASHBOARD IN UNDER 10 MINUTES",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/create-a-plotly-dashboards-in-under-10-minutes/"
     }]
   }
 }
