@@ -28,7 +28,7 @@ const tabsData = [
         content: {
             heading: "Dazzling Dashboards",
             graphic_type: "image",
-            graphic_src: "https://now.plot.ly/static/images/powerful_dashboards.png",
+            graphic_src: "https://images.plot.ly/static/marketing/powerful_dashboards.png",
             description: "These aren’t your dad’s dashboards. Plotly dashboards are web-based, scriptable in Python and R, and feature Plotly’s best-in-class D3 graphics.",
             button_text: "Create your first dashboard",
             button_link: "https://plot.ly/dashboard/create"
@@ -42,7 +42,7 @@ const tabsData = [
         content: {
             heading: "Spectacle Presentations",
             graphic_type: "image",
-            graphic_src: "https://now.plot.ly/static/images/stunning-presentations.png",
+            graphic_src: "https://images.plot.ly/static/marketing/stunning-presentations.png",
             description: "Create, present, and share slide decks that have interactive Plotly charts. Coders can create presentations in Python and R or clickers can download Spectacle Editor.",
             button_text: "Create your first presentation",
             button_link: "https://plot.ly/organize/home?create=presentation"

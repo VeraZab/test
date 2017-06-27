@@ -94,7 +94,18 @@ export default class OnPrem extends React.Component {
     }
 
     componentDidMount() {
-
+        (function () {
+            let qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
+                gt = d.getElementsByTagName, id = "typef_orm_share",
+                b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q)
+            }
+        })();
     }
 
     render() {
@@ -147,7 +158,7 @@ export default class OnPrem extends React.Component {
                                                     <span className="usd">$</span>9,950
                                                 </div>
                                             </div>
-                                            <div class="details">per year, <strong>
+                                            <div className="details">per year, <strong>
                                                 5 User License </strong></div>
                                         </div>
                                         <Buttons items={actions}
@@ -177,7 +188,7 @@ export default class OnPrem extends React.Component {
                                                     <span className="usd">$</span>15,950
                                                 </div>
                                             </div>
-                                            <div class="details">per year, <strong>
+                                            <div className="details">per year, <strong>
                                                 5 User License </strong></div>
 
                                         </div>
@@ -192,8 +203,6 @@ export default class OnPrem extends React.Component {
                                 </div>
                             </div>
                         </div>
-
-
                         </Body>
                     </ContentPane>
                 </ContentSection>
@@ -207,11 +216,11 @@ export default class OnPrem extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            Plotly's chart maker is built on a foundation of open-source libraries that are constantly
+                            Plotly On-Premise is built on a foundation of open-source libraries that are constantly
                             improving. To name a few:
                         </p>
 
-                        <ul class="body-list blue">
+                        <ul className="body-list blue">
                             <li><a href="https://github.com/d3" target="_blank">D3.js</a> ⟶ SVG graphics</li>
                             <li><a href="https://github.com/sheetjs" target="_blank">SheetJS</a> ⟶ Excel file parsing
                             </li>

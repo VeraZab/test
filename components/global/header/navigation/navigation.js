@@ -115,12 +115,12 @@ const navigationRight = [
             slug: 'request-a-demo',
             title: 'Request a demo or contact our sales team.',
             icon: null,
+            typeform: true,
             target: '_blank',
             link: 'https://plotly.typeform.com/to/seG7Vb',
             button: {
-                classes: 'button button-small button-secondary'
-            }
-            ,
+                classes: 'button button-small button-secondary typeform-share'
+            },
             submenu: null
         }
     ]
@@ -203,6 +203,15 @@ const navigationLeft = [
                             icon: 'dashboards',
                             target: '_self',
                             link: '/dashboards/'
+                        },
+                        {
+                            id: 10,
+                            label: 'Dash',
+                            slug: 'dash',
+                            title: 'Explore the Plotly Chart Maker.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/dash/'
                         },
                         {
                             id: 8,
@@ -532,6 +541,10 @@ export default class Navigation extends React.Component {
                        target={item.target}
                        title={item.title}
                        className={item.button.classes}
+                       data-mode="drawer_right"
+                       data-hide-headers="true"
+                       data-hide-footer="true"
+                       data-submit-close-delay="2"
                        key={item.id}>
                         {item.label}
                     </a>
