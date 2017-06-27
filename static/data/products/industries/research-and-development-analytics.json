@@ -85,6 +85,12 @@
   "quotes": [{
     "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. ",
     "author": "- Dana Guernsey, Director of Corporate Development at Ambri"
+  }, {
+    "desc": " The Plotly Enterprise solution also acts as a corporate memory and it is extremely easy to reuse plots and embed them into any web content. ",
+    "author": "- Dr. Pekka, VTT senior scientist"
+  }, {
+    "desc": " Using Plotly lets our customers quickly visualize key performance data while allowing them to closely inspect the data as well. That's a huge advantage over static plots for us. ",
+    "author": "- Rustom Jehangir, Co-Founder and Engineer at Blue Robotics Inc"
   }],
   "learnMore": {
     "name": "Learn More",
