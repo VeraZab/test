@@ -40,8 +40,20 @@
     "label": "Sponsor"
   }],
   "quotes": [{
-    "author": "- Mike Munsell Manager, Research Marketing GreenTech Media Research",
-    "desc": " With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
+    "author": "- Andrew Tran, reporter at Boston Globe",
+    "desc": "  I use plotly for my articles because of how easily the API integrates with my data story workflow. It takes the dataviz I created in R, adds interactivity, and gives me code I can quickly embed into my article on deadline. "
+  }, {
+    "author": "- Dylan Matthews, Columnist, Washington Post",
+    "desc": "  Plotly is my absolute favorite way to communicate data and complex ideas to my readers. "
+  }, {
+    "author": "- Thijs Roes, Amsterdam reporter for Vice",
+    "desc": "  Plotly gives me the opportunity to easily share complicated data in a visually appealing way. It's easier to use than its offline competitors, it works in the cloud, and in the end I manage to get a point across more effectively because of it. "
+  }, {
+    "author": "- Mike Munsell, Manager, Research Marketing, GreenTech Media Research",
+    "desc": "  With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
+  }, {
+    "author": "- Rhett Allain, Science Writer at Wired",
+    "desc": "  When I create a graph, I am looking for a platform that has two things: it should be easy and it should look nice. Plotly does both of these things and more. Plotly offers two more features that are great for my readers: interactive graphs and access to the original data. Plotly is a great tool to effectively communicate scientific ideas. "
   }],
   "sections": [{
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone2-content.f2eaa1a57cf6.jpg",
