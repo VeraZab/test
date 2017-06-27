@@ -12,12 +12,10 @@ import IndustriesRequestDemo from './single-customer-stories/request-demo';
 export default class extends React.Component {
 
   static async getInitialProps ({ query: { id } }) {
-      const urlPath = `http://localhost:3000/static/data/products/enterprise/customer-stories/${id}.json`;
+      const urlPath = `http://localhost:3000/static/data/products/enterprise/${id}.json`;
       const res = await fetch(urlPath);
       const data = await res.json();
-      console.log(data);
       return { data }
-
   }
 
 
