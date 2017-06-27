@@ -14,6 +14,10 @@
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
   "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/gov/life-expectancy.5196f2276cb6.gif",
+    "title": "Making public data more accessible",
+    "body": "Plotly is disseminating best-in-class stats and visualization tools to anyone with an Internet connection.<br><br><br>With the rise of free, public datasets on government programs and performance, any global citizen can join data-driven discussions on government programs, policy and spending.<br><br><br>Plotly has partnered with the US federal government's open data program, Data.gov, to enable one-click export of datasets into Plotly for visualization and sharing. <br><br> <a href='http://www.data.gov/meta/open-apps/'>PLOTLY PARTNERS WITH DATA.GOV</a><br><a href='http://plot.ly/export/'>PLOTLY EXPORT PARTNERS</a>"
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/gov/noaa.7037fcde6f96.jpg",
     "title": "Atmospheric modeling at NOAA",
     "body": "Scientists employed government research agencies NOAA and NASA to use Plotly with IPython notebook for climate change modeling, satellite monitoring, and intraorganization data sharing."
