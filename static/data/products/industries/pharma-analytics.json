@@ -41,6 +41,10 @@
     "image": "https://plot.ly/static/enterprise/img/industries/pharma/turtles.jpg",
     "title": "Monitoring sea turtle migrations with Plotly and MATLAB",
     "body": "Project Leatherback analyzes data from sensors attached to migrating sea turtles in MATLAB, then publishes the results with Plotly."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/pharma/ribbon.ee4efd98ef65.jpg",
+    "title": "Dashboards for bioinformatics",
+    "body": "Plotly.js makes it easy to build scientific-grade dashboards in D3.js without JavaScript programming expertise."
   }],
   "quotes": [{
     "author": "- Chris Rivest, Lifecode CEO",
