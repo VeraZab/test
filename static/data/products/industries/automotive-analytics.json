@@ -28,7 +28,7 @@
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/automotive/root-locus.a2918f091d12.jpg",
     "title": "Control design in Python, MATLAB, and Plotly",
-    "body": "Plotly has popular API clients for MATLAB and Python - the technical computing workhorses of the automotive industry."
+    "body": "Plotly has popular API clients for MATLAB and Python - the technical computing workhorses of the automotive industry. <br><a href='http://plot.ly/ipython-notebooks/bicycle-control-design/'>CONTROL DESIGN IN PYTHON</a><br><a href='http://plot.ly/ipython-notebooks/aircraft-pitch-analysis-matlab-plotly/'>AIRCRAFT PITCH ANALYSIS IN MATLAB AND PLOTLY</a>"
   }],
   "quotes": [{
     "author": "- Ben Parker, Dartmouth Formula 1 Racing",
