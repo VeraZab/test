@@ -60,6 +60,10 @@
     "title": "Whitelabel Platforms with Plotly Enterprise",
     "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience. <br><br><a href='https://plot.ly/product/enterprise/'>PLOTLY ENTERPRISE</a>"
   }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/life-expectancy.5196f2276cb6.gif",
+    "title": "Increase engagement and time-on-site with interactive graphs",
+    "body": "Plotly graphs are drawn in D3.js and are fully interactive - zoom, hover text, pan, and line toggling all come for free."
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg",
     "title": "Plotly Pew Research graph collection",
     "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration."
