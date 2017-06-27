@@ -33,6 +33,12 @@
   "quotes": [{
     "author": "- Data.gov press release",
     "desc": " Data.gov is proud to announce integration with [Plotly] - making it possible to create graphs and dynamic maps with open government data in one click. "
+  }, {
+    "author": "- Data.gov press release",
+    "desc": "  Plotly makes it easy to share and edit your work privately, with your co-workers, or the world. There is so much to learn from open government data and we are happy to feature tools like Plotly and CartoDB that make it easier for everyone to become a data scientist. "
+  }, {
+    "author": "- White house press release",
+    "desc": " [...] Plotly will also challenge its hundreds of thousands of users to find new ways to analyze and visualize these datasets with the goal of gaining new insights about how climate change affects human health. "
   }],
   "learnMore": {
     "name": "Learn More",
