@@ -60,11 +60,11 @@
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/cpg-stock.639dbce73735.svg",
     "title": "Automating HTML reports of sensor data",
-    "body": "The Advanced Technologies and Projects team at Google uses Plotly Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Plotly Enterprise for further exploration and pdf download. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY</a>"
+    "body": "<b>The Advanced Technologies and Projects team at Google</b> uses Plotly Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Plotly Enterprise for further exploration and pdf download. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/batteries.a5eef04b70a6.jpg",
     "title": "Liquid metal batteries for utility-scale storage",
-    "body": "Ambri uses Plotly Enterprise with Research Box to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with RStudio and Excel to generate client cost saving curves for Ambri commercial deployments."
+    "body": "<b>Ambri</b> uses <b>Plotly Enterprise with Research Box</b> to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with <b>RStudio</b> and <b>Excel</b> to generate client cost saving curves for Ambri commercial deployments."
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/quantum-computing.cd585862e042.png",
     "title": "Quantum computing research",
