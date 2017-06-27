@@ -56,7 +56,19 @@
   }],
   "quotes": [{
     "author": "- Chris Rivest, Lifecode CEO",
-    "desc": " Lifecode's research team shares and visualizes data with Plotly's Python API. Plotly is emerging as the leading cloud platform for visualization in computational biology."
+    "desc": " Lifecode's research team shares and visualizes data with Plotly's Python API. Plotly is emerging as the leading cloud platform for visualization in computational biology. "
+  }, {
+    "author": "- Chris Johsnon, Project Leatherback lead",
+    "desc": " We are a small non profit in Florida studying endangered leatherback sea turtles. Each summer we track these animals using a bunch of tech (GPS, VHF tags, IMU's and depth/temperature loggers) as they travel the coast between nesting events. We are hoping to post most of our data online with Plotly so others can can view and play with the data. "
+  }, {
+    "author": "- James, SMPL BIO",
+    "desc": " Smpl Bio aims to simplify experimental design for biologists and geneticists by providing easy to use tools and visualizations. We were searching for a visualization platform that looked great for the end user but was also intuitive for the developer. Plotly easily filled both of those requirements, its unified interface and documentation lets us focus on our core algorithm development. "
+  }, {
+    "author": "- Karthik Ram, ROpenSci Founder and BIDS Data Science Fellow",
+    "desc": " Plotly provides R users with stunning interactive visualizations made exceedingly simple by leveraging ggplot2's syntax that is already available to a large group of researchers. "
+  }, {
+    "author": "- Mingzhang Yang, Visiting Fellow researcher at NIH",
+    "desc": " Plotly helps me analyze and plot my data easily, with flexible options and high quality. It's easy to access, edit, and share with others. Plotly's support team is extremely responsive. "
   }],
   "learnMore": {
     "name": "Learn More",
