@@ -4,102 +4,33 @@
     "title": "C12-energy"
   },
   "header": {
-    "group": "Industries",
+    "group": "Oil & Gas",
     "title": "C12-energy",
-    "desc": "Plotly serves the energy industry with the world's most advanced graphics for web dashboards, print and web reports, and collaborative analytics."
+    "desc": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery."
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
-      "label": "Sponsor"
-    },
-    {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-c12.153b8e641740.png",
-      "label": "Sponsor"
-    },
-    {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-gtm.49428e042ac0.png",
-      "label": "Sponsor"
-    },
-    {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-opower.8e9d13b5e40e.png",
-      "label": "Sponsor"
-    },
-    {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sighten.9c2d8d53cd16.png",
-      "label": "Sponsor"
+      "graphic": "https://plot.ly/static/enterprise/img/customer_stories/c12.f4108d25554b.jpg",
+      "label": "C12-energy"
     }
-
   ],
   "sections": [{
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/electricity_consumption_per_country_map.e28f469bc9db.jpg",
-      "title": "Plotly is the most advanced visualization platform in the energy industry",
-      "body": "Plotly graphs are native to web browsers, drawn in D3.js, fully interactive, and support all of the scientific graph types of older desktop programs like Spotfire, MATLAB and OriginPro."
+      "image": "https://plot.ly/static/enterprise/img/customer_stories/c12-top.782cbe9b0fdd.png",
+      "title": "",
+      "body": "The C12 technology team used Python, Javascript, and Plotly.js to develop C12's real-time data acquisition, visualization, and analysis platform. Everyone at the company uses the software, from engineers and accountants in the main office to operators in the field."
     },
     {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/c12-dashboard.e2892892a602.png",
-      "title": "Dashboards for oil field investment",
-      "body": "Plotly has built dashboards for C12 Energy that combine geographic, geological, and financial datasets, and that are critical to decisions on oil field purchasing. <a href='https://plot.ly/products/enterprise/customer-stories/c12-energy/'>READ THE C12 CASE STUDY</a>"
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/opower.c379c49f0ad3.svg",
-      "title": "Analyzing smart meter big data at Opower",
-      "body": "The analytics team at Opower uses Python to analyze smart meter data on electricity consumption. They then share their findings through reports and dashboards made with interactive Plotly graphs, all drawn in D3.js. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY</a>"
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/batteries.732368ed9bad.svg",
-      "title": "Dashboards for utility-scale batteries",
-      "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB</a>"
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/wind-farm.856d53aa2241.svg",
-      "title": "Dashboards for wind farm prospecting",
-      "body": "The wind industry uses Plotly maps, line charts, and histograms to help prospect new wind turbine sites. Anemometer data is sent via cellular to a server which automatically updates a d3.js dashboard built with plotly graphs. <a href='https://plot.ly/javascript'>DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY</a>"
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/solar-radiation.b7716f79d8c0.svg",
-      "title": "Analytics for the Solar Industry",
-      "body": "Sighten has the industry's most advanced toolset for solar investment efficiency. Their online client dashboards use Plotly graphs drawn in D3.js to display RoR and insolation data."
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/utility-price.9486740d6e80.svg",
-      "title": "Energy research reporting",
-      "body": "Plotly graphs export to pdf, eps, svg, png, and are also publishable to the web as interactive, d3.js figures. Greentech Media embeds Plotly graphs in their online articles to provide their readers with highly engaging interactive charts. <a href='http://plot.ly/~greentechmedia'>GREENTECH MEDIA PLOTLY PROFILE</a>"
+      "image": "https://plot.ly/static/enterprise/img/customer_stories/c12-bottom-d.e543268ef25f.jpg",
+      "title": "For more on how C12 is Plotly.js and Plotly cloud, see these tutorials:",
+      "body": "<a href='https://plot.ly/plotly.js/' target='_blank' class='link'>Plotly.js showcase </a>"
     }
   ],
   "quotes": [{
-      "author": "- Malina Kirn, PhD, Lead Engineer, Analytics at Opower ",
-      "desc": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. "
+      "author": "",
+      "desc": "We use Plotly to create industry-standard graphs for board meeting presentations and audit reports."
     },
     {
-      "author": "— Dr. Jenya Kirshtein, Scientific Software Engineering at C12 ",
-      "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
+      "author": "Dr. Jenya Kirshtein Scientific Software Engineering",
+      "desc": "Plotly is what our users see before having their morning coffee. We assemble data from automated measurement acquisition systems and submitted by operators in the field, and drop it onto Plotly graphs that are very intuitive and easy to use. Engineers and operators use Plotly to flag and discuss production issues, and it allows them to act on problems that would otherwise take days to be noticed. Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions."
     }
-  ],
-  "images": {
-    "links": [{
-        "title": "Image",
-        "url": "https://plot.ly/products/enterprise/customer-stories/c12-energy/"
-      },
-      {
-        "title": "Image",
-        "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
-      },
-      {
-        "title": "Image",
-        "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
-      },
-      {
-        "title": "Image",
-        "url": "https://plot.ly/javascript/"
-      },
-      {
-        "title": "Image",
-        "url": "http://plot.ly/~greentechmedia"
-      },
-      {
-        "title": "Image",
-        "url": "http://blog.plot.ly/post/99540799397/eight-graphs-you-should-see-on-global-warming"
-      }
-    ]
-  }
+  ]
 }

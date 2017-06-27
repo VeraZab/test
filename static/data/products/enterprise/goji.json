@@ -4,38 +4,33 @@
     "title": "Goji"
   },
   "header": {
-    "group": "Industries",
+    "group": "Insurance",
     "title": "Goji",
-    "desc": "Plotly serves the energy industry with the world's most advanced graphics for web dashboards, print and web reports, and collaborative analytics."
+    "desc": "Goji combines the personalized, comparison shopping experience of a local agent with the ease and convenience of buying directly from a carrier. We don’t sell or push one brand of insurance — our priority is to find the right company for your particular situation. Our representatives are licensed insurance agents, not salespeople. We’re consultants who tailor each quote to fit your individual needs."
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
-      "label": "Sponsor"
-    },
-    {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-c12.153b8e641740.png",
-      "label": "Sponsor"
+      "graphic": "https://plot.ly/static/enterprise/img/customer_stories/goji.761e66d07096.jpg",
+      "label": "Goji"
     }
   ],
-  "sections": [
-    {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/opower.c379c49f0ad3.svg",
-      "title": "Analyzing smart meter big data at Opower",
-      "body": "The analytics team at Opower uses Python to analyze smart meter data on electricity consumption. They then share their findings through reports and dashboards made with interactive Plotly graphs, all drawn in D3.js. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY</a>"
+  "sections": [{
+      "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-top.ed71212c1dda.jpg",
+      "title": "The Big BI killer we'd been waiting for.",
+      "body": "The data science team at Goji – a Boston-based automobile insurance provider – employs Python scripts to combine and analyze data from the company’s call centers, CRM, and website traffic. They then visualize and share the data with their colleagues using Plotly Enterprise and an internal website. Screens throughout Goji’s offices display Plotly dashboards that update in real time. It’s smart, clear, and easy for everyone in the office to follow. When Goji made the decision to replace monolithic, GUI - based data analysis software with Plotly Enteprise and a suite of lightweight, automated Python scripts, the result was a data science stack that was less expensive and more flexible.And, as an added bonus, “no one at the company complains about it anymore.”Plotly Enterprise equips teams to answer tomorrow’ s questions instead of yesterday’ s demo by connecting to real back - ends– R, MATLAB, and Python– that don’ t limit data sources to a predefined architecture.Like other data science developers, the guys in Goji’ s team now have big smiles on their faces because their work is creative, agile, and exploratory.The days of coming up with hacks to respond to issues that monolithic BI tools were not designed to sort out are long gone.You go, Goji!"
     },
     {
-      "image": "https://plot.ly/static/enterprise/img/industries/energy/batteries.732368ed9bad.svg",
+      "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-bottom-b.2fb95bbd2868.jpg",
       "title": "Dashboards for utility-scale batteries",
-      "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB</a>"
+      "body": "For more on how Goji is using Plotly Enterprise, see these tutorials on <a href='http://moderndata.plot.ly/' target='_blank'>Modern Data</a>: <br><a href='http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/' target='_blank' class='link'>Graphing data from a MySQL database in Python </a><br><a href='http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/' target='_blank' class='link'> Update Plotly charts and dashboards with cron jobs and Python</a><br><a href='http://moderndata.plot.ly/create-a-plotly-dashboards-in-under-10-minutes/' target='_blank' class='link'>Create a Plotly dashboard in under 10 minutes</a>"
     }
   ],
   "quotes": [{
-      "author": "- Malina Kirn, PhD, Lead Engineer, Analytics at Opower ",
-      "desc": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. "
+      "author": "",
+      "desc": "Before Plotly, we were entangled in an enterprise BI quagmire. Our system was large, expensive to maintain in both time and effort, and slow to adapt to our fast-changing needs. Plotly was the “big BI” killer we had been waiting for."
     },
     {
-      "author": "— Dr. Jenya Kirshtein, Scientific Software Engineering at C12 ",
-      "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
+      "author": "",
+      "desc": "Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served."
     }
   ],
   "images": {

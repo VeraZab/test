@@ -3,7 +3,7 @@ import Buttons from '../../components/buttons/buttons';
 
 const footer = {
   "title": "Interested in how Plotly can transform your business?",
-  "cta": {
+  "cta": [{
       "label": "Request a demo",
       "title": "See what you can create with Plotly!",
       "icon": null,
@@ -13,6 +13,7 @@ const footer = {
         "classes": "button button-secondary"
       }
     }
+]
   };
 
 class IndustriesRequestDemo extends React.Component {
@@ -22,10 +23,10 @@ class IndustriesRequestDemo extends React.Component {
       <ContentSection>
           <ContentPane full center center-vertically text>
               <Title>
-                {data.footer.title}
+                {footer.title}
               </Title>
               <Body>
-                <Buttons align-center items={data.footer.cta}/>
+                <Buttons align-center items={footer.cta}/>
               </Body>
           </ContentPane>
       </ContentSection>
