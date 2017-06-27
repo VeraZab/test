@@ -4,10 +4,10 @@
   &-navigation {
     width: 100%;
     display: flex;
-    flex: 1;
+    flex-grow: 1;
   }
   &-navigation-wrapper {
-    flex: 1;
+    flex-grow: 1;
     display: flex;
     justify-content: space-between;
     @include tablet {
@@ -17,7 +17,7 @@
   &-navigations {
     @include desktop {
       display: flex;
-      flex: 1;
+      flex-grow: 1;
       width: 100%;
       justify-content: space-between;
     }
@@ -84,11 +84,11 @@
 
   &-main {
     @include tablet {
-      flex: 1;
+      flex-grow: 1;
     }
     display: flex;
     &-wrapper {
-      flex: 1;
+      flex-grow: 1;
       display: flex;
     }
   }
@@ -97,7 +97,7 @@
     display: flex;
 
     .buttons {
-      flex: 1;
+      flex-grow: 1;
       .button {
 
         @include handheld {
@@ -120,7 +120,7 @@
     }
 
     &:not(.mobile-menu-button) {
-      flex: 1;
+      flex-grow: 1;
     }
     &.mobile-menu-button {
       display: none;
@@ -129,7 +129,7 @@
       }
     }
     &-wrapper {
-      flex: 1;
+      flex-grow: 1;
       display: flex;
       text-transform: uppercase;
       text-decoration: none;
@@ -140,12 +140,13 @@
 
     }
     &-label {
-      flex: 1;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       position: relative;
       transition: $transition;
       white-space: nowrap;
+      @extend %font-smoothing;
 
 
       &-text {
@@ -196,8 +197,42 @@
     // Nav Item with submenu
     //--
     &--with-submenu {
+      position: relative;
+
+      &.nav-item-button{
+        height:$header-height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:$unit;
+
+        &.not-mobile{
+          @include media('<=1060px'){
+            display: none !important;
+          }
+        }
+
+        .nav-item-icon{
+          margin-right:8px;
+          flex-shrink:0;
+        }
+      }
+
+      &.button{
+        //margin:$gutter 0;
+        .nav-item-submenu{
+          top:29px;
+          margin-top:$gutter;
+
+          .nav-item-label-text{
+            font-size:16px;
+          }
+
+        }
+      }
       // keep default pointer when over an item with submenu (item itself is not link)
       & > .nav-item-wrapper {
+        position: relative;
        @include desktop{
          &:hover {
            cursor: default;
@@ -271,6 +306,7 @@
           width: 100%;
           left: 0;
           transform-origin: left;
+          display: none !important;
         }
       }
       // Submenu Sections

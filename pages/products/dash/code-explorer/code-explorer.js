@@ -2,36 +2,43 @@ import styles from './code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
-const jsCode = `Plotly.d3.json('http://rickyreusser.com/animation-experiments/data/gapminder-with-frames.json', function(err, d) {  
-  d.layout.sliders = [{
-    currentvalue: {
-      prefix: 'Year: ',
-      xanchor: 'right',
-      font: {
-        size: 20,
-        color: '#888'
-      }
-    },
-    x: 0.1,
-    len: 0.9,
-    pad: {t: 40, b: 20},
-    steps: d.frames.map(function(f) {
-      return {
-        method: 'animate',
-        args: [[f.name], {mode: 'immediate', frame: {redraw: false}}],
-        label: f.name
-      }
-    })
-  }];
-  
-  d.layout.width = window.innerWidth;
-  d.layout.height = window.innerHeight;
-  d.layout.title = 'Life Expectancy vs. GDP Per Capita';
-  
-  Plotly.plot('graph', d.data, d.layout, d.config).then(function() {
-    return Plotly.addFrames('graph', d.frames);
-  });
-});`;
+const jsCode = `import dash
+from dash.dependencies import Input, Output
+import dash_core_components as dcc
+import dash_html_components as html
+from pandas_datareader import data as web
+from datetime import datetime as dt
+
+app = dash.Dash()
+
+app.layout = html.Div([
+    html.H1('Stock Tickers'),
+    dcc.Dropdown(
+        id='my-dropdown',
+        options=[
+            {'label': 'Coke', 'value': 'COKE'},
+            {'label': 'Tesla', 'value': 'TSLA'},
+            {'label': 'Apple', 'value': 'AAPL'}
+        ],
+        value='COKE'
+    ),
+    dcc.Graph(id='my-graph')
+])
+
+@app.callback(Output('my-graph', 'figure'), [Input('my-dropdown', 'value')])
+def update_graph(selected_dropdown_value):
+    df = web.DataReader(
+        selected_dropdown_value, data_source='google',
+        start=dt(2017, 1, 1), end=dt.now())
+    return {
+        'data': [{
+            'x': df.index,
+            'y': df.Close
+        }]
+    }
+
+if __name__ == '__main__':
+    app.run_server()`;
 
 
 const languages = [
@@ -41,7 +48,7 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: 'https://now.plot.ly/static/images/javascript_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/dash/hello-world.gif',
         example_url: 'https://now.plot.ly/static/images/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'http://google.com'
@@ -95,8 +102,13 @@ export default class CodeExplorer extends React.Component {
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <div className="code-explorer-wrapper">
                     <div className="code-explorer-graphic">
-                        <div className="code-explorer-graphic-wrapper" style={graphicStyles}>
-
+                        <div className="code-explorer-graphic-wrapper desktop-graphic">
+                        <iframe src="https://dash-hello-world.herokuapp.com/"></iframe>
+                        </div>
+                        <div className="code-explorer-graphic-wrapper mobile-graphic">
+                            <div className="graphic-img-wrapper">
+                                <img src={languages[0].graphic_src} alt=""/>
+                            </div>
                         </div>
                     </div>
                     <div className="code-explorer-editor">
@@ -113,13 +125,6 @@ export default class CodeExplorer extends React.Component {
                                                    }}>
                                     {this.state.language.code}
                                 </SyntaxHighlighter>
-                            </div>
-                            <div className="code-explorer-editor-actions">
-                                <div className="buttons">
-                                    <a href={this.state.language.button_link} className="button button-primary">
-                                        {this.state.language.button_text} →
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>

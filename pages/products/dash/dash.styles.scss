@@ -2,8 +2,98 @@
 
 .dash {
 
+  &-content{
+    .content-section{
+
+      .content-section-graphic-image-link{
+        @include trans;
+        display: block;
+        &:hover{
+          transform: translateY(-4px);
+        }
+      }
+      &-title-wrapper{
+        /* Dash is productive: */
+        font-size: 38px !important;
+        color: #506784;
+        line-height: 46px !important;
+      }
+      p{
+        font-size: 22px !important;
+        line-height: 36px !important;
+      }
+    }
+  }
+
+  &-header {
+    &-wrapper {
+      @include global-wrapper;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+    }
+  }
+  &-navigation {
+    display: flex;
+
+    padding-top:$gutter;
+
+
+    @include media('<=600px'){
+      flex-direction: column;
+      padding-top:0;
+      text-align: right;
+    }
+    &-item {
+      color: white !important;
+      text-decoration: none !important;
+      background-image: none !important;
+      text-transform: uppercase;
+      letter-spacing:2px;
+      padding-left:$gutter;
+      white-space:nowrap;
+      @include trans;
+      text-shadow: $text-shadow-default;
+      &:hover{
+
+        @include media('>600px'){
+          transform: translateY(-4px);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   &-hero {
-    @include media('<=980px') {
+    .hero-top {
+      padding-top: 0;
+      &-wrapper{
+        display: flex !important;
+      }
+    }
+
+    .buttons{
+      width: 100%;
+    }
+
+    @include media('<=900px') {
+     .buttons{
+       flex-direction: column;
+       .button{
+         width: 100%;
+         margin-left:0;
+
+         & + .button{
+           margin-top:$gutter;
+         }
+       }
+     }
+    }
+    @include media('<=800px') {
+      .hero-actions{
+        justify-content: center;
+      }
       .hero-top-wrapper {
         flex-direction: column !important;
 
@@ -46,7 +136,7 @@
 
     &-productive {
       .content-section-wrapper {
-        transform: translateY(50px);
+        transform: translateY(60px);
         z-index: 9;
         position: relative;
       }
@@ -56,9 +146,10 @@
       background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
 
       padding-top: $gutter*2;
+      transform: translateY(-120px);
 
-      @include desktop {
-        transform: translateY(-120px);
+      @include media('<=900px'){
+        transform: none;
       }
 
       @include tablet {
@@ -79,25 +170,27 @@
           }
         }
         .title { /* Lightweight: */
-          font-family: Dosis-Medium;
+          font-family: "Dosis", sans-serif;
+          font-weight:300;
           font-size: 28px;
           color: #FFFFFF;
           letter-spacing: 0;
           line-height: 21px;
           margin-top: $unit;
         }
+        p {
+          /* Dash provides a dire: */
+          font-size: 16px !important;
+          color: #FFFFFF;
+          max-width:100%;
+          line-height: 26px !important;
+        }
       }
-      p {
-        /* Dash provides a dire: */
-        font-family: OpenSans;
-        font-size: 16px !important;
-        color: #FFFFFF;
-        line-height: 26px !important;
-      }
+
     }
 
     &-dash-apps {
-      background: url("/static/images/dash/section-bg-demos@2x.png") center top !important;
+      background: url("https://now.plot.ly/static/images/dash/section-bg-demos@2x.png") center top !important;
       transform: translateY(-120px);
       padding-top: 0px;
       background-size: cover !important;
@@ -108,8 +201,16 @@
       }
     }
 
+
+    &-more-details{
+      .cards.stories{
+        align-items: flex-start;
+
+      }
+    }
+
     &-open-source {
-      background: url("/static/images/dash/section-open-source-bg.png") center top !important;
+      background: url("https://now.plot.ly/static/images/dash/section-open-source-bg.png") center top !important;
       background-size: cover !important;
       .content-section-title-wrapper {
         color: white;
@@ -143,6 +244,6 @@ pre {
     flex: 1;
   }
   .card-body {
-    flex: 1;
+    //flex: 1;
   }
 }

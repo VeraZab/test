@@ -16,9 +16,7 @@ class Layout extends React.Component {
     componentDidMount() {
         document.body.classList.remove('no-scroll');
         // Plotly's code
-        // ReactGA.initialize('UA-39373211-1')
-        // Testing code (plotly.ineffable.digital)
-        ReactGA.initialize('UA-101172275-1')
+        ReactGA.initialize('UA-39373211-1')
         ReactGA.pageview(document.location.pathname)
     }
 

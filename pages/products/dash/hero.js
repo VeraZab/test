@@ -17,7 +17,7 @@ const HeroButtons = [
             subtitle: null,
             title: '',
             icon: null,
-            target: '_self',
+            target: '_blank',
             link: '/dash',
             button: {
                 classes: 'button button-primary button-white'
@@ -28,8 +28,8 @@ const HeroButtons = [
             subtitle: null,
             title: '',
             icon: null,
-            target: '_self',
-            link: '/dash',
+            target: '_blank',
+            link: 'https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503',
             button: {
                 classes: 'button button-secondary'
             }
@@ -39,7 +39,6 @@ const HeroButtons = [
 ];
 
 const HeroStyles = {
-    minHeight: '70vh',
     background: 'linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important'
 
 };
@@ -58,15 +57,30 @@ export default class HeroSection extends React.Component {
     render() {
         return (
             <Hero className="no-dots dash-hero align-left split-half" style={HeroStyles}>
+                <div className="dash-header">
+                  <div className="dash-header-wrapper">
+                      <div className="dash-logo">
+                          <div className="dash-logo-wrapper">
+                              <img src="https://now.plot.ly/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
+                          </div>
+                      </div>
+                      <div className="dash-navigation">
+                          <a href="/products/on-premise/" target="_blank" className="dash-navigation-item">
+                              Pricing
+                          </a>
+                          <a target="_blank" href="https://plot.ly/dash/" className="dash-navigation-item">
+                              User Guide
+                          </a>
+                          <a target="_self" href="/" className="dash-navigation-item">
+                              Plotly
+                          </a>
+                      </div>
+                  </div>
+                </div>
                 <HeroTop>
                     <HeroMessaging>
-                        <div className="dash-logo">
-                            <div className="dash-logo-wrapper">
-                                <img src="/static/images/dash/dash-logo.png" alt="Dash by Plotly"/>
-                            </div>
-                        </div>
                         <HeroTitle>
-                            Easily build beautiful web-based interfaces in&nbsp;Python
+                            Build beautiful web-based interfaces in&nbsp;Python
                         </HeroTitle>
                         <h3>
                             Dash is a Python framework for building analytical
@@ -85,7 +99,7 @@ export default class HeroSection extends React.Component {
                     </HeroMessaging>
 
                     <div className="hero-graphic dash dash-graphic">
-                        <img src="/static/images/dash/dash-hero-visual@2x.png" alt=""/>
+                        <img src="https://now.plot.ly/static/images/dash/dash-hero-visual@2x.png" alt=""/>
                     </div>
 
                 </HeroTop>

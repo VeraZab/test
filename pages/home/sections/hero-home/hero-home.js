@@ -105,7 +105,24 @@ export default class HomeHero extends React.Component {
                     <h3 className="clients-heading">Trusted By</h3>
                     <div className="logos-display">
                         <div className="logos-display-wrapper">
-                            {clients}
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/google-logo.png" />
+                            </div>
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/pg-logo.png" />
+                            </div>
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/vtt-logo.png" />
+                            </div>
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/goji-logo.png" />
+                            </div>
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/smpl-bio-logo.png" />
+                            </div>
+                            <div className="logo-item"><img
+                                src="https://now.plot.ly/static/images/client-logos/shell-logo.png" />
+                            </div>
                         </div>
                     </div>
                 </HeroBottom>

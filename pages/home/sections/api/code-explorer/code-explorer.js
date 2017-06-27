@@ -82,8 +82,8 @@ const languages = [
         slug: 'python',
         language: 'python',
         code: pythonCode,
-        graphic_src: '/static/images/python_graphic.gif',
-        example_url: '/static/images/python_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/python_graphic.gif',
+        example_url: 'https://now.plot.ly/static/images/python_graphic.gif',
         button_text: 'Plotly Python API',
         button_link: 'http://google.com/link'
     },
@@ -93,8 +93,8 @@ const languages = [
         slug: 'r',
         language: 'r',
         code: rCode,
-        graphic_src: '/static/images/r_graphic.gif',
-        example_url: '/static/images/r_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/r_graphic.gif',
+        example_url: 'https://now.plot.ly/static/images/r_graphic.gif',
         button_text: 'Plotly R API',
         button_link: 'http://google.com'
     },
@@ -104,8 +104,8 @@ const languages = [
         slug: 'matlab',
         language: 'matlab',
         code: matlabCode,
-        graphic_src: '/static/images/matlab_graphic.gif',
-        example_url: '/static/images/matlab_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/matlab_graphic.gif',
+        example_url: 'https://now.plot.ly/static/images/matlab_graphic.gif',
         button_text: 'Plotly matlab API',
         button_link: 'http://google.com'
     },
@@ -115,8 +115,8 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: '/static/images/javascript_graphic.gif',
-        example_url: '/static/images/javascript_graphic.gif',
+        graphic_src: 'https://now.plot.ly/static/images/javascript_graphic.gif',
+        example_url: 'https://now.plot.ly/static/images/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'http://google.com'
     }

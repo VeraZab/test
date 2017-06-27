@@ -1,12 +1,12 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
-import Buttons from '../../../components/buttons/buttons';
-import {Browser} from '../../../components/browser/browser';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
+import Buttons from '../../components/buttons/buttons';
+import {Browser} from '../../components/browser/browser';
 
 
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(/static/images/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://now.plot.ly/static/images/hero-pricing@2x.png)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'

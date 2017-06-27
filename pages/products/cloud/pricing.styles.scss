@@ -35,17 +35,17 @@
       &-headers,
       &-bodies,
       &-feature-lists {
-        display: flex;
+        display: block;
         &-wrapper {
           display: flex;
-          flex: 1;
+          flex-grow: 1;
           justify-content: space-between;
           @include global-wrapper;
           align-items: flex-start;
         }
         &-item {
           $width: calc(100%);
-          //flex: 1;
+          //flex-grow: 1;
           max-width: $width;
           width: $width;
           min-width: $width;
@@ -66,16 +66,16 @@
   &-headers,
   &-bodies,
   &-feature-lists {
-    display: flex;
+    display: block;
     &-wrapper {
       display: flex;
-      flex: 1;
+      flex-grow: 1;
       justify-content: space-between;
       @include global-wrapper;
       align-items: flex-start;
     }
     &-item {
-      //flex: 1;
+      //flex-grow: 1;
       $width: calc(33.333% - 10px);
       max-width: $width;
       width: $width;
@@ -118,6 +118,7 @@
       &-message {
         position: absolute;
         top: calc(-230%);
+        left:0;
         z-index: -1;
         width: 100%;
         height: 120px;
@@ -183,20 +184,20 @@
       border-top: 0 !important;
 
       background: white;
-      flex: 1;
+      flex-grow: 1;
       display: flex;
       box-shadow: $drop-shadow-l-light;
       //border:1px solid $color-rhino-medium-2;
       border-top: 0;
       border-bottom: 0;
       &-wrapper {
-        flex: 1;
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         padding: $unit;
       }
       &-content {
-        flex: 1;
+        flex-grow: 1;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -213,7 +214,7 @@
           }
         }
         .price {
-          flex: 1;
+          flex-grow: 1;
           padding: $gutter 0;
           font-size: 3.7rem;
           text-transform: uppercase;
@@ -309,12 +310,12 @@
     }
   }
   .pricing-card-single {
-    flex: 1;
+    flex-grow: 1;
   }
 }
 
 .pricing-card-single {
-  flex: 1;
+  flex-grow: 1;
   width: 25%;
   padding: $unit;
   min-width: 180px;

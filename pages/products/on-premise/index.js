@@ -67,7 +67,7 @@ const onPremDashata = [
 
 const actions = [
     {
-        label: 'Contact Sales',
+        label: 'Request a Demo',
         link: 'https://plotly.typeform.com/to/seG7Vb',
         button: {
             classes: 'button button-primary'
@@ -75,6 +75,17 @@ const actions = [
         target: '_blank'
     }
 ];
+
+const meta = {
+    title: 'Plotly On-Premise and Dash Pricing',
+    description: 'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
+    url: 'https://plot.ly/products/on-premise/',
+    twitter: {
+        label1: 'On-Premise',
+        data1: '$9,950 per year, 5 user license',
+        label2: 'On-Premise + Dash',
+        data2: '$15,950 per year, 5 user license'
+    }};
 
 export default class OnPrem extends React.Component {
     constructor(props) {
@@ -113,7 +124,7 @@ export default class OnPrem extends React.Component {
         };
 
         return (
-            <Layout>
+            <Layout meta={meta}>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <Hero />
                 <ContentSection className="onprem-pricing">

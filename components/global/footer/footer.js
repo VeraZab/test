@@ -3,20 +3,15 @@ import styles from './footer.scss';
 
 const footerData = [
     {
-        label: 'API',
+        label: 'Developers',
         links: [
-            {
-                label: 'API',
-                icon: null,
-                url: 'https://plot.ly/api/'
-            },
             {
                 label: 'Python',
                 icon: null,
                 url: 'https://plot.ly/python/'
             },
             {
-                label: 'R',
+                label: 'R & Shiny',
                 icon: null,
                 url: 'https://plot.ly/r/'
             },
@@ -29,116 +24,116 @@ const footerData = [
                 label: 'Javascript',
                 icon: null,
                 url: 'https://plot.ly/javascript-graphing-library/'
+            },
+            {
+                label: 'REST API',
+                icon: null,
+                url: 'https://api.plot.ly/v2/'
             }
         ]
     },
     {
-        label: 'About Us',
+        label: 'Company',
         links: [
+            {
+                label: 'About',
+                icon: null,
+                url: 'https://plot.ly/company/jobs/'
+            },
             {
                 label: 'Team',
                 icon: null,
                 url: 'https://plot.ly/company/team/'
             },
             {
-                label: 'Careers',
+                label: 'Blog',
                 icon: null,
-                url: 'https://plot.ly/company/jobs/'
-            },
-            {
-                label: 'Plotly Blog',
-                icon: null,
-                url: 'http://blog.plot.ly/'
+                url: 'https://blog.plot.ly/'
             },
             {
                 label: 'Modern Data',
                 icon: null,
-                url: 'http://moderndata.plot.ly/'
+                url: 'https://moderndata.plot.ly/'
+            },
+            {
+                label: 'Industries',
+                icon: null,
+                url: 'https://plot.ly/products/industries/'
+            },
+            {
+                label: 'PLOTCON',
+                icon: null,
+                url: 'https://plotcon.plot.ly/'
             }
         ]
     },
     {
-        label: 'Help',
+        label: 'Resources',
         links: [
             {
-                label: 'Plotly Support',
+                label: 'Developer Support',
                 icon: null,
                 url: 'https://support.plot.ly/'
+            },
+            {
+                label: 'Community Support',
+                icon: null,
+                url: 'https://community.plot.ly/'
             },
             {
                 label: 'Documentation',
                 icon: null,
                 url: 'http://help.plot.ly/'
-            },
+            }
+        ]
+    },
+    {
+        label: 'Data Science',
+        links: [
             {
-                label: 'Plotly vs Tableau',
+                label: 'Dash',
                 icon: null,
-                url: 'https://plot.ly/tableau-alternative/'
+                url: 'https://plot.ly/dash/'
             },
             {
-                label: 'Plotly.js vs Highcharts',
+                label: 'Plotly.js',
                 icon: null,
-                url: 'https://plot.ly/highcharts-alternative/'
+                url: 'https://plot.ly/javascript/'
             },
             {
-                label: 'Dashboard Examples',
+                label: 'Plotly for R & Shiny',
+                icon: null,
+                url: 'https://plot.ly/r/'
+            },
+            {
+                label: 'Plotly for Python',
+                icon: null,
+                url: 'https://plot.ly/python/'
+            }
+        ]
+    },
+    {
+        label: 'Business Intelligence',
+        links: [
+            {
+                label: 'Charts',
+                icon: null,
+                url: 'https://plot.ly/online-chart-maker/'
+            },
+            {
+                label: 'Dashboards',
                 icon: null,
                 url: 'https://plot.ly/dashboards/'
-            }
-        ]
-    },
-    {
-        label: 'Use Cases',
-        links: [
+            },
             {
-                label: 'By Industry',
+                label: 'Slide Decks',
                 icon: null,
-                url: 'https://plot.ly/products/industries/'
+                url: 'https://plot.ly/powerpoint-online/'
             },
             {
-                label: 'Excel Reporting',
+                label: 'Database Connectors',
                 icon: null,
-                url: 'https://images.plot.ly/uses-cases/Excel+Reporting.pdf'
-            },
-            {
-                label: 'Plotly for Dashboards',
-                icon: null,
-                url: 'https://images.plot.ly/uses-cases/Plotly+for+Dashboards.pdf'
-            },
-            {
-                label: 'Ad Hoc Analysis',
-                icon: null,
-                url: 'https://images.plot.ly/uses-cases/Ad+Hoc+Analysis.pdf'
-            }
-        ]
-    },
-    {
-        label: 'Connect',
-        links: [
-            {
-                label: 'Twitter',
-                icon: 'twitter',
-                url: 'https://twitter.com/plotlygraphs'
-            },
-            {
-                label: 'Instagram',
-                icon: 'instagram',
-                url: 'https://instagram.com/_u/plotly'
-            },
-            {
-                label: 'LinkedIn',
-                icon: 'linkedin',
-                url: 'https://linkedin.com/company/plotly'
-            },
-            {
-                label: 'Facebook',
-                icon: 'facebook',
-                url: 'https://www.facebook.com/Plotly'
-            },
-            {
-                label: 'Github',
-                icon: 'github-circle',
-                url: 'https://github.com/plotly'
+                url: 'https://marketing.plot.ly/database-connectors/'
             }
         ]
     }

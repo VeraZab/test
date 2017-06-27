@@ -18,7 +18,14 @@ const contentSectionStyles = {
     paddingTop: '0px'
 };
 const cardBoxStyles = {
-    marginTop: '40px'
+    marginTop: '40px',
+    width: '480px',
+    marginRight: 'auto',
+    marginLeft: 'auto'
+};
+
+const cardsStyles = {
+    display: 'block'
 };
 
 const buttons = [
@@ -116,7 +123,7 @@ export default class Consulting extends React.Component {
                             ensure
                             that your project is a success. Contact us directly to learn more.
                         </p>
-                        <div className="cards">
+                        <div className="cards" style={cardsStyles}>
                             <div className="cards-wrapper center">
                                 <div className="card-simple" style={cardBoxStyles}>
                                     <div className="card-simple-wrapper">

@@ -10,7 +10,7 @@ const defaultMeta = {
     title: 'Visualize Data, Together',
     description: 'Plotly is the modern platform for agile business intelligence and data science.',
     url: 'https://plot.ly',
-    image: '',
+    image: 'https://now.plot.ly/static/images/meta/plotly-og@2x.png',
     tags: [],
     publisher: 'https://www.facebook.com/Plotly/',
     twitter: {
@@ -25,7 +25,7 @@ const defaultMeta = {
 
 export default ({children, meta = defaultMeta}) => (
         <Head>
-            <title>{meta.title ? defaultMeta.sitename + ': ' + meta.title + ' • Make charts and dashboards online ' : defaultMeta.title + ' • Make charts and dashboards online - ' + defaultMeta.sitename}</title>
+            <title>{meta.title ? meta.title : defaultMeta.title + ' • Make charts and dashboards online - ' + defaultMeta.sitename}</title>
             <meta charSet='utf-8'/>
             <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
             <link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
@@ -55,5 +55,6 @@ export default ({children, meta = defaultMeta}) => (
             {meta.twitter && meta.twitter.data2 ? (<meta name="twitter:data2" content={meta.twitter.data2} />) : null}
 
             <meta name="twitter:site" content={defaultMeta.twitter.site} />
+            <link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" />
         </Head>
 )

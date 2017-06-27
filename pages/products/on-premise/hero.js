@@ -4,8 +4,8 @@ import Buttons from '../../../components/buttons/buttons';
 
 const HeroButtons = [
     {
-        label: 'Contact our Sales Team',
-        title: 'See what you can create with Plotly!',
+        label: 'Contact Us',
+        title: 'A Plotly sales engineer will answer any questions you might have.',
         icon: null,
         target: '_blank',
         link: 'https://plotly.typeform.com/to/seG7Vb',
@@ -47,22 +47,22 @@ export default () => (
             <div className="logos-display">
                 <div className="logos-display-wrapper">
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/789677ceae5feefc04eb68e9c4576a2841786d78_google.png" />
+                        src="https://now.plot.ly/static/images/client-logos/google-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/dcebed6ba3f7c0e5c0a25958581beaaf7d8c5fec_pg.png" />
+                        src="https://now.plot.ly/static/images/client-logos/pg-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/4caece2b46bac6d8e824d6db6db9833b17910f13_vtt.png" />
+                        src="https://now.plot.ly/static/images/client-logos/vtt-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/1ea67d8846c42f9d30c60745a38548148fe1f5ff_goji.png" />
+                        src="https://now.plot.ly/static/images/client-logos/goji-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/e023e2380e016f637d01d3d300abe992a1ff2eea_smplbio.png" />
+                        src="https://now.plot.ly/static/images/client-logos/smpl-bio-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/5b700008a45a206c99aabbcedb7984d87e5d7d9a_shell.png" />
+                        src="https://now.plot.ly/static/images/client-logos/shell-logo.png" />
                     </div>
                 </div>
             </div>
