@@ -79,4 +79,5 @@ ehthumbs.db
 Thumbs.db`
 
 out/*
-out
+out.dropbox
+.dropbox
