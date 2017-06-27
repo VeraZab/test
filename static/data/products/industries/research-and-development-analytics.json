@@ -74,6 +74,10 @@
     "title": "Quantum computing research",
     "body": "The Center for Quantum Devices at the University of Copenhagen uses Plotly for instrumentation dashboards and ad-hoc graphing inside IPython Notebooks.<br><a href='http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html'>BAND DIAGRAMS WITH PLOTLY AND PYTHON</a>"
   }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/rnd/blue-robot.jpg",
+    "title": "Autonomous, underwater robot R&D",
+    "body": "Blue Robotics uses Plotly with Excel and Python to graph the motor performance results of their underwater robots. <br><a href='http://www.bluerobotics.com/new-product-3d-printed-open-source-propeller-for-the-m100/'>PLOTLY GRAPHS ON BLUE ROBOTICS BLOG</a>"
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
     "title": "Plotly for research at NYU",
     "body": "New York University has a site-license of Plotly Enterprise available to its research labs, classrooms and faculty at graphs.nyu.edu."
