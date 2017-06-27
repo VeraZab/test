@@ -52,6 +52,10 @@
     "title": "A GUI for D3.js",
     "body": "Everyone knows that D3.js is the gold-standard for interactive graphics on the web. Plotly allows news outlets to rapidly create D3.js graphs without needing programmers, like this one in the Washington Post. <br><br><a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/'>PLOTLY GRAPHS AT THE WASHINGTON POST</a>"
   }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice1.f766900c81a0.jpg",
+    "title": "Graphs optimized for fluid layout and mobile",
+    "body": "Unlike Tableau graphs, Plotly graphs use 100% web-native technologies that display on mobile and respond to fluid layouts. See this article in VICE for example. <br><br><a href='http://www.vice.com/nl/read/deze-man-houdt-alle-moorden-in-de-hoofdstad-bij-161'>MURDER RATE IN VICE NETHERLANDS</a><br><a href='http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic'>SUBREDDIT TOXICITY IN VICE MOTHERBOARD</a>"
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
     "title": "Whitelabel Platforms with Plotly Enterprise",
     "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
