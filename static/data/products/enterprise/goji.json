@@ -9,10 +9,9 @@
     "desc": "Goji combines the personalized, comparison shopping experience of a local agent with the ease and convenience of buying directly from a carrier. We don’t sell or push one brand of insurance — our priority is to find the right company for your particular situation. Our representatives are licensed insurance agents, not salespeople. We’re consultants who tailor each quote to fit your individual needs."
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/customer_stories/goji.761e66d07096.jpg",
-      "label": "Goji"
-    }
-  ],
+    "graphic": "https://plot.ly/static/enterprise/img/customer_stories/goji.761e66d07096.jpg",
+    "label": "Goji"
+  }],
   "sections": [{
       "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-top.ed71212c1dda.jpg",
       "title": "The Big BI killer we'd been waiting for.",
