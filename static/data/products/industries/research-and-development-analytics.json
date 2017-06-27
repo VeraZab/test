@@ -56,7 +56,7 @@
   "sections": [{
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/inefficiencies.ec8b4645506a.svg",
     "title": "Plotly helps make research workflow more efficient by:",
-    "body": "1. Providing an intuitive chart creation and editing web application, saving time spent editing and styling graphs created programatically with Python/MATLAB/R or Excel;"
+    "body": "1. Providing an intuitive chart creation and editing web application, saving time spent editing and styling graphs created programatically with Python/MATLAB/R or Excel;<br><br>2. Centralizing data, graphs, and analyses across an organization;<br><br>3. Providing advanced image export capabilities; and<br><br>4. Making results easily accessible to technical and non-technical audiences through Plotly's Cloud."
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/cpg-stock.639dbce73735.svg",
     "title": "Automating HTML reports of sensor data",
