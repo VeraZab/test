@@ -74,40 +74,28 @@
     "name": "Learn More",
     "links": [{
       "title": "SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
-    }, {
-      "title": "NON-LINEAR REGRESSION ANALYSIS IN THE PLOTLY WEB APP",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
-    }, {
-      "title": "FITTING DATA WITH ERROR BARS",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/survival-analysis-r-vs-python/"
     }, {
       "title": "LATEX TYPESETTING",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
-    }, {
-      "title": "SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
-    }, {
-      "title": "LATEX TYPESETTING",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/LaTeX-basics/"
     }, {
       "title": "CONTINUOUS FILLED ERROR BARS",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/continuous-filled-error-bars/"
     }, {
       "title": "FITTING DATA WITH ERROR BARS",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/fitting-data-with-error-bars-video/"
     }, {
       "title": "REGRESSION ANALYSIS",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/make-a-line-of-best-fit/"
     }, {
       "title": "FITTING DATA TO CUSTOM FUNCTIONS",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/fitting-data-to-custom-functions-video/"
     }, {
       "title": "BASIC STATISTICS MEAN MEDIAN STANDARD DEVIATION",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/basic-statistics-mean-median-standard-deviation/"
     }, {
       "title": "CHI SQUARE TEST",
-      "url": "https://plot.ly/products/industries/pharma-analytics/"
+      "url": "http://help.plot.ly/chi-square-test/"
     }]
   }
 }
