@@ -48,6 +48,10 @@
     "title": "Used by some of the world's largest digital news outlets",
     "body": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
   }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/washingtonpost-plotly.081d7978b0ea.jpg",
+    "title": "A GUI for D3.js",
+    "body": "Everyone knows that D3.js is the gold-standard for interactive graphics on the web. Plotly allows news outlets to rapidly create D3.js graphs without needing programmers, like this one in the Washington Post. <br><br><a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/'>PLOTLY GRAPHS AT THE WASHINGTON POST</a>"
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
     "title": "Whitelabel Platforms with Plotly Enterprise",
     "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
