@@ -193,6 +193,7 @@ export default class OnPrem extends React.Component {
                             </div>
                         </div>
 
+                        <a href="https://moderndata.plot.ly/all-oss-used-in-plotly-cloud-and-plotly-on-premise/" className="center" target="_blank">See all OSS libraries and licenses</a> <br /><br />
 
                         </Body>
                     </ContentPane>
