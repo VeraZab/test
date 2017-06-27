@@ -44,6 +44,10 @@
     "desc": " With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
   }],
   "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone2-content.f2eaa1a57cf6.jpg",
+    "title": "Used by some of the world's largest digital news outlets",
+    "body": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
+  }, {
     "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
     "title": "Whitelabel Platforms with Plotly Enterprise",
     "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
