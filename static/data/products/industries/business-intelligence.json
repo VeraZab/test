@@ -48,8 +48,17 @@
     "body": "Using Plotly Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work."
   }],
   "quotes": [{
+    "author": "- Goji, world's leading provider of automobile insurance",
+    "desc": " Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served. "
+  }, {
+    "author": "- Fernando Perez, creator of IPython notebook and Plotly advisor",
+    "desc": " Real backends like Python and R let companies answer tomorrow's questions instead of recreating yesterday's demo. "
+  }, {
     "author": "- Noel Ledesma, Director of Operations at Likeable Advertising",
     "desc": " Client reporting at Likeable Advertising has always been a very manual process. The team had to download data from our Ad Serving Platform, import it into Excel, and run custom VBA macros to generate each individual Excel report, which would then be emailed to the client every few days. When we found Plot.ly, we were able to completely revamp our reporting process. Using Python, Plotly and Pandas, we created a brand new reporting portal where clients could view up-to-date campaign performance data in beautifully designed, custom dashboards. We were finally able to provide the real-time visibility our clients were asking for without wasting our team's precious time manually generating hundreds of Excel reports each week. "
+  }, {
+    "author": "- Otto Stegmaier, Liftopia",
+    "desc": " At Liftopia, we need to be able to communicate complex data in a clear and understandable manner for our partners. Plotly helps us deliver on this while giving us the ability to collaborate on the visualizations internally and externally. Plotly has absolutely changed the way we communicate with data. "
   }],
   "learnMore": {
     "name": "Learn More",
