@@ -24,7 +24,7 @@
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/automotive/control-design.cefa9c079434.svg",
     "title": "Analyzing sensor and manufacturing data in R and Python",
-    "body": "Plotly's clients for R and Python convert ggplot2 and matplotlib figures to interactive D3.js charts. These documents are the most popular way for data scientists and engineers to share their analysis with the rest of the company."
+    "body": "Plotly's clients for R and Python convert ggplot2 and matplotlib figures to interactive D3.js charts. These documents are the most popular way for data scientists and engineers to share their analysis with the rest of the company. <br><a href='https://plot.ly/ggplot2/'>PLOTLY GGPLOT2 LIBRARY</a><br><a href='https://plot.ly/matplotlib/'>PLOTLY MATPLOTLIB LIBRARY</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/automotive/root-locus.a2918f091d12.jpg",
     "title": "Control design in Python, MATLAB, and Plotly",
