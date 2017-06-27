@@ -37,44 +37,29 @@
   "learnMore": {
     "name": "Learn More",
     "links": [{
-      "title": "PLOTLY PARTNERS WITH DATA.GOV",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
-    }, {
-      "title": "PLOTLY EXPORT PARTNERS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
-    }, {
-      "title": "PRESS RELEASE: PLOTLY AND WHITEHOUSE CLIMATE INITIATIVE",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
-    }, {
-      "title": "PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
-    }, {
-      "title": "BALTIMORE VITAL SIGNS IPYTHON NOTEBOOK",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
-    }, {
       "title": "MAKE A BUBBLE CHART WITH PLOTLY",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://help.plot.ly/make-a-bubble-chart/"
     }, {
       "title": "PLOTLY FOR IPYTHON NOTEBOOKS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/basemap-maps/"
     }, {
       "title": "PLOTLY WITH IPYTHON: BALTIMORE VITAL SIGNS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/baltimore-vital-signs/"
     }, {
       "title": "PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/basemap-maps/"
     }, {
       "title": "PLOTLY PARTNERS WITH DATA.GOV",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://www.data.gov/meta/open-apps/"
     }, {
       "title": "PLOTLY EXPORT PARTNERS",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/export/"
     }, {
       "title": "PLOTLY MAPS IN PYTHON",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/python/#maps"
     }, {
       "title": "REFORM THINK TANK PLOTLY PROFILE",
-      "url": "https://plot.ly/products/industries/government-and-public-analytics/"
+      "url": "http://plot.ly/~reformthinktank/"
     }]
   }
 }
