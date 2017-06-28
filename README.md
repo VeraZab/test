@@ -2,10 +2,31 @@
 
 This repo is running a stack of next.js and scss. Most things are contained in their own components in a modular way.
 
-## Components and Ecosystem
-One of the main reasons we are using `next.js` and React is to take advantage of the modular nature of the framework. The site should be built up of smaller, reusable modules / components.
+## Sitemap
 
-We are also moving towards a place where things can be shared within the various projects we have at plotly by staying within the ecosystem of React.
+***Ready / live***
+- https://now.plot.ly/
+- https://now.plot.ly/products/cloud/
+- https://now.plot.ly/products/on-premise/
+- https://now.plot.ly/products/consulting-and-oem/
+- https://now.plot.ly/products/dash/
+- https://now.plot.ly/online-chart-maker/
+- https://now.plot.ly/dashboards/
+- https://now.plot.ly/powerpoint-online/
+- https://now.plot.ly/database-connectors/
+
+***still being worked on***
+- https://now.plot.ly/plotly-js-scientific-d3-charting-library/
+- https://now.plot.ly/d3-js-for-r-and-shiny-charts/
+- https://now.plot.ly/d3-js-for-python-and-pandas-charts/
+
+***still being worked on (not merged into master yet)***
+- https://plotly-next-twaiypqqzi.now.sh/products/industries/*
+- https://plotly-next-twaiypqqzi.now.sh/products/enterprise/customer-stories/*
+
+***future (not started)***
+- https://now.plot.ly/company/team/
+- https://now.plot.ly/company/jobs/
 
 ## Development
 
