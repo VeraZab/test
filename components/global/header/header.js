@@ -7,9 +7,11 @@ import Navigation from './navigation/navigation';
 
 Router.onRouteChangeStart = (url) => {
     // console.log(`Loading: ${url}`);
-    NProgress.start()
+    NProgress.start();
 };
-Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeComplete = () => {
+    NProgress.done();
+};
 Router.onRouteChangeError = () => NProgress.done();
 
 class Header extends React.Component {

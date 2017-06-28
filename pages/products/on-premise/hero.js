@@ -8,6 +8,7 @@ const HeroButtons = [
         title: 'A Plotly sales engineer will answer any questions you might have.',
         icon: null,
         target: '_blank',
+        typeform: true,
         link: 'https://plotly.typeform.com/to/seG7Vb',
         button: {
             classes: 'button button-primary'
@@ -47,22 +48,22 @@ export default () => (
             <div className="logos-display">
                 <div className="logos-display-wrapper">
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/google-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/google-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/pg-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/pg-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/vtt-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/vtt-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/goji-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/goji-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/smpl-bio-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/smpl-bio-logo.png" />
                     </div>
                     <div className="logo-item"><img
-                        src="https://now.plot.ly/static/images/client-logos/shell-logo.png" />
+                        src="https://images.plot.ly/static/marketing/client-logos/shell-logo.png" />
                     </div>
                 </div>
             </div>

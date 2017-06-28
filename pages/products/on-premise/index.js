@@ -85,7 +85,8 @@ const meta = {
         data1: '$9,950 per year, 5 user license',
         label2: 'On-Premise + Dash',
         data2: '$15,950 per year, 5 user license'
-    }};
+    }
+};
 
 export default class OnPrem extends React.Component {
     constructor(props) {
@@ -93,7 +94,18 @@ export default class OnPrem extends React.Component {
     }
 
     componentDidMount() {
-
+        (function () {
+            let qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
+                gt = d.getElementsByTagName, id = "typef_orm_share",
+                b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q)
+            }
+        })();
     }
 
     render() {
@@ -146,7 +158,7 @@ export default class OnPrem extends React.Component {
                                                     <span className="usd">$</span>9,950
                                                 </div>
                                             </div>
-                                            <div class="details">per year, <strong>
+                                            <div className="details">per year, <strong>
                                                 5 User License </strong></div>
                                         </div>
                                         <Buttons items={actions}
@@ -160,7 +172,6 @@ export default class OnPrem extends React.Component {
                                 </div>
 
                             </div>
-
 
 
                             <div className="pricing-card-single full-width">
@@ -177,7 +188,7 @@ export default class OnPrem extends React.Component {
                                                     <span className="usd">$</span>15,950
                                                 </div>
                                             </div>
-                                            <div class="details">per year, <strong>
+                                            <div className="details">per year, <strong>
                                                 5 User License </strong></div>
 
                                         </div>
@@ -192,9 +203,47 @@ export default class OnPrem extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        </Body>
+                    </ContentPane>
+                </ContentSection>
+                <ContentSection>
+                    <ContentPane half center-vertically text>
+                        <div className="pre-title">
+                            Support Open-Source
+                        </div>
+                        <Title>
+                            Built on the Shoulders of Giants
+                        </Title>
+                        <Body>
+                        <p>
+                            Plotly On-Premise is built on a foundation of open-source libraries that are constantly
+                            improving. To name a few:
+                        </p>
 
+                        <ul className="body-list blue">
+                            <li><a href="https://github.com/d3" target="_blank">D3.js</a> ⟶ SVG graphics</li>
+                            <li><a href="https://github.com/sheetjs" target="_blank">SheetJS</a> ⟶ Excel file parsing
+                            </li>
+                            <li><a href="https://github.com/handsontable" target="_blank">Handsontable</a> ⟶ Online
+                                spreadsheet editor
+                            </li>
+                            <li><a href="https://facebook.github.io/react/" target="_blank">React</a> ⟶ Facebook's
+                                library for UI building
+                            </li>
+                            <li><a href="https://github.com/plotly/plotly.js" target="_blank">Plotly.js</a> ⟶
+                                Performance charting library
+                            </li>
+                        </ul>
+
+                        <a href="https://moderndata.plot.ly/all-oss-used-in-plotly-cloud-and-plotly-on-premise/"
+                           className="center" target="_blank">See all OSS libraries and licenses</a>
 
                         </Body>
+                    </ContentPane>
+                    <ContentPane half graphic center-vertically>
+
+                        <Graphic link="https://moderndata.plot.ly/all-oss-used-in-plotly-cloud-and-plotly-on-premise/"
+                                 image="https://plot.ly/static/enterprise/img/alternatives/videos/3d.c876ca23cc00.jpg"/>
                     </ContentPane>
                 </ContentSection>
             </Layout>

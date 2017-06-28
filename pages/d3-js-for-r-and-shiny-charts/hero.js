@@ -1,6 +1,6 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
-import Buttons from '../../../components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
+import Buttons from '../../components/buttons/buttons';
 import Head from 'next/head';
 import CodeExplorer from './code-explorer/code-explorer';
 
@@ -52,10 +52,10 @@ export default () => (
         <HeroTop>
             <HeroMessaging>
                 <HeroTitle>
-                    Plotly.js
+                    Plotly for R and Shiny
                 </HeroTitle>
                 <HeroSubtitle>
-                    D3.js charting for science, engineering, and finance.
+                    Open-source R interface D3-powered Plotly.js
                 </HeroSubtitle>
 
             </HeroMessaging>

@@ -7,7 +7,7 @@ const HeroStyles = {
 };
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images-hoshi.nationalmachine.co/ineffable/uploads/9e5acef340ac4cc67905594162ebc8b4/consulting-header-bg.png)',
+    backgroundImage: 'url(https://images.plot.ly/static/marketing/consulting-header-bg.png)',
     backgroundSize: '1640px',
     backgroundPosition: 'center bottom',
     backgroundRepeat: 'no-repeat'
