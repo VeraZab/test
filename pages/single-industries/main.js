@@ -33,29 +33,15 @@ class IndustriesMain extends React.Component {
         )
     }) : null;
 
-    const quoteItemOne = (data.quotes[0]) ?
-    <ContentSection>
-        <ContentPane full center-vertically text center>
-            <Title>
-                "{data.quotes[0].desc}"
-            </Title>
-            <Body>
-            <p>{data.quotes[0].author}</p>
-            </Body>
-        </ContentPane>
-    </ContentSection> : null;
+    const quoteItemOne = this.getQuoteWithIndexFromData(0, data);
 
-    const quoteItemTwo = (data.quotes[1]) ?
-    <ContentSection className="background-color-light-2">
-        <ContentPane full center-vertically text center>
-            <Title>
-                "{data.quotes[1].desc}"
-            </Title>
-            <Body>
-            <p>{data.quotes[1].author}</p>
-            </Body>
-        </ContentPane>
-    </ContentSection> : null;
+    const quoteItemTwo = this.getQuoteWithIndexFromData(1, data);
+
+    const quoteItemThree = this.getQuoteWithIndexFromData(2, data)
+
+    const quoteItemFour = this.getQuoteWithIndexFromData(3, data);
+
+    const quoteItemFive = this.getQuoteWithIndexFromData(4, data);
 
     const sectionItems = (data.sections) ?
     data.sections.map( (section, key)=> {
@@ -115,9 +101,29 @@ class IndustriesMain extends React.Component {
 
       {quoteItemTwo}
 
+      {quoteItemThree}
+
+      {quoteItemFour}
+
+      {quoteItemFive}
+
       {learnMoreItems}
     </div>
     )
+  }
+
+  getQuoteWithIndexFromData(index, data) {
+    const contentSectionClass = (index % 2) ? 'background-color-light-2' : '';
+    return (data.quotes[index]) ? <ContentSection className={contentSectionClass}>
+        <ContentPane full center-vertically text center>
+            <Title>
+                "{data.quotes[index].desc}"
+            </Title>
+            <Body>
+            <p>{data.quotes[index].author}</p>
+            </Body>
+        </ContentPane>
+    </ContentSection> : null;
   }
 }
 

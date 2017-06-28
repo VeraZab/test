@@ -31,70 +31,78 @@
     "label": "Sponsor"
   }],
   "sections": [{
-    "image": "https://plot.ly/static/enterprise/img/industries/logos-bi-arrows.9f73d8aec1fc.png",
+    "image": "/static/images/industries/business-intelligence/bi-stack.png",
     "title": "The New BI Stack for Data Scientists",
-    "body": "Data scientists share the results to the rest of their company through Plotly's best-in-class visualization tools and social platform."
+    "body": ""
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-map.4035329bb571.jpg",
+    "title": "The Future of BI",
+    "body": "The top performing BI teams prefer nimble scripting languages like Python or R over expensive point-and-click GUI tools. Read this customer story on Goji for more on how to deploy Plotly for business intelligence. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/business/open-large-deals.e7b4a4d9abbe.svg",
     "title": "Analyze Salesforce data in IPython notebook",
-    "body": "Scripting languages like R and Python that can read from both databases and APIs are the new cutting edge of business intelligence. This IPython notebook uses the Salesforce and Plotly Python clients to analyze sales performance."
+    "body": "Scripting languages like R and Python that can read from both databases and APIs are the new cutting edge of business intelligence. This IPython notebook uses the Salesforce and Plotly Python clients to analyze sales performance. <br><br><a href='http://plot.ly/ipython-notebooks/salesforce/'>VIEW DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/business/event-sales-day-category.0a235471894c.jpg",
     "title": "Analyzing Redshift data in IPython notebook",
-    "body": "Bill Chambers, a graduate student at UC Berkeley's iSchool, uses the AWS Python API and Plotly to download, plot, and analyze data stored in Amazon Redshift. See the IPython notebook linked below."
+    "body": "Bill Chambers, a graduate student at UC Berkeley's iSchool, uses the AWS Python API and Plotly to download, plot, and analyze data stored in Amazon Redshift. See the IPython notebook linked below. <br><br><a href='http://plot.ly/ipython-notebooks/amazon-redshift/'>IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-plots.43ca02583fba.jpg",
     "title": "Live-streaming dashboards on mobile, tablet, or laptop",
-    "body": "Using Plotly Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work."
+    "body": "Using Plotly Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/business/liftopia.e01711954c03.svg",
+    "title": "Analyzing lift ticket sales with IPython notebook and Plotly",
+    "body": "Liftopia uses Plotly, IPython notebook, and Pandas to track lift ticket sales at various ski resorts. <br><br><a href='http://plot.ly/ipython-notebooks/#business-intelligence'>PLOTLY IPYTHON NOTEBOOKS - BUSINESS INTELLIGENCE</a>"
   }],
   "quotes": [{
+    "author": "- Goji, world's leading provider of automobile insurance",
+    "desc": " Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served. "
+  }, {
+    "author": "- Fernando Perez, creator of IPython notebook and Plotly advisor",
+    "desc": " Real backends like Python and R let companies answer tomorrow's questions instead of recreating yesterday's demo. "
+  }, {
     "author": "- Noel Ledesma, Director of Operations at Likeable Advertising",
     "desc": " Client reporting at Likeable Advertising has always been a very manual process. The team had to download data from our Ad Serving Platform, import it into Excel, and run custom VBA macros to generate each individual Excel report, which would then be emailed to the client every few days. When we found Plot.ly, we were able to completely revamp our reporting process. Using Python, Plotly and Pandas, we created a brand new reporting portal where clients could view up-to-date campaign performance data in beautifully designed, custom dashboards. We were finally able to provide the real-time visibility our clients were asking for without wasting our team's precious time manually generating hundreds of Excel reports each week. "
+  }, {
+    "author": "- Otto Stegmaier, Liftopia",
+    "desc": " At Liftopia, we need to be able to communicate complex data in a clear and understandable manner for our partners. Plotly helps us deliver on this while giving us the ability to collaborate on the visualizations internally and externally. Plotly has absolutely changed the way we communicate with data. "
   }],
   "learnMore": {
     "name": "Learn More",
     "links": [{
       "title": "GOJI CUSTOMER STORY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "VIEW DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
-    }, {
-      "title": "GOJI CUSTOMER STORY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "https://plot.ly/products/enterprise/customer-stories/goji/"
     }, {
       "title": "DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/salesforce/"
     }, {
       "title": "PLOTTING SPARK DATAFRAMES WITH PLOTLY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/apache-spark/"
     }, {
       "title": "BIG DATA ANALYTICS WITH PANDAS AND SQLITE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/big-data-analytics-with-pandas-and-sqlite/"
     }, {
       "title": "R, PYTHON, MATLAB, & EXCEL DASHBOARDS & GRAPHS WITH D3.JS & WEBGL",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
     }, {
       "title": "PLOTLY IPYTHON NOTEBOOKS - BUSINESS INTELLIGENCE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/#business-intelligence"
     }, {
       "title": "IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://plot.ly/ipython-notebooks/amazon-redshift/"
     }, {
       "title": "DASH ON GITHUB",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://github.com/chriddyp/dash/"
     }, {
       "title": "GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
     }, {
       "title": "UPDATE PLOTLY CHARTS WITH CRON JOBS AND PYTHON",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/"
     }, {
       "title": "CREATE A PLOTLY DASHBOARD IN UNDER 10 MINUTES",
-      "url": "https://plot.ly/products/industries/business-intelligence-analytics/"
+      "url": "http://moderndata.plot.ly/create-a-plotly-dashboards-in-under-10-minutes/"
     }]
   }
 }

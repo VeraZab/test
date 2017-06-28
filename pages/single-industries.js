@@ -26,8 +26,6 @@ export default class extends React.Component {
         <IndustriesHero header={data.header} />
         <IndustriesMain mainData={data} />
         <IndustriesRequestDemo />
-
-        {console.log(this.props)}
       </Layout>
     )
   }
