@@ -110,15 +110,14 @@ if __name__ == '__main__':
     app.run_server()`;
 
 
-
-
 import React from "react";
 
 class DashMain extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentDidMount(){
+
+    componentDidMount() {
         (function () {
             let qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
                 gt = d.getElementsByTagName, id = "typef_orm_share",
@@ -144,7 +143,8 @@ class DashMain extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            Before dash, apps like these would require an entire team of engineers and designers to create.
+                            Before dash, apps like these would require an entire team of engineers and designers to
+                            create.
                         </p>
                         <CodeExplorer></CodeExplorer>
                         </Body>
@@ -153,7 +153,8 @@ class DashMain extends React.Component {
                 <ContentSection className="dash-section-features-thirds">
                     <ContentPane thirds center-vertically>
                         <div className="icon">
-                            <img src="https://images.plot.ly/static/marketing/dash/lightweight-icon.png" alt="Dash is Lightweight"/>
+                            <img src="https://images.plot.ly/static/marketing/dash/lightweight-icon.png"
+                                 alt="Dash is Lightweight"/>
                         </div>
                         <div className="title">
                             Lightweight
@@ -333,7 +334,8 @@ class DashMain extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            We’re strong believers that the future of technical computing and business intelligence is open
+                            We’re strong believers that the future of technical computing and business intelligence is
+                            open
                             source. Dash is MIT licensed. Run Dash on your desktop environment for free.
                         </p>
                         <p>
@@ -351,8 +353,6 @@ class DashMain extends React.Component {
                         </Body>
                     </ContentPane>
                 </ContentSection>
-
-
                 <ContentSection className="dash-section-more-details">
                     <ContentPane full center-vertically center text>
                         <Body>
@@ -378,7 +378,7 @@ class DashMain extends React.Component {
                                         <p>
                                             Dash On-Premise handles all of the hard
                                             parts about managing apps for you:
-                                            deployingment, managing updates,
+                                            deployment, managing updates,
                                             error handling, URL routing, LDAP integration,
                                             and more.
                                             Deploy and share an app behind your
@@ -386,10 +386,11 @@ class DashMain extends React.Component {
                                         </p>
                                     </div>
                                     <div className="card-action">
-                                        <a className="typeform-share link card-action-link" href="https://plotly.typeform.com/to/seG7Vb"
+                                        <a className="typeform-share link card-action-link"
+                                           href="https://plotly.typeform.com/to/seG7Vb"
                                            data-mode="drawer_right"
                                            data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="2"
-                                           target="_blank">Request a Demo →</a>                                    </div>
+                                           target="_blank">Request a Demo →</a></div>
                                 </div>
                             </div>
                             <div className="card card-with-image">
@@ -411,7 +412,8 @@ class DashMain extends React.Component {
                                         </p>
                                     </div>
                                     <div className="card-action">
-                                        <a className="typeform-share link card-action-link" href="https://plotly.typeform.com/to/seG7Vb"
+                                        <a className="typeform-share link card-action-link"
+                                           href="https://plotly.typeform.com/to/seG7Vb"
                                            data-mode="drawer_right"
                                            data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="2"
                                            target="_blank">Request a Demo →</a>
