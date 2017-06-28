@@ -17,6 +17,10 @@ export default () => (
                 notebook, or optionally host your work on Plotly Cloud or Plotly On-Premise. Hosting Plotly charts
                 online allows developers and data scientists to collaborate effortlessly with analysts who do not
                 code.</p>
+            </Body>
+        </ContentPane>
+        <ContentPane full center center-vertically>
+            <Body>
             <CodeExplorer />
             </Body>
         </ContentPane>

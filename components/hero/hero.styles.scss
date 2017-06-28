@@ -144,6 +144,10 @@
     &-wrapper {
       //display: flex;
       //justify-content: center;
+
+      .browser{
+        max-width:800px;
+      }
     }
     padding-bottom: $gutter;
     padding-top: $gutter*4;

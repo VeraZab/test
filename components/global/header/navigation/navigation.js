@@ -128,6 +128,17 @@ const navigationRight = [
 const navigationLeft = [
     {
         id: 4,
+        label: 'Dash',
+        slug: 'dash',
+        title: 'See all of our pricing options.',
+        icon: null,
+        target: '_self',
+        link: '/products/dash/',
+        button: null,
+        submenu: null
+    },
+    {
+        id: 4,
         label: 'Pricing',
         slug: 'pricing',
         title: 'See all of our pricing options.',
@@ -203,15 +214,6 @@ const navigationLeft = [
                             icon: 'dashboards',
                             target: '_self',
                             link: '/dashboards/'
-                        },
-                        {
-                            id: 10,
-                            label: 'Dash',
-                            slug: 'dash',
-                            title: 'Explore the Plotly Chart Maker.',
-                            icon: null,
-                            target: '_self',
-                            link: '/products/dash/'
                         },
                         {
                             id: 8,

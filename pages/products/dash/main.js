@@ -359,9 +359,9 @@ class DashMain extends React.Component {
                         <div className="cards stories">
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
-                                    <div className="card-image"
+                                    <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-sharing.png")'}}>
-                                        <div className="card-image-label">
+                                        <div className="card-image-label" style={{width: '100%'}}>
                                             Dash On-Premise Deployment
                                         </div>
                                     </div>
@@ -394,10 +394,10 @@ class DashMain extends React.Component {
                             </div>
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
-                                    <div className="card-image"
+                                    <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-portal.png")'}}>
-                                        <div className="card-image-label">
-                                            Dash On-Premise App Portal
+                                        <div className="card-image-label" style={{width: '100%'}}>
+                                            Dash On-Premise<br/>App Portal
                                         </div>
                                     </div>
                                     <div className="card-body">

@@ -156,8 +156,10 @@
     }
 
     &.sixy-five{
-      width: 65%;
-      @include handheld {
+      @include desktop{
+        width: 65%;
+      }
+      @include tablet {
         width: 100%;
       }
 
@@ -168,9 +170,16 @@
       }
     }
     &.thirty-five{
-      width: 35%;
-      @include handheld {
+     @include desktop{
+       width: 35%;
+     }
+      @include tablet {
         width: 100%;
+        padding:0 $gutter;
+        padding-right:20%;
+      }
+      @include handheld{
+        padding:0 $gutter;
       }
     }
 
@@ -252,6 +261,7 @@
         }
       }
       &-center-vertically {
+        align-items: center;
         @at-root & .content-section-pane-wrapper {
           justify-content: center;
         }

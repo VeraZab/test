@@ -39,7 +39,6 @@ const HeroButtons = [
 ];
 
 const HeroStyles = {
-    background: 'linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important'
 
 };
 

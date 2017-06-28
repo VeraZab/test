@@ -56,106 +56,106 @@ export default () => (
             </Body>
         </ContentPane>
         <ContentPane half graphic center-vertically className="sixy-five">
-<div className="grids">
+            <div className="grids">
 
-    <div className="grid grid-3x3">
-        <div className="grid-item">
-            <div className="card center
+                <div className="grid grid-3x3">
+                    <div className="grid-item">
+                        <div className="card center
                                 card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/datasets.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        Datasets
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/datasets.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    Datasets
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div className="grid-item">
-            <div className="card center
+                    <div className="grid-item">
+                        <div className="card center
                                 card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/dashboards.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        D3.js Dashboards
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/dashboards.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    D3.js Dashboards
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div className="grid-item">
-            <div className="card center
+                    <div className="grid-item">
+                        <div className="card center
                                 card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/charts.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        D3.js Charts
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/charts.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    D3.js Charts
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div className="grid grid-3x3">
-        <div className="grid-item">
-            <div className="card center
+                <div className="grid grid-3x3">
+                    <div className="grid-item">
+                        <div className="card center
                                 card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/dbconnector.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        SQL Queries
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/dbconnector.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    SQL Queries
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div className="grid-item">
-            <div className="card center
+                    <div className="grid-item">
+                        <div className="card center
                                 card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/spectacle.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        Slide Decks
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/spectacle.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    Slide Decks
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="grid-item">
+                        <div className="card center
+                                card-simple">
+                            <div className="card-image">
+                                <img
+                                    src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/notebook.svg"
+                                    alt=""/>
+                            </div>
+                            <div className="card-label">
+                                <div className="card-label-text">
+                                    Jupyter Notebooks
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div className="grid-item">
-            <div className="card center
-                                card-simple">
-                <div className="card-image">
-                    <img
-                        src="https://marketing.plot.ly/static/marketing/assets/images/filetype-icons/notebook.svg"
-                        alt=""/>
-                </div>
-                <div className="card-label">
-                    <div className="card-label-text">
-                        Jupyter Notebooks
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
             <Buttons className="gutter-top center" items={buttons}/>
         </ContentPane>
     </ContentSection>

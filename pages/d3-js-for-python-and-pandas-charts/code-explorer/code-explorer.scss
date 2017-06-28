@@ -2,9 +2,6 @@
 @import "hljs";
 
 .code-explorer {
-  @include media('<=960px'){
-   transform: translateY(40px)
-  }
   &-wrapper {
     display: flex;
     border-radius: $unit/2;
@@ -12,57 +9,23 @@
     @include handheld{
       flex-direction: column;
     }
-    @include media('<=960px'){
-      flex-direction: column;
-    }
 
   }
   &-graphic {
     width: 100%;
-   flex: 1;
+    min-height: 500px !important;
+
     @include desktop{
+     width: 500px;
      max-width: 500px;
    }
-
-    @include media('<=1100px'){
-      max-width:400px;
-    }
-    @include media('<=960px'){
-      max-width:100%;
-      width: 100%;
-      min-height:0px !important;
-    }
     background: white;
     display: flex;
     &-wrapper {
       flex: 1;
       width: 100%;
-      background-size:contain !important;
+      background-size:cover !important;
       background-position: center center;
-      background-repeat: no-repeat;
-      display: flex;
-
-      &.desktop-graphic{
-        @include media('<=960px'){
-          display: none !important;
-        }
-      }
-
-      &.mobile-graphic{
-        @include media('>960px'){
-          display: none !important;
-        }
-      }
-      iframe{
-        height:640px;
-        width: 100%;
-        border: 0;
-        overflow: hidden;
-
-        #my-graph{
-          height:400px !important;
-        }
-      }
     }
     img {
       min-width: 100%;
@@ -70,26 +33,20 @@
   }
 
   &-editor {
-    pre{
-      float: none !important;
-    }
+
     background-color: $color-rhino-core;
     padding: $gutter;
+    //flex: 1;
+    //width: 75%;
     width: calc(100% - 500px);
-    @include media('<=1100px'){
-      width: calc(100% - 400px);
-    }
-    @include media('<=960px'){
-      width: 100%;
-    }
-    //display: flex;
-    //flex-direction: column;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     @include handheld{
       width: 100%;
     }
     &-wrapper {
-      //display: flex;
+      display: flex;
       flex-direction: column;
       flex: 1;
     }
@@ -135,6 +92,9 @@
           margin-right:0;
         }
         min-width: 40%;
+        //width: 50%;
+        //min-width:
+        // flex40%;
       }
 
       &:not(.active) {
@@ -201,9 +161,8 @@
     &-content {
       position: relative;
       max-width: 100%;
-      //min-height: 600px;
-      height: 600px;
-      //max-height: 600px;
+      min-height: 400px;
+      max-height: 400px;
       overflow: auto;
       flex: 1;
 
@@ -226,9 +185,6 @@
 
       }
 
-      &::-webkit-scrollbar-corner {
-        background: #1E304E !important;
-      }
       pre {
         //max-width: 300px;
         overflow: visible !important;
