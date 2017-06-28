@@ -127,7 +127,7 @@ const navigationRight = [
 ;
 const navigationLeft = [
     {
-        id: 4,
+        id: 12,
         label: 'Dash',
         slug: 'dash',
         title: 'See all of our pricing options.',
@@ -433,8 +433,6 @@ export default class Navigation extends React.Component {
             }
 
             // Now let's build the nav item with submenu
-
-
             if (item.button) {
                 return (
                     <div className='nav-item--with-submenu nav-item-button not-mobile' key={item.id}>
@@ -465,7 +463,7 @@ export default class Navigation extends React.Component {
                         <div title={item.title} className='nav-item-wrapper'>
                             <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
                                 <div className='nav-item-label-text'>
-                                    {item.label}
+                                    {item.label} <small className="down-arrow">▼</small>
                                 </div>
                             </div>
                         </div>

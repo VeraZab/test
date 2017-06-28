@@ -13,8 +13,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'apple'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://images.plot.ly/spectacle-editor/Spectacle.Editor-0.1.4.dmg',
             button: {
                 classes: 'button button-primary'
             }
@@ -27,8 +27,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'windows'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://images.plot.ly/spectacle-editor/Spectacle.Editor.Setup.0.1.4.exe',
             button: {
                 classes: 'button button-primary'
             }

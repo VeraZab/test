@@ -13,8 +13,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'apple'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.0.2/mac-plotly-database-connector.dmg',
             button: {
                 classes: 'button button-primary'
             }
@@ -27,8 +27,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'windows'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.0.2/windows-plotly-database-connector.zip',
             button: {
                 classes: 'button button-primary'
             }

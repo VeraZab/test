@@ -94,7 +94,7 @@
   &-primary {
     background: $color-button-default;
     box-shadow: $drop-shadow;
-    .button-label {
+    .button-label, .button-icon{
       color: white !important;
       text-shadow: $text-shadow-default;
     }
@@ -115,6 +115,9 @@
     box-shadow: $drop-shadow;
     color: white !important;
     text-shadow: $text-shadow-default;
+    .button-label, .button-icon{
+      color: white !important;
+    }
     &:hover {
       background: lighten($color-emerald, 8%);
       cursor: pointer;
@@ -174,6 +177,10 @@
       }
       &:active {
         background: #07ACA3;
+      }
+      .button-label, .button-icon{
+        color: white !important;
+        text-shadow: $text-shadow-default;
       }
     }
     &-white {

@@ -96,7 +96,7 @@ export default class HomeHero extends React.Component {
                     <HeroActions>
                         <Buttons items={HeroButtons}/>
                         <div className="footnote">
-                            <p>* Billed annually. Discounted pricing for students and instructors <a href="http://#">available</a>.
+                            <p>* Billed annually. Discounted pricing for students and instructors <a href="/products/cloud/">available</a>.
                             </p>
                         </div>
                     </HeroActions>

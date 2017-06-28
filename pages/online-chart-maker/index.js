@@ -14,7 +14,7 @@ const buttons = [
             title: 'See what you can create with Plotly!',
             icon: null,
             target: '_self',
-            link: '/create',
+            link: '/products/consulting-and-oem/',
             button: {
                 classes: 'button button-small button-secondary'
             }
@@ -36,8 +36,8 @@ const buttons = [
             label: 'Documentation',
             title: 'See what you can create with Plotly!',
             icon: null,
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://help.plot.ly/tutorials/',
             button: {
                 classes: 'button button-small button-secondary'
             }

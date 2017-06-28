@@ -16,10 +16,10 @@ const buttons = [
     {
         label: 'See all of our plans',
         subtitle: null,
-        title: 'Explore the Plotly Chart Maker',
+        title: 'Get started now, pick a plan later.',
         icon: null,
-        target: '_blank',
-        link: 'https://plot.ly/create/',
+        target: '_self',
+        link: '/products/cloud/',
         button: {
             classes: 'button button-primary'
         }
@@ -27,10 +27,10 @@ const buttons = [
     {
         label: 'View our on-premise plans',
         subtitle: null,
-        title: 'Explore the Plotly Chart Maker',
+        title: 'Safe and secure, behind your firewall',
         icon: null,
-        target: '_blank',
-        link: 'https://plot.ly/create/',
+        target: '_self',
+        link: '/products/on-premise/',
         button: {
             classes: 'button button-secondary'
         }

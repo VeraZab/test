@@ -22,8 +22,8 @@ const HeroButtons = [
             label: 'Documentation',
             title: 'See what you can create with Plotly!',
             icon: null,
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://help.plot.ly/tutorials/#dashboard',
             button: {
                 classes: 'button button-secondary'
             }
