@@ -56,19 +56,27 @@
   "sections": [{
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/inefficiencies.ec8b4645506a.svg",
     "title": "Plotly helps make research workflow more efficient by:",
-    "body": "1. Providing an intuitive chart creation and editing web application, saving time spent editing and styling graphs created programatically with Python/MATLAB/R or Excel;"
+    "body": "1. Providing an intuitive chart creation and editing web application, saving time spent editing and styling graphs created programatically with Python/MATLAB/R or Excel;<br><br>2. Centralizing data, graphs, and analyses across an organization;<br><br>3. Providing advanced image export capabilities; and<br><br>4. Making results easily accessible to technical and non-technical audiences through Plotly's Cloud.<br><br><a href='https://plot.ly/~Grondo/42/'>Chart</a><br><a href='https://plot.ly/~Grondo'>Grondo</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/cpg-stock.639dbce73735.svg",
     "title": "Automating HTML reports of sensor data",
-    "body": "The Advanced Technologies and Projects team at Google uses Plotly Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Plotly Enterprise for further exploration and pdf download."
+    "body": "<b>The Advanced Technologies and Projects team at Google</b> uses Plotly Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Plotly Enterprise for further exploration and pdf download. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/batteries.a5eef04b70a6.jpg",
     "title": "Liquid metal batteries for utility-scale storage",
-    "body": "Ambri uses Plotly Enterprise with Research Box to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with RStudio and Excel to generate client cost saving curves for Ambri commercial deployments."
+    "body": "<b>Ambri</b> uses <b>Plotly Enterprise with Research Box</b> to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with <b>RStudio</b> and <b>Excel</b> to generate client cost saving curves for Ambri commercial deployments."
+  },{
+    "image": "https://plot.ly/static/enterprise/img/industries/rnd/memory.afeafe30f544.gif",
+    "title": "Collaboration and institutional memory for IPython notebook",
+    "body": "Dr. Pekka's team at VTT Finland uses IPython notebook and Plotly to share data and build institutional memory within the research group. The creator of IPython sits on Plotly's advisory board and helps steer Plotly's Python client development. <br><a href='https://plot.ly/products/enterprise/customer-stories/vtt-finland/'>VTT CASE STUDY</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/rnd/quantum-computing.cd585862e042.png",
     "title": "Quantum computing research",
-    "body": "The Center for Quantum Devices at the University of Copenhagen uses Plotly for instrumentation dashboards and ad-hoc graphing inside IPython Notebooks."
+    "body": "The Center for Quantum Devices at the University of Copenhagen uses Plotly for instrumentation dashboards and ad-hoc graphing inside IPython Notebooks.<br><a href='http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html'>BAND DIAGRAMS WITH PLOTLY AND PYTHON</a>"
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/rnd/blue-robot.jpg",
+    "title": "Autonomous, underwater robot R&D",
+    "body": "Blue Robotics uses Plotly with Excel and Python to graph the motor performance results of their underwater robots. <br><a href='http://www.bluerobotics.com/new-product-3d-printed-open-source-propeller-for-the-m100/'>PLOTLY GRAPHS ON BLUE ROBOTICS BLOG</a>"
   }, {
     "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
     "title": "Plotly for research at NYU",
@@ -77,27 +85,27 @@
   "quotes": [{
     "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. ",
     "author": "- Dana Guernsey, Director of Corporate Development at Ambri"
+  }, {
+    "desc": " The Plotly Enterprise solution also acts as a corporate memory and it is extremely easy to reuse plots and embed them into any web content. ",
+    "author": "- Dr. Pekka, VTT senior scientist"
+  }, {
+    "desc": " Using Plotly lets our customers quickly visualize key performance data while allowing them to closely inspect the data as well. That's a huge advantage over static plots for us. ",
+    "author": "- Rustom Jehangir, Co-Founder and Engineer at Blue Robotics Inc"
   }],
   "learnMore": {
     "name": "Learn More",
     "links": [{
-      "title": "VTT CASE STUDY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
-    }, {
-      "title": "BAND DIAGRAMS WITH PLOTLY AND PYTHON",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
-    }, {
       "title": "GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
     }, {
       "title": "VTT CASE STUDY",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "https://plot.ly/products/enterprise/customer-stories/vtt-finland/"
     }, {
       "title": "BAND DIAGRAMS WITH PLOTLY AND PYTHON",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html"
     }, {
       "title": "PLOTLY GRAPHS ON BLUE ROBOTICS BLOG",
-      "url": "https://plot.ly/products/industries/research-and-development-analytics/"
+      "url": "http://www.bluerobotics.com/new-product-3d-printed-open-source-propeller-for-the-m100/"
     }]
   }
 }

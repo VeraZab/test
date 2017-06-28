@@ -37,6 +37,10 @@
     "image": "https://plot.ly/static/enterprise/img/industries/pharma/dendogram2.966c3f31f02e.png",
     "title": "Scientific-grade graphs and dashboard tools",
     "body": "Plotly has unparalleled capability when it comes to importing data from MATLAB, R, Excel, and other formats popular in the life sciences. Create and work independently with different graph layers, combine them into composite graphs, and export for print or web publication in any image format."
+  }, {
+    "image": "https://plot.ly/static/enterprise/img/industries/pharma/turtles.jpg",
+    "title": "Monitoring sea turtle migrations with Plotly and MATLAB",
+    "body": "Project Leatherback analyzes data from sensors attached to migrating sea turtles in MATLAB, then publishes the results with Plotly."
   }],
   "quotes": [{
     "author": "- Chris Rivest, Lifecode CEO",
