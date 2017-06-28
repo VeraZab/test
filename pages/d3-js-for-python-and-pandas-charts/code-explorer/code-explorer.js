@@ -1,4 +1,4 @@
-import styles from './code-explorer.scss';
+import styles from '../../../components/code-explorer/code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 

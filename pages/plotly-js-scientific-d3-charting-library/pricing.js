@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../cloud/pricing.styles.scss';
-import Buttons from '../../../components/buttons/buttons';
+import styles from '../products/cloud/pricing.styles.scss';
+import Buttons from '../../components/buttons/buttons';
 
 const pricingLevels = [
     {
@@ -9,15 +9,15 @@ const pricingLevels = [
         price: {
             monthly: '499',
             annually: '396',
-            frequency: 'one-time purchase',
+            frequency: 'per year',
             users: 'per developer'
         },
         actions: [
             {
-                label: 'Purchase',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                label: 'Contact Us',
+                link: 'https://plotly.typeform.com/to/seG7Vb',
                 button: {
-                    classes: 'button button-primary'
+                    classes: 'button button-primary typeform-share'
                 },
                 target: '_blank'
             }
@@ -51,10 +51,10 @@ const pricingLevels = [
         },
         actions: [
             {
-                label: 'Purchase',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                label: 'Contact Us',
+                link: 'https://plotly.typeform.com/to/seG7Vb',
                 button: {
-                    classes: 'button button-primary'
+                    classes: 'button button-primary typeform-share'
                 },
                 target: '_blank'
             }
@@ -70,15 +70,15 @@ const pricingLevels = [
         price: {
             monthly: '19,500',
             annually: null,
-            frequency: 'one-time purchase',
+            frequency: 'per year',
             users: 'per team'
         },
         actions: [
             {
-                label: 'Purchase',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                label: 'Contact Us',
+                link: 'https://plotly.typeform.com/to/seG7Vb',
                 button: {
-                    classes: 'button button-primary'
+                    classes: 'button button-primary typeform-share'
                 },
                 target: '_blank'
             }
@@ -109,7 +109,18 @@ export default class PricingDetails extends React.Component {
     }
 
     componentDidMount() {
-
+        (function () {
+            let qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
+                gt = d.getElementsByTagName, id = "typef_orm_share",
+                b = "https://embed.typeform.com/";
+            if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q)
+            }
+        })();
     }
 
     render() {

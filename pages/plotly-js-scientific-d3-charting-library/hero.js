@@ -1,46 +1,39 @@
 import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
 import Buttons from '../../components/buttons/buttons';
+import {ClientLogos} from '../../components/global/client-logos/client-logos';
+import Head from 'next/head';
+import CodeExplorer from './code-explorer/code-explorer';
 
 const HeroButtons = [
     [
 
+
         {
-            label: 'Documentation',
-            title: 'See what you can create with Plotly!',
-            icon: {
-                type: 'mdi',
-                src: 'page'
-            },
-            target: '_self',
-            link: '/create',
-            button: {
-                classes: 'button button-secondary'
-            }
-        },
-        {
-            label: 'Request an Integration',
-            title: 'See what you can create with Plotly!',
+            label: 'Custom Development',
+            title: 'Advanced Development',
             icon: null,
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: '/products/consulting-and-oem/',
             button: {
                 classes: 'button button-primary'
             }
         },
         {
-            label: 'Contribute',
-            title: 'See what you can create with Plotly!',
-            icon: null,
-            target: '_self',
-            link: '/create',
+            label: 'Documentation',
+            title: '',
+            icon: {
+                type: 'mdi',
+                src: 'page'
+            },
+            target: '_blank',
+            link: 'https://plot.ly/javascript/',
             button: {
                 classes: 'button button-secondary'
             }
         }
 
-    ],
-    []
+    ]
 ];
 
 const HeroWrapperStyle = {
@@ -51,8 +44,8 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-    paddingBottom: '0px',
-    paddingTop: '100px'
+    paddingBottom: '80px',
+    paddingTop: '40px'
 };
 
 export default () => (
@@ -63,16 +56,24 @@ export default () => (
                     Plotly.js
                 </HeroTitle>
                 <HeroSubtitle>
-                    An MIT licensed, D3.js and WebGL charting library for science, engineering, and finance.
+                    D3.js charting for science, engineering, and finance.
                 </HeroSubtitle>
 
             </HeroMessaging>
             <HeroActions>
                 <Buttons items={HeroButtons[0]}/>
+                <div className="githubStar">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=plotly&repo=plotly.js&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                </div>
+                <div className="not-mobile">
+                    <CodeExplorer/>
+                </div>
             </HeroActions>
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
-
+            <ClientLogos />
         </HeroBottom>
+
+
     </Hero>
 )
