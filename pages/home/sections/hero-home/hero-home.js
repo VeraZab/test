@@ -22,14 +22,14 @@ const HeroButtons = [
         label: 'Try Community Edition',
         title: 'See what you can create with Plotly!',
         icon: null,
-        target: '_self',
-        link: '/products/cloud/',
+        target: '_blank',
+        link: 'https://plot.ly/accounts/login/?action=signup',
         button: {
             classes: 'button button-secondary'
         }
     },
     {
-        label: 'Buy now for $33/mo<sup>*</sup>',
+        label: 'See Plans + Pricing',
         title: 'See what you can create with Plotly!',
         icon: null,
         target: '_self',
@@ -67,10 +67,6 @@ export default class HomeHero extends React.Component {
                     </HeroMessaging>
                     <HeroActions>
                         <Buttons items={HeroButtons}/>
-                        <div className="footnote">
-                            <p>* Billed annually. Discounted pricing for students and instructors <a href="/products/cloud/">available</a>.
-                            </p>
-                        </div>
                     </HeroActions>
                 </HeroTop>
                 <HeroBottom>
