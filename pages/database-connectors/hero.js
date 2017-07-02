@@ -32,6 +32,16 @@ const HeroButtons = [
             button: {
                 classes: 'button button-primary'
             }
+        },
+        {
+            label: 'Documentation',
+            title: 'See what you can create with Plotly\'s Database Connector!',
+            icon: null,
+            target: '_blank',
+            link: 'https://help.plot.ly/database-connectors/',
+            button: {
+                classes: 'button button-secondary'
+            }
         }
     ],
     []

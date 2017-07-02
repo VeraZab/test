@@ -48,16 +48,16 @@ const onPremDashata = [
                 value: 'Email and Phone Support'
             },
             {
-                value: 'Unlimited Applications'
+                value: 'Unlimited Dash Applications'
             },
             {
-                value: 'Unlimited Viewers'
+                value: 'Unlimited Dash App Viewers'
             },
             {
-                value: 'Automatic Git based Deployment'
+                value: 'Automatic Git Based Deployments of Dash Apps'
             },
             {
-                value: "Snapshot Application Views"
+                value: "Shareable “Snapshot Views” of Dash Apps"
             }
         ],
 

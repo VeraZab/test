@@ -40,6 +40,11 @@ const HeroButtons = [
     }
 ];
 
+const HeroBottomStyles = {
+    paddingBottom: '0px',
+    paddingTop: '180px'
+};
+
 
 export default class HomeHero extends React.Component {
 
@@ -62,14 +67,14 @@ export default class HomeHero extends React.Component {
                             Visualize Data, Together
                         </HeroTitle>
                         <HeroSubtitle>
-                            Plotly is a data visualization platform for clickers and coders alike.
+                            Plotly is <em>the</em> modern platform for agile business intelligence and data science.
                         </HeroSubtitle>
                     </HeroMessaging>
                     <HeroActions>
                         <Buttons items={HeroButtons}/>
                     </HeroActions>
                 </HeroTop>
-                <HeroBottom>
+                <HeroBottom style={HeroBottomStyles}>
                     <h3 className="clients-heading">Trusted By</h3>
                     <ClientLogos />
                 </HeroBottom>

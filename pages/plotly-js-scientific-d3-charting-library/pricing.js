@@ -264,7 +264,7 @@ export default class PricingDetails extends React.Component {
         };
 
         return (
-            <div className="pricing-cards">
+            <div className="pricing-cards thirds">
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
 
                 <div className="pricing-cards-wrapper pricing-cards-mobile mobile-only">

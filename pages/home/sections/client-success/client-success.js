@@ -39,7 +39,7 @@ export default () => (
                 </p>
               </div>
               <div className="card-action">
-                <a className="card-action-link" href="#">Read Full Story →</a>
+                <a className="card-action-link" href="https://plot.ly/products/enterprise/customer-stories/goji/" target="_blank">Read Full Story →</a>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default () => (
                 </p>
               </div>
               <div className="card-action">
-                <a className="card-action-link" href="#">Read Full Story →</a>
+                <a className="card-action-link" href="https://plot.ly/products/enterprise/customer-stories/c12-energy/" target="_blank">Read Full Story →</a>
               </div>
             </div>
           </div>

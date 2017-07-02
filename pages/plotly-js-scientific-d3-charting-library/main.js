@@ -102,13 +102,13 @@ export default () => (
                 <Title>
                     Learn how we can work together
                     <div className="buttons center">
-                        <div className="button button-primary">
+                        <a className="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb">
                             <div className="button-wrapper">
                                 <div className="button-label">
-                                    Request a Callback
+                                    Request a Demo
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </Title>
                 <Body>

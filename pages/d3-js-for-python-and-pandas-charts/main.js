@@ -7,13 +7,35 @@ import {
     Graphic
 } from '../../components/content-section/content-section';
 
+
 export default () => (
     <div>
+        <ContentSection >
 
+            <ContentPane half center-vertically text>
+                <div className="pre-title">
+                    Plotly for Python and Pandas
+                </div>
+                <Title>
+                    Features and Benefits
+                </Title>
+                <Body>
+                <ul className="hero-list">
+                    <li>Every chart that matplotlib or MATLAB graphics can do.</li>
+                    <li>Interactive charts and maps out-of-the-box.</li>
+                    <li>Get started working offline.</li>
+                    <li>Optional hosted sharing platform through <a href="/products/on-premise/" target="_blank">Plotly On-Premise</a> or <a href="/products/cloud/" target="_blank">Plotly Cloud</a>.</li>
+                </ul>
+                </Body>
+            </ContentPane>
+            <ContentPane half graphic>
+                <Graphic image="https://images.plot.ly/static/marketing/chart_graphic.png" />
+            </ContentPane>
+        </ContentSection>
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                         image="https://images.plot.ly/static/marketing/chart_graphic.png"/>
+                         image="https://images.plot.ly/static/marketing/product/world-class.png"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -28,6 +50,7 @@ export default () => (
                     Python. Plotly charts and dashboards can be easily styled in Python, or uploaded to Plotly’s online
                     editor for point-&-click styling and collaboration.
                 </p>
+
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -48,7 +71,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://plot.ly/static/enterprise/img/alternatives/highcharts/share.a9caa353cef7.jpg"/>
+                    image="https://images.plot.ly/static/marketing/product/map_styles.gif"/>
             </ContentPane>
         </ContentSection>
 
@@ -146,6 +169,8 @@ export default () => (
                     For code-free collaboration, Python charts and dashboards can also be shared with Tableau and Excel
                     users through Plotly On-Premise and Plotly Cloud.
                 </p>
+                <p><a href="/products/cloud/">Plotly Cloud</a><br />
+                    <a href="/products/on-premise/">Plotly On-Premise</a></p>
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -157,7 +182,7 @@ export default () => (
                 <Body>
                 <p>
                     Plotly for Python has first-class support for all of your favorite Python tools and IDEs - including
-                    Dash, nteract.io,, and Jupyter notebook.
+                    Dash, nteract.io, and Jupyter notebook.
                 </p>
                 <p>
                     Upload your Jupyter notebooks to Plotly for secure, collaborative sharing of your Python code.
@@ -166,7 +191,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic shadow="false"
-                         image="https://cloud.githubusercontent.com/assets/836375/18421299/d95ad398-783b-11e6-8b23-d54cf7caad1e.png"/>
+                         image="https://images.plot.ly/static/marketing/product/jupyter-notebooks-small.png"/>
             </ContentPane>
         </ContentSection>
         <ContentSection className="request-callback-section">
@@ -178,13 +203,13 @@ export default () => (
                 <Title>
                     Learn how we can work together
                     <div className="buttons center gutter-top">
-                        <div className="button button-primary">
+                        <a className="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb">
                             <div className="button-wrapper">
                                 <div className="button-label">
-                                    Request a Callback
+                                    Request a Demo
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </Title>
                 <Body>
