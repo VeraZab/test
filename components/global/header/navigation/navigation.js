@@ -244,8 +244,8 @@ const navigationLeft = [
                             slug: 'plotly-js',
                             title: 'The open source JavaScript graphing library that powers Plotly',
                             icon: 'js',
-                            target: '_blank',
-                            link: 'https://plot.ly/javascript/'
+                            target: '_self',
+                            link: '/plotly-js-scientific-d3-charting-library/'
                         },
                         {
                             id: 12,
@@ -253,8 +253,8 @@ const navigationLeft = [
                             slug: 'plotly-for-python',
                             title: "Plotly's Python graphing library makes interactive, publication-quality graphs online.",
                             icon: 'python',
-                            target: '_blank',
-                            link: 'https://plot.ly/python/'
+                            target: '_self',
+                            link: '/d3-js-for-python-and-pandas-charts'
                         },
                         {
                             id: 13,
@@ -262,8 +262,8 @@ const navigationLeft = [
                             slug: 'plotly-for-r',
                             title: "Plotly's R graphing library makes interactive, publication-quality graphs online.",
                             icon: 'r',
-                            target: '_blank',
-                            link: 'https://plot.ly/r/'
+                            target: '_self',
+                            link: '/d3-js-for-r-and-shiny-charts/'
                         },
                         {
                             id: 14,

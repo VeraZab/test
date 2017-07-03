@@ -70,10 +70,12 @@
       &-feature-lists {
 
         &-item {
-          $width: calc(33.333333% - 10px);
-          max-width: $width;
-          width: $width;
-          min-width: $width;
+          @include desktop{
+            $width: calc(33.333333% - 10px);
+            max-width: $width;
+            width: $width;
+            min-width: $width;
+          }
 
         }
       }

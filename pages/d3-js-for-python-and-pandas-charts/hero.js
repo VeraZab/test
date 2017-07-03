@@ -13,7 +13,7 @@ const HeroButtons = [
             title: 'See what you can create with Plotly!',
             icon: null,
             target: '_self',
-            link: '/create',
+            link: '/products/consulting-and-oem/',
             button: {
                 classes: 'button button-primary'
             }
@@ -22,8 +22,8 @@ const HeroButtons = [
             label: 'Developer Support Plans',
             title: 'See what you can create with Plotly!',
             icon: null,
-            target: '_self',
-            link: '/create',
+            target: '_target',
+            link: 'https://support.plot.ly/plans',
             button: {
                 classes: 'button button-primary'
             }
@@ -35,8 +35,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'page'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://plot.ly/python/',
             button: {
                 classes: 'button button-secondary'
             }
