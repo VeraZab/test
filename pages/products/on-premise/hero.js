@@ -36,8 +36,8 @@ export default () => (
                 <HeroTitle>
                     Safe and secure, behind your firewall
                 </HeroTitle>
-                <HeroSubtitle>
-                    Plotly On Premise provides the best of both worlds: web based collaboration and sharing
+                <HeroSubtitle className="wider-subtitle">
+                    Plotly On-Premise provides the best of both worlds: web based collaboration and sharing
                     capabilities with data and visualizations that never leave your corporate environment.
                 </HeroSubtitle>
             </HeroMessaging>

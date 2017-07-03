@@ -138,7 +138,9 @@ export default class OnPrem extends React.Component {
         return (
             <Layout meta={meta}>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
-                <Hero />
+                <div className="on-prem-pricing">
+                    <Hero />
+                </div>
                 <ContentSection className="onprem-pricing">
                     <ContentPane full center center-vertically text>
                         <Body>
