@@ -13,9 +13,10 @@ import Buttons from '../../../components/buttons/buttons';
 import styles from '../cloud/pricing.styles.scss';
 const onPremData = [
     {
-        features: [{
+        features: [
+            {
             value: 'Includes everything in the <strong>Professional Plotly Plan</strong>'
-        },
+            },
             {
                 value: 'Email and Phone Support'
             },

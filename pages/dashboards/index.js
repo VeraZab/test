@@ -3,7 +3,10 @@ import Hero from './hero';
 import Main from './main';
 
 const meta = {
-    title: 'Online Dashboards'
+    title: 'Online Dashboards',
+    descrtiption: 'Create branded, online dashboards with D3.js Plotly charts.',
+    url: 'https://plot.ly/dashboards/'
+
 };
 
 export default () => (

@@ -5,9 +5,9 @@ import {ContentSection, ContentPane, Title, Body} from '../../../components/cont
 import Buttons from '../../../components/buttons/buttons';
 import {Grid, GridItem} from '../../../components/grid/grid';
 const meta = {
-    title: 'Advanced Development • Plotly',
+    title: 'Advanced Development',
     description: "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",
-    image: '',
+    url: 'https://plot.ly/consulting-and-oem/',
     twitter: {
         label1: 'Services Offered',
         data1: 'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.'

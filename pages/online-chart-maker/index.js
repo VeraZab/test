@@ -5,7 +5,9 @@ import Buttons from '../../components/buttons/buttons';
 import {Grid, GridItem} from '../../components/grid/grid';
 
 const meta = {
-    title: 'Powerpoint Online'
+    title: 'Online Chart Maker',
+    descrtiption: 'Create D3.js charts online for business, science, engineering, OEM, and journalism.',
+    url: 'https://plot.ly/online-chart-maker/'
 };
 const buttons = [
     [
