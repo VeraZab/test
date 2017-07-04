@@ -60,7 +60,7 @@ export default () => (
 
                 <div className="grid grid-3x3">
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="#" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -72,11 +72,11 @@ export default () => (
                                     Datasets
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="/dashboards/" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -88,11 +88,11 @@ export default () => (
                                     D3.js Dashboards
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="/online-chart-maker/" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -104,12 +104,12 @@ export default () => (
                                     D3.js Charts
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div className="grid grid-3x3">
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="/database-connectors/" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -121,11 +121,11 @@ export default () => (
                                     SQL Queries
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="/powerpoint-online/" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -137,10 +137,10 @@ export default () => (
                                     Slide Decks
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="grid-item">
-                        <div className="card center
+                        <a href="https://plot.ly/~empet/14352" target="_blank" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -152,7 +152,7 @@ export default () => (
                                     Jupyter Notebooks
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -67,7 +67,7 @@ export default class HomeHero extends React.Component {
                             Visualize Data, Together
                         </HeroTitle>
                         <HeroSubtitle>
-                            Plotly is <em>the</em> modern platform for agile business intelligence and data science.
+                            Plotly let’s users easily create interactive charts and dashboards to share online with their audience.
                         </HeroSubtitle>
                     </HeroMessaging>
                     <HeroActions>
