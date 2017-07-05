@@ -14,8 +14,6 @@ This repo is running a stack of next.js and scss. Most things are contained in t
 - https://now.plot.ly/dashboards/
 - https://now.plot.ly/powerpoint-online/
 - https://now.plot.ly/database-connectors/
-
-***still being worked on***
 - https://now.plot.ly/plotly-js-scientific-d3-charting-library/
 - https://now.plot.ly/d3-js-for-r-and-shiny-charts/
 - https://now.plot.ly/d3-js-for-python-and-pandas-charts/
@@ -23,10 +21,6 @@ This repo is running a stack of next.js and scss. Most things are contained in t
 ***still being worked on (not merged into master yet)***
 - https://plotly-next-twaiypqqzi.now.sh/products/industries/*
 - https://plotly-next-twaiypqqzi.now.sh/products/enterprise/customer-stories/*
-
-***future (not started)***
-- https://now.plot.ly/company/team/
-- https://now.plot.ly/company/jobs/
 
 ## Development
 
