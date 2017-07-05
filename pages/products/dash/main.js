@@ -278,7 +278,7 @@ class DashMain extends React.Component {
                         <p>
                             This Dash App is branded just like a Goldman Sachs report
                             through the use of custom CSS. It includes a
-                            "Print to PDF" button and is formatted to great on the web
+                            "Print to PDF" button and is formatted to look great on both the web
                             and in PDF form. On the web version, the charts are
                             interactive.
                         </p>
