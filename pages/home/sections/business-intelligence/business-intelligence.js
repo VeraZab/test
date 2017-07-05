@@ -60,7 +60,7 @@ export default () => (
 
                 <div className="grid grid-3x3">
                     <div className="grid-item">
-                        <a href="#" className="card center
+                        <a href="https://plot.ly/organize/home?create=grid" className="card center
                                 card-simple">
                             <div className="card-image">
                                 <img
@@ -69,7 +69,7 @@ export default () => (
                             </div>
                             <div className="card-label">
                                 <div className="card-label-text">
-                                    Datasets
+                                    Data Sets
                                 </div>
                             </div>
                         </a>

@@ -40,6 +40,16 @@ const navigationRight = [
                                 link: 'https://plot.ly/dashboard/create'
                             },
                             {
+                                id: 20,
+                                label: 'Dash App',
+                                slug: 'dash-app',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://images.plot.ly/static/marketing/icons/create/ic_dash_app_18.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: '/products/dash/'
+                            },
+                            {
                                 id: 8,
                                 label: 'Slide Deck',
                                 slug: 'presentations',
@@ -61,8 +71,8 @@ const navigationRight = [
                             },
                             {
                                 id: 10,
-                                label: 'Dataset',
-                                slug: 'database-connectors',
+                                label: 'Data Set',
+                                slug: 'data-set',
                                 title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dataset.2c1316a036ab.svg',
                                 icon_type: 'img',
