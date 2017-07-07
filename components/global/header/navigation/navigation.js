@@ -249,6 +249,15 @@ const navigationLeft = [
                     label: 'Data Science and Open-Source',
                     items: [
                         {
+                            id: 14,
+                            label: 'Dash',
+                            slug: 'dash',
+                            title: 'Build beautiful web-based interfaces in Python.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/dash/'
+                        },
+                        {
                             id: 11,
                             label: 'Plotly.js',
                             slug: 'plotly-js',
@@ -274,15 +283,6 @@ const navigationLeft = [
                             icon: 'r',
                             target: '_self',
                             link: '/d3-js-for-r-and-shiny-charts/'
-                        },
-                        {
-                            id: 14,
-                            label: 'Plotly for MATLAB',
-                            slug: 'plotly-for-matlab',
-                            title: 'Plotly brings interactive, online graphing to your MATLAB console.',
-                            icon: 'matlab',
-                            target: '_blank',
-                            link: 'https://plot.ly/matlab/'
                         }
                     ]
 

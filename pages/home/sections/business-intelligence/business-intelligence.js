@@ -44,15 +44,10 @@ export default () => (
                 Business Intelligence
             </div>
             <Title>
-                Plotly's agile BI platform
-                lets you create and share everything you need:
+                Plotly's agile BI platform lets you create and share everything you need.
             </Title>
             <Body>
-            <p>Plotly Charts are fundamentally tied to their underlying data.</p>
-            <p>As charts are shared and data changes hands through your organization, Plotly tracks how that
-                data transforms. Think of it as GitHub for data.</p>
-            <p>As a cloud platform, Plotly is the only business intelligence solution to provide heavily audited
-                industries with fine-grained information on data provenance.</p>
+            <p>Plotly offers unlimited public file hosting through its free community&nbsp;plan. With paid plans, you can host unlimited private files on Plotly’s&nbsp;platform.</p>
             </Body>
         </ContentPane>
         <ContentPane half graphic center-vertically className="sixy-five">

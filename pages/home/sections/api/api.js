@@ -6,11 +6,12 @@ const oemButton = [
     {
         label: 'Inquire about an Oem',
         title: 'Find out how we can work together.',
+        typeform: true,
         icon: null,
         target: '_blank',
         link: 'https://plotly.typeform.com/to/mH1Cpb',
         button: {
-            classes: 'button button-primary'
+            classes: 'button button-primary typeform-share'
         }
     }
 ];
@@ -26,7 +27,7 @@ export default () => (
                     The fastest growing charting libraries for R, Python, and Javascript
                 </Title>
                 <Body>
-                <p>Plotly's open-source, interactive charting libraries for R, Python, and Javascript are the fastest
+                <p>Plotly's open-source, interactive charting libraries for R, Python, and JavaScript are the fastest
                     growing charting libraries in each language. Work entirely offline in IDEs like RStudio or Jupyter
                     notebook, or optionally host your work on Plotly Cloud or Plotly On-Premise. Hosting Plotly charts
                     online allows developers and data scientists to collaborate effortlessly with analysts who do not
@@ -61,7 +62,6 @@ export default () => (
                 </Body>
             </ContentPane>
             <ContentPane half graphic center-vertically>
-
             </ContentPane>
         </ContentSection>
     </div>
