@@ -307,4 +307,7 @@
 
 .cards.stories {
   justify-content: space-between;
+  @include media('<=1060px'){
+    justify-content: center;
+  }
 }

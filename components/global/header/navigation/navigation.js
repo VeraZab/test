@@ -129,7 +129,7 @@ const navigationRight = [
             target: '_blank',
             link: 'https://plotly.typeform.com/to/seG7Vb',
             button: {
-                classes: 'button button-small button-secondary typeform-share'
+                classes: 'button button-small button-secondary typeform-share not-tablet'
             },
             submenu: null
         }

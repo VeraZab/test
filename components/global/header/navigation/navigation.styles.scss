@@ -5,6 +5,17 @@
     width: 100%;
     display: flex;
     flex-grow: 1;
+
+    .not-tablet, .not-mobile{
+      @include media("<=1150px") {
+        display: none;
+      }
+    }
+    .not-tablet{
+      @include media("<=1055px") {
+        display: block;
+      }
+    }
   }
   &-navigation-wrapper {
     flex-grow: 1;
@@ -442,3 +453,4 @@ small.down-arrow {
     display: none;
   }
 }
+

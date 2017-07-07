@@ -147,13 +147,13 @@
       @include media("<=1250px") {
         transform:translateX(140px);
       }
-      @include media("<=1150px") {
-        transform:translateX(270px);
+      @include media("<=950px") {
+        //transform:translateX(270px);
         background-position: 80% 36%;
       }
       @include media("<=900px") {
-        transform:translateX(270px);
-        background-position: 80% 36%;
+        transform:translateX(170px);
+        background-position: 0% 6%;
       }
       @include media("<=800px") {
         display: none;
@@ -161,9 +161,9 @@
 
     }
 
-    @include media("<=1150px") {
+    @include media("<=1060px") {
       .content-section-pane-wrapper{
-        padding-right:200px !important;
+        padding-right:35% !important;
       }
     }
 
