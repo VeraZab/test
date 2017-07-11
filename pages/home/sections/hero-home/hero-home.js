@@ -67,7 +67,7 @@ export default class HomeHero extends React.Component {
                             Visualize Data, Together
                         </HeroTitle>
                         <HeroSubtitle>
-                            Plotly let’s users easily create interactive charts and dashboards to share online with their audience.
+                            Plotly lets users easily create interactive charts and dashboards to share online with their audience.
                         </HeroSubtitle>
                     </HeroMessaging>
                     <HeroActions>
