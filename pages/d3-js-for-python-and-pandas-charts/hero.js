@@ -1,19 +1,29 @@
 import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
 import Buttons from '../../components/buttons/buttons';
-import {Browser} from '../../components/browser/browser';
+import Head from 'next/head';
+import CodeExplorer from './code-explorer/code-explorer';
 
 const HeroButtons = [
     [
+
+
         {
-            label: 'Create a Dashboard',
+            label: 'Custom Development',
             title: 'See what you can create with Plotly!',
-            icon: {
-                type: 'mdi',
-                src: 'plus'
-            },
+            icon: null,
             target: '_self',
-            link: '/create',
+            link: '/products/consulting-and-oem/',
+            button: {
+                classes: 'button button-primary'
+            }
+        },
+        {
+            label: 'Developer Support Plans',
+            title: 'See what you can create with Plotly!',
+            icon: null,
+            target: '_target',
+            link: 'https://support.plot.ly/plans',
             button: {
                 classes: 'button button-primary'
             }
@@ -21,16 +31,16 @@ const HeroButtons = [
         {
             label: 'Documentation',
             title: 'See what you can create with Plotly!',
-            icon: null,
+            icon: {
+                type: 'mdi',
+                src: 'page'
+            },
             target: '_blank',
-            link: 'https://help.plot.ly/tutorials/#dashboard',
+            link: 'https://plot.ly/python/',
             button: {
                 classes: 'button button-secondary'
             }
         }
-    ],
-    [
-
 
     ]
 ];
@@ -43,8 +53,8 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-    paddingBottom: '0px',
-    paddingTop: '20px'
+    paddingBottom: '60px',
+    paddingTop: '0px'
 };
 
 export default () => (
@@ -52,21 +62,25 @@ export default () => (
         <HeroTop>
             <HeroMessaging>
                 <HeroTitle>
-                    Plotly Dashboards
+                    Plotly for Python
                 </HeroTitle>
                 <HeroSubtitle>
-                    Create branded, online dashboards with D3.js Plotly charts.
+                    Open-source Python interface to D3-powered Plotly.js
                 </HeroSubtitle>
+
             </HeroMessaging>
             <HeroActions>
                 <Buttons items={HeroButtons[0]}/>
-                <Buttons items={HeroButtons[1]}/>
+                <div className="githubStar">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=plotly&repo=plotly.py&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                </div>
+                <CodeExplorer/>
             </HeroActions>
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
-            <Browser>
-                <img src='http://marketing.plot.ly/static/marketing/assets/images/dashboards.png'/>
-            </Browser>
+
         </HeroBottom>
+
+
     </Hero>
 )

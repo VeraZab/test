@@ -5,9 +5,11 @@ import SupportBanner from '../../../components/cta-banner/static/support/support
 
 const meta = {
     title: 'Pricing and Plans',
+    description: 'Plotly is free to use for public charts and dashboards. Collaborate on unlimited private charts and dashboards with a paid plan.',
+    url: 'https://plot.ly/products/cloud/',
     twitter: {
         label1: 'Most Popular Plan',
-        data1: 'Plotly Professional @ $79/mo'
+        data1: 'Plotly Professional @ $948/year'
     }
 };
 

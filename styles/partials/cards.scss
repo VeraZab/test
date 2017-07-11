@@ -31,14 +31,16 @@
   }
   &-image {
     position: relative;
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(-180deg, rgba(9,30,65,0.00) 40%, #081D3F 100%);
+    &.dark-fade{
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-180deg, rgba(9,30,65,0.00) 40%, #081D3F 100%);
+      }
     }
   }
 }
@@ -305,4 +307,7 @@
 
 .cards.stories {
   justify-content: space-between;
+  @include media('<=1060px'){
+    justify-content: center;
+  }
 }

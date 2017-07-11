@@ -5,6 +5,17 @@
     width: 100%;
     display: flex;
     flex-grow: 1;
+
+    .not-tablet, .not-mobile{
+      @include media("<=1150px") {
+        display: none;
+      }
+    }
+    .not-tablet{
+      @include media("<=1055px") {
+        display: block;
+      }
+    }
   }
   &-navigation-wrapper {
     flex-grow: 1;
@@ -90,6 +101,32 @@
     &-wrapper {
       flex-grow: 1;
       display: flex;
+
+      & > .nav-item{
+
+        &:hover{
+          &::before {
+            //transform: scale(1);
+          }
+        }
+        &::before {
+          $width: 20px;
+          border-radius: 3px;
+          content: '';
+          position: absolute;
+          bottom: 16px;
+          height: 3px;
+          background: $color-rhino-dark;
+          opacity:0.5;
+          width: $width;
+          left: 50%;
+          margin-left:-$width/2;
+          transition: $transition;
+          transform: scale(0);
+          display: block !important;
+          transform-origin: center;
+        }
+      }
     }
   }
 
@@ -107,11 +144,23 @@
     }
   }
 
+
+
   &-item {
     display: flex;
-
     color: $color-rhino-dark;
     position: relative;
+
+    &:hover {
+     & > .nav-item-wrapper > .nav-item-label > .nav-item-label-text {
+        color: $color-dodger !important;
+      }
+      &::after {
+        @include tablet-up {
+          transform: scale(1);
+        }
+      }
+    }
 
     &.active {
       .nav-item-label-text {
@@ -137,6 +186,8 @@
       font-weight: bold;
       letter-spacing: 1px;
       padding: 0 $unit*1.5;
+      position: relative;
+
 
     }
     &-label {
@@ -148,27 +199,13 @@
       white-space: nowrap;
       @extend %font-smoothing;
 
-
       &-text {
         transition: $transition;
       }
-      &::after {
-        @include tablet-up {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          height: 3px;
-          background: $color-dodger;
-          width: 100%;
-          left: 0;
-          transition: $transition;
-          transform: scale(0);
-          transform-origin: center;
-        }
-      }
+
     }
 
-    a{
+    a {
       white-space: nowrap;
     }
 
@@ -185,7 +222,7 @@
     }
 
     // Transform label text on active state
-    & > .nav-item-wrapper {
+    & > a.nav-item-wrapper {
       &:active {
         .nav-item-label-text {
           @include active-state-transform;
@@ -199,33 +236,33 @@
     &--with-submenu {
       position: relative;
 
-      &.nav-item-button{
-        height:$header-height;
+      &.nav-item-button {
+        height: $header-height;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right:$unit;
+        margin-right: $unit;
 
-        &.not-mobile{
-          @include media('<=1060px'){
+        &.not-mobile {
+          @include media('<=1060px') {
             display: none !important;
           }
         }
 
-        .nav-item-icon{
-          margin-right:8px;
-          flex-shrink:0;
+        .nav-item-icon {
+          margin-right: 8px;
+          flex-shrink: 0;
         }
       }
 
-      &.button{
+      &.button {
         //margin:$gutter 0;
-        .nav-item-submenu{
-          top:29px;
-          margin-top:$gutter;
+        .nav-item-submenu {
+          top: 29px;
+          margin-top: $gutter;
 
-          .nav-item-label-text{
-            font-size:16px;
+          .nav-item-label-text {
+            font-size: 16px;
           }
 
         }
@@ -233,14 +270,14 @@
       // keep default pointer when over an item with submenu (item itself is not link)
       & > .nav-item-wrapper {
         position: relative;
-       @include desktop{
-         &:hover {
-           cursor: default;
-         }
-       }
+        @include desktop {
+          &:hover {
+            cursor: default;
+          }
+        }
       }
       // Show submenu on hover
-      @include desktop{
+      @include desktop {
         &:hover {
           .nav-item-submenu {
             display: block;
@@ -266,21 +303,21 @@
         left: auto;
         //transform: translateY(-20px);
 
-        &.active{
+        &.active {
           display: block;
           opacity: 1;
           top: -50px !important;
-          z-index:400000 !important;
-          width:100%;
+          z-index: 400000 !important;
+          width: 100%;
           //max-height:calc(100% - 100px);
           //overflow-y: scroll;
-          .nav-item-submenu-section-label{
-            padding-top:$unit/2;
-            padding-bottom:$unit/2;
+          .nav-item-submenu-section-label {
+            padding-top: $unit/2;
+            padding-bottom: $unit/2;
           }
-          .nav-item-wrapper{
-            padding:4px 0;
-            padding-right:0;
+          .nav-item-wrapper {
+            padding: 4px 0;
+            padding-right: 0;
           }
         }
       }
@@ -389,18 +426,31 @@
   }
 }
 
-.mobile-only{
+.mobile-only {
   display: none;
 
-  @include tablet{
+  @include tablet {
     display: block;
   }
 }
 
-.submenu-close{
+.submenu-close {
   position: absolute;
-  padding-top:$unit/2;
-  font-size:0.75rem;
+  padding-top: $unit/2;
+  font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
+
+small.down-arrow {
+  opacity: 0.5;
+  font-size: 8px;
+  display: block;
+  position: absolute;
+  right: -14px;
+  top: 24px;
+  @include tablet {
+    display: none;
+  }
+}
+

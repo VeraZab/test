@@ -1,5 +1,6 @@
 import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
+import {ClientLogos} from '../../../components/global/client-logos/client-logos';
 import Buttons from '../../../components/buttons/buttons';
 
 const HeroButtons = [
@@ -35,8 +36,8 @@ export default () => (
                 <HeroTitle>
                     Safe and secure, behind your firewall
                 </HeroTitle>
-                <HeroSubtitle>
-                    Plotly On Premise provides the best of both worlds: web based collaboration and sharing
+                <HeroSubtitle className="wider-subtitle">
+                    Plotly On-Premise provides the best of both worlds: web based collaboration and sharing
                     capabilities with data and visualizations that never leave your corporate environment.
                 </HeroSubtitle>
             </HeroMessaging>
@@ -45,28 +46,7 @@ export default () => (
             </HeroActions>
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
-            <div className="logos-display">
-                <div className="logos-display-wrapper">
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/google-logo.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/pg-logo.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/vtt-logo.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/goji-logo.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/smpl-bio-logo.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://images.plot.ly/static/marketing/client-logos/shell-logo.png" />
-                    </div>
-                </div>
-            </div>
+            <ClientLogos />
         </HeroBottom>
     </Hero>
 )

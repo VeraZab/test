@@ -13,7 +13,17 @@ const HeroButtons = [
             title: 'See what you can create with Plotly!',
             icon: null,
             target: '_self',
-            link: '/create',
+            link: '/products/consulting-and-oem/',
+            button: {
+                classes: 'button button-primary'
+            }
+        },
+        {
+            label: 'Developer Support Plans',
+            title: 'See what you can create with Plotly!',
+            icon: null,
+            target: '_target',
+            link: 'https://support.plot.ly/plans',
             button: {
                 classes: 'button button-primary'
             }
@@ -25,8 +35,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'page'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://plot.ly/r/',
             button: {
                 classes: 'button button-secondary'
             }
@@ -43,8 +53,8 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-    paddingBottom: '80px',
-    paddingTop: '40px'
+    paddingBottom: '60px',
+    paddingTop: '0px'
 };
 
 export default () => (
@@ -56,40 +66,21 @@ export default () => (
                 </HeroTitle>
                 <HeroSubtitle>
                     Open-source R interface D3-powered Plotly.js
+
+
                 </HeroSubtitle>
 
             </HeroMessaging>
             <HeroActions>
                 <Buttons items={HeroButtons[0]}/>
                 <div className="githubStar">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=plotly&repo=plotly.js&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=ropensci&repo=plotly&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
                 </div>
                 <CodeExplorer/>
             </HeroActions>
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
-            <div className="logos-display">
-                <div className="logos-display-wrapper">
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/789677ceae5feefc04eb68e9c4576a2841786d78_google.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/dcebed6ba3f7c0e5c0a25958581beaaf7d8c5fec_pg.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/4caece2b46bac6d8e824d6db6db9833b17910f13_vtt.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/1ea67d8846c42f9d30c60745a38548148fe1f5ff_goji.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/e023e2380e016f637d01d3d300abe992a1ff2eea_smplbio.png" />
-                    </div>
-                    <div className="logo-item"><img
-                        src="https://prismic-io.s3.amazonaws.com/plotly-marketing/5b700008a45a206c99aabbcedb7984d87e5d7d9a_shell.png" />
-                    </div>
-                </div>
-            </div>
+
         </HeroBottom>
 
 

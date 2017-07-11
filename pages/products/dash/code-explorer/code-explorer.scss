@@ -20,9 +20,7 @@
   &-graphic {
     width: 100%;
    flex: 1;
-
     @include desktop{
-     //width: 500px;
      max-width: 500px;
    }
 

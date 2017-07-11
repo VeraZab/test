@@ -1,4 +1,4 @@
-import styles from './code-explorer.scss';
+import styles from '../../../components/code-explorer/code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
@@ -44,7 +44,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
-        button_link: 'http://google.com'
+        button_link: 'https://plot.ly/javascript/'
     }
 ];
 
@@ -116,7 +116,7 @@ export default class CodeExplorer extends React.Component {
                             </div>
                             <div className="code-explorer-editor-actions">
                                 <div className="buttons">
-                                    <a href={this.state.language.button_link} className="button button-primary">
+                                    <a href={this.state.language.button_link} className="button button-primary button-emerald">
                                         {this.state.language.button_text} →
                                     </a>
                                 </div>

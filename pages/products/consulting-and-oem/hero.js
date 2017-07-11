@@ -15,7 +15,7 @@ const HeroWrapperStyle = {
 
 const HeroTopStyles = {
     paddingBottom: '200px',
-    paddingTop: '20px'
+    paddingTop: '80px'
 };
 const HeroBottomStyles = {
     paddingBottom: '0px',

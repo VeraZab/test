@@ -26,7 +26,7 @@ body {
 
 a {
   text-decoration: none;
-  &:not(.button):not(.nav-item-wrapper) {
+  &:not(.button):not(.nav-item-wrapper):not(.card) {
     text-decoration: none;
     color: $color-lavender;
     background-repeat: repeat-x;

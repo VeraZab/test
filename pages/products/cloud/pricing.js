@@ -43,8 +43,50 @@ const pricingLevels = [
         ]
     },
     {
+        label: "Student",
+        message: null,
+        messageHover : true,
+        messageAction: null,
+        price: {
+            monthly: '33',
+            annually: '59',
+            frequency: 'per year',
+            users: 'per user'
+        },
+        actions: [
+            {
+                label: 'Sign Up',
+                link: 'https://plot.ly/accounts/login/?action=signup',
+                button: {
+                    classes: 'button button-primary'
+                },
+                target: '_blank'
+            }
+        ],
+        features: [
+            {
+                value: 'Includes everything in the<br /><strong>Community Plan</strong>'
+            },
+            {
+                value: 'Community Support'
+            },
+            {
+                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+            },
+            {
+                value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
+            },
+            {
+                value: '<strong>5000</strong> API Calls per day'
+            },
+            {
+                value: 'Connect to <strong>11</strong> Data Sources'
+            }
+        ]
+    },
+    {
         label: "Personal",
-        message: "Are you a student?",
+        message: null,
         messageHover : true,
         messageAction: null,
         price: {
@@ -152,28 +194,28 @@ export default class PricingDetails extends React.Component {
 
     render() {
 
-        pricingLevels[1].messageAction = this.toggleStudentState;
-
-        if (this.state.student === true) {
-            pricingLevels[1].label = "Student";
-            pricingLevels[1].message = "See non-student pricing.";
-            pricingLevels[1].price = {
-                monthly: '5',
-                annually: '59',
-                frequency: 'per year',
-                users: 'per user'
-            }
-        };
-        if (this.state.student === false) {
-            pricingLevels[1].label = "Personal";
-            pricingLevels[1].message = "Are you a student?";
-            pricingLevels[1].price = {
-                monthly: '33',
-                    annually: '396',
-                    frequency: 'per year',
-                    users: 'per user'
-            }
-        };
+        // pricingLevels[1].messageAction = this.toggleStudentState;
+        //
+        // if (this.state.student === true) {
+        //     pricingLevels[1].label = "Student";
+        //     pricingLevels[1].message = "See non-student pricing.";
+        //     pricingLevels[1].price = {
+        //         monthly: '5',
+        //         annually: '59',
+        //         frequency: 'per year',
+        //         users: 'per user'
+        //     }
+        // };
+        // if (this.state.student === false) {
+        //     pricingLevels[1].label = "Personal";
+        //     pricingLevels[1].message = "Are you a student?";
+        //     pricingLevels[1].price = {
+        //         monthly: '33',
+        //             annually: '396',
+        //             frequency: 'per year',
+        //             users: 'per user'
+        //     }
+        // };
 
         let pricingCardBodyPrice = (item) => {
             if (item.price.monthly === '0') {

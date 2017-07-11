@@ -110,15 +110,14 @@ if __name__ == '__main__':
     app.run_server()`;
 
 
-
-
 import React from "react";
 
 class DashMain extends React.Component {
     constructor(props) {
         super(props);
     }
-    componentDidMount(){
+
+    componentDidMount() {
         (function () {
             let qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement,
                 gt = d.getElementsByTagName, id = "typef_orm_share",
@@ -144,7 +143,8 @@ class DashMain extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            Before dash, apps like these would require an entire team of engineers and designers to create.
+                            Before dash, apps like these would require an entire team of engineers and designers to
+                            create.
                         </p>
                         <CodeExplorer></CodeExplorer>
                         </Body>
@@ -153,7 +153,8 @@ class DashMain extends React.Component {
                 <ContentSection className="dash-section-features-thirds">
                     <ContentPane thirds center-vertically>
                         <div className="icon">
-                            <img src="https://images.plot.ly/static/marketing/dash/lightweight-icon.png" alt="Dash is Lightweight"/>
+                            <img src="https://images.plot.ly/static/marketing/dash/lightweight-icon.png"
+                                 alt="Dash is Lightweight"/>
                         </div>
                         <div className="title">
                             Lightweight
@@ -277,7 +278,7 @@ class DashMain extends React.Component {
                         <p>
                             This Dash App is branded just like a Goldman Sachs report
                             through the use of custom CSS. It includes a
-                            "Print to PDF" button and is formatted to great on the web
+                            "Print to PDF" button and is formatted to look great on both the web
                             and in PDF form. On the web version, the charts are
                             interactive.
                         </p>
@@ -333,13 +334,14 @@ class DashMain extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            We’re strong believers that the future of technical computing and business intelligence is open
+                            We’re strong believers that the future of technical computing and business intelligence is
+                            open
                             source. Dash is MIT licensed. Run Dash on your desktop environment for free.
                         </p>
                         <p>
                             Using Dash inside your enterprise?
                             Plotly offers Dash On-Premise for 1-click app deployment and
-                            App permissioning with LDAP and Active Directory,
+                            app permissioning with LDAP and Active Directory,
                             all behind your corporate firewall.&nbsp;
                             <a className="typeform-share link special-link" href="https://plotly.typeform.com/to/seG7Vb"
                                data-mode="drawer_right"
@@ -351,18 +353,16 @@ class DashMain extends React.Component {
                         </Body>
                     </ContentPane>
                 </ContentSection>
-
-
                 <ContentSection className="dash-section-more-details">
                     <ContentPane full center-vertically center text>
                         <Body>
                         <div className="cards stories">
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
-                                    <div className="card-image"
+                                    <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-sharing.png")'}}>
-                                        <div className="card-image-label">
-                                            Dash On-Premise<br/>App Deployment
+                                        <div className="card-image-label" style={{width: '100%'}}>
+                                            Dash On-Premise Deployment
                                         </div>
                                     </div>
                                     <div className="card-body">
@@ -386,17 +386,18 @@ class DashMain extends React.Component {
                                         </p>
                                     </div>
                                     <div className="card-action">
-                                        <a className="typeform-share link card-action-link" href="https://plotly.typeform.com/to/seG7Vb"
+                                        <a className="typeform-share link card-action-link"
+                                           href="https://plotly.typeform.com/to/seG7Vb"
                                            data-mode="drawer_right"
                                            data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="2"
-                                           target="_blank">Request a Demo →</a>                                    </div>
+                                           target="_blank">Request a Demo →</a></div>
                                 </div>
                             </div>
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
-                                    <div className="card-image"
+                                    <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-portal.png")'}}>
-                                        <div className="card-image-label">
+                                        <div className="card-image-label" style={{width: '100%'}}>
                                             Dash On-Premise<br/>App Portal
                                         </div>
                                     </div>
@@ -411,7 +412,8 @@ class DashMain extends React.Component {
                                         </p>
                                     </div>
                                     <div className="card-action">
-                                        <a className="typeform-share link card-action-link" href="https://plotly.typeform.com/to/seG7Vb"
+                                        <a className="typeform-share link card-action-link"
+                                           href="https://plotly.typeform.com/to/seG7Vb"
                                            data-mode="drawer_right"
                                            data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="2"
                                            target="_blank">Request a Demo →</a>

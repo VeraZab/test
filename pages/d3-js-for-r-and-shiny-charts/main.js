@@ -9,35 +9,41 @@ import {
 
 export default () => (
     <div>
+        <ContentSection >
 
+            <ContentPane half center-vertically text>
+                <div className="pre-title">
+                   Plotly for R and Shiny
+                </div>
+                <Title>
+                    Features and Benefits
+                </Title>
+                <Body>
+                <ul className="hero-list">
+                    <li>Every chart that lattice or ggplot2 can do.</li>
+                    <li>Interactive charts and maps out-of-the-box.</li>
+                    <li>Get started working offline.</li>
+                    <li>Optional hosted  sharing platform through <a href="/products/on-premise/" target="_blank">Plotly On-Premise</a> or <a href="/products/cloud/" target="_blank">Plotly Cloud</a>.</li>
+                </ul>
+                </Body>
+            </ContentPane>
+            <ContentPane half graphic>
+                <Graphic image="https://images.plot.ly/static/marketing/chart_graphic.png" />
+            </ContentPane>
+        </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
-                <Graphic image="https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png" />
+                <Graphic image="https://camo.githubusercontent.com/09183b0e60c303d96a22e999cd69c81b1dcfe302/687474703a2f2f692e696d6775722e636f6d2f655671735a6d612e676966" />
             </ContentPane>
             <ContentPane half center-vertically text>
-                <div className="pre-title">
-                    Case Study
-                </div>
                 <Title>
-                    How we reworked Highcharts for an oil & gas leader
+                    Supercharged graphics for R Shiny
                 </Title>
                 <Body>
                 <p>
-                    C12 Energy, a leader in carbon capture and sequestration, engaged Plotly for custom dashboards in
-                    both its finance and engineering departments.
+                    Love R Shiny? Try adding Plotly charts for supercharged interactive graphics and cross filtering.
                 </p>
-                <blockquote className="">
-                    Plotly is at the center of our business development platform, and serves as a starting point for
-                    modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the
-                    results to make multi-million-dollar investment decisions.
-                    <div className="quotee">
-                        <div className="who">&mdash; Dr. Jenya Kirshtein</div>
-                        <div className="title">
-                            Scientific Software Engineer
-                        </div>
-                    </div>
-                </blockquote>
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -45,50 +51,102 @@ export default () => (
         <ContentSection>
             <ContentPane half center-vertically text>
                 <Title>
-                    Share with Plotly’s online community
+                    Add interactivity to ggplot2 charts
                 </Title>
                 <Body>
                 <p>
-                    Plotly.js charts can be easily published, saved, and shared on Plotly’s cloud for
-                    free. <a href="https://plot.ly/~mutecamel/11/a-a-a-a-b-b-b-b-c-c-c-c-d-d-d-d/" target="_blank">Save
-                    your Plotly.js chart creations</a> with simple URL chart links, <a
-                    href="http://help.plot.ly/json-chart-schema/" target="_blank">translate your charts to
-                    different languages</a>, and get stars and feedback from the Plotly community.
-
+                    No need to learn a new chart syntax: One line of code converts a ggplot2 static chart to an interactive Plotly version.
+                </p>
+                <p>
+                    <a href="https://cpsievert.github.io/plotly_book/extending-ggplotly.html#extending-ggplotly" target="_blank">Learn More</a>
                 </p>
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://plot.ly/static/enterprise/img/alternatives/highcharts/share.a9caa353cef7.jpg"/>
+                    image="https://images.plot.ly/static/marketing/product/ggplot2.png"/>
             </ContentPane>
         </ContentSection>
 
+
         <ContentSection>
             <ContentPane half graphic>
-                <div className="flexed">
-                    <a href="http://d3js.org/"><img
-                        src="https://plot.ly/static/enterprise/img/alternatives/logo-d3js.ba761bd044ad.png"
-                        alt="d3"/></a>
-                    <a href="http://stack.gl/"><img
-                        src="https://plot.ly/static/enterprise/img/alternatives/logo-stackgl.a45db7e74096.gif"
-                        alt="stackgl"/></a>
-                </div>
+                <Graphic
+                    image="https://images.plot.ly/static/marketing/product/world-class.png"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
-                    D3.js and Stack.gl: Stand on the shoulders of Giants
+                    World-class charts, maps, and interactivity
                 </Title>
                 <Body>
                 <p>
-                    Plotly.js’s SVG backend uses D3.js, the gold standard of SVG graphics for the Web. D3.js is
-                    challenging to learn however and time-consuming for even JavaScript experts. With Plotly.js now even
-                    a JavaScript beginner can create performance optimized, insanely complex D3.js charts in minutes.
+                    Make D3.js and WebGL charts with the ease, power, and open-source ecosystem of R. Plotly charts and dashboards can be easily styled in R, or uploaded to Plotly’s online editor for point-&-click styling and collaboration.
+                </p>
+                <p>
+                    <a href="http://plot.ly/r" target="_blank">Learn More</a>
                 </p>
                 </Body>
             </ContentPane>
         </ContentSection>
 
+        <ContentSection>
+            <ContentPane half center-vertically text>
+                <Title>
+                    GitHub-style Sharing
+                </Title>
+                <Body>
+                <p>
+                    Share your charts, maps, and dashboards through Plotly’s online platform, or work entirely offline.
+                </p>
+                <p>
+                    Featured R user: <a href="https://plot.ly/~riddhiman">@riddhiman</a>
+                </p>
+                </Body>
+            </ContentPane>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://images.plot.ly/static/marketing/product/map_styles.gif"/>
+            </ContentPane>
+        </ContentSection>
+
+        <ContentSection>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png"/>
+            </ContentPane>
+            <ContentPane half center-vertically text>
+                <Title>
+                    Collaborate with Tableau, Excel, and Python users
+                </Title>
+                <Body>
+                <p>
+                    With Plotly, there’s no need to choose between Python and R. R users can easily share Plotly charts to Python users (and vice versa) through Plotly Cloud, Plotly On-Premise, or entirely offline. Plotly charts are language agnostic and the best open-source choice for any language.
+                </p>
+                <p>
+                    For code-free collaboration, Python charts and dashboards can also be shared with Tableau and Excel users through Plotly On-Premise and Plotly Cloud.
+                </p>
+                <p><a href="/products/cloud/">Plotly Cloud</a><br />
+                    <a href="/products/on-premise/">Plotly On-Premise</a></p>
+                </Body>
+            </ContentPane>
+        </ContentSection>
+        <ContentSection>
+            <ContentPane half center-vertically text>
+                <Title>
+                    Plotly for R & Shiny Workshops
+                </Title>
+                <Body>
+                <p>
+                    Send your team to a <a href="https://plotcon.plot.ly/" target="_blank">PLOTCON workshop</a> to level up their skills in R visualization and Shiny app development. Workshops are, held twice per year in NYC and the West Coast. We can also hold custom workshops on-site at your company.
+                </p>
+
+                </Body>
+            </ContentPane>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://images-hoshi.nationalmachine.co/ineffable/uploads/95aa3dc80638bd314e7085f1f561e2d8/DSC02407.jpg?w=1800&h=1800&crop=fit&q=80"/>
+            </ContentPane>
+        </ContentSection>
         <ContentSection className="request-callback-section">
 
             <ContentPane full center center-vertically text>
@@ -97,14 +155,14 @@ export default () => (
                 </div>
                 <Title>
                     Learn how we can work together
-                    <div className="buttons center">
-                        <div className="button button-primary">
+                    <div className="buttons center gutter-top">
+                        <a className="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb">
                             <div className="button-wrapper">
                                 <div className="button-label">
-                                    Request a Callback
+                                    Request a Demo
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </Title>
                 <Body>

@@ -1,9 +1,9 @@
 const path = require('path')
 const glob = require('glob')
 const chromatic = require("chromatic-sass")
-
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
-    // assetPrefix: 'https://plotly.github.io/next-static',
+    assetPrefix: isProd ? 'https://now.plot.ly/' : '',
     exportPathMap: () => ({
         "/": { page: "/" },
         "/products/dash": { page: "/products/dash" },

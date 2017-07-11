@@ -1,5 +1,6 @@
 import React from 'react';
 import {CtaBanner, CtaBannerBody} from "../../cta-banner";
+import Buttons from "../../../buttons/buttons"
 
 
 const columnData = [
@@ -10,16 +11,16 @@ const columnData = [
         actions: null
     },
     {
-        title: 'Engineering Support',
+        title: 'Need Engineering Support?',
         message: 'Get chat and support from our awesome engineering team.',
         graphic: 'https://now.plot.ly/static/images/illustrations/engineering_supoort@2x.png',
         actions: [
             {
-                label: 'Get Advanced Support',
+                label: 'See Support Plans',
                 title: 'We offer a number of paid support plans to service everyone from individual developers to the largest enterprises',
                 icon: null,
-                target: '_self',
-                link: '/create',
+                target: '_blanks',
+                link: 'https://support.plot.ly/plans/',
                 button: {
                     classes: 'button button-primary'
                 }
@@ -42,9 +43,23 @@ export default class SupportBanner extends React.Component {
 
     render() {
 
+
+
         let renderColumns = (columnData) => {
             return (
                 columnData.map((column, i) => {
+
+
+                    let columnActions = () => {
+
+                        if(column.actions){
+                            return (<div className="column-actions center"> <Buttons className="center padding-top" items={column.actions}/></div>)
+                        } else {
+                            return null;
+                        }
+                    };
+
+
                     return (
                         <div className="column">
                             <div className="column-wrapper">
@@ -59,6 +74,7 @@ export default class SupportBanner extends React.Component {
                                 <div className="column-message">
                                     {column.message}
                                 </div>
+                                {columnActions()}
                             </div>
                         </div>
                     )

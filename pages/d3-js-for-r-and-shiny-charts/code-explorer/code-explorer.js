@@ -1,49 +1,32 @@
-import styles from './code-explorer.scss';
+import styles from '../../../components/code-explorer/code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
-const jsCode = `Plotly.d3.json('http://rickyreusser.com/animation-experiments/data/gapminder-with-frames.json', function(err, d) {  
-  d.layout.sliders = [{
-    currentvalue: {
-      prefix: 'Year: ',
-      xanchor: 'right',
-      font: {
-        size: 20,
-        color: '#888'
-      }
-    },
-    x: 0.1,
-    len: 0.9,
-    pad: {t: 40, b: 20},
-    steps: d.frames.map(function(f) {
-      return {
-        method: 'animate',
-        args: [[f.name], {mode: 'immediate', frame: {redraw: false}}],
-        label: f.name
-      }
-    })
-  }];
-  
-  d.layout.width = window.innerWidth;
-  d.layout.height = window.innerHeight;
-  d.layout.title = 'Life Expectancy vs. GDP Per Capita';
-  
-  Plotly.plot('graph', d.data, d.layout, d.config).then(function() {
-    return Plotly.addFrames('graph', d.frames);
-  });
-});`;
+const codeSample = `m <- SharedData$new(mpg)
+
+p1 <- ggplot(m, 
+    aes(displ, fill = class)) + 
+	geom_density()
+
+p2 <- ggplot(m, 
+    aes(displ, hwy, fill = class)) + 
+    geom_point()
+
+subplot(p1, p2) %>% 
+    highlight("plotly_click") %>% 
+    hide_legend()`;
 
 
 const languages = [
     {
         id: '4',
-        title: "Javascript",
-        slug: 'javascript',
-        language: 'javascript',
-        code: jsCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
-        button_text: 'Plotly Javascript API',
+        title: "R",
+        slug: 'r',
+        language: 'python',
+        code: codeSample,
+        graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
+        example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
+        button_text: 'Plotly R API',
         button_link: 'http://google.com'
     }
 ];
@@ -116,7 +99,7 @@ export default class CodeExplorer extends React.Component {
                             </div>
                             <div className="code-explorer-editor-actions">
                                 <div className="buttons">
-                                    <a href={this.state.language.button_link} className="button button-primary">
+                                    <a href={this.state.language.button_link} className="button button-primary button-emerald">
                                         {this.state.language.button_text} →
                                     </a>
                                 </div>

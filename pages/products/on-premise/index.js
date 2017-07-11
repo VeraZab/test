@@ -13,9 +13,10 @@ import Buttons from '../../../components/buttons/buttons';
 import styles from '../cloud/pricing.styles.scss';
 const onPremData = [
     {
-        features: [{
+        features: [
+            {
             value: 'Includes everything in the <strong>Professional Plotly Plan</strong>'
-        },
+            },
             {
                 value: 'Email and Phone Support'
             },
@@ -48,16 +49,16 @@ const onPremDashata = [
                 value: 'Email and Phone Support'
             },
             {
-                value: 'Unlimited Applications'
+                value: 'Unlimited Dash Applications'
             },
             {
-                value: 'Unlimited Viewers'
+                value: 'Unlimited Dash App Viewers'
             },
             {
-                value: 'Automatic Git based Deployment'
+                value: 'Automatic Git Based Deployments of Dash Apps'
             },
             {
-                value: "Snapshot Application Views"
+                value: "Shareable “Snapshot Views” of Dash Apps"
             }
         ],
 
@@ -138,7 +139,9 @@ export default class OnPrem extends React.Component {
         return (
             <Layout meta={meta}>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
-                <Hero />
+                <div className="on-prem-pricing">
+                    <Hero />
+                </div>
                 <ContentSection className="onprem-pricing">
                     <ContentPane full center center-vertically text>
                         <Body>

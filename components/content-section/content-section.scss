@@ -35,6 +35,13 @@
     background-color: chromatic-color-luminance($color-rhino-core, 0.9);
   }
 
+  &-h2 {
+    color: #516783;
+    font-family: "Open Sans";
+    font-size: 22px;
+    line-height: 36px;
+  }
+
   &-header {
     margin-bottom: $gutter*1.5;
 
@@ -120,6 +127,61 @@
     background: url("https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg") center center no-repeat fixed;
     background-size: cover;
   }
+  &.background--oem {
+    position: relative;
+    &::before{
+      position: absolute;
+      height:100%;
+      width:120%;
+      left:0;
+      top:0;
+      content: '';
+      background-image: url("https://images.plot.ly/static/marketing/illustrations/oem@2x.png");
+      background-size: 1100px;
+      background-repeat:no-repeat;
+      background-position: 70% 35%;
+      @include media("<=1450px") {
+        transform:translateX(0px);
+        background-position: 70% 35%;
+      }
+      @include media("<=1250px") {
+        transform:translateX(140px);
+      }
+      @include media("<=950px") {
+        //transform:translateX(270px);
+        background-position: 80% 36%;
+      }
+      @include media("<=900px") {
+        transform:translateX(170px);
+        background-position: 0% 6%;
+      }
+      @include media("<=800px") {
+        display: none;
+      }
+
+    }
+
+    @include media("<=1060px") {
+      .content-section-pane-wrapper{
+        padding-right:35% !important;
+      }
+    }
+
+    @include media("<=800px") {
+      .content-section-pane-wrapper{
+        padding-right:0px !important;
+      }
+    }
+
+    .content-section-wrapper{
+      position: relative;
+      z-index: 3;
+    }
+
+
+
+
+  }
   &.background-color-light-4 {
     background-color: $color-rhino-light-4;
   }
@@ -140,10 +202,9 @@
       display: block;
       flex-direction: column;
       flex-grow: 1;
-      max-width:100%;
+      max-width: 100%;
       width: 100%;
     }
-
 
     &-half {
       width: 50%;
@@ -155,32 +216,41 @@
       }
     }
 
-    &.sixy-five{
-      width: 65%;
-      @include handheld {
+    &.sixy-five {
+      @include desktop {
+        width: 65%;
+      }
+      @include tablet {
         width: 100%;
       }
 
-      .buttons{
-        @include handheld{
+      .buttons {
+        @include handheld {
           display: block;
         }
       }
     }
-    &.thirty-five{
-      width: 35%;
-      @include handheld {
+    &.thirty-five {
+      @include desktop {
+        width: 35%;
+      }
+      @include tablet {
         width: 100%;
+        padding: 0 $gutter;
+        padding-right: 20%;
+      }
+      @include handheld {
+        padding: 0 $gutter;
       }
     }
 
-    &-full{
+    &-full {
       width: 100% !important;
     }
 
     &-third {
       width: 33.3333%;
-      @include media('<=800px'){
+      @include media('<=800px') {
         width: 100%;
       }
       @include handheld {
@@ -194,35 +264,34 @@
       flex-grow: 1;
     }
 
-    &-text{
-      @include tablet{
+    &-text {
+      @include tablet {
         width: 65%;
       }
-      @include handheld{
+      @include handheld {
         width: 100%;
       }
     }
 
-    &-graphic{
+    &-graphic {
       display: block !important;
-      img{
+      img {
         width: 100%;
-        max-width:100%;
+        max-width: 100%;
       }
 
-      & + .content-section-pane-text{
-        @include desktop{
-          padding-left:$gutter;
+      & + .content-section-pane-text {
+        @include desktop {
+          padding-left: $gutter;
         }
       }
-      @include tablet{
+      @include tablet {
         width: 35%;
       }
-      @include handheld{
+      @include handheld {
         width: 100%;
       }
     }
-
 
     &-align {
       &-left {
@@ -235,13 +304,13 @@
           align-items: center;
           text-align: center;
           display: flex;
-          width:100%;
-          max-width:100%;
+          width: 100%;
+          max-width: 100%;
 
         }
         .content-section-title {
           max-width: 700px !important;
-          @include handheld{
+          @include handheld {
             text-align: center;
           }
         }
@@ -252,6 +321,7 @@
         }
       }
       &-center-vertically {
+        align-items: center;
         @at-root & .content-section-pane-wrapper {
           justify-content: center;
         }
@@ -271,7 +341,7 @@
       padding-bottom: $unit;
       color: $color-dodger-shade;
       font-family: 'Dosis', sans-serif;
-      @include handheld{
+      @include handheld {
         text-align: left;
         //text-align: center;
       }
@@ -291,10 +361,10 @@
       font-size: 18px;
       line-height: 30px;
       font-weight: 300;
-      @include desktop{
+      @include desktop {
         max-width: 75%;
       }
-      @include handheld{
+      @include handheld {
         text-align: left;
       }
       color: chromatic-color-luminance($color-rhino-core, 0.2);
@@ -332,17 +402,17 @@
       //border-radius: 6px;
       //overflow: hidden;
 
-      &-noshadow{
-        img{
+      &-noshadow {
+        img {
           box-shadow: none !important;
         }
       }
     }
 
-    &-video{
+    &-video {
 
-      video{
-        max-width:100%;
+      video {
+        max-width: 100%;
         display: block;
       }
     }
@@ -357,25 +427,25 @@
     }
   }
 
-  blockquote{
+  blockquote {
     font-size: 16px;
     line-height: 30px;
     font-weight: 300;
     color: #6e7d92;
-    margin-left:0;
-    border-left:15px solid rgba($color-dodger, 0.1);
+    margin-left: 0;
+    border-left: 15px solid rgba($color-dodger, 0.1);
     //padding-left:$unit;
     border: 1px solid $color-rhino-light-1;
     //box-shadow:$drop-shadow-l-light;
-    padding:$unit;
+    padding: $unit;
     //border-radius:8px;
     background: rgba(whitesmoke, 0.8);
-    .quotee{
-      padding-top:$unit;
-      .who{
+    .quotee {
+      padding-top: $unit;
+      .who {
         font-weight: bold;
       }
-      .title{
+      .title {
         font-style: italic;
       }
     }
@@ -383,7 +453,7 @@
 
 }
 
-.cards{
+.cards {
   .card-simple {
     position: relative;
     margin-top: $unit*2;
