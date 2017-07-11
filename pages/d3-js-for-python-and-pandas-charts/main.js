@@ -123,7 +123,7 @@ export default () => (
                 </Title>
                 <Body>
                 <p>
-                    Love R Shiny but prefer not to work in R? Check out Dash for Python - an open-source Python
+                    Love R Shiny but prefer not to work in R? Check out <a href="/products/dash">Dash for Python</a> - an open-source Python
                     interface to create data exploration web apps. Applications with advanced UI, drilldowns, and
                     crossfilter have never been easier or more elegant in Python.
                 </p>
