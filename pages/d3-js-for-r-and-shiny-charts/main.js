@@ -99,7 +99,7 @@ export default () => (
                     Share your charts, maps, and dashboards through Plotly’s online platform, or work entirely offline.
                 </p>
                 <p>
-                    Featured R user: @riddhiman
+                    Featured R user: <a href="https://plot.ly/~riddhiman">@riddhiman</a>
                 </p>
                 </Body>
             </ContentPane>
