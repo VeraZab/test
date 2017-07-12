@@ -17,7 +17,6 @@ const oemButton = [
 ];
 
 export default () => (
-<<<<<<< HEAD
     <div>
         <ContentSection className="background-color-light-1 center not-mobile">
             <ContentPane full center center-vertically>
@@ -66,5 +65,4 @@ export default () => (
             </ContentPane>
         </ContentSection>
     </div>
-
 )
