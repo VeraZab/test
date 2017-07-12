@@ -65,4 +65,4 @@ export default () => (
             </ContentPane>
         </ContentSection>
     </div>
-
+)
