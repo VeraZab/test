@@ -3,11 +3,11 @@ import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, Hero
 import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
-const HeroWrapperStyle = {
-    backgroundSize: '1640px',
-    backgroundPosition: '50% 80%',
-    backgroundRepeat: 'no-repeat'
-};
+// const HeroWrapperStyle = {
+//     backgroundSize: '1640px',
+//     backgroundPosition: '50% 80%',
+//     backgroundRepeat: 'no-repeat'
+// };
 
 const HeroBottomStyles = {
     paddingBottom: '0px',
@@ -22,23 +22,6 @@ const HeroSubTitle = {
   fontSize: '12px',
 };
 
-const header = {
-    sitename: 'Plotly',
-    title: 'Visualize Data, Together',
-    description: 'Plotly is the modern platform for agile business intelligence and data science.',
-    url: 'https://plot.ly',
-    image: '',
-    tags: [],
-    publisher: 'https://www.facebook.com/Plotly/',
-    twitter: {
-        label1: '',
-        data1: '',
-        label2: '',
-        data2: '',
-        site: '@plotlygraphs'
-    }
-};
-
 class IndustriesHero extends React.Component {
 
     constructor(props) {
@@ -47,13 +30,20 @@ class IndustriesHero extends React.Component {
 
     componentDidMount() {
         document.body.classList.remove('no-scroll');
+
+        [...document.getElementsByClassName('hero')].map((element)=>{
+          console.dir(element);
+          element.classList.remove('hero');
+        });
+
     }
 
     render() {
         const header = this.props.header;
+        const styles = this.props.style;
 
         return (
-          <Hero heroWrapperStyle={HeroWrapperStyle}>
+          <Hero style={styles}>
               <HeroTop>
                   <HeroMessaging>
                       <HeroSubtitle style={HeroSubTitle} children={header.group} />
