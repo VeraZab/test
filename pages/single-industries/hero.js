@@ -3,12 +3,6 @@ import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, Hero
 import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
-// const HeroWrapperStyle = {
-//     backgroundSize: '1640px',
-//     backgroundPosition: '50% 80%',
-//     backgroundRepeat: 'no-repeat'
-// };
-
 const HeroBottomStyles = {
     paddingBottom: '0px',
     paddingTop: '20px'
@@ -22,6 +16,10 @@ const HeroSubTitle = {
   fontSize: '12px',
 };
 
+const HeroTopStyle = {
+  padding: "120px 0"
+};
+
 class IndustriesHero extends React.Component {
 
     constructor(props) {
@@ -32,7 +30,6 @@ class IndustriesHero extends React.Component {
         document.body.classList.remove('no-scroll');
 
         [...document.getElementsByClassName('hero')].map((element)=>{
-          console.dir(element);
           element.classList.remove('hero');
         });
 
@@ -44,7 +41,7 @@ class IndustriesHero extends React.Component {
 
         return (
           <Hero style={styles}>
-              <HeroTop>
+              <HeroTop style={HeroTopStyle}>
                   <HeroMessaging>
                       <HeroSubtitle style={HeroSubTitle} children={header.group} />
                       <HeroTitle children={header.title} />
