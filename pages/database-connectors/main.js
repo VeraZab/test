@@ -51,7 +51,7 @@ export default () => (
                 <Body>
                 <p>
                     Add your charts to Plotly's best-in-class <Link
-                    href="/products/dashboards/"><a>dashboards</a></Link> and share them with simple, secure links.
+                    href="/dashboards/"><a>dashboards</a></Link> and share them with simple, secure links.
                 </p>
                 </Body>
             </ContentPane>
