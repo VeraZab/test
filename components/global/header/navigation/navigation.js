@@ -26,7 +26,7 @@ const navigationRight = [
                                 title: 'See all of our pricing options.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_chart.87676eabf8bc.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/create/'
                             },
                             {
@@ -36,7 +36,7 @@ const navigationRight = [
                                 title: 'See all of our pricing options.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dashboard.52af779684ee.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/dashboard/create'
                             },
                             {
@@ -56,7 +56,7 @@ const navigationRight = [
                                 title: 'See all of our pricing options.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_presentation.89a6f41d4cec.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/organize/home?create=presentation'
                             },
                             {
@@ -66,7 +66,7 @@ const navigationRight = [
                                 title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_database.0a26f1c68ebb.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/create/?upload=sql'
                             },
                             {
@@ -76,7 +76,7 @@ const navigationRight = [
                                 title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dataset.2c1316a036ab.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/organize/home?create=grid'
                             },
                             {
@@ -86,7 +86,7 @@ const navigationRight = [
                                 title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_notebook.63db2bee0f9b.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/organize/home?create=notebook'
                             },
                             {
@@ -96,7 +96,7 @@ const navigationRight = [
                                 title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_folder.07d7dfd25383.svg',
                                 icon_type: 'img',
-                                target: '_self',
+                                target: '_blank',
                                 link: 'https://plot.ly/organize/home?create=folder'
                             }
                         ]
