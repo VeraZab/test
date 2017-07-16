@@ -505,7 +505,7 @@ export default class Navigation extends React.Component {
                     <div className={'nav-item' + isActive} key={item.id}>
                         <a href={item.link} target={item.target} title={item.title} className='nav-item-wrapper'>
                             <div className='nav-item-label'>
-
+                                {navItemIcon(item)}
                                 <div className='nav-item-label-text'>
                                     {item.label}
                                 </div>
