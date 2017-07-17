@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": "7.10.0"
+    "node": "7.10.1"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
