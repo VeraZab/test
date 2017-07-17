@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "export": "next build && next export",
-    "ghpages": "cp .nojekyll out && git add out && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages",
+    "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "yarn run export && yarn run ghpages",
     "start": "NODE_ENV=production node server.js"
   },
   "engines": {
