@@ -16,7 +16,6 @@
   "dependencies": {
     "antd": "^2.8.1",
     "autoprefixer": "6.7.6",
-    "axios": "^0.16.2",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-plugin-wrap-in-js": "^1.1.0",
