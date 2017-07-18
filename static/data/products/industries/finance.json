@@ -11,10 +11,7 @@
   "style": {
     "backgroundImage": "url(/static/images/industries/banner-finance.jpg)"
   },
-  "sponsors": [{
-      "graphic": "/static/images/industries/finance/alation-logo.aab64c0f8471.png",
-      "label": "Alation"
-    },
+  "sponsors": [
     {
       "graphic": "/static/images/industries/finance/logo-kaleidoscope.d1983cb4bdb6.png",
       "label": "Kaleidoscope"
