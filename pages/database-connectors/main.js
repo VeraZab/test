@@ -68,9 +68,6 @@ export default () => (
                     Screenshots
                 </Title>
                 <Body>
-                <p>
-                    Share your presentation online with public or secret links.
-                </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic label="MySQL: Tesla Supercharger Stations" link="https://plot.ly/~jackp/16939/"
                         image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png"/>
