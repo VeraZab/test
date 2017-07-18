@@ -4,9 +4,10 @@ import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
 const HeroWrapperStyle = {
-    backgroundSize: '1640px',
-    backgroundPosition: '50% 80%',
-    backgroundRepeat: 'no-repeat'
+    backgroundSize: '1750px',
+    backgroundPosition: '50% 100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: 'url("/static/images/banner-splash.jpg")'
 };
 
 const HeroBottomStyles = {
