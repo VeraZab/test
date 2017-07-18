@@ -12,8 +12,8 @@ const HeroButtons = [
                 type: 'mdi',
                 src: 'plus'
             },
-            target: '_self',
-            link: '/create',
+            target: '_blank',
+            link: 'https://plot.ly/dashboard/create/',
             button: {
                 classes: 'button button-primary'
             }
