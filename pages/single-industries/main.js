@@ -17,6 +17,10 @@ class IndustriesMain extends React.Component {
       order: 1
     };
 
+    const sponsorImage = {
+      width: '100%'
+    }
+
     const data = this.props.mainData;
     const sponsors = data.sponsors;
 
@@ -24,7 +28,7 @@ class IndustriesMain extends React.Component {
      data.sponsors.map((item, key) => {
         return (
             <GridItem key={key}>
-                <div className="grid-item-graphic sponsors">
+                <div style={sponsorImage} className="grid-item-graphic sponsors">
                     <img src={item.graphic} alt={item.label} />
                 </div>
                 <div className="grid-item-label">
