@@ -16,7 +16,13 @@ class IndustriesMain extends React.Component {
       maxWidth: '475px'
     };
 
+    const removeActionOnLink = {
+      transform: 'initial',
+      color: '#fff'
+    };
+
     return (
+        <a className="card-action-link" href={story.url}>
             <div className="card card-with-image" style={cardWithImageStyles}>
               <div className="card-wrapper">
                 <div className="card-image" style={story.style}>
@@ -24,11 +30,13 @@ class IndustriesMain extends React.Component {
                     {story.label}
                   </div>
                 </div>
-                <div className="card-action">
-                  <a className="card-action-link" href={story.url}>{story.cta}</a>
+                <div className="card-action" style={removeActionOnLink}>
+                  {story.cta}
                 </div>
               </div>
             </div>
+        </a>
+
     )
   }
 }
