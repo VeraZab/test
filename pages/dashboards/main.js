@@ -1,4 +1,11 @@
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '../../components/content-section/content-section';
+import {
+    ContentSection,
+    ContentPane,
+    Title,
+    Subtitle,
+    Body,
+    Graphic
+} from '../../components/content-section/content-section';
 
 export default () => (
     <div>
@@ -25,7 +32,7 @@ export default () => (
         <ContentSection>
             <ContentPane half center-vertically>
                 <Graphic label="Shell: Integrated Gas"
-                         link="https://plot.ly/dashboard/jackp:16820/present"
+                         link="https://plot.ly/dashboard/jackluo:3593/present"
                          image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/shell.png"/>
             </ContentPane>
             <ContentPane half center-vertically>
@@ -54,14 +61,15 @@ export default () => (
         {/*2 graphics*/}
         <ContentSection>
             <ContentPane half center-vertically>
-                <Graphic label="Wind Power Prospecting" link="https://plot.ly/dashboard/jackp:16821/present"
-                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/windpower.png"/>
+                <Graphic label="Schizophrenia interactome with 504 novel protein–protein interactions"
+                         link="https://plot.ly/dashboard/jackluo:3593/present"
+                         image="https://images.plot.ly/static/marketing/product/DBlhl3NWAAARiLH.jpg"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Graphic
-                    label="Air Traffic Control"
-                    link="https://plot.ly/dashboard/jackp:16819/present"
-                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/air_traffic_control.png"/>
+                    label="FiveThirtyEight"
+                    link="https://plot.ly/dashboard/Dreamshot:8462/present"
+                    image="https://images.plot.ly/static/marketing/product/C4KprMzWIAAX8m_.jpg"/>
             </ContentPane>
         </ContentSection>
 
@@ -72,7 +80,8 @@ export default () => (
                 </Title>
                 <Body>
                 <p>
-                    Share your dashboard online with public or secret links. <a href="https://plot.ly/dashboard/create/" target="_blank">Create a Dashboard</a>.
+                    Share your dashboard online with public or secret links. <a href="https://plot.ly/dashboard/create/"
+                                                                                target="_blank">Create a Dashboard</a>.
                 </p>
                 </Body>
             </ContentPane>
@@ -86,13 +95,56 @@ export default () => (
         <ContentSection>
             <ContentPane half center-vertically>
                 <Graphic label="Twitter: Marketing Campaign" link="https://plot.ly/dashboard/jackp:16823/present"
-                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/twitter.png"/>
+                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/twitter.png"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Graphic
-                    label="Q4 Sales KPIs"
-                    link="https://plot.ly/dashboard/verazab:67/present"
-                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/q4_sales_kpis.png"/>
+                    label="Molecular Weights of Therapeutic Small Molecules Compared to MW Distribution"
+                    link="https://plot.ly/dashboard/jackp:17405/present"
+                    image="https://images.plot.ly/static/marketing/product/C2kvbzBUQAA_XDR.jpg-.jpg"/>
+            </ContentPane>
+        </ContentSection>
+        <ContentSection>
+            <ContentPane half center-vertically text>
+                <Title>
+                    Automate Dashboard Creation through Python
+                </Title>
+                <Body>
+                <p>
+                    Plotly dashboards and charts can be made without coding, or you can make them entirely with Python.
+                </p>
+                <p>
+                    <a href="https://plot.ly/python/create-online-dashboard/" target="_blank">Read the Python dashboard tutorial</a>
+                </p>
+                <p>
+                    <a href="https://plot.ly/products/cloud/" target="_blank"> Get started with a cloud plan
+                    </a>
+                </p>
+                </Body>
+            </ContentPane>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://images.plot.ly/static/marketing/product/C6qPQB-U4AAHGa3.jpg"/>
+            </ContentPane>
+        </ContentSection>
+
+        <ContentSection>
+            <ContentPane half graphic>
+                <Graphic shadow="false"
+                    image="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png"/>
+            </ContentPane>
+            <ContentPane half center-vertically text>
+                <Title>
+                    Dashboards with Advanced Controls
+                </Title>
+                <Body>
+                <p>
+                    Looking for dashboards with sliders, search boxes, filtering, and dropdowns?
+                </p>
+                <p>
+                    Check out <a href="https://plot.ly/products/dash/">Dash for Python</a> or these <a href="https://moderndata.plot.ly/15-python-and-r-charts-with-interactive-controls-buttons-dropdowns-and-sliders/">15 dashboards</a> with interactive controls.
+                </p>
+                </Body>
             </ContentPane>
         </ContentSection>
     </div>
