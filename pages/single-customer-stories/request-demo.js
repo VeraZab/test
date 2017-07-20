@@ -20,7 +20,7 @@ class IndustriesRequestDemo extends React.Component {
 
   render() {
       return (
-      <ContentSection>
+      <ContentSection background-color-light-2>
           <ContentPane full center center-vertically text>
               <Title>
                 {footer.title}

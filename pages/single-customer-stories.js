@@ -22,9 +22,11 @@ export default class extends React.Component {
     return (
       <Layout meta={data.header.title}>
         <style dangerouslySetInnerHTML={{__html: styles}}/>
-        <IndustriesHero header={data.header} />
-        <IndustriesMain mainData={data} />
-        <IndustriesRequestDemo />
+          <section className="single-customer-stories">
+            <IndustriesHero header={data.header} />
+            <IndustriesMain mainData={data} />
+          </section>
+            <IndustriesRequestDemo />
       </Layout>
     )
   }
