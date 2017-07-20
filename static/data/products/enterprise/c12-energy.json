@@ -6,21 +6,28 @@
   "header": {
     "group": "Oil & Gas",
     "title": "C12-energy",
-    "desc": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery."
+    "desc": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery.",
+    "sponsors": [{
+      "graphic": "https://plot.ly/static/enterprise/img/customer_stories/c12.f4108d25554b.jpg",
+      "label": "C12-energy",
+      "copy": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery.",
+      "quote": "We use Plotly to create industry-standard graphs for board meeting presentations and audit reports."
+    }],
+    "quotes": [{
+        "desc": "We use Plotly to create industry-standard graphs for board meeting presentations and audit reports."
+      }
+    ]
   },
   "sponsors": [{
     "graphic": "https://plot.ly/static/enterprise/img/customer_stories/c12.f4108d25554b.jpg",
-    "label": "C12-energy"
+    "label": "C12-energy",
+    "copy": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery.",
+    "quote": "We use Plotly to create industry-standard graphs for board meeting presentations and audit reports."
   }],
   "sections": [{
       "image": "https://plot.ly/static/enterprise/img/customer_stories/c12-top.782cbe9b0fdd.png",
       "title": "",
       "body": "The C12 technology team used Python, Javascript, and Plotly.js to develop C12's real-time data acquisition, visualization, and analysis platform. Everyone at the company uses the software, from engineers and accountants in the main office to operators in the field."
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/customer_stories/c12-bottom-d.e543268ef25f.jpg",
-      "title": "For more on how C12 is Plotly.js and Plotly cloud, see these tutorials:",
-      "body": "<a href='https://plot.ly/plotly.js/' target='_blank' class='link'>Plotly.js showcase </a>"
     }
   ],
   "quotes": [{
@@ -31,5 +38,6 @@
       "author": "Dr. Jenya Kirshtein Scientific Software Engineering",
       "desc": "Plotly is what our users see before having their morning coffee. We assemble data from automated measurement acquisition systems and submitted by operators in the field, and drop it onto Plotly graphs that are very intuitive and easy to use. Engineers and operators use Plotly to flag and discuss production issues, and it allows them to act on problems that would otherwise take days to be noticed. Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions."
     }
-  ]
+  ],
+  "mainBody":"<p>Plotly is what our users see before having their morning coffee. We assemble data from automated measurement acquisition systems and submitted by operators in the field, and drop it onto Plotly graphs that are very intuitive and easy to use. Engineers and operators use Plotly to flag and discuss production issues, and it allows them to act on problems that would otherwise take days to be noticed. </p> <p>\"Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions.\"</p><p>— Dr. Jenya Kirshtein <br/>Scientific Software Engineering<p><img src='/static/images/c12-bottom-d.e543268ef25f.jpg'> <img src='/static/images/bottom-customer-c12-energy.png'> </p> <img src='/static/images/c12-bottom-c.af0ecf06c388.jpg'><p>For more on how C12 is Plotly.js and Plotly cloud, see these tutorials: <br><a href='https://plot.ly/plotly.js/'> Plotly.js showcase</a></p>"
 }
