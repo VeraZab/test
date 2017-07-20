@@ -18,12 +18,6 @@
       }
     ]
   },
-  "sponsors": [{
-    "graphic": "https://plot.ly/static/enterprise/img/customer_stories/c12.f4108d25554b.jpg",
-    "label": "C12-energy",
-    "copy": "C12 Energy is changing the way that information flows through the trillion dollar oil industry as they embark on some of the world’s most environmentally responsible oilfield projects, capturing industrial carbon dioxide and using it for profitable enhanced oil recovery.",
-    "quote": "We use Plotly to create industry-standard graphs for board meeting presentations and audit reports."
-  }],
   "sections": [{
       "image": "https://plot.ly/static/enterprise/img/customer_stories/c12-top.782cbe9b0fdd.png",
       "title": "",
