@@ -1,5 +1,6 @@
 import {ContentSection, ContentPane, Body, Title} from '../../components/content-section/content-section';
 import {Grid, GridItem} from '../../components/grid/grid';
+import {DeviceWrapper} from '../../components/elements/DeviceWrapper/DeviceWrapper';
 
 class IndustriesMain extends React.Component {
 
@@ -52,7 +53,7 @@ class IndustriesMain extends React.Component {
       return(
         <ContentSection key={key}>
               <ContentPane half graphic>
-                    <img src={section.image} alt="Section Image"/>
+                    <DeviceWrapper image={section.image} alt={'Section Image'} deviceType={'browser'} deviceColor={'lightgrey'}></DeviceWrapper>
               </ContentPane>
               <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
                   <Title> {section.title}</Title>
