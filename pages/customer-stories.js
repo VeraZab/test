@@ -4,9 +4,12 @@ import Buttons from '../components/buttons/buttons';
 import data from  '../static/data/products/customer-stories.json';
 import CustomerServiceHero from './customer-stories/hero';
 import CustomerServiceMain from './customer-stories/main';
+import styles from './customer-stories/customer-stories.styles.scss'
+
 
 export default () => (
     <Layout meta={data.meta}>
+      <style dangerouslySetInnerHTML={{__html: styles}}/>
         <CustomerServiceHero header={data.header} />
         <ContentSection className="background-color-light-1 center">
           <ContentPane full center center-vertically>
