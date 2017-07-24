@@ -12,11 +12,9 @@
       "label": "Goji"
     }],
     "quotes": [{
-        "author": "",
         "desc": "Before Plotly, we were entangled in an enterprise BI quagmire. Our system was large, expensive to maintain in both time and effort, and slow to adapt to our fast-changing needs. Plotly was the “big BI” killer we had been waiting for."
       },
       {
-        "author": "",
         "desc": "Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served."
       }
     ]

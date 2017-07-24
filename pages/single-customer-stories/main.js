@@ -12,6 +12,8 @@ class IndustriesMain extends React.Component {
     const data = this.props.mainData;
     const section = data.sections[0];
 
+
+
     return (
       <ContentSection className="background-color-light-2">
             <ContentPane graphic>
@@ -27,20 +29,6 @@ class IndustriesMain extends React.Component {
             </ContentPane>
       </ContentSection>
     )
-  }
-
-  getQuoteWithIndexFromData(index, data) {
-    const contentSectionClass = (index % 2) ? 'background-color-light-2' : '';
-    return (data.quotes[index]) ? <ContentSection className={contentSectionClass}>
-        <ContentPane full center-vertically text center>
-            <Title>
-                "{data.quotes[index].desc}"
-            </Title>
-            <Body>
-            <p>{data.quotes[index].author}</p>
-            </Body>
-        </ContentPane>
-    </ContentSection> : null;
   }
 }
 
