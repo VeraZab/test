@@ -49,7 +49,7 @@ class IndustriesMain extends React.Component {
       return(
         <ContentSection key={key}>
               <ContentPane half graphic>
-                    <DeviceWrapper image={section.image} alt={'Section Image'} deviceType={'browser'} deviceColor={'lightgrey'}></DeviceWrapper>
+                    <DeviceWrapper image={section.image} alt={'Section Image'} deviceType={section.device} deviceColor={'lightgrey'}></DeviceWrapper>
               </ContentPane>
               <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
                   <Title> {section.title}</Title>
