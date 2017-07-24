@@ -1,6 +1,5 @@
 .single-customer-stories {
-
-  margin: 100px 40px;
+  margin: 100px 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -31,6 +30,7 @@
   }
 
   @media only screen and (min-width: 1060px) {
+    margin: 100px 40px;
     .hero-top {
       display: block;
     }
