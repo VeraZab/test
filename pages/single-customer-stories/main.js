@@ -13,7 +13,7 @@ class IndustriesMain extends React.Component {
     const section = data.sections[0];
 
     return (
-      <ContentSection background-color-light-2>
+      <ContentSection className="background-color-light-2">
             <ContentPane graphic>
             <Title>{data.header.group}</Title>
             <img src={section.image} alt="Section Image"/>
