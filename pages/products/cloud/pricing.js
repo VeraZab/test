@@ -35,7 +35,7 @@ const pricingLevels = [
                 value: 'PNG and JPEG Export'
             },
             {
-                value: '<strong>250</strong> API Calls per day'
+                value: '<strong>100</strong> Chart and Image Saves per day'
             },
             {
                 value: 'Connect to <strong>7</strong> Data Sources'
@@ -77,7 +77,7 @@ const pricingLevels = [
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
-                value: '<strong>5000</strong> API Calls per day'
+                value: '<strong>1000</strong> Chart and Image Saves per day'
             },
             {
                 value: 'Connect to <strong>11</strong> Data Sources'
@@ -119,7 +119,7 @@ const pricingLevels = [
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
-                value: '<strong>5000</strong> API Calls per day'
+                value: '<strong>1000</strong> Chart and Image Saves per day'
             },
             {
                 value: 'Connect to <strong>11</strong> Data Sources'
@@ -162,7 +162,7 @@ const pricingLevels = [
             }
             ,
             {
-                value: '<strong>10,000</strong> API Calls per day'
+                value: '<strong>10,000</strong> Chart and Image Saves per day'
             }
             ,
             {
