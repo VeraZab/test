@@ -3,27 +3,31 @@ import PropTypes from 'prop-types';
 
 export class DeviceWrapper extends React.Component {
   render() {
-    const { deviceType, deviceColor, image } = this.props,
-      SpecificDeviceWrapper = devices[deviceType];
+    const { deviceColor, content } = this.props,
+      SpecificDeviceWrapper = devices[content.device];
 
     return (
       <div className={'device-wrapper'} style={SpecificDeviceWrapper.deviceWrapperStyles}>
         <div
           className={'device-svg'}
-          data-device-type={deviceType}
+          data-device-type={content.device}
           data-device-color={deviceColor}
           dangerouslySetInnerHTML={{ __html: SpecificDeviceWrapper.svg }}
         />
-        <SpecificDeviceWrapper image={image} deviceColor={deviceColor} />
+        <SpecificDeviceWrapper
+          image={content.image}
+          videoSources={content.sources}
+          deviceColor={deviceColor}
+          contentType={content.type}
+        />
       </div>
     );
   }
 }
 
 DeviceWrapper.propTypes = {
-  deviceType: PropTypes.string,
-  deviceColor: PropTypes.string,
-  image: PropTypes.string
+  content: PropTypes.object,
+  deviceColor: PropTypes.string
 };
 
 class BrowserContentFrame extends React.Component {
@@ -35,11 +39,15 @@ class BrowserContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content browser frame --${deviceColor}`}>
-        <img className={''} src={image} />
-      </div>
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="browser"
+      />
     );
   }
 }
@@ -53,11 +61,15 @@ class IpadContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content ipad frame --${deviceColor}`}>
-        <img className={''} src={image} />
-      </div>
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="ipad"
+      />
     );
   }
 }
@@ -74,11 +86,15 @@ class IpythonContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content ipython  --${deviceColor}`}>
-        <img className={''} src={image} />
-      </div>
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="ipython"
+      />
     );
   }
 }
@@ -92,11 +108,15 @@ class DesktopContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content desktop  --${deviceColor}`}>
-        <img className={''} src={image} />
-      </div>
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="desktop"
+      />
     );
   }
 }
@@ -111,11 +131,15 @@ class LaptopContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content laptop  --${deviceColor}`}>
-        <img className={''} src={image} />
-      </div>
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="laptop"
+      />
     );
   }
 }
@@ -128,10 +152,40 @@ class IphoneContentFrame extends React.Component {
   };
 
   render() {
-    const { image, deviceColor } = this.props;
+    const { image, videoSources, contentType, deviceColor } = this.props;
     return (
-      <div className={`frame-content iphone  --${deviceColor}`}>
-        <img className={''} src={image} />
+      <ContentFrame
+        image={image}
+        videoSources={videoSources}
+        contentType={contentType}
+        deviceColor={deviceColor}
+        device="iphone"
+      />
+    );
+  }
+}
+
+class ContentFrame extends React.Component {
+  render() {
+    const { image, videoSources, contentType, deviceColor, device } = this.props;
+    return (
+      <div className={`frame-content ${device} frame --${deviceColor}`}>
+        {contentType === 'video'
+          ? <div className="video-wrapper">
+              <video
+                id="editor-video"
+                autoPlay="autoplay"
+                preload="auto"
+                loop="true"
+                className="device-content"
+                style={{ width: '100%' }}
+              >
+                <source src={videoSources[0]} type="video/mp4" />
+                <source src={videoSources[1]} type="video/webm" />
+                <img src={videoSources[2]} />
+              </video>
+            </div>
+          : <img src={image} />}
       </div>
     );
   }

@@ -50,7 +50,7 @@ class IndustriesMain extends React.Component {
         <ContentSection key={key}>
               <ContentPane half graphic>
                     { 
-                      section.images.map((image, index) => <DeviceWrapper key={index} image={image.image} alt={'Section Image'} deviceType={image.device} deviceColor={'lightgrey'}></DeviceWrapper>)
+                      section.content.map((item, index) => <DeviceWrapper key={index} content={item} alt={'Section Image'} deviceColor={'lightgrey'}></DeviceWrapper>)
                     }
               </ContentPane>
               <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
