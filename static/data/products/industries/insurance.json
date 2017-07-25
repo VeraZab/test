@@ -60,8 +60,12 @@
     {
       "content": [{
         "device": "ipad",
-        "image": "//plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
-        "type": "image"
+        "type": "video",
+        "sources": [
+          "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.f20dd1581b6f.mp4",
+          "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.a590c09a4c2f.webm",
+          "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg"
+        ]
       }],
       "title": "Comparing sales performance by geography",
       "body": "Plotly choropleth and bubble maps are ideal for comparing regional sales performance. Plotly maps are drawn in D3.js, but can be made in Excel or a language familiar to financial analysts such as R, Python, or MATLAB."
