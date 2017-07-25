@@ -1,26 +1,7 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
+import {HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions} from '../../components/hero/hero';
 import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
-
-const HeroWrapperStyle = {
-    backgroundSize: '1640px',
-    backgroundPosition: '50% 80%',
-    backgroundRepeat: 'no-repeat'
-};
-
-const HeroBottomStyles = {
-    paddingBottom: '0px',
-    paddingTop: '20px'
-};
-
-const HeroSubTitle = {
-  textTransform: 'uppercase',
-  color: '#9ce9ff',
-  letterSpacing: '2px',
-  fontWeight: 300,
-  fontSize: '12px',
-};
 
 const header = {
     sitename: 'Plotly',
@@ -49,23 +30,29 @@ class IndustriesHero extends React.Component {
         document.body.classList.remove('no-scroll');
     }
 
+    getQuoteWithIndexFromData(index, header) {
+      return (header.quotes[index]) ? <p className="single-customer-stories__quote">"{header.quotes[index].desc}"</p>
+       : null;
+    }
+
     render() {
         const header = this.props.header;
+        const sponsors = this.props.header.sponsors;
+        const quoteItemOne = this.getQuoteWithIndexFromData(0, header);
+        const quoteItemTwo = this.getQuoteWithIndexFromData(1, header);
+        const gridItems = <img src={sponsors[0].graphic} alt={sponsors[0].label} />;
 
         return (
-          <Hero heroWrapperStyle={HeroWrapperStyle}>
-              <HeroTop>
-                  <HeroMessaging>
-                      <HeroSubtitle style={HeroSubTitle} children={header.group} />
-                      <HeroTitle children={header.title} />
-                      <HeroSubtitle children={header.desc} />
-                  </HeroMessaging>
-                  <HeroActions>
-                  </HeroActions>
-              </HeroTop>
-              <HeroBottom style={HeroBottomStyles}>
-              </HeroBottom>
-          </Hero>
+          <HeroTop>
+              <HeroMessaging>
+                  {gridItems}
+                  <p className="single-customer-stories__desc">{header.desc}</p>
+                  {quoteItemOne}
+                  {quoteItemTwo}
+              </HeroMessaging>
+              <HeroActions>
+              </HeroActions>
+          </HeroTop>
         );
     }
 }

@@ -1,0 +1,38 @@
+.single-customer-stories {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  .hero-top {
+    display: none;
+    max-width: 220px;
+    margin-right: 100px;
+  }
+  .content-section:nth-of-type(odd) {
+    background-color: #fff;
+    margin-top: 0;
+  }
+
+  .content-section-wrapper {
+    padding-top: 0;
+  }
+
+  .main-body {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  @media only screen and (min-width: 1060px) {
+    margin: 100px 40px;
+    .hero-top {
+      display: block;
+    }
+  }
+}

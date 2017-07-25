@@ -4,16 +4,17 @@ import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
 const HeroWrapperStyle = {
-    // backgroundImage: 'url(/static/images/banner-splash.jpg)',
-    backgroundSize: '1640px',
-    backgroundPosition: '50% 80%',
-    backgroundRepeat: 'no-repeat'
+    backgroundSize: '1750px',
+    backgroundPosition: '50% 100%',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: 'url("/static/enterprise/img/customer-stories/enterprise-customer-stories-banner.jpg")'
 };
 
 const HeroBottomStyles = {
     paddingBottom: '0px',
     paddingTop: '20px'
 };
+
 
 const header = {
     sitename: 'Plotly',

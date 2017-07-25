@@ -6,57 +6,22 @@
   "header": {
     "group": "Insurance",
     "title": "Goji",
-    "desc": "Goji combines the personalized, comparison shopping experience of a local agent with the ease and convenience of buying directly from a carrier. We don’t sell or push one brand of insurance — our priority is to find the right company for your particular situation. Our representatives are licensed insurance agents, not salespeople. We’re consultants who tailor each quote to fit your individual needs."
-  },
-  "sponsors": [{
-    "graphic": "https://plot.ly/static/enterprise/img/customer_stories/goji.761e66d07096.jpg",
-    "label": "Goji"
-  }],
-  "sections": [{
-      "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-top.ed71212c1dda.jpg",
-      "title": "The Big BI killer we'd been waiting for.",
-      "body": "The data science team at Goji – a Boston-based automobile insurance provider – employs Python scripts to combine and analyze data from the company’s call centers, CRM, and website traffic. They then visualize and share the data with their colleagues using Plotly Enterprise and an internal website. Screens throughout Goji’s offices display Plotly dashboards that update in real time. It’s smart, clear, and easy for everyone in the office to follow. When Goji made the decision to replace monolithic, GUI - based data analysis software with Plotly Enteprise and a suite of lightweight, automated Python scripts, the result was a data science stack that was less expensive and more flexible.And, as an added bonus, “no one at the company complains about it anymore.”Plotly Enterprise equips teams to answer tomorrow’ s questions instead of yesterday’ s demo by connecting to real back - ends– R, MATLAB, and Python– that don’ t limit data sources to a predefined architecture.Like other data science developers, the guys in Goji’ s team now have big smiles on their faces because their work is creative, agile, and exploratory.The days of coming up with hacks to respond to issues that monolithic BI tools were not designed to sort out are long gone.You go, Goji!"
-    },
-    {
-      "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-bottom-b.2fb95bbd2868.jpg",
-      "title": "Dashboards for utility-scale batteries",
-      "body": "For more on how Goji is using Plotly Enterprise, see these tutorials on <a href='http://moderndata.plot.ly/' target='_blank'>Modern Data</a>: <br><a href='http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/' target='_blank' class='link'>Graphing data from a MySQL database in Python </a><br><a href='http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/' target='_blank' class='link'> Update Plotly charts and dashboards with cron jobs and Python</a><br><a href='http://moderndata.plot.ly/create-a-plotly-dashboards-in-under-10-minutes/' target='_blank' class='link'>Create a Plotly dashboard in under 10 minutes</a>"
-    }
-  ],
-  "quotes": [{
-      "author": "",
-      "desc": "Before Plotly, we were entangled in an enterprise BI quagmire. Our system was large, expensive to maintain in both time and effort, and slow to adapt to our fast-changing needs. Plotly was the “big BI” killer we had been waiting for."
-    },
-    {
-      "author": "",
-      "desc": "Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served."
-    }
-  ],
-  "images": {
-    "links": [{
-        "title": "Image",
-        "url": "https://plot.ly/products/enterprise/customer-stories/c12-energy/"
+    "desc": "Goji combines the personalized, comparison shopping experience of a local agent with the ease and convenience of buying directly from a carrier. We don’t sell or push one brand of insurance — our priority is to find the right company for your particular situation. Our representatives are licensed insurance agents, not salespeople. We’re consultants who tailor each quote to fit your individual needs.",
+    "sponsors": [{
+      "graphic": "https://plot.ly/static/enterprise/img/customer_stories/goji.761e66d07096.jpg",
+      "label": "Goji"
+    }],
+    "quotes": [{
+        "desc": "Before Plotly, we were entangled in an enterprise BI quagmire. Our system was large, expensive to maintain in both time and effort, and slow to adapt to our fast-changing needs. Plotly was the “big BI” killer we had been waiting for."
       },
       {
-        "title": "Image",
-        "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
-      },
-      {
-        "title": "Image",
-        "url": "http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/"
-      },
-      {
-        "title": "Image",
-        "url": "https://plot.ly/javascript/"
-      },
-      {
-        "title": "Image",
-        "url": "http://plot.ly/~greentechmedia"
-      },
-      {
-        "title": "Image",
-        "url": "http://blog.plot.ly/post/99540799397/eight-graphs-you-should-see-on-global-warming"
+        "desc": "Plotly is a breath of fresh air in a BI space has become bloated, noisy, frustrating, and inflexible. It embraces increasingly dominant open source data analysis tools such as IPython, and is embeddable wherever HTML is served."
       }
     ]
-  }
+  },
+  "sections": [{
+    "image": "https://plot.ly/static/enterprise/img/customer_stories/goji-top.ed71212c1dda.jpg",
+    "title": "The Big BI killer we'd been waiting for."
+  }],
+  "mainBody": "<h2>\"The Big BI killer we'd been waiting for.\"</h2><p>The data science team at Goji – a Boston-based automobile insurance provider – employs Python scripts to combine and analyze data from the company’s call centers, CRM, and website traffic. They then visualize and share the data with their colleagues using Plotly Enterprise and an internal website. Screens throughout Goji’s offices display Plotly dashboards that update in real time. It’s smart, clear, and easy for everyone in the office to follow.</p><p>When Goji made the decision to replace monolithic, GUI-based data analysis software with Plotly Enteprise and a suite of lightweight, automated Python scripts, the result was a data science stack that was less expensive and more flexible. And, as an added bonus, “no one at the company complains about it anymore.” Plotly Enterprise equips teams to answer tomorrow’s questions instead of yesterday’s demo by connecting to real back-ends – R, MATLAB, and Python – that don’t limit data sources to a predefined architecture. Like other data science developers, the guys in Goji’s team now have big smiles on their faces because their work is creative, agile, and exploratory. The days of coming up with hacks to respond to issues that monolithic BI tools were not designed to sort out are long gone. You go, Goji!</p> <img src='/static/images/goji-bottom.png'> <p>For more on how Goji is using Plotly Enterprise, see these tutorials on <a href='http://moderndata.plot.ly/'>Modern Data:</a></p><br/> <a href='http://moderndata.plot.ly/graph-data-from-mysql-database-in-python/'>Graphing data from a MySQL database in Python</a><br/><a href='http://moderndata.plot.ly/update-plotly-charts-with-cron-jobs-and-python/'>Update Plotly charts and dashboards with cron jobs and Python </a><br/><a href='http://moderndata.plot.ly/create-a-plotly-dashboards-in-under-10-minutes/'>Create a Plotly dashboard in under 10 minutes</a>"
 }

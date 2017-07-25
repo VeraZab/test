@@ -4,7 +4,7 @@
   },
   "header": {
     "title": "C-12 Energy",
-    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions."
+    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. — Dr. Jenya Kirshtein Scientific Software Engineering"
   },
   "body": {
     "title": "Plotly is making an impact in a wide range of industries",
@@ -18,15 +18,6 @@
       "label": "Energy",
       "cta": "Read Stories →",
       "url": "/products/enterprise/customer-stories/c12-energy"
-    },
-    {
-      "id": "reseach-lab",
-      "style": {
-        "backgroundImage": "url(/static/images/industries/thumbnail-insurance.9a3589a826b4.jpg)", "maxHeight": "275px"
-      },
-      "label": "Reseach Lab",
-      "cta": "Read Stories →",
-      "url": "/products/enterprise/customer-stories/vtt-finland"
     },
     {
       "id": "insurance",

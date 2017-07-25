@@ -28,7 +28,7 @@ const buttons = [
                 type: 'mdi',
                 src: 'plus'
             },
-            target: '_self',
+            target: '_blank',
             link: '/create',
             button: {
                 classes: 'button button-primary'

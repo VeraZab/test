@@ -60,7 +60,6 @@ app.prepare()
           renderAndCache(req, res, '/highcharts-alternative')
         })
 
-
         server.get('*', (req, res) => {
             return handle(req, res)
         })

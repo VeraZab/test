@@ -51,7 +51,7 @@ export default () => (
                 <Body>
                 <p>
                     Add your charts to Plotly's best-in-class <Link
-                    href="/products/dashboards/"><a>dashboards</a></Link> and share them with simple, secure links.
+                    href="/dashboards/"><a>dashboards</a></Link> and share them with simple, secure links.
                 </p>
                 </Body>
             </ContentPane>
@@ -68,9 +68,6 @@ export default () => (
                     Screenshots
                 </Title>
                 <Body>
-                <p>
-                    Share your presentation online with public or secret links.
-                </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic label="MySQL: Tesla Supercharger Stations" link="https://plot.ly/~jackp/16939/"
                         image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png"/>
