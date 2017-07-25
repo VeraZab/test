@@ -81,8 +81,12 @@
     {
       "content": [{
         "device": "laptop",
-        "image": "https://plot.ly/static/enterprise/img/industries/videos/globe.3045ace10490.mp4",
-        "type": "image"
+        "sources": [
+          "https://plot.ly/static/enterprise/img/industries/videos/globe.3045ace10490.mp4",
+          "https://plot.ly/static/enterprise/img/industries/videos/globe.6f2dbf3e26ea.webm",
+          "https://plot.ly/static/enterprise/img/industries/videos/globe.d5c6c719a45c.jpg"
+        ],
+        "type": "video"
       }],
       "title": "3D Flightpaths in Plotly and MATLAB",
       "body": "Plotly has the most advanced graphing library among aerospace vendors. Create dashboards and reports with MATLAB and Python that are publishable to corporate intranet as well as print. <a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>Plotting 3d flight paths in MATLAB</a>"
@@ -90,8 +94,12 @@
     {
       "content": [{
         "device": "desktop",
-        "image": "https://plot.ly/static/enterprise/img/industries/videos/streaming.b0dcfc168e9c.mp4",
-        "type": "image"
+        "sources": [
+          "https://plot.ly/static/enterprise/img/industries/videos/streaming.b0dcfc168e9c.mp4",
+          "https://plot.ly/static/enterprise/img/industries/videos/streaming.1bc59ca33f45.webm",
+          "https://plot.ly/static/enterprise/img/industries/videos/streaming.3b4a71b628c0.jpg"
+        ],
+        "type": "video"
       }],
       "title": "Sensor streaming at Air Force Hackathon",
       "body": "Plotly helped sponsor and instruct at the first ever US Air Force Hackathon. Participants were taught how to stream data from Arduino sensors to Plotly graphs. <a href='http://plot.ly/arduino/dht22-temperature-tutorial/'>Streaming data from Arduino to Plotly</a>"
