@@ -4,7 +4,18 @@ import PropTypes from 'prop-types';
 export class DeviceWrapper extends React.Component {
   render() {
     const { deviceColor, content } = this.props,
-      device = devices[content.device];
+      device = devices[content.device],
+      contentFrame = (
+        <ContentFrame
+          image={content.image}
+          videoSources={content.sources}
+          deviceColor={deviceColor}
+          contentType={content.type}
+          device={content.device}
+        />
+      );
+
+    if (!device) return contentFrame;
 
     return (
       <div className={'device-wrapper'} style={device.styles}>
@@ -14,13 +25,7 @@ export class DeviceWrapper extends React.Component {
           data-device-color={deviceColor}
           dangerouslySetInnerHTML={{ __html: device.svg }}
         />
-        <ContentFrame
-          image={content.image}
-          videoSources={content.sources}
-          deviceColor={deviceColor}
-          contentType={content.type}
-          device={content.device}
-        />
+        {contentFrame}
       </div>
     );
   }
@@ -33,10 +38,9 @@ DeviceWrapper.propTypes = {
 
 class ContentFrame extends React.Component {
   render() {
-    const { image, videoSources, contentType, deviceColor, device } = this.props;
-    return (
-      <div className={`frame-content ${device} frame --${deviceColor}`}>
-        {contentType === 'video'
+    const { image, videoSources, contentType, deviceColor, device } = this.props,
+      content =
+        contentType === 'video'
           ? <div className="video-wrapper">
               <video
                 id="editor-video"
@@ -51,7 +55,13 @@ class ContentFrame extends React.Component {
                 <img src={videoSources[2]} />
               </video>
             </div>
-          : <img src={image} />}
+          : <img src={image} />;
+
+    if (!device) return content;
+
+    return (
+      <div className={`frame-content ${device} frame --${deviceColor}`}>
+        {content}
       </div>
     );
   }
@@ -108,5 +118,20 @@ const devices = {
     },
     svg:
       '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="344.6 0 270.8 560" enable-background="new 344.6 0 270.8 560" xml:space="preserve"><g><path fill="#b3bac9" d="M577.6,560H382.4c-20.8,0-37.8-17.1-37.8-37.9V37.8c0-20.8,17-37.8,37.8-37.8h195.2c20.8,0,37.8,17,37.8,37.8v484.3C615.4,542.9,598.4,560,577.6,560z M382.4,2.5c-19.4,0-35.3,15.8-35.3,35.3v484.3c0,19.4,15.8,35.4,35.4,35.4h195.2c19.4,0,35.4-15.8,35.4-35.4V37.8c0-19.4-15.8-35.4-35.4-35.4H382.4V2.5z"></path><path fill="#b3bac9" d="M480.6,538.8c-10.7,0-19.3-8.7-19.3-19.3c0-10.7,8.7-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3S491.2,538.8,480.6,538.8z M480.6,502.4c-9.3,0-17,7.6-17,17c0,9.3,7.6,17,17,17s17-7.6,17-17C497.6,510,490,502.4,480.6,502.4z"></path><path fill="#b3bac9" d="M507.1,39h-54.1c-3.2,0-5.9-2.6-5.9-5.9v-0.4c0-3.2,2.6-5.9,5.9-5.9h54.1c3.2,0,5.9,2.6,5.9,5.9v0.4C512.9,36.4,510.3,39,507.1,39z M452.9,29.3c-1.9,0-3.5,1.5-3.5,3.5v0.4c0,1.9,1.5,3.5,3.5,3.5h54.1c1.9,0,3.5-1.6,3.5-3.5v-0.4c0-1.9-1.5-3.5-3.5-3.5H452.9z"></path></g></svg>'
+  },
+  'iphone-90': {
+    styles: {
+      left: '20%',
+      width: '85%'
+    },
+    svg:
+      '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="200 144.6 560 270.8" enable-background="new 200 144.6 560 270.8" xml:space="preserve"><g><path fill="#9bd1ff" d="M200,377.6V182.4c0-20.8,17.1-37.8,37.9-37.8h484.3c20.8,0,37.8,17,37.8,37.8v195.2c0,20.8-17,37.8-37.8,37.8H237.9C217.1,415.4,200,398.4,200,377.6z M757.5,182.4c0-19.4-15.8-35.3-35.3-35.3H237.9c-19.4,0-35.4,15.8-35.4,35.4v195.2c0,19.4,15.8,35.4,35.4,35.4h484.3c19.4,0,35.4-15.8,35.4-35.4V182.4H757.5z"></path><path fill="#9bd1ff" d="M221.2,280.6c0-10.7,8.7-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3c0,10.7-8.7,19.3-19.3,19.3C229.9,299.9,221.2,291.2,221.2,280.6z M257.6,280.6c0-9.3-7.6-17-17-17c-9.3,0-17,7.6-17,17s7.6,17,17,17C250,297.6,257.6,290,257.6,280.6z"></path><path fill="#9bd1ff" d="M721,307.1v-54.1c0-3.2,2.6-5.9,5.9-5.9h0.4c3.2,0,5.9,2.6,5.9,5.9v54.1c0,3.2-2.6,5.9-5.9,5.9h-0.4C723.6,312.9,721,310.3,721,307.1z M730.7,252.9c0-1.9-1.5-3.5-3.5-3.5h-0.4c-1.9,0-3.5,1.5-3.5,3.5v54.1c0,1.9,1.6,3.5,3.5,3.5h0.4c1.9,0,3.5-1.5,3.5-3.5V252.9z"></path></g></svg>'
+  },
+  report: {
+    styles: {
+      width: '75%'
+    },
+    svg:
+      '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="264.1 0 431.7 560" enable-background="new 264.1 0 431.7 560" xml:space="preserve"><path fill="#dcdddd" d="M622.9,2.4v68.4v2.2h2.4h68v484.6H266.6V2.4H622.9 M625.3,0H264.1v560h431.7V70.6h-70.5V0L625.3,0z"></path><path fill="#dcdddd" d="M640.4,6.1l49.8,51.2h-49.8V6.1 M638,0v59.7h58.1L638,0L638,0z"></path></svg>'
   }
 };
