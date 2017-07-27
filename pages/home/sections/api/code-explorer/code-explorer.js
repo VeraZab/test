@@ -1,4 +1,4 @@
-import styles from './code-explorer.scss';
+import styles from '../../../../../components/code-explorer/code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
@@ -82,8 +82,8 @@ const languages = [
         slug: 'python',
         language: 'python',
         code: pythonCode,
-        graphic_src: '/static/images/python_graphic.gif',
-        example_url: '/static/images/python_graphic.gif',
+        graphic_src: 'https://images.plot.ly/static/marketing/python_graphic.gif',
+        example_url: 'https://images.plot.ly/static/marketing/python_graphic.gif',
         button_text: 'Plotly Python API',
         button_link: 'http://google.com/link'
     },
@@ -93,8 +93,8 @@ const languages = [
         slug: 'r',
         language: 'r',
         code: rCode,
-        graphic_src: '/static/images/r_graphic.gif',
-        example_url: '/static/images/r_graphic.gif',
+        graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
+        example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
         button_text: 'Plotly R API',
         button_link: 'http://google.com'
     },
@@ -104,8 +104,8 @@ const languages = [
         slug: 'matlab',
         language: 'matlab',
         code: matlabCode,
-        graphic_src: '/static/images/matlab_graphic.gif',
-        example_url: '/static/images/matlab_graphic.gif',
+        graphic_src: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
+        example_url: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
         button_text: 'Plotly matlab API',
         button_link: 'http://google.com'
     },
@@ -115,8 +115,8 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: '/static/images/javascript_graphic.gif',
-        example_url: '/static/images/javascript_graphic.gif',
+        graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
+        example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'http://google.com'
     }
@@ -193,7 +193,7 @@ export default class CodeExplorer extends React.Component {
                             </div>
                             <div className="code-explorer-editor-actions">
                                 <div className="buttons">
-                                    <a href={this.state.language.button_link} className="button button-primary">
+                                    <a href={this.state.language.button_link} className="button button-primary button-emerald">
                                         {this.state.language.button_text} →
                                     </a>
                                 </div>

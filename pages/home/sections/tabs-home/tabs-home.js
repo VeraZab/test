@@ -15,8 +15,8 @@ const tabsData = [
             graphic_type: "image",
             graphic_src: "https://s3-us-west-1.amazonaws.com/plotly-tutorials/plotly-marketing-pages/images/new-branding/graphics/plotly_home_graph.png",
             description: "Easily turn your data into eye-catching and informative graphics using our sophisticated, open source, visualization library and our online chart creation tool.",
-            button_text: "Create your first chart",
-            button_link: "https://plot.ly/create/"
+            button_text: "Create your first Chart",
+            button_link: "/online-chart-maker/"
         }
     },
     {
@@ -27,24 +27,24 @@ const tabsData = [
         content: {
             heading: "Dazzling Dashboards",
             graphic_type: "image",
-            graphic_src: "/static/images/powerful_dashboards.png",
+            graphic_src: "https://images.plot.ly/static/marketing/powerful_dashboards.png",
             description: "These aren’t your dad’s dashboards. Plotly dashboards are web-based, scriptable in Python and R, and feature Plotly’s best-in-class D3 graphics.",
-            button_text: "Create your first dashboard",
-            button_link: "https://plot.ly/dashboard/create"
+            button_text: "Create your first Dashboard",
+            button_link: "/dashboards/"
         }
     },
     {
         id: "3",
-        title: "Make a Presentation",
+        title: "Make a Slide Deck",
         slug: "make-a-presentation",
         icon: "https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_presentation_28@2x.png",
         content: {
-            heading: "Spectacle Presentations",
+            heading: "Spectacle Slide Decks",
             graphic_type: "image",
-            graphic_src: "/static/images/stunning-presentations.png",
-            description: "Create, present, and share slide decks that have interactive Plotly charts. Coders can create presentations in Python and R or clickers can download Spectacle Editor.",
-            button_text: "Create your first presentation",
-            button_link: "https://plot.ly/organize/home?create=presentation"
+            graphic_src: "https://images.plot.ly/static/marketing/stunning-presentations.png",
+            description: "Create, present, and share online slide decks that have interactive Plotly charts.",
+            button_text: "Create your first Slide Deck",
+            button_link: "/powerpoint-online"
         }
     }
 ];
@@ -272,7 +272,9 @@ export default class TabsHome extends React.Component {
                                     </p>
                                     <div className="buttons">
                                         <a href={tab.content.button_link} target="_blank" className="button button-primary">
-                                            {tab.content.button_text}
+                                            <span className="button-label">
+                                                {tab.content.button_text}
+                                            </span>
                                         </a>
                                     </div>
                                 </div>

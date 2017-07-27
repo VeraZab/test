@@ -8,19 +8,29 @@ class IndustriesMain extends React.Component {
 
   render() {
     const story = this.props.story;
+
+    const removeActionOnLink = {
+      transform: 'initial',
+      color: '#fff'
+    };
+
     return (
+          <div>
             <div className="card card-with-image">
               <div className="card-wrapper">
-                <div className="card-image" style={story.style}>
-                  <div className="card-image-label">
-                    {story.label}
+                <a href={story.url}>
+                  <div className="card-image" style={story.style}>
+                    <div className="card-image-label">
+                      {story.label}
+                    </div>
                   </div>
-                </div>
-                <div className="card-action">
-                  <a className="card-action-link" href={story.url}>{story.cta}</a>
+                </a>
+                <div className="card-action" style={removeActionOnLink}>
+                  <a style={removeActionOnLink} className="card-action-link" href={story.url}>{story.cta}</a>
                 </div>
               </div>
             </div>
+          </div>
     )
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import 'isomorphic-fetch'
 import Layout from '../components/global/layout/layout';
 import {ContentSection, Body} from '../components/content-section/content-section';
@@ -23,11 +22,9 @@ export default class extends React.Component {
     const data = this.props.data;
     return (
       <Layout meta={data.header.title}>
-        <IndustriesHero header={data.header} />
+        <IndustriesHero header={data.header} style={data.style} />
         <IndustriesMain mainData={data} />
         <IndustriesRequestDemo />
-
-        {console.log(this.props)}
       </Layout>
     )
   }

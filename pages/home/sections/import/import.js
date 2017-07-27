@@ -12,7 +12,7 @@ export default () => (
               Import
           </Subtitle>
           <Title>
-              Import big data. Or small data.
+              Easily import data to chart
           </Title>
           <Body>
           <p>Connect your data to our platform. Within minutes, start typing SQL.<br /><em>No database?</em> No problem. We also support csv imports and manual data entry.</p>

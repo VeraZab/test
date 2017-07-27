@@ -32,14 +32,14 @@ export default () => (
                 </div>
               </div>
               <div className="card-body">
-                <blockquote>
+                <p>
                   Before Plotly, we were entangled in an enterprise BI quagmire. Our system was
                   large, expensive to maintain in both time and effort, and slow to adapt to our
                   fast-changing needs. Plotly was the 'big BI' killer we had been waiting for.
-                </blockquote>
+                </p>
               </div>
               <div className="card-action">
-                <a className="card-action-link" href="#">Read Full Story →</a>
+                <a className="card-action-link" href="https://plot.ly/products/enterprise/customer-stories/goji/" target="_blank">Read Full Story →</a>
               </div>
             </div>
           </div>
@@ -51,15 +51,15 @@ export default () => (
                 </div>
               </div>
               <div className="card-body">
-                <blockquote>
+                <p>
                   Plotly is at the center of our business development platform, and serves as a
                   starting point for modeling and fitting tools. We can quickly comprehend and
                   analyze huge amounts of data, and use the results to make multi-million-dollar
                   investment decisions.
-                </blockquote>
+                </p>
               </div>
               <div className="card-action">
-                <a className="card-action-link" href="#">Read Full Story →</a>
+                <a className="card-action-link" href="https://plot.ly/products/enterprise/customer-stories/c12-energy/" target="_blank">Read Full Story →</a>
               </div>
             </div>
           </div>

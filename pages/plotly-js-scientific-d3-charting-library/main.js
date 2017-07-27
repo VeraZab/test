@@ -1,42 +1,52 @@
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '../../components/content-section/content-section';
+import {
+    ContentSection,
+    ContentPane,
+    Title,
+    Subtitle,
+    Body,
+    Graphic
+} from '../../components/content-section/content-section';
+import Pricing from './pricing';
 
 export default () => (
     <div>
-        <ContentSection>
+        <ContentSection className="plotlyjs-pricing">
             <ContentPane full center-vertically text center>
-                <Title>
-                    100% Free and Open-Source, Forever
-                    <br />
-                    <small>(MIT license)</small>
-                </Title>
                 <Body>
-                <p>
-                    Plotly.js is 100% Free and open-source. Licensed under the MIT open-source license, any company in
-                    the world can download Plotly.js and use it for their products or internal tools without
-                    restriction. Its all out there and free. <a
-                    href="https://plot.ly/javascript/open-source-announcement/" target="_blank">Read about our
-                    decision to go open-source.</a></p>
-
+                <Pricing/>
                 </Body>
             </ContentPane>
         </ContentSection>
 
 
+
         <ContentSection>
             <ContentPane half graphic>
-                <Graphic
-                    video="https://plot.ly/static/enterprise/img/alternatives/videos/charts.64c819930e25.mp4"/>
+                <Graphic image="https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png" />
             </ContentPane>
             <ContentPane half center-vertically text>
+                <div className="pre-title">
+                    Case Study
+                </div>
                 <Title>
-                    Statistical and engineering charts
-
+                    How we reworked Highcharts for an oil & gas leader
                 </Title>
                 <Body>
                 <p>
-                    Histograms, error bars, box plots, and 3d surface plots. Plotly.js is the only JavaScript charting
-                    library bringing science and engineering visualization to your browser.
+                    C12 Energy, a leader in carbon capture and sequestration, engaged Plotly for custom dashboards in
+                    both its finance and engineering departments.
                 </p>
+                <blockquote className="">
+                    Plotly is at the center of our business development platform, and serves as a starting point for
+                    modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the
+                    results to make multi-million-dollar investment decisions.
+                    <div className="quotee">
+                        <div className="who">&mdash; Dr. Jenya Kirshtein</div>
+                        <div className="title">
+                            Scientific Software Engineer
+                        </div>
+                    </div>
+                </blockquote>
                 </Body>
             </ContentPane>
         </ContentSection>
@@ -44,21 +54,17 @@ export default () => (
         <ContentSection>
             <ContentPane half center-vertically text>
                 <Title>
-                    Performance: Using WebGL for the Fastest Load Times with the Most Points
+                    Plotly.js visual editor
                 </Title>
                 <Body>
                 <p>
-                    Plotly.js WebGL charts with 1 million points load 1.6x faster than the same Highcharts
-                    graph, even with the Highcharts “booster” library. We’ve optimized everything from min-max
-                    decimation to <a href="https://github.com/plotly/fast-isnumeric" target="_blank">numerical type
-                    checking</a>. The Plotly.js WebGL backend uses your computer’s graphics card to bypass CPU and
-                    memory limitations in SVG or Canvas graphics backends.
+                    Use Plotly.js with <a href="/products/cloud/">Plotly Cloud</a> or <a href="/products/on-premise/">Plotly On-Premise</a> for hosting, sharing, and visual editing of Plotly.js charts. Designers can create charts in Plotly Cloud or Plotly On-Premise while programmers put them into production with Plotly.js.
                 </p>
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://plot.ly/static/enterprise/img/alternatives/highcharts/benchmark.236d4390a068.jpg"/>
+                    image="https://plot.ly/static/enterprise/img/alternatives/highcharts/share.a9caa353cef7.jpg"/>
             </ContentPane>
         </ContentSection>
 
@@ -87,42 +93,29 @@ export default () => (
             </ContentPane>
         </ContentSection>
 
-        <ContentSection>
-            <ContentPane full center center-vertically>
-                <Title>
-                    High-performance 3D
-                </Title>
-                <Body>
-                <p>
-                    Scientific-grade, 3D charts that even a JavaScript beginner can make. Plotly uses Stack.gl for
-                    unparalleled interactive performance.
-                </p>
-                <div className="gutter-top">
-                    <Graphic video="https://plot.ly/static/enterprise/img/alternatives/videos/3d.2de03f3a24c9.mp4"/>
+        <ContentSection className="request-callback-section">
+
+            <ContentPane full center center-vertically text>
+                <div className="pre-title">
+                   Conntect with us
                 </div>
-                </Body>
-            </ContentPane>
-        </ContentSection>
-
-        <ContentSection>
-            <ContentPane half center-vertically text>
                 <Title>
-                    Share with Plotly’s online community
+                    Learn how we can work together
+                    <div className="buttons center">
+                        <a className="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb">
+                            <div className="button-wrapper">
+                                <div className="button-label">
+                                    Request a Demo
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </Title>
                 <Body>
                 <p>
-                    Plotly.js charts can be easily published, saved, and shared on Plotly’s cloud for
-                    free. <a href="https://plot.ly/~mutecamel/11/a-a-a-a-b-b-b-b-c-c-c-c-d-d-d-d/" target="_blank">Save
-                    your Plotly.js chart creations</a> with simple URL chart links, <a
-                    href="http://help.plot.ly/json-chart-schema/" target="_blank">translate your charts to
-                    different languages</a>, and get stars and feedback from the Plotly community.
-
+                    A Plotly sales engineer will answer any questions, walk you through a demo, and support a trial deployment.
                 </p>
                 </Body>
-            </ContentPane>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://plot.ly/static/enterprise/img/alternatives/highcharts/share.a9caa353cef7.jpg"/>
             </ContentPane>
         </ContentSection>
 

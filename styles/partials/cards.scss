@@ -29,6 +29,20 @@
       }
     }
   }
+  &-image {
+    position: relative;
+    &.dark-fade{
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-180deg, rgba(9,30,65,0.00) 40%, #081D3F 100%);
+      }
+    }
+  }
 }
 
 .cards {
@@ -92,7 +106,7 @@
   //----------------------------------------------------------------------------------------------------------------------
   &-simple {
     border-radius: 5px;
-    flex: 1;
+    flex-grow: 1;
     text-align: left;
     box-shadow: $drop-shadow-xl;
     background: white;
@@ -146,6 +160,8 @@
     padding: 0;
     overflow: hidden;
     border-radius: 5px;
+    overflow: hidden;
+    display: flex;
     @include desktop {
       width: calc(50% - #{$gutter});
     }
@@ -156,10 +172,16 @@
     }
     transition: $transition;
     .card {
+
       &-wrapper {
         flex-direction: column;
         padding: 0;
         flex-wrap: wrap;
+        flex-grow: 1;
+        align-items: stretch;
+        max-width:100%;
+        width: 100%;
+        //display: block;
 
       }
       &-image {
@@ -174,6 +196,8 @@
         @include handheld{
           min-height: 180px
         }
+        border-top-right-radius:5px;
+        border-top-left-radius:5px;
         width: 100%;
         background-size: cover !important;
         background-position: center center;
@@ -187,14 +211,19 @@
           font-family: 'Dosis', sans-serif;
           text-transform: uppercase;
           letter-spacing: 2px;
+          z-index: 2;
         }
       }
       &-body {
         padding: $gutter*1.5;
         text-align: left;
-        blockquote {
-          padding: 0;
-          margin: 0;
+        max-width:100%;
+        flex-grow: 1;
+        p{
+          padding: 0 !important;
+          margin: 0 !important;
+          width: 100%;
+          max-width:100%;
         }
       }
       &-action {
@@ -216,7 +245,7 @@
 
         &-link {
           transition: $transition;
-          flex: 1;
+          flex-grow: 1;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -278,4 +307,7 @@
 
 .cards.stories {
   justify-content: space-between;
+  @include media('<=1060px'){
+    justify-content: center;
+  }
 }

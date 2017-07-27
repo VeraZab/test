@@ -1,8 +1,23 @@
 const path = require('path')
 const glob = require('glob')
 const chromatic = require("chromatic-sass")
-
+const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
+    assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '',
+    exportPathMap: () => ({
+        "/": { page: "/" },
+        "/dashboards": { page: "/dashboards" },
+        "/database-connectors": { page: "/database-connectors" },
+        "/online-chart-maker": { page: "/online-chart-maker" },
+        "/powerpoint-online": { page: "/powerpoint-online" },
+        "/products/dash": { page: "/products/dash" },
+        "/products/cloud": { page: "/products/cloud" },
+        "/products/consulting-and-oem": { page: "/products/consulting-and-oem" },
+        "/plotly-js-scientific-d3-charting-library": { page: "/plotly-js-scientific-d3-charting-library" },
+        "/d3-js-for-r-and-shiny-charts": { page: "/d3-js-for-r-and-shiny-charts" },
+        "/d3-js-for-python-and-pandas-charts": { page: "/d3-js-for-python-and-pandas-charts" },
+        "/products/on-premise": { page: "/products/on-premise" }
+    }),
     webpack: (config, {dev}) => {
         config.module.rules.push(
             {

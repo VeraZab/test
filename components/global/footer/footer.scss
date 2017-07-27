@@ -81,6 +81,7 @@
       font-weight: 600;
       color: $color-dodger;
       padding-bottom: $unit;
+      @extend %font-smoothing;
 
     }
     &-links {
@@ -159,16 +160,16 @@
     &:last-of-type {
       .footer-main-section {
         &-links {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
+          //display: flex;
+          //flex-wrap: wrap;
+          //justify-content: flex-start;
         }
         &-link {
           //flex: 1;
           @include handheld-up {
-            width: 50%;
-            max-width: 180px;
-            min-width: 100px;
+            //width: 50%;
+            //max-width: 180px;
+            //min-width: 100px;
           }
           //max-width: 50%;
         }

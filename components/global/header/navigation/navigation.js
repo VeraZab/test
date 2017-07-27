@@ -3,48 +3,150 @@ import styles from './navigation.styles.scss'
 import Link from 'next/link';
 
 const navigationRight = [
+        {
+            id: 1,
+            label: 'Create',
+            slug: 'create',
+            title: 'See what you can create with Plotly!',
+            icon: null,
+            target: '_self',
+            link: 'https://plot.ly/create',
+            button: {
+                classes: 'nav-item--with-submenu button button-small button-primary not-mobile'
+            },
+            submenu: {
+                sections: [
+                    {
+                        label: null,
+                        items: [
+                            {
+                                id: 6,
+                                label: 'Chart',
+                                slug: 'chart-maker',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_chart.87676eabf8bc.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/create/'
+                            },
+                            {
+                                id: 7,
+                                label: 'Dashboard',
+                                slug: 'dashboard',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dashboard.52af779684ee.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/dashboard/create'
+                            },
+                            {
+                                id: 20,
+                                label: 'Dash App',
+                                slug: 'dash-app',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://images.plot.ly/static/marketing/icons/create/ic_dash_app_18.svg',
+                                icon_type: 'img',
+                                target: '_self',
+                                link: '/products/dash/'
+                            },
+                            {
+                                id: 8,
+                                label: 'Slide Deck',
+                                slug: 'presentations',
+                                title: 'See all of our pricing options.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_presentation.89a6f41d4cec.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/organize/home?create=presentation'
+                            },
+                            {
+                                id: 9,
+                                label: 'Database Query',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_database.0a26f1c68ebb.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/create/?upload=sql'
+                            },
+                            {
+                                id: 10,
+                                label: 'Data Set',
+                                slug: 'data-set',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dataset.2c1316a036ab.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/organize/home?create=grid'
+                            },
+                            {
+                                id: 11,
+                                label: 'Jupyter Notebook',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_notebook.63db2bee0f9b.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/organize/home?create=notebook'
+                            },
+                            {
+                                id: 12,
+                                label: 'Folder',
+                                slug: 'database-connectors',
+                                title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                                icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_folder.07d7dfd25383.svg',
+                                icon_type: 'img',
+                                target: '_blank',
+                                link: 'https://plot.ly/organize/home?create=folder'
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: 2,
+            label: 'Sign In',
+            slug: 'signin',
+            title: 'Sign in or Sign up with Plotly',
+            icon: null,
+            target: '_blank',
+            link: 'https://plot.ly/accounts/login/?action=login',
+            button: {
+                classes: 'button button-small button-secondary'
+            }
+            ,
+            submenu: null
+        }
+        ,
+        {
+            id: 3,
+            label: 'Request a Demo',
+            slug: 'request-a-demo',
+            title: 'Request a demo or contact our sales team.',
+            icon: null,
+            typeform: true,
+            target: '_blank',
+            link: 'https://plotly.typeform.com/to/seG7Vb',
+            button: {
+                classes: 'button button-small button-secondary typeform-share not-tablet'
+            },
+            submenu: null
+        }
+    ]
+;
+const navigationLeft = [
     {
-        id: 1,
-        label: 'Create',
-        slug: 'create',
-        title: 'See what you can create with Plotly!',
+        id: 12,
+        label: 'Dash',
+        slug: 'dash',
+        title: 'See all of our pricing options.',
         icon: null,
         target: '_self',
-        link: 'https://plot.ly/create',
-        button: {
-            classes: 'button button-small button-primary'
-
-        },
+        link: '/products/dash/',
+        button: null,
         submenu: null
     },
-    {
-        id: 2,
-        label: 'Sign In',
-        slug: 'signin',
-        title: 'Sign in or Sign up with Plotly',
-        icon: null,
-        target: '_blank',
-        link: 'https://plot.ly/accounts/login/?action=login',
-        button: {
-            classes: 'button button-small button-secondary'
-        },
-        submenu: null
-    },
-    {
-        id: 3,
-        label: 'Request a Demo',
-        slug: 'request-a-demo',
-        title: 'Request a demo or contact our sales team.',
-        icon: null,
-        target: '_blank',
-        link: 'https://plotly.typeform.com/to/seG7Vb',
-        button: {
-            classes: 'button button-small button-secondary'
-        },
-        submenu: null
-    }
-];
-const navigationLeft = [
     {
         id: 4,
         label: 'Pricing',
@@ -61,7 +163,7 @@ const navigationLeft = [
                     items: [
                         {
                             id: 10,
-                            label: 'Cloud',
+                            label: 'Plotly Cloud',
                             slug: '/products/cloud/',
                             title: 'See all of our pricing options.',
                             icon: null,
@@ -70,7 +172,7 @@ const navigationLeft = [
                         },
                         {
                             id: 11,
-                            label: 'On Premise',
+                            label: 'Plotly On-Premise',
                             slug: '/products/on-premise/',
                             title: 'The behind-the-firewall version of Plotly Cloud.',
                             icon: null,
@@ -80,11 +182,11 @@ const navigationLeft = [
                         {
                             id: 12,
                             label: 'Support',
-                            slug: '/products/cloud/',
+                            slug: null,
                             title: 'Learn about our dedicated support plan options.',
                             icon: null,
                             target: '_blank',
-                            link: 'http://support.plot.ly/'
+                            link: 'http://support.plot.ly/plans'
                         }
                     ]
                 }
@@ -107,30 +209,30 @@ const navigationLeft = [
                     items: [
                         {
                             id: 6,
-                            label: 'Chart Maker',
+                            label: 'Charts',
                             slug: 'chart-maker',
-                            title: 'See all of our pricing options.',
+                            title: 'Explore the Plotly Chart Maker.',
                             icon: 'chart-maker',
                             target: '_self',
-                            link: '/products/online-chart-maker/'
+                            link: '/online-chart-maker/'
                         },
                         {
                             id: 7,
                             label: 'Dashboards',
                             slug: 'dashboards',
-                            title: 'See all of our pricing options.',
+                            title: 'See what you can make with Plotly Dashboards.',
                             icon: 'dashboards',
                             target: '_self',
-                            link: '/products/dashboards/'
+                            link: '/dashboards/'
                         },
                         {
                             id: 8,
-                            label: 'Presentations',
-                            slug: 'presentations',
-                            title: 'See all of our pricing options.',
+                            label: 'Slide Decks',
+                            slug: 'slide-decks',
+                            title: 'See what you can make with Plotly Slide Decks!',
                             icon: 'presentations',
                             target: '_self',
-                            link: '/products/powerpoint-online/'
+                            link: '/powerpoint-online/'
                         },
                         {
                             id: 9,
@@ -139,7 +241,7 @@ const navigationLeft = [
                             title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
                             icon: 'sql-connector',
                             target: '_self',
-                            link: '/products/database-connectors/'
+                            link: '/database-connectors/'
                         }
                     ]
                 },
@@ -147,13 +249,22 @@ const navigationLeft = [
                     label: 'Data Science and Open-Source',
                     items: [
                         {
+                            id: 14,
+                            label: 'Dash',
+                            slug: 'dash',
+                            title: 'Build beautiful web-based interfaces in Python.',
+                            icon: null,
+                            target: '_self',
+                            link: '/products/dash/'
+                        },
+                        {
                             id: 11,
                             label: 'Plotly.js',
                             slug: 'plotly-js',
                             title: 'The open source JavaScript graphing library that powers Plotly',
                             icon: 'js',
-                            target: '_blank',
-                            link: 'https://plot.ly/javascript/'
+                            target: '_self',
+                            link: '/plotly-js-scientific-d3-charting-library/'
                         },
                         {
                             id: 12,
@@ -161,8 +272,8 @@ const navigationLeft = [
                             slug: 'plotly-for-python',
                             title: "Plotly's Python graphing library makes interactive, publication-quality graphs online.",
                             icon: 'python',
-                            target: '_blank',
-                            link: 'https://plot.ly/python/'
+                            target: '_self',
+                            link: '/d3-js-for-python-and-pandas-charts'
                         },
                         {
                             id: 13,
@@ -170,17 +281,8 @@ const navigationLeft = [
                             slug: 'plotly-for-r',
                             title: "Plotly's R graphing library makes interactive, publication-quality graphs online.",
                             icon: 'r',
-                            target: '_blank',
-                            link: 'https://plot.ly/r/'
-                        },
-                        {
-                            id: 14,
-                            label: 'Plotly for MATLAB',
-                            slug: 'plotly-for-matlab',
-                            title: 'Plotly brings interactive, online graphing to your MATLAB console.',
-                            icon: 'matlab',
-                            target: '_blank',
-                            link: 'https://plot.ly/matlab/'
+                            target: '_self',
+                            link: '/d3-js-for-r-and-shiny-charts/'
                         }
                     ]
 
@@ -201,12 +303,12 @@ const navigationLeft = [
     },
     {
         id: 17,
-        label: 'Support Plans',
+        label: 'Support',
         slug: 'support',
         title: 'Learn about advanced support plans we offer.',
         icon: null,
         target: '_blank',
-        link: 'https://support.plot.ly/',
+        link: 'https://support.plot.ly',
         button: null,
         submenu: null
     },
@@ -275,6 +377,15 @@ export default class Navigation extends React.Component {
 
         let isActive = '';
 
+        let navItemIcon = (item) => {
+
+            if(item.icon && item.icon_type){
+                return (<div className="nav-item-icon"><img src={item.icon} alt=""/></div>)
+            } else {
+                return null;
+            };
+        };
+
 
         // this will generate our nav items
         let generateNavItem = (items) => {
@@ -304,6 +415,7 @@ export default class Navigation extends React.Component {
                 // if the nav submenu section has a label,
                 // this will be the markup for it
                 let navSubmenuSectionLabel = (section) => {
+
                     return (
                         <div className="nav-item-submenu-section-label">
                             {section.label}
@@ -331,26 +443,53 @@ export default class Navigation extends React.Component {
             }
 
             // Now let's build the nav item with submenu
-            return (
-                <div className='nav-item nav-item--with-submenu' key={item.id}>
-                    <div title={item.title} className='nav-item-wrapper'>
-                        <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
-                            <div className='nav-item-label-text'>
-                                {item.label}
+            if (item.button) {
+                return (
+                    <div className='nav-item--with-submenu nav-item-button not-mobile' key={item.id}>
+                        <div className={item.button.classes}>
+                            <div title={item.title} className='nav-item-wrapper'>
+                                <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                                    <div className='nav-item-label-text button-label'>
+                                        {item.label}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={'nav-item-submenu' + classes}>
+                            <div className="nav-item-submenu-wrapper">
+                                <div className="mobile-only close submenu-close"
+                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                    Close
+                                </div>
+                                {navSubmenuSections(item.submenu.sections)}
                             </div>
                         </div>
                     </div>
-                    <div className={'nav-item-submenu' + classes}>
-                        <div className="nav-item-submenu-wrapper">
-                            <div className="mobile-only close submenu-close"
-                                 onClick={this.toggleProductSubmenu.bind(this)}>
-                                Close
+
+                )
+            } else {
+                return (
+                    <div className='nav-item nav-item--with-submenu' key={item.id}>
+                        <div title={item.title} className='nav-item-wrapper'>
+                            <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                                <div className='nav-item-label-text'>
+                                    {item.label} <small className="down-arrow">▼</small>
+                                </div>
                             </div>
-                            {navSubmenuSections(item.submenu.sections)}
+                        </div>
+                        <div className={'nav-item-submenu' + classes}>
+                            <div className="nav-item-submenu-wrapper">
+                                <div className="mobile-only close submenu-close"
+                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                    Close
+                                </div>
+                                {navSubmenuSections(item.submenu.sections)}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )
+                )
+            }
+
         };
 
 
@@ -366,6 +505,7 @@ export default class Navigation extends React.Component {
                     <div className={'nav-item' + isActive} key={item.id}>
                         <a href={item.link} target={item.target} title={item.title} className='nav-item-wrapper'>
                             <div className='nav-item-label'>
+                                {navItemIcon(item)}
                                 <div className='nav-item-label-text'>
                                     {item.label}
                                 </div>
@@ -386,6 +526,7 @@ export default class Navigation extends React.Component {
                             <a target={item.target} title={item.title}
                                className='nav-item-wrapper'>
                                 <div className='nav-item-label'>
+                                    {navItemIcon(item)}
                                     <div className='nav-item-label-text'>
                                         {item.label}
                                     </div>
@@ -410,6 +551,10 @@ export default class Navigation extends React.Component {
                        target={item.target}
                        title={item.title}
                        className={item.button.classes}
+                       data-mode="drawer_right"
+                       data-hide-headers="true"
+                       data-hide-footer="true"
+                       data-submit-close-delay="2"
                        key={item.id}>
                         {item.label}
                     </a>

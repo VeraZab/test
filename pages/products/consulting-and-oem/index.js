@@ -1,13 +1,13 @@
 import Layout from '../../../components/global/layout/layout';
 import Hero from './hero';
 
-import {ContentSection, ContentPane, Title, Body} from '../../../components/content-section/content-section';
+import {ContentSection, ContentPane, Title, Body, Subtitle} from '../../../components/content-section/content-section';
 import Buttons from '../../../components/buttons/buttons';
 import {Grid, GridItem} from '../../../components/grid/grid';
 const meta = {
-    title: 'Advanced Development • Plotly',
+    title: 'Advanced Development',
     description: "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",
-    image: '',
+    url: 'https://plot.ly/consulting-and-oem/',
     twitter: {
         label1: 'Services Offered',
         data1: 'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.'
@@ -18,12 +18,31 @@ const contentSectionStyles = {
     paddingTop: '0px'
 };
 const cardBoxStyles = {
-    marginTop: '40px'
+    marginTop: '40px',
+    width: '480px',
+    marginRight: 'auto',
+    marginLeft: 'auto'
+};
+
+const cardsStyles = {
+    display: 'block'
 };
 
 const buttons = [
     {
         label: 'Contact Us',
+        title: 'Find out how we can work together.',
+        icon: null,
+        target: '_blank',
+        link: 'https://plotly.typeform.com/to/mH1Cpb',
+        button: {
+            classes: 'button button-primary'
+        }
+    }
+];
+const oemButton = [
+    {
+        label: 'Inquire about an Oem',
         title: 'Find out how we can work together.',
         icon: null,
         target: '_blank',
@@ -70,7 +89,6 @@ const gridItemsData = [
 ];
 
 
-
 export default class Consulting extends React.Component {
     constructor(props) {
         super(props);
@@ -88,7 +106,7 @@ export default class Consulting extends React.Component {
             return (
                 <GridItem>
                     <div className="grid-item-graphic">
-                        <img src={item.graphic} alt={item.label} />
+                        <img src={item.graphic} alt={item.label}/>
                     </div>
                     <div className="grid-item-label">
                         {item.label}
@@ -116,7 +134,7 @@ export default class Consulting extends React.Component {
                             ensure
                             that your project is a success. Contact us directly to learn more.
                         </p>
-                        <div className="cards">
+                        <div className="cards" style={cardsStyles}>
                             <div className="cards-wrapper center">
                                 <div className="card-simple" style={cardBoxStyles}>
                                     <div className="card-simple-wrapper">
@@ -147,7 +165,31 @@ export default class Consulting extends React.Component {
                         </Body>
                     </ContentPane>
                 </ContentSection>
+                <ContentSection className="background--oem">
+                    <ContentPane half center-vertically text className="sixy-five">
+                        <Title>
+                            Use our platform, or build your own!
+                        </Title>
+                        <h2 className="content-section-h2">
+                            Plotly is the leading data visualization technology provider. With our open-source software,
+                            we help companies launch cutting edge, data visualization UIs in their products and internal
+                            analytics platforms.
+                        </h2>
+                        <Body>
+                        <p>
+                            Does your product have an ancient charting tool that needs to be replaced? Are your
+                            customers asking for more advanced data visualization? We’re here to help. Through
+                            Plotly.js, Dash, and years of launching successful data visualization products, we’re on a
+                            mission to make every analytics product have first-class data visualization frontends.
+                        </p>
 
+                        <Buttons items={oemButton} className="padding-top"/>
+                        </Body>
+                    </ContentPane>
+                    <ContentPane half graphic center-vertically>
+
+                    </ContentPane>
+                </ContentSection>
             </Layout>
         )
     }

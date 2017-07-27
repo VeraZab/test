@@ -4,38 +4,29 @@
   },
   "header": {
     "title": "C-12 Energy",
-    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions."
+    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. — Dr. Jenya Kirshtein Scientific Software Engineering"
   },
   "body": {
     "title": "Plotly is making an impact in a wide range of industries",
     "desc": "Plotly prides itself on being partnered with its clients. Numerous references of successful implementations across many lines of business are available from a dedicated and committed staff. Read what some of our partners have to say about Plotly."
   },
   "stories": [{
-      "id": "finance",
+      "id": "c12-energy",
       "style": {
-        "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+        "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)", "maxHeight": "275px"
       },
       "label": "Energy",
       "cta": "Read Stories →",
-      "cta-url": "/energy"
-    },
-    {
-      "id": "reseach-lab",
-      "style": {
-        "backgroundImage": "url(/static/images/industries/thumbnail-insurance.9a3589a826b4.jpg)"
-      },
-      "label": "Reseach Lab",
-      "cta": "Read Stories →",
-      "cta-url": "/reseach-lab"
+      "url": "/products/enterprise/customer-stories/c12-energy"
     },
     {
       "id": "insurance",
       "style": {
-        "backgroundImage": "url(/static/images/industries/thumbnail-aerospace.f58359cdc8f8.jpg)"
+        "backgroundImage": "url(/static/images/industries/thumbnail-aerospace.f58359cdc8f8.jpg)", "maxHeight": "275px"
       },
       "label": "Insurance",
       "cta": "Read Stories →",
-      "cta-url": "/insurance"
+      "url": "/products/enterprise/customer-stories/goji/"
     }
   ],
   "storyCard": {
