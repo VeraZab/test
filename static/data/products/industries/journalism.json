@@ -59,11 +59,13 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone2-content.f2eaa1a57cf6.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone2-content.f2eaa1a57cf6.jpg",
+      "color": "columbiablue"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone1-content.b6f0c57744f3.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone1-content.b6f0c57744f3.jpg",
+      "color": "columbiablue"
     }],
     "title": "Used by some of the world's largest digital news outlets",
     "body": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
@@ -71,7 +73,8 @@
     "content": [{
       "device": "newspapper",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/washingtonpost-plotly.081d7978b0ea.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/washingtonpost-plotly.081d7978b0ea.jpg",
+      "color": "mayablue"
     }],
     "title": "A GUI for D3.js",
     "body": "Everyone knows that D3.js is the gold-standard for interactive graphics on the web. Plotly allows news outlets to rapidly create D3.js graphs without needing programmers, like this one in the Washington Post. <br><br><a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/'>PLOTLY GRAPHS AT THE WASHINGTON POST</a>"
@@ -79,11 +82,13 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice1.f766900c81a0.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice1.f766900c81a0.jpg",
+      "color": "lightgrey"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice2.4550e9bdb1c0.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice2.4550e9bdb1c0.jpg",
+      "color": "lightgrey"
     }],
     "title": "Graphs optimized for fluid layout and mobile",
     "body": "Unlike Tableau graphs, Plotly graphs use 100% web-native technologies that display on mobile and respond to fluid layouts. See this article in VICE for example. <br><br><a href='http://www.vice.com/nl/read/deze-man-houdt-alle-moorden-in-de-hoofdstad-bij-161'>MURDER RATE IN VICE NETHERLANDS</a><br><a href='http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic'>SUBREDDIT TOXICITY IN VICE MOTHERBOARD</a>"
@@ -91,7 +96,8 @@
     "content": [{
       "device": "browser",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
+      "color": "lightgrey"
     }],
     "title": "Whitelabel Platforms with Plotly Enterprise",
     "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience. <br><br><a href='https://plot.ly/product/enterprise/'>PLOTLY ENTERPRISE</a>"
@@ -99,7 +105,8 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/life-expectancy.5196f2276cb6.gif"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/life-expectancy.5196f2276cb6.gif",
+      "color": "cornflowerblue"
     }],
     "title": "Increase engagement and time-on-site with interactive graphs",
     "body": "Plotly graphs are drawn in D3.js and are fully interactive - zoom, hover text, pan, and line toggling all come for free."
@@ -107,7 +114,8 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg",
+      "color": "lightgreyblue"
     }],
     "title": "Plotly Pew Research graph collection",
     "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration. <br><br><a href='http://plot.ly/~PewResearch'>PLOTLY PEW RESEARCH GRAPH COLLECTION</a>"
@@ -115,7 +123,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
+      "color": "lightgrey"
     }],
     "title": "Interactive maps like the New York Times",
     "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times. <br><br><a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>LEARN TO USE PLOTLY MAPS</a>"
