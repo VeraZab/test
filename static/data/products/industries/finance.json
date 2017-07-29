@@ -43,10 +43,12 @@
     }
   ],
   "sections": [{
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "laptop",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-ipad.639dbce73735.svg"
       }, {
+        "type": "image",
         "device": "iphone",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-iphone.6fdb2cc25597.svg"
       }],
@@ -54,7 +56,8 @@
       "body": "A major US bank uses Plotly to create early warning indicator dashboards for its financials assets. The indicator data is pulled directly from Bloomberg and Quandl with Python scripts and the visualizations are drawn with Plotly's Python API to create D3-quality charts that can then be viewed by bank executives on mobile, tablet and laptop devices in real-time through a private portal. By using Plotly, the bank is able to both eliminate the need to email large excel spreadsheets back and forth and save its analysts hours of monotonous excel work every day."
     },
     {
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "ipad",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/livestream.37994c071ecb.svg"
       }],
@@ -62,7 +65,8 @@
       "body": "Bloomberg terminal and Quandl data can both be easily extracted into IPython notebook and plotted in D3.js with Plotly."
     },
     {
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "browser",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-ipad.639dbce73735.svg"
       }],
@@ -70,7 +74,8 @@
       "body": "Charts are created with tools that quants and strats like - Python, Excel and MATLAB - but Plotly draws them behind-the-scenes with D3.js, the gold standard of the web for interactive graphics. <a href='http://plot.ly/ipython-notebooks/ukelectionbbg/'>Visualizing Bloomberg and Quandl data with Plotly</a>"
     },
     {
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "ipython",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/portfolio-optimization2.d7ecfead4c14.svg"
       }],
@@ -78,7 +83,8 @@
       "body": "Quantopian platform lead Thomas Wiecki optimizes portfolios using IPython notebook and graphs the data in D3.js using Plotly's IPython client."
     },
     {
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "browser",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/excel.c74d2c0fbc8e.png"
       }],
@@ -86,7 +92,8 @@
       "body": "Any Excel workbook can be uploaded to Plotly to create publication-quality charts or dashboards for web or print. Plotly can also be used in within Excel on Windows computers with the Plotly Charts MS Office app."
     },
     {
-      "images": [{
+      "content": [{
+        "type": "image",
         "device": "ipython",
         "image": "https://plot.ly/static/enterprise/img/industries/finance/yield-curve.751311465dc2.jpg"
       }],
