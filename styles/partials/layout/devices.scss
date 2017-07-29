@@ -97,6 +97,10 @@
   &.\--cyanblue {
     border: 2px solid #58c8ea;
   }
+
+  &.\--darkgreyblue {
+    border: 2px solid #687ba6;
+  }
 }
 
 .device-svg {
@@ -126,6 +130,10 @@
 
   &.framecolor-cyanblue svg g:nth-child(2) {
     fill: #58c8ea;
+  }
+
+  &.framecolor-darkgreyblue svg g:nth-child(2) {
+    fill: #687ba6;
   }
 
   &.backgroundcolor-white svg g:nth-child(1) {
