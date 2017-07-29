@@ -77,6 +77,24 @@
   &.\--lightgrey {
     border: 2px solid #dcdddd;
   }
+
+  &.\--columbiablue {
+    border: 2px solid #9bd1ff;
+  }
+}
+
+.device-svg {
+  &.cornflowerblue svg {
+    fill: #3785d3;
+  }
+
+  &.lightgrey svg {
+    fill: #dcdddd;
+  }
+
+  &.columbiablue svg {
+    fill: #9bd1ff;
+  }
 }
 
 .device-wrapper {
