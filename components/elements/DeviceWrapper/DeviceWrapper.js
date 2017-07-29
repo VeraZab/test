@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export class DeviceWrapper extends React.Component {
   render() {
@@ -42,14 +42,7 @@ class ContentFrame extends React.Component {
       content =
         contentType === 'video'
           ? <div className="video-wrapper">
-              <video
-                id="editor-video"
-                autoPlay="autoplay"
-                preload="auto"
-                loop="true"
-                className="device-content"
-                style={{ width: '100%' }}
-              >
+              <video id="editor-video" autoPlay="autoplay" preload="auto" loop="true" className="device-content" style={{ width: '100%' }}>
                 <source src={videoSources[0]} type="video/mp4" />
                 <source src={videoSources[1]} type="video/webm" />
                 <img src={videoSources[2]} />
@@ -126,6 +119,14 @@ const devices = {
     },
     svg:
       '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="200 144.6 560 270.8" enable-background="new 200 144.6 560 270.8" xml:space="preserve"><g><path fill="#9bd1ff" d="M200,377.6V182.4c0-20.8,17.1-37.8,37.9-37.8h484.3c20.8,0,37.8,17,37.8,37.8v195.2c0,20.8-17,37.8-37.8,37.8H237.9C217.1,415.4,200,398.4,200,377.6z M757.5,182.4c0-19.4-15.8-35.3-35.3-35.3H237.9c-19.4,0-35.4,15.8-35.4,35.4v195.2c0,19.4,15.8,35.4,35.4,35.4h484.3c19.4,0,35.4-15.8,35.4-35.4V182.4H757.5z"></path><path fill="#9bd1ff" d="M221.2,280.6c0-10.7,8.7-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3c0,10.7-8.7,19.3-19.3,19.3C229.9,299.9,221.2,291.2,221.2,280.6z M257.6,280.6c0-9.3-7.6-17-17-17c-9.3,0-17,7.6-17,17s7.6,17,17,17C250,297.6,257.6,290,257.6,280.6z"></path><path fill="#9bd1ff" d="M721,307.1v-54.1c0-3.2,2.6-5.9,5.9-5.9h0.4c3.2,0,5.9,2.6,5.9,5.9v54.1c0,3.2-2.6,5.9-5.9,5.9h-0.4C723.6,312.9,721,310.3,721,307.1z M730.7,252.9c0-1.9-1.5-3.5-3.5-3.5h-0.4c-1.9,0-3.5,1.5-3.5,3.5v54.1c0,1.9,1.6,3.5,3.5,3.5h0.4c1.9,0,3.5-1.5,3.5-3.5V252.9z"></path></g></svg>'
+  },
+  newspapper: {
+    styles: {
+      'max-width': '500px',
+      width: '95%'
+    },
+    svg:
+      '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="201.5 0 557.1 560" enable-background="new 201.5 0 557.1 560" xml:space="preserve"><g><path fill="#6bb5fe" d="M692.6,560H241.1v-2.7l1.2-0.1c18.6-2.1,33.2-28.1,33.2-59.2V0h483.1v492.4C758.5,529.7,728.9,560,692.6,560z M250.9,557.3h441.7c35,0,63.4-29.2,63.4-64.9V2.7H278.1V498C278.1,525.7,266.7,549.5,250.9,557.3z"></path><path fill="#6bb5fe" d="M239.7,560L239.7,560c-21.1,0-38.3-27.8-38.3-62V74.6h76.6V498C278.1,532.2,260.8,560,239.7,560zM204.1,77.3V498c0,32.7,16,59.3,35.8,59.3l0,0c19.7,0,35.8-26.6,35.8-59.3V77.3H204.1z"></path><path fill="#6bb5fe" d="M276.7,125.4h-38.9v-2.7h38.9V125.4z"></path><path fill="#6bb5fe" d="M732.9,76H297.5v-2.7h435.3L732.9,76L732.9,76z"></path><path fill="#6bb5fe" d="M237.8,505.4V124h2.6v381.3H237.8z"></path></g></svg>'
   },
   report: {
     styles: {
