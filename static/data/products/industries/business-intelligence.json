@@ -41,7 +41,8 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-map.4035329bb571.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-map.4035329bb571.jpg",
+      "color": "lightcobaltblue"
     }],
     "title": "The Future of BI",
     "body": "The top performing BI teams prefer nimble scripting languages like Python or R over expensive point-and-click GUI tools. Read this customer story on Goji for more on how to deploy Plotly for business intelligence. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
@@ -49,7 +50,8 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/open-large-deals.e7b4a4d9abbe.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/business/open-large-deals.e7b4a4d9abbe.svg",
+      "color": "lightgrey"
     }],
     "title": "Analyze Salesforce data in IPython notebook",
     "body": "Scripting languages like R and Python that can read from both databases and APIs are the new cutting edge of business intelligence. This IPython notebook uses the Salesforce and Plotly Python clients to analyze sales performance. <br><br><a href='http://plot.ly/ipython-notebooks/salesforce/'>VIEW DOCUMENTATION: SALESFORCE DATA IN IPYTHON NOTEBOOK</a>"
@@ -57,7 +59,8 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/event-sales-day-category.0a235471894c.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/business/event-sales-day-category.0a235471894c.jpg",
+      "color": "columbiablue"
     }],
     "title": "Analyzing Redshift data in IPython notebook",
     "body": "Bill Chambers, a graduate student at UC Berkeley's iSchool, uses the AWS Python API and Plotly to download, plot, and analyze data stored in Amazon Redshift. See the IPython notebook linked below. <br><br><a href='http://plot.ly/ipython-notebooks/amazon-redshift/'>IPYTHON NOTEBOOK: PLOTTING DATA FROM YOUR REDSHIFT DATA WAREHOUSE</a>"
@@ -65,7 +68,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-plots.43ca02583fba.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-plots.43ca02583fba.jpg",
+      "color": "lightgrey"
     }],
     "title": "Live-streaming dashboards on mobile, tablet, or laptop",
     "body": "Using Plotly Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
@@ -73,7 +77,8 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/liftopia.e01711954c03.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/business/liftopia.e01711954c03.svg",
+      "color": "darkgreyblue"
     }],
     "title": "Analyzing lift ticket sales with IPython notebook and Plotly",
     "body": "Liftopia uses Plotly, IPython notebook, and Pandas to track lift ticket sales at various ski resorts. <br><br><a href='http://plot.ly/ipython-notebooks/#business-intelligence'>PLOTLY IPYTHON NOTEBOOKS - BUSINESS INTELLIGENCE</a>"
