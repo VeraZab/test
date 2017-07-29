@@ -52,13 +52,13 @@ class IndustriesMain extends React.Component {
     const sectionItems = (data.sections) ?
     data.sections.map( (section, key)=> {
       return(
-        <ContentSection key={key}>
+        <ContentSection key={key} style={{'position' : 'relative'}}>
               <ContentPane half graphic>
                     { 
                       section.content.map((item, index) => <DeviceWrapper key={index} content={item} alt={'Section Image'}></DeviceWrapper>)
                     }
               </ContentPane>
-              <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero  }>
+              <ContentPane half center-vertically text style={ (key % 2) ? orderOne : orderZero}>
                   <Title> {section.title}</Title>
                   <p dangerouslySetInnerHTML={{__html: section.body}}/>
               </ContentPane>

@@ -89,6 +89,14 @@
   &.\--lightcobaltblue {
     border: 2px solid #6d92d7;
   }
+
+  &.\--mediumgreyblue {
+    border: 2px solid #b3bac9;
+  }
+
+  &.\--cyanblue {
+    border: 2px solid #58c8ea;
+  }
 }
 
 .device-svg {
@@ -110,6 +118,14 @@
 
   &.framecolor-lightcobaltblue svg g:nth-child(2) {
     fill: #6d92d7;
+  }
+
+  &.framecolor-mediumgreyblue svg g:nth-child(2) {
+    fill: #b3bac9;
+  }
+
+  &.framecolor-cyanblue svg g:nth-child(2) {
+    fill: #58c8ea;
   }
 
   &.backgroundcolor-white svg g:nth-child(1) {
