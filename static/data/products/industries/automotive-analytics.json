@@ -17,7 +17,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/automotive/vehicle-sensor.6bda8f45c885.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/automotive/vehicle-sensor.6bda8f45c885.jpg",
+      "color": "columbiablue"
     }],
     "title": "Dashboards for vehicle sensors, manufacturing, and racing results",
     "body": "Plotly's interactive D3.js charts are used by automotive manufacturers and racing teams to explore, monitor, and analyze sensor channels from vehicle fleets and manufacturing lines."
@@ -25,7 +26,8 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/automotive/nascar.996dabfc5b6f.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/automotive/nascar.996dabfc5b6f.jpg",
+      "color": "cornflowerblue"
     }],
     "title": "Optimizing Race car performance for NASCAR",
     "body": "A leading US NASCAR team used Plotly to replace desktop-based MATLAB dashboards with web-based ones."
@@ -33,7 +35,8 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/automotive/control-design.cefa9c079434.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/automotive/control-design.cefa9c079434.svg",
+      "color": "lightgrey"
     }],
     "title": "Analyzing sensor and manufacturing data in R and Python",
     "body": "Plotly's clients for R and Python convert ggplot2 and matplotlib figures to interactive D3.js charts. These documents are the most popular way for data scientists and engineers to share their analysis with the rest of the company. <br><a href='https://plot.ly/ggplot2/'>PLOTLY GGPLOT2 LIBRARY</a><br><a href='https://plot.ly/matplotlib/'>PLOTLY MATPLOTLIB LIBRARY</a>"
@@ -41,7 +44,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/automotive/root-locus.a2918f091d12.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/automotive/root-locus.a2918f091d12.jpg",
+      "color": "mediumgreyblue"
     }],
     "title": "Control design in Python, MATLAB, and Plotly",
     "body": "Plotly has popular API clients for MATLAB and Python - the technical computing workhorses of the automotive industry. <br><a href='http://plot.ly/ipython-notebooks/bicycle-control-design/'>CONTROL DESIGN IN PYTHON</a><br><a href='http://plot.ly/ipython-notebooks/aircraft-pitch-analysis-matlab-plotly/'>AIRCRAFT PITCH ANALYSIS IN MATLAB AND PLOTLY</a>"
