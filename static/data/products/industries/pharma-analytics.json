@@ -37,7 +37,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/pharma/dendogram2.966c3f31f02e.png"
+      "image": "https://plot.ly/static/enterprise/img/industries/pharma/dendogram2.966c3f31f02e.png",
+      "color": "columbiablue"
     }],
     "title": "Scientific-grade graphs and dashboard tools",
     "body": "Plotly has unparalleled capability when it comes to importing data from MATLAB, R, Excel, and other formats popular in the life sciences. Create and work independently with different graph layers, combine them into composite graphs, and export for print or web publication in any image format."
@@ -52,7 +53,8 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/pharma/ribbon.ee4efd98ef65.jpg"
+      "image": "https://plot.ly/static/enterprise/img/industries/pharma/ribbon.ee4efd98ef65.jpg",
+      "color": "lightgrey"
     }],
     "title": "Dashboards for bioinformatics",
     "body": "Plotly.js makes it easy to build scientific-grade dashboards in D3.js without JavaScript programming expertise."
@@ -60,7 +62,8 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/pharma/lifespans.c61ee845feb5.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/pharma/lifespans.c61ee845feb5.svg",
+      "color": "mayablue"
     }],
     "title": "Publishing R and ggplot graphs to the web",
     "body": "Plotly collaborates with rOpenSci on ggplotly - An open-source R library that redraws ggplot figures in D3.js for web publishability, interactivity, and easy sharing. <br><br><a href='http://plot.ly/ipython-notebooks/survival-analysis-r-vs-python/'>SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON</a>"
@@ -68,7 +71,8 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/pharma/latex.2a7ddc195ee1.svg"
+      "image": "https://plot.ly/static/enterprise/img/industries/pharma/latex.2a7ddc195ee1.svg",
+      "color": "lightgrey"
     }],
     "title":"Built for scientists",
     "body":"Plotly's online web app supports all the features popular in Minitab and OriginLab:<br><br>• LaTeX typesetting<br>• Error bars<br>• Regression analysis<br>• Statistics<br>• Powerpoint export<br><br><a href='http://help.plot.ly/fitting-data-to-custom-functions-video/'>NON-LINEAR REGRESSION ANALYSIS IN THE PLOTLY WEB APP</a><br><a href='http://help.plot.ly/fitting-data-with-error-bars-video/'>FITTING DATA WITH ERROR BARS</a><br><a href='http://help.plot.ly/LaTeX-basics/'>LATEX TYPESETTING</a>"
