@@ -81,19 +81,39 @@
   &.\--columbiablue {
     border: 2px solid #9bd1ff;
   }
+
+  &.\--mayablue {
+    border: 2px solid #6bb5fe;
+  }
+
+  &.\--lightcobaltblue {
+    border: 2px solid #6d92d7;
+  }
 }
 
 .device-svg {
-  &.cornflowerblue svg {
+  &.framecolor-cornflowerblue svg g:nth-child(2) {
     fill: #3785d3;
   }
 
-  &.lightgrey svg {
+  &.framecolor-lightgrey svg g:nth-child(2) {
     fill: #dcdddd;
   }
 
-  &.columbiablue svg {
+  &.framecolor-columbiablue svg g:nth-child(2) {
     fill: #9bd1ff;
+  }
+
+  &.framecolor-mayablue svg g:nth-child(2) {
+    fill: #6bb5fe;
+  }
+
+  &.framecolor-lightcobaltblue svg g:nth-child(2) {
+    fill: #6d92d7;
+  }
+
+  &.backgroundcolor-white svg g:nth-child(1) {
+    fill: #ffffff;
   }
 }
 
