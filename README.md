@@ -30,10 +30,9 @@ Run `yarn run dev` to enter development mode. This will launch a server for you 
 
 ## Deployment
 
-Deployment is straightforward. Download and install `now` [from here](https://zeit.co/now). There is a Plotly `now` account that we use, connect with Jack (@jp) or Thomas (@aulneau) for the credentials.
-
-When you are ready to deploy, simply type `now` to deploy and it will give you a url to share and to test, and when you are happy with it, run the command `now alias` for the latest deployment to be aliased to `now.plot.ly`.
-
+```
+$ yarn run deploy
+```
 
 ## Next.js
 

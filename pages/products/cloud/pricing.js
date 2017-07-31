@@ -26,10 +26,10 @@ const pricingLevels = [
                 value: 'The <strong>Community&nbsp;Plan</strong> includes the&nbsp;following'
             },
             {
-                value: 'Community Support'
+                value: 'Community Support for Online Workspace'
             },
             {
-                value: 'Unlimited Public Files'
+                value: 'Public Charts, Dashboards and Slide Decks'
             },
             {
                 value: 'PNG and JPEG Export'
@@ -56,7 +56,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                link: 'https://plot.ly/settings/subscription',
                 button: {
                     classes: 'button button-primary'
                 },
@@ -68,10 +68,10 @@ const pricingLevels = [
                 value: 'Includes everything in the<br /><strong>Community Plan</strong>'
             },
             {
-                value: 'Community Support'
+                value: 'Community Support for Online Workspace'
             },
             {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+                value: 'Private or Public Charts, Dashboards and Slide Decks'
             },
             {
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
@@ -98,7 +98,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                link: 'https://plot.ly/settings/subscription?modal=true',
                 button: {
                     classes: 'button button-primary'
                 },
@@ -110,10 +110,10 @@ const pricingLevels = [
                 value: 'Includes everything in the<br /><strong>Community Plan</strong>'
             },
             {
-                value: 'Community and Chat Support'
+                value: 'Chat Support for Online Workspace'
             },
             {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+                value: 'Private or Public Charts, Dashboards and Slide Decks'
             },
             {
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
@@ -139,7 +139,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/accounts/login/?action=signup',
+                link: 'https://plot.ly/settings/subscription?modal=true',
                 button: {
                     classes: 'button button-emerald'
                 },
@@ -151,10 +151,10 @@ const pricingLevels = [
                 value: 'Includes everything in the<br /><strong>Personal Plan</strong>'
             },
             {
-                value: 'Chat, Email and Phone Support'
+                value: 'Chat, Email and Phone Support for Online Workspace'
             },
             {
-                value: 'Unlimited Private Charts, Dashboards and Slide Decks'
+                value: 'Private or Public Charts, Dashboards and Slide Decks'
             }
             ,
             {
