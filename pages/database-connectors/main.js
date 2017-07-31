@@ -1,4 +1,11 @@
-import {ContentSection, ContentPane, Title, Subtitle, Body, Graphic} from '../../components/content-section/content-section';
+import {
+    ContentSection,
+    ContentPane,
+    Title,
+    Subtitle,
+    Body,
+    Graphic
+} from '../../components/content-section/content-section';
 import React from 'react';
 import Link from 'next/link';
 
@@ -68,9 +75,13 @@ export default () => (
                     Screenshots
                 </Title>
                 <Body>
+                <p>
+                    The Plotly SQL editor embeds directly in the charting environment to get you from SQL to D3 chart in
+                    seconds.
+                </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic label="MySQL: Tesla Supercharger Stations" link="https://plot.ly/~jackp/16939/"
-                        image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png"/>
+                             image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png"/>
                 </div>
                 </Body>
             </ContentPane>

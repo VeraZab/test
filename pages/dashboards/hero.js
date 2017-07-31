@@ -65,7 +65,7 @@ export default () => (
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
             <Browser>
-                <img src='http://marketing.plot.ly/static/marketing/assets/images/dashboards.png'/>
+                <img src='https://images.plot.ly/static/marketing/product/dashboard-header.png'/>
             </Browser>
         </HeroBottom>
     </Hero>
