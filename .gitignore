@@ -81,3 +81,5 @@ Thumbs.db`
 out/*
 out.dropbox
 .dropbox
+.nvmrc
+.nojekyll
