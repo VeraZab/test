@@ -2,10 +2,23 @@
 
   .device-wrapper {
     left: 0;
+    width: 100% !important;
+    position: relative !important;
+
+    &:nth-of-type(even) {
+      display: none;
+      }
   }
+
 
   .content-section-wrapper {
     flex-direction: column;
+  }
+
+
+
+  .content-section-pane {
+    position: relative;
   }
 
   @media only screen and (min-width: 1060px) {
