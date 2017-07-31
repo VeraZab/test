@@ -5,8 +5,7 @@ import {ContentSection, Body} from '../components/content-section/content-sectio
 import IndustriesHero from './single-industries/hero';
 import IndustriesMain from './single-industries/main';
 import IndustriesRequestDemo from './single-industries/request-demo';
-
-
+import styles from './single-industries/single-industries.styles.scss'
 
 export default class extends React.Component {
 
@@ -22,6 +21,7 @@ export default class extends React.Component {
     const data = this.props.data;
     return (
       <Layout meta={data.header.title}>
+        <style dangerouslySetInnerHTML={{__html: styles}}/>
         <IndustriesHero header={data.header} style={data.style} />
         <IndustriesMain mainData={data} />
         <IndustriesRequestDemo />

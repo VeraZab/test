@@ -1,0 +1,26 @@
+.single-industries {
+
+  .device-wrapper {
+    left: 0;
+  }
+
+  .content-section-wrapper {
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 1060px) {
+
+    &:nth-of-type(odd) {
+      .content-section-wrapper {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .content-section-wrapper {
+      flex-direction: row;
+    }
+    // .content-section:nth-of-type(odd) {
+    //
+    // }
+  }
+}
