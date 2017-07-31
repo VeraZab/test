@@ -2,7 +2,6 @@ const path = require('path')
 const glob = require('glob')
 const chromatic = require("chromatic-sass")
 const isProd = process.env.NODE_ENV === 'production'
-process.traceDeprecation = true
 module.exports = {
     assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '',
     exportPathMap: () => ({
