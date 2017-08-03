@@ -49,7 +49,7 @@
     "react-sticky": "5.0.8",
     "react-swipe": "^5.0.6",
     "react-syntax-highlighter": "^5.0.0",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^6.0.5",
     "swipe-js-iso": "^2.0.3",
     "vargs": "^0.1.0",
     "webpack": "2"
