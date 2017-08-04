@@ -1,4 +1,12 @@
 .single-industries {
+
+  .showBackground & {
+    p,
+    .content-section-title {
+      color: #fff;
+    }
+  }
+
   .device-wrapper {
     left: 0;
     width: 100% !important;
