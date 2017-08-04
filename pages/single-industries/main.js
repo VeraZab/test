@@ -43,9 +43,10 @@ class IndustriesMain extends React.Component {
     const sectionItems = (data.sections) ?
     data.sections.map( (section, key)=> {
       return(
-        <ContentSection className="single-industries" key={key} style={{'position' : 'relative'}}>
+        <ContentSection className={`single-industries${section.content[0].showBackground ? ' showBackground' : ''}`} key={key} style={{background: section.content[0].showBackground ? `url(${section.content[0].image})` : ''}} >
               <ContentPane half graphic>
                     {
+                      section.content[0].showBackground ? null :
                       section.content.map((item, index) => <DeviceWrapper key={index} content={item} alt={'Section Image'}></DeviceWrapper>)
                     }
               </ContentPane>

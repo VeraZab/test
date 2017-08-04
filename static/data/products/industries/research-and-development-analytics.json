@@ -101,7 +101,8 @@
   }, {
     "content": [{
       "image": "https://plot.ly/static/enterprise/img/industries/rnd/blue-robot.jpg",
-      "type": "image"
+      "type": "image",
+      "showBackground": true
     }],
     "title": "Autonomous, underwater robot R&D",
     "body": "Blue Robotics uses Plotly with Excel and Python to graph the motor performance results of their underwater robots. <br><a href='http://www.bluerobotics.com/new-product-3d-printed-open-source-propeller-for-the-m100/'>PLOTLY GRAPHS ON BLUE ROBOTICS BLOG</a>"
