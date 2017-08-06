@@ -2,6 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const chromatic = require("chromatic-sass")
 const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
     assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '',
     exportPathMap: () => ({
@@ -19,9 +20,13 @@ module.exports = {
         "/products/on-premise": { page: "/products/on-premise" }
     }),
     webpack: (config, {dev}) => {
+
+        if (config.resolve.alias) {
+          delete config.resolve.alias['react']
+          delete config.resolve.alias['react-dom']
+        };
         config.module.rules.push(
             {
-
                 test: /\.(css|scss)/,
                 loader: 'emit-file-loader',
                 options: {
