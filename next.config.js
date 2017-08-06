@@ -25,6 +25,7 @@ module.exports = {
           delete config.resolve.alias['react']
           delete config.resolve.alias['react-dom']
         };
+
         config.module.rules.push(
             {
                 test: /\.(css|scss)/,
@@ -55,5 +56,4 @@ module.exports = {
         )
         return config
     }
-
 }
