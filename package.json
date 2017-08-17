@@ -11,13 +11,14 @@
     "start": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": "7.10.1"
+    "node": "6.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
   "dependencies": {
     "antd": "^2.8.1",
     "autoprefixer": "6.7.6",
+    "axios": "^0.16.2",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-plugin-wrap-in-js": "^1.1.0",
@@ -43,20 +44,22 @@
     "postcss-uncss": "^0.14.0",
     "proptypes": "^0.14.4",
     "raw-loader": "^0.5.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
     "react-sticky": "5.0.8",
     "react-swipe": "^5.0.6",
     "react-syntax-highlighter": "^5.0.0",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^6.0.5",
     "swipe-js-iso": "^2.0.3",
     "vargs": "^0.1.0",
     "webpack": "2"
   },
   "devDependencies": {
     "babel-preset-env": "^1.2.1",
-    "now": "^3.1.0"
+    "now": "^3.1.0",
+    "react-com": "^1.0.6",
+    "react-scripts": "^1.0.10"
   },
   "now": {
     "alias": "now.plot.ly"
