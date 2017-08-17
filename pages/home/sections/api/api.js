@@ -29,7 +29,7 @@ export default () => (
                 <Body>
                 <p>Plotly's open-source, interactive charting libraries for R, Python, and JavaScript are the fastest
                     growing charting libraries in each language. Work entirely offline in IDEs like RStudio or Jupyter
-                    notebook, or optionally host your work on Plotly Cloud or Plotly On-Premise. Hosting Plotly charts
+                    notebook, or optionally host your work on Plotly Cloud or Plotly On-Premises. Hosting Plotly charts
                     online allows developers and data scientists to collaborate effortlessly with analysts who do not
                     code.</p>
                 </Body>

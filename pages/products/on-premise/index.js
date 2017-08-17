@@ -11,11 +11,12 @@ import {
 import Buttons from '../../../components/buttons/buttons';
 
 import styles from '../cloud/pricing.styles.scss';
+
 const onPremData = [
     {
         features: [
             {
-            value: 'Includes everything in the <strong>Professional Plotly Plan</strong>'
+                value: 'Includes everything in the <strong>Professional Plotly Plan</strong>'
             },
             {
                 value: 'Email and Phone Support'
@@ -43,7 +44,7 @@ const onPremData = [
 const onPremDashata = [
     {
         features: [{
-            value: 'Includes everything in the <strong>On Premise Plan</strong>'
+            value: 'Includes everything in the <strong>On-Premises Plan</strong>'
         },
             {
                 value: 'Email and Phone Support'
@@ -78,13 +79,13 @@ const actions = [
 ];
 
 const meta = {
-    title: 'Plotly On-Premise and Dash Pricing',
+    title: 'Plotly On-Premises and Dash Pricing',
     description: 'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
     url: 'https://plot.ly/products/on-premise/',
     twitter: {
-        label1: 'On-Premise',
+        label1: 'On-Premises',
         data1: '$9,950 per year, 5 user license',
-        label2: 'On-Premise + Dash',
+        label2: 'On-Premises + Dash',
         data2: '$15,950 per year, 5 user license'
     }
 };
@@ -150,7 +151,7 @@ export default class OnPrem extends React.Component {
                             <div className="pricing-card-single full-width">
                                 <div className="pricing-cards-headers-item">
                                     <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                                        On Premise
+                                        On-Premises
                                     </div>
                                 </div>
                                 <div className="pricing-cards-bodies-item">
@@ -180,7 +181,7 @@ export default class OnPrem extends React.Component {
                             <div className="pricing-card-single full-width">
                                 <div className="pricing-cards-headers-item">
                                     <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                                        On Premise + Dash
+                                        On-Premises + Dash
                                     </div>
                                 </div>
                                 <div className="pricing-cards-bodies-item">
@@ -209,6 +210,150 @@ export default class OnPrem extends React.Component {
                         </Body>
                     </ContentPane>
                 </ContentSection>
+                <ContentSection className="architecture-section">
+                    <ContentPane full center center-vertically text>
+                        <div className="pre-title">
+                            Plotly On-Premises
+                        </div>
+                        <Title>
+                            Our On-Premises Architecture
+                        </Title>
+                        <Body>
+                        <div className="image-with-complex-text-overlay architecture">
+                            <div className="image-with-complex-text-overlay-wrapper">
+                                <div className="image">
+                                    <img
+                                        src="https://images.plot.ly/static/marketing/product/on-premises/architecture.png"
+                                        alt=""/>
+                                </div>
+                                <div className="text-overlay">
+                                    <div className="text-item text-item--left-top">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <p>
+                                                Plotly On-Premises ships as an easy-to-install Docker container.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="text-item text-item--left-second">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+
+                                            <p>
+                                                Your app with plotly.js charts can easily export charts and data to a
+                                                white-labeled Plotly On-Premises for advanced editing, analytics and
+                                                image
+                                                export.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="text-item text-item--right-top">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <p>
+                                                Plotly’s chart editor and chart hosting service runs on a Django
+                                                webserver.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div className="text-item text-item--right-bottom">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <p>
+                                                <div className="pre-title">
+                                                    Optional
+                                                </div>
+                                                <div>
+                                                    <p>
+                                                        External databases
+                                                    </p></div>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div className="text-item text-item--center-bottom">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <p>
+                                                <div className="pre-title">
+                                                    Optional
+                                                </div>
+                                                <div>
+                                                    <p> Dash apps can be hosted and run on Plotly On-Premises.</p>
+                                                </div>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className="image">
+                                    <img
+                                        src=""
+                                        alt=""/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        </Body>
+                    </ContentPane>
+                </ContentSection>
+                <ContentSection className="plotlyjs-section">
+                    <ContentPane full center center-vertically text>
+                        <div className="pre-title">
+                            Plotly On-Premises
+                        </div>
+                        <Title>
+                            Link Plotly.js charts in your application to Plotly On-Premise
+                        </Title>
+                        <Body>
+                        <div className="image-with-complex-text-overlay plotlyjs">
+                            <div className="image-with-complex-text-overlay-wrapper">
+                                <div className="text-overlay">
+
+                                    <div className="text-item text-item--right-top">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <div className="text-item-lines-bottom"></div>
+
+                                            <div className="pre-title">
+                                                Users can 1-click import those charts into a white-labeled chart editor
+                                                for advanced editing, analytics, and PDF export.
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Built on React/Redux, Plotly’s chart editor is fully customizable
+                                                    and has been continuously improved over 4&nbsp;years.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="text-item text-item--left-top">
+                                        <div className="text-item-wrapper">
+                                            <div className="text-item-lines"></div>
+                                            <div className="text-item-lines-bottom"></div>
+                                            <div className="pre-title">
+                                                Embed Plotly.js charts inside your application.
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Plotly.js is an enterprise-ready, open-source replacement for D3,
+                                                    Highcharts, or echarts.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        </Body>
+                    </ContentPane>
+                </ContentSection>
+
                 <ContentSection>
                     <ContentPane half center-vertically text>
                         <div className="pre-title">
@@ -219,7 +364,7 @@ export default class OnPrem extends React.Component {
                         </Title>
                         <Body>
                         <p>
-                            Plotly On-Premise is built on a foundation of open-source libraries that are constantly
+                            Plotly On-Premises is built on a foundation of open-source libraries that are constantly
                             improving. To name a few:
                         </p>
 
@@ -249,6 +394,7 @@ export default class OnPrem extends React.Component {
                                  image="https://plot.ly/static/enterprise/img/alternatives/videos/3d.c876ca23cc00.jpg"/>
                     </ContentPane>
                 </ContentSection>
+
             </Layout>
         )
     }

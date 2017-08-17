@@ -157,7 +157,7 @@ export default () => (
                     keep your data private to yourself.
                 </p>
                 <p>
-                    Plotly On-Premise also works with LDAP, SAML, and Active Directory.
+                    Plotly On-Premises also works with LDAP, SAML, and Active Directory.
                 </p>
                 </Body>
             </ContentPane>

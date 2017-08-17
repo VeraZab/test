@@ -340,7 +340,7 @@ class DashMain extends React.Component {
                         </p>
                         <p>
                             Using Dash inside your enterprise?
-                            Plotly offers Dash On-Premise for 1-click app deployment and
+                            Plotly offers Dash On-Premises for 1-click app deployment and
                             app permissioning with LDAP and Active Directory,
                             all behind your corporate firewall.&nbsp;
                             <a className="typeform-share link special-link" href="https://plotly.typeform.com/to/seG7Vb"
@@ -362,21 +362,21 @@ class DashMain extends React.Component {
                                     <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-sharing.png")'}}>
                                         <div className="card-image-label" style={{width: '100%'}}>
-                                            Dash On-Premise Deployment
+                                            Dash On-Premises Deployment
                                         </div>
                                     </div>
                                     <div className="card-body">
                                         <p>
                                             Managing apps and servers inside your
                                             enterprise is usually a full time job.
-                                            Our goal with Dash On-Premise is to make
+                                            Our goal with Dash On-Premises is to make
                                             deploying and sharing a Dash app internally
                                             as easy and secure as possible.
                                             No dev-ops required.
                                         </p>
 
                                         <p>
-                                            Dash On-Premise handles all of the hard
+                                            Dash On-Premises handles all of the hard
                                             parts about managing apps for you:
                                             deployment, managing updates,
                                             error handling, URL routing, LDAP integration,
@@ -398,12 +398,12 @@ class DashMain extends React.Component {
                                     <div className="card-image dark-fade"
                                          style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-portal.png")'}}>
                                         <div className="card-image-label" style={{width: '100%'}}>
-                                            Dash On-Premise<br/>App Portal
+                                            Dash On-Premises<br/>App Portal
                                         </div>
                                     </div>
                                     <div className="card-body">
                                         <p>
-                                            Dash On-Premise ties into Plotly On-Premise,
+                                            Dash On-Premises ties into Plotly On-Premises,
                                             storing your
                                             analytical Dash applications
                                             with plotly graphs, datasets, SQL queries,

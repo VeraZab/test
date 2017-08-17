@@ -24,7 +24,7 @@ export default () => (
                     <li>Every chart that matplotlib or MATLAB graphics can do.</li>
                     <li>Interactive charts and maps out-of-the-box.</li>
                     <li>Get started working offline.</li>
-                    <li>Optional hosted sharing platform through <a href="/products/on-premise/" target="_blank">Plotly On-Premise</a> or <a href="/products/cloud/" target="_blank">Plotly Cloud</a>.</li>
+                    <li>Optional hosted sharing platform through <a href="/products/on-premise/" target="_blank">Plotly On-Premises</a> or <a href="/products/cloud/" target="_blank">Plotly Cloud</a>.</li>
                 </ul>
                 </Body>
             </ContentPane>
@@ -101,7 +101,7 @@ export default () => (
                 <Body>
                 <p>
                     Stream live data to hosted charts with Plotly’s streaming API for Python. Streaming is available for
-                    <a href="/products/on-premise/">Plotly On-Premise</a>.
+                    <a href="/products/on-premise/">Plotly On-Premises</a>.
                 </p>
                 </Body>
             </ContentPane>
@@ -162,15 +162,15 @@ export default () => (
                 <Body>
                 <p>
                     With Plotly, there’s no need to choose between Python and R. R users can easily share Plotly charts
-                    to Python users (and vice versa) through Plotly Cloud, Plotly On-Premise, or entirely offline.
+                    to Python users (and vice versa) through Plotly Cloud, Plotly On-Premises, or entirely offline.
                     Plotly charts are language agnostic and the best open-source choice for any language.
                 </p>
                 <p>
                     For code-free collaboration, Python charts and dashboards can also be shared with Tableau and Excel
-                    users through Plotly On-Premise and Plotly Cloud.
+                    users through Plotly On-Premises and Plotly Cloud.
                 </p>
                 <p><a href="/products/cloud/">Plotly Cloud</a><br />
-                    <a href="/products/on-premise/">Plotly On-Premise</a></p>
+                    <a href="/products/on-premise/">Plotly On-Premises</a></p>
                 </Body>
             </ContentPane>
         </ContentSection>

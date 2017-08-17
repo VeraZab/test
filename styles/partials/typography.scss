@@ -72,6 +72,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
   color: #A2B1C6;
   text-transform: uppercase;
+  @include handheld{
+    text-align: left !important;
+    width: 100%;
+  }
 }
 //----------------------------------------------------------------------------------------------------------------------
 // Body Styles

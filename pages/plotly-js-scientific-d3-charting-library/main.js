@@ -58,7 +58,7 @@ export default () => (
                 </Title>
                 <Body>
                 <p>
-                    Use Plotly.js with <a href="/products/cloud/">Plotly Cloud</a> or <a href="/products/on-premise/">Plotly On-Premise</a> for hosting, sharing, and visual editing of Plotly.js charts. Designers can create charts in Plotly Cloud or Plotly On-Premise while programmers put them into production with Plotly.js.
+                    Use Plotly.js with <a href="/products/cloud/">Plotly Cloud</a> or <a href="/products/on-premise/">Plotly On-Premises</a> for hosting, sharing, and visual editing of Plotly.js charts. Designers can create charts in Plotly Cloud or Plotly On-Premises while programmers put them into production with Plotly.js.
                 </p>
                 </Body>
             </ContentPane>

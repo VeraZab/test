@@ -15,8 +15,8 @@ const HeroButtons = [
         }
     },
     {
-        label: 'Plotly On-Premise',
-        title: 'Looking for a behind-the-firewall solution? Deploy Plotly On-Premise on your secure, local network.',
+        label: 'Plotly On-Premises',
+        title: 'Looking for a behind-the-firewall solution? Deploy Plotly On-Premises on your secure, local network.',
         icon: null,
         target: '_self',
         link: '/products/on-premise/',

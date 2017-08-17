@@ -10,7 +10,7 @@ const navigationRight = [
             title: 'See what you can create with Plotly!',
             icon: null,
             target: '_self',
-            link: 'https://plot.ly/create',
+            link: '/create',
             button: {
                 classes: 'nav-item--with-submenu button button-small button-primary not-mobile'
             },
@@ -27,7 +27,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_chart.87676eabf8bc.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/create/'
+                                link: '/create/'
                             },
                             {
                                 id: 7,
@@ -37,7 +37,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dashboard.52af779684ee.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/dashboard/create'
+                                link: '/dashboard/create'
                             },
                             {
                                 id: 20,
@@ -57,7 +57,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_presentation.89a6f41d4cec.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/organize/home?create=presentation'
+                                link: '/organize/home?create=presentation'
                             },
                             {
                                 id: 9,
@@ -67,7 +67,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_database.0a26f1c68ebb.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/create/?upload=sql'
+                                link: '/create/?upload=sql'
                             },
                             {
                                 id: 10,
@@ -77,7 +77,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_dataset.2c1316a036ab.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/organize/home?create=grid'
+                                link: '/organize/home?create=grid'
                             },
                             {
                                 id: 11,
@@ -87,7 +87,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_notebook.63db2bee0f9b.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/organize/home?create=notebook'
+                                link: '/organize/home?create=notebook'
                             },
                             {
                                 id: 12,
@@ -97,7 +97,7 @@ const navigationRight = [
                                 icon: 'https://plot.ly/static/webapp/images/file-type-icons/ic_folder.07d7dfd25383.svg',
                                 icon_type: 'img',
                                 target: '_blank',
-                                link: 'https://plot.ly/organize/home?create=folder'
+                                link: '/organize/home?create=folder'
                             }
                         ]
                     }
@@ -111,7 +111,7 @@ const navigationRight = [
             title: 'Sign in or Sign up with Plotly',
             icon: null,
             target: '_blank',
-            link: 'https://plot.ly/accounts/login/?action=login',
+            link: '/accounts/login/?action=login',
             button: {
                 classes: 'button button-small button-secondary'
             }
@@ -172,7 +172,7 @@ const navigationLeft = [
                         },
                         {
                             id: 11,
-                            label: 'Plotly On-Premise',
+                            label: 'Plotly On-Premises',
                             slug: '/products/on-premise/',
                             title: 'The behind-the-firewall version of Plotly Cloud.',
                             icon: null,
