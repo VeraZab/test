@@ -1,3 +1,5 @@
+@import "partials/abstract";
+
 .single-industries {
 
   .showBackground & {
@@ -34,5 +36,56 @@
     .content-section-wrapper {
       flex-direction: row;
     }
+  }
+}
+
+.learn-more-grid {
+  .grid-wrapper {
+    .grid-item {
+      @include handheld {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
+
+.learn-more-link {
+  width: 100%;
+  text-align: left;
+  background: $color-dodger-shade;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  @include trans;
+
+  &:hover {
+    background: $color-dodger;
+    transform: translateY(-5px);
+    box-shadow: $drop-shadow-l-light;
+  }
+  a:not(.button):not(.nav-item-wrapper):not(.card):hover:not(.card-action-link) {
+    &:hover {
+      color: white !important;
+    }
+  }
+  a {
+    width: 100%;
+    text-transform: capitalize;
+    color: white !important;
+    background-image: none !important;
+    margin: 0;
+    padding: $unit;
+
+  }
+}
+
+.device-wrapper {
+  @include tablet {
+    max-width: 100% !important;
+    min-width: 0px !important;
   }
 }

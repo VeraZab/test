@@ -1,4 +1,5 @@
 import {ContentSection, ContentPane, Body} from '../../components/content-section/content-section';
+import Link from 'next/link';
 
 class CustomerServiceMain extends React.Component {
 
@@ -23,20 +24,23 @@ class CustomerServiceMain extends React.Component {
     const spacing = this.props.spacing;
 
     return (
-            <div className="card card-with-image" style={cardWithImageStyles}>
-              <div className="card-wrapper">
-                  <a href={story.url}>
-                    <div className="card-image" style={story.style}>
-                      <div className="card-image-label">
-                        {story.label}
-                      </div>
-                    </div>
-                  </a>
-                <div className="card-action" style={removeActionOnLink}>
-                  <a className="card-action-link" href={story.url}>{story.cta}</a>
+
+        <a  href={story.url} className="enterprise-card">
+            <div className="enterprise-card-wrapper">
+                <div className="enterprise-card-image" style={story.style}>
                 </div>
-              </div>
+                <div className="enterprise-card-details">
+                    <div className="enterprise-card-title">
+                        {story.label}
+                    </div>
+                </div>
+                <div className="enterprise-card-hover">
+                    <div className="enterprise-card-cta">
+                        {story.cta}
+                    </div>
+                </div>
             </div>
+        </a>
     )
   }
 }

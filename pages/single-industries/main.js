@@ -59,18 +59,20 @@ class IndustriesMain extends React.Component {
     }) : null;
 
     const learnMoreItems = (data.learnMore) ?
-        <ContentSection className="background-color-light-4">
+        <ContentSection>
           <ContentPane full center-vertically text center>
+              <div className="pre-title">
+                  Resources
+              </div>
               <Title>
                   {data.learnMore.name}
               </Title>
-
               <Body>
-                <Grid columns={2} align-left>
+                <Grid columns={2} align-left className="learn-more-grid">
                 {data.learnMore.links.map( (item, key)=> {
                     return (
                       <GridItem key={key}>
-                          <div className="grid-item-label">
+                          <div className="grid-item-label learn-more-link">
                             <a key={key} href={item.url}>{item.title}</a>
                           </div>
                       </GridItem>
@@ -114,13 +116,13 @@ class IndustriesMain extends React.Component {
 
   getQuoteWithIndexFromData(index, data) {
     const contentSectionClass = (index % 2) ? 'background-color-light-2' : '';
-    return (data.quotes[index]) ? <ContentSection className={contentSectionClass}>
+    return (data.quotes[index]) ? <ContentSection className={contentSectionClass, 'quote-section'}>
         <ContentPane full center-vertically text center>
-            <Title>
-                "{data.quotes[index].desc}"
-            </Title>
             <Body>
-            <p>{data.quotes[index].author}</p>
+            <div className="quote">
+                "{data.quotes[index].desc}"
+            </div>
+            <div className="quotee">{data.quotes[index].author}</div>
             </Body>
         </ContentPane>
     </ContentSection> : null;

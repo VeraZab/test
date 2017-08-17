@@ -5,7 +5,7 @@ import IndustriesHero from './hero';
 import IndustriesMain from './main';
 
 export default () => (
-    <Layout meta={Industries.meta}>
+    <Layout meta={Industries.meta} >
         <IndustriesHero header={Industries.header} />
         <ContentSection className="background-color-light-1 center">
           <Body>

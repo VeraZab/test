@@ -1,11 +1,22 @@
+@import "partials/abstract";
+
 .cards {
-  > div {
-    flex: 1 0 50%;
-    box-sizing: border-box;
-    margin-bottom: 60px;
-    max-width: 475px;
+
+  .industries-card {
+    overflow: hidden;
+    .card-action {
+      bottom: 0;
+      max-height: 20px;
+    }
+  }
+  > a {
+    //flex: 1 0 50%;
+    //box-sizing: border-box;
+    //margin-bottom: 60px;
+    //max-width: 475px;
   }
 }
+
 .card {
   width: 100%;
 
@@ -13,6 +24,10 @@
     &:hover {
       transition: none;
       transform: inherit;
+      .card-action {
+        max-height: 9000px;
+      }
+
     }
   }
 }

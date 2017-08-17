@@ -1,18 +1,30 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
+import {
+    Hero,
+    HeroTop,
+    HeroMessaging,
+    HeroTitle,
+    HeroSubtitle,
+    HeroActions,
+    HeroBottom
+} from '../../components/hero/hero';
 import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
 const HeroWrapperStyle = {
-    backgroundSize: '1750px',
-    backgroundPosition: '50% 100%',
+    backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundImage: 'url("/static/enterprise/img/customer-stories/enterprise-customer-stories-banner.jpg")'
 };
 
+const heroStyles = {
+    minHeight: '400px'
+}
+
+
 const HeroBottomStyles = {
     paddingBottom: '0px',
-    paddingTop: '20px'
+    paddingTop: '0px'
 };
 
 
@@ -47,18 +59,18 @@ class CustomerServiceHero extends React.Component {
         const header = this.props.header;
 
         return (
-          <Hero heroWrapperStyle={HeroWrapperStyle}>
-              <HeroTop>
-                  <HeroMessaging>
-                      <HeroTitle children={header.title} />
-                      <HeroSubtitle children={header.desc} />
-                  </HeroMessaging>
-                  <HeroActions>
-                  </HeroActions>
-              </HeroTop>
-              <HeroBottom style={HeroBottomStyles}>
-              </HeroBottom>
-          </Hero>
+            <Hero styles={heroStyles} heroWrapperStyle={HeroWrapperStyle}>
+                <HeroTop>
+                    <HeroMessaging>
+                        <HeroTitle children={header.title}/>
+                        <HeroSubtitle children={header.desc}/>
+                    </HeroMessaging>
+                    <HeroActions>
+                    </HeroActions>
+                </HeroTop>
+                <HeroBottom style={HeroBottomStyles}>
+                </HeroBottom>
+            </Hero>
         );
     }
 }

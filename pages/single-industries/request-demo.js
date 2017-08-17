@@ -10,7 +10,7 @@ const footer = {
       "target": "_self",
       "link": "/products/cloud/",
       "button": {
-        "classes": "button button-secondary"
+        "classes": "button button-primary"
       }
     }],
     "twitter": [{
@@ -31,12 +31,12 @@ class IndustriesRequestDemo extends React.Component {
       return (
         <ContentSection>
           <ContentPane full center center-vertically text>
-              <Buttons align-center items={footer.cta}/>
               <Title>
                 {footer.title}
               </Title>
               <Body>
-                <Buttons align-center items={footer.twitter}/>
+              <Buttons align-center items={footer.cta}/>
+              <Buttons align-center items={footer.twitter}/>
               </Body>
           </ContentPane>
       </ContentSection>
