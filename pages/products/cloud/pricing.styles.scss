@@ -477,6 +477,9 @@
       .text-item-wrapper {
         padding: $unit*2;
       }
+      &:last-of-type{
+        margin-bottom:$gutter;
+      }
       @include media('<=1049px') {
 
         & + .text-item{
