@@ -59,12 +59,12 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone2-content.f2eaa1a57cf6.jpg",
+      "image": "/static/images/industries/iphone2-content.f2eaa1a57cf6.jpg",
       "color": "columbiablue"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone1-content.b6f0c57744f3.jpg",
+      "image": "/static/images/industries/iphone1-content.b6f0c57744f3.jpg",
       "color": "columbiablue"
     }],
     "title": "Used by some of the world's largest digital news outlets",
@@ -73,7 +73,7 @@
     "content": [{
       "device": "newspapper",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/washingtonpost-plotly.081d7978b0ea.jpg",
+      "image": "/static/images/industries/washingtonpost-plotly.081d7978b0ea.jpg",
       "color": "mayablue"
     }],
     "title": "A GUI for D3.js",
@@ -82,12 +82,12 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice1.f766900c81a0.jpg",
+      "image": "/static/images/industries/iphone-vice1.f766900c81a0.jpg",
       "color": "lightgrey"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/iphone-vice2.4550e9bdb1c0.jpg",
+      "image": "/static/images/industries/iphone-vice2.4550e9bdb1c0.jpg",
       "color": "lightgrey"
     }],
     "title": "Graphs optimized for fluid layout and mobile",
@@ -96,7 +96,7 @@
     "content": [{
       "device": "browser",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/filewell.52db0527affc.jpg",
+      "image": "/static/images/industries/filewell.52db0527affc.jpg",
       "color": "lightgrey"
     }],
     "title": "Whitelabel Platforms with Plotly Enterprise",
@@ -105,7 +105,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/life-expectancy.5196f2276cb6.gif",
+      "image": "/static/images/industries/life-expectancy.5196f2276cb6.gif",
       "color": "cornflowerblue"
     }],
     "title": "Increase engagement and time-on-site with interactive graphs",
@@ -114,7 +114,7 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/journalism/parenthood-evolution.e42d2391530f.svg",
+      "image": "/static/images/industries/parenthood-evolution.e42d2391530f.svg",
       "color": "lightgreyblue"
     }],
     "title": "Plotly Pew Research graph collection",
@@ -123,7 +123,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg",
+      "image": "/static/images/industries/animated-map-no-legend.82104817f1a2.jpg",
       "color": "lightgrey"
     }],
     "title": "Interactive maps like the New York Times",

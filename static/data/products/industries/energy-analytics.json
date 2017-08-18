@@ -37,7 +37,7 @@
       "content": [{
         "device": "iphone-90",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/electricity_consumption_per_country_map.e28f469bc9db.jpg",
+        "image": "/static/images/industries/electricity_consumption_per_country_map.e28f469bc9db.jpg",
         "color": "columbiablue",
         "background": "white"
       }],
@@ -48,7 +48,7 @@
       "content": [{
         "device": "desktop",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/c12-dashboard.e2892892a602.png",
+        "image": "/static/images/industries/c12-dashboard.e2892892a602.png",
         "color": "columbiablue",
         "background": "cornflowerblue"
       }],
@@ -59,7 +59,7 @@
       "content": [{
         "device": "laptop",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/opower.c379c49f0ad3.svg",
+        "image": "/static/images/industries/opower.c379c49f0ad3.svg",
         "background": "lightgrey"
       }],
       "title": "Analyzing smart meter big data at Opower",
@@ -69,7 +69,7 @@
       "content": [{
         "device": "ipad",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/batteries.732368ed9bad.svg",
+        "image": "/static/images/industries/batteries.732368ed9bad.svg",
         "background": "mayablue"
       }],
       "title": "Dashboards for utility-scale batteries",
@@ -78,7 +78,7 @@
     {
       "content": [{
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/wind-farm.856d53aa2241.svg"
+        "image": "/static/images/industries/wind-farm.856d53aa2241.svg"
       }],
       "title": "Dashboards for wind farm prospecting",
       "body": "The wind industry uses Plotly maps, line charts, and histograms to help prospect new wind turbine sites. Anemometer data is sent via cellular to a server which automatically updates a d3.js dashboard built with plotly graphs. <a href='https://plot.ly/javascript'>DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY</a>"
@@ -87,7 +87,7 @@
       "content": [{
         "device": "desktop",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/solar-radiation.b7716f79d8c0.svg",
+        "image": "/static/images/industries/solar-radiation.b7716f79d8c0.svg",
         "background": "darkgreyblue"
       }],
       "title":"Analytics for the Solar Industry",
@@ -97,7 +97,7 @@
       "content": [{
         "device": "report",
         "type": "image",
-        "image": "https://plot.ly/static/enterprise/img/industries/energy/utility-price.9486740d6e80.svg",
+        "image": "/static/images/industries/utility-price.9486740d6e80.svg",
         "background": "lightgrey"
       }],
       "title":"Energy research reporting",

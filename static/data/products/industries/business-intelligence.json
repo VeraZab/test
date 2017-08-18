@@ -41,7 +41,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-map.4035329bb571.jpg",
+      "image": "/static/images/industries/acme-dashboard-map.4035329bb571.jpg",
       "color": "lightcobaltblue"
     }],
     "title": "The Future of BI",
@@ -50,7 +50,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/open-large-deals.e7b4a4d9abbe.svg",
+      "image": "/static/images/industries/open-large-deals.e7b4a4d9abbe.svg",
       "color": "lightgrey"
     }],
     "title": "Analyze Salesforce data in IPython notebook",
@@ -59,7 +59,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/event-sales-day-category.0a235471894c.jpg",
+      "image": "/static/images/industries/event-sales-day-category.0a235471894c.jpg",
       "color": "columbiablue"
     }],
     "title": "Analyzing Redshift data in IPython notebook",
@@ -68,7 +68,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/acme-dashboard-plots.43ca02583fba.jpg",
+      "image": "/static/images/industries/acme-dashboard-plots.43ca02583fba.jpg",
       "color": "lightgrey"
     }],
     "title": "Live-streaming dashboards on mobile, tablet, or laptop",
@@ -77,7 +77,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plot.ly/static/enterprise/img/industries/business/liftopia.e01711954c03.svg",
+      "image": "/static/images/industries/liftopia.e01711954c03.svg",
       "color": "darkgreyblue"
     }],
     "title": "Analyzing lift ticket sales with IPython notebook and Plotly",

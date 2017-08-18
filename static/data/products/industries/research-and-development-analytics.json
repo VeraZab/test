@@ -56,7 +56,7 @@
   "sections": [{
     "content": [{
       "device": "laptop",
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/inefficiencies.ec8b4645506a.svg",
+      "image": "/static/images/industries/inefficiencies.ec8b4645506a.svg",
       "type": "image",
       "color": "columbiablue"
     }],
@@ -65,7 +65,7 @@
   }, {
     "content": [{
       "device": "ipython",
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/cpg-stock.639dbce73735.svg",
+      "image": "/static/images/industries/cpg-stock.639dbce73735.svg",
       "type": "image",
       "color": "cornflowerblue"
     }],
@@ -74,7 +74,7 @@
   }, {
     "content": [{
       "device": "laptop",
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/batteries.a5eef04b70a6.jpg",
+      "image": "/static/images/industries/batteries.a5eef04b70a6.jpg",
       "type": "image",
       "color": "lightgrey"
     }],
@@ -83,7 +83,7 @@
   },{
     "content": [{
       "device": "ipython",
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/memory.afeafe30f544.gif",
+      "image": "/static/images/industries/memory.afeafe30f544.gif",
       "type": "image",
       "color": "mayablue"
     }],
@@ -92,7 +92,7 @@
   }, {
     "content": [{
       "device": "browser",
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/quantum-computing.cd585862e042.png",
+      "image": "/static/images/industries/quantum-computing.cd585862e042.png",
       "type": "image",
       "color": "lightgrey"
     }],
@@ -100,7 +100,7 @@
     "body": "The Center for Quantum Devices at the University of Copenhagen uses Plotly for instrumentation dashboards and ad-hoc graphing inside IPython Notebooks.<br><a href='http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html'>BAND DIAGRAMS WITH PLOTLY AND PYTHON</a>"
   }, {
     "content": [{
-      "image": "https://plot.ly/static/enterprise/img/industries/rnd/blue-robot.jpg",
+      "image": "/static/images/industries/blue-robot.jpg",
       "type": "image",
       "showBackground": true
     }],
@@ -110,9 +110,9 @@
     "content": [{
       "device": "ipad",
       "sources": [
-        "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.f20dd1581b6f.mp4",
-        "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.a590c09a4c2f.webm",
-        "https://plot.ly/static/enterprise/img/industries/videos/animated-map-no-legend.82104817f1a2.jpg"
+        "/static/images/industries/animated-map-no-legend.f20dd1581b6f.mp4",
+        "/static/images/industries/animated-map-no-legend.a590c09a4c2f.webm",
+        "/static/images/industries/animated-map-no-legend.82104817f1a2.jpg"
       ],
       "type": "video",
       "color": "lightgrey"
