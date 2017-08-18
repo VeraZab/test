@@ -51,7 +51,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/dash/hello-world.gif',
         example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
-        button_link: 'http://google.com'
+        button_link: 'https://plot.ly/javascript'
     }
 ];
 
