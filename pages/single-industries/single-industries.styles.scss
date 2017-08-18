@@ -10,6 +10,7 @@
   .device-wrapper {
     left: 0;
     width: 100% !important;
+    min-width: 100% !important;
     position: relative !important;
 
     &:nth-of-type(even) {
