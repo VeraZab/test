@@ -85,7 +85,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/python_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/python_graphic.gif',
         button_text: 'Plotly Python API',
-        button_link: 'http://google.com/link'
+        button_link: 'https://plot.ly/python'
     },
     {
         id: '2',
@@ -96,7 +96,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
         button_text: 'Plotly R API',
-        button_link: 'http://google.com'
+        button_link: 'https://plot.ly/r'
     },
     {
         id: '3',
@@ -107,7 +107,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
         button_text: 'Plotly matlab API',
-        button_link: 'http://google.com'
+        button_link: 'https://plot.ly/matlab'
     },
     {
         id: '4',
@@ -118,7 +118,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
-        button_link: 'http://google.com'
+        button_link: 'https://plot.ly/javascript'
     }
 ];
 
