@@ -12,15 +12,15 @@
     "backgroundImage": "url(/static/images/industries/banner-aerospace.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nasa.eacb18642cfa.png",
+      "graphic": "/static/images/logos/logo-nasa.eacb18642cfa.png",
       "label": "Nasa"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-aerospace.1ce63084d4df.png",
+      "graphic": "/static/images/logos/logo-aerospace.1ce63084d4df.png",
       "label": "Aerospace"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-airforce.bf356fdc56a5.png",
+      "graphic": "/static/images/logos/logo-airforce.bf356fdc56a5.png",
       "label": "Airforce"
     }
   ],

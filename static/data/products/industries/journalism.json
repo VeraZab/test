@@ -12,31 +12,31 @@
     "backgroundImage": "url(/static/images/industries/banner-journalism.jpg)"
   },
   "sponsors": [{
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-washingtonpost.47df50bf33f1.png",
+    "graphic": "/static/images/logos/logo-washingtonpost.47df50bf33f1.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-fortune.f28adce08bb8.png",
+    "graphic": "/static/images/logos/logo-fortune.f28adce08bb8.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-wired.4741a4a4eb66.png",
+    "graphic": "/static/images/logos/logo-wired.4741a4a4eb66.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-gtm.49428e042ac0.png",
+    "graphic": "/static/images/logos/logo-gtm.49428e042ac0.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-bostonglobe.33d4d0cf1bc5.png",
+    "graphic": "/static/images/logos/logo-bostonglobe.33d4d0cf1bc5.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-vice.e7df0217015a.png",
+    "graphic": "/static/images/logos/logo-vice.e7df0217015a.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-maplight.7b04c6d3ad5b.png",
+    "graphic": "/static/images/logos/logo-maplight.7b04c6d3ad5b.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-dailyprogress.bf63206d935a.png",
+    "graphic": "/static/images/logos/logo-dailyprogress.bf63206d935a.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sportsillustrated.9949f0963df1.png",
+    "graphic": "/static/images/logos/logo-sportsillustrated.9949f0963df1.png",
     "label": "Sponsor"
   }],
   "quotes": [{

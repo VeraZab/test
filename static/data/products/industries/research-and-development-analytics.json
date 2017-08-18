@@ -13,43 +13,43 @@
     "backgroundImage": "url(/static/images/industries/banner-rnd.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-google.b8c38cd8aee1.png",
+      "graphic": "/static/images/logos/logo-google.b8c38cd8aee1.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-vtt.c3b5d5e96e42.png",
+      "graphic": "/static/images/logos/logo-vtt.c3b5d5e96e42.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
+      "graphic": "/static/images/logos/logo-ambri.5a7cbdfcdf2f.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-smplbio.820dab3c3420.png",
+      "graphic": "/static/images/logos/logo-smplbio.820dab3c3420.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ubeam.df18556a4309.png",
+      "graphic": "/static/images/logos/logo-ubeam.df18556a4309.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-plume.0bcfb13a0f3f.png",
+      "graphic": "/static/images/logos/logo-plume.0bcfb13a0f3f.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-intel-iot.03d24df55b2b.png",
+      "graphic": "/static/images/logos/logo-intel-iot.03d24df55b2b.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-airforceresearch.ba26c692f9d0.png",
+      "graphic": "/static/images/logos/logo-airforceresearch.ba26c692f9d0.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nielbohr.29592cffc6fd.png",
+      "graphic": "/static/images/logos/logo-nielbohr.29592cffc6fd.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nyu.dde34b01d9ad.png",
+      "graphic": "/static/images/logos/logo-nyu.dde34b01d9ad.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sandia.59836f2247cf.png",
+      "graphic": "/static/images/logos/logo-sandia.59836f2247cf.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-mcgill.220ecfbbf5ec.png",
+      "graphic": "/static/images/logos/logo-mcgill.220ecfbbf5ec.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-siemens.fcd7af0654fb.png",
+      "graphic": "/static/images/logos/logo-siemens.fcd7af0654fb.png",
       "label": "Sponsor"
     }
   ],

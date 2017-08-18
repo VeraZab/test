@@ -12,22 +12,22 @@
     "backgroundImage": "url(/static/images/industries/banner-business.jpg)"
   },
   "sponsors": [{
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-goji.212d2eb0c34c.png",
+    "graphic": "/static/images/logos/logo-goji.212d2eb0c34c.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-liftopia.8763283dbd84.png",
+    "graphic": "/static/images/logos/logo-liftopia.8763283dbd84.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-google.b8c38cd8aee1.png",
+    "graphic": "/static/images/logos/logo-google.b8c38cd8aee1.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-opower.8e9d13b5e40e.png",
+    "graphic": "/static/images/logos/logo-opower.8e9d13b5e40e.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-climatecorp.2cb87ffd3a75.png",
+    "graphic": "/static/images/logos/logo-climatecorp.2cb87ffd3a75.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-likeable.1f06ea4fcf14.png",
+    "graphic": "/static/images/logos/logo-likeable.1f06ea4fcf14.png",
     "label": "Sponsor"
   }],
   "sections": [{

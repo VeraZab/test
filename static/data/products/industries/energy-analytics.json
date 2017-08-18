@@ -12,23 +12,23 @@
     "backgroundImage": "url(/static/images/industries/banner-energy.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-ambri.5a7cbdfcdf2f.png",
+      "graphic": "/static/images/logos/logo-ambri.5a7cbdfcdf2f.png",
       "label": "Sponsor"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-c12.153b8e641740.png",
+      "graphic": "/static/images/logos/logo-c12.153b8e641740.png",
       "label": "Sponsor"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-gtm.49428e042ac0.png",
+      "graphic": "/static/images/logos/logo-gtm.49428e042ac0.png",
       "label": "Sponsor"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-opower.8e9d13b5e40e.png",
+      "graphic": "/static/images/logos/logo-opower.8e9d13b5e40e.png",
       "label": "Sponsor"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-sighten.9c2d8d53cd16.png",
+      "graphic": "/static/images/logos/logo-sighten.9c2d8d53cd16.png",
       "label": "Sponsor"
     }
 

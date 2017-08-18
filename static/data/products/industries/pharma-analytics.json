@@ -12,25 +12,25 @@
     "backgroundImage": "url(/static/images/industries/banner-pharma.jpg)"
   },
   "sponsors": [{
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-lifecode.68c856d37cdd.png",
+    "graphic": "/static/images/logos/logo-lifecode.68c856d37cdd.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-smplbio.820dab3c3420.png",
+    "graphic": "/static/images/logos/logo-smplbio.820dab3c3420.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nih.30010f024aea.png",
+    "graphic": "/static/images/logos/logo-nih.30010f024aea.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-pli.52456d205eef.png",
+    "graphic": "/static/images/logos/logo-pli.52456d205eef.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-helynx.b3d2598841ab.png",
+    "graphic": "/static/images/logos/logo-helynx.b3d2598841ab.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-synthego.c0c23c5863ae.png",
+    "graphic": "/static/images/logos/logo-synthego.c0c23c5863ae.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plot.ly/static/enterprise/img/industries/logo-dtubio.0faccaa7b5b2.png",
+    "graphic": "/static/images/logos/logo-dtubio.0faccaa7b5b2.png",
     "label": "Sponsor"
   }],
   "sections": [{

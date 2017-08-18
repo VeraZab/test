@@ -11,13 +11,13 @@ export default () => (
         <ContentSection className="background-color-light-1 center">
           <ContentPane full center center-vertically>
               <Title align-center>
-                  {data.body.title}
+                  {data.meta.title}
               </Title>
               <Body align-center>
-                <p>{data.body.title}</p>
-                  <div className="cards stories" style={data.storyCard.style}>
-                    {data.stories.map((story, i) => {
-                      return (<CustomerServiceMain style={data.storyCard.style} key={i} story={story} />);
+                <p>{data.meta.title}</p>
+                  <div className="cards stories" style={data.style}>
+                    {data.sections.map((story, i) => {
+                      return (<CustomerServiceMain style={data.style} key={i} story={story} />);
                     })}
                   </div>
               </Body>
