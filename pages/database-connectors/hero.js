@@ -14,7 +14,7 @@ const HeroButtons = [
                 src: 'apple'
             },
             target: '_blank',
-            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.0.2/mac-plotly-database-connector.dmg',
+            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.1.0/2.1.0-mac.zip',
             button: {
                 classes: 'button button-primary'
             }
@@ -28,7 +28,7 @@ const HeroButtons = [
                 src: 'windows'
             },
             target: '_blank',
-            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.0.2/windows-plotly-database-connector.zip',
+            link: 'https://github.com/plotly/plotly-database-connector/releases/download/v2.1.0/2.1.0-win-64.zip',
             button: {
                 classes: 'button button-primary'
             }
