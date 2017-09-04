@@ -9,7 +9,7 @@
     "desc": "Python, R, MATLAB, and Excel are the data analysis languages of choice at the world's largest banks. Plotly provides a reporting and collaborative analytics layer for these tools that works equally well in print or web formats."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-finance.jpg)",
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-finance.jpg)",
     "backgroundSize": "cover"
   },
   "sponsors": [

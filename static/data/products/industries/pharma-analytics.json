@@ -9,7 +9,7 @@
     "desc": "Graphing and dashboards for bioinformatics, collaborative analytics, and the modern life sciences."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-pharma.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-pharma.jpg)"
   },
   "sponsors": [{
     "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-lifecode.68c856d37cdd.png",

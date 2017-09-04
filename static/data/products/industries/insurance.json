@@ -9,7 +9,7 @@
     "desc": "Plotly graphs are used in the dashboards, reports, and software products of insurance companies worldwide."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-insurance.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-insurance.jpg)"
   },
   "sponsors": [
   ],

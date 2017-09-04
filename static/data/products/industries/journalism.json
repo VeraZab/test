@@ -9,7 +9,7 @@
     "desc": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-journalism.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-journalism.jpg)"
   },
   "sponsors": [{
     "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-washingtonpost.47df50bf33f1.png",
