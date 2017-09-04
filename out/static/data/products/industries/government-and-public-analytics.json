@@ -1,0 +1,91 @@
+{
+  "id": "government-and-public-analytics",
+  "meta": {
+    "title": "Government and Civic Data Analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Government and Civic Data Analytics",
+    "desc": "Plotly partners with government agencies globally to help them better share their to data to the public. Plotly's On-Premise products also help modernize data-driven reporting within government agencies while keeping data security paramount."
+  },
+  "sponsors": [
+  ],
+  "style": {
+    "backgroundImage": "url(/static/images/industries/banner-government.jpg)"
+  },
+  "sections": [{
+    "content": [{
+      "device": "desktop",
+      "type": "image",
+      "image": "/static/images/industries/life-expectancy.5196f2276cb6.gif",
+      "color": "columbiablue"
+    }],
+    "title": "Making public data more accessible",
+    "body": "Plotly is disseminating best-in-class stats and visualization tools to anyone with an Internet connection.<br><br><br>With the rise of free, public datasets on government programs and performance, any global citizen can join data-driven discussions on government programs, policy and spending.<br><br><br>Plotly has partnered with the US federal government's open data program, Data.gov, to enable one-click export of datasets into Plotly for visualization and sharing. <br><br> <a href='http://www.data.gov/meta/open-apps/'>PLOTLY PARTNERS WITH DATA.GOV</a><br><a href='http://plot.ly/export/'>PLOTLY EXPORT PARTNERS</a>"
+  }, {
+    "content": [{
+      "device": "laptop",
+      "type": "image",
+      "image": "/static/images/industries/climate-change2.efb87fb2d8af.svg",
+      "color": "lightgrey"
+    }],
+    "title": "Crowd sourcing climate change data",
+    "body": "Plotly was chosen as one of the key technology platforms for the US Climate Data Initiative. <a href='http://www.whitehouse.gov/the-press-office/2015/04/07/fact-sheet-administration-announces-actions-protect-communities-impacts-'>See the full Whitehouse.gov press release here.</a> <br><br><a href='http://www.whitehouse.gov/the-press-office/2015/04/07/fact-sheet-administration-announces-actions-protect-communities-impacts-'>PRESS RELEASE: PLOTLY AND WHITEHOUSE CLIMATE INITIATIVE</a>"
+  }, {
+    "content": [{
+      "device": "ipython",
+      "type": "image",
+      "image": "/static/images/industries/noaa.7037fcde6f96.jpg",
+      "color": "cornflowerblue"
+    }],
+    "title": "Atmospheric modeling at NOAA",
+    "body": "Scientists employed government research agencies NOAA and NASA to use Plotly with IPython notebook for climate change modeling, satellite monitoring, and intraorganization data sharing. <br><br><a href='http://plot.ly/ipython-notebooks/basemap-maps/'>PLOTLY FOR IPYTHON NOTEBOOKS</a> <br><br><a href='http://plot.ly/python/#maps'>PLOTLY MAPS IN PYTHON</a>"
+  }, {
+    "content": [{
+      "device": "ipython",
+      "type": "image",
+      "image": "/static/images/industries/baltimore-vital-signs.4c9c04d77b79.svg",
+      "color": "lightgrey"
+    }],
+    "title": "Baltimore Vital Signs Dataset",
+    "body": "Justin Elszasz, researcher at Navigant, analyzed the Baltimore Vital Signs data set with PCA analysis in IPython notebook. The scatter plot at the right clusters Baltimore neighborhoods by similar Vital Signs metrics. <br><br><a href='http://plot.ly/ipython-notebooks/basemap-maps/'>PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS</a> <br><br><a href='http://plot.ly/ipython-notebooks/baltimore-vital-signs/'>BALTIMORE VITAL SIGNS IPYTHON NOTEBOOK</a>"
+  }],
+  "quotes": [{
+    "author": "- Data.gov press release",
+    "desc": " Data.gov is proud to announce integration with [Plotly] - making it possible to create graphs and dynamic maps with open government data in one click. "
+  }, {
+    "author": "- Data.gov press release",
+    "desc": "  Plotly makes it easy to share and edit your work privately, with your co-workers, or the world. There is so much to learn from open government data and we are happy to feature tools like Plotly and CartoDB that make it easier for everyone to become a data scientist. "
+  }, {
+    "author": "- White house press release",
+    "desc": " [...] Plotly will also challenge its hundreds of thousands of users to find new ways to analyze and visualize these datasets with the goal of gaining new insights about how climate change affects human health. "
+  }],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [{
+      "title": "MAKE A BUBBLE CHART WITH PLOTLY",
+      "url": "http://help.plot.ly/make-a-bubble-chart/"
+    }, {
+      "title": "PLOTLY FOR IPYTHON NOTEBOOKS",
+      "url": "http://plot.ly/ipython-notebooks/basemap-maps/"
+    }, {
+      "title": "PLOTLY WITH IPYTHON: BALTIMORE VITAL SIGNS",
+      "url": "http://plot.ly/ipython-notebooks/baltimore-vital-signs/"
+    }, {
+      "title": "PLOTLY FOR PYTHON: HEATMAPS, CONTOURS AND 2D HISTOGRAMS",
+      "url": "http://plot.ly/ipython-notebooks/basemap-maps/"
+    }, {
+      "title": "PLOTLY PARTNERS WITH DATA.GOV",
+      "url": "http://www.data.gov/meta/open-apps/"
+    }, {
+      "title": "PLOTLY EXPORT PARTNERS",
+      "url": "http://plot.ly/export/"
+    }, {
+      "title": "PLOTLY MAPS IN PYTHON",
+      "url": "http://plot.ly/python/#maps"
+    }, {
+      "title": "REFORM THINK TANK PLOTLY PROFILE",
+      "url": "http://plot.ly/~reformthinktank/"
+    }]
+  }
+}
