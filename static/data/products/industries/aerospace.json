@@ -12,29 +12,29 @@
     "backgroundImage": "url(/static/images/industries/banner-aerospace.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-nasa.eacb18642cfa.png",
+      "graphic": "/static/images/logos/logo-nasa.eacb18642cfa.png",
       "label": "Nasa"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-aerospace.1ce63084d4df.png",
+      "graphic": "/static/images/logos/logo-aerospace.1ce63084d4df.png",
       "label": "Aerospace"
     },
     {
-      "graphic": "https://plot.ly/static/enterprise/img/industries/logo-airforce.bf356fdc56a5.png",
+      "graphic": "/static/images/logos/logo-airforce.bf356fdc56a5.png",
       "label": "Airforce"
     }
   ],
   "sections": [{
       "content": [{
         "device": "laptop",
-        "image": "https://plot.ly/static/enterprise/img/industries/aerospace/graph1.84884a57d01f.svg",
+        "image": "/static/images/industries/graph1.84884a57d01f.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
       },
       {
         "device": "ipad",
-        "image": "https://plot.ly/static/enterprise/img/industries/aerospace/graph2.895e80ddf51b.svg",
+        "image": "/static/images/industries/graph2.895e80ddf51b.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -47,9 +47,9 @@
         "device": "ipython",
         "type": "video",
         "sources": [
-          "https://plot.ly/static/enterprise/img/industries/videos/bluegraph.54bced11928a.mp4",
-          "https://plot.ly/static/enterprise/img/industries/videos/bluegraph.3a91b0b3e74b.webm",
-          "https://plot.ly/static/enterprise/img/industries/videos/bluegraph.303c6a1a21b7.jpg"
+          "/static/images/industries/bluegraph.54bced11928a.mp4",
+          "/static/images/industries/bluegraph.3a91b0b3e74b.webm",
+          "/static/images/industries/bluegraph.303c6a1a21b7.jpg"
         ],
         "color": "lightcobaltblue",
         "background": "white"
@@ -60,7 +60,7 @@
     {
       "content": [{
         "device": "laptop",
-        "image": "https://plot.ly/static/enterprise/img/industries/aerospace/filewell.b2911b59fa48.jpg",
+        "image": "/static/images/industries/filewell.b2911b59fa48.jpg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -71,7 +71,7 @@
     {
       "content": [{
         "device": "iphone",
-        "image": "https://plot.ly/static/enterprise/img/industries/aerospace/maps.351f724327b7.jpg",
+        "image": "/static/images/industries/maps.351f724327b7.jpg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -82,7 +82,7 @@
     {
       "content": [{
         "device": "browser",
-        "image": "https://plot.ly/static/enterprise/img/industries/aerospace/nasa-cube.4a6cfc5c3bc7.svg",
+        "image": "/static/images/industries/nasa-cube.4a6cfc5c3bc7.svg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -94,9 +94,9 @@
       "content": [{
         "device": "laptop",
         "sources": [
-          "https://plot.ly/static/enterprise/img/industries/videos/globe.3045ace10490.mp4",
-          "https://plot.ly/static/enterprise/img/industries/videos/globe.6f2dbf3e26ea.webm",
-          "https://plot.ly/static/enterprise/img/industries/videos/globe.d5c6c719a45c.jpg"
+          "/static/images/industries/globe.3045ace10490.mp4",
+          "/static/images/industries/globe.6f2dbf3e26ea.webm",
+          "/static/images/industries/globe.d5c6c719a45c.jpg"
         ],
         "type": "video",
         "color": "mediumgreyblue",
@@ -109,9 +109,9 @@
       "content": [{
         "device": "desktop",
         "sources": [
-          "https://plot.ly/static/enterprise/img/industries/videos/streaming.b0dcfc168e9c.mp4",
-          "https://plot.ly/static/enterprise/img/industries/videos/streaming.1bc59ca33f45.webm",
-          "https://plot.ly/static/enterprise/img/industries/videos/streaming.3b4a71b628c0.jpg"
+          "/static/images/industries/streaming.b0dcfc168e9c.mp4",
+          "/static/images/industries/streaming.1bc59ca33f45.webm",
+          "/static/images/industries/streaming.3b4a71b628c0.jpg"
         ],
         "type": "video",
         "color": "darkgreyblue",

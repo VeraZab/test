@@ -264,10 +264,9 @@ export default class OnPrem extends React.Component {
                                                 <div className="pre-title">
                                                     Optional
                                                 </div>
-                                                <div>
-                                                    <p>
-                                                        External databases
-                                                    </p></div>
+                                                <p>
+                                                    External databases
+                                                </p>
                                             </p>
                                         </div>
 
@@ -279,9 +278,8 @@ export default class OnPrem extends React.Component {
                                                 <div className="pre-title">
                                                     Optional
                                                 </div>
-                                                <div>
-                                                    <p> Dash apps can be hosted and run on Plotly On-Premises.</p>
-                                                </div>
+                                                <p> Dash apps can be hosted and run on Plotly On-Premises.</p>
+
                                             </p>
                                         </div>
 
