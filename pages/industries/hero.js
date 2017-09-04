@@ -4,8 +4,7 @@ import Buttons from '../../components/buttons/buttons';
 import {Browser} from '../../components/browser/browser';
 
 const HeroWrapperStyle = {
-    backgroundSize: '1750px',
-    backgroundPosition: '50% 100%',
+    backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundImage: 'url("/static/images/banner-splash.jpg")'
 };
@@ -46,7 +45,7 @@ class IndustriesHero extends React.Component {
         const header = this.props.header;
 
         return (
-          <Hero heroWrapperStyle={HeroWrapperStyle}>
+          <Hero heroWrapperStyle={HeroWrapperStyle} className="industries-hero">
               <HeroTop>
                   <HeroMessaging>
                       <HeroTitle children={header.title} />

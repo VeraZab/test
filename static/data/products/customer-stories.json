@@ -1,13 +1,9 @@
 {
   "meta": {
-    "title": "C-12 Energy"
+    "title": "Customer Stories"
   },
   "header": {
-    "title": "C-12 Energy",
-    "desc": "Plotly is at the center of our business development platform, and serves as a starting point for modeling and fitting tools. We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. — Dr. Jenya Kirshtein Scientific Software Engineering"
-  },
-  "body": {
-    "title": "Plotly is making an impact in a wide range of industries",
+    "title": "Customer Stories",
     "desc": "Plotly prides itself on being partnered with its clients. Numerous references of successful implementations across many lines of business are available from a dedicated and committed staff. Read what some of our partners have to say about Plotly."
   },
   "stories": [{
@@ -44,7 +40,7 @@
         "target": "_self",
         "link": "/products/cloud/",
         "button": {
-          "classes": "button button-secondary"
+          "classes": "button button-primary"
         }
       }
     ]

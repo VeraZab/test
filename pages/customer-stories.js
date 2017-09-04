@@ -13,11 +13,7 @@ export default () => (
         <CustomerServiceHero header={data.header} />
         <ContentSection className="background-color-light-1 center">
           <ContentPane full center center-vertically>
-              <Title align-center>
-                  {data.body.title}
-              </Title>
               <Body align-center>
-                <p>{data.body.desc}</p>
                   <div className="cards stories" style={data.storyCard.style}>
                     {data.stories.map((story, i) => {
                       return (<CustomerServiceMain style={data.storyCard.style} key={i} story={story} />);
