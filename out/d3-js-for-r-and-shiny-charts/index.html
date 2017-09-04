@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/d3-js-for-r-and-shiny-charts/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" as="script"/><title class="next-head">D3.js for R and Shiny Charts</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="D3.js for R and Shiny Charts • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/d3-js-for-r-and-shiny-charts/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="D3.js for R and Shiny Charts" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/d3-js-for-r-and-shiny-charts/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-880677479"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/d3-js-for-r-and-shiny-charts/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" as="script"/><title class="next-head">D3.js for R and Shiny Charts</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="D3.js for R and Shiny Charts • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/d3-js-for-r-and-shiny-charts/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="D3.js for R and Shiny Charts" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/d3-js-for-r-and-shiny-charts/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-445115669"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 progress, sub, sup {
   vertical-align: baseline; }
 html {
@@ -1333,6 +1333,100 @@ img {
     .cards-narrative .card {
       max-width: calc(100%);
       width: calc(100%); } }
+.enterprise-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(50% - 40px);
+  margin: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 275px;
+  overflow: hidden;
+  border-radius: 8px; }
+@media (max-width: 580px) {
+    .enterprise-card {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
+.enterprise-card .enterprise-card-hover {
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    z-index: 3; }
+.enterprise-card .enterprise-card-hover .enterprise-card-cta {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+      opacity: 0;
+      transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97); }
+@media (min-width: 581px) {
+    .enterprise-card:hover {
+      cursor: pointer; }
+      .enterprise-card:hover .enterprise-card-details {
+        border-left: 16px solid #119DFF; }
+      .enterprise-card:hover .enterprise-card-hover {
+        opacity: 1; }
+        .enterprise-card:hover .enterprise-card-hover .enterprise-card-cta {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: 1; } }
+.enterprise-card-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+.enterprise-card-details {
+    border-left: 0px solid #119DFF;
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    z-index: 2;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 24px;
+    padding-right: 192px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+.enterprise-card-title {
+    color: white;
+    font-size: 34px;
+    line-height: 42px;
+    font-family: 'Dosis';
+    text-align: left; }
+.enterprise-card-image {
+    z-index: 1;
+    border-radius: 8px !important;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover; }
+.industries-hero {
+  min-height: 0 !important; }
 </style><!-- react-empty: 4 --><header class="header-main" data-reactid="5"><style data-reactid="6">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -2426,7 +2520,8 @@ article.body {
   padding-top: 6px;
   font-size: 0.75rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 99; }
 small.down-arrow {
   opacity: 0.5;
   font-size: 8px;
@@ -3349,7 +3444,7 @@ article.body {
 <!-- /react-text --></span></span><span style="display:block;" data-reactid="267"><!-- react-text: 268 -->
 <!-- /react-text --></span><span style="display:block;" data-reactid="269"><span data-reactid="270"><!-- react-text: 271 --><!-- /react-text --></span><span style="color:#61aeee;" data-reactid="272"><!-- react-text: 273 -->subplot<!-- /react-text --></span><span data-reactid="274"><!-- react-text: 275 -->(p1, p2)<!-- /react-text --></span><span data-reactid="276"><!-- react-text: 277 --> %&gt;% 
 <!-- /react-text --></span></span><span style="display:block;" data-reactid="278"><span data-reactid="279"><!-- react-text: 280 -->    <!-- /react-text --></span><span style="color:#61aeee;" data-reactid="281"><!-- react-text: 282 -->highlight<!-- /react-text --></span><span data-reactid="283"><!-- react-text: 284 -->(<!-- /react-text --></span><span style="color:#98c379;" data-reactid="285"><!-- react-text: 286 -->&quot;plotly_click&quot;<!-- /react-text --></span><span data-reactid="287"><!-- react-text: 288 -->)<!-- /react-text --></span><span data-reactid="289"><!-- react-text: 290 --> %&gt;% 
-<!-- /react-text --></span></span><span style="display:block;" data-reactid="291"><span data-reactid="292"><!-- react-text: 293 -->    <!-- /react-text --></span><span style="color:#61aeee;" data-reactid="294"><!-- react-text: 295 -->hide_legend<!-- /react-text --></span><span data-reactid="296"><!-- react-text: 297 -->()<!-- /react-text --></span></span></code></pre></div><div class="code-explorer-editor-actions" data-reactid="298"><div class="buttons" data-reactid="299"><a href="http://google.com" class="button button-primary button-emerald" data-reactid="300"><!-- react-text: 301 -->Plotly R API<!-- /react-text --><!-- react-text: 302 --> →<!-- /react-text --></a></div></div></div></div></div></div></div></div></div><div class="hero-bottom" style="padding-bottom:60px;padding-top:0px;" data-reactid="303"><div class="hero-bottom-wrapper hidden hidden-fade" data-reactid="304"></div></div></div><div class="hero-background-image" style="background-image:url(https://images.plot.ly/static/marketing/hero-pricing@2x.png);background-size:1640px;background-position:50% 80%;background-repeat:no-repeat;" data-reactid="305"></div></section><div data-reactid="306"><section class="content-section " data-reactid="307"><style data-reactid="308">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!-- /react-text --></span></span><span style="display:block;" data-reactid="291"><span data-reactid="292"><!-- react-text: 293 -->    <!-- /react-text --></span><span style="color:#61aeee;" data-reactid="294"><!-- react-text: 295 -->hide_legend<!-- /react-text --></span><span data-reactid="296"><!-- react-text: 297 -->()<!-- /react-text --></span></span></code></pre></div><div class="code-explorer-editor-actions" data-reactid="298"><div class="buttons" data-reactid="299"><a href="http://plot.ly/r" class="button button-primary button-emerald" data-reactid="300"><!-- react-text: 301 -->Plotly R API<!-- /react-text --><!-- react-text: 302 --> →<!-- /react-text --></a></div></div></div></div></div></div></div></div></div><div class="hero-bottom" style="padding-bottom:60px;padding-top:0px;" data-reactid="303"><div class="hero-bottom-wrapper hidden hidden-fade" data-reactid="304"></div></div></div><div class="hero-background-image" style="background-image:url(https://images.plot.ly/static/marketing/hero-pricing@2x.png);background-size:1640px;background-position:50% 80%;background-repeat:no-repeat;" data-reactid="305"></div></section><div data-reactid="306"><section class="content-section " data-reactid="307"><style data-reactid="308">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
     display: none !important; } }
@@ -3917,6 +4012,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="309"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="310"><div class="content-section-pane-wrapper hidden" data-reactid="311"><div class="pre-title" data-reactid="312">Plotly for R and Shiny</div><div class="content-section-title title-l undefined" data-reactid="313"><div class="content-section-title-wrapper hidden" data-reactid="314">Features and Benefits</div></div><div class="content-section-body undefined" data-reactid="315"><div class="content-section-body-wrapper hidden" data-reactid="316"><ul class="hero-list" data-reactid="317"><li data-reactid="318">Every chart that lattice or ggplot2 can do.</li><li data-reactid="319">Interactive charts and maps out-of-the-box.</li><li data-reactid="320">Get started working offline.</li><li data-reactid="321"><!-- react-text: 322 -->Optional hosted  sharing platform through <!-- /react-text --><a href="/products/on-premise/" target="_blank" data-reactid="323">Plotly On-Premises</a><!-- react-text: 324 --> or <!-- /react-text --><a href="/products/cloud/" target="_blank" data-reactid="325">Plotly Cloud</a><!-- react-text: 326 -->.<!-- /react-text --></li></ul></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="327"><div class="content-section-pane-wrapper hidden" data-reactid="328"><div class="content-section-graphic  content-section-graphic-image" data-reactid="329"><div class="content-section-graphic-wrapper hidden" data-reactid="330"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/chart_graphic.png" data-reactid="331"/><!-- react-text: 332 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="333"><style data-reactid="334">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4485,6 +4598,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="335"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="336"><div class="content-section-pane-wrapper hidden" data-reactid="337"><div class="content-section-graphic  content-section-graphic-image" data-reactid="338"><div class="content-section-graphic-wrapper hidden" data-reactid="339"><img class="content-section-graphic-img" src="https://camo.githubusercontent.com/09183b0e60c303d96a22e999cd69c81b1dcfe302/687474703a2f2f692e696d6775722e636f6d2f655671735a6d612e676966" data-reactid="340"/><!-- react-text: 341 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="342"><div class="content-section-pane-wrapper hidden" data-reactid="343"><div class="content-section-title title-l undefined" data-reactid="344"><div class="content-section-title-wrapper hidden" data-reactid="345">Supercharged graphics for R Shiny</div></div><div class="content-section-body undefined" data-reactid="346"><div class="content-section-body-wrapper hidden" data-reactid="347"><p data-reactid="348">Love R Shiny? Try adding Plotly charts for supercharged interactive graphics and cross filtering.</p></div></div></div></div></div></section><section class="content-section " data-reactid="349"><style data-reactid="350">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5053,6 +5184,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="351"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="352"><div class="content-section-pane-wrapper hidden" data-reactid="353"><div class="content-section-title title-l undefined" data-reactid="354"><div class="content-section-title-wrapper hidden" data-reactid="355">Add interactivity to ggplot2 charts</div></div><div class="content-section-body undefined" data-reactid="356"><div class="content-section-body-wrapper hidden" data-reactid="357"><p data-reactid="358">No need to learn a new chart syntax: One line of code converts a ggplot2 static chart to an interactive Plotly version.</p><p data-reactid="359"><a href="https://cpsievert.github.io/plotly_book/extending-ggplotly.html#extending-ggplotly" target="_blank" data-reactid="360">Learn More</a></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="361"><div class="content-section-pane-wrapper hidden" data-reactid="362"><div class="content-section-graphic  content-section-graphic-image" data-reactid="363"><div class="content-section-graphic-wrapper hidden" data-reactid="364"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/ggplot2.png" data-reactid="365"/><!-- react-text: 366 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="367"><style data-reactid="368">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5621,6 +5770,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="369"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="370"><div class="content-section-pane-wrapper hidden" data-reactid="371"><div class="content-section-graphic  content-section-graphic-image" data-reactid="372"><div class="content-section-graphic-wrapper hidden" data-reactid="373"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/world-class.png" data-reactid="374"/><!-- react-text: 375 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="376"><div class="content-section-pane-wrapper hidden" data-reactid="377"><div class="content-section-title title-l undefined" data-reactid="378"><div class="content-section-title-wrapper hidden" data-reactid="379">World-class charts, maps, and interactivity</div></div><div class="content-section-body undefined" data-reactid="380"><div class="content-section-body-wrapper hidden" data-reactid="381"><p data-reactid="382">Make D3.js and WebGL charts with the ease, power, and open-source ecosystem of R. Plotly charts and dashboards can be easily styled in R, or uploaded to Plotly’s online editor for point-&amp;-click styling and collaboration.</p><p data-reactid="383"><a href="http://plot.ly/r" target="_blank" data-reactid="384">Learn More</a></p></div></div></div></div></div></section><section class="content-section " data-reactid="385"><style data-reactid="386">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6189,6 +6356,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="387"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="388"><div class="content-section-pane-wrapper hidden" data-reactid="389"><div class="content-section-title title-l undefined" data-reactid="390"><div class="content-section-title-wrapper hidden" data-reactid="391">GitHub-style Sharing</div></div><div class="content-section-body undefined" data-reactid="392"><div class="content-section-body-wrapper hidden" data-reactid="393"><p data-reactid="394">Share your charts, maps, and dashboards through Plotly’s online platform, or work entirely offline.</p><p data-reactid="395"><!-- react-text: 396 -->Featured R user: <!-- /react-text --><a href="https://plot.ly/~riddhiman" data-reactid="397">@riddhiman</a></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="398"><div class="content-section-pane-wrapper hidden" data-reactid="399"><div class="content-section-graphic  content-section-graphic-image" data-reactid="400"><div class="content-section-graphic-wrapper hidden" data-reactid="401"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/map_styles.gif" data-reactid="402"/><!-- react-text: 403 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="404"><style data-reactid="405">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6757,6 +6942,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="406"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="407"><div class="content-section-pane-wrapper hidden" data-reactid="408"><div class="content-section-graphic  content-section-graphic-image" data-reactid="409"><div class="content-section-graphic-wrapper hidden" data-reactid="410"><img class="content-section-graphic-img" src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png" data-reactid="411"/><!-- react-text: 412 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="413"><div class="content-section-pane-wrapper hidden" data-reactid="414"><div class="content-section-title title-l undefined" data-reactid="415"><div class="content-section-title-wrapper hidden" data-reactid="416">Collaborate with Tableau, Excel, and Python users</div></div><div class="content-section-body undefined" data-reactid="417"><div class="content-section-body-wrapper hidden" data-reactid="418"><p data-reactid="419">With Plotly, there’s no need to choose between Python and R. R users can easily share Plotly charts to Python users (and vice versa) through Plotly Cloud, Plotly On-Premises, or entirely offline. Plotly charts are language agnostic and the best open-source choice for any language.</p><p data-reactid="420">For code-free collaboration, Python charts and dashboards can also be shared with Tableau and Excel users through Plotly On-Premises and Plotly Cloud.</p><p data-reactid="421"><a href="/products/cloud/" data-reactid="422">Plotly Cloud</a><br data-reactid="423"/><a href="/products/on-premise/" data-reactid="424">Plotly On-Premises</a></p></div></div></div></div></div></section><section class="content-section " data-reactid="425"><style data-reactid="426">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7325,6 +7528,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="427"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="428"><div class="content-section-pane-wrapper hidden" data-reactid="429"><div class="content-section-title title-l undefined" data-reactid="430"><div class="content-section-title-wrapper hidden" data-reactid="431">Plotly for R &amp; Shiny Workshops</div></div><div class="content-section-body undefined" data-reactid="432"><div class="content-section-body-wrapper hidden" data-reactid="433"><p data-reactid="434"><!-- react-text: 435 -->Send your team to a <!-- /react-text --><a href="https://plotcon.plot.ly/" target="_blank" data-reactid="436">PLOTCON workshop</a><!-- react-text: 437 --> to level up their skills in R visualization and Shiny app development. Workshops are, held twice per year in NYC and the West Coast. We can also hold custom workshops on-site at your company.<!-- /react-text --></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="438"><div class="content-section-pane-wrapper hidden" data-reactid="439"><div class="content-section-graphic  content-section-graphic-image" data-reactid="440"><div class="content-section-graphic-wrapper hidden" data-reactid="441"><img class="content-section-graphic-img" src="https://images-hoshi.nationalmachine.co/ineffable/uploads/95aa3dc80638bd314e7085f1f561e2d8/DSC02407.jpg?w=1800&amp;h=1800&amp;crop=fit&amp;q=80" data-reactid="442"/><!-- react-text: 443 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section  request-callback-section" data-reactid="444"><style data-reactid="445">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7893,6 +8114,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="446"><div class="content-section-pane content-section-pane-text content-section-pane-align-center content-section-pane-align-center-vertically content-section-pane-full" data-reactid="447"><div class="content-section-pane-wrapper hidden" data-reactid="448"><div class="pre-title" data-reactid="449">Conntect with us</div><div class="content-section-title title-l undefined" data-reactid="450"><div class="content-section-title-wrapper hidden" data-reactid="451"><!-- react-text: 452 -->Learn how we can work together<!-- /react-text --><div class="buttons center gutter-top" data-reactid="453"><a class="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb" data-reactid="454"><div class="button-wrapper" data-reactid="455"><div class="button-label" data-reactid="456">Request a Demo</div></div></a></div></div></div><div class="content-section-body undefined" data-reactid="457"><div class="content-section-body-wrapper hidden" data-reactid="458"><p data-reactid="459">A Plotly sales engineer will answer any questions, walk you through a demo, and support a trial deployment.</p></div></div></div></div></div></section></div></div><footer class="footer-main" data-reactid="460"><style data-reactid="461">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -8258,7 +8497,7 @@ article.body {
           .footer-main-section-link-label {
             font-size: 0.85rem; } }
 </style><div class="footer-main-wrapper" data-reactid="462"><div class="footer-main-top" data-reactid="463"><div class="footer-main-top-wrapper" data-reactid="464"><div class="footer-main-section" data-reactid="465"><div class="footer-main-section-wrapper" data-reactid="466"><div class="footer-main-section-header" data-reactid="467">Developers</div><nav class="footer-main-section-links" data-reactid="468"><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="469"><div class="footer-main-section-link-wrapper" data-reactid="470"><!-- react-text: 471 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="472">Python</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="473"><div class="footer-main-section-link-wrapper" data-reactid="474"><!-- react-text: 475 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="476">R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/matlab/" target="_blank" data-reactid="477"><div class="footer-main-section-link-wrapper" data-reactid="478"><!-- react-text: 479 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="480">MATLAB</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript-graphing-library/" target="_blank" data-reactid="481"><div class="footer-main-section-link-wrapper" data-reactid="482"><!-- react-text: 483 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="484">Javascript</div></div></a><a class="footer-main-section-link" href="https://api.plot.ly/v2/" target="_blank" data-reactid="485"><div class="footer-main-section-link-wrapper" data-reactid="486"><!-- react-text: 487 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="488">REST API</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="489"><div class="footer-main-section-wrapper" data-reactid="490"><div class="footer-main-section-header" data-reactid="491">Company</div><nav class="footer-main-section-links" data-reactid="492"><a class="footer-main-section-link" href="https://plot.ly/company/jobs/" target="_blank" data-reactid="493"><div class="footer-main-section-link-wrapper" data-reactid="494"><!-- react-text: 495 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="496">About</div></div></a><a class="footer-main-section-link" href="https://plot.ly/company/team/" target="_blank" data-reactid="497"><div class="footer-main-section-link-wrapper" data-reactid="498"><!-- react-text: 499 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="500">Team</div></div></a><a class="footer-main-section-link" href="https://blog.plot.ly/" target="_blank" data-reactid="501"><div class="footer-main-section-link-wrapper" data-reactid="502"><!-- react-text: 503 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="504">Blog</div></div></a><a class="footer-main-section-link" href="https://moderndata.plot.ly/" target="_blank" data-reactid="505"><div class="footer-main-section-link-wrapper" data-reactid="506"><!-- react-text: 507 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="508">Modern Data</div></div></a><a class="footer-main-section-link" href="https://plot.ly/products/industries/" target="_blank" data-reactid="509"><div class="footer-main-section-link-wrapper" data-reactid="510"><!-- react-text: 511 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="512">Industries</div></div></a><a class="footer-main-section-link" href="https://plotcon.plot.ly/" target="_blank" data-reactid="513"><div class="footer-main-section-link-wrapper" data-reactid="514"><!-- react-text: 515 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="516">PLOTCON</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="517"><div class="footer-main-section-wrapper" data-reactid="518"><div class="footer-main-section-header" data-reactid="519">Resources</div><nav class="footer-main-section-links" data-reactid="520"><a class="footer-main-section-link" href="https://support.plot.ly/" target="_blank" data-reactid="521"><div class="footer-main-section-link-wrapper" data-reactid="522"><!-- react-text: 523 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="524">Developer Support</div></div></a><a class="footer-main-section-link" href="https://community.plot.ly/" target="_blank" data-reactid="525"><div class="footer-main-section-link-wrapper" data-reactid="526"><!-- react-text: 527 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="528">Community Support</div></div></a><a class="footer-main-section-link" href="http://help.plot.ly/" target="_blank" data-reactid="529"><div class="footer-main-section-link-wrapper" data-reactid="530"><!-- react-text: 531 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="532">Documentation</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="533"><div class="footer-main-section-wrapper" data-reactid="534"><div class="footer-main-section-header" data-reactid="535">Data Science</div><nav class="footer-main-section-links" data-reactid="536"><a class="footer-main-section-link" href="https://plot.ly/dash/" target="_blank" data-reactid="537"><div class="footer-main-section-link-wrapper" data-reactid="538"><!-- react-text: 539 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="540">Dash</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript/" target="_blank" data-reactid="541"><div class="footer-main-section-link-wrapper" data-reactid="542"><!-- react-text: 543 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="544">Plotly.js</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="545"><div class="footer-main-section-link-wrapper" data-reactid="546"><!-- react-text: 547 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="548">Plotly for R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="549"><div class="footer-main-section-link-wrapper" data-reactid="550"><!-- react-text: 551 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="552">Plotly for Python</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="553"><div class="footer-main-section-wrapper" data-reactid="554"><div class="footer-main-section-header" data-reactid="555">Business Intelligence</div><nav class="footer-main-section-links" data-reactid="556"><a class="footer-main-section-link" href="https://plot.ly/online-chart-maker/" target="_blank" data-reactid="557"><div class="footer-main-section-link-wrapper" data-reactid="558"><!-- react-text: 559 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="560">Charts</div></div></a><a class="footer-main-section-link" href="https://plot.ly/dashboards/" target="_blank" data-reactid="561"><div class="footer-main-section-link-wrapper" data-reactid="562"><!-- react-text: 563 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="564">Dashboards</div></div></a><a class="footer-main-section-link" href="https://plot.ly/powerpoint-online/" target="_blank" data-reactid="565"><div class="footer-main-section-link-wrapper" data-reactid="566"><!-- react-text: 567 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="568">Slide Decks</div></div></a><a class="footer-main-section-link" href="https://marketing.plot.ly/database-connectors/" target="_blank" data-reactid="569"><div class="footer-main-section-link-wrapper" data-reactid="570"><!-- react-text: 571 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="572">Database Connectors</div></div></a></nav></div></div></div></div><div class="footer-main-bottom" data-reactid="573"><div class="footer-main-bottom-wrapper" data-reactid="574"><div class="footer-main-bottom-section" data-reactid="575"><copyright data-reactid="576"><span data-reactid="577">Copyright © 2017 Plotly.</span><!-- react-text: 578 --> <!-- /react-text --><span data-reactid="579">All rights reserved.</span></copyright></div><div class="footer-main-bottom-section" data-reactid="580"><div class="footer-main-bottom-links" data-reactid="581"><a href="https://plot.ly/terms-of-service/" target="_blank" data-reactid="582">Terms of Service</a><a href="https://plot.ly/privacy/" target="_blank" data-reactid="583">Privacy Policy</a></div></div></div></div></div></footer></div></div></div><div id="__next-error"></div></div><div><script>
-          __NEXT_DATA__ = {"props":{},"pathname":"/d3-js-for-r-and-shiny-charts","query":{},"buildId":"9b550052-0a21-4331-96c8-9120f7c94fbc","buildStats":{"app.js":{"hash":"c8bfae930eb0ad3c1cfeb8d6ad23c9f5"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
+          __NEXT_DATA__ = {"props":{},"pathname":"/d3-js-for-r-and-shiny-charts","query":{},"buildId":"3398ce23-bfce-4195-9258-87a2c294fd63","buildStats":{"app.js":{"hash":"50062c46034bdaef67253655dcb97723"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
           module={}
           __NEXT_LOADED_PAGES__ = []
           __NEXT_LOADED_CHUNKS__ = []
@@ -8270,4 +8509,4 @@ article.body {
           __NEXT_REGISTER_CHUNK = function (chunkName, fn) {
             __NEXT_LOADED_CHUNKS__.push({ chunkName: chunkName, fn: fn })
           }
-        </script><script async="" id="__NEXT_PAGE__/d3-js-for-r-and-shiny-charts" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/d3-js-for-r-and-shiny-charts/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" async=""></script></div></body></html>
+        </script><script async="" id="__NEXT_PAGE__/d3-js-for-r-and-shiny-charts" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/d3-js-for-r-and-shiny-charts/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" async=""></script></div></body></html>

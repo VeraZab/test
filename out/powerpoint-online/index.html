@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/powerpoint-online/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" as="script"/><title class="next-head">Powerpoint Online</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="Powerpoint Online • Plotly" class="next-head"/><meta property="og:description" content="Create and share Powerpoint-like slide decks online that have interactive Plotly charts." class="next-head"/><meta property="og:url" content="https://plot.ly/powerpoint-online/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="Powerpoint Online" class="next-head"/><meta name="twitter:description" content="Create and share Powerpoint-like slide decks online that have interactive Plotly charts." class="next-head"/><meta name="twitter:url" content="https://plot.ly/powerpoint-online/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="830035149"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/powerpoint-online/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" as="script"/><title class="next-head">Powerpoint Online</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="Powerpoint Online • Plotly" class="next-head"/><meta property="og:description" content="Create and share Powerpoint-like slide decks online that have interactive Plotly charts." class="next-head"/><meta property="og:url" content="https://plot.ly/powerpoint-online/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="Powerpoint Online" class="next-head"/><meta name="twitter:description" content="Create and share Powerpoint-like slide decks online that have interactive Plotly charts." class="next-head"/><meta name="twitter:url" content="https://plot.ly/powerpoint-online/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-1790078855"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 progress, sub, sup {
   vertical-align: baseline; }
 html {
@@ -1333,6 +1333,100 @@ img {
     .cards-narrative .card {
       max-width: calc(100%);
       width: calc(100%); } }
+.enterprise-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(50% - 40px);
+  margin: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 275px;
+  overflow: hidden;
+  border-radius: 8px; }
+@media (max-width: 580px) {
+    .enterprise-card {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
+.enterprise-card .enterprise-card-hover {
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    z-index: 3; }
+.enterprise-card .enterprise-card-hover .enterprise-card-cta {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+      opacity: 0;
+      transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97); }
+@media (min-width: 581px) {
+    .enterprise-card:hover {
+      cursor: pointer; }
+      .enterprise-card:hover .enterprise-card-details {
+        border-left: 16px solid #119DFF; }
+      .enterprise-card:hover .enterprise-card-hover {
+        opacity: 1; }
+        .enterprise-card:hover .enterprise-card-hover .enterprise-card-cta {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: 1; } }
+.enterprise-card-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+.enterprise-card-details {
+    border-left: 0px solid #119DFF;
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    z-index: 2;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 24px;
+    padding-right: 192px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+.enterprise-card-title {
+    color: white;
+    font-size: 34px;
+    line-height: 42px;
+    font-family: 'Dosis';
+    text-align: left; }
+.enterprise-card-image {
+    z-index: 1;
+    border-radius: 8px !important;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover; }
+.industries-hero {
+  min-height: 0 !important; }
 </style><!-- react-empty: 4 --><header class="header-main" data-reactid="5"><style data-reactid="6">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -2426,7 +2520,8 @@ article.body {
   padding-top: 6px;
   font-size: 0.75rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 99; }
 small.down-arrow {
   opacity: 0.5;
   font-size: 8px;
@@ -3719,6 +3814,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="207"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="208"><div class="content-section-pane-wrapper hidden" data-reactid="209"><div class="content-section-title title-l undefined" data-reactid="210"><div class="content-section-title-wrapper hidden" data-reactid="211">Drag and drop</div></div><div class="content-section-body undefined" data-reactid="212"><div class="content-section-body-wrapper hidden" data-reactid="213"><p data-reactid="214"><!-- react-text: 215 -->Create <!-- /react-text --><a href="http://formidable.com/open-source/spectacle/" target="_blank" data-reactid="216">Spectacle</a><!-- react-text: 217 --> based slide decks using a drag &amp; drop interface<!-- /react-text --></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="218"><div class="content-section-pane-wrapper hidden" data-reactid="219"><div class="content-section-graphic  content-section-graphic-image" data-reactid="220"><div class="content-section-graphic-wrapper hidden" data-reactid="221"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/drag-drop.gif" data-reactid="222"/><!-- react-text: 223 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="224"><style data-reactid="225">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4287,6 +4400,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="226"><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="227"><div class="content-section-pane-wrapper hidden" data-reactid="228"><div class="content-section-graphic  content-section-graphic-image" data-reactid="229"><div class="content-section-graphic-wrapper hidden" data-reactid="230"><a href="https://plot.ly/~verazab/108/" class="content-section-graphic-image-link" target="_blank" data-reactid="231"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/preso_google_1.jpg" data-reactid="232"/></a><div class="content-section-graphic-label" data-reactid="233"><a href="https://plot.ly/~verazab/108/" data-reactid="234">Google: Quarterly Earnings</a></div></div></div></div></div><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="235"><div class="content-section-pane-wrapper hidden" data-reactid="236"><div class="content-section-graphic  content-section-graphic-image" data-reactid="237"><div class="content-section-graphic-wrapper hidden" data-reactid="238"><a href="https://plot.ly/~bdun9/164/" class="content-section-graphic-image-link" target="_blank" data-reactid="239"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/preso_activision_blizzard_2.jpg" data-reactid="240"/></a><div class="content-section-graphic-label" data-reactid="241"><a href="https://plot.ly/~bdun9/164/" data-reactid="242">Blizzard Games Earnings</a></div></div></div></div></div></div></section><section class="content-section " data-reactid="243"><style data-reactid="244">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4855,6 +4986,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="245"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="246"><div class="content-section-pane-wrapper hidden" data-reactid="247"><div class="content-section-graphic  content-section-graphic-image" data-reactid="248"><div class="content-section-graphic-wrapper hidden" data-reactid="249"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/screenshot-chart.png" data-reactid="250"/><!-- react-text: 251 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="252"><div class="content-section-pane-wrapper hidden" data-reactid="253"><div class="content-section-title title-l undefined" data-reactid="254"><div class="content-section-title-wrapper hidden" data-reactid="255">Embed straight from Plotly</div></div><div class="content-section-body undefined" data-reactid="256"><div class="content-section-body-wrapper hidden" data-reactid="257"><p data-reactid="258">Embed interactive, D3.js charts and dashboards from your Plotly account.</p></div></div></div></div></div></section><section class="content-section " data-reactid="259"><style data-reactid="260">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5423,6 +5572,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="261"><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="262"><div class="content-section-pane-wrapper hidden" data-reactid="263"><div class="content-section-graphic  content-section-graphic-image" data-reactid="264"><div class="content-section-graphic-wrapper hidden" data-reactid="265"><a href="https://plot.ly/~Dreamshot/8278/" class="content-section-graphic-image-link" target="_blank" data-reactid="266"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/preso_computer.jpg" data-reactid="267"/></a><div class="content-section-graphic-label" data-reactid="268"><a href="https://plot.ly/~Dreamshot/8278/" data-reactid="269">a16z: Mobile Ate the World</a></div></div></div></div></div><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="270"><div class="content-section-pane-wrapper hidden" data-reactid="271"><div class="content-section-graphic  content-section-graphic-image" data-reactid="272"><div class="content-section-graphic-wrapper hidden" data-reactid="273"><a href="https://plot.ly/~bdun9/170/" class="content-section-graphic-image-link" target="_blank" data-reactid="274"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/preso_redhat.jpg" data-reactid="275"/></a><div class="content-section-graphic-label" data-reactid="276"><a href="https://plot.ly/~bdun9/170/" data-reactid="277">Red Hat Brand Template</a></div></div></div></div></div></div></section><section class="content-section " data-reactid="278"><style data-reactid="279">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5991,6 +6158,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="280"><div class="content-section-pane content-section-pane-text content-section-pane-align-center content-section-pane-align-center-vertically content-section-pane-full" data-reactid="281"><div class="content-section-pane-wrapper hidden" data-reactid="282"><div class="content-section-title title-l undefined" data-reactid="283"><div class="content-section-title-wrapper hidden" data-reactid="284">Share Online</div></div><div class="content-section-body undefined" data-reactid="285"><div class="content-section-body-wrapper hidden" data-reactid="286"><p data-reactid="287">Share your presentation online with public or secret links.</p></div></div></div></div></div></section></div></div><footer class="footer-main" data-reactid="288"><style data-reactid="289">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6356,7 +6541,7 @@ article.body {
           .footer-main-section-link-label {
             font-size: 0.85rem; } }
 </style><div class="footer-main-wrapper" data-reactid="290"><div class="footer-main-top" data-reactid="291"><div class="footer-main-top-wrapper" data-reactid="292"><div class="footer-main-section" data-reactid="293"><div class="footer-main-section-wrapper" data-reactid="294"><div class="footer-main-section-header" data-reactid="295">Developers</div><nav class="footer-main-section-links" data-reactid="296"><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="297"><div class="footer-main-section-link-wrapper" data-reactid="298"><!-- react-text: 299 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="300">Python</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="301"><div class="footer-main-section-link-wrapper" data-reactid="302"><!-- react-text: 303 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="304">R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/matlab/" target="_blank" data-reactid="305"><div class="footer-main-section-link-wrapper" data-reactid="306"><!-- react-text: 307 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="308">MATLAB</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript-graphing-library/" target="_blank" data-reactid="309"><div class="footer-main-section-link-wrapper" data-reactid="310"><!-- react-text: 311 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="312">Javascript</div></div></a><a class="footer-main-section-link" href="https://api.plot.ly/v2/" target="_blank" data-reactid="313"><div class="footer-main-section-link-wrapper" data-reactid="314"><!-- react-text: 315 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="316">REST API</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="317"><div class="footer-main-section-wrapper" data-reactid="318"><div class="footer-main-section-header" data-reactid="319">Company</div><nav class="footer-main-section-links" data-reactid="320"><a class="footer-main-section-link" href="https://plot.ly/company/jobs/" target="_blank" data-reactid="321"><div class="footer-main-section-link-wrapper" data-reactid="322"><!-- react-text: 323 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="324">About</div></div></a><a class="footer-main-section-link" href="https://plot.ly/company/team/" target="_blank" data-reactid="325"><div class="footer-main-section-link-wrapper" data-reactid="326"><!-- react-text: 327 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="328">Team</div></div></a><a class="footer-main-section-link" href="https://blog.plot.ly/" target="_blank" data-reactid="329"><div class="footer-main-section-link-wrapper" data-reactid="330"><!-- react-text: 331 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="332">Blog</div></div></a><a class="footer-main-section-link" href="https://moderndata.plot.ly/" target="_blank" data-reactid="333"><div class="footer-main-section-link-wrapper" data-reactid="334"><!-- react-text: 335 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="336">Modern Data</div></div></a><a class="footer-main-section-link" href="https://plot.ly/products/industries/" target="_blank" data-reactid="337"><div class="footer-main-section-link-wrapper" data-reactid="338"><!-- react-text: 339 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="340">Industries</div></div></a><a class="footer-main-section-link" href="https://plotcon.plot.ly/" target="_blank" data-reactid="341"><div class="footer-main-section-link-wrapper" data-reactid="342"><!-- react-text: 343 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="344">PLOTCON</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="345"><div class="footer-main-section-wrapper" data-reactid="346"><div class="footer-main-section-header" data-reactid="347">Resources</div><nav class="footer-main-section-links" data-reactid="348"><a class="footer-main-section-link" href="https://support.plot.ly/" target="_blank" data-reactid="349"><div class="footer-main-section-link-wrapper" data-reactid="350"><!-- react-text: 351 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="352">Developer Support</div></div></a><a class="footer-main-section-link" href="https://community.plot.ly/" target="_blank" data-reactid="353"><div class="footer-main-section-link-wrapper" data-reactid="354"><!-- react-text: 355 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="356">Community Support</div></div></a><a class="footer-main-section-link" href="http://help.plot.ly/" target="_blank" data-reactid="357"><div class="footer-main-section-link-wrapper" data-reactid="358"><!-- react-text: 359 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="360">Documentation</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="361"><div class="footer-main-section-wrapper" data-reactid="362"><div class="footer-main-section-header" data-reactid="363">Data Science</div><nav class="footer-main-section-links" data-reactid="364"><a class="footer-main-section-link" href="https://plot.ly/dash/" target="_blank" data-reactid="365"><div class="footer-main-section-link-wrapper" data-reactid="366"><!-- react-text: 367 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="368">Dash</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript/" target="_blank" data-reactid="369"><div class="footer-main-section-link-wrapper" data-reactid="370"><!-- react-text: 371 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="372">Plotly.js</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="373"><div class="footer-main-section-link-wrapper" data-reactid="374"><!-- react-text: 375 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="376">Plotly for R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="377"><div class="footer-main-section-link-wrapper" data-reactid="378"><!-- react-text: 379 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="380">Plotly for Python</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="381"><div class="footer-main-section-wrapper" data-reactid="382"><div class="footer-main-section-header" data-reactid="383">Business Intelligence</div><nav class="footer-main-section-links" data-reactid="384"><a class="footer-main-section-link" href="https://plot.ly/online-chart-maker/" target="_blank" data-reactid="385"><div class="footer-main-section-link-wrapper" data-reactid="386"><!-- react-text: 387 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="388">Charts</div></div></a><a class="footer-main-section-link" href="https://plot.ly/dashboards/" target="_blank" data-reactid="389"><div class="footer-main-section-link-wrapper" data-reactid="390"><!-- react-text: 391 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="392">Dashboards</div></div></a><a class="footer-main-section-link" href="https://plot.ly/powerpoint-online/" target="_blank" data-reactid="393"><div class="footer-main-section-link-wrapper" data-reactid="394"><!-- react-text: 395 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="396">Slide Decks</div></div></a><a class="footer-main-section-link" href="https://marketing.plot.ly/database-connectors/" target="_blank" data-reactid="397"><div class="footer-main-section-link-wrapper" data-reactid="398"><!-- react-text: 399 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="400">Database Connectors</div></div></a></nav></div></div></div></div><div class="footer-main-bottom" data-reactid="401"><div class="footer-main-bottom-wrapper" data-reactid="402"><div class="footer-main-bottom-section" data-reactid="403"><copyright data-reactid="404"><span data-reactid="405">Copyright © 2017 Plotly.</span><!-- react-text: 406 --> <!-- /react-text --><span data-reactid="407">All rights reserved.</span></copyright></div><div class="footer-main-bottom-section" data-reactid="408"><div class="footer-main-bottom-links" data-reactid="409"><a href="https://plot.ly/terms-of-service/" target="_blank" data-reactid="410">Terms of Service</a><a href="https://plot.ly/privacy/" target="_blank" data-reactid="411">Privacy Policy</a></div></div></div></div></div></footer></div></div></div><div id="__next-error"></div></div><div><script>
-          __NEXT_DATA__ = {"props":{},"pathname":"/powerpoint-online","query":{},"buildId":"9b550052-0a21-4331-96c8-9120f7c94fbc","buildStats":{"app.js":{"hash":"c8bfae930eb0ad3c1cfeb8d6ad23c9f5"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
+          __NEXT_DATA__ = {"props":{},"pathname":"/powerpoint-online","query":{},"buildId":"3398ce23-bfce-4195-9258-87a2c294fd63","buildStats":{"app.js":{"hash":"50062c46034bdaef67253655dcb97723"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
           module={}
           __NEXT_LOADED_PAGES__ = []
           __NEXT_LOADED_CHUNKS__ = []
@@ -6368,4 +6553,4 @@ article.body {
           __NEXT_REGISTER_CHUNK = function (chunkName, fn) {
             __NEXT_LOADED_CHUNKS__.push({ chunkName: chunkName, fn: fn })
           }
-        </script><script async="" id="__NEXT_PAGE__/powerpoint-online" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/powerpoint-online/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" async=""></script></div></body></html>
+        </script><script async="" id="__NEXT_PAGE__/powerpoint-online" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/powerpoint-online/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" async=""></script></div></body></html>

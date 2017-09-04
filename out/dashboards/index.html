@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/dashboards/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" as="script"/><title class="next-head">Online Dashboards</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="Online Dashboards • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/dashboards/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="Online Dashboards" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/dashboards/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-1465003270"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/dashboards/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" as="script"/><title class="next-head">Online Dashboards</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="Online Dashboards • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/dashboards/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="Online Dashboards" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/dashboards/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="1169488052"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 progress, sub, sup {
   vertical-align: baseline; }
 html {
@@ -1333,6 +1333,100 @@ img {
     .cards-narrative .card {
       max-width: calc(100%);
       width: calc(100%); } }
+.enterprise-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(50% - 40px);
+  margin: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 275px;
+  overflow: hidden;
+  border-radius: 8px; }
+@media (max-width: 580px) {
+    .enterprise-card {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
+.enterprise-card .enterprise-card-hover {
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    z-index: 3; }
+.enterprise-card .enterprise-card-hover .enterprise-card-cta {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+      opacity: 0;
+      transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97); }
+@media (min-width: 581px) {
+    .enterprise-card:hover {
+      cursor: pointer; }
+      .enterprise-card:hover .enterprise-card-details {
+        border-left: 16px solid #119DFF; }
+      .enterprise-card:hover .enterprise-card-hover {
+        opacity: 1; }
+        .enterprise-card:hover .enterprise-card-hover .enterprise-card-cta {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: 1; } }
+.enterprise-card-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+.enterprise-card-details {
+    border-left: 0px solid #119DFF;
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    z-index: 2;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 24px;
+    padding-right: 192px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+.enterprise-card-title {
+    color: white;
+    font-size: 34px;
+    line-height: 42px;
+    font-family: 'Dosis';
+    text-align: left; }
+.enterprise-card-image {
+    z-index: 1;
+    border-radius: 8px !important;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover; }
+.industries-hero {
+  min-height: 0 !important; }
 </style><!-- react-empty: 4 --><header class="header-main" data-reactid="5"><style data-reactid="6">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -2426,7 +2520,8 @@ article.body {
   padding-top: 6px;
   font-size: 0.75rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 99; }
 small.down-arrow {
   opacity: 0.5;
   font-size: 8px;
@@ -3719,6 +3814,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="204"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="205"><div class="content-section-pane-wrapper hidden" data-reactid="206"><div class="content-section-title title-l undefined" data-reactid="207"><div class="content-section-title-wrapper hidden" data-reactid="208">Drag and drop</div></div><div class="content-section-body undefined" data-reactid="209"><div class="content-section-body-wrapper hidden" data-reactid="210"><p data-reactid="211">Make world-class, shareable charts and dashboards in hours instead of weeks.</p><p data-reactid="212">All Plotly charts are built with D3.js or WebGL, guaranteeing the best quality online graphics.</p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="213"><div class="content-section-pane-wrapper hidden" data-reactid="214"><div class="content-section-graphic  content-section-graphic-image" data-reactid="215"><div class="content-section-graphic-wrapper hidden" data-reactid="216"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif" data-reactid="217"/><!-- react-text: 218 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="219"><style data-reactid="220">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4287,6 +4400,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="221"><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="222"><div class="content-section-pane-wrapper hidden" data-reactid="223"><div class="content-section-graphic  content-section-graphic-image" data-reactid="224"><div class="content-section-graphic-wrapper hidden" data-reactid="225"><a href="https://plot.ly/dashboard/jackluo:3593/present" class="content-section-graphic-image-link" target="_blank" data-reactid="226"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/shell.png" data-reactid="227"/></a><div class="content-section-graphic-label" data-reactid="228"><a href="https://plot.ly/dashboard/jackluo:3593/present" data-reactid="229">Shell: Integrated Gas</a></div></div></div></div></div><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="230"><div class="content-section-pane-wrapper hidden" data-reactid="231"><div class="content-section-graphic  content-section-graphic-image" data-reactid="232"><div class="content-section-graphic-wrapper hidden" data-reactid="233"><a href="https://plot.ly/dashboard/jackp:16818/present" class="content-section-graphic-image-link" target="_blank" data-reactid="234"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/mercedes.png" data-reactid="235"/></a><div class="content-section-graphic-label" data-reactid="236"><a href="https://plot.ly/dashboard/jackp:16818/present" data-reactid="237">Mercedes: Cars Comparison</a></div></div></div></div></div></div></section><section class="content-section " data-reactid="238"><style data-reactid="239">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4855,6 +4986,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="240"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="241"><div class="content-section-pane-wrapper hidden" data-reactid="242"><div class="content-section-graphic  content-section-graphic-image" data-reactid="243"><div class="content-section-graphic-wrapper hidden" data-reactid="244"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/embed.gif" data-reactid="245"/><!-- react-text: 246 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="247"><div class="content-section-pane-wrapper hidden" data-reactid="248"><div class="content-section-title title-l undefined" data-reactid="249"><div class="content-section-title-wrapper hidden" data-reactid="250">Embed Plotly Charts</div></div><div class="content-section-body undefined" data-reactid="251"><div class="content-section-body-wrapper hidden" data-reactid="252"><p data-reactid="253">Embed interactive, D3.js charts and tables from your Plotly account.</p></div></div></div></div></div></section><section class="content-section " data-reactid="254"><style data-reactid="255">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5423,6 +5572,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="256"><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="257"><div class="content-section-pane-wrapper hidden" data-reactid="258"><div class="content-section-graphic  content-section-graphic-image" data-reactid="259"><div class="content-section-graphic-wrapper hidden" data-reactid="260"><a href="https://plot.ly/dashboard/jackluo:3593/present" class="content-section-graphic-image-link" target="_blank" data-reactid="261"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/DBlhl3NWAAARiLH.jpg" data-reactid="262"/></a><div class="content-section-graphic-label" data-reactid="263"><a href="https://plot.ly/dashboard/jackluo:3593/present" data-reactid="264">Schizophrenia interactome with 504 novel protein–protein interactions</a></div></div></div></div></div><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="265"><div class="content-section-pane-wrapper hidden" data-reactid="266"><div class="content-section-graphic  content-section-graphic-image" data-reactid="267"><div class="content-section-graphic-wrapper hidden" data-reactid="268"><a href="https://plot.ly/dashboard/Dreamshot:8462/present" class="content-section-graphic-image-link" target="_blank" data-reactid="269"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/C4KprMzWIAAX8m_.jpg" data-reactid="270"/></a><div class="content-section-graphic-label" data-reactid="271"><a href="https://plot.ly/dashboard/Dreamshot:8462/present" data-reactid="272">FiveThirtyEight</a></div></div></div></div></div></div></section><section class="content-section " data-reactid="273"><style data-reactid="274">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5991,6 +6158,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="275"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="276"><div class="content-section-pane-wrapper hidden" data-reactid="277"><div class="content-section-title title-l undefined" data-reactid="278"><div class="content-section-title-wrapper hidden" data-reactid="279">Share Online</div></div><div class="content-section-body undefined" data-reactid="280"><div class="content-section-body-wrapper hidden" data-reactid="281"><p data-reactid="282"><!-- react-text: 283 -->Share your dashboard online with public or secret links. <!-- /react-text --><a href="https://plot.ly/dashboard/create/" target="_blank" data-reactid="284">Create a Dashboard</a><!-- react-text: 285 -->.<!-- /react-text --></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="286"><div class="content-section-pane-wrapper hidden" data-reactid="287"><div class="content-section-graphic  content-section-graphic-image" data-reactid="288"><div class="content-section-graphic-wrapper hidden" data-reactid="289"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/share.png" data-reactid="290"/><!-- react-text: 291 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="292"><style data-reactid="293">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6559,6 +6744,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="294"><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="295"><div class="content-section-pane-wrapper hidden" data-reactid="296"><div class="content-section-graphic  content-section-graphic-image" data-reactid="297"><div class="content-section-graphic-wrapper hidden" data-reactid="298"><a href="https://plot.ly/dashboard/jackp:16823/present" class="content-section-graphic-image-link" target="_blank" data-reactid="299"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/dashboards/twitter.png" data-reactid="300"/></a><div class="content-section-graphic-label" data-reactid="301"><a href="https://plot.ly/dashboard/jackp:16823/present" data-reactid="302">Twitter: Marketing Campaign</a></div></div></div></div></div><div class="content-section-pane content-section-pane-half content-section-pane-align-center-vertically" data-reactid="303"><div class="content-section-pane-wrapper hidden" data-reactid="304"><div class="content-section-graphic  content-section-graphic-image" data-reactid="305"><div class="content-section-graphic-wrapper hidden" data-reactid="306"><a href="https://plot.ly/dashboard/jackp:17405/present" class="content-section-graphic-image-link" target="_blank" data-reactid="307"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/C2kvbzBUQAA_XDR.jpg-.jpg" data-reactid="308"/></a><div class="content-section-graphic-label" data-reactid="309"><a href="https://plot.ly/dashboard/jackp:17405/present" data-reactid="310">Molecular Weights of Therapeutic Small Molecules Compared to MW Distribution</a></div></div></div></div></div></div></section><section class="content-section " data-reactid="311"><style data-reactid="312">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7127,6 +7330,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="313"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="314"><div class="content-section-pane-wrapper hidden" data-reactid="315"><div class="content-section-title title-l undefined" data-reactid="316"><div class="content-section-title-wrapper hidden" data-reactid="317">Automate Dashboard Creation through Python</div></div><div class="content-section-body undefined" data-reactid="318"><div class="content-section-body-wrapper hidden" data-reactid="319"><p data-reactid="320">Plotly dashboards and charts can be made without coding, or you can make them entirely with Python.</p><p data-reactid="321"><a href="https://plot.ly/python/create-online-dashboard/" target="_blank" data-reactid="322">Read the Python dashboard tutorial</a></p><p data-reactid="323"><a href="https://plot.ly/products/cloud/" target="_blank" data-reactid="324"> Get started with a cloud plan</a></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="325"><div class="content-section-pane-wrapper hidden" data-reactid="326"><div class="content-section-graphic  content-section-graphic-image" data-reactid="327"><div class="content-section-graphic-wrapper hidden" data-reactid="328"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/C6qPQB-U4AAHGa3.jpg" data-reactid="329"/><!-- react-text: 330 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="331"><style data-reactid="332">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7695,6 +7916,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="333"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="334"><div class="content-section-pane-wrapper hidden" data-reactid="335"><div class="content-section-graphic  content-section-graphic-image content-section-graphic-image-noshadow" data-reactid="336"><div class="content-section-graphic-wrapper hidden" data-reactid="337"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png" data-reactid="338"/><!-- react-text: 339 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="340"><div class="content-section-pane-wrapper hidden" data-reactid="341"><div class="content-section-title title-l undefined" data-reactid="342"><div class="content-section-title-wrapper hidden" data-reactid="343">Dashboards with Advanced Controls</div></div><div class="content-section-body undefined" data-reactid="344"><div class="content-section-body-wrapper hidden" data-reactid="345"><p data-reactid="346">Looking for dashboards with sliders, search boxes, filtering, and dropdowns?</p><p data-reactid="347"><!-- react-text: 348 -->Check out <!-- /react-text --><a href="https://plot.ly/products/dash/" data-reactid="349">Dash for Python</a><!-- react-text: 350 --> or these <!-- /react-text --><a href="https://moderndata.plot.ly/15-python-and-r-charts-with-interactive-controls-buttons-dropdowns-and-sliders/" data-reactid="351">15 dashboards</a><!-- react-text: 352 --> with interactive controls.<!-- /react-text --></p></div></div></div></div></div></section></div></div><footer class="footer-main" data-reactid="353"><style data-reactid="354">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -8060,7 +8299,7 @@ article.body {
           .footer-main-section-link-label {
             font-size: 0.85rem; } }
 </style><div class="footer-main-wrapper" data-reactid="355"><div class="footer-main-top" data-reactid="356"><div class="footer-main-top-wrapper" data-reactid="357"><div class="footer-main-section" data-reactid="358"><div class="footer-main-section-wrapper" data-reactid="359"><div class="footer-main-section-header" data-reactid="360">Developers</div><nav class="footer-main-section-links" data-reactid="361"><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="362"><div class="footer-main-section-link-wrapper" data-reactid="363"><!-- react-text: 364 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="365">Python</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="366"><div class="footer-main-section-link-wrapper" data-reactid="367"><!-- react-text: 368 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="369">R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/matlab/" target="_blank" data-reactid="370"><div class="footer-main-section-link-wrapper" data-reactid="371"><!-- react-text: 372 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="373">MATLAB</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript-graphing-library/" target="_blank" data-reactid="374"><div class="footer-main-section-link-wrapper" data-reactid="375"><!-- react-text: 376 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="377">Javascript</div></div></a><a class="footer-main-section-link" href="https://api.plot.ly/v2/" target="_blank" data-reactid="378"><div class="footer-main-section-link-wrapper" data-reactid="379"><!-- react-text: 380 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="381">REST API</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="382"><div class="footer-main-section-wrapper" data-reactid="383"><div class="footer-main-section-header" data-reactid="384">Company</div><nav class="footer-main-section-links" data-reactid="385"><a class="footer-main-section-link" href="https://plot.ly/company/jobs/" target="_blank" data-reactid="386"><div class="footer-main-section-link-wrapper" data-reactid="387"><!-- react-text: 388 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="389">About</div></div></a><a class="footer-main-section-link" href="https://plot.ly/company/team/" target="_blank" data-reactid="390"><div class="footer-main-section-link-wrapper" data-reactid="391"><!-- react-text: 392 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="393">Team</div></div></a><a class="footer-main-section-link" href="https://blog.plot.ly/" target="_blank" data-reactid="394"><div class="footer-main-section-link-wrapper" data-reactid="395"><!-- react-text: 396 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="397">Blog</div></div></a><a class="footer-main-section-link" href="https://moderndata.plot.ly/" target="_blank" data-reactid="398"><div class="footer-main-section-link-wrapper" data-reactid="399"><!-- react-text: 400 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="401">Modern Data</div></div></a><a class="footer-main-section-link" href="https://plot.ly/products/industries/" target="_blank" data-reactid="402"><div class="footer-main-section-link-wrapper" data-reactid="403"><!-- react-text: 404 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="405">Industries</div></div></a><a class="footer-main-section-link" href="https://plotcon.plot.ly/" target="_blank" data-reactid="406"><div class="footer-main-section-link-wrapper" data-reactid="407"><!-- react-text: 408 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="409">PLOTCON</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="410"><div class="footer-main-section-wrapper" data-reactid="411"><div class="footer-main-section-header" data-reactid="412">Resources</div><nav class="footer-main-section-links" data-reactid="413"><a class="footer-main-section-link" href="https://support.plot.ly/" target="_blank" data-reactid="414"><div class="footer-main-section-link-wrapper" data-reactid="415"><!-- react-text: 416 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="417">Developer Support</div></div></a><a class="footer-main-section-link" href="https://community.plot.ly/" target="_blank" data-reactid="418"><div class="footer-main-section-link-wrapper" data-reactid="419"><!-- react-text: 420 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="421">Community Support</div></div></a><a class="footer-main-section-link" href="http://help.plot.ly/" target="_blank" data-reactid="422"><div class="footer-main-section-link-wrapper" data-reactid="423"><!-- react-text: 424 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="425">Documentation</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="426"><div class="footer-main-section-wrapper" data-reactid="427"><div class="footer-main-section-header" data-reactid="428">Data Science</div><nav class="footer-main-section-links" data-reactid="429"><a class="footer-main-section-link" href="https://plot.ly/dash/" target="_blank" data-reactid="430"><div class="footer-main-section-link-wrapper" data-reactid="431"><!-- react-text: 432 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="433">Dash</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript/" target="_blank" data-reactid="434"><div class="footer-main-section-link-wrapper" data-reactid="435"><!-- react-text: 436 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="437">Plotly.js</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="438"><div class="footer-main-section-link-wrapper" data-reactid="439"><!-- react-text: 440 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="441">Plotly for R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="442"><div class="footer-main-section-link-wrapper" data-reactid="443"><!-- react-text: 444 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="445">Plotly for Python</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="446"><div class="footer-main-section-wrapper" data-reactid="447"><div class="footer-main-section-header" data-reactid="448">Business Intelligence</div><nav class="footer-main-section-links" data-reactid="449"><a class="footer-main-section-link" href="https://plot.ly/online-chart-maker/" target="_blank" data-reactid="450"><div class="footer-main-section-link-wrapper" data-reactid="451"><!-- react-text: 452 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="453">Charts</div></div></a><a class="footer-main-section-link" href="https://plot.ly/dashboards/" target="_blank" data-reactid="454"><div class="footer-main-section-link-wrapper" data-reactid="455"><!-- react-text: 456 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="457">Dashboards</div></div></a><a class="footer-main-section-link" href="https://plot.ly/powerpoint-online/" target="_blank" data-reactid="458"><div class="footer-main-section-link-wrapper" data-reactid="459"><!-- react-text: 460 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="461">Slide Decks</div></div></a><a class="footer-main-section-link" href="https://marketing.plot.ly/database-connectors/" target="_blank" data-reactid="462"><div class="footer-main-section-link-wrapper" data-reactid="463"><!-- react-text: 464 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="465">Database Connectors</div></div></a></nav></div></div></div></div><div class="footer-main-bottom" data-reactid="466"><div class="footer-main-bottom-wrapper" data-reactid="467"><div class="footer-main-bottom-section" data-reactid="468"><copyright data-reactid="469"><span data-reactid="470">Copyright © 2017 Plotly.</span><!-- react-text: 471 --> <!-- /react-text --><span data-reactid="472">All rights reserved.</span></copyright></div><div class="footer-main-bottom-section" data-reactid="473"><div class="footer-main-bottom-links" data-reactid="474"><a href="https://plot.ly/terms-of-service/" target="_blank" data-reactid="475">Terms of Service</a><a href="https://plot.ly/privacy/" target="_blank" data-reactid="476">Privacy Policy</a></div></div></div></div></div></footer></div></div></div><div id="__next-error"></div></div><div><script>
-          __NEXT_DATA__ = {"props":{},"pathname":"/dashboards","query":{},"buildId":"9b550052-0a21-4331-96c8-9120f7c94fbc","buildStats":{"app.js":{"hash":"c8bfae930eb0ad3c1cfeb8d6ad23c9f5"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
+          __NEXT_DATA__ = {"props":{},"pathname":"/dashboards","query":{},"buildId":"3398ce23-bfce-4195-9258-87a2c294fd63","buildStats":{"app.js":{"hash":"50062c46034bdaef67253655dcb97723"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
           module={}
           __NEXT_LOADED_PAGES__ = []
           __NEXT_LOADED_CHUNKS__ = []
@@ -8072,4 +8311,4 @@ article.body {
           __NEXT_REGISTER_CHUNK = function (chunkName, fn) {
             __NEXT_LOADED_CHUNKS__.push({ chunkName: chunkName, fn: fn })
           }
-        </script><script async="" id="__NEXT_PAGE__/dashboards" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/dashboards/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" async=""></script></div></body></html>
+        </script><script async="" id="__NEXT_PAGE__/dashboards" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/dashboards/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" async=""></script></div></body></html>

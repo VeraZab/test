@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/d3-js-for-python-and-pandas-charts/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" as="script"/><title class="next-head">D3.js for Python and Pandas Charts</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="D3.js for Python and Pandas Charts • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/d3-js-for-python-and-pandas-charts/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="D3.js for Python and Pandas Charts" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/d3-js-for-python-and-pandas-charts/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="-137510144"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!DOCTYPE html><html><head><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/d3-js-for-python-and-pandas-charts/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js" as="script"/><link rel="preload" href="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" as="script"/><title class="next-head">D3.js for Python and Pandas Charts</title><meta charset="utf-8" class="next-head"/><meta name="viewport" content="initial-scale=1.0, width=device-width" class="next-head"/><link href="/static/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" class="next-head"/><meta property="og:site_name" class="next-head"/><meta property="og:type" content="article" class="next-head"/><meta property="og:title" content="D3.js for Python and Pandas Charts • Plotly" class="next-head"/><meta property="og:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta property="og:url" content="https://plot.ly/d3-js-for-python-and-pandas-charts/" class="next-head"/><meta property="og:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta property="article:publisher" content="https://www.facebook.com/Plotly/" class="next-head"/><meta name="twitter:card" content="summary_large_image" class="next-head"/><meta name="twitter:title" content="D3.js for Python and Pandas Charts" class="next-head"/><meta name="twitter:description" content="Plotly is the modern platform for agile business intelligence and data science." class="next-head"/><meta name="twitter:url" content="https://plot.ly/d3-js-for-python-and-pandas-charts/" class="next-head"/><meta name="twitter:image" content="https://now.plot.ly/static/images/meta/social-plotly.png" class="next-head"/><meta name="twitter:site" content="@plotlygraphs" class="next-head"/><link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" class="next-head"/></head><body><div><div id="__next"><div data-reactroot="" data-reactid="1" data-react-checksum="762982820"><div data-reactid="2"><style data-reactid="3">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 progress, sub, sup {
   vertical-align: baseline; }
 html {
@@ -1333,6 +1333,100 @@ img {
     .cards-narrative .card {
       max-width: calc(100%);
       width: calc(100%); } }
+.enterprise-card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(50% - 40px);
+  margin: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 275px;
+  overflow: hidden;
+  border-radius: 8px; }
+@media (max-width: 580px) {
+    .enterprise-card {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
+.enterprise-card .enterprise-card-hover {
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    z-index: 3; }
+.enterprise-card .enterprise-card-hover .enterprise-card-cta {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+      opacity: 0;
+      transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97); }
+@media (min-width: 581px) {
+    .enterprise-card:hover {
+      cursor: pointer; }
+      .enterprise-card:hover .enterprise-card-details {
+        border-left: 16px solid #119DFF; }
+      .enterprise-card:hover .enterprise-card-hover {
+        opacity: 1; }
+        .enterprise-card:hover .enterprise-card-hover .enterprise-card-cta {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: 1; } }
+.enterprise-card-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+.enterprise-card-details {
+    border-left: 0px solid #119DFF;
+    transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
+    z-index: 2;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 24px;
+    padding-right: 192px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0; }
+.enterprise-card-title {
+    color: white;
+    font-size: 34px;
+    line-height: 42px;
+    font-family: 'Dosis';
+    text-align: left; }
+.enterprise-card-image {
+    z-index: 1;
+    border-radius: 8px !important;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover; }
+.industries-hero {
+  min-height: 0 !important; }
 </style><!-- react-empty: 4 --><header class="header-main" data-reactid="5"><style data-reactid="6">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -2426,7 +2520,8 @@ article.body {
   padding-top: 6px;
   font-size: 0.75rem;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 99; }
 small.down-arrow {
   opacity: 0.5;
   font-size: 8px;
@@ -3347,7 +3442,7 @@ article.body {
 <!-- /react-text --></span></span><span style="display:block;" data-reactid="267"><!-- react-text: 268 -->
 <!-- /react-text --></span><span style="display:block;" data-reactid="269"><!-- react-text: 270 -->fig2 = Figure(data=data2, layout=plot_layout(ax=noaxis))
 <!-- /react-text --></span><span style="display:block;" data-reactid="271"><span data-reactid="272"><!-- react-text: 273 -->fig2[<!-- /react-text --></span><span style="color:#98c379;" data-reactid="274"><!-- react-text: 275 -->&#x27;layout&#x27;<!-- /react-text --></span><span data-reactid="276"><!-- react-text: 277 -->].update(title=<!-- /react-text --></span><span style="color:#98c379;" data-reactid="278"><!-- react-text: 279 -->&#x27;Polyhedral approximation of a spherical Voronoi diagram&#x27;<!-- /react-text --></span><span data-reactid="280"><!-- react-text: 281 -->)
-<!-- /react-text --></span></span><span style="display:block;" data-reactid="282"><span data-reactid="283"><!-- react-text: 284 -->py.iplot(fig2, filename=<!-- /react-text --></span><span style="color:#98c379;" data-reactid="285"><!-- react-text: 286 -->&#x27;polyhedral-voronoi&#x27;<!-- /react-text --></span><span data-reactid="287"><!-- react-text: 288 -->)<!-- /react-text --></span></span></code></pre></div><div class="code-explorer-editor-actions" data-reactid="289"><div class="buttons" data-reactid="290"><a href="http://google.com" class="button button-primary button-emerald" data-reactid="291"><!-- react-text: 292 -->Plotly Python API<!-- /react-text --><!-- react-text: 293 --> →<!-- /react-text --></a></div></div></div></div></div></div></div></div></div><div class="hero-bottom" style="padding-bottom:60px;padding-top:0px;" data-reactid="294"><div class="hero-bottom-wrapper hidden hidden-fade" data-reactid="295"></div></div></div><div class="hero-background-image" style="background-image:url(https://images.plot.ly/static/marketing/hero-pricing@2x.png);background-size:1640px;background-position:50% 80%;background-repeat:no-repeat;" data-reactid="296"></div></section><div data-reactid="297"><section class="content-section " data-reactid="298"><style data-reactid="299">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
+<!-- /react-text --></span></span><span style="display:block;" data-reactid="282"><span data-reactid="283"><!-- react-text: 284 -->py.iplot(fig2, filename=<!-- /react-text --></span><span style="color:#98c379;" data-reactid="285"><!-- react-text: 286 -->&#x27;polyhedral-voronoi&#x27;<!-- /react-text --></span><span data-reactid="287"><!-- react-text: 288 -->)<!-- /react-text --></span></span></code></pre></div><div class="code-explorer-editor-actions" data-reactid="289"><div class="buttons" data-reactid="290"><a href="https://plot.ly/python" class="button button-primary button-emerald" data-reactid="291"><!-- react-text: 292 -->Plotly Python API<!-- /react-text --><!-- react-text: 293 --> →<!-- /react-text --></a></div></div></div></div></div></div></div></div></div><div class="hero-bottom" style="padding-bottom:60px;padding-top:0px;" data-reactid="294"><div class="hero-bottom-wrapper hidden hidden-fade" data-reactid="295"></div></div></div><div class="hero-background-image" style="background-image:url(https://images.plot.ly/static/marketing/hero-pricing@2x.png);background-size:1640px;background-position:50% 80%;background-repeat:no-repeat;" data-reactid="296"></div></section><div data-reactid="297"><section class="content-section " data-reactid="298"><style data-reactid="299">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
     display: none !important; } }
@@ -3915,6 +4010,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="300"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="301"><div class="content-section-pane-wrapper hidden" data-reactid="302"><div class="pre-title" data-reactid="303">Plotly for Python and Pandas</div><div class="content-section-title title-l undefined" data-reactid="304"><div class="content-section-title-wrapper hidden" data-reactid="305">Features and Benefits</div></div><div class="content-section-body undefined" data-reactid="306"><div class="content-section-body-wrapper hidden" data-reactid="307"><ul class="hero-list" data-reactid="308"><li data-reactid="309">Every chart that matplotlib or MATLAB graphics can do.</li><li data-reactid="310">Interactive charts and maps out-of-the-box.</li><li data-reactid="311">Get started working offline.</li><li data-reactid="312"><!-- react-text: 313 -->Optional hosted sharing platform through <!-- /react-text --><a href="/products/on-premise/" target="_blank" data-reactid="314">Plotly On-Premises</a><!-- react-text: 315 --> or <!-- /react-text --><a href="/products/cloud/" target="_blank" data-reactid="316">Plotly Cloud</a><!-- react-text: 317 -->.<!-- /react-text --></li></ul></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="318"><div class="content-section-pane-wrapper hidden" data-reactid="319"><div class="content-section-graphic  content-section-graphic-image" data-reactid="320"><div class="content-section-graphic-wrapper hidden" data-reactid="321"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/chart_graphic.png" data-reactid="322"/><!-- react-text: 323 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="324"><style data-reactid="325">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -4483,6 +4596,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="326"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="327"><div class="content-section-pane-wrapper hidden" data-reactid="328"><div class="content-section-graphic  content-section-graphic-image" data-reactid="329"><div class="content-section-graphic-wrapper hidden" data-reactid="330"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/world-class.png" data-reactid="331"/><!-- react-text: 332 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="333"><div class="content-section-pane-wrapper hidden" data-reactid="334"><div class="content-section-title title-l undefined" data-reactid="335"><div class="content-section-title-wrapper hidden" data-reactid="336">World-class charts, maps, and interactivity</div></div><div class="content-section-body undefined" data-reactid="337"><div class="content-section-body-wrapper hidden" data-reactid="338"><p data-reactid="339">Make any chart possible in matplotlib, but interactive and with a clean, declarative API!</p><p data-reactid="340">Plotly lets you create D3.js and WebGL charts with the ease , power, and open-source ecosystem of Python. Plotly charts and dashboards can be easily styled in Python, or uploaded to Plotly’s online editor for point-&amp;-click styling and collaboration.</p></div></div></div></div></div></section><section class="content-section " data-reactid="341"><style data-reactid="342">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5051,6 +5182,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="343"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="344"><div class="content-section-pane-wrapper hidden" data-reactid="345"><div class="content-section-title title-l undefined" data-reactid="346"><div class="content-section-title-wrapper hidden" data-reactid="347">GitHub-style Sharing</div></div><div class="content-section-body undefined" data-reactid="348"><div class="content-section-body-wrapper hidden" data-reactid="349"><p data-reactid="350">Share your charts, maps, and dashboards through Plotly’s online platform, or work entirely offline.</p><p data-reactid="351"><!-- react-text: 352 -->Featured Python user: <!-- /react-text --><a href="https://plot.ly/~empet" target="_blank" data-reactid="353">@empet</a></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="354"><div class="content-section-pane-wrapper hidden" data-reactid="355"><div class="content-section-graphic  content-section-graphic-image" data-reactid="356"><div class="content-section-graphic-wrapper hidden" data-reactid="357"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/map_styles.gif" data-reactid="358"/><!-- react-text: 359 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="360"><style data-reactid="361">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -5619,6 +5768,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="362"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="363"><div class="content-section-pane-wrapper hidden" data-reactid="364"><div class="content-section-graphic  content-section-graphic-image" data-reactid="365"><div class="content-section-graphic-wrapper hidden" data-reactid="366"><img class="content-section-graphic-img" src="https://camo.githubusercontent.com/3e4bfa5441dec3dc16724744821efe95320c2517/687474703a2f2f692e696d6775722e636f6d2f3531426f4139302e676966" data-reactid="367"/><!-- react-text: 368 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="369"><div class="content-section-pane-wrapper hidden" data-reactid="370"><div class="content-section-title title-l undefined" data-reactid="371"><div class="content-section-title-wrapper hidden" data-reactid="372">Python-Powered Dashboards</div></div><div class="content-section-body undefined" data-reactid="373"><div class="content-section-body-wrapper hidden" data-reactid="374"><p data-reactid="375"><!-- react-text: 376 -->Easily create and update <!-- /react-text --><a href="/dashboards/" data-reactid="377">online dashboards</a><!-- react-text: 378 --> with the ease and power of Python.<!-- /react-text --></p></div></div></div></div></div></section><section class="content-section " data-reactid="379"><style data-reactid="380">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6187,6 +6354,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="381"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="382"><div class="content-section-pane-wrapper hidden" data-reactid="383"><div class="content-section-title title-l undefined" data-reactid="384"><div class="content-section-title-wrapper hidden" data-reactid="385">Live Streaming API</div></div><div class="content-section-body undefined" data-reactid="386"><div class="content-section-body-wrapper hidden" data-reactid="387"><p data-reactid="388"><!-- react-text: 389 -->Stream live data to hosted charts with Plotly’s streaming API for Python. Streaming is available for<!-- /react-text --><a href="/products/on-premise/" data-reactid="390">Plotly On-Premises</a><!-- react-text: 391 -->.<!-- /react-text --></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="392"><div class="content-section-pane-wrapper hidden" data-reactid="393"><div class="content-section-graphic  content-section-graphic-image" data-reactid="394"><div class="content-section-graphic-wrapper hidden" data-reactid="395"><img class="content-section-graphic-img" src="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/database_connectors_animated.gif" data-reactid="396"/><!-- react-text: 397 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="398"><style data-reactid="399">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -6755,6 +6940,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="400"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="401"><div class="content-section-pane-wrapper hidden" data-reactid="402"><div class="content-section-graphic  content-section-graphic-image content-section-graphic-image-noshadow" data-reactid="403"><div class="content-section-graphic-wrapper hidden" data-reactid="404"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png" data-reactid="405"/><!-- react-text: 406 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="407"><div class="content-section-pane-wrapper hidden" data-reactid="408"><div class="content-section-title title-l undefined" data-reactid="409"><div class="content-section-title-wrapper hidden" data-reactid="410">Dash: “R Shiny for Python”</div></div><div class="content-section-body undefined" data-reactid="411"><div class="content-section-body-wrapper hidden" data-reactid="412"><p data-reactid="413"><!-- react-text: 414 -->Love R Shiny but prefer not to work in R? Check out <!-- /react-text --><a href="/products/dash" data-reactid="415">Dash for Python</a><!-- react-text: 416 --> - an open-source Python interface to create data exploration web apps. Applications with advanced UI, drilldowns, and crossfilter have never been easier or more elegant in Python.<!-- /react-text --></p></div></div></div></div></div></section><section class="content-section " data-reactid="417"><style data-reactid="418">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7323,6 +7526,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="419"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="420"><div class="content-section-pane-wrapper hidden" data-reactid="421"><div class="content-section-title title-l undefined" data-reactid="422"><div class="content-section-title-wrapper hidden" data-reactid="423">Dash and Python Workshops</div></div><div class="content-section-body undefined" data-reactid="424"><div class="content-section-body-wrapper hidden" data-reactid="425"><p data-reactid="426"><!-- react-text: 427 -->Send your team to a <!-- /react-text --><a href="https://plotcon.plot.ly/" target="_blank" data-reactid="428">PLOTCON workshop</a><!-- react-text: 429 --> to level up their skills in Python visualization and Dash app development. Workshops are held twice per year in NYC and the West Coast. We can also hold custom workshops on-site at your company.<!-- /react-text --></p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="430"><div class="content-section-pane-wrapper hidden" data-reactid="431"><div class="content-section-graphic  content-section-graphic-image" data-reactid="432"><div class="content-section-graphic-wrapper hidden" data-reactid="433"><img class="content-section-graphic-img" src="https://images-hoshi.nationalmachine.co/ineffable/uploads/95aa3dc80638bd314e7085f1f561e2d8/DSC02407.jpg?w=1800&amp;h=1800&amp;crop=fit&amp;q=80" data-reactid="434"/><!-- react-text: 435 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section " data-reactid="436"><style data-reactid="437">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -7891,6 +8112,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="438"><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="439"><div class="content-section-pane-wrapper hidden" data-reactid="440"><div class="content-section-graphic  content-section-graphic-image" data-reactid="441"><div class="content-section-graphic-wrapper hidden" data-reactid="442"><img class="content-section-graphic-img" src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png" data-reactid="443"/><!-- react-text: 444 --><!-- /react-text --></div></div></div></div><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="445"><div class="content-section-pane-wrapper hidden" data-reactid="446"><div class="content-section-title title-l undefined" data-reactid="447"><div class="content-section-title-wrapper hidden" data-reactid="448">Collaborate with Tableau, Excel, and Python users</div></div><div class="content-section-body undefined" data-reactid="449"><div class="content-section-body-wrapper hidden" data-reactid="450"><p data-reactid="451">With Plotly, there’s no need to choose between Python and R. R users can easily share Plotly charts to Python users (and vice versa) through Plotly Cloud, Plotly On-Premises, or entirely offline. Plotly charts are language agnostic and the best open-source choice for any language.</p><p data-reactid="452">For code-free collaboration, Python charts and dashboards can also be shared with Tableau and Excel users through Plotly On-Premises and Plotly Cloud.</p><p data-reactid="453"><a href="/products/cloud/" data-reactid="454">Plotly Cloud</a><br data-reactid="455"/><a href="/products/on-premise/" data-reactid="456">Plotly On-Premises</a></p></div></div></div></div></div></section><section class="content-section " data-reactid="457"><style data-reactid="458">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -8459,6 +8698,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="459"><div class="content-section-pane content-section-pane-text content-section-pane-half content-section-pane-align-center-vertically" data-reactid="460"><div class="content-section-pane-wrapper hidden" data-reactid="461"><div class="content-section-title title-l undefined" data-reactid="462"><div class="content-section-title-wrapper hidden" data-reactid="463">First class support for nteract.io, Jupyter, and Dash</div></div><div class="content-section-body undefined" data-reactid="464"><div class="content-section-body-wrapper hidden" data-reactid="465"><p data-reactid="466">Plotly for Python has first-class support for all of your favorite Python tools and IDEs - including Dash, nteract.io, and Jupyter notebook.</p><p data-reactid="467">Upload your Jupyter notebooks to Plotly for secure, collaborative sharing of your Python code.</p></div></div></div></div><div class="content-section-pane content-section-pane-graphic content-section-pane-half" data-reactid="468"><div class="content-section-pane-wrapper hidden" data-reactid="469"><div class="content-section-graphic  content-section-graphic-image content-section-graphic-image-noshadow" data-reactid="470"><div class="content-section-graphic-wrapper hidden" data-reactid="471"><img class="content-section-graphic-img" src="https://images.plot.ly/static/marketing/product/jupyter-notebooks-small.png" data-reactid="472"/><!-- react-text: 473 --><!-- /react-text --></div></div></div></div></div></section><section class="content-section  request-callback-section" data-reactid="474"><style data-reactid="475">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -9027,6 +9284,24 @@ article.body {
     height: 100%;
     border-radius: 40px;
     box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15); }
+.content-section.quote-section {
+  background: #119DFF; }
+.content-section.quote-section + .content-section.quote-section {
+    background: #0D76BF; }
+.content-section.quote-section .quote {
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto; }
+.content-section.quote-section .quotee {
+    font-family: 'Dosis';
+    color: white;
+    opacity: 0.5;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 24px; }
 </style><div class="content-section-wrapper hidden" data-reactid="476"><div class="content-section-pane content-section-pane-text content-section-pane-align-center content-section-pane-align-center-vertically content-section-pane-full" data-reactid="477"><div class="content-section-pane-wrapper hidden" data-reactid="478"><div class="pre-title" data-reactid="479">Conntect with us</div><div class="content-section-title title-l undefined" data-reactid="480"><div class="content-section-title-wrapper hidden" data-reactid="481"><!-- react-text: 482 -->Learn how we can work together<!-- /react-text --><div class="buttons center gutter-top" data-reactid="483"><a class="button button-primary typeform-share" href="https://plotly.typeform.com/to/seG7Vb" data-reactid="484"><div class="button-wrapper" data-reactid="485"><div class="button-label" data-reactid="486">Request a Demo</div></div></a></div></div></div><div class="content-section-body undefined" data-reactid="487"><div class="content-section-body-wrapper hidden" data-reactid="488"><p data-reactid="489">A Plotly sales engineer will answer any questions, walk you through a demo, and support a trial deployment.</p></div></div></div></div></div></section></div></div><footer class="footer-main" data-reactid="490"><style data-reactid="491">@import url("https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i");
 @media (min-width: 1060px) {
   .mobile-only {
@@ -9392,7 +9667,7 @@ article.body {
           .footer-main-section-link-label {
             font-size: 0.85rem; } }
 </style><div class="footer-main-wrapper" data-reactid="492"><div class="footer-main-top" data-reactid="493"><div class="footer-main-top-wrapper" data-reactid="494"><div class="footer-main-section" data-reactid="495"><div class="footer-main-section-wrapper" data-reactid="496"><div class="footer-main-section-header" data-reactid="497">Developers</div><nav class="footer-main-section-links" data-reactid="498"><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="499"><div class="footer-main-section-link-wrapper" data-reactid="500"><!-- react-text: 501 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="502">Python</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="503"><div class="footer-main-section-link-wrapper" data-reactid="504"><!-- react-text: 505 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="506">R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/matlab/" target="_blank" data-reactid="507"><div class="footer-main-section-link-wrapper" data-reactid="508"><!-- react-text: 509 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="510">MATLAB</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript-graphing-library/" target="_blank" data-reactid="511"><div class="footer-main-section-link-wrapper" data-reactid="512"><!-- react-text: 513 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="514">Javascript</div></div></a><a class="footer-main-section-link" href="https://api.plot.ly/v2/" target="_blank" data-reactid="515"><div class="footer-main-section-link-wrapper" data-reactid="516"><!-- react-text: 517 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="518">REST API</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="519"><div class="footer-main-section-wrapper" data-reactid="520"><div class="footer-main-section-header" data-reactid="521">Company</div><nav class="footer-main-section-links" data-reactid="522"><a class="footer-main-section-link" href="https://plot.ly/company/jobs/" target="_blank" data-reactid="523"><div class="footer-main-section-link-wrapper" data-reactid="524"><!-- react-text: 525 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="526">About</div></div></a><a class="footer-main-section-link" href="https://plot.ly/company/team/" target="_blank" data-reactid="527"><div class="footer-main-section-link-wrapper" data-reactid="528"><!-- react-text: 529 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="530">Team</div></div></a><a class="footer-main-section-link" href="https://blog.plot.ly/" target="_blank" data-reactid="531"><div class="footer-main-section-link-wrapper" data-reactid="532"><!-- react-text: 533 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="534">Blog</div></div></a><a class="footer-main-section-link" href="https://moderndata.plot.ly/" target="_blank" data-reactid="535"><div class="footer-main-section-link-wrapper" data-reactid="536"><!-- react-text: 537 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="538">Modern Data</div></div></a><a class="footer-main-section-link" href="https://plot.ly/products/industries/" target="_blank" data-reactid="539"><div class="footer-main-section-link-wrapper" data-reactid="540"><!-- react-text: 541 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="542">Industries</div></div></a><a class="footer-main-section-link" href="https://plotcon.plot.ly/" target="_blank" data-reactid="543"><div class="footer-main-section-link-wrapper" data-reactid="544"><!-- react-text: 545 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="546">PLOTCON</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="547"><div class="footer-main-section-wrapper" data-reactid="548"><div class="footer-main-section-header" data-reactid="549">Resources</div><nav class="footer-main-section-links" data-reactid="550"><a class="footer-main-section-link" href="https://support.plot.ly/" target="_blank" data-reactid="551"><div class="footer-main-section-link-wrapper" data-reactid="552"><!-- react-text: 553 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="554">Developer Support</div></div></a><a class="footer-main-section-link" href="https://community.plot.ly/" target="_blank" data-reactid="555"><div class="footer-main-section-link-wrapper" data-reactid="556"><!-- react-text: 557 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="558">Community Support</div></div></a><a class="footer-main-section-link" href="http://help.plot.ly/" target="_blank" data-reactid="559"><div class="footer-main-section-link-wrapper" data-reactid="560"><!-- react-text: 561 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="562">Documentation</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="563"><div class="footer-main-section-wrapper" data-reactid="564"><div class="footer-main-section-header" data-reactid="565">Data Science</div><nav class="footer-main-section-links" data-reactid="566"><a class="footer-main-section-link" href="https://plot.ly/dash/" target="_blank" data-reactid="567"><div class="footer-main-section-link-wrapper" data-reactid="568"><!-- react-text: 569 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="570">Dash</div></div></a><a class="footer-main-section-link" href="https://plot.ly/javascript/" target="_blank" data-reactid="571"><div class="footer-main-section-link-wrapper" data-reactid="572"><!-- react-text: 573 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="574">Plotly.js</div></div></a><a class="footer-main-section-link" href="https://plot.ly/r/" target="_blank" data-reactid="575"><div class="footer-main-section-link-wrapper" data-reactid="576"><!-- react-text: 577 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="578">Plotly for R &amp; Shiny</div></div></a><a class="footer-main-section-link" href="https://plot.ly/python/" target="_blank" data-reactid="579"><div class="footer-main-section-link-wrapper" data-reactid="580"><!-- react-text: 581 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="582">Plotly for Python</div></div></a></nav></div></div><div class="footer-main-section" data-reactid="583"><div class="footer-main-section-wrapper" data-reactid="584"><div class="footer-main-section-header" data-reactid="585">Business Intelligence</div><nav class="footer-main-section-links" data-reactid="586"><a class="footer-main-section-link" href="https://plot.ly/online-chart-maker/" target="_blank" data-reactid="587"><div class="footer-main-section-link-wrapper" data-reactid="588"><!-- react-text: 589 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="590">Charts</div></div></a><a class="footer-main-section-link" href="https://plot.ly/dashboards/" target="_blank" data-reactid="591"><div class="footer-main-section-link-wrapper" data-reactid="592"><!-- react-text: 593 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="594">Dashboards</div></div></a><a class="footer-main-section-link" href="https://plot.ly/powerpoint-online/" target="_blank" data-reactid="595"><div class="footer-main-section-link-wrapper" data-reactid="596"><!-- react-text: 597 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="598">Slide Decks</div></div></a><a class="footer-main-section-link" href="https://marketing.plot.ly/database-connectors/" target="_blank" data-reactid="599"><div class="footer-main-section-link-wrapper" data-reactid="600"><!-- react-text: 601 --><!-- /react-text --><div class="footer-main-section-link-label" data-reactid="602">Database Connectors</div></div></a></nav></div></div></div></div><div class="footer-main-bottom" data-reactid="603"><div class="footer-main-bottom-wrapper" data-reactid="604"><div class="footer-main-bottom-section" data-reactid="605"><copyright data-reactid="606"><span data-reactid="607">Copyright © 2017 Plotly.</span><!-- react-text: 608 --> <!-- /react-text --><span data-reactid="609">All rights reserved.</span></copyright></div><div class="footer-main-bottom-section" data-reactid="610"><div class="footer-main-bottom-links" data-reactid="611"><a href="https://plot.ly/terms-of-service/" target="_blank" data-reactid="612">Terms of Service</a><a href="https://plot.ly/privacy/" target="_blank" data-reactid="613">Privacy Policy</a></div></div></div></div></div></footer></div></div></div><div id="__next-error"></div></div><div><script>
-          __NEXT_DATA__ = {"props":{},"pathname":"/d3-js-for-python-and-pandas-charts","query":{},"buildId":"9b550052-0a21-4331-96c8-9120f7c94fbc","buildStats":{"app.js":{"hash":"c8bfae930eb0ad3c1cfeb8d6ad23c9f5"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
+          __NEXT_DATA__ = {"props":{},"pathname":"/d3-js-for-python-and-pandas-charts","query":{},"buildId":"3398ce23-bfce-4195-9258-87a2c294fd63","buildStats":{"app.js":{"hash":"50062c46034bdaef67253655dcb97723"}},"assetPrefix":"https://plotly.github.io/plotly-next","nextExport":true,"err":null,"chunks":[]}
           module={}
           __NEXT_LOADED_PAGES__ = []
           __NEXT_LOADED_CHUNKS__ = []
@@ -9404,4 +9679,4 @@ article.body {
           __NEXT_REGISTER_CHUNK = function (chunkName, fn) {
             __NEXT_LOADED_CHUNKS__.push({ chunkName: chunkName, fn: fn })
           }
-        </script><script async="" id="__NEXT_PAGE__/d3-js-for-python-and-pandas-charts" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/d3-js-for-python-and-pandas-charts/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/9b550052-0a21-4331-96c8-9120f7c94fbc/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/c8bfae930eb0ad3c1cfeb8d6ad23c9f5/app.js" async=""></script></div></body></html>
+        </script><script async="" id="__NEXT_PAGE__/d3-js-for-python-and-pandas-charts" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/d3-js-for-python-and-pandas-charts/index.js"></script><script async="" id="__NEXT_PAGE__/_error" type="text/javascript" src="https://plotly.github.io/plotly-next/_next/3398ce23-bfce-4195-9258-87a2c294fd63/page/_error/index.js"></script><div></div><script type="text/javascript" src="https://plotly.github.io/plotly-next/_next/50062c46034bdaef67253655dcb97723/app.js" async=""></script></div></body></html>
