@@ -15,17 +15,22 @@
   "style": {
     "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
-  "sponsors": [{
-    "graphic": "/static/images/logos/logo-google.32fb4272b7a8.png",
-    "label": "Sponsor"
-  }, {
-    "graphic": "/static/images/logos/logo-netflix.9a81d3318b9f.png",
-    "label": "Sponsor"
-  }, {
-    "graphic": "/static/images/logos/logo-airforce.43dc8247dfc9.png",
-    "label": "Sponsor"
-  }],
-  "quotes": [{
+  "sponsors": [
+    {
+      "graphic": "/static/images/logos/logo-google.32fb4272b7a8.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-netflix.9a81d3318b9f.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-airforce.43dc8247dfc9.png",
+      "label": "Sponsor"
+    }
+  ],
+  "quotes": [
+    {
       "author": "- Goji Insurance",
       "desc": " Before Plotly, we were entangled in an enterprise BI quagmire. Our system was large, expensive to maintain in both time and effort, and slow to adapt to our fast-changing needs. Plotly was the “big BI” killer we had been waiting for"
     },
@@ -34,17 +39,21 @@
       "desc": " At Olark, plot.ly allows us to rapidly visualize our data and build easy-to-share, interactive dashboards. This all came at an orders of magnitude lower price than full-fledged business intelligence solutions and seamlessly integrated with our existing analysis pipelines."
     }
   ],
-  "sections": [{
-    "image": "/static/images/industries/filewell.52db0527affc.jpg",
-    "title": "Whitelabel Platforms with Plotly Enterprise",
-    "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
-  }, {
-    "image": "/static/images/industries/parenthood-evolution.e42d2391530f.svg",
-    "title": "Plotly Pew Research graph collection",
-    "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration."
-  }, {
-    "image": "/static/images/industries/animated-map-no-legend.82104817f1a2.jpg",
-    "title": "Interactive maps like the New York Times",
-    "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times."
-  }]
+  "sections": [
+    {
+      "image": "/static/images/industries/filewell.52db0527affc.jpg",
+      "title": "Whitelabel Platforms with Plotly Enterprise",
+      "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience."
+    },
+    {
+      "image": "/static/images/industries/parenthood-evolution.e42d2391530f.svg",
+      "title": "Plotly Pew Research graph collection",
+      "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration."
+    },
+    {
+      "image": "/static/images/industries/animated-map-no-legend.82104817f1a2.jpg",
+      "title": "Interactive maps like the New York Times",
+      "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times."
+    }
+  ]
 }

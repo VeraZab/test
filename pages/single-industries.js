@@ -10,7 +10,7 @@ import styles from './single-industries/single-industries.styles.scss'
 export default class extends React.Component {
 
   static async getInitialProps ({ query: { id } }) {
-      const urlPath = `http://localhost:3000/static/data/products/industries/${id}.json`
+      const urlPath = `https://now.plot.ly/static/data/products/industries/${id}.json`
       const res = await fetch(urlPath)
       const data = await res.json()
       return { data }

@@ -4,7 +4,7 @@ const chromatic = require("chromatic-sass")
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '',
+    assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '', // for building and static export
     exportPathMap: () => ({
         "/": { page: "/" },
         "/dashboards": { page: "/dashboards" },
@@ -17,7 +17,24 @@ module.exports = {
         "/plotly-js-scientific-d3-charting-library": { page: "/plotly-js-scientific-d3-charting-library" },
         "/d3-js-for-r-and-shiny-charts": { page: "/d3-js-for-r-and-shiny-charts" },
         "/d3-js-for-python-and-pandas-charts": { page: "/d3-js-for-python-and-pandas-charts" },
-        "/products/on-premise": { page: "/products/on-premise" }
+        "/products/on-premise": { page: "/products/on-premise" },
+        "/products/industries": { page: "/industries" },
+        "/products/industries/finance": { page: "/single-industries", query: { id: 'finance' } },
+        "/products/industries/aerospace": { page: "/single-industries", query: { id: 'aerospace' } },
+        "/products/industries/automotive-analytics": { page: "/single-industries", query: { id: 'automotive-analytics' } },
+        "/products/industries/business-intelligence": { page: "/single-industries", query: { id: 'business-intelligence' } },
+        "/products/industries/energy-analytics": { page: "/single-industries", query: { id: 'energy-analytics' } },
+        "/products/industries/government-and-public-analytics": { page: "/single-industries", query: { id: 'government-and-public-analytics' } },
+        "/products/industries/insurance": { page: "/single-industries", query: { id: 'insurance' } },
+        "/products/industries/journalism": { page: "/single-industries", query: { id: 'journalism' } },
+        "/products/industries/pharma-analytics": { page: "/single-industries", query: { id: 'pharma-analytics' } },
+        "/products/industries/research-and-development-analytics": { page: "/single-industries", query: { id: 'research-and-development-analytics' } },
+        // "/products/industries/tableau-alternative": { page: "/single-industries", query: { id: 'tableau-alternative' } },
+        "/products/customer-stories": { page: "/customer-stories" },
+        "/products/customer-stories/c12-energy": { page: "/single-customer-stories", query: { id: 'c12-energy' } },
+        "/products/customer-stories/goji": { page: "/single-customer-stories", query: { id: 'goji' } }
+        // "/tableau-alternative": { page: "/tableau-alternative" },
+        // "/highcharts-alternative": { page: "/highcharts-alternative" }
     }),
     webpack: (config, {dev}) => {
 

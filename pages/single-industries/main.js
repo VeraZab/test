@@ -116,7 +116,7 @@ class IndustriesMain extends React.Component {
 
   getQuoteWithIndexFromData(index, data) {
     const contentSectionClass = (index % 2) ? 'background-color-light-2' : '';
-    return (data.quotes[index]) ? <ContentSection className={contentSectionClass, 'quote-section'}>
+    return (data.quotes[index]) ? <ContentSection className={contentSectionClass +  ' quote-section'}>
         <ContentPane full center-vertically text center>
             <Body>
             <div className="quote">

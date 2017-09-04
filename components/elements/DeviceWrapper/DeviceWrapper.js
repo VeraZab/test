@@ -17,7 +17,7 @@ export class DeviceWrapper extends React.Component {
 
     if (!device) return contentFrame;
 
-    console.log('content', content);
+    // console.log('content', content);
 
     return (
       <div className={'device-wrapper'} style={device.styles}>
@@ -50,7 +50,7 @@ class ContentFrame extends React.Component {
             </div>
           : <img src={image} />;
 
-    console.log('color', color);
+    // console.log('color', color);
 
     if (!device) return content;
 
