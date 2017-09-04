@@ -12,29 +12,29 @@
     "backgroundImage": "url(/static/images/industries/banner-aerospace.jpg)"
   },
   "sponsors": [{
-      "graphic": "/static/images/logos/logo-nasa.eacb18642cfa.png",
+      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-nasa.eacb18642cfa.png",
       "label": "Nasa"
     },
     {
-      "graphic": "/static/images/logos/logo-aerospace.1ce63084d4df.png",
+      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-aerospace.1ce63084d4df.png",
       "label": "Aerospace"
     },
     {
-      "graphic": "/static/images/logos/logo-airforce.bf356fdc56a5.png",
+      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-airforce.bf356fdc56a5.png",
       "label": "Airforce"
     }
   ],
   "sections": [{
       "content": [{
         "device": "laptop",
-        "image": "/static/images/industries/graph1.84884a57d01f.svg",
+        "image": "https://plotly.github.io/plotly-next/static/images/industries/graph1.84884a57d01f.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
       },
       {
         "device": "ipad",
-        "image": "/static/images/industries/graph2.895e80ddf51b.svg",
+        "image": "https://plotly.github.io/plotly-next/static/images/industries/graph2.895e80ddf51b.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -47,9 +47,9 @@
         "device": "ipython",
         "type": "video",
         "sources": [
-          "/static/images/industries/bluegraph.54bced11928a.mp4",
-          "/static/images/industries/bluegraph.3a91b0b3e74b.webm",
-          "/static/images/industries/bluegraph.303c6a1a21b7.jpg"
+          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.54bced11928a.mp4",
+          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.3a91b0b3e74b.webm",
+          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.303c6a1a21b7.jpg"
         ],
         "color": "lightcobaltblue",
         "background": "white"
@@ -60,7 +60,7 @@
     {
       "content": [{
         "device": "laptop",
-        "image": "/static/images/industries/filewell.b2911b59fa48.jpg",
+        "image": "https://plotly.github.io/plotly-next/static/images/industries/filewell.b2911b59fa48.jpg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -71,7 +71,7 @@
     {
       "content": [{
         "device": "iphone",
-        "image": "/static/images/industries/maps.351f724327b7.jpg",
+        "image": "https://plotly.github.io/plotly-next/static/images/industries/maps.351f724327b7.jpg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -82,7 +82,7 @@
     {
       "content": [{
         "device": "browser",
-        "image": "/static/images/industries/nasa-cube.4a6cfc5c3bc7.svg",
+        "image": "https://plotly.github.io/plotly-next/static/images/industries/nasa-cube.4a6cfc5c3bc7.svg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -94,9 +94,9 @@
       "content": [{
         "device": "laptop",
         "sources": [
-          "/static/images/industries/globe.3045ace10490.mp4",
-          "/static/images/industries/globe.6f2dbf3e26ea.webm",
-          "/static/images/industries/globe.d5c6c719a45c.jpg"
+          "https://plotly.github.io/plotly-next/static/images/industries/globe.3045ace10490.mp4",
+          "https://plotly.github.io/plotly-next/static/images/industries/globe.6f2dbf3e26ea.webm",
+          "https://plotly.github.io/plotly-next/static/images/industries/globe.d5c6c719a45c.jpg"
         ],
         "type": "video",
         "color": "mediumgreyblue",
@@ -109,9 +109,9 @@
       "content": [{
         "device": "desktop",
         "sources": [
-          "/static/images/industries/streaming.b0dcfc168e9c.mp4",
-          "/static/images/industries/streaming.1bc59ca33f45.webm",
-          "/static/images/industries/streaming.3b4a71b628c0.jpg"
+          "https://plotly.github.io/plotly-next/static/images/industries/streaming.b0dcfc168e9c.mp4",
+          "https://plotly.github.io/plotly-next/static/images/industries/streaming.1bc59ca33f45.webm",
+          "https://plotly.github.io/plotly-next/static/images/industries/streaming.3b4a71b628c0.jpg"
         ],
         "type": "video",
         "color": "darkgreyblue",
