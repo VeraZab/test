@@ -3,21 +3,22 @@
   "version": "0.0.1",
   "description": "New and improved branding and marketing pages with React and next.js.",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "export": "next build && next export",
+    "export": "next export",
     "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "deploy": "yarn run export && yarn run ghpages",
     "start": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": "7.10.1"
+    "node": "6.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
   "dependencies": {
     "antd": "^2.8.1",
     "autoprefixer": "6.7.6",
+    "axios": "^0.16.2",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-transform-runtime": "^6.7.5",
     "babel-plugin-wrap-in-js": "^1.1.0",
@@ -29,7 +30,11 @@
     "glob": "7.1.1",
     "in-view": "^0.6.1",
     "include-media": "^1.4.9",
+    "isomorphic-fetch": "^2.2.1",
+    "lru-cache": "^4.1.1",
+    "mdi": "^1.8.36",
     "next": "^3.0.6",
+    "next-routes": "^1.0.27",
     "next-url-prettifier": "^1.1.2",
     "node-sass": "^4.4.0",
     "normalize-scss": "^6.0.0",
@@ -37,22 +42,25 @@
     "postcss-easy-import": "2.0.0",
     "postcss-loader": "1.3.3",
     "postcss-uncss": "^0.14.0",
+    "prismic.io": "^3.5.7",
     "proptypes": "^0.14.4",
     "raw-loader": "^0.5.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
     "react-sticky": "5.0.8",
     "react-swipe": "^5.0.6",
     "react-syntax-highlighter": "^5.0.0",
-    "sass-loader": "^4.1.1",
+    "sass-loader": "^6.0.5",
     "swipe-js-iso": "^2.0.3",
     "vargs": "^0.1.0",
     "webpack": "2"
   },
   "devDependencies": {
     "babel-preset-env": "^1.2.1",
-    "now": "^3.1.0"
+    "now": "^3.1.0",
+    "react-com": "^1.0.6",
+    "react-scripts": "^1.0.10"
   },
   "now": {
     "alias": "now.plot.ly"

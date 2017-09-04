@@ -118,8 +118,8 @@ export class ContentPane extends React.Component {
 
     render() {
 
-        let classes = '';
-
+        let classes = '',
+            {style} = this.props;
 
         if ('text' in this.props) {
             classes += ' content-section-pane-text';
@@ -165,7 +165,7 @@ export class ContentPane extends React.Component {
         }
 
         return (
-            <div className={"content-section-pane" + classes}>
+            <div className={"content-section-pane" + classes} style={style}>
                 <div className="content-section-pane-wrapper hidden">
                     {this.props.children}
                 </div>

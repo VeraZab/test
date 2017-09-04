@@ -1,0 +1,157 @@
+{
+  "id": "energy-analytics",
+  "meta": {
+    "title": "Energy Analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Energy Analytics",
+    "desc": "Plotly serves the energy industry with the world's most advanced graphics for web dashboards, print and web reports, and collaborative analytics."
+  },
+  "style": {
+    "backgroundImage": "url(/static/images/industries/banner-energy.jpg)"
+  },
+  "sponsors": [{
+      "graphic": "/static/images/logos/logo-ambri.5a7cbdfcdf2f.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-c12.153b8e641740.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-gtm.49428e042ac0.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-opower.8e9d13b5e40e.png",
+      "label": "Sponsor"
+    },
+    {
+      "graphic": "/static/images/logos/logo-sighten.9c2d8d53cd16.png",
+      "label": "Sponsor"
+    }
+
+  ],
+  "sections": [{
+      "content": [{
+        "device": "iphone-90",
+        "type": "image",
+        "image": "/static/images/industries/electricity_consumption_per_country_map.e28f469bc9db.jpg",
+        "color": "columbiablue",
+        "background": "white"
+      }],
+      "title": "Plotly is the most advanced visualization platform in the energy industry",
+      "body": "Plotly graphs are native to web browsers, drawn in D3.js, fully interactive, and support all of the scientific graph types of older desktop programs like Spotfire, MATLAB and OriginPro."
+    },
+    {
+      "content": [{
+        "device": "desktop",
+        "type": "image",
+        "image": "/static/images/industries/c12-dashboard.e2892892a602.png",
+        "color": "columbiablue",
+        "background": "cornflowerblue"
+      }],
+      "title": "Dashboards for oil field investment",
+      "body": "Plotly has built dashboards for C12 Energy that combine geographic, geological, and financial datasets, and that are critical to decisions on oil field purchasing. <a href='https://plot.ly/products/enterprise/customer-stories/c12-energy/'>READ THE C12 CASE STUDY</a>"
+    },
+    {
+      "content": [{
+        "device": "laptop",
+        "type": "image",
+        "image": "/static/images/industries/opower.c379c49f0ad3.svg",
+        "background": "lightgrey"
+      }],
+      "title": "Analyzing smart meter big data at Opower",
+      "body": "The analytics team at Opower uses Python to analyze smart meter data on electricity consumption. They then share their findings through reports and dashboards made with interactive Plotly graphs, all drawn in D3.js. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY</a>"
+    },
+    {
+      "content": [{
+        "device": "ipad",
+        "type": "image",
+        "image": "/static/images/industries/batteries.732368ed9bad.svg",
+        "background": "mayablue"
+      }],
+      "title": "Dashboards for utility-scale batteries",
+      "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB</a>"
+    },
+    {
+      "content": [{
+        "type": "image",
+        "image": "/static/images/industries/wind-farm.856d53aa2241.svg"
+      }],
+      "title": "Dashboards for wind farm prospecting",
+      "body": "The wind industry uses Plotly maps, line charts, and histograms to help prospect new wind turbine sites. Anemometer data is sent via cellular to a server which automatically updates a d3.js dashboard built with plotly graphs. <a href='https://plot.ly/javascript'>DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY</a>"
+    },
+    {
+      "content": [{
+        "device": "desktop",
+        "type": "image",
+        "image": "/static/images/industries/solar-radiation.b7716f79d8c0.svg",
+        "background": "darkgreyblue"
+      }],
+      "title":"Analytics for the Solar Industry",
+      "body": "Sighten has the industry's most advanced toolset for solar investment efficiency. Their online client dashboards use Plotly graphs drawn in D3.js to display RoR and insolation data."
+    },
+    {
+      "content": [{
+        "device": "report",
+        "type": "image",
+        "image": "/static/images/industries/utility-price.9486740d6e80.svg",
+        "background": "lightgrey"
+      }],
+      "title":"Energy research reporting",
+      "body": "Plotly graphs export to pdf, eps, svg, png, and are also publishable to the web as interactive, d3.js figures. Greentech Media embeds Plotly graphs in their online articles to provide their readers with highly engaging interactive charts. <a href='http://plot.ly/~greentechmedia'>GREENTECH MEDIA PLOTLY PROFILE</a>"
+    }
+  ],
+  "quotes": [{
+      "author": "- Malina Kirn, PhD, Lead Engineer, Analytics at Opower ",
+      "desc": " Plotly is a key component of Opower's analytics platform. Opower performs advanced automated analytics in Python, then leverages the rich Plotly Python API to produce and update plots of our results. Plotly gives us beautiful plots out of the box -- and gives us the tools we need to tweak them to perfection. The plots we create in Plotly are of such high quality that we share them both internally and with our clients. Plotly also allows us to create plots that are interactive; giving us drop-down widgets that change the contents of plots based on user selections. Plotly successfully gives us total control in the backend API, with intuitive and easy controls in the frontend UI. "
+    },
+    {
+      "author": "— Dr. Jenya Kirshtein, Scientific Software Engineering at C12 ",
+      "desc": " We can quickly comprehend and analyze huge amounts of data, and use the results to make multi-million-dollar investment decisions. "
+    },
+    {
+      "author": "- Dana Guernsey, Director of Corporate Development at Ambri",
+      "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. "
+    },
+    {
+      "author": "- David Villagra, Vice President Engineering at Sighten",
+      "desc": " Sighten has developed a comprehensive enterprise SaaS platform for residential and commercial solar sales, operations, financing, and portfolio management. Using plotly, Sighten is able to create simple charts for solar proposals and complex visualizations for advanced financial analytics. Data scientists and software engineers working in Python, JavaScript and R thoroughly enjoy bringing Sighten's growing dataset to life through plotly charts - providing powerful insights to a variety of companies across the solar energy and finance industries. "
+    },
+    {
+      "author": "Mike Munsell, Manager, Research Marketing, GTM Research ",
+      "desc": "With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
+    }
+  ],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [
+      {
+      "title": "READ THE C12 CASE STUDY",
+      "url": "https://plot.ly/products/enterprise/customer-stories/c12-energy/"
+      },
+      {
+      "title": "GENERATE HTML REPORTS WITH PYTHON PANDAS AND PLOTLY",
+      "url": "http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/"
+      },
+      {
+      "title": "WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB",
+      "url": "http://plot.ly/~greentechmedia"
+      },
+      {
+      "title": "DASHBOARDS WITH PLOTLY.JS, PLOTLY'S JAVASCRIPT DASHBOARD LIBRARY",
+      "url": "https://plot.ly/javascript/"
+      },
+      {
+      "title": "GREENTECH MEDIA PLOTLY PROFILE",
+      "url": "http://plot.ly/~greentechmedia"
+      },
+      {
+      "title": "PUBLIC PERCEPTION ON CLIMATE CHANGE",
+      "url": "http://blog.plot.ly/post/99540799397/eight-graphs-you-should-see-on-global-warming"
+      }
+    ]
+  }
+}

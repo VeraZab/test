@@ -1,0 +1,48 @@
+.showBackground {
+
+  .content-section-wrapper {
+    margin: 0;
+    background-size: cover !important;
+    max-width: 100%;
+    color: #fff;
+  }
+
+  p,
+  .content-section-title,
+  .content-section-title-wrapper {
+    color: #fff;
+  }
+}
+
+.single-industries {
+
+  .device-wrapper {
+    left: 0;
+    width: 100% !important;
+    min-width: 100% !important;
+    position: relative !important;
+
+    &:nth-of-type(even) {
+      display: none;
+    }
+  }
+
+  .content-section-wrapper {
+    flex-direction: column;
+  }
+
+  .content-section-pane {
+    position: relative;
+  }
+  @media only screen and (min-width: 1060px) {
+    &:nth-of-type(odd) {
+      .content-section-wrapper {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .content-section-wrapper {
+      flex-direction: row;
+    }
+  }
+}

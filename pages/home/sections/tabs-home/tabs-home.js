@@ -1,6 +1,5 @@
 import React from "react";
-import BrowserWrapper
-    from "../../../../components/elements/browser-wrapper/browser-wrapper";
+import BrowserWrapper from "../../../../components/elements/browser-wrapper/browser-wrapper";
 import styles from "./tabs-home.styles.scss";
 import {StickyContainer, Sticky} from 'react-sticky';
 import ReactSwipe from 'react-swipe';

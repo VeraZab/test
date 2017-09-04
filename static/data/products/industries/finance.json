@@ -1,0 +1,139 @@
+{
+  "id": "finance",
+  "meta": {
+    "title": "Finance"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Finance Analytics",
+    "desc": "Python, R, MATLAB, and Excel are the data analysis languages of choice at the world's largest banks. Plotly provides a reporting and collaborative analytics layer for these tools that works equally well in print or web formats."
+  },
+  "style": {
+    "backgroundImage": "url(/static/images/industries/banner-finance.jpg)"
+  },
+  "sponsors": [
+    {
+      "graphic": "/static/images/industries/logo-kaleidoscope.d1983cb4bdb6.png",
+      "label": "Kaleidoscope"
+    },
+    {
+      "graphic": "/static/images/industries/logo-mhs.b306f9062f01.png",
+      "label": "MHS Capital"
+    },
+    {
+      "graphic": "/static/images/industries/logo-nubank.b9a4646960f2.png",
+      "label": "Nubank"
+    },
+    {
+      "graphic": "/static/images/industries/logo-plaid.eeb57c2547b1.png",
+      "label": "Plaid"
+    },
+    {
+      "graphic": "/static/images/industries/logo-quandl.9ba4b3bf014b.png",
+      "label": "Quandl"
+    }
+  ],
+  "quotes": [{
+      "author": "- Kai Wu, Founding Partner of Kaleidoscope Capital",
+      "desc": " When I make investment decisions, I want the best tools in the world to graph, analyze, drill-down, slice, share, and understand my data. Plotly's interactive platform gives our team those features, integrates with our Python workflow, and easily connects to all our data sources. "
+    },
+    {
+      "author": "- Sharon Rapoport, Data Scientist at Plaid",
+      "desc": "[We] use plotly to share high-level data analysis and machine learning insights with our non-technical team."
+    }
+  ],
+  "sections": [{
+      "content": [{
+        "type": "image",
+        "device": "laptop",
+        "image": "/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
+        "color": "columbiablue",
+        "background": "white"
+      }, {
+        "type": "image",
+        "device": "iphone",
+        "image": "/static/images/industries/cpg-stock-iphone.6fdb2cc25597.svg",
+        "color": "columbiablue",
+        "background": "white"
+      }],
+      "title": "Automatic early warning indicator reports",
+      "body": "A major US bank uses Plotly to create early warning indicator dashboards for its financials assets. The indicator data is pulled directly from Bloomberg and Quandl with Python scripts and the visualizations are drawn with Plotly's Python API to create D3-quality charts that can then be viewed by bank executives on mobile, tablet and laptop devices in real-time through a private portal. By using Plotly, the bank is able to both eliminate the need to email large excel spreadsheets back and forth and save its analysts hours of monotonous excel work every day."
+    },
+    {
+      "content": [{
+        "type": "image",
+        "device": "ipad",
+        "image": "/static/images/industries/livestream.37994c071ecb.svg",
+        "color": "cornflowerblue",
+        "background": "white"
+      }],
+      "title": "Live-stream Bloomberg and Quandl data in Python",
+      "body": "Bloomberg terminal and Quandl data can both be easily extracted into IPython notebook and plotted in D3.js with Plotly."
+    },
+    {
+      "content": [{
+        "type": "image",
+        "device": "browser",
+        "image": "/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
+        "color": "lightgrey",
+        "background": "white"
+      }],
+      "title": "Live-updating, web-based charts for reports and dashboards",
+      "body": "Charts are created with tools that quants and strats like - Python, Excel and MATLAB - but Plotly draws them behind-the-scenes with D3.js, the gold standard of the web for interactive graphics. <a href='http://plot.ly/ipython-notebooks/ukelectionbbg/'>Visualizing Bloomberg and Quandl data with Plotly</a>"
+    },
+    {
+      "content": [{
+        "type": "image",
+        "device": "ipython",
+        "image": "/static/images/industries/portfolio-optimization2.d7ecfead4c14.svg",
+        "color": "mayablue",
+        "background": "white"
+      }],
+      "title": "Quantopian and Markowitz portfolio optimization",
+      "body": "Quantopian platform lead Thomas Wiecki optimizes portfolios using IPython notebook and graphs the data in D3.js using Plotly's IPython client."
+    },
+    {
+      "content": [{
+        "type": "image",
+        "device": "browser",
+        "image": "/static/images/industries/excel.c74d2c0fbc8e.png",
+        "color": "lightgrey",
+        "background": "white"
+      }],
+      "title": "Plotly and Excel",
+      "body": "Any Excel workbook can be uploaded to Plotly to create publication-quality charts or dashboards for web or print. Plotly can also be used in within Excel on Windows computers with the Plotly Charts MS Office app."
+    },
+    {
+      "content": [{
+        "type": "image",
+        "device": "ipython",
+        "image": "/static/images/industries/yield-curve.751311465dc2.jpg",
+        "color": "lightcobaltblue",
+        "background": "white"
+      }],
+      "title": "Plotly & Pandas for financial data",
+      "body": "Jorge Santos, a Global Product Manager at Thomson Reuters, built his own Python library to integrate Plotly in his workflow."
+    }
+  ],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [{
+        "title": "VISUALIZING BLOOMBERG AND QUANDL DATA WITH PLOTLY",
+        "url": "http://plot.ly/ipython-notebooks/ukelectionbbg/"
+      },
+      {
+        "title": "MARKOWITZ PORTFOLIO OPTIMIZATION",
+        "url": "http://plot.ly/ipython-notebooks/markowitz-portfolio-optimization/"
+      },
+      {
+        "title": "CUFFLINKS: EASY PLOTTING USING PLOTLY AND PANDAS",
+        "url": "http://plot.ly/ipython-notebooks/cufflinks/"
+      },
+      {
+        "title": "PLOTLY MS OFFICE",
+        "url": "http://store.office.com/plotly-charts-WA104379485.aspx?assetid=WA104379485&sourcecorrid=ec233ecd-38ee-4138-a7e6-6fac47be07e4&searchapppos=0"
+      }
+    ]
+
+  }
+}
