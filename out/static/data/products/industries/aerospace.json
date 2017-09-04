@@ -9,7 +9,7 @@
     "desc": "Plotly brings dashboards and collaborative analytics to the aerospace industry for teams using MATLAB, Python, R, and Excel."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-aerospace.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-aerospace.jpg)"
   },
   "sponsors": [{
       "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-nasa.eacb18642cfa.png",

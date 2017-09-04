@@ -9,7 +9,7 @@
     "desc": "Plotly serves the energy industry with the world's most advanced graphics for web dashboards, print and web reports, and collaborative analytics."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-energy.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-energy.jpg)"
   },
   "sponsors": [{
       "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-ambri.5a7cbdfcdf2f.png",

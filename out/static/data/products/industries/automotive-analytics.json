@@ -11,7 +11,7 @@
   "sponsors": [
   ],
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-automotive.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-automotive.jpg)"
   },
   "sections": [{
     "content": [{

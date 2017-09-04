@@ -13,7 +13,7 @@
     "cta": "Join Now"
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
   "sponsors": [
     {

@@ -9,7 +9,7 @@
     "desc": "Plotly is purpose-built BI. We specialize in the collaboration and visualization layer of the data science spectrum, while easily connecting to tools that BI specialists like: R, Python, and Excel."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)"
   },
   "sponsors": [
     {

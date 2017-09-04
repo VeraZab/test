@@ -9,7 +9,7 @@
     "desc": "Desktop BI with point-and-click GUI tools is dying. In today's world of big data, only the flexibility and speed of scripting tools - R, IPython notebook, and MATLAB - can answer business' most important questions. Plotly provides the world's most advanced web plots for dashboards and reporting with these tools."
   },
   "style": {
-    "backgroundImage": "url(/static/images/industries/banner-business.jpg)"
+    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-business.jpg)"
   },
   "sponsors": [{
     "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-goji.212d2eb0c34c.png",
