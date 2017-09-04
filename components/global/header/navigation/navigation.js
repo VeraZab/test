@@ -323,7 +323,8 @@ export default class Navigation extends React.Component {
         super(props);
         this.state = {
             mobileMenu: false,
-            productSubmenuActive: false
+            productSubmenuActive: false,
+            submenu: ''
         };
 
     }
@@ -370,6 +371,22 @@ export default class Navigation extends React.Component {
             });
         }
     }
+
+    storeSubMenu(title) {
+
+        this.setState({
+            submenu: title
+        });
+
+    }
+
+    closeSubMenu() {
+        this.setState({
+            submenu: ''
+        });
+    }
+
+
 
 
     render() {
@@ -438,7 +455,7 @@ export default class Navigation extends React.Component {
 
             let classes = '';
 
-            if (this.state.productSubmenuActive) {
+            if (this.state.submenu === item.label) {
                 classes += ' active';
             }
 
@@ -448,7 +465,7 @@ export default class Navigation extends React.Component {
                     <div className='nav-item--with-submenu nav-item-button not-mobile' key={item.id}>
                         <div className={item.button.classes}>
                             <div title={item.title} className='nav-item-wrapper'>
-                                <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                                <div className='nav-item-label' onClick={()=>this.storeSubMenu(item.label)}>
                                     <div className='nav-item-label-text button-label'>
                                         {item.label}
                                     </div>
@@ -458,7 +475,7 @@ export default class Navigation extends React.Component {
                         <div className={'nav-item-submenu' + classes}>
                             <div className="nav-item-submenu-wrapper">
                                 <div className="mobile-only close submenu-close"
-                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                     onClick={()=>this.closeSubMenu()}>
                                     Close
                                 </div>
                                 {navSubmenuSections(item.submenu.sections)}
@@ -471,7 +488,7 @@ export default class Navigation extends React.Component {
                 return (
                     <div className='nav-item nav-item--with-submenu' key={item.id}>
                         <div title={item.title} className='nav-item-wrapper'>
-                            <div className='nav-item-label' onClick={this.toggleProductSubmenu.bind(this)}>
+                            <div className='nav-item-label' onClick={()=>this.storeSubMenu(item.label)}>
                                 <div className='nav-item-label-text'>
                                     {item.label} <small className="down-arrow">▼</small>
                                 </div>
@@ -480,7 +497,7 @@ export default class Navigation extends React.Component {
                         <div className={'nav-item-submenu' + classes}>
                             <div className="nav-item-submenu-wrapper">
                                 <div className="mobile-only close submenu-close"
-                                     onClick={this.toggleProductSubmenu.bind(this)}>
+                                     onClick={()=>this.closeSubMenu()}>
                                     Close
                                 </div>
                                 {navSubmenuSections(item.submenu.sections)}

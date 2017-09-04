@@ -27,7 +27,7 @@ const languages = [
         graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
         example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
         button_text: 'Plotly R API',
-        button_link: 'http://google.com'
+        button_link: 'http://plot.ly/r'
     }
 ];
 
