@@ -11,7 +11,7 @@ import styles from './single-customer-stories/single-customer-stories.styles.scs
 export default class extends React.Component {
 
   static async getInitialProps ({ query: { id } }) {
-      const urlPath = `https://now.plot.ly/static/data/products/enterprise/${id}.json`;
+      const urlPath = `https://plotly.github.io/plotly-next/static/data/products/enterprise/${id}.json`;
       const res = await fetch(urlPath);
       const data = await res.json();
       return { data }
