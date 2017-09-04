@@ -1,15 +1,25 @@
-.single-industries {
+.showBackground {
 
-  .showBackground & {
-    p,
-    .content-section-title {
-      color: #fff;
-    }
+  .content-section-wrapper {
+    margin: 0;
+    background-size: cover !important;
+    max-width: 100%;
+    color: #fff;
   }
+
+  p,
+  .content-section-title,
+  .content-section-title-wrapper {
+    color: #fff;
+  }
+}
+
+.single-industries {
 
   .device-wrapper {
     left: 0;
     width: 100% !important;
+    min-width: 100% !important;
     position: relative !important;
 
     &:nth-of-type(even) {

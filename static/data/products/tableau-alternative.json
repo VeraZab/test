@@ -3,6 +3,9 @@
   "meta": {
     "title": "Highcharts Alternative"
   },
+  "footer": {
+    "title": "Highcharts Alternative"
+  },
   "header": {
     "group": "Highcharts Alternative",
     "title": "Comparing Plotly and Tableau",

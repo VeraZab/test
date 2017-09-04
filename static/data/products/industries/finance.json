@@ -13,23 +13,23 @@
   },
   "sponsors": [
     {
-      "graphic": "/static/images/industries/finance/logo-kaleidoscope.d1983cb4bdb6.png",
+      "graphic": "/static/images/industries/logo-kaleidoscope.d1983cb4bdb6.png",
       "label": "Kaleidoscope"
     },
     {
-      "graphic": "/static/images/industries/finance/logo-mhs.b306f9062f01.png",
+      "graphic": "/static/images/industries/logo-mhs.b306f9062f01.png",
       "label": "MHS Capital"
     },
     {
-      "graphic": "/static/images/industries/finance/logo-nubank.b9a4646960f2.png",
+      "graphic": "/static/images/industries/logo-nubank.b9a4646960f2.png",
       "label": "Nubank"
     },
     {
-      "graphic": "/static/images/industries/finance/logo-plaid.eeb57c2547b1.png",
+      "graphic": "/static/images/industries/logo-plaid.eeb57c2547b1.png",
       "label": "Plaid"
     },
     {
-      "graphic": "/static/images/industries/finance/logo-quandl.9ba4b3bf014b.png",
+      "graphic": "/static/images/industries/logo-quandl.9ba4b3bf014b.png",
       "label": "Quandl"
     }
   ],
@@ -46,13 +46,13 @@
       "content": [{
         "type": "image",
         "device": "laptop",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-ipad.639dbce73735.svg",
+        "image": "/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
         "color": "columbiablue",
         "background": "white"
       }, {
         "type": "image",
         "device": "iphone",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-iphone.6fdb2cc25597.svg",
+        "image": "/static/images/industries/cpg-stock-iphone.6fdb2cc25597.svg",
         "color": "columbiablue",
         "background": "white"
       }],
@@ -63,7 +63,7 @@
       "content": [{
         "type": "image",
         "device": "ipad",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/livestream.37994c071ecb.svg",
+        "image": "/static/images/industries/livestream.37994c071ecb.svg",
         "color": "cornflowerblue",
         "background": "white"
       }],
@@ -74,7 +74,7 @@
       "content": [{
         "type": "image",
         "device": "browser",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/cpg-stock-ipad.639dbce73735.svg",
+        "image": "/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
         "color": "lightgrey",
         "background": "white"
       }],
@@ -85,7 +85,7 @@
       "content": [{
         "type": "image",
         "device": "ipython",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/portfolio-optimization2.d7ecfead4c14.svg",
+        "image": "/static/images/industries/portfolio-optimization2.d7ecfead4c14.svg",
         "color": "mayablue",
         "background": "white"
       }],
@@ -96,7 +96,7 @@
       "content": [{
         "type": "image",
         "device": "browser",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/excel.c74d2c0fbc8e.png",
+        "image": "/static/images/industries/excel.c74d2c0fbc8e.png",
         "color": "lightgrey",
         "background": "white"
       }],
@@ -107,7 +107,7 @@
       "content": [{
         "type": "image",
         "device": "ipython",
-        "image": "https://plot.ly/static/enterprise/img/industries/finance/yield-curve.751311465dc2.jpg",
+        "image": "/static/images/industries/yield-curve.751311465dc2.jpg",
         "color": "lightcobaltblue",
         "background": "white"
       }],
