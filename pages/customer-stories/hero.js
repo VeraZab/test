@@ -14,7 +14,7 @@ import {Browser} from '../../components/browser/browser';
 const HeroWrapperStyle = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url("/static/enterprise/img/customer-stories/enterprise-customer-stories-banner.jpg")'
+    backgroundImage: 'url("https://plotly.github.io/plotly-next/static/enterprise/img/customer-stories/enterprise-customer-stories-banner.jpg")'
 };
 
 const heroStyles = {
