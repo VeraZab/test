@@ -17,7 +17,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "/static/images/industries/life-expectancy.5196f2276cb6.gif",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/life-expectancy.5196f2276cb6.gif",
       "color": "columbiablue"
     }],
     "title": "Making public data more accessible",
@@ -26,7 +26,7 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "/static/images/industries/climate-change2.efb87fb2d8af.svg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/climate-change2.efb87fb2d8af.svg",
       "color": "lightgrey"
     }],
     "title": "Crowd sourcing climate change data",
@@ -35,7 +35,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "/static/images/industries/noaa.7037fcde6f96.jpg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/noaa.7037fcde6f96.jpg",
       "color": "cornflowerblue"
     }],
     "title": "Atmospheric modeling at NOAA",
@@ -44,7 +44,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "/static/images/industries/baltimore-vital-signs.4c9c04d77b79.svg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/baltimore-vital-signs.4c9c04d77b79.svg",
       "color": "lightgrey"
     }],
     "title": "Baltimore Vital Signs Dataset",

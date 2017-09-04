@@ -17,7 +17,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "/static/images/industries/vehicle-sensor.6bda8f45c885.jpg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/vehicle-sensor.6bda8f45c885.jpg",
       "color": "columbiablue"
     }],
     "title": "Dashboards for vehicle sensors, manufacturing, and racing results",
@@ -26,7 +26,7 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "/static/images/industries/nascar.996dabfc5b6f.jpg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/nascar.996dabfc5b6f.jpg",
       "color": "cornflowerblue"
     }],
     "title": "Optimizing Race car performance for NASCAR",
@@ -35,7 +35,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "/static/images/industries/control-design.cefa9c079434.svg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/control-design.cefa9c079434.svg",
       "color": "lightgrey"
     }],
     "title": "Analyzing sensor and manufacturing data in R and Python",
@@ -44,7 +44,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "/static/images/industries/root-locus.a2918f091d12.jpg",
+      "image": "https://plotly.github.io/plotly-next/static/images/industries/root-locus.a2918f091d12.jpg",
       "color": "mediumgreyblue"
     }],
     "title": "Control design in Python, MATLAB, and Plotly",
