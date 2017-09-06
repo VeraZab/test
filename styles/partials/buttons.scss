@@ -91,6 +91,14 @@
   // Primary Button Styles
   // --
 
+  &-disabled{
+    background: $color-rhino-medium-2;
+    &:hover{
+      //pointer-events: none !important;
+      cursor: not-allowed !important;
+    }
+  }
+
   &-primary {
     background: $color-button-default;
     box-shadow: $drop-shadow;
@@ -145,7 +153,7 @@
   // Default hover + active states
   // -- 
   &:hover {
-    cursor: pointer;
+    //cursor: pointer;
   }
   &:active {
     @include active-state-transform;

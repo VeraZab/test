@@ -390,3 +390,7 @@ $timing-animation: $timing*2.5;
 @mixin trans{
   transition: $transition;
 }
+
+@mixin ff-dosis {
+  font-family: 'Dosis', sans-serif;
+}
