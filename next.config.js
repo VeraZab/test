@@ -62,6 +62,7 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
+                            data: '@import "partials/abstract";',
                             includePaths: ['styles', 'node_modules']
                                 .map((d) => path.join(__dirname, d))
                                 .map((g) => glob.sync(g))
