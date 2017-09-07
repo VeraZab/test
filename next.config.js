@@ -32,7 +32,8 @@ module.exports = {
         // "/products/industries/tableau-alternative": { page: "/single-industries", query: { id: 'tableau-alternative' } },
         "/products/enterprise/customer-stories": { page: "/customer-stories" },
         "/products/enterprise/customer-stories/c12-energy": { page: "/single-customer-stories", query: { id: 'c12-energy' } },
-        "/products/enterprise/customer-stories/goji": { page: "/single-customer-stories", query: { id: 'goji' } }
+        "/products/enterprise/customer-stories/goji": { page: "/single-customer-stories", query: { id: 'goji' } },
+        "/webinars": { page: "/webinars" }
         // "/tableau-alternative": { page: "/tableau-alternative" },
         // "/highcharts-alternative": { page: "/highcharts-alternative" }
     }),
