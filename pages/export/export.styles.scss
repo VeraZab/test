@@ -1,0 +1,108 @@
+.export {
+  &-page-main {
+    iframe {
+      border: 1px solid $color-rhino-medium-1 !important;
+    }
+
+    .quote {
+      &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &-item {
+        @include media('<=1000px') {
+          width: 100%;
+        }
+        width: 50%;
+        padding: $unit*4;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        &-wrapper {
+          display: flex;
+          //align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          max-width: 600px;
+        }
+        &-quote {
+          position: relative;
+          span {
+            opacity: 0.5;
+            font-size: 36px;
+            &:nth-of-type(1) {
+              position: absolute;
+              transform: translateX(-18px)
+            }
+            &:nth-of-type(2) {
+              position: absolute;
+              display: inline-block;
+              padding-left: 3px;
+              transform: translateY(5px)
+            }
+          }
+        }
+        &-quotee {
+          padding-top: $unit*2;
+
+        }
+
+        &:first-of-type {
+          background: $color-rhino-dark;
+          @include media('>1000px') {
+            justify-content: flex-end;
+            text-align: right;
+            .quote-item-quotee {
+              display: flex;
+              align-items: flex-end;
+              justify-content: flex-end;
+            }
+          }
+
+        }
+        &:nth-of-type(2) {
+          background: $color-rhino-core;
+        }
+      }
+    }
+  }
+}
+
+.export-step {
+  padding-top: $unit*4;
+
+  &-title {
+  }
+  &-number {
+    text-transform: uppercase;
+    font-weight: bold;
+    @include ff-dosis;
+    font-size: 18px;
+    opacity: 0.5;
+    letter-spacing: 4px;
+    padding-bottom: $unit;
+  }
+  &-body {
+    pre {
+      border: 1px solid $color-rhino-medium-1;
+    }
+  }
+}
+
+.logos-clickable {
+  .logo-item {
+    @include trans;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  h3 {
+    color: white;
+    text-align: center;
+    opacity: 0.8;
+    letter-spacing: 2px;
+    padding-bottom: $unit;
+    text-transform: uppercase;
+  }
+}
