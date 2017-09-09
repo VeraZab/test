@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/single-customer-stories/request-demo', function() {
+            var comp = module.exports=webpackJsonp([65],{927:function(e,t,l){e.exports=l(928)},928:function(e,t,l){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var u=l(3),a=n(u),o=l(1),r=n(o),c=l(2),d=n(c),i=l(4),s=n(i),f=l(5),m=n(f),p=l(0),y=n(p),_=l(7),b=l(8),h=n(b),E={title:"Interested in how Plotly can transform your business?",cta:[{label:"Request a demo",title:"See what you can create with Plotly!",icon:null,target:"_self",link:"/products/cloud/",button:{classes:"button button-secondary"}}]},g=function(e){function t(){return(0,r.default)(this,t),(0,s.default)(this,(t.__proto__||(0,a.default)(t)).apply(this,arguments))}return(0,m.default)(t,e),(0,d.default)(t,[{key:"render",value:function(){return y.default.createElement(_.ContentSection,{className:"background-color-light-4"},y.default.createElement(_.ContentPane,{full:!0,center:!0,"center-vertically":!0,text:!0},y.default.createElement(_.Title,null,E.title),y.default.createElement(_.Body,null,y.default.createElement(h.default,{"align-center":!0,items:E.cta}))))}}]),t}(y.default.Component);t.default=g}},[927]);
+            return { page: comp.default }
+          })
+        
