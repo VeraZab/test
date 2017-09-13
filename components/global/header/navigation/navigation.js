@@ -303,12 +303,12 @@ const navigationLeft = [
     },
     {
         id: 17,
-        label: 'Support',
-        slug: 'support',
-        title: 'Learn about advanced support plans we offer.',
+        label: 'PLOTCON NYC',
+        slug: 'plotcon-nyc',
+        title: "The world's most visionary conference for data visualization.",
         icon: null,
         target: '_blank',
-        link: 'https://support.plot.ly',
+        link: 'https://plotcon.plot.ly',
         button: null,
         submenu: null
     },
