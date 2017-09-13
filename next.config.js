@@ -33,7 +33,8 @@ module.exports = {
         "/products/enterprise/customer-stories": { page: "/customer-stories" },
         "/products/enterprise/customer-stories/c12-energy": { page: "/single-customer-stories", query: { id: 'c12-energy' } },
         "/products/enterprise/customer-stories/goji": { page: "/single-customer-stories", query: { id: 'goji' } },
-        "/webinars": { page: "/webinars" }
+        "/webinars": { page: "/webinars" },
+        "/export": { page: "/export" }
         // "/tableau-alternative": { page: "/tableau-alternative" },
         // "/highcharts-alternative": { page: "/highcharts-alternative" }
     }),
