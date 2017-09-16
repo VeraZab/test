@@ -1,7 +1,7 @@
 import React from 'react';
-import {HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions} from 'components/hero/hero';
-import Buttons from 'components/buttons/buttons';
-import {Browser} from 'components/browser/browser';
+import {HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions} from 'components/hero';
+import Buttons from 'components/buttons';
+import {Browser} from 'components/browser';
 
 const header = {
     sitename: 'Plotly',

@@ -3,7 +3,7 @@ import styles from './header.scss'
 import Link from 'next/link';
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import Navigation from './navigation/navigation';
+import Navigation from './navigation';
 
 Router.onRouteChangeStart = (url) => {
     // console.log(`Loading: ${url}`);

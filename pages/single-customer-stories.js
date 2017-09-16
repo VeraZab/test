@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import 'isomorphic-fetch'
-import Layout from 'components/global/layout/layout';
-import {ContentSection, Body} from 'components/content-section/content-section';
+import Layout from 'components/global/layout';
+import {ContentSection, Body} from 'components/content-section';
 import IndustriesHero from './single-customer-stories/hero';
 import IndustriesMain from './single-customer-stories/main';
 import IndustriesRequestDemo from './single-customer-stories/request-demo';

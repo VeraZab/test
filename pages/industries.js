@@ -1,5 +1,5 @@
-import Layout from 'components/global/layout/layout';
-import {ContentSection, Body} from 'components/content-section/content-section';
+import Layout from 'components/global/layout';
+import {ContentSection, Body} from 'components/content-section';
 import Industries from  '../static/data/products/industries/industries.json';
 import IndustriesHero from './industries/hero';
 import IndustriesMain from './industries/main';

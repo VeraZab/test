@@ -1,8 +1,8 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero/hero';
-import Buttons from 'components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
+import Buttons from 'components/buttons';
 import Head from 'next/head';
-import CodeExplorer from './code-explorer/code-explorer';
+import CodeExplorer from './code-explorer';
 
 const HeroButtons = [
     [

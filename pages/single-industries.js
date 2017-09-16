@@ -1,7 +1,7 @@
 import React from 'react';
 import 'isomorphic-fetch'
-import Layout from 'components/global/layout/layout';
-import {ContentSection, Body} from 'components/content-section/content-section';
+import Layout from 'components/global/layout';
+import {ContentSection, Body} from 'components/content-section';
 import IndustriesHero from './single-industries/hero';
 import IndustriesMain from './single-industries/main';
 import IndustriesRequestDemo from './single-industries/request-demo';

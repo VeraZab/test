@@ -1,8 +1,8 @@
-import Layout from 'components/global/layout/layout';
+import Layout from 'components/global/layout';
 import Hero from './hero';
-import {ContentSection, ContentPane, Graphic, Title, Subtitle, Body} from 'components/content-section/content-section';
-import Buttons from 'components/buttons/buttons';
-import {Grid, GridItem} from 'components/grid/grid';
+import {ContentSection, ContentPane, Graphic, Title, Subtitle, Body} from 'components/content-section';
+import Buttons from 'components/buttons';
+import {Grid, GridItem} from 'components/grid';
 
 
 const meta = {

@@ -1,4 +1,4 @@
-import Layout from 'components/global/layout/layout';
+import Layout from 'components/global/layout';
 import Hero from './hero';
 import PricingDetails from "./pricing";
 import SupportBanner from 'components/cta-banner/static/support/support-banner';

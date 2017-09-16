@@ -6,11 +6,11 @@ import {
     Subtitle,
     Body,
     Graphic
-} from 'components/content-section/content-section';
+} from 'components/content-section';
 const buttonStyles = {
     transform: 'translateX(-20px)'
 };
-import Buttons from 'components/buttons/buttons';
+import Buttons from 'components/buttons';
 
 const buttons = [
     {

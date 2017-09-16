@@ -1,6 +1,6 @@
-import Layout from 'components/global/layout/layout';
-import {ContentSection, ContentPane, Title, Body} from 'components/content-section/content-section';
-import Buttons from 'components/buttons/buttons';
+import Layout from 'components/global/layout';
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
+import Buttons from 'components/buttons';
 import data from  '../static/data/products/customer-stories.json';
 import CustomerServiceHero from './customer-stories/hero';
 import CustomerServiceMain from './customer-stories/main';

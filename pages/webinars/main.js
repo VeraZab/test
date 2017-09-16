@@ -5,11 +5,11 @@ import {
     Subtitle,
     Body,
     Graphic
-} from 'components/content-section/content-section';
+} from 'components/content-section';
 import React from 'react';
 import Link from 'next/link';
 import styles from './webinars.styles.scss';
-import Button from 'components/button/button';
+import Button from 'components/button';
 
 const webinars = [
     {

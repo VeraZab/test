@@ -5,7 +5,7 @@ import {
     Subtitle,
     Body,
     Graphic
-} from 'components/content-section/content-section';
+} from 'components/content-section';
 import React from 'react';
 import Link from 'next/link';
 

@@ -1,5 +1,5 @@
-import {ContentSection, ContentPane, Title, Body} from 'components/content-section/content-section';
-import Buttons from 'components/buttons/buttons';
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
+import Buttons from 'components/buttons';
 
 const footer = {
   "title": "A Plotly sales engineer will answer any questions, walk you through a demo, and support a trial deployment.",

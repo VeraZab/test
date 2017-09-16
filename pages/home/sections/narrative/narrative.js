@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './narrative.scss'
 
-import {ContentSection, ContentPane, Title, Body} from 'components/content-section/content-section'
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section'
 
 const iconStyles = {
     width: '42px',

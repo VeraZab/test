@@ -1,5 +1,5 @@
-import {Body, ContentPane, ContentSection, Title} from 'components/content-section/content-section';
-import {Grid, GridItem} from 'components/grid/grid';
+import {Body, ContentPane, ContentSection, Title} from 'components/content-section';
+import {Grid, GridItem} from 'components/grid';
 
 import {DeviceWrapper} from 'components/elements/DeviceWrapper/DeviceWrapper';
 
