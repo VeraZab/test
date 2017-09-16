@@ -1,9 +1,9 @@
-import Layout from '../../../components/global/layout/layout';
+import Layout from 'components/global/layout/layout';
 import Hero from './hero';
 
-import {ContentSection, ContentPane, Title, Body, Subtitle} from '../../../components/content-section/content-section';
-import Buttons from '../../../components/buttons/buttons';
-import {Grid, GridItem} from '../../../components/grid/grid';
+import {ContentSection, ContentPane, Title, Body, Subtitle} from 'components/content-section/content-section';
+import Buttons from 'components/buttons/buttons';
+import {Grid, GridItem} from 'components/grid/grid';
 const meta = {
     title: 'Advanced Development',
     description: "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",

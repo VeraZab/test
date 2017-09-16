@@ -1,5 +1,5 @@
 import React from 'react'
-import BrowserWrapper from '../../../../components/elements/browser-wrapper/browser-wrapper'
+import BrowserWrapper from 'components/elements/browser-wrapper/browser-wrapper'
 import {
     ContentSection,
     ContentPane,
@@ -7,8 +7,8 @@ import {
     Subtitle,
     Body,
     Graphic
-} from '../../../../components/content-section/content-section';
-import Buttons from '../../../../components/buttons/buttons';
+} from 'components/content-section/content-section';
+import Buttons from 'components/buttons/buttons';
 
 const buttons = [
     {

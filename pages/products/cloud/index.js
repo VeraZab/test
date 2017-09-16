@@ -1,7 +1,7 @@
-import Layout from '../../../components/global/layout/layout';
+import Layout from 'components/global/layout/layout';
 import Hero from './hero';
 import PricingDetails from "./pricing";
-import SupportBanner from '../../../components/cta-banner/static/support/support-banner';
+import SupportBanner from 'components/cta-banner/static/support/support-banner';
 
 const meta = {
     title: 'Pricing and Plans',

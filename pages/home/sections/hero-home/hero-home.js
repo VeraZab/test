@@ -7,9 +7,9 @@ import {
     HeroSubtitle,
     HeroActions,
     HeroBottom
-} from '../../../../components/hero/hero';
-import Buttons from '../../../../components/buttons/buttons';
-import {ClientLogos} from '../../../../components/global/client-logos/client-logos';
+} from 'components/hero/hero';
+import Buttons from 'components/buttons/buttons';
+import {ClientLogos} from 'components/global/client-logos/client-logos';
 import styles from "./home-hero.styles.scss";
 import {Prismic} from 'prismic.io';
 import Link from 'next/link';

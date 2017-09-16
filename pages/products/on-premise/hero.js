@@ -1,7 +1,7 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
-import {ClientLogos} from '../../../components/global/client-logos/client-logos';
-import Buttons from '../../../components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero/hero';
+import {ClientLogos} from 'components/global/client-logos/client-logos';
+import Buttons from 'components/buttons/buttons';
 
 const HeroButtons = [
     {

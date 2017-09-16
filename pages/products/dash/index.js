@@ -1,4 +1,4 @@
-import Layout from '../../../components/global/layout/layout';
+import Layout from 'components/global/layout/layout';
 import HeroSection from './hero';
 import DashMain from './main';
 

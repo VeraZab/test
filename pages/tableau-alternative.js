@@ -1,6 +1,6 @@
-import Layout from '../components/global/layout/layout';
-import {ContentSection, ContentPane, Title, Body} from '../components/content-section/content-section';
-import Buttons from '../components/buttons/buttons';
+import Layout from 'components/global/layout/layout';
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section/content-section';
+import Buttons from 'components/buttons/buttons';
 import data from  '../static/data/products/industries/tableau-alternative.json';
 import TableauHero from './tableau-alternative/hero';
 import TableauMain from './tableau-alternative/main';

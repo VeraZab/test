@@ -1,4 +1,4 @@
-import {ContentSection, ContentPane, Body} from '../../components/content-section/content-section';
+import {ContentSection, ContentPane, Body} from 'components/content-section/content-section';
 
 class CustomerServiceMain extends React.Component {
 

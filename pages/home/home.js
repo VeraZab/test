@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "../../components/global/layout/layout";
+import Layout from 'components/global/layout/layout';
 
 import Hero from './sections/hero-home/hero-home'
 import HomeTabs from './sections/tabs-home/tabs-home'
