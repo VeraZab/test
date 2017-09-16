@@ -161,7 +161,7 @@ export default () => (
                 </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic shadow="false"
-                             image="https://plotly.github.io/plotly-next/static/images/export-graphic.png"/>
+                             image="https://images.plot.ly/static/marketing/export-graphic.png"/>
                 </div>
                 </Body>
             </ContentPane>

@@ -3,7 +3,7 @@ import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, Hero
 import Buttons from 'components/buttons';
 import {ClientLogos} from 'components/global/client-logos';
 import Head from 'next/head';
-import CodeExplorer from './code-explorer';
+import CodeExplorer from './code-explorer/code-explorer';
 
 const HeroButtons = [
     [

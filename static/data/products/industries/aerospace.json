@@ -9,32 +9,32 @@
     "desc": "Plotly brings dashboards and collaborative analytics to the aerospace industry for teams using MATLAB, Python, R, and Excel."
   },
   "style": {
-    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-aerospace.jpg)"
+    "backgroundImage": "url(https://images.plot.ly/static/marketing/industries/banner-aerospace.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-nasa.eacb18642cfa.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-nasa.eacb18642cfa.png",
       "label": "Nasa"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-aerospace.1ce63084d4df.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-aerospace.1ce63084d4df.png",
       "label": "Aerospace"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-airforce.bf356fdc56a5.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-airforce.bf356fdc56a5.png",
       "label": "Airforce"
     }
   ],
   "sections": [{
       "content": [{
         "device": "laptop",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/graph1.84884a57d01f.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/graph1.84884a57d01f.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
       },
       {
         "device": "ipad",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/graph2.895e80ddf51b.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/graph2.895e80ddf51b.svg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -47,9 +47,9 @@
         "device": "ipython",
         "type": "video",
         "sources": [
-          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.54bced11928a.mp4",
-          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.3a91b0b3e74b.webm",
-          "https://plotly.github.io/plotly-next/static/images/industries/bluegraph.303c6a1a21b7.jpg"
+          "https://images.plot.ly/static/marketing/industries/bluegraph.54bced11928a.mp4",
+          "https://images.plot.ly/static/marketing/industries/bluegraph.3a91b0b3e74b.webm",
+          "https://images.plot.ly/static/marketing/industries/bluegraph.303c6a1a21b7.jpg"
         ],
         "color": "lightcobaltblue",
         "background": "white"
@@ -60,7 +60,7 @@
     {
       "content": [{
         "device": "laptop",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/filewell.b2911b59fa48.jpg",
+        "image": "https://images.plot.ly/static/marketing/industries/filewell.b2911b59fa48.jpg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -71,7 +71,7 @@
     {
       "content": [{
         "device": "iphone",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/maps.351f724327b7.jpg",
+        "image": "https://images.plot.ly/static/marketing/industries/maps.351f724327b7.jpg",
         "type": "image",
         "color": "columbiablue",
         "background": "white"
@@ -82,7 +82,7 @@
     {
       "content": [{
         "device": "browser",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/nasa-cube.4a6cfc5c3bc7.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/nasa-cube.4a6cfc5c3bc7.svg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -94,9 +94,9 @@
       "content": [{
         "device": "laptop",
         "sources": [
-          "https://plotly.github.io/plotly-next/static/images/industries/globe.3045ace10490.mp4",
-          "https://plotly.github.io/plotly-next/static/images/industries/globe.6f2dbf3e26ea.webm",
-          "https://plotly.github.io/plotly-next/static/images/industries/globe.d5c6c719a45c.jpg"
+          "https://images.plot.ly/static/marketing/industries/globe.3045ace10490.mp4",
+          "https://images.plot.ly/static/marketing/industries/globe.6f2dbf3e26ea.webm",
+          "https://images.plot.ly/static/marketing/industries/globe.d5c6c719a45c.jpg"
         ],
         "type": "video",
         "color": "mediumgreyblue",
@@ -109,9 +109,9 @@
       "content": [{
         "device": "desktop",
         "sources": [
-          "https://plotly.github.io/plotly-next/static/images/industries/streaming.b0dcfc168e9c.mp4",
-          "https://plotly.github.io/plotly-next/static/images/industries/streaming.1bc59ca33f45.webm",
-          "https://plotly.github.io/plotly-next/static/images/industries/streaming.3b4a71b628c0.jpg"
+          "https://images.plot.ly/static/marketing/industries/streaming.b0dcfc168e9c.mp4",
+          "https://images.plot.ly/static/marketing/industries/streaming.1bc59ca33f45.webm",
+          "https://images.plot.ly/static/marketing/industries/streaming.3b4a71b628c0.jpg"
         ],
         "type": "video",
         "color": "darkgreyblue",

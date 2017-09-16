@@ -9,28 +9,28 @@
     "desc": "Python, R, MATLAB, and Excel are the data analysis languages of choice at the world's largest banks. Plotly provides a reporting and collaborative analytics layer for these tools that works equally well in print or web formats."
   },
   "style": {
-    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-finance.jpg)",
+    "backgroundImage": "url(https://images.plot.ly/static/marketing/industries/banner-finance.jpg)",
     "backgroundSize": "cover"
   },
   "sponsors": [
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/industries/logo-kaleidoscope.d1983cb4bdb6.png",
+      "graphic": "https://images.plot.ly/static/marketing/industries/logo-kaleidoscope.d1983cb4bdb6.png",
       "label": "Kaleidoscope"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/industries/logo-mhs.b306f9062f01.png",
+      "graphic": "https://images.plot.ly/static/marketing/industries/logo-mhs.b306f9062f01.png",
       "label": "MHS Capital"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/industries/logo-nubank.b9a4646960f2.png",
+      "graphic": "https://images.plot.ly/static/marketing/industries/logo-nubank.b9a4646960f2.png",
       "label": "Nubank"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/industries/logo-plaid.eeb57c2547b1.png",
+      "graphic": "https://images.plot.ly/static/marketing/industries/logo-plaid.eeb57c2547b1.png",
       "label": "Plaid"
     },
     {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/industries/logo-quandl.9ba4b3bf014b.png",
+      "graphic": "https://images.plot.ly/static/marketing/industries/logo-quandl.9ba4b3bf014b.png",
       "label": "Quandl"
     }
   ],
@@ -47,13 +47,13 @@
       "content": [{
         "type": "image",
         "device": "laptop",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/cpg-stock-ipad.639dbce73735.svg",
         "color": "columbiablue",
         "background": "white"
       }, {
         "type": "image",
         "device": "iphone",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/cpg-stock-iphone.6fdb2cc25597.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/cpg-stock-iphone.6fdb2cc25597.svg",
         "color": "columbiablue",
         "background": "white"
       }],
@@ -64,7 +64,7 @@
       "content": [{
         "type": "image",
         "device": "ipad",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/livestream.37994c071ecb.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/livestream.37994c071ecb.svg",
         "color": "cornflowerblue",
         "background": "white"
       }],
@@ -75,7 +75,7 @@
       "content": [{
         "type": "image",
         "device": "browser",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/cpg-stock-ipad.639dbce73735.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/cpg-stock-ipad.639dbce73735.svg",
         "color": "lightgrey",
         "background": "white"
       }],
@@ -86,7 +86,7 @@
       "content": [{
         "type": "image",
         "device": "ipython",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/portfolio-optimization2.d7ecfead4c14.svg",
+        "image": "https://images.plot.ly/static/marketing/industries/portfolio-optimization2.d7ecfead4c14.svg",
         "color": "mayablue",
         "background": "white"
       }],
@@ -97,7 +97,7 @@
       "content": [{
         "type": "image",
         "device": "browser",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/excel.c74d2c0fbc8e.png",
+        "image": "https://images.plot.ly/static/marketing/industries/excel.c74d2c0fbc8e.png",
         "color": "lightgrey",
         "background": "white"
       }],
@@ -108,7 +108,7 @@
       "content": [{
         "type": "image",
         "device": "ipython",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/yield-curve.751311465dc2.jpg",
+        "image": "https://images.plot.ly/static/marketing/industries/yield-curve.751311465dc2.jpg",
         "color": "lightcobaltblue",
         "background": "white"
       }],

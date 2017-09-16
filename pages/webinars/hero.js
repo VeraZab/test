@@ -38,7 +38,7 @@ export default class HeroSection extends React.Component {
                 <HeroBottom style={HeroBottomStyles}>
                     <Browser>
                         <img
-                            src='https://plotly.github.io/plotly-next/static/images/webinar-screen.png'/>
+                            src='https://images.plot.ly/static/marketing/webinar-screen.png'/>
                     </Browser>
                 </HeroBottom>
             </Hero>

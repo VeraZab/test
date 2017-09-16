@@ -10,53 +10,53 @@
   },
 
   "style": {
-    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-rnd.jpg)"
+    "backgroundImage": "url(https://images.plot.ly/static/marketing/industries/banner-rnd.jpg)"
   },
   "sponsors": [{
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-google.b8c38cd8aee1.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-google.b8c38cd8aee1.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-vtt.c3b5d5e96e42.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-vtt.c3b5d5e96e42.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-ambri.5a7cbdfcdf2f.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-ambri.5a7cbdfcdf2f.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-smplbio.820dab3c3420.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-smplbio.820dab3c3420.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-ubeam.df18556a4309.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-ubeam.df18556a4309.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-plume.0bcfb13a0f3f.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-plume.0bcfb13a0f3f.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-intel-iot.03d24df55b2b.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-intel-iot.03d24df55b2b.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-airforceresearch.ba26c692f9d0.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-airforceresearch.ba26c692f9d0.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-nielbohr.29592cffc6fd.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-nielbohr.29592cffc6fd.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-nyu.dde34b01d9ad.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-nyu.dde34b01d9ad.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-sandia.59836f2247cf.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-sandia.59836f2247cf.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-mcgill.220ecfbbf5ec.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-mcgill.220ecfbbf5ec.png",
       "label": "Sponsor"
     }, {
-      "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-siemens.fcd7af0654fb.png",
+      "graphic": "https://images.plot.ly/static/marketing/logos/logo-siemens.fcd7af0654fb.png",
       "label": "Sponsor"
     }
   ],
   "sections": [{
     "content": [{
       "device": "laptop",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/inefficiencies.ec8b4645506a.svg",
+      "image": "https://images.plot.ly/static/marketing/industries/inefficiencies.ec8b4645506a.svg",
       "type": "image",
       "color": "columbiablue"
     }],
@@ -65,7 +65,7 @@
   }, {
     "content": [{
       "device": "ipython",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/cpg-stock.639dbce73735.svg",
+      "image": "https://images.plot.ly/static/marketing/industries/cpg-stock.639dbce73735.svg",
       "type": "image",
       "color": "cornflowerblue"
     }],
@@ -74,7 +74,7 @@
   }, {
     "content": [{
       "device": "laptop",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/batteries.a5eef04b70a6.jpg",
+      "image": "https://images.plot.ly/static/marketing/industries/batteries.a5eef04b70a6.jpg",
       "type": "image",
       "color": "lightgrey"
     }],
@@ -83,7 +83,7 @@
   },{
     "content": [{
       "device": "ipython",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/memory.afeafe30f544.gif",
+      "image": "https://images.plot.ly/static/marketing/industries/memory.afeafe30f544.gif",
       "type": "image",
       "color": "mayablue"
     }],
@@ -92,7 +92,7 @@
   }, {
     "content": [{
       "device": "browser",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/quantum-computing.cd585862e042.png",
+      "image": "https://images.plot.ly/static/marketing/industries/quantum-computing.cd585862e042.png",
       "type": "image",
       "color": "lightgrey"
     }],
@@ -100,7 +100,7 @@
     "body": "The Center for Quantum Devices at the University of Copenhagen uses Plotly for instrumentation dashboards and ad-hoc graphing inside IPython Notebooks.<br><a href='http://gvallver.perso.univ-pau.fr/notebook/bandDiagram.html'>BAND DIAGRAMS WITH PLOTLY AND PYTHON</a>"
   }, {
     "content": [{
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/blue-robot.jpg",
+      "image": "https://images.plot.ly/static/marketing/industries/blue-robot.jpg",
       "type": "image",
       "showBackground": true
     }],
@@ -110,9 +110,9 @@
     "content": [{
       "device": "ipad",
       "sources": [
-        "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.f20dd1581b6f.mp4",
-        "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.a590c09a4c2f.webm",
-        "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.82104817f1a2.jpg"
+        "https://images.plot.ly/static/marketing/industries/animated-map-no-legend.f20dd1581b6f.mp4",
+        "https://images.plot.ly/static/marketing/industries/animated-map-no-legend.a590c09a4c2f.webm",
+        "https://images.plot.ly/static/marketing/industries/animated-map-no-legend.82104817f1a2.jpg"
       ],
       "type": "video",
       "color": "lightgrey"
