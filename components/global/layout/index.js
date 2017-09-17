@@ -34,23 +34,23 @@ class Layout extends React.Component {
 
     render() {
 
-        if(this.props.hideHeader === "true"){
-           return (
-               <div>
-                   <style dangerouslySetInnerHTML={{__html: styles}}/>
-                   <Head meta={this.props.meta}/>
-                   <div className="page">
-                       { this.props.children }
-                   </div>
-                   <Footer />
-               </div>
-           )
+        if (this.props.hideHeader === "true") {
+            return (
+                <div>
+                    <style dangerouslySetInnerHTML={{__html: styles}}/>
+                    <Head meta={this.props.meta}/>
+                    <div className="page">
+                        { this.props.children }
+                    </div>
+                    <Footer />
+                </div>
+            )
         } else {
             return (
                 <div>
                     <style dangerouslySetInnerHTML={{__html: styles}}/>
                     <Head meta={this.props.meta}/>
-                    <Header pathname={this.props.pathname} />
+                    <Header pathname={this.props.pathname}/>
                     <div className="page">
                         { this.props.children }
                     </div>

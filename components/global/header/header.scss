@@ -1,15 +1,50 @@
-@import "../../../styles/partials/abstract";
-
+.header-message{
+  background: $color-rhino-core;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:$unit/1.5;
+  text-shadow: $text-shadow-default;
+  position: absolute;
+  top:-43px;
+  left:0;
+  width: 100%;
+  @include tablet{
+    display: none;
+  }
+  &-wrapper{
+    @include global-wrapper;
+    font-size:14px;
+    color: rgba(white, 0.85);
+    a{
+      background: white;
+      color: $color-rhino-core !important;
+      font-weight: bold !important;
+      font-size:12px;
+      padding: 0 $unit;
+      border-radius: 8px;
+      display: inline-block;
+      text-shadow: none;
+      margin-left:$unit;
+      box-shadow: $drop-shadow-pressed;
+    }
+  }
+}
 .header-main {
   height: $header-height;
   display: flex;
   position: fixed;
-  top: 0;
+  top: 43px;
+  @include tablet{
+    top:0;
+  }
   left: 0;
   width: 100%;
   background: white;
   z-index: 200;
   box-shadow: $drop-shadow;
+  flex-direction: column;
   //@include animationFadeAndSlideInFromTop;
   * {
     user-select: none;

@@ -28,7 +28,11 @@ class Header extends React.Component {
         return (
             <header className='header-main'>
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
-
+                <div className="header-message">
+                    <div className="header-message-wrapper">
+                        Tickets for PLOTCON NYC are on sale now. Secure your spot at the world's most visionary conference for data visualization. <a href="https://plotcon.plot.ly/" target="_blank">Learn More</a>
+                    </div>
+                </div>
                 <div className='header-main-wrapper'>
                     <div className='header-main-left'>
                         <Link prefetch href="/">

@@ -14,6 +14,11 @@ const meta = {
 export default () => (
     <Layout meta={meta} hideHeader="true">
         <style dangerouslySetInnerHTML={{__html: styles}}/>
+        <div className="header-message">
+            <div className="header-message-wrapper">
+                Tickets for PLOTCON NYC are on sale now. Secure your spot at the world's most visionary conference for data visualization. <a href="https://plotcon.plot.ly/" target="_blank">Learn More</a>
+            </div>
+        </div>
         <HeroSection />
         <DashMain />
     </Layout>
