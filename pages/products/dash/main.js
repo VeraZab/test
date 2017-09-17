@@ -153,7 +153,7 @@ class DashMain extends React.Component {
                 <ContentSection className="dash-section-features-thirds">
                     <ContentPane thirds center-vertically>
                         <div className="icon">
-                            <img src="https://images.plot.ly/static/marketing/dash/lightweight-icon.png"
+                            <img src="https://images-plotly.imgix.net/static/marketing/dash/lightweight-icon.png?auto=compress&auto=format"
                                  alt="Dash is Lightweight"/>
                         </div>
                         <div className="title">
@@ -166,7 +166,7 @@ class DashMain extends React.Component {
                     </ContentPane>
                     <ContentPane thirds center-vertically>
                         <div className="icon">
-                            <img src="https://images.plot.ly/static/marketing/dash/direct-control-icon.png"
+                            <img src="https://images-plotly.imgix.net/static/marketing/dash/direct-control-icon.png?auto=compress&auto=format"
                                  alt="Dash provides direct control"/>
                         </div>
                         <div className="title">
@@ -180,7 +180,7 @@ class DashMain extends React.Component {
                     </ContentPane>
                     <ContentPane thirds center-vertically>
                         <div className="icon">
-                            <img src="https://images.plot.ly/static/marketing/dash/composable-icon.png"
+                            <img src="https://images-plotly.imgix.net/static/marketing/dash/composable-icon.png?auto=compress&auto=format"
                                  alt="Dash is Composable and Modular"/>
                         </div>
                         <div className="title">
@@ -232,7 +232,7 @@ class DashMain extends React.Component {
                     <ContentPane half graphic center-vertically>
 
                         <Graphic link={demoAppStock[0].link}
-                                 image="https://images.plot.ly/static/marketing/dash/stock-tickers.png"/>
+                                 image="https://images-plotly.imgix.net/static/marketing/dash/stock-tickers.png?auto=compress&auto=format"/>
                     </ContentPane>
                 </ContentSection>
 
@@ -240,7 +240,7 @@ class DashMain extends React.Component {
                     <ContentPane half graphic center-vertically>
 
                         <Graphic link={demoAppDrugs[0].link}
-                                 image="https://images.plot.ly/static/marketing/dash/drug-discovery.gif"/>
+                                 image="https://images-plotly.imgix.net/static/marketing/dash/drug-discovery.gif"/>
                     </ContentPane>
                     <ContentPane half center-vertically text>
                         <div className="pre-title">
@@ -292,7 +292,7 @@ class DashMain extends React.Component {
                     <ContentPane half graphic center-vertically>
 
                         <Graphic link={demoAppGold[0].link}
-                                 image="https://images.plot.ly/static/marketing/dash/goldman-sachs.png"/>
+                                 image="https://images-plotly.imgix.net/static/marketing/dash/goldman-sachs.png?auto=compress&auto=format"/>
                     </ContentPane>
                 </ContentSection>
 
@@ -301,7 +301,7 @@ class DashMain extends React.Component {
 
                         <Graphic
                             link={demoAppUber[0].link}
-                            image="https://images.plot.ly/static/marketing/dash/uber-example.png"/>
+                            image="https://images-plotly.imgix.net/static/marketing/dash/uber-example.png?auto=compress&auto=format"/>
 
                     </ContentPane>
                     <ContentPane half center-vertically text>
@@ -360,7 +360,7 @@ class DashMain extends React.Component {
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
                                     <div className="card-image dark-fade"
-                                         style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-sharing.png")'}}>
+                                         style={{backgroundImage: 'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-sharing.png?auto=compress&auto=format")'}}>
                                         <div className="card-image-label" style={{width: '100%'}}>
                                             Dash On-Premises Deployment
                                         </div>
@@ -396,7 +396,7 @@ class DashMain extends React.Component {
                             <div className="card card-with-image">
                                 <div className="card-wrapper">
                                     <div className="card-image dark-fade"
-                                         style={{backgroundImage: 'url("https://images.plot.ly/static/marketing/dash/dash-enterprise-portal.png")'}}>
+                                         style={{backgroundImage: 'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-portal.png?auto=compress&auto=format")'}}>
                                         <div className="card-image-label" style={{width: '100%'}}>
                                             Dash On-Premises<br/>App Portal
                                         </div>

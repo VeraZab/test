@@ -55,7 +55,7 @@ const webinars = [
     {
         title: "Dash: Plotly’s Pythonic Web Application Framework",
         date: "October 25th, 2017 2PM EST",
-        img: "https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png",
+        img: "https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format",
         presenter: {
             name: "Chris Parmer",
             avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"

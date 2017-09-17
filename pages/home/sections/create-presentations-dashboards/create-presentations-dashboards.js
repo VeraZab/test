@@ -19,10 +19,10 @@ export default () => (
                     href="https://plot.ly/dashboards/" target="_blank">dashboards</a>.</p>
             <div className="graphics screen-offsets">
                 <BrowserWrapper>
-                    <img src="https://marketing.plot.ly/static/marketing/assets/images/presentations.png" alt=""/>
+                    <img src="https://marketing.plot.ly/static/marketing/assets/images/presentations.png?auto=compress&auto=format" alt=""/>
                 </BrowserWrapper>
                 <BrowserWrapper>
-                    <img src="https://marketing.plot.ly/static/marketing/assets/images/dashboards.png" alt=""/>
+                    <img src="https://marketing.plot.ly/static/marketing/assets/images/dashboards.png?auto=compress&auto=format" alt=""/>
                 </BrowserWrapper>
             </div>
             </Body>

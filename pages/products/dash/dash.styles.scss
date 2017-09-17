@@ -191,7 +191,7 @@
     }
 
     &-dash-apps {
-      background: url("https://images.plot.ly/static/marketing/dash/section-bg-demos@2x.png") center top !important;
+      background: url("https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format") center top !important;
       transform: translateY(-120px);
       padding-top: 0px;
       background-size: cover !important;
@@ -211,7 +211,7 @@
     }
 
     &-open-source {
-      background: url("https://images.plot.ly/static/marketing/dash/section-open-source-bg.png") center top !important;
+      background: url("https://images-plotly.imgix.net/static/marketing/dash/section-open-source-bg.png?auto=compress&auto=format") center top !important;
       background-size: cover !important;
       .content-section-title-wrapper {
         color: white;

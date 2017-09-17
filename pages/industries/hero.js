@@ -6,7 +6,7 @@ import {Browser} from 'components/browser';
 const HeroWrapperStyle = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url("https://images.plot.ly/static/marketing/banner-splash.jpg")'
+    backgroundImage: 'url("https://images-plotly.imgix.net/static/marketing/banner-splash.jpg")'
 };
 
 const HeroBottomStyles = {

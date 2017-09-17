@@ -23,8 +23,8 @@ const languages = [
         slug: 'python',
         language: 'python',
         code: codeSample,
-        graphic_src: 'https://images.plot.ly/static/marketing/python_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/python_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/python_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/python_graphic.gif',
         button_text: 'Plotly Python API',
         button_link: 'https://plot.ly/python'
     }

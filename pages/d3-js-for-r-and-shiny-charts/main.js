@@ -28,7 +28,7 @@ export default () => (
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
-                <Graphic image="https://images.plot.ly/static/marketing/chart_graphic.png" />
+                <Graphic image="https://images-plotly.imgix.net/static/marketing/chart_graphic.png?auto=compress&auto=format" />
             </ContentPane>
         </ContentSection>
 
@@ -64,7 +64,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/static/marketing/product/ggplot2.png"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/ggplot2.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
@@ -72,7 +72,7 @@ export default () => (
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/static/marketing/product/world-class.png"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/world-class.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -105,14 +105,14 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/static/marketing/product/map_styles.gif"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/map_styles.gif"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>

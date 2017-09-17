@@ -22,7 +22,7 @@ export default () => (
                     <div className="card-wrapper">
                         <div className="card-avatar">
                             <img
-                                src="https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/datasets@2x.png"
+                                src="https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/datasets@2x.png?auto=compress&auto=format"
                                 alt="" style={iconStyles}/>
                         </div>
                         <div className="card-details">
@@ -38,7 +38,7 @@ export default () => (
                     <div className="card-wrapper">
                         <div className="card-avatar">
                             <img
-                                src="https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/create-charts@2x.png"
+                                src="https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/create-charts@2x.png?auto=compress&auto=format"
                                 alt="" style={iconStyles}/>
                         </div>
                         <div className="card-details">
@@ -56,7 +56,7 @@ export default () => (
                     <div className="card-wrapper">
                         <div className="card-avatar">
                             <img
-                                src="https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/data-provenance@2x.png"
+                                src="https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/tour-icons/images/data-provenance@2x.png?auto=compress&auto=format"
                                 alt="" style={iconStyles}/>
                         </div>
                         <div className="card-details">

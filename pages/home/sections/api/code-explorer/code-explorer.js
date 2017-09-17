@@ -82,8 +82,8 @@ const languages = [
         slug: 'python',
         language: 'python',
         code: pythonCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/python_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/python_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/python_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/python_graphic.gif',
         button_text: 'Plotly Python API',
         button_link: 'https://plot.ly/python'
     },
@@ -93,8 +93,8 @@ const languages = [
         slug: 'r',
         language: 'r',
         code: rCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/r_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/r_graphic.gif',
         button_text: 'Plotly R API',
         button_link: 'https://plot.ly/r'
     },
@@ -104,8 +104,8 @@ const languages = [
         slug: 'matlab',
         language: 'matlab',
         code: matlabCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/matlab_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/matlab_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/matlab_graphic.gif',
         button_text: 'Plotly matlab API',
         button_link: 'https://plot.ly/matlab'
     },
@@ -115,8 +115,8 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'https://plot.ly/javascript'
     }

@@ -8,7 +8,7 @@ const meta = {
     title: 'Dash by Plotly',
     description: 'Dash is a Python framework for building analytical web applications. No JavaScript required.',
     url: 'https://plot.ly/products/dash/',
-    image: 'https://images.plot.ly/static/marketing/meta/dash-og@2x.png'
+    image: 'https://images-plotly.imgix.net/static/marketing/meta/dash-og@2x.png?auto=compress&auto=format'
 };
 
 export default () => (

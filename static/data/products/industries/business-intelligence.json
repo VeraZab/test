@@ -9,31 +9,31 @@
     "desc": "Desktop BI with point-and-click GUI tools is dying. In today's world of big data, only the flexibility and speed of scripting tools - R, IPython notebook, and MATLAB - can answer business' most important questions. Plotly provides the world's most advanced web plots for dashboards and reporting with these tools."
   },
   "style": {
-    "backgroundImage": "url(https://images.plot.ly/static/marketing/industries/banner-business.jpg)"
+    "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-business.jpg)"
   },
   "sponsors": [{
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-goji.212d2eb0c34c.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-goji.212d2eb0c34c.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-liftopia.8763283dbd84.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-liftopia.8763283dbd84.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-google.b8c38cd8aee1.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-google.b8c38cd8aee1.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-opower.8e9d13b5e40e.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-opower.8e9d13b5e40e.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-climatecorp.2cb87ffd3a75.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-climatecorp.2cb87ffd3a75.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://images.plot.ly/static/marketing/logos/logo-likeable.1f06ea4fcf14.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-likeable.1f06ea4fcf14.png",
     "label": "Sponsor"
   }],
   "sections": [{
     "content": [{
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/business-intelligence/bi-stack.png"
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/business-intelligence/bi-stack.png"
     }],
     "title": "The New BI Stack for Data Scientists",
     "body": ""
@@ -41,7 +41,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/acme-dashboard-map.4035329bb571.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/acme-dashboard-map.4035329bb571.jpg",
       "color": "lightcobaltblue"
     }],
     "title": "The Future of BI",
@@ -50,7 +50,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/open-large-deals.e7b4a4d9abbe.svg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/open-large-deals.e7b4a4d9abbe.svg",
       "color": "lightgrey"
     }],
     "title": "Analyze Salesforce data in IPython notebook",
@@ -59,7 +59,7 @@
     "content": [{
       "device": "ipython",
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/event-sales-day-category.0a235471894c.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/event-sales-day-category.0a235471894c.jpg",
       "color": "columbiablue"
     }],
     "title": "Analyzing Redshift data in IPython notebook",
@@ -68,7 +68,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/acme-dashboard-plots.43ca02583fba.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/acme-dashboard-plots.43ca02583fba.jpg",
       "color": "lightgrey"
     }],
     "title": "Live-streaming dashboards on mobile, tablet, or laptop",
@@ -77,7 +77,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://images.plot.ly/static/marketing/industries/liftopia.e01711954c03.svg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/liftopia.e01711954c03.svg",
       "color": "darkgreyblue"
     }],
     "title": "Analyzing lift ticket sales with IPython notebook and Plotly",

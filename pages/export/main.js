@@ -126,7 +126,7 @@ export default () => (
                         </div>
                         <div className="quote-item-quotee">
                             <div className="quote-item-quotee-img-wrapper">
-                                <img src="https://plot.ly/static/img/export/datagov_white.74fa245099ee.png"
+                                <img src="https://plot.ly/static/img/export/datagov_white.74fa245099ee.png?auto=compress&auto=format"
                                      alt="Data.Gov"/>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ export default () => (
                         </div>
                         <div className="quote-item-quotee">
                             <div className="quote-item-quotee-img-wrapper">
-                                <img src="https://plot.ly/static/img/export/importio_white.9464af89bfd4.png"
+                                <img src="https://plot.ly/static/img/export/importio_white.9464af89bfd4.png?auto=compress&auto=format"
                                      alt="import.io"/>
                             </div>
                         </div>
@@ -161,7 +161,7 @@ export default () => (
                 </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic shadow="false"
-                             image="https://images.plot.ly/static/marketing/export-graphic.png"/>
+                             image="https://images-plotly.imgix.net/static/marketing/export-graphic.png?auto=compress&auto=format"/>
                 </div>
                 </Body>
             </ContentPane>

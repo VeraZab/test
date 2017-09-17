@@ -41,8 +41,8 @@ const languages = [
         slug: 'javascript',
         language: 'javascript',
         code: jsCode,
-        graphic_src: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/javascript_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
         button_text: 'Plotly Javascript API',
         button_link: 'https://plot.ly/javascript/'
     }

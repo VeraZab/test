@@ -34,7 +34,7 @@ const HeroStyles = {
 };
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 50%',
     backgroundRepeat: 'no-repeat'
@@ -78,27 +78,27 @@ export default class HeroSection extends React.Component {
                             <div className="logo-item">
                                 <a target="_blank" href="https://www.data.gov/meta/open-apps/">
                                     <img
-                                        src="https://plot.ly/static/img/export/datagov_blue.b196bb1cdcf1.png"/></a>
+                                        src="https://plot.ly/static/img/export/datagov_blue.b196bb1cdcf1.png?auto=compress&auto=format"/></a>
                             </div>
                             <div className="logo-item">
                                 <a target="_blank" href="http://blog.import.io/post/plotly-integration">
                                     <img
-                                        src="https://plot.ly/static/img/export/importio_blue.921b16da2c11.png"/></a>
+                                        src="https://plot.ly/static/img/export/importio_blue.921b16da2c11.png?auto=compress&auto=format"/></a>
                             </div>
                             <div className="logo-item">
                                 <a target="_blank" href="https://www.quandl.com/help/plotly">
                                     <img
-                                        src="https://plot.ly/static/img/export/quandl_blue.88e7b8823a5c.png"/></a>
+                                        src="https://plot.ly/static/img/export/quandl_blue.88e7b8823a5c.png?auto=compress&auto=format"/></a>
                             </div>
                             <div className="logo-item">
                                 <a target="_blank" href="http://www.vernier.com/news/2014/04/03/vernier-data-share-and-plot-ly/">
                                     <img
-                                        src="https://plot.ly/static/img/export/vernier_blue.4d3c32d41335.png"/></a>
+                                        src="https://plot.ly/static/img/export/vernier_blue.4d3c32d41335.png?auto=compress&auto=format"/></a>
                             </div>
                             <div className="logo-item">
                                 <a target="_blank" href="http://blog.plot.ly/post/70293893434/automatically-grab-data-from-an-image-with">
                                     <img
-                                        src="https://plot.ly/static/img/export/webplotdigitizer_blue.043cf6f2b8f1.png"/></a>
+                                        src="https://plot.ly/static/img/export/webplotdigitizer_blue.043cf6f2b8f1.png?auto=compress&auto=format"/></a>
                             </div>
                         </div>
                     </div>

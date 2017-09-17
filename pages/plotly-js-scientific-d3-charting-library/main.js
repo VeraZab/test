@@ -22,7 +22,7 @@ export default () => (
 
         <ContentSection>
             <ContentPane half graphic>
-                <Graphic image="https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png" />
+                <Graphic image="https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png?auto=compress&auto=format" />
             </ContentPane>
             <ContentPane half center-vertically text>
                 <div className="pre-title">
@@ -72,7 +72,7 @@ export default () => (
             <ContentPane half graphic>
                 <div className="flexed">
                     <a href="http://d3js.org/"><img
-                        src="https://plot.ly/static/enterprise/img/alternatives/logo-d3js.ba761bd044ad.png"
+                        src="https://plot.ly/static/enterprise/img/alternatives/logo-d3js.ba761bd044ad.png?auto=compress&auto=format"
                         alt="d3"/></a>
                     <a href="http://stack.gl/"><img
                         src="https://plot.ly/static/enterprise/img/alternatives/logo-stackgl.a45db7e74096.gif"

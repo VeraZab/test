@@ -35,7 +35,7 @@ export default () => (
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/screenshot-chart.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/powerpoint-online/screenshot-chart.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>

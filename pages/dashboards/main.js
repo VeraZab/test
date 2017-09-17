@@ -33,13 +33,13 @@ export default () => (
             <ContentPane half center-vertically>
                 <Graphic label="Shell: Integrated Gas"
                          link="https://plot.ly/dashboard/jackluo:3593/present"
-                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/shell.png"/>
+                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/shell.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Graphic
                     label="Mercedes: Cars Comparison"
                     link="https://plot.ly/dashboard/jackp:16818/present"
-                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/mercedes.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/mercedes.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
         <ContentSection>
@@ -63,13 +63,13 @@ export default () => (
             <ContentPane half center-vertically>
                 <Graphic label="Schizophrenia interactome with 504 novel protein–protein interactions"
                          link="https://plot.ly/dashboard/jackluo:3593/present"
-                         image="https://images.plot.ly/static/marketing/product/DBlhl3NWAAARiLH.jpg"/>
+                         image="https://images-plotly.imgix.net/static/marketing/product/DBlhl3NWAAARiLH.jpg"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Graphic
                     label="FiveThirtyEight"
                     link="https://plot.ly/dashboard/Dreamshot:8462/present"
-                    image="https://images.plot.ly/static/marketing/product/C4KprMzWIAAX8m_.jpg"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/C4KprMzWIAAX8m_.jpg"/>
             </ContentPane>
         </ContentSection>
 
@@ -87,7 +87,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/share.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/share.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
@@ -95,13 +95,13 @@ export default () => (
         <ContentSection>
             <ContentPane half center-vertically>
                 <Graphic label="Twitter: Marketing Campaign" link="https://plot.ly/dashboard/jackp:16823/present"
-                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/twitter.png"/>
+                         image="https://marketing.plot.ly/static/marketing/assets/images/dashboards/twitter.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Graphic
                     label="Molecular Weights of Therapeutic Small Molecules Compared to MW Distribution"
                     link="https://plot.ly/dashboard/jackp:17405/present"
-                    image="https://images.plot.ly/static/marketing/product/C2kvbzBUQAA_XDR.jpg-.jpg"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/C2kvbzBUQAA_XDR.jpg-.jpg"/>
             </ContentPane>
         </ContentSection>
         <ContentSection>
@@ -124,14 +124,14 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/static/marketing/product/C6qPQB-U4AAHGa3.jpg"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/C6qPQB-U4AAHGa3.jpg"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic shadow="false"
-                    image="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png"/>
+                    image="https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>

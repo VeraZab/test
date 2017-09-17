@@ -26,14 +26,14 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/connect.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/connect.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/write_sql.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/write_sql.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -64,7 +64,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/share.png"/>
+                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/share.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
@@ -81,7 +81,7 @@ export default () => (
                 </p>
                 <div style={{maxWidth: '680px', margin: '20px auto'}}>
                     <Graphic label="MySQL: Tesla Supercharger Stations" link="https://plot.ly/~jackp/16939/"
-                             image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png"/>
+                             image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png?auto=compress&auto=format"/>
                 </div>
                 </Body>
             </ContentPane>

@@ -4,7 +4,7 @@ import Buttons from 'components/buttons';
 import {Browser} from 'components/browser';
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'
@@ -32,7 +32,7 @@ export default (props) => (
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
             <Browser>
-                <img src='https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png'/>
+                <img src='https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png?auto=compress&auto=format'/>
             </Browser>
         </HeroBottom>
     </Hero>

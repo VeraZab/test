@@ -29,13 +29,13 @@ export default () => (
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
-                <Graphic image="https://images.plot.ly/static/marketing/chart_graphic.png" />
+                <Graphic image="https://images-plotly.imgix.net/static/marketing/chart_graphic.png?auto=compress&auto=format" />
             </ContentPane>
         </ContentSection>
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                         image="https://images.plot.ly/static/marketing/product/world-class.png"/>
+                         image="https://images-plotly.imgix.net/static/marketing/product/world-class.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -71,7 +71,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://images.plot.ly/static/marketing/product/map_styles.gif"/>
+                    image="https://images-plotly.imgix.net/static/marketing/product/map_styles.gif"/>
             </ContentPane>
         </ContentSection>
 
@@ -115,7 +115,7 @@ export default () => (
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic shadow="false"
-                         image="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png"/>
+                         image="https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -153,7 +153,7 @@ export default () => (
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic 
-                         image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png"/>
+                         image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/chart-maker-hero.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
                 <Title>
@@ -191,7 +191,7 @@ export default () => (
             </ContentPane>
             <ContentPane half graphic>
                 <Graphic shadow="false"
-                         image="https://images.plot.ly/static/marketing/product/jupyter-notebooks-small.png"/>
+                         image="https://images-plotly.imgix.net/static/marketing/product/jupyter-notebooks-small.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
         <ContentSection className="request-callback-section">
