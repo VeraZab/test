@@ -7,9 +7,9 @@ import {
     HeroSubtitle,
     HeroActions,
     HeroBottom
-} from '../../components/hero/hero';
-import Buttons from '../../components/buttons/buttons';
-import {Browser} from '../../components/browser/browser';
+} from 'components/hero';
+import Buttons from 'components/buttons';
+import {Browser} from 'components/browser';
 
 const HeroWrapperStyle = {
     backgroundSize: 'cover',

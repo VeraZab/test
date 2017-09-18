@@ -1,7 +1,7 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
-import Buttons from '../../components/buttons/buttons'
-import {Browser} from '../../components/browser/browser';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
+import Buttons from 'components/buttons'
+import {Browser} from 'components/browser';
 
 const HeroButtons = [
     [
@@ -14,7 +14,7 @@ const HeroButtons = [
                 src: 'apple'
             },
             target: '_blank',
-            link: 'https://images.plot.ly/spectacle-editor/Spectacle.Editor-0.1.4.dmg',
+            link: 'https://images-plotly.imgix.net/spectacle-editor/Spectacle.Editor-0.1.4.dmg',
             button: {
                 classes: 'button button-primary'
             }
@@ -28,7 +28,7 @@ const HeroButtons = [
                 src: 'windows'
             },
             target: '_blank',
-            link: 'https://images.plot.ly/spectacle-editor/Spectacle.Editor.Setup.0.1.4.exe',
+            link: 'https://images-plotly.imgix.net/spectacle-editor/Spectacle.Editor.Setup.0.1.4.exe',
             button: {
                 classes: 'button button-primary'
             }
@@ -41,7 +41,7 @@ const HeroButtons = [
 ];
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'
@@ -77,7 +77,7 @@ export default class HeroSection extends React.Component {
             </HeroTop>
             <HeroBottom style={HeroBottomStyles}>
                 <Browser>
-                    <img src='https://marketing.plot.ly/static/marketing/assets/images/presentations.png'/>
+                    <img src='https://marketing.plot.ly/static/marketing/assets/images/presentations.png?auto=compress&auto=format'/>
                 </Browser>
             </HeroBottom>
         </Hero>

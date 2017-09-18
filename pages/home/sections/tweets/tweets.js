@@ -1,5 +1,5 @@
 import React from 'react'
-import {ContentSection} from '../../../../components/content-section/content-section'
+import {ContentSection} from 'components/content-section'
 
 export default () => (
     <ContentSection className="white center">

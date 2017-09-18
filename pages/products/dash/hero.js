@@ -7,8 +7,8 @@ import {
     HeroSubtitle,
     HeroActions,
     HeroBottom
-} from '../../../components/hero/hero';
-import Buttons from '../../../components/buttons/buttons';
+} from 'components/hero';
+import Buttons from 'components/buttons';
 
 const HeroButtons = [
     [
@@ -60,7 +60,7 @@ export default class HeroSection extends React.Component {
                   <div className="dash-header-wrapper">
                       <div className="dash-logo">
                           <div className="dash-logo-wrapper">
-                              <img src="https://images.plot.ly/static/marketing/dash/dash-logo.png" alt="Dash by Plotly"/>
+                              <img src="https://images-plotly.imgix.net/static/marketing/dash/dash-logo.png?auto=compress&auto=format" alt="Dash by Plotly"/>
                           </div>
                       </div>
                       <div className="dash-navigation">
@@ -101,7 +101,7 @@ export default class HeroSection extends React.Component {
                     </HeroMessaging>
 
                     <div className="hero-graphic dash dash-graphic">
-                        <img src="https://images.plot.ly/static/marketing/dash/dash-hero-visual@2x.png" alt=""/>
+                        <img src="https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format" alt=""/>
                     </div>
 
                 </HeroTop>

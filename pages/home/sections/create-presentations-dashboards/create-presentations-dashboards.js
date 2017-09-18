@@ -1,6 +1,6 @@
 import React from 'react'
-import BrowserWrapper from '../../../../components/elements/browser-wrapper/browser-wrapper'
-import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section'
+import BrowserWrapper from 'components/elements/browser-wrapper/browser-wrapper'
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section'
 
 export default () => (
     <ContentSection className="dark-blue center">
@@ -19,10 +19,10 @@ export default () => (
                     href="https://plot.ly/dashboards/" target="_blank">dashboards</a>.</p>
             <div className="graphics screen-offsets">
                 <BrowserWrapper>
-                    <img src="https://marketing.plot.ly/static/marketing/assets/images/presentations.png" alt=""/>
+                    <img src="https://marketing.plot.ly/static/marketing/assets/images/presentations.png?auto=compress&auto=format" alt=""/>
                 </BrowserWrapper>
                 <BrowserWrapper>
-                    <img src="https://marketing.plot.ly/static/marketing/assets/images/dashboards.png" alt=""/>
+                    <img src="https://marketing.plot.ly/static/marketing/assets/images/dashboards.png?auto=compress&auto=format" alt=""/>
                 </BrowserWrapper>
             </div>
             </Body>

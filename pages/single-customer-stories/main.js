@@ -1,5 +1,5 @@
-import {ContentSection, ContentPane, Body, Title} from '../../components/content-section/content-section';
-import {Grid, GridItem} from '../../components/grid/grid';
+import {ContentSection, ContentPane, Body, Title} from 'components/content-section';
+import {Grid, GridItem} from 'components/grid';
 
 class IndustriesMain extends React.Component {
 

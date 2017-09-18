@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
 
 
 const HeroStyles = {
@@ -7,7 +7,7 @@ const HeroStyles = {
 };
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/consulting-header-bg.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/consulting-header-bg.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: 'center bottom',
     backgroundRepeat: 'no-repeat'

@@ -1,7 +1,7 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../../components/hero/hero';
-import {ClientLogos} from '../../../components/global/client-logos/client-logos';
-import Buttons from '../../../components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
+import {ClientLogos} from 'components/global/client-logos';
+import Buttons from 'components/buttons';
 
 const HeroButtons = [
     {
@@ -18,7 +18,7 @@ const HeroButtons = [
 ];
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg)',
     backgroundSize: 'cover',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'

@@ -1,5 +1,5 @@
 import React from "react";
-import BrowserWrapper from "../../../../components/elements/browser-wrapper/browser-wrapper";
+import BrowserWrapper from "components/elements/browser-wrapper/browser-wrapper";
 import styles from "./tabs-home.styles.scss";
 import {StickyContainer, Sticky} from 'react-sticky';
 import ReactSwipe from 'react-swipe';
@@ -9,11 +9,11 @@ const tabsData = [
         id: "1",
         title: "Make a Chart",
         slug: "make-a-chart",
-        icon: "https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_chart_28@2x.png",
+        icon: "https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_chart_28@2x.png?auto=compress&auto=format",
         content: {
             heading: "Expressive Charts",
             graphic_type: "image",
-            graphic_src: "https://s3-us-west-1.amazonaws.com/plotly-tutorials/plotly-marketing-pages/images/new-branding/graphics/plotly_home_graph.png",
+            graphic_src: "https://s3-us-west-1.amazonaws.com/plotly-tutorials/plotly-marketing-pages/images/new-branding/graphics/plotly_home_graph.png?auto=compress&auto=format",
             description: "Easily turn your data into eye-catching and informative graphics using our sophisticated, open source, visualization library and our online chart creation tool.",
             button_text: "Create your first Chart",
             button_link: "/online-chart-maker/"
@@ -23,11 +23,11 @@ const tabsData = [
         id: "2",
         title: "Make a Dashboard",
         slug: "make-a-dashboard",
-        icon: "https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_dashboard_28@2x.png",
+        icon: "https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_dashboard_28@2x.png?auto=compress&auto=format",
         content: {
             heading: "Dazzling Dashboards",
             graphic_type: "image",
-            graphic_src: "https://images.plot.ly/static/marketing/powerful_dashboards.png",
+            graphic_src: "https://images-plotly.imgix.net/static/marketing/powerful_dashboards.png?auto=compress&auto=format",
             description: "These aren’t your dad’s dashboards. Plotly dashboards are web-based, scriptable in Python and R, and feature Plotly’s best-in-class D3 graphics.",
             button_text: "Create your first Dashboard",
             button_link: "/dashboards/"
@@ -37,11 +37,11 @@ const tabsData = [
         id: "3",
         title: "Make a Slide Deck",
         slug: "make-a-presentation",
-        icon: "https://images.plot.ly/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_presentation_28@2x.png",
+        icon: "https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/icons/ create-items-icons/images/ic_presentation_28@2x.png?auto=compress&auto=format",
         content: {
             heading: "Spectacle Slide Decks",
             graphic_type: "image",
-            graphic_src: "https://images.plot.ly/static/marketing/stunning-presentations.png",
+            graphic_src: "https://images-plotly.imgix.net/static/marketing/stunning-presentations.png?auto=compress&auto=format",
             description: "Create, present, and share online slide decks that have interactive Plotly charts.",
             button_text: "Create your first Slide Deck",
             button_link: "/powerpoint-online"

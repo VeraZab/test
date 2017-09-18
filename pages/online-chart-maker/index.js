@@ -1,8 +1,8 @@
-import Layout from '../../components/global/layout/layout';
+import Layout from 'components/global/layout';
 import Hero from './hero';
-import {ContentSection, ContentPane, Graphic, Title, Subtitle, Body} from '../../components/content-section/content-section';
-import Buttons from '../../components/buttons/buttons';
-import {Grid, GridItem} from '../../components/grid/grid';
+import {ContentSection, ContentPane, Graphic, Title, Subtitle, Body} from 'components/content-section';
+import Buttons from 'components/buttons';
+import {Grid, GridItem} from 'components/grid';
 
 
 const meta = {
@@ -73,14 +73,14 @@ export default () => (
             </ContentPane>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/drill_down_2.gif"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/drill_down_2.gif"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/fitting_tools_3.gif"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/fitting_tools_3.gif"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Title>
@@ -122,16 +122,16 @@ export default () => (
             </ContentPane>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/john_deer_3.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/john_deer_3.png?auto=compress&auto=format"/>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/mutiny_3.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/mutiny_3.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/publication_quality_4.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/publication_quality_4.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Title>
@@ -164,14 +164,14 @@ export default () => (
             </ContentPane>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sharing_5.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sharing_5.png?auto=compress&auto=format"/>
             </ContentPane>
         </ContentSection>
 
         <ContentSection>
             <ContentPane half>
                 <Graphic
-                    image="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/chart_types_6.png"/>
+                    image="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/chart_types_6.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically>
                 <Title>
@@ -246,37 +246,37 @@ export default () => (
                 <Grid columns="4" align-center className="small-logos" itemStyle={itemStyles}>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/amazon_s3.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/amazon_s3.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/apache_drill.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/apache_drill.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/elastic.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/elastic.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/mysql.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/mysql.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/postgresql.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/postgresql.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/parquet.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/parquet.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                     <GridItem>
                         <div className="grid-item-avatar"><img
-                            src="https://images.plot.ly/plotly-marketing-pages/images/online-chart-maker/sql-logos/redshift.png"
+                            src="https://images-plotly.imgix.net/plotly-marketing-pages/images/online-chart-maker/sql-logos/redshift.png?auto=compress&auto=format"
                             alt=""/></div>
                     </GridItem>
                 </Grid>

@@ -441,7 +441,7 @@
   &.architecture {
 
     @include media('>=1050px') {
-      background: url("https://images.plot.ly/static/marketing/product/on-premises/architecture.png") no-repeat;
+      background: url("https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format") no-repeat;
       background-position: 80% 25%;
       background-size: 920px;
       position: relative;
@@ -749,7 +749,7 @@
 
   }
   &.plotlyjs {
-    background: url("https://images.plot.ly/static/marketing/product/on-premises/plotlyjs-onpremises.png") no-repeat;
+    background: url("https://images-plotly.imgix.net/static/marketing/product/on-premises/plotlyjs-onpremises.png?auto=compress&auto=format") no-repeat;
     background-position: right bottom;
     background-size: contain;
 

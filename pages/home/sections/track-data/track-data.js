@@ -6,7 +6,7 @@ import {
     Subtitle,
     Body,
     Graphic
-} from '../../../../components/content-section/content-section';
+} from 'components/content-section';
 
 const buttons = [
     {

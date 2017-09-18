@@ -1,9 +1,9 @@
-import Layout from '../../../components/global/layout/layout';
+import Layout from 'components/global/layout';
 import Hero from './hero';
 
-import {ContentSection, ContentPane, Title, Body, Subtitle} from '../../../components/content-section/content-section';
-import Buttons from '../../../components/buttons/buttons';
-import {Grid, GridItem} from '../../../components/grid/grid';
+import {ContentSection, ContentPane, Title, Body, Subtitle} from 'components/content-section';
+import Buttons from 'components/buttons';
+import {Grid, GridItem} from 'components/grid';
 const meta = {
     title: 'Advanced Development',
     description: "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",
@@ -55,35 +55,35 @@ const oemButton = [
 
 const gridItemsData = [
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg',
         label: 'Custom Chart Types'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_features.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_features.svg',
         label: 'Feature Development'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dev.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dev.svg',
         label: 'Plotly.js / Python / R / MATLAB Development'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_db.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_db.svg',
         label: 'Database Integrations'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_consulting.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_consulting.svg',
         label: 'Open Source Consulting'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dash_dev.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dash_dev.svg',
         label: 'Shiny (R) and Dash (Python) App Development'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_whitelabel.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_whitelabel.svg',
         label: 'White Labeling Plotly Products'
     },
     {
-        graphic: 'https://images.plot.ly/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_integrated.svg',
+        graphic: 'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_integrated.svg',
         label: 'Advanced Integrations'
     }
 ];

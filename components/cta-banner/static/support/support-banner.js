@@ -1,6 +1,6 @@
 import React from 'react';
-import {CtaBanner, CtaBannerBody} from "../../cta-banner";
-import Buttons from "../../../buttons/buttons"
+import {CtaBanner, CtaBannerBody} from "../../index";
+import Buttons from "../../../buttons/index"
 
 
 const columnData = [

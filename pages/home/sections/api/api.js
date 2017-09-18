@@ -1,7 +1,7 @@
 import React from 'react'
-import {ContentSection, ContentPane, Title, Body} from '../../../../components/content-section/content-section'
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section'
 import CodeExplorer from './code-explorer/code-explorer';
-import Buttons from '../../../../components/buttons/buttons';
+import Buttons from 'components/buttons';
 const oemButton = [
     {
         label: 'Inquire about an Oem',

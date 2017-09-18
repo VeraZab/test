@@ -9,7 +9,7 @@
   "stories": [{
       "id": "c12-energy",
       "style": {
-        "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/thumbnail-finance.c5e40c1fff0d.jpg)", "maxHeight": "275px"
+        "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/thumbnail-finance.c5e40c1fff0d.jpg)", "maxHeight": "275px"
       },
       "label": "Energy",
       "cta": "Read Stories →",
@@ -18,7 +18,7 @@
     {
       "id": "insurance",
       "style": {
-        "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/thumbnail-aerospace.f58359cdc8f8.jpg)", "maxHeight": "275px"
+        "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/thumbnail-aerospace.f58359cdc8f8.jpg)", "maxHeight": "275px"
       },
       "label": "Insurance",
       "cta": "Read Stories →",

@@ -1,5 +1,5 @@
-import {ContentSection, ContentPane, Title, Body} from '../../components/content-section/content-section';
-import Buttons from '../../components/buttons/buttons';
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
+import Buttons from 'components/buttons';
 
 const footer = {
   "title": "Interested in how Plotly can transform your business?",

@@ -4,7 +4,7 @@ const chromatic = require("chromatic-sass")
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '', // for building and static export
+    // assetPrefix: isProd ? 'https://plotly.github.io/plotly-next/' : '', // for building and static export
     exportPathMap: () => ({
         "/": { page: "/" },
         "/dashboards": { page: "/dashboards" },
@@ -39,15 +39,8 @@ module.exports = {
         // "/highcharts-alternative": { page: "/highcharts-alternative" }
     }),
     webpack: (config, {dev}) => {
-
-        if (config.resolve.alias) {
-          delete config.resolve.alias['react']
-          delete config.resolve.alias['react-dom']
-        };
-
         config.module.rules.push(
             {
-
                 test: /\.(css|scss)/,
                 loader: 'emit-file-loader',
                 options: {

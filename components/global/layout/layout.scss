@@ -1,24 +1,17 @@
 @import "main";
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,500|Open+Sans:100,200,300i,300,400,400i,700,700i');
 
 html {
   background: $color-rhino-light-2;
 }
 
 body {
-  //@include animationFadein-med();
-  //background: #ffffff;
-
   &.no-scroll {
     overflow: hidden;
   }
-
 }
 
 .page {
-  //@include linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
-  //background-image: url("https://images.plot.ly/plotly-marketing-pages/images/new-branding/illustrations/heroes/hero-home@2x.png");
-  //background-repeat: no-repeat;
-  //background-position: 100% 76%;
   background: white;
   background-size: cover;
   min-height: 100vh;
@@ -67,50 +60,6 @@ a {
   //@include animationFadein-sm;
 }
 
-//
-//.hidden {
-//  transition: $transition;
-//  //opacity: 0;
-//  transition-duration: $timing-animation/1.5;
-//  transition-delay: 0s !important;
-//  animation-delay: 0s !important;
-//  //transform: translateY(40px);
-//
-//  &.in-view-enter {
-//    //transform: none;
-//    //opacity: 1;
-//    @include animationFadeAndSlideInFromTop-sm;
-//    animation-delay: 0s !important;
-//  }
-//
-//  &.in-view-exit {
-//    //transform: translateY(-10px) !important;
-//  }
-//
-//  &.hidden-up {
-//    &.in-view-enter {
-//      //transform: none;
-//      //opacity: 1;
-//      @include animationFadeAndSlideInFromBottom-sm;
-//      animation-delay: 0s !important;
-//    }
-//  }
-//
-//  &.delay-med {
-//    &.in-view-enter {
-//      animation-delay: 0.35s !important;
-//    }
-//  }
-//
-//  &.hidden-fade {
-//    &.in-view-enter {
-//      //transform: none;
-//      //opacity: 1;
-//      @include animationFadein;
-//      animation-delay: 0.35s !important;
-//    }
-//  }
-//}
 * {
   -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
   backface-visibility: hidden;
@@ -276,4 +225,39 @@ img {
 
 .industries-hero{
   min-height: 0 !important;
+}
+
+.header-message{
+  background: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:$unit/1.5;
+  text-shadow: $text-shadow-default;
+  position: absolute;
+  top:0px;
+  left:0;
+  z-index:99;
+  width: 100%;
+  @include tablet{
+    display: none;
+  }
+  &-wrapper{
+    @include global-wrapper;
+    font-size:14px;
+    color: rgba(white, 0.85);
+    a{
+      background: white;
+      color: $color-rhino-core !important;
+      font-weight: bold !important;
+      font-size:12px;
+      padding: 0 $unit;
+      border-radius: 8px;
+      display: inline-block;
+      text-shadow: none;
+      margin-left:$unit;
+      box-shadow: $drop-shadow-pressed;
+    }
+  }
 }

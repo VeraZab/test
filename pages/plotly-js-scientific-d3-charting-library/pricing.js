@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../products/cloud/pricing.styles.scss';
-import Buttons from '../../components/buttons/buttons';
+import Buttons from 'components/buttons';
 
 const pricingLevels = [
     {

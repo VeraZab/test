@@ -9,7 +9,7 @@
     "desc": "Plotly graphs are used in the dashboards, reports, and software products of insurance companies worldwide."
   },
   "style": {
-    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-insurance.jpg)"
+    "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-insurance.jpg)"
   },
   "sponsors": [
   ],
@@ -25,7 +25,7 @@
   "sections": [{
       "content": [{
         "device": "ipad",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/rol2.838f92b39a32.svg",
+        "image": "https://images-plotly.imgix.net/static/marketing/industries/rol2.838f92b39a32.svg",
         "type": "image",
         "color": "mediumgreyblue",
         "background": "white"
@@ -36,7 +36,7 @@
     {
       "content": [{
         "device": "browser",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/dealership-performance.b6980dd8ccc4.svg",
+        "image": "https://images-plotly.imgix.net/static/marketing/industries/dealership-performance.b6980dd8ccc4.svg",
         "type": "image",
         "color": "cornflowerblue",
         "background": "white"
@@ -46,7 +46,7 @@
     }, {
       "content": [{
         "device": "iphone",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/monte-carlo2.c2a24724701a.svg",
+        "image": "https://images-plotly.imgix.net/static/marketing/industries/monte-carlo2.c2a24724701a.svg",
         "type": "image",
         "color": "mediumgreyblue",
         "background": "white"
@@ -57,7 +57,7 @@
     {
       "content": [{
         "device": "desktop",
-        "image": "https://plotly.github.io/plotly-next/static/images/industries/ibm-volatility.7970aca0cc89.jpg",
+        "image": "https://images-plotly.imgix.net/static/marketing/industries/ibm-volatility.7970aca0cc89.jpg",
         "type": "image",
         "color": "lightgrey",
         "background": "white"
@@ -70,9 +70,9 @@
         "device": "ipad",
         "type": "video",
         "sources": [
-          "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.f20dd1581b6f.mp4",
-          "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.a590c09a4c2f.webm",
-          "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.82104817f1a2.jpg"
+          "https://images-plotly.imgix.net/static/marketing/industries/animated-map-no-legend.f20dd1581b6f.mp4",
+          "https://images-plotly.imgix.net/static/marketing/industries/animated-map-no-legend.a590c09a4c2f.webm",
+          "https://images-plotly.imgix.net/static/marketing/industries/animated-map-no-legend.82104817f1a2.jpg"
         ],
         "color": "cyanblue",
         "background": "white"

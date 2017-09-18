@@ -1,4 +1,4 @@
-import {ContentSection, ContentPane, Body} from '../../components/content-section/content-section';
+import {ContentSection, ContentPane, Body} from 'components/content-section';
 import Link from 'next/link';
 
 class IndustriesMain extends React.Component {

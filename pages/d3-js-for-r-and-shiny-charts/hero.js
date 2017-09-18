@@ -1,6 +1,6 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
-import Buttons from '../../components/buttons/buttons';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
+import Buttons from 'components/buttons';
 import Head from 'next/head';
 import CodeExplorer from './code-explorer/code-explorer';
 
@@ -46,7 +46,7 @@ const HeroButtons = [
 ];
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'

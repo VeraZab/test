@@ -1,4 +1,4 @@
-import Layout from '../../../components/global/layout/layout';
+import Layout from 'components/global/layout';
 import Hero from './hero';
 import {
     ContentSection,
@@ -7,8 +7,8 @@ import {
     Subtitle,
     Body,
     Graphic
-} from '../../../components/content-section/content-section';
-import Buttons from '../../../components/buttons/buttons';
+} from 'components/content-section';
+import Buttons from 'components/buttons';
 
 import styles from '../cloud/pricing.styles.scss';
 
@@ -223,7 +223,7 @@ export default class OnPrem extends React.Component {
                             <div className="image-with-complex-text-overlay-wrapper">
                                 <div className="image">
                                     <img
-                                        src="https://images.plot.ly/static/marketing/product/on-premises/architecture.png"
+                                        src="https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format"
                                         alt=""/>
                                 </div>
                                 <div className="text-overlay">

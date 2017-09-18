@@ -1,4 +1,4 @@
-import styles from '../../../components/code-explorer/code-explorer.scss';
+import styles from 'components/code-explorer/code-explorer.scss';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
@@ -24,8 +24,8 @@ const languages = [
         slug: 'r',
         language: 'python',
         code: codeSample,
-        graphic_src: 'https://images.plot.ly/static/marketing/r_graphic.gif',
-        example_url: 'https://images.plot.ly/static/marketing/r_graphic.gif',
+        graphic_src: 'https://images-plotly.imgix.net/static/marketing/r_graphic.gif',
+        example_url: 'https://images-plotly.imgix.net/static/marketing/r_graphic.gif',
         button_text: 'Plotly R API',
         button_link: 'http://plot.ly/r'
     }

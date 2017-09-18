@@ -1,7 +1,7 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from '../../components/hero/hero';
-import Buttons from '../../components/buttons/buttons';
-import {Browser} from '../../components/browser/browser';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
+import Buttons from 'components/buttons';
+import {Browser} from 'components/browser';
 
 const HeroButtons = [
     [
@@ -36,7 +36,7 @@ const HeroButtons = [
 ];
 
 const HeroWrapperStyle = {
-    backgroundImage: 'url(https://images.plot.ly/static/marketing/hero-pricing@2x.png)',
+    backgroundImage: 'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
     backgroundSize: '1640px',
     backgroundPosition: '50% 80%',
     backgroundRepeat: 'no-repeat'
@@ -65,7 +65,7 @@ export default () => (
         </HeroTop>
         <HeroBottom style={HeroBottomStyles}>
             <Browser>
-                <img src='https://images.plot.ly/static/marketing/product/dashboard-header.png'/>
+                <img src='https://images-plotly.imgix.net/static/marketing/product/dashboard-header.png?auto=compress&auto=format'/>
             </Browser>
         </HeroBottom>
     </Hero>

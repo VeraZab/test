@@ -9,34 +9,34 @@
     "desc": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
   },
   "style": {
-    "backgroundImage": "url(https://plotly.github.io/plotly-next/static/images/industries/banner-journalism.jpg)"
+    "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-journalism.jpg)"
   },
   "sponsors": [{
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-washingtonpost.47df50bf33f1.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-washingtonpost.47df50bf33f1.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-fortune.f28adce08bb8.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-fortune.f28adce08bb8.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-wired.4741a4a4eb66.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-wired.4741a4a4eb66.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-gtm.49428e042ac0.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-gtm.49428e042ac0.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-bostonglobe.33d4d0cf1bc5.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-bostonglobe.33d4d0cf1bc5.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-vice.e7df0217015a.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-vice.e7df0217015a.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-maplight.7b04c6d3ad5b.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-maplight.7b04c6d3ad5b.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-dailyprogress.bf63206d935a.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-dailyprogress.bf63206d935a.png",
     "label": "Sponsor"
   }, {
-    "graphic": "https://plotly.github.io/plotly-next/static/images/logos/logo-sportsillustrated.9949f0963df1.png",
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-sportsillustrated.9949f0963df1.png",
     "label": "Sponsor"
   }],
   "quotes": [{
@@ -59,12 +59,12 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/iphone2-content.f2eaa1a57cf6.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone2-content.f2eaa1a57cf6.jpg",
       "color": "columbiablue"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/iphone1-content.b6f0c57744f3.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone1-content.b6f0c57744f3.jpg",
       "color": "columbiablue"
     }],
     "title": "Used by some of the world's largest digital news outlets",
@@ -73,7 +73,7 @@
     "content": [{
       "device": "newspapper",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/washingtonpost-plotly.081d7978b0ea.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/washingtonpost-plotly.081d7978b0ea.jpg",
       "color": "mayablue"
     }],
     "title": "A GUI for D3.js",
@@ -82,12 +82,12 @@
     "content": [{
       "device": "iphone",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/iphone-vice1.f766900c81a0.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone-vice1.f766900c81a0.jpg",
       "color": "lightgrey"
     }, {
       "device": "iphone",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/iphone-vice2.4550e9bdb1c0.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone-vice2.4550e9bdb1c0.jpg",
       "color": "lightgrey"
     }],
     "title": "Graphs optimized for fluid layout and mobile",
@@ -96,7 +96,7 @@
     "content": [{
       "device": "browser",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/filewell.52db0527affc.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/filewell.52db0527affc.jpg",
       "color": "lightgrey"
     }],
     "title": "Whitelabel Platforms with Plotly Enterprise",
@@ -105,7 +105,7 @@
     "content": [{
       "device": "desktop",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/life-expectancy.5196f2276cb6.gif",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/life-expectancy.5196f2276cb6.gif",
       "color": "cornflowerblue"
     }],
     "title": "Increase engagement and time-on-site with interactive graphs",
@@ -114,7 +114,7 @@
     "content": [{
       "device": "laptop",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/parenthood-evolution.e42d2391530f.svg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/parenthood-evolution.e42d2391530f.svg",
       "color": "lightgreyblue"
     }],
     "title": "Plotly Pew Research graph collection",
@@ -123,7 +123,7 @@
     "content": [{
       "device": "ipad",
       "type": "image",
-      "image": "https://plotly.github.io/plotly-next/static/images/industries/animated-map-no-legend.82104817f1a2.jpg",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/animated-map-no-legend.82104817f1a2.jpg",
       "color": "lightgrey"
     }],
     "title": "Interactive maps like the New York Times",

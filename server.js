@@ -1,14 +1,13 @@
 const express = require('express')
 const next = require('next')
-const LRUCache = require('lru-cache')
-
+const moduleAlias = require('module-alias')
 const dev = process.env.NODE_ENV !== 'production'
+const LRUCache = require('lru-cache')
 const app = next({dir: '.', dev})
 const handle = app.getRequestHandler()
 
 // let cacheTime = 1000 * 60 * 60 // 1 hour
 let cacheTime = 0
-
 
 if (dev) {
   cacheTime = 0

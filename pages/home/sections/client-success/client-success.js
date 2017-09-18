@@ -1,14 +1,14 @@
 import React from "react";
 import {ContentSection, ContentPane, Title, Body}
-  from "../../../../components/content-section/content-section";
+  from "components/content-section";
 import Tweets from "../tweets/tweets";
 import styles from "./client-success.scss";
 // Styles
 const goji = {
-  backgroundImage: "url(https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/goji.png)"
+  backgroundImage: "url(https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/goji.png?auto=compress&auto=format)"
 };
 const c12 = {
-  backgroundImage: "url(https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png)"
+  backgroundImage: "url(https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png?auto=compress&auto=format)"
 };
 
 export default () => (
