@@ -11,7 +11,6 @@ import {
 import Buttons from 'components/buttons';
 import {ClientLogos} from 'components/global/client-logos';
 import styles from "./home-hero.styles.scss";
-import {Prismic} from 'prismic.io';
 import Link from 'next/link';
 
 const HeroWrapperStyle = {

@@ -1,7 +1,6 @@
 import Layout from 'components/global/layout';
 import HeroSection from './hero';
 import DashMain from './main';
-
 import styles from './dash.styles.scss';
 
 const meta = {

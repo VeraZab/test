@@ -19,39 +19,6 @@ const plotcon_button = {
 }
 export default () => (
     <div>
-        <ContentSection>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://images-plotly.imgix.net/static/marketing/product/world-class.png?auto=compress&auto=format"/>
-            </ContentPane>
-            <ContentPane half center-vertically text>
-                <div className="pre-title">
-                    PLOTCON NYC 2017
-                </div>
-                <Title>
-                    Plotly in R Master Class
-                </Title>
-                <Body>
-                <p>
-                    Interested in getting instructed in Plotly for R from the people who made it? Carson will walk you
-                    through the Plotly R package in RStudio and R Shiny.
-                </p>
-                <div className="buttons padding-top padding-bottom">
-                    <Button item={plotcon_button}/>
-                </div>
-                <p>
-                    <h3 className="padding-top">Topics to be covered</h3>
-                </p>
-                <ul>
-                    <li>Animations</li>
-                    <li>Converting from ggplot2</li>
-                    <li>Linked brushing</li>
-                    <li>Plotly & R Shiny</li>
-                    <li>Bring your own Plotly/R projects to get help and feedback from the creators of the package.</li>
-                </ul>
-                </Body>
-            </ContentPane>
-        </ContentSection>
         <ContentSection >
             <ContentPane half center-vertically text>
                 <div className="pre-title">
@@ -184,9 +151,16 @@ export default () => (
             </ContentPane>
         </ContentSection>
         <ContentSection>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://images-hoshi.nationalmachine.co/ineffable/uploads/95aa3dc80638bd314e7085f1f561e2d8/DSC02407.jpg?w=1800&h=1800&crop=fit&q=80&auto=compress&auto=format"/>
+            </ContentPane>
             <ContentPane half center-vertically text>
+                <div className="pre-title">
+                    PLOTCON NYC 2017
+                </div>
                 <Title>
-                    Plotly for R & Shiny Workshops
+                    Plotly in R Master Class
                 </Title>
                 <Body>
                 <p>
@@ -194,14 +168,27 @@ export default () => (
                     up their skills in R visualization and Shiny app development. Workshops are, held twice per year in
                     NYC and the West Coast. We can also hold custom workshops on-site at your company.
                 </p>
-
+                <p>
+                    Interested in getting instructed in Plotly for R from the people who made it? Carson will walk you
+                    through the Plotly R package in RStudio and R Shiny at PLOTCON NYC 2017 (Nov 14-17, 2017).
+                </p>
+                <div className="buttons padding-top padding-bottom">
+                    <Button item={plotcon_button}/>
+                </div>
+                <p>
+                    <h3 className="padding-top">Topics to be covered</h3>
+                </p>
+                <ul>
+                    <li>Animations</li>
+                    <li>Converting from ggplot2</li>
+                    <li>Linked brushing</li>
+                    <li>Plotly & R Shiny</li>
+                    <li>Bring your own Plotly/R projects to get help and feedback from the creators of the package.</li>
+                </ul>
                 </Body>
             </ContentPane>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://images-hoshi.nationalmachine.co/ineffable/uploads/95aa3dc80638bd314e7085f1f561e2d8/DSC02407.jpg?w=1800&h=1800&crop=fit&q=80"/>
-            </ContentPane>
         </ContentSection>
+
         <ContentSection className="request-callback-section">
 
             <ContentPane full center center-vertically text>

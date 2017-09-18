@@ -32,40 +32,6 @@ export default () => (
         <ContentSection>
             <ContentPane half graphic>
                 <Graphic
-                    image="https://symposia.imgix.net/companies/7ec1c8/df095e/js-workshop.gif?auto=compress&auto=format"/>
-            </ContentPane>
-            <ContentPane half center-vertically text>
-                <div className="pre-title">
-                    PLOTCON NYC 2017
-                </div>
-                <Title>
-                    Plotly.js Master Class
-                </Title>
-                <Body>
-                <p>
-                    Interested in getting instructed in Plotly.js from the people who made it? Alex and other Plotly.js
-                    team members will walk you through Plotly.js basics and advanced usage.
-                </p>
-                <div className="buttons padding-top padding-bottom">
-                    <Button item={plotcon_button} />
-                </div>
-                <p>
-                    <h3 className="padding-top">Topics to be covered</h3>
-                </p>
-                <ul>
-                    <li>WebGL for high-performance plotting</li>
-                    <li>Plotly.js event handlers</li>
-                    <li>Advanced hover text options</li>
-                    <li>Performance tuning</li>
-                    <li>Bring your own Plotly.js projects to get help and feedback from the Plotly.js creators.</li>
-                </ul>
-                </Body>
-            </ContentPane>
-        </ContentSection>
-
-        <ContentSection>
-            <ContentPane half graphic>
-                <Graphic
                     image="https://marketing.plot.ly/static/marketing/assets/images/homepage/customer-stories/c12.png?auto=compress&auto=format"/>
             </ContentPane>
             <ContentPane half center-vertically text>
@@ -136,6 +102,40 @@ export default () => (
                     challenging to learn however and time-consuming for even JavaScript experts. With Plotly.js now even
                     a JavaScript beginner can create performance optimized, insanely complex D3.js charts in minutes.
                 </p>
+                </Body>
+            </ContentPane>
+        </ContentSection>
+
+        <ContentSection>
+            <ContentPane half graphic>
+                <Graphic
+                    image="https://symposia.imgix.net/companies/7ec1c8/df095e/js-workshop.gif?auto=compress&auto=format"/>
+            </ContentPane>
+            <ContentPane half center-vertically text>
+                <div className="pre-title">
+                    PLOTCON NYC 2017
+                </div>
+                <Title>
+                    Plotly.js Master Class
+                </Title>
+                <Body>
+                <p>
+                    Interested in getting instructed in Plotly.js from the people who made it? Alex and other Plotly.js
+                    team members will walk you through Plotly.js basics and advanced usage.
+                </p>
+                <div className="buttons padding-top padding-bottom">
+                    <Button item={plotcon_button} />
+                </div>
+                <p>
+                    <h3 className="padding-top">Topics to be covered</h3>
+                </p>
+                <ul>
+                    <li>WebGL for high-performance plotting</li>
+                    <li>Plotly.js event handlers</li>
+                    <li>Advanced hover text options</li>
+                    <li>Performance tuning</li>
+                    <li>Bring your own Plotly.js projects to get help and feedback from the Plotly.js creators.</li>
+                </ul>
                 </Body>
             </ContentPane>
         </ContentSection>

@@ -2,13 +2,6 @@ const express = require('express')
 const next = require('next')
 const moduleAlias = require('module-alias')
 const dev = process.env.NODE_ENV !== 'production'
-
-if (!dev) {
-    moduleAlias.addAlias('react', 'inferno-compat')
-    moduleAlias.addAlias('react-dom/server', 'inferno-server')
-    moduleAlias.addAlias('react-dom', 'inferno-compat')
-}
-
 const LRUCache = require('lru-cache')
 const app = next({dir: '.', dev})
 const handle = app.getRequestHandler()
