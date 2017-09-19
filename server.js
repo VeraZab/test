@@ -81,11 +81,11 @@ function renderAndCache (req, res, pagePath, queryParams) {
   const key = getCacheKey(req)
 
   // If we have a page in the cache, let's serve it
-  // if (ssrCache.has(key)) {
-  //   console.log(`CACHE HIT: ${key}`)
-  //   res.send(ssrCache.get(key))
-  //   return
-  // }
+  if (ssrCache.has(key)) {
+    console.log(`CACHE HIT: ${key}`)
+    res.send(ssrCache.get(key))
+    return
+  }
 
   // If not let's render the page into HTML
   app
