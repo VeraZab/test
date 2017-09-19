@@ -1,6 +1,0 @@
-
-          window.__NEXT_REGISTER_PAGE('/customer-stories/main', function() {
-            var comp = module.exports=webpackJsonp([83],{694:function(e,t,a){e.exports=a(695)},695:function(e,t,a){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var l=a(3),s=r(l),n=a(1),c=r(n),d=a(2),u=r(d),i=a(4),f=r(i),o=a(5),p=r(o),m=a(0),v=r(m),_=(a(7),a(12)),h=(r(_),function(e){function t(e){return(0,c.default)(this,t),(0,f.default)(this,(t.__proto__||(0,s.default)(t)).call(this,e))}return(0,p.default)(t,e),(0,u.default)(t,[{key:"render",value:function(){var e=this.props.story;this.props.spacing;return v.default.createElement("a",{href:e.url,className:"enterprise-card"},v.default.createElement("div",{className:"enterprise-card-wrapper"},v.default.createElement("div",{className:"enterprise-card-image",style:e.style}),v.default.createElement("div",{className:"enterprise-card-details"},v.default.createElement("div",{className:"enterprise-card-title"},e.label)),v.default.createElement("div",{className:"enterprise-card-hover"},v.default.createElement("div",{className:"enterprise-card-cta"},e.cta))))}}]),t}(v.default.Component));t.default=h}},[694]);
-            return { page: comp.default }
-          })
-        
