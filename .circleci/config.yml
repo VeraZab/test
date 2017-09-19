@@ -21,7 +21,6 @@ jobs:
           fingerprints:
           - "2e:bc:dc:f9:ec:88:42:05:4d:b0:9e:ce:94:c7:05:d1"
       - checkout
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -30,17 +29,15 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       # run tests!
       - run: yarn build
       - run: yarn export
       - deploy:
-                name: Maybe Deploy
+                name: Deploy if master
                 command: |
                   if [ "${CIRCLE_BRANCH}" == "master" ]; then
                     ./scripts/deploy-ghpages.sh build
