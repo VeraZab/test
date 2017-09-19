@@ -56,7 +56,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/settings/subscription',
+                link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
                 button: {
                     classes: 'button button-primary'
                 },
@@ -98,7 +98,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/settings/subscription?modal=true',
+                link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
                 button: {
                     classes: 'button button-primary'
                 },
@@ -139,7 +139,7 @@ const pricingLevels = [
         actions: [
             {
                 label: 'Sign Up',
-                link: 'https://plot.ly/settings/subscription?modal=true',
+                link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
                 button: {
                     classes: 'button button-emerald'
                 },
