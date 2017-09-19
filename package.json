@@ -8,11 +8,10 @@
     "export": "next export",
     "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "deploy": "yarn run export && yarn run ghpages",
-    "start": "NODE_ENV=production node server.js",
-    "postinstall": "yarn run build"
+    "start": "NODE_ENV=production node server.js"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "7.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
@@ -59,9 +58,6 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.2.1",
-    "react": "^15.6.1",
-    "react-com": "^1.0.6",
-    "react-dom": "^15.6.1",
     "react-scripts": "^1.0.10"
   },
   "now": {
