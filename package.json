@@ -12,7 +12,7 @@
     "postinstall": "yarn run build"
   },
   "engines": {
-    "node": "6.x.x"
+    "node": "8.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
