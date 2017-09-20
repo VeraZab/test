@@ -10,12 +10,12 @@ ORIGIN_URL=`git config --get remote.origin.url`
 
 echo "Started deploying"
 
-# Checkout pages-test branch.
-if [ `git branch | grep pages-test` ]
+# Checkout gh-pages branch.
+if [ `git branch | grep gh-pages` ]
 then
-  git branch -D pages-test
+  git branch -D gh-pages
 fi
-git checkout -b pages-test
+git checkout -b gh-pages
 
 
 # Delete and move files.
@@ -23,13 +23,13 @@ find . -maxdepth 1 ! -name 'out' ! -name '.git' ! -name '.gitignore' ! -name '.n
 mv out/* .
 rm -R out/
 
-# Push to pages-test.
+# Push to gh-pages.
 git config user.name "$GH_NAME"
 git config user.email "$GH_EMAIL"
 
 git add -fA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
-git push -f $ORIGIN_URL pages-test
+git push -f $ORIGIN_URL gh-pages
 
 # Move back to previous branch.
 git checkout -
