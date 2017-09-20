@@ -37,8 +37,8 @@ jobs:
       - run: yarn build
       - run: yarn export
       - deploy:
-                name: Deploy if master
+                name: Deploy (Production)
                 command: |
-                  if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                  if [ "${CIRCLE_BRANCH}" == "production" ]; then
                     ./scripts/deploy-ghpages.sh build
                   fi
