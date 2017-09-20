@@ -258,6 +258,7 @@ img {
       text-shadow: none;
       margin-left:$unit;
       box-shadow: $drop-shadow-pressed;
+      background-image: none !important; // remove underline
     }
   }
 }
