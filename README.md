@@ -1,26 +1,42 @@
 # Plotly Marketing Pages (next.js)
 
-This repo is running a stack of next.js and scss. Most things are contained in their own components in a modular way.
-
 ## Sitemap
 
-***Ready / live***
-- https://now.plot.ly/
-- https://now.plot.ly/products/cloud/
-- https://now.plot.ly/products/on-premise/
-- https://now.plot.ly/products/consulting-and-oem/
-- https://now.plot.ly/products/dash/
-- https://now.plot.ly/online-chart-maker/
-- https://now.plot.ly/dashboards/
-- https://now.plot.ly/powerpoint-online/
-- https://now.plot.ly/database-connectors/
-- https://now.plot.ly/plotly-js-scientific-d3-charting-library/
-- https://now.plot.ly/d3-js-for-r-and-shiny-charts/
-- https://now.plot.ly/d3-js-for-python-and-pandas-charts/
+****/****
+- https://plotly.github.io/plotly-next/
+- https://plotly.github.io/plotly-next/online-chart-maker/
+- https://plotly.github.io/plotly-next/dashboards/
+- https://plotly.github.io/plotly-next/powerpoint-online/
+- https://plotly.github.io/plotly-next/database-connectors/
+- https://plotly.github.io/plotly-next/webinars/
+- https://plotly.github.io/plotly-next/export/
+- https://plotly.github.io/plotly-next/plotly-js-scientific-d3-charting-library/
+- https://plotly.github.io/plotly-next/d3-js-for-r-and-shiny-charts/
+- https://plotly.github.io/plotly-next/d3-js-for-python-and-pandas-charts/
 
-***still being worked on (not merged into master yet)***
-- https://plotly-next-twaiypqqzi.now.sh/products/industries/*
-- https://plotly-next-twaiypqqzi.now.sh/products/enterprise/customer-stories/*
+****/products/****
+- https://plotly.github.io/plotly-next/products/cloud/
+- https://plotly.github.io/plotly-next/products/on-premise/
+- https://plotly.github.io/plotly-next/products/consulting-and-oem/
+- https://plotly.github.io/plotly-next/products/dash/
+
+****/products/industries/****
+- https://plotly.github.io/plotly-next/products/industries/
+- https://plotly.github.io/plotly-next/products/industries/finance
+- https://plotly.github.io/plotly-next/products/industries/aerospace
+- https://plotly.github.io/plotly-next/products/industries/automotive-analytics
+- https://plotly.github.io/plotly-next/products/industries/business-intelligence
+- https://plotly.github.io/plotly-next/products/industries/energy-analytics
+- https://plotly.github.io/plotly-next/products/industries/government-and-public-analytics
+- https://plotly.github.io/plotly-next/products/industries/insurance
+- https://plotly.github.io/plotly-next/products/industries/journalism
+- https://plotly.github.io/plotly-next/products/industries/pharma-analytics
+- https://plotly.github.io/plotly-next/products/industries/research-and-development-analytics
+
+****/products/enterprise/customer-stories/****
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/c12-energy
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/goji
 
 ## Development
 
@@ -30,9 +46,8 @@ Run `yarn run dev` to enter development mode. This will launch a server for you 
 
 ## Deployment
 
-```
-$ yarn run deploy
-```
+Please make PR's to add anything. PR's will be merged to `master` and then to `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
+
 
 ## Next.js
 
