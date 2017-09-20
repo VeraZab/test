@@ -386,12 +386,16 @@ class DashMain extends React.Component {
                             Plotly offers Dash On-Premises for 1-click app deployment and
                             app permissioning with LDAP and Active Directory,
                             all behind your corporate firewall.&nbsp;
+                        </p>
+                        <p>
                             <a className="typeform-share link special-link" href="https://plotly.typeform.com/to/seG7Vb"
                                data-mode="drawer_right"
                                data-hide-headers="true" data-hide-footer="true" data-submit-close-delay="2"
-                               target="_blank"> <span className="special-link-label">
-                                Request a Demo →
-                            </span></a>
+                               target="_blank">
+                                <span className="special-link-label">
+                                    Request a Demo →
+                                </span>
+                            </a>
                         </p>
                         </Body>
                     </ContentPane>
