@@ -13,6 +13,46 @@ import Button from 'components/button';
 
 const webinars = [
     {
+        title: "Dash: Plotly’s Pythonic Web Application Framework",
+        date: "October 25th, 2017 2PM EST",
+        img: "https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format",
+        presenter: {
+            name: "Chris Parmer",
+            avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"
+        },
+        action: {
+            label: 'Register',
+            subtitle: null,
+            title: 'Register for this webinar',
+            icon: null,
+            target: '_blank',
+            link: 'https://www.crowdcast.io/e/dash-plotlys-pythonic/register',
+            button: {
+                classes: 'button button-primary'
+            }
+        }
+    },
+    {
+        title: "Using Excel to Generate Online Dashboards in Plotly",
+        date: "December 6th, 2017 2PM EST",
+        img: "https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif",
+        presenter: {
+            name: "Branden Dunbar",
+            avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"
+        },
+        action: {
+            label: 'Register',
+            subtitle: null,
+            title: 'Register for this webinar',
+            icon: null,
+            target: '_blank',
+            link: 'https://www.crowdcast.io/e/using-excel-to-generate/register',
+            button: {
+                classes: 'button button-primary'
+            }
+        }
+    },
+    {
         title: "Using Plolty’s Python API for Automatic Dashboards",
         date: "August 29, 2017 2PM EST",
         img: "https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133",
@@ -41,7 +81,7 @@ const webinars = [
             avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"
         },
         action: {
-            label: 'Register',
+            label: 'Watch Recording',
             subtitle: null,
             title: '',
             icon: null,
@@ -49,46 +89,6 @@ const webinars = [
             link: 'https://www.crowdcast.io/e/Using-Plotly-and%20-to-Create-and-Update-Dashboards/register',
             button: {
                 classes: 'button button-primary'
-            }
-        }
-    },
-    {
-        title: "Dash: Plotly’s Pythonic Web Application Framework",
-        date: "October 25th, 2017 2PM EST",
-        img: "https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format",
-        presenter: {
-            name: "Chris Parmer",
-            avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"
-        },
-        action: {
-            label: 'Register',
-            subtitle: null,
-            title: 'Check back soon!',
-            icon: null,
-            target: '_self',
-            link: '#',
-            button: {
-                classes: 'button button-disabled'
-            }
-        }
-    },
-    {
-        title: "Using Excel to Generate Online Dashboards in Plotly",
-        date: "December 6th, 2017 2PM EST",
-        img: "https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif",
-        presenter: {
-            name: "Branden Dunbar",
-            avatar: "https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif"
-        },
-        action: {
-            label: 'Register',
-            subtitle: null,
-            title: 'Check back soon!',
-            icon: null,
-            target: '_self',
-            link: '#',
-            button: {
-                classes: 'button button-disabled'
             }
         }
     }
