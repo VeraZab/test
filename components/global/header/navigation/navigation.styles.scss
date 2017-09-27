@@ -6,12 +6,12 @@
     display: flex;
     flex-grow: 1;
 
-    .not-tablet, .not-mobile{
+    .not-tablet, .not-mobile {
       @include media("<=1150px") {
         display: none;
       }
     }
-    .not-tablet{
+    .not-tablet {
       @include media("<=1055px") {
         display: block;
       }
@@ -102,9 +102,9 @@
       flex-grow: 1;
       display: flex;
 
-      & > .nav-item{
+      & > .nav-item {
 
-        &:hover{
+        &:hover {
           &::before {
             //transform: scale(1);
           }
@@ -117,10 +117,10 @@
           bottom: 16px;
           height: 3px;
           background: $color-rhino-dark;
-          opacity:0.5;
+          opacity: 0.5;
           width: $width;
           left: 50%;
-          margin-left:-$width/2;
+          margin-left: -$width/2;
           transition: $transition;
           transform: scale(0);
           display: block !important;
@@ -144,15 +144,35 @@
     }
   }
 
-
-
   &-item {
     display: flex;
     color: $color-rhino-dark;
     position: relative;
 
+    a {
+      &::after {
+        @include trans;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        bottom: 0px;
+        left: 0;
+        transform: scale(0);
+        transform-origin: center center;
+        background: $color-dodger;
+        will-change: transform;
+        z-index: 999;
+      }
+      &:hover{
+        &::after{
+          transform: none;
+        }
+      }
+    }
+
     &:hover {
-     & > .nav-item-wrapper > .nav-item-label > .nav-item-label-text {
+      & > .nav-item-wrapper > .nav-item-label > .nav-item-label-text {
         color: $color-dodger !important;
       }
       &::after {
@@ -163,6 +183,11 @@
     }
 
     &.active {
+      a{
+        &::after{
+          transform: none;
+        }
+      }
       .nav-item-label-text {
         color: $color-dodger !important;
       }
@@ -187,7 +212,6 @@
       letter-spacing: 1px;
       padding: 0 $unit*1.5;
       position: relative;
-
 
     }
     &-label {
@@ -235,6 +259,11 @@
     //--
     &--with-submenu {
       position: relative;
+      a{
+        &::after{
+          display: none;
+        }
+      }
 
       &.nav-item-button {
         height: $header-height;
@@ -440,9 +469,8 @@
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  z-index:99;
+  z-index: 99;
 }
-
 
 small.down-arrow {
   opacity: 0.5;

@@ -1,24 +1,8 @@
 const express = require('express')
 const next = require('next')
-const moduleAlias = require('module-alias')
 const dev = process.env.NODE_ENV !== 'production'
-const LRUCache = require('lru-cache')
 const app = next({dir: '.', dev})
 const handle = app.getRequestHandler()
-
-// let cacheTime = 1000 * 60 * 60 // 1 hour
-let cacheTime = 0
-
-if (dev) {
-  cacheTime = 0
-  console.log('Working on dev...')
-}
-
-// This is where we cache our rendered HTML pages
-const ssrCache = new LRUCache({
-  max: 0,
-  maxAge: cacheTime
-})
 
 app.prepare()
     .then(() => {
@@ -34,29 +18,43 @@ app.prepare()
         })
 
         server.get('/products/industries', (req, res) => {
-          renderAndCache(req, res, '/industries')
+            return app.render(req, res, '/industries')
+        })
+        server.get('/free-sql-client-download', (req, res) => {
+            return app.render(req, res, '/database-connectors')
+        })
+        server.get('/online-presentation-tool', (req, res) => {
+            return app.render(req, res, '/powerpoint-online')
+        })
+
+        server.get('/dashboards-and-reports', (req, res) => {
+            return app.render(req, res, '/dashboards')
         })
 
         server.get('/products/industries/:id', (req, res) => {
-          const queryParams = { id: req.params.id }
-          renderAndCache(req, res, '/single-industries', queryParams)
+            const queryParams = {id: req.params.id}
+            return app.render(req, res, '/single-industries', queryParams)
+
         })
 
         server.get('/products/enterprise/customer-stories', (req, res) => {
-          renderAndCache(req, res, '/customer-stories')
+            return app.render(req, res, '/customer-stories')
+
         })
 
         server.get('/products/enterprise/customer-stories/:id', (req, res) => {
-          const queryParams = { id: req.params.id }
-          renderAndCache(req, res, '/single-customer-stories', queryParams)
+            const queryParams = {id: req.params.id}
+            return app.render(req, res, '/single-customer-stories', queryParams)
+
         })
 
         server.get('/tableau-alternative', (req, res) => {
-          renderAndCache(req, res, '/tableau-alternative')
+            return app.render(req, res, '/tableau-alternative')
+
         })
 
         server.get('/highcharts-alternative', (req, res) => {
-          renderAndCache(req, res, '/highcharts-alternative')
+            return app.render(req, res, '/highcharts-alternative', queryParams)
         })
 
         server.get('*', (req, res) => {
@@ -68,36 +66,3 @@ app.prepare()
             console.log('> Ready on http://localhost:3000')
         })
     })
-
-    /*
- * NB: make sure to modify this to take into account anything that should trigger
- * an immediate page change (e.g a locale stored in req.session)
- */
-function getCacheKey (req) {
-  return `${req.url}`
-}
-
-function renderAndCache (req, res, pagePath, queryParams) {
-  const key = getCacheKey(req)
-
-  // If we have a page in the cache, let's serve it
-  // if (ssrCache.has(key)) {
-  //   console.log(`CACHE HIT: ${key}`)
-  //   res.send(ssrCache.get(key))
-  //   return
-  // }
-
-  // If not let's render the page into HTML
-  app
-    .renderToHTML(req, res, pagePath, queryParams)
-    .then(html => {
-      // Let's cache this page
-      console.log(`CACHE MISS: ${key}`)
-      ssrCache.set(key, html)
-
-      res.send(html)
-    })
-    .catch(err => {
-      app.renderError(err, req, res, pagePath, queryParams)
-    })
-}
