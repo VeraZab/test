@@ -8,9 +8,12 @@ module.exports = {
     exportPathMap: () => ({
         "/": { page: "/" },
         "/dashboards": { page: "/dashboards" },
+        "/dashboards-and-reports": { page: "/dashboards" }, // SEO version
         "/database-connectors": { page: "/database-connectors" },
+        "/free-sql-client-download": { page: "/database-connectors" }, // SEO version
         "/online-chart-maker": { page: "/online-chart-maker" },
         "/powerpoint-online": { page: "/powerpoint-online" },
+        "/online-presentation-tool": { page: "/powerpoint-online" }, // SEO version
         "/products/dash": { page: "/products/dash" },
         "/products/cloud": { page: "/products/cloud" },
         "/products/consulting-and-oem": { page: "/products/consulting-and-oem" },
