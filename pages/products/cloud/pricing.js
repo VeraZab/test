@@ -23,22 +23,22 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'The <strong>Community&nbsp;Plan</strong> includes the&nbsp;following'
+                value: '<strong>Includes:</strong>'
             },
             {
-                value: 'Community Support for Online Workspace'
+                value: '25 Charts'
             },
             {
                 value: 'Public Charts, Dashboards and Slide Decks'
+            },
+            {
+                value: 'Community Support for Online Workspace'
             },
             {
                 value: 'PNG and JPEG Export'
             },
             {
                 value: '<strong>100</strong> Chart and Image Saves per day'
-            },
-            {
-                value: 'Connect to <strong>7</strong> Data Sources'
             }
         ]
     },
@@ -65,22 +65,22 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the<br /><strong>Community Plan</strong>'
+                value: '<strong>Includes:</strong>'
             },
             {
-                value: 'Community Support for Online Workspace'
+                value: '2500 Charts'
             },
             {
                 value: 'Private or Public Charts, Dashboards and Slide Decks'
+            },
+            {
+                value: 'Community Support for Online Workspace'
             },
             {
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
                 value: '<strong>1000</strong> Chart and Image Saves per day'
-            },
-            {
-                value: 'Connect to <strong>11</strong> Data Sources'
             }
         ]
     },
@@ -107,22 +107,22 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the<br /><strong>Community Plan</strong>'
+                value: '<strong>Includes:</strong>'
             },
             {
-                value: 'Chat Support for Online Workspace'
+                value: '2500 Charts'
             },
             {
                 value: 'Private or Public Charts, Dashboards and Slide Decks'
+            },
+            {
+                value: 'Chat Support for Online Workspace'
             },
             {
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
             },
             {
                 value: '<strong>1000</strong> Chart and Image Saves per day'
-            },
-            {
-                value: 'Connect to <strong>11</strong> Data Sources'
             }
         ]
     },
@@ -148,25 +148,22 @@ const pricingLevels = [
         ],
         features: [
             {
-                value: 'Includes everything in the<br /><strong>Personal Plan</strong>'
+                value: '<strong>Includes:</strong>'
             },
             {
-                value: 'Chat, Email and Phone Support for Online Workspace'
+                value: 'Unlimited Charts'
             },
             {
                 value: 'Private or Public Charts, Dashboards and Slide Decks'
-            }
-            ,
+            },
+            {
+                value: 'Chat and Phone Support for Online Workspace'
+            },
             {
                 value: 'SVG, EPS, HTML, PDF, PNG and JPEG&nbsp;Export'
-            }
-            ,
+            },
             {
                 value: '<strong>10,000</strong> Chart and Image Saves per day'
-            }
-            ,
-            {
-                value: 'Connect to <strong>18</strong> Data Sources'
             }
         ]
     }
