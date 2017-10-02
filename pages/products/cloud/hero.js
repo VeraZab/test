@@ -46,7 +46,7 @@ export default () => (
                     Get started now, pick a plan later.
                 </HeroTitle>
                 <HeroSubtitle>
-                    Plotly is free to use for <em>public</em> charts and dashboards. Collaborate on unlimited <em>private</em> charts and dashboards with a paid plan.
+                    Plotly is free to use for <em>public</em> charts and dashboards. Collaborate on <em>private</em> charts and dashboards with a paid plan.
                 </HeroSubtitle>
             </HeroMessaging>
             <HeroActions>
