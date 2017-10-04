@@ -30,7 +30,7 @@ class Header extends React.Component {
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <div className="header-message">
                     <div className="header-message-wrapper">
-                        Tickets for PLOTCON NYC are on sale now. Secure your spot at the world's most visionary conference for data visualization. <a href="https://plotcon.plot.ly/" target="_blank">Learn More</a>
+                        2 day master classes for Dash, R Shiny, and React/Plotly.js in NYC November 18-19 🎨 📈 🗽 <a href="https://plotcon.plot.ly/workshops" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div className='header-main-wrapper'>
