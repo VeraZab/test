@@ -64,6 +64,11 @@ const footerData = [
                 label: 'PLOTCON',
                 icon: null,
                 url: 'https://plotcon.plot.ly/'
+            },
+            {
+                label: 'Customer Contact',
+                icon: null,
+                url: 'https://plotly.typeform.com/to/r4OilH'
             }
         ]
     },
