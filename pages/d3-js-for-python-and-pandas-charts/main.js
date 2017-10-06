@@ -6,6 +6,7 @@ import {
     Body,
     Graphic
 } from 'components/content-section';
+import Button from 'components/button';
 
 
 const plotcon_button = {
