@@ -8,6 +8,17 @@ import {
 } from 'components/content-section';
 
 
+const plotcon_button = {
+    label: 'Buy a Ticket',
+    title: 'PLOTCON NYC 2017',
+    icon: null,
+    target: '_blank',
+    link: 'https://plotcon.plot.ly/workshops',
+    button: {
+        classes: 'button button-primary'
+    }
+}
+
 export default () => (
     <div>
         <ContentSection >
@@ -132,16 +143,31 @@ export default () => (
         </ContentSection>
         <ContentSection>
             <ContentPane half center-vertically text>
+                <div className="pre-title">
+                    PLOTCON NYC 2017
+                </div>
                 <Title>
-                    Dash and Python Workshops
+                    Python and Dash Master Class
                 </Title>
                 <Body>
                 <p>
-                    Send your team to a <a href="https://plotcon.plot.ly/" target="_blank">PLOTCON workshop</a> to level
-                    up their skills in Python visualization and Dash app development. Workshops are held twice per year
-                    in
-                    NYC and the West Coast. We can also hold custom workshops on-site at your company.
+                    Send your team to a <a href="https://plotcon.plot.ly/workshops" target="_blank">PLOTCON workshop</a> to level up their skills in
+                    Python visualization and Dash app development.
                 </p>
+                <p>
+                    This two day workshop will go over the foundations and guiding principles of dash, starting
+                    with simple examples on the first day and more advanced use cases on the second day. Each
+                    section of the Dash workshop will be focused around complete examples that the attendees can
+                    run on their own computers. Attendees will learn the principles of Dash by customizing these
+                    examples through gentle, interactive “challenges”.
+                </p>
+                <p>
+                    This workshop is taught by the author of the Dash library itself, with help from other Dash
+                    solutions experts at Plotly.
+                </p>
+                <div className="buttons padding-top padding-bottom">
+                    <Button item={plotcon_button}/>
+                </div>
                 </Body>
             </ContentPane>
             <ContentPane half graphic>
