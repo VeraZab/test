@@ -48,13 +48,7 @@ class Layout extends React.Component {
         } else {
             return (
                 <div>
-                    <style dangerouslySetInnerHTML={{__html: styles}}/>
-                    <Head meta={this.props.meta}/>
-                    <Header pathname={this.props.pathname}/>
-                    <div className="page">
-                        { this.props.children }
-                    </div>
-                    <Footer />
+
                 </div>
             );
         }

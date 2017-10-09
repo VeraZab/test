@@ -8,8 +8,204 @@
 @import "layout/devices";
 @import "layout/panes";
 @import "layout/content-sections";
+@import "layout/hero.layout";
+
+$animation-delay: 0.25s;
+$easing: cubic-bezier(0.19, 1, 0.22, 1);
+$animate--time-base: 1.7s;
+$animation-layout-timing: 0.75s;
+$animation-page-item-timing: 0.5s;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes animateBar {
+  from {
+    transform: translateX(100%);
+    @include media('<=800px'){
+      transform: translateX(100%);
+    }
+  }
+
+  to {
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes animateBarRev {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+    @include media('<=800px'){
+      transform: translateX(100%);
+    }
+  }
+}
+
+.animate {
+  &--fade-in {
+    opacity: 0;
+    animation: fade-in $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &--fade-in-from-top {
+    opacity: 0;
+    animation: fade-in-from-top $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+
+  &--fade-in{
+    &-from-bottom {
+      opacity: 0;
+      animation: fade-in-from-bottom $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &--fade-out {
+    opacity: 1;
+    animation: fade-out $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &--bar {
+    transform: translateX(100%);
+    @include media('<=800px'){
+      transform: translateX(100%);
+    }
+    animation: animateBar $animation-layout-timing  forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+    &-reverse{
+      transform:none;
+      animation: animateBarRev $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+    }
+  }
+}
+
 
 a {
   color: currentColor;
   transition: $transition;
+}
+
+
+
+.image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: whitesmoke;
+
+  img {
+    width: 100%;
+    display: block;
+    &.img-loaded{
+      transform: none !important;
+    }
+  }
+  copyright {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    font-size: 10px;
+    //opacity: 0.5;
+    padding:$unit/2;
+    z-index:2;
+    color: white;
+    background: black;
+    //mix-blend-mode: difference;
+  }
+  &-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img{
+      @include trans;
+      transition-duration: 2.5s;
+      transform-origin: center center;
+      transform: scale(1.06) !important;
+    }
+
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px 0 rgba(white, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 10px 10px rgba(white, 0.0);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(white, 0.0);
+    }
+  }
+  &-loader{
+
+    display: none;
+  }
+  &-preview {
+    width: 100%;
+
+  }
+  &-hq {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    will-change: opacity;
+    z-index:2;
+    img {
+      opacity: 0;
+      &:not(.img-loaded) {
+
+      }
+      &.img-loaded {
+        @extend .animate--fade-in;
+        animation-delay: 0.1s;
+      }
+    }
+  }
+
 }

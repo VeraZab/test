@@ -10,6 +10,8 @@
         "alias": {
           "components": "./components",
           "static": "./static",
+          "config": "./config",
+          "lib": "./lib",
           "styles": "./styles"
         }
       },

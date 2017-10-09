@@ -8,83 +8,86 @@ import {
 } from 'components/content-section';
 import React from 'react';
 import Link from 'next/link';
+import PrismicDOM from 'prismic-dom'
 
-export default () => (
-    <div>
-        <ContentSection>
-            <ContentPane half center-vertically text>
-                <Title>
-                    1. Connect your Databases
-                </Title>
-                <Body>
-                <p>
-                    Download Plotly's free <a href="#download">Database Connector App</a> to connect your databases to
-                    Plotly. Check out the <a href="http://help.plot.ly/database-connectors/">database connector
-                    tutorials</a> for help getting started.
-                </p>
-                </Body>
-            </ContentPane>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/connect.png?auto=compress&auto=format"/>
-            </ContentPane>
-        </ContentSection>
+export default class Main extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-        <ContentSection>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/write_sql.png?auto=compress&auto=format"/>
-            </ContentPane>
-            <ContentPane half center-vertically text>
-                <Title>
-                    2. Write SQL
-                </Title>
-                <Body>
-                <p>
-                    Write SQL queries in Plotly's online <a
-                    href="https://plot.ly/alpha/workspace/?upload=sql" target="_blank">Chart Maker</a>. Use the
-                    results from these queries to make charts.
+    componentDidMount() {
 
-                </p>
-                </Body>
-            </ContentPane>
-        </ContentSection>
+    }
 
-        <ContentSection>
-            <ContentPane half center-vertically text>
-                <Title>
-                    3. Share in Dashboards
-                </Title>
-                <Body>
-                <p>
-                    Add your charts to Plotly's best-in-class <Link
-                    href="/dashboards/"><a>dashboards</a></Link> and share them with simple, secure links.
-                </p>
-                </Body>
-            </ContentPane>
-            <ContentPane half graphic>
-                <Graphic
-                    image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/share.png?auto=compress&auto=format"/>
-            </ContentPane>
-        </ContentSection>
+    render() {
+        let {slices} = this.props.doc.data;
+        return (
+            <div className="slices">
+                {slices.map(slice => {
+                    if (slice.primary.layout === 'row-graphic-right') {
+                        return (
+                            <ContentSection>
+                                <ContentPane half center-vertically text>
+                                    <Title>
+                                        {slice.primary.title[0].text}
+                                    </Title>
+                                    <Body>
+                                    <div
+                                        dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(slice.primary.body)}}/>
+                                    </Body>
+                                </ContentPane>
+                                <ContentPane half graphic>
+                                    <Graphic
+                                        label={slice.primary.graphic_link_caption}
+                                        link={slice.primary.graphic_link.url}
+                                        image={slice.primary.graphic.url}/>
+                                </ContentPane>
+                            </ContentSection>
+                        )
+                    } else if (slice.primary.layout === 'row-graphic-left') {
+                        return (
+                            <ContentSection>
+                                <ContentPane half graphic>
+                                    <Graphic
+                                        label={slice.primary.graphic_link_caption}
+                                        link={slice.primary.graphic_link.url}
+                                        image={slice.primary.graphic.url}/>
+                                </ContentPane>
 
-
-        <ContentSection>
-            <ContentPane full center center-vertically text>
-                <Title>
-                    Screenshots
-                </Title>
-                <Body>
-                <p>
-                    The Plotly SQL editor embeds directly in the charting environment to get you from SQL to D3 chart in
-                    seconds.
-                </p>
-                <div style={{maxWidth: '680px', margin: '20px auto'}}>
-                    <Graphic label="MySQL: Tesla Supercharger Stations" link="https://plot.ly/~jackp/16939/"
-                             image="https://marketing.plot.ly/static/marketing/assets/images/database-connectors/screenshot_tesla.png?auto=compress&auto=format"/>
-                </div>
-                </Body>
-            </ContentPane>
-        </ContentSection>
-    </div>
-)
+                                <ContentPane half center-vertically text>
+                                    <Title>
+                                        {slice.primary.title[0].text}
+                                    </Title>
+                                    <Body>
+                                    <div
+                                        dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(slice.primary.body)}}/>
+                                    </Body>
+                                </ContentPane>
+                            </ContentSection>
+                        )
+                    } else if (slice.primary.layout === 'column-graphic-bottom') {
+                        return (
+                            <ContentSection>
+                                <ContentPane full center center-vertically text>
+                                    <Title>
+                                        {slice.primary.title[0].text}
+                                    </Title>
+                                    <Body>
+                                    <div
+                                        dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(slice.primary.body)}}/>
+                                    <div style={{maxWidth: '680px', margin: '20px auto'}}>
+                                        <Graphic
+                                            label={slice.primary.graphic_link_caption}
+                                            link={slice.primary.graphic_link.url}
+                                            image={slice.primary.graphic.url}/>
+                                    </div>
+                                    </Body>
+                                </ContentPane>
+                            </ContentSection>
+                        )
+                    }
+                })}
+            </div>
+        )
+    }
+}

@@ -209,7 +209,7 @@ const navigationLeft = [
                     items: [
                         {
                             id: 6,
-                            label: 'Charts',
+                            label: 'Chart Studio',
                             slug: 'chart-maker',
                             title: 'Explore the Plotly Chart Maker.',
                             icon: 'chart-maker',
@@ -218,7 +218,7 @@ const navigationLeft = [
                         },
                         {
                             id: 7,
-                            label: 'Dashboards',
+                            label: 'Dashboards & Reporting',
                             slug: 'dashboards',
                             title: 'See what you can make with Plotly Dashboards.',
                             icon: 'dashboards',
@@ -236,9 +236,9 @@ const navigationLeft = [
                         },
                         {
                             id: 9,
-                            label: 'Database Connectors',
+                            label: 'Falcon SQL Client',
                             slug: 'database-connectors',
-                            title: 'Connect Plotly charts and dashboards to your SQL and Redshift databases.',
+                            title: 'Falcon is a free and open-source SQL client with inline data visualization.',
                             icon: 'sql-connector',
                             target: '_self',
                             link: '/database-connectors/'
@@ -387,8 +387,6 @@ export default class Navigation extends React.Component {
     }
 
 
-
-
     render() {
 
 
@@ -396,11 +394,12 @@ export default class Navigation extends React.Component {
 
         let navItemIcon = (item) => {
 
-            if(item.icon && item.icon_type){
+            if (item.icon && item.icon_type) {
                 return (<div className="nav-item-icon"><img src={item.icon} alt=""/></div>)
             } else {
                 return null;
-            };
+            }
+            ;
         };
 
 
@@ -465,7 +464,7 @@ export default class Navigation extends React.Component {
                     <div className='nav-item--with-submenu nav-item-button not-mobile' key={item.id}>
                         <div className={item.button.classes}>
                             <div title={item.title} className='nav-item-wrapper'>
-                                <div className='nav-item-label' onClick={()=>this.storeSubMenu(item.label)}>
+                                <div className='nav-item-label' onClick={() => this.storeSubMenu(item.label)}>
                                     <div className='nav-item-label-text button-label'>
                                         {item.label}
                                     </div>
@@ -475,7 +474,7 @@ export default class Navigation extends React.Component {
                         <div className={'nav-item-submenu' + classes}>
                             <div className="nav-item-submenu-wrapper">
                                 <div className="mobile-only close submenu-close"
-                                     onClick={()=>this.closeSubMenu()}>
+                                     onClick={() => this.closeSubMenu()}>
                                     Close
                                 </div>
                                 {navSubmenuSections(item.submenu.sections)}
@@ -488,16 +487,17 @@ export default class Navigation extends React.Component {
                 return (
                     <div className='nav-item nav-item--with-submenu' key={item.id}>
                         <div title={item.title} className='nav-item-wrapper'>
-                            <div className='nav-item-label' onClick={()=>this.storeSubMenu(item.label)}>
+                            <div className='nav-item-label' onClick={() => this.storeSubMenu(item.label)}>
                                 <div className='nav-item-label-text'>
-                                    {item.label} <small className="down-arrow">▼</small>
+                                    {item.label}
+                                    <small className="down-arrow">▼</small>
                                 </div>
                             </div>
                         </div>
                         <div className={'nav-item-submenu' + classes}>
                             <div className="nav-item-submenu-wrapper">
                                 <div className="mobile-only close submenu-close"
-                                     onClick={()=>this.closeSubMenu()}>
+                                     onClick={() => this.closeSubMenu()}>
                                     Close
                                 </div>
                                 {navSubmenuSections(item.submenu.sections)}
@@ -579,6 +579,45 @@ export default class Navigation extends React.Component {
             }
 
         };
+
+        let {data} = this.props;
+
+        if (data) {
+            return (
+                <div className="header-main-navigation">
+                    <style dangerouslySetInnerHTML={{__html: styles}}/>
+                    <div className={'header-main-navigation-wrapper'}>
+                        <div className='nav-item mobile-menu-button'
+                             onClick={this.toggleMobileMenu.bind(this)}>
+                            <div className='nav-item-wrapper'>
+                                <div className='nav-item-label'>
+                                    <div className='nav-item-label-text'>
+                                        {this.mobileMenuButtonText()}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"header-main-navigations " + this.mobileMenuClasses()}>
+                            <nav className={`nav-main`}>
+                                <div className='nav-main-wrapper'>
+
+                                    {/*{generateNavItem(navigationLeft)}*/}
+                                </div>
+                            </nav>
+                            <nav className={`nav-main-actions`}>
+                                {data.map(item => {
+
+                                    return (<a className="navigation-product-item" href={item.primary.link.url} target="_blank">{item.primary.label}</a>)
+
+                                })}
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
 
         return (
             <div className="header-main-navigation">

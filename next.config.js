@@ -4,7 +4,7 @@ const chromatic = require("chromatic-sass")
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    assetPrefix: 'https://plotly.github.io/plotly-next/',
+    // assetPrefix: 'https://plotly.github.io/plotly-next/',
     exportPathMap: () => ({
         "/": { page: "/" },
         "/dashboards": { page: "/dashboards" },

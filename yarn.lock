@@ -3018,6 +3018,13 @@ fbjs@^0.8.12, fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
+fetch-everywhere@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/fetch-everywhere/-/fetch-everywhere-1.0.5.tgz#b2497f47a57d9026b3907c09756acf5f4bd34e8b"
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
@@ -4712,6 +4719,10 @@ lowlight@~1.9.1:
   dependencies:
     highlight.js "~9.12.0"
 
+lozad@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/lozad/-/lozad-1.0.6.tgz#f2cee385c537b9ef0ba97688510c816e13cf3947"
+
 lru-cache@^4.0.1, lru-cache@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.1.tgz#622e32e82488b49279114a4f9ecf45e7cd6bba55"
@@ -5949,6 +5960,30 @@ pretty-format@^20.0.3:
   dependencies:
     ansi-regex "^2.1.1"
     ansi-styles "^3.0.0"
+
+prismic-dom@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.0.4.tgz#2415b7e66a2b567ac99c362860e3fbe2dd61c476"
+  dependencies:
+    prismic-helpers "^1.0.0"
+    prismic-richtext "^0.2.4"
+
+prismic-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prismic-helpers/-/prismic-helpers-1.0.0.tgz#8337420cf187f55fb7b7a8be755523c8696fc329"
+
+prismic-javascript@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/prismic-javascript/-/prismic-javascript-1.4.0.tgz#9dac6358dcff5cf459ef199f9cd8a503b2632187"
+  dependencies:
+    fetch-everywhere "^1.0.5"
+
+prismic-richtext@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/prismic-richtext/-/prismic-richtext-0.2.4.tgz#f329251ef2c5bb690e459a242992efc7a7447a92"
+  dependencies:
+    prismic-helpers "^1.0.0"
+    uuid "^3.1.0"
 
 private@^0.1.6, private@^0.1.7:
   version "0.1.7"
@@ -7838,7 +7873,7 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
-uuid@3.1.0, uuid@^3.0.0:
+uuid@3.1.0, uuid@^3.0.0, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
