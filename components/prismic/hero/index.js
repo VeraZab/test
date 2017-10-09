@@ -2,6 +2,7 @@ import React from 'react';
 import PrismicDOM from 'prismic-dom';
 import HeroDetailsSection from './details'
 import HeroGraphicSection from './graphicSection'
+import Slices from "../slices/index";
 
 //
 // <HeroTop>

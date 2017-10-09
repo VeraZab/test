@@ -249,8 +249,10 @@
   justify-content: center;
   margin-left:$unit*2;
   color: white !important;
+  opacity:0.75;
   &:hover{
     color: white !important;
-    font-weight: bold;
+    opacity:1;
+    //font-weight: bold;
   }
 }

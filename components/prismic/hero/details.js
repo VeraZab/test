@@ -4,6 +4,7 @@ import Button from 'components/prismic/button';
 import HeroTitle from './title';
 import HeroSubtitle from './subtitle';
 import HeroActions from './actions';
+import Slices from 'components/prismic/slices'
 
 /**
  * HeroDetails component **to rename**
@@ -62,6 +63,7 @@ export default class HeroDetailsSection extends React.Component {
                             </div>
                         </HeroActions>
                     </div>
+                    {/*<Slices data={data.hero_slices} />*/}
                 </div>
             </div>
         );

@@ -89,9 +89,12 @@
           max-width: $graphic-width;
           flex-grow: 1;
           align-self: flex-end;
+          transform: scale(1.15);
+          transform-origin: left bottom;
         }
 
         .hero-prismic-actions .buttons{
+          padding-top:$unit*2;
           justify-content: flex-start;
           flex-wrap:wrap;
           .button{

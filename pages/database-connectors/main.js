@@ -38,9 +38,10 @@ export default class Main extends React.Component {
                                 </ContentPane>
                                 <ContentPane half graphic>
                                     <Graphic
+                                        prismic={true}
                                         label={slice.primary.graphic_link_caption}
                                         link={slice.primary.graphic_link.url}
-                                        image={slice.primary.graphic.url}/>
+                                        image={slice.primary.graphic}/>
                                 </ContentPane>
                             </ContentSection>
                         )
@@ -49,9 +50,10 @@ export default class Main extends React.Component {
                             <ContentSection>
                                 <ContentPane half graphic>
                                     <Graphic
+                                        prismic={true}
                                         label={slice.primary.graphic_link_caption}
                                         link={slice.primary.graphic_link.url}
-                                        image={slice.primary.graphic.url}/>
+                                        image={slice.primary.graphic}/>
                                 </ContentPane>
 
                                 <ContentPane half center-vertically text>
@@ -77,9 +79,10 @@ export default class Main extends React.Component {
                                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(slice.primary.body)}}/>
                                     <div style={{maxWidth: '680px', margin: '20px auto'}}>
                                         <Graphic
+                                            prismic={true}
                                             label={slice.primary.graphic_link_caption}
                                             link={slice.primary.graphic_link.url}
-                                            image={slice.primary.graphic.url}/>
+                                            image={slice.primary.graphic}/>
                                     </div>
                                     </Body>
                                 </ContentPane>

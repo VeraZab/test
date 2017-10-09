@@ -27,7 +27,7 @@ class Header extends React.Component {
     render() {
         let {doc} = this.props;
 
-        if(doc.data.header_style === 'product-header'){
+        if(doc && doc.data.header_style === 'product-header'){
             return (
                 <header className={'header-main header-style--product ' + doc.data.hero_background_style}>
                     <style dangerouslySetInnerHTML={{__html: styles}}/>

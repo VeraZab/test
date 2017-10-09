@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './content-section.scss'
+import Image from 'components/prismic/Image'
+
 
 export class Title extends React.Component {
 
@@ -63,49 +65,101 @@ export class Graphic extends React.Component {
         let graphic,
             label = () => ('');
 
-        if (this.props.link) {
-            graphic = graphic = () => (<a href={this.props.link} className="content-section-graphic-image-link" target="_blank"><img className="content-section-graphic-img" src={this.props.image}/></a>);
-            classes += ' content-section-graphic-image';
-        }
-        if (this.props.image && !this.props.link) {
-            graphic = graphic = () => (<img className="content-section-graphic-img" src={this.props.image}/>);
-            classes += ' content-section-graphic-image';
-        }
-        if (this.props.video) {
-            graphic = graphic = () => (
-                <video autoPlay="true" preload="auto" loop="" className="content-section-graphic-video device-content">
-                    <source src={this.props.video}
-                            type="video/mp4"/>
-                    <img
-                        src={this.props.videoPlaceholder}/></video>);
-            classes += ' content-section-graphic-video';
-        }
-        if (this.props.shadow ==='false') {
-            classes += ' content-section-graphic-image-noshadow';
-        }
-
-        if (this.props.label) {
+        if(this.props.prismic){
             if (this.props.link) {
-                label = label = () => (
-                    <div className="content-section-graphic-label"><a href={this.props.link}>{this.props.label}</a>
-                    </div>);
-
-            } else {
-                label = label = () => (<div className="content-section-graphic-label">{this.props.label}</div>);
+                graphic = graphic = () => (<a href={this.props.link} className="content-section-graphic-image-link" target="_blank"><div><Image data={this.props.image}/></div></a>);
+                classes += ' content-section-graphic-image';
             }
+            if (this.props.image && !this.props.link) {
+                graphic = graphic = () => (<div><Image data={this.props.image}/></div>);
+                classes += ' content-section-graphic-image';
+            }
+            if (this.props.video) {
+                graphic = graphic = () => (
+                    <video autoPlay="true" preload="auto" loop="" className="content-section-graphic-video device-content">
+                        <source src={this.props.video}
+                                type="video/mp4"/>
+                        <img
+                            src={this.props.videoPlaceholder}/></video>);
+                classes += ' content-section-graphic-video';
+            }
+            if (this.props.shadow ==='false') {
+                classes += ' content-section-graphic-image-noshadow';
+            }
+
+            if (this.props.label) {
+                if (this.props.link) {
+                    label = label = () => (
+                        <div className="content-section-graphic-label"><a href={this.props.link}>{this.props.label}</a>
+                        </div>);
+
+                } else {
+                    label = label = () => (<div className="content-section-graphic-label">{this.props.label}</div>);
+                }
+            }
+
+            if (this.props.className) {
+                classes += ' ' + this.props.className;
+            }
+            return (
+                <div className={"content-section-graphic " + classes}>
+                    <div className="content-section-graphic-wrapper hidden">
+                        {graphic()}
+                        {label()}
+                    </div>
+                </div>
+            )
         }
 
-        if (this.props.className) {
-            classes += ' ' + this.props.className;
-        }
-        return (
-            <div className={"content-section-graphic " + classes}>
-                <div className="content-section-graphic-wrapper hidden">
-                    {graphic()}
-                    {label()}
+        if(!this.props.prismic){
+            if (this.props.link) {
+                graphic = graphic = () => (<a href={this.props.link} className="content-section-graphic-image-link" target="_blank"><img src={this.props.image}/></a>);
+                classes += ' content-section-graphic-image';
+            }
+            if (this.props.image && !this.props.link) {
+                graphic = graphic = () => (<img src={this.props.image}/>);
+                classes += ' content-section-graphic-image';
+            }
+            if (this.props.video) {
+                graphic = graphic = () => (
+                    <video autoPlay="true" preload="auto" loop="" className="content-section-graphic-video device-content">
+                        <source src={this.props.video}
+                                type="video/mp4"/>
+                        <img
+                            src={this.props.videoPlaceholder}/></video>);
+                classes += ' content-section-graphic-video';
+            }
+            if (this.props.shadow ==='false') {
+                classes += ' content-section-graphic-image-noshadow';
+            }
+
+            if (this.props.label) {
+                if (this.props.link) {
+                    label = label = () => (
+                        <div className="content-section-graphic-label"><a href={this.props.link}>{this.props.label}</a>
+                        </div>);
+
+                } else {
+                    label = label = () => (<div className="content-section-graphic-label">{this.props.label}</div>);
+                }
+            }
+
+            if (this.props.className) {
+                classes += ' ' + this.props.className;
+            }
+            return (
+                <div className={"content-section-graphic " + classes}>
+                    <div className="content-section-graphic-wrapper hidden">
+                        {graphic()}
+                        {label()}
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+
+
+
+
     }
 }
 

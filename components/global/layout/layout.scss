@@ -19,7 +19,7 @@ body {
 
 a {
   text-decoration: none;
-  &:not(.button):not(.nav-item-wrapper):not(.card) {
+  &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item) {
     text-decoration: none;
     color: $color-lavender;
     background-repeat: repeat-x;
