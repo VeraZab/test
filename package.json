@@ -11,6 +11,9 @@
     "start": "NODE_ENV=production node server.js",
     "heroku-postinstall": "yarn run build"
   },
+  "engines": {
+    "node": "7.x.x"
+  },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
   "dependencies": {

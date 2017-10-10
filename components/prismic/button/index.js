@@ -46,7 +46,7 @@ export default class Button extends React.Component {
             classes += ' button-' + data.style
         }
         if (data.extra_classes) {
-            classes += ' ' + extra_classes
+            classes += ' ' + data.extra_classes
         }
 
         return (

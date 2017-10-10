@@ -31,8 +31,7 @@ function Layout(Child) {
         }
 
         componentDidMount() {
-
-
+            document.body.classList.remove('no-scroll');
         }
 
         render() {

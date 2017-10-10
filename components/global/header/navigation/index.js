@@ -584,20 +584,15 @@ export default class Navigation extends React.Component {
 
         if (data) {
             return (
-                <div className="header-main-navigation">
+                <div className="header-main-navigation product-navigation">
                     <style dangerouslySetInnerHTML={{__html: styles}}/>
                     <div className={'header-main-navigation-wrapper'}>
-                        <div className='nav-item mobile-menu-button'
+                        <div className='mobile-menu-button'
                              onClick={this.toggleMobileMenu.bind(this)}>
-                            <div className='nav-item-wrapper'>
-                                <div className='nav-item-label'>
-                                    <div className='nav-item-label-text'>
-                                        {this.mobileMenuButtonText()}
-                                    </div>
-                                </div>
-                            </div>
+                            <a className="navigation-product-item">
+                                {this.mobileMenuButtonText()}
+                            </a>
                         </div>
-
                         <div className={"header-main-navigations " + this.mobileMenuClasses()}>
                             <nav className={`nav-main`}>
                                 <div className='nav-main-wrapper'>

@@ -2,39 +2,47 @@
   &-wrapper {
 
     .logos-slice {
-      &-wrapper {
-
-
-
+      &-wrapper { }
+      &-header {
+        padding-bottom: $unit*2;
       }
-
-      &-header{
-        padding-bottom:$unit*2;
-      }
-      &-title{
-        h3, h4{
+      &-title {
+        h3, h4 {
           @extend .body-l;
           text-align: center;
           color: white;
           text-transform: uppercase;
-          letter-spacing:4px;
-          opacity:0.75;
+          letter-spacing: 4px;
+          opacity: 0.75;
         }
       }
-      .logos{
+      .logos {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media('<=800px'){
+          flex-wrap:wrap;
+        }
       }
-      &-logo{
-        flex-grow:1;
-        max-width:180px;
-        padding:0 $unit*2;
-        .image{
+      &-logo {
+        @include media('<=800px'){
+          width: 50%;
+          margin-bottom:$unit*2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .image{
+            max-width:100px;
+          }
+        }
+        flex-grow: 1;
+        max-width: 180px;
+        padding: 0 $unit*2;
+        .image {
           filter: invert(100%);
-          opacity:0.5;
-          &-preview{
-            opacity:0;
+          opacity: 0.5;
+          &-preview {
+            opacity: 0;
           }
         }
       }
