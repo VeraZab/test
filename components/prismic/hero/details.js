@@ -28,8 +28,8 @@ export default class HeroDetailsSection extends React.Component {
             HeroTopStyles = this.props.style;
         }
         return (
-            <div className="hero-prismic-top">
-                <div className="hero-prismic-top-wrapper">
+            <div className="hero-prismic-details-section">
+                <div className="hero-prismic-details-section-wrapper">
                     <div className="hero-prismic-messaging">
                         {/**
                          * Display the subtitle if it has content
@@ -63,7 +63,6 @@ export default class HeroDetailsSection extends React.Component {
                             </div>
                         </HeroActions>
                     </div>
-                    {/*<Slices data={data.hero_slices} />*/}
                 </div>
             </div>
         );

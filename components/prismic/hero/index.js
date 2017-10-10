@@ -97,6 +97,9 @@ export default class Hero extends React.Component {
                 <div className="hero-prismic-wrapper">
                     <HeroDetailsSection data={data} />
                     <HeroGraphicSection data={data} />
+                    <div className="hero-prismic-bottom">
+                        <Slices data={data.hero_slices} />
+                    </div>
                 </div>
                 <div className="hero-prismic-background-image" style={HeroWrapperStyle}></div>
             </section>

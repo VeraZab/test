@@ -5,10 +5,12 @@
 @import "buttons";
 @import "cards";
 @import "layout";
+@import "slices";
 @import "layout/devices";
 @import "layout/panes";
 @import "layout/content-sections";
 @import "layout/hero.layout";
+@import "layout/content-section-p.layout";
 
 $animation-delay: 0.25s;
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
@@ -134,7 +136,7 @@ a {
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: whitesmoke;
+  background: transparent;
 
   img {
     width: 100%;

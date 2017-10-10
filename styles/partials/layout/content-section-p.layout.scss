@@ -1,0 +1,207 @@
+.content-section-p {
+  $c: &; // sets this classname to a variable omg
+  &-wrapper {
+    @include global-wrapper;
+    display: flex;
+    $tb-spacing: $unit*6;
+    padding-top: $tb-spacing;
+    padding-bottom: $tb-spacing;
+  }
+
+  &:nth-of-type(even) {
+    background: $color-rhino-light-4;
+  }
+  &-area {
+    flex-grow: 1;
+  }
+  /*
+   * Account for any column specific styles
+   */
+  &[class*="--column"] {
+    /*
+ * Alignment Styles
+ * only really apply to column layout
+ */
+    &[class*="-align"] {
+      /*
+       * If center
+       */
+      &[class*="--center"] {
+        #{$c}-wrapper {
+          justify-content: center;
+
+          #{$c}-graphic,
+          #{$c}-details {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+          }
+          #{$c}-graphic {
+            /* Let's prevent the graphic from getting too big */
+            max-width: 800px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    #{$c}-wrapper {
+      flex-direction: column;
+    }
+  }
+
+  /*
+   * Account for any row specific styles
+   */
+  &[class*="--row"] {
+    #{$c}-wrapper {
+      align-items: center;
+    }
+    /*
+     * Set some sizes for the two main sections (details, graphic)
+     */
+    #{$c}-graphic,
+    #{$c}-details {
+      &-wrapper {
+        width: 100%;
+      }
+      width: 50%;
+    }
+    /*
+     * row-auto
+     * If the row contains '-auto' let's style it
+     * this will alternate the order of the details
+     * vs graphic
+     */
+    &[class*="-auto"] {
+      &:nth-of-type(even) {
+        #{$c}-graphic {
+          order: 1;
+          padding-right: $unit*2;
+        }
+        #{$c}-details {
+          padding-left: $unit*2;
+          order: 2;
+        }
+      }
+      &:nth-of-type(odd) {
+        #{$c}-graphic {
+          padding-left: $unit*2;
+        }
+        #{$c}-details {
+          padding-right: $unit*2;
+        }
+      }
+    }
+    /*
+     * row-graphic-left
+     * If the row contains '-left' let's style it
+     * this only makes sure the padding is correct,
+     * there is no need to change the order as this
+     * is the default
+     */
+    &[class*="-left"] {
+      #{$c}-graphic {
+        padding-left: $unit*2;
+      }
+      #{$c}-details {
+        padding-right: $unit*2;
+      }
+    }
+
+    /*
+    * row-graphic-right
+    * If the row contains '-right' let's style it
+    * this will place the graphic on the left
+    */
+    &[class*="-right"] {
+      #{$c}-graphic {
+        order: 1;
+        padding-right: $unit*2;
+      }
+      #{$c}-details {
+        padding-left: $unit*2;
+        order: 2;
+      }
+    }
+
+  }
+
+  /*
+   * Set some sizes for the two main sections (details, graphic)
+   */
+
+  #{$c}-graphic {
+    &-style {
+      &--shadow {
+       .image{
+         box-shadow: $drop-shadow-l-light;
+       }
+      }
+    }
+  }
+
+  /*
+   * Set some sizes for the two main sections (details, graphic)
+   */
+
+  #{$c}-actions {
+    padding-top:$unit*2;
+  }
+
+  /*
+   * Typographic styles
+   */
+  #{$c}-title {
+    h1, h2, h3 {
+      color: $color-rhino-dark;
+      @extend .title-l;
+    }
+  }
+
+  #{$c}-subtitle {
+    h3 {
+      color: $color-rhino-medium-1;
+      font-size: 20px;
+      line-height: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  #{$c}-body {
+    max-width: 600px;
+    padding-top:$unit*2;
+    h1, h2, h3, h4, h5, h6 {
+      color: #6e7d92;
+    }
+    p, ul, ol, blockquote {
+      font-size: 22px;
+      line-height: 36px;
+      color: #6e7d92;
+      font-weight: 300;
+    }
+    p{
+      margin-top:0;
+      padding-top:0;
+      padding-bottom:0;
+      margin-bottom:0;
+      & + p {
+        margin-top:$unit*1.5;
+      }
+    }
+    ul, ol {
+      margin: 0;
+    }
+  }
+
+}
+
+
+
+.slices{
+  .logo-item{
+    flex-grow: 1;
+    .image{
+      width: 100%;
+    }
+  }
+}

@@ -606,9 +606,9 @@ export default class Navigation extends React.Component {
                                 </div>
                             </nav>
                             <nav className={`nav-main-actions`}>
-                                {data.map(item => {
+                                {data.map((item, i) => {
 
-                                    return (<a className="navigation-product-item" href={item.primary.link.url} target="_blank">{item.primary.label}</a>)
+                                    return (<a className="navigation-product-item" key={i} href={item.primary.link.url} target="_blank">{item.primary.label}</a>)
 
                                 })}
                             </nav>
