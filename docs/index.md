@@ -15,18 +15,18 @@ To read more about the various slices, and the components you can choose from, c
 ## Components
 Below are the various elements that make up every page.
 
-* [Hero](#components-hero)
-* [Button](#components-button)
-* [Image](#components-image)
-* [Slices](#components-slices)
-  * [Content Section](#components-slices-content-section)
-     * [Default](#components-slices-content-section-default)
-     * [With Code Section](#components-slices-content-section-with-code-section)
-     * [With Cards](#components-slices-content-section-with-cards)
-     * [With Logos](#components-slices-content-section-with-logos)
-   * [Code](#components-slices-code)
-   * [Tabs](#components-slices-tabs)
-   * [Cards](#components-slices-cards)
+* [Hero](#hero)
+* [Button](#button)
+* [Image](#image)
+* [Slices](#slices)
+  * [Content Section](#content-section)
+     * [Default](#content-section-default)
+     * [With Code Section](#content-section-with-code-section)
+     * [With Cards](#content-section-with-cards)
+     * [With Logos](#content-section-with-logos)
+   * [Code](#code)
+   * [Tabs](#tabs)
+   * [Cards](#cards)
    
    
    

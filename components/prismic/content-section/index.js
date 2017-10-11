@@ -24,17 +24,14 @@ export default class ContentSection extends React.Component {
 
     render() {
 
+        /** Destructure props */
         const {data: {primary}} = this.props;
         const {data: {items}} = this.props;
 
-        /**
-         * Define the component class name
-         */
+        /** Define the component class name */
         const componentClass = 'content-section-p';
 
-        /**
-         * The classes variable
-         */
+        /** The classes variable */
         let classes = componentClass;
 
         /**
@@ -46,7 +43,9 @@ export default class ContentSection extends React.Component {
         }
 
         /**
-         * Let's add the layout value to the classes
+         * Layout
+         *
+         * These values will the arrangement of the elements in the content section.
          *
          * Available values:
          *
@@ -59,7 +58,10 @@ export default class ContentSection extends React.Component {
         classes += ' ' + componentClass + '-layout--' + primary.layout;
 
         /**
-         * Let's add the alignment value to the classes
+         * Alignment
+         *
+         * These apply if the content section is in a column layout.
+         * They are the standard justification settings, left, center, right...
          *
          * Available values:
          *
@@ -68,6 +70,22 @@ export default class ContentSection extends React.Component {
          * right    -- right alignment
          */
         classes += ' ' + componentClass + '-align--' + primary.alignment;
+
+        /**
+         * Style
+         *
+         * These values will adjust classes that change the visual appearance of the content section.
+         *
+         * Available values:
+         *
+         * default -- The standard content section, which will alternate between white and $color-rhino-light-4 for its background color
+         * gradient_purple -- Uses the same styling as the purple gradient used in hero sections
+         * gradient_dark-blue -- Uses a darker blue gradient, white text
+         * gradient_blue -- Uses a blue gradient for its background, white text
+         * graphic_blue_pipes -- Uses a blue gradient and a pipe graphic for its background
+         * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
+         */
+        classes += ' ' + componentClass + '-style--' + primary.style;
 
 
         /**
@@ -98,8 +116,6 @@ export default class ContentSection extends React.Component {
         /**
          * Graphic
          *
-         * This
-         *
          */
         let graphic = () => {
             if (primary.graphic && primary.graphic.url) {
@@ -124,27 +140,40 @@ export default class ContentSection extends React.Component {
                 <div className="content-section-p-wrapper">
                     <div className={componentClass + '-details ' + componentClass + '-area'}>
                         {/**
-                         * If there's a subtitle,
+                         * If there's a pretitle,
                          * let's display it!
                          */
-                            primary.subtitle.length ?
-                                (<div className={"content-section-p-subtitle"}>
-                                    <div className="content-section-p-subtitle-wrapper"
-                                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.subtitle)}}/>
+                            primary.pretitle !== null ?
+                                (<div className={"content-section-p-pretitle"}>
+                                    <div className="content-section-p-pretitle-wrapper">
+                                        <h3>{primary.pretitle}</h3>
+                                    </div>
                                 </div>)
                                 : null}
                         {/**
                          * If there's a title,
                          * let's display it!
                          */
-                            primary.title.length ?
+                            primary.title.length && primary.title[0].text !== "" ?
                                 (<div className={"content-section-p-title"}>
                                     <div className="content-section-p-title-wrapper"
                                          dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.title)}}/>
                                 </div>)
                                 : null}
-
-                        {body()}
+                        {/**
+                         * If there's a pretitle,
+                         * let's display it!
+                         */
+                            primary.subtitle.length && primary.subtitle[0].text !== "" ?
+                                (<div className={"content-section-p-subtitle"}>
+                                    <div className="content-section-p-subtitle-wrapper"
+                                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.subtitle)}}/>
+                                </div>)
+                                : null}
+                        {/**
+                         * Display the body content
+                         */
+                            body()}
 
                         {/**
                          * If there are items, they are buttons

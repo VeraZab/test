@@ -3,11 +3,11 @@
   &-wrapper {
     @include global-wrapper;
     display: flex;
-@include media('>800px'){
-  $tb-spacing: $unit*10;
-  padding-top: $tb-spacing;
-  padding-bottom: $tb-spacing;
-}
+    @include media('>800px') {
+      $tb-spacing: $unit*10;
+      padding-top: $tb-spacing;
+      padding-bottom: $tb-spacing;
+    }
     $tb-spacing: $unit*4;
     padding-top: $tb-spacing;
     padding-bottom: $tb-spacing;
@@ -19,14 +19,166 @@
   &-area {
     flex-grow: 1;
   }
+
+  /*
+   * Account for any column specific styles
+   */
+
+  // This will style the text the same way with all
+  // content section styles that have a gradient background
+  // all of the gradients are dark, so the text will be lighter
+  &[class*="style--gradient"],  &[class*="style--graphic_blue"] {
+    #{$c}-title {
+      h1, h2, h3 {
+        color: white !important;
+      }
+    }
+
+    #{$c}-pretitle {
+      h3 {
+        color: white !important;
+        opacity: 0.5 !important;
+      }
+    }
+    #{$c}-body {
+      p, ul, ol, blockquote {
+        color: white !important;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        color: white !important;
+      }
+
+      ul {
+        border-color: rgba(black, 0.5) !important;
+        &::before, &::after {
+          mix-blend-mode: multiply;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+  &-style {
+
+    &--graphic{
+      &_white_dotted-lines{
+        background: url(https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg) center center no-repeat fixed !important;
+        background-size: cover !important;
+      }
+      &_blue_pipes{
+        a{
+          &:link, &:visited{
+            color: $color-aqua !important;
+          }
+          &:hover{
+            color: $color-aqua-shade !important;
+          }
+        }
+        background: url(https://now.plot.ly/static/images/background_lines.png) center center no-repeat !important;
+        background-size: cover !important;
+      }
+    }
+    &--gradient {
+
+      /*
+       * Purple Gradient
+       */
+      &_purple {
+        background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
+
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-aqua-shade;
+              &:hover {
+                background: darken($color-aqua-shade, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+
+      /*
+       * Dark blue gradient
+       */
+      &_dark-blue {
+        background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-emerald;
+              &:hover {
+                background: darken($color-emerald, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+
+      /*
+       * Blue gradient
+       */
+      &_blue {
+        background-image: linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
+
+        a{
+          &:link, &:visited{
+            color: $color-aqua !important;
+            font-weight: bold !important;
+          }
+          &:hover{
+            color: $color-aqua-shade !important;
+          }
+        }
+
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-emerald;
+              &:hover {
+                background: darken($color-emerald, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   /*
    * Account for any column specific styles
    */
   &[class*="--column"] {
     /*
- * Alignment Styles
- * only really apply to column layout
- */
+     * Alignment Styles
+     * only really apply to column layout
+     */
     &[class*="-align"] {
       /*
        * If center
@@ -90,28 +242,28 @@
         #{$c}-graphic {
           @include media('>800px') {
             order: 1;
-            padding-right:  $gutter/2;
+            padding-right: $gutter/2;
           }
         }
         #{$c}-details {
           @include media('>800px') {
             order: 2;
-            padding-left:  $gutter/2;
+            padding-left: $gutter/2;
           }
           @include media('<=800px') {
-            padding-bottom:  $gutter/2;
+            padding-bottom: $gutter/2;
           }
         }
       }
       &:nth-of-type(odd) {
         #{$c}-graphic {
           @include media('>800px') {
-            padding-left:  $gutter/2;
+            padding-left: $gutter/2;
           }
         }
         #{$c}-details {
           @include media('>800px') {
-            padding-right:  $gutter/2;
+            padding-right: $gutter/2;
           }
           @include media('<=800px') {
             padding-bottom: $gutter/2;
@@ -199,7 +351,7 @@
     }
   }
 
-  #{$c}-subtitle {
+  #{$c}-pretitle {
     h3 {
       color: $color-rhino-medium-1;
       font-size: 20px;
@@ -260,8 +412,8 @@
     ul {
       list-style: none;
       margin: $unit*2 0;
-      padding:$unit;
-      padding-left:$unit*2;
+      padding: $unit;
+      padding-left: $unit*2;
       //padding-top: $unit*2;
       //padding-bottom: $unit*2;
       //padding-right: $unit*2;
@@ -269,49 +421,60 @@
       font-weight: 400;
       border: 1px solid chromatic-color-luminance($color-rhino-core, 0.75);
       position: relative;
-      &::before{
+      &::before {
         content: '';
         width: 100%;
-        height:100%;
-        left:0;
-        top:0;
+        height: 100%;
+        left: 0;
+        top: 0;
         position: absolute;
-        opacity:0.75;
+        opacity: 0.75;
         //mix-blend-mode: darken;
-        background:url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
+        background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0;
+        //mix-blend-mode: darken;
+        background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
       }
 
-      li{
+      li {
         position: relative;
-        z-index:2;
+        z-index: 2;
         //display: flex;
         align-items: center;
-        padding-left:$unit*1.5;
-        &:before{
+        padding-left: $unit*1.5;
+        &:before {
           //color: $color-dodger;
 
           $size: 0.25rem;
           width: $size;
           max-width: $size;
           min-width: $size;
-          height:$size;
-          max-height:$size;
-          min-height:$size;
+          height: $size;
+          max-height: $size;
+          min-height: $size;
           border-radius: 100%;
           background: $color-dodger;
           border: 1px solid $color-dodger;
           //transform: translateY(1px);
           content: "";
-          opacity:0.75;
+          opacity: 0.75;
           font-size: 1rem;
-          margin-right:$unit;
+          margin-right: $unit;
           display: block;
           //padding-right: $unit;
           position: absolute;
           top: 0em;
-          left:0;
-          top:50%;
-          margin-top:-$size/2;
+          left: 0;
+          top: 50%;
+          margin-top: -$size/2;
         }
       }
 
@@ -326,7 +489,7 @@
       }
     }
 
-    a{
+    a {
       color: $color-rhino-dark;
     }
     ul, ol {
