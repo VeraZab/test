@@ -582,62 +582,77 @@ export default class Navigation extends React.Component {
 
         let {data} = this.props;
 
-        if (data) {
-            return (
-                <div className="header-main-navigation product-navigation">
-                    <style dangerouslySetInnerHTML={{__html: styles}}/>
-                    <div className={'header-main-navigation-wrapper'}>
-                        <div className='mobile-menu-button'
-                             onClick={this.toggleMobileMenu.bind(this)}>
-                            <a className="navigation-product-item">
-                                {this.mobileMenuButtonText()}
-                            </a>
-                        </div>
-                        <div className={"header-main-navigations " + this.mobileMenuClasses()}>
-                            <nav className={`nav-main`}>
-                                <div className='nav-main-wrapper'>
-
-                                    {/*{generateNavItem(navigationLeft)}*/}
-                                </div>
-                            </nav>
-                            <nav className={`nav-main-actions`}>
-                                {data.map((item, i) => {
-
-                                    return (<a className="navigation-product-item" key={i} href={item.primary.link.url} target="_blank">{item.primary.label}</a>)
-
-                                })}
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
 
         return (
-            <div className="header-main-navigation">
+            <div className="header-main-navigation product-navigation">
                 <style dangerouslySetInnerHTML={{__html: styles}}/>
                 <div className={'header-main-navigation-wrapper'}>
-                    <div className='nav-item mobile-menu-button'
+                    <div className='mobile-menu-button'
                          onClick={this.toggleMobileMenu.bind(this)}>
-                        <div className='nav-item-wrapper'>
-                            <div className='nav-item-label'>
-                                <div className='nav-item-label-text'>
-                                    {this.mobileMenuButtonText()}
-                                </div>
-                            </div>
-                        </div>
+                        <a className="navigation-product-item">
+                            {this.mobileMenuButtonText()}
+                        </a>
                     </div>
                     <div className={"header-main-navigations " + this.mobileMenuClasses()}>
                         <nav className={`nav-main`}>
-                            <div className='nav-main-wrapper'>
-                                {generateNavItem(navigationLeft)}
-                            </div>
+
                         </nav>
                         <nav className={`nav-main-actions`}>
-                            <div className='buttons'>
-                                {generateNavItem(navigationRight)}
+                            <a className="navigation-product-item" href="/products/consulting-and-oem/">Consulting</a>
+                            <div className="navigation-product-item-with-submenu">
+                                <div className="navigation-product-item">Pricing <i
+                                    className="mdi mdi-chevron-down"/></div>
+                                <div className="navigation-product-submenu">
+                                    <a className="navigation-product-submenu-item" href="/products/cloud">Plotly
+                                        Cloud</a>
+                                    <a className="navigation-product-submenu-item" href="/products/on-premises">Plotly
+                                        On-Premises</a>
+                                    <a className="navigation-product-submenu-item" href="https://support.plot.ly" target="_blank">Support
+                                        Plans</a>
+                                </div>
                             </div>
+                            <div className="navigation-product-item-with-submenu">
+                                <div className="navigation-product-item" href="/database-connectors/">Products <i
+                                    className="mdi mdi-chevron-down"/></div>
+                                <div className="navigation-product-submenu navigation-product-submenu--large">
+                                    <div className="navigation-product-submenu-section">
+                                        <div className="navigation-product-submenu-section-title">
+                                            Business Intelligence
+                                        </div>
+                                        <a className="navigation-product-submenu-item" href="/online-chart-maker/">Chart
+                                            Studio</a>
+                                        <a className="navigation-product-submenu-item" href="/dashboards">Dashboard
+                                            & Reporting</a>
+                                        <a className="navigation-product-submenu-item" href="/powerpoint-online/">Slide
+                                            Decks</a>
+                                        <a className="navigation-product-submenu-item" href="/database-connectors/">Falcon SQL
+                                            Client (Free)</a>
+                                    </div>
+                                    <div className="navigation-product-submenu-section">
+                                        <div className="navigation-product-submenu-section-title">
+                                            Data Science &amp; Open Source
+                                        </div>
+                                        <a className="navigation-product-submenu-item" href="/products/dash">Dash</a>
+                                        <a className="navigation-product-submenu-item"
+                                           href="/plotly-js-scientific-d3-charting-library/">Plotly.js</a>
+                                        <a className="navigation-product-submenu-item"
+                                           href="/d3-js-for-python-and-pandas-charts/">Plotly.py</a>
+                                        <a className="navigation-product-submenu-item"
+                                           href="/d3-js-for-r-and-shiny-charts/">Plotly.R</a>
+                                    </div>
+                                    <div
+                                        className="navigation-product-submenu-section navigation-product-submenu-section--span-all">
+                                        <div className="navigation-product-submenu-section-title">
+                                            Platforms
+                                        </div>
+                                        <a className="navigation-product-submenu-item" href="/products/on-premises">Plotly
+                                            On-Premises</a>
+                                        <a className="navigation-product-submenu-item" href="/products/cloud">Plotly
+                                            Cloud</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a className="navigation-product-item" href="https://plotcon.plot.ly/">Master Classes</a>
                         </nav>
                     </div>
                 </div>
