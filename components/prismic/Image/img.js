@@ -12,7 +12,9 @@ export default class Img extends React.Component {
             load: function (el) {
                 el.src = el.dataset.src;
                 el.onload = function () {
+                    el.parentElement.parentElement.parentElement.classList.add('hq-loaded')
                     el.classList.add('img-loaded')
+                    // document.getElementsByClassName('test');
                 }
             }
         })
@@ -26,12 +28,11 @@ export default class Img extends React.Component {
         return (
             <div className="image" style={this.props.styles} key={Math.random().toString(36).substr(2, 5)}>
                 <div className="image-wrapper">
-                    <div className="image-preview">
-                        <img src={data.url + imageParams.preview} alt=""/>
-                    </div>
-                    <div className="image-loader"/>
                     <div className="image-hq">
                         <img className={"lozad"} data-src={data.url + imageParams.hq} alt=""/>
+                    </div>
+                    <div className="image-preview">
+                        <img src={data.url + imageParams.preview} alt=""/>
                     </div>
                 </div>
                 {data.copyright ? (<copyright>&copy; {data.copyright}</copyright>) : ''}

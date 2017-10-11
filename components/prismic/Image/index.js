@@ -15,6 +15,7 @@ export default class Image extends React.Component {
             load: function (el) {
                 el.src = el.dataset.src;
                 el.onload = function () {
+                    el.parentElement.parentElement.parentElement.classList.add('hq-loaded')
                     el.classList.add('img-loaded')
                 }
             }

@@ -21,48 +21,40 @@ a {
   text-decoration: none;
   &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item) {
     text-decoration: none;
-    color: $color-lavender;
-    background-repeat: repeat-x;
-    background-size: 3px .16em;
-    background-position: 0 1.245em;
-    font-weight: 500;
+    color: $color-dodger;
+    font-weight: 300;
     &:link {
-      color: $color-lavender;
-      background-image: linear-gradient(to bottom, rgba($color-lavender, 0.5) 50%, rgba(0, 0, 0, 0) 50%);
+      color: $color-dodger-shade;
+      background-image: none;
     }
     &:hover:not(.card-action-link) {
       color: rgba($color-dodger, 0.8) !important;
-      background-image: linear-gradient(to bottom, rgba($color-dodger, 0.3) 50%, rgba(0, 0, 0, 0) 50%);
+      background-image: none;
+      text-decoration: underline;
     }
     &:visited {
-      background-image: linear-gradient(to bottom, currentColor 50%, rgba(0, 0, 0, 0) 50%);
-      color: $color-lavender;
+      background-image: none;
+      color: $color-dodger;
     }
     &:active {
       color: $color-aqua;
-      //background-image: linear-gradient(to bottom, currentColor 50%, rgba(0, 0, 0, 0) 50%);
+      background-image: none;
+
     }
   }
 }
 
 .page {
   overflow: hidden;
-  @include handheld {
-    //padding-top:72px;
-  }
 }
 
 .hidden {
   opacity: 1 !important;
 }
 
-.animateIn {
-  //@include animationFadein-sm;
-}
-
 * {
-  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
-  backface-visibility: hidden;
+  //-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+  //backface-visibility: hidden;
 }
 
 img {
@@ -78,54 +70,54 @@ img {
 
 .bottom-light-bg {
   position: relative;
-  &::before{
+  &::before {
     content: '';
     position: absolute;
-    bottom:0;
-    height:200px;
+    bottom: 0;
+    height: 200px;
     background: #f2f4f5;
-    left:0;
+    left: 0;
     width: 100%;
   }
 }
 
-.desktop-only{
-  @include tablet{
+.desktop-only {
+  @include tablet {
     display: none !important;
   }
 }
-.mobile-only{
-  @include desktop{
+
+.mobile-only {
+  @include desktop {
     display: none;
   }
 }
 
-.cards-narrative{
-  @include handheld{
+.cards-narrative {
+  @include handheld {
     display: block;
   }
-  .card{
-    max-width:calc(33.333% - 60px);
-    width:calc(33.333% - 60px);
+  .card {
+    max-width: calc(33.333% - 60px);
+    width: calc(33.333% - 60px);
     min-width: 0 !important;
-    padding-right:$gutter*2;
+    padding-right: $gutter*2;
     //max-width:calc(33.333% - 60px);
     display: flex;
-    &-wrapper{
-      flex:1;
+    &-wrapper {
+      flex: 1;
     }
 
-    @include tablet{
-      max-width:calc(50% - 60px);
-      width:calc(50% - 60px);
+    @include tablet {
+      max-width: calc(50% - 60px);
+      width: calc(50% - 60px);
     }
-    @include handheld{
-      max-width:calc(100%);
-      width:calc(100%);
+    @include handheld {
+      max-width: calc(100%);
+      width: calc(100%);
     }
   }
 }
-
 
 .enterprise-card {
   flex-grow: 1;
@@ -223,40 +215,40 @@ img {
   }
 }
 
-.industries-hero{
+.industries-hero {
   min-height: 0 !important;
 }
 
-.header-message{
+.header-message {
   background: transparent;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:$unit/1.5;
+  padding: $unit/1.5;
   text-shadow: $text-shadow-default;
   position: absolute;
-  top:0px;
-  left:0;
-  z-index:99;
+  top: 0px;
+  left: 0;
+  z-index: 99;
   width: 100%;
-  @include tablet{
+  @include tablet {
     display: none;
   }
-  &-wrapper{
+  &-wrapper {
     @include global-wrapper;
-    font-size:14px;
+    font-size: 14px;
     color: rgba(white, 0.85);
-    a{
+    a {
       background: white;
       color: $color-rhino-core !important;
       font-weight: bold !important;
-      font-size:12px;
+      font-size: 12px;
       padding: 0 $unit;
       border-radius: 8px;
       display: inline-block;
       text-shadow: none;
-      margin-left:$unit;
+      margin-left: $unit;
       box-shadow: $drop-shadow-pressed;
       background-image: none !important; // remove underline
     }
