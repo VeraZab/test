@@ -1,0 +1,45 @@
+.content-section-p {
+  $c: &;
+
+  overflow: hidden;
+
+  &-wrapper {
+    @include global-wrapper;
+    display: flex;
+    position: relative;
+    min-height: 740px;
+    $tb-spacing: $unit*4;
+    #{$c}-area {
+      padding-top: $tb-spacing;
+      padding-bottom: $tb-spacing;
+    }
+
+    @include media('>800px') {
+      $tb-spacing: $unit*10;
+      #{$c}-area {
+        padding-top: $tb-spacing;
+        padding-bottom: $tb-spacing;
+      }
+    }
+  }
+
+  &:nth-of-type(odd) {
+    background-color: $color-rhino-light-4;
+  }
+
+  &-area {
+    flex-grow: 1;
+  }
+
+  #{$c}-actions {
+    padding-top: $unit*2;
+  }
+
+}
+
+@import "content-section.column";
+@import "content-section.row";
+@import "content-section.graphic";
+@import "content-section.styles";
+@import "content-section.typography";
+

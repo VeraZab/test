@@ -36,15 +36,27 @@ export default class Graphic extends React.Component {
          */
         classes += ' content-section-p-graphic-style--' + data.graphic_style;
 
+        let img = (<Image data={data.graphic}/>);
+
+        if (this.props.background) {
+            if(data.graphic_background_position !== ''){
+                img = (<Image background={true} position={data.graphic_background_position} attachment={data.graphic_background_attachment} data={data.graphic}/>);
+            } else{
+                img = (<Image background={true} position={'center center'} attachment={data.graphic_background_attachment} data={data.graphic}/>);
+
+            }
+
+        }
+
 
         /**
          * Let's check if there's a link, and if so
          * wrap the image in a link
          */
         if (data.graphic_link && data.graphic_link.url) {
-            graphic = (<a href={data.graphic_link.url} target="_blank"><Image data={data.graphic}/></a>);
+            graphic = (<a href={data.graphic_link.url} target="_blank">{img}</a>);
         } else {
-            graphic = (<Image data={data.graphic}/>)
+            graphic = (img)
         }
 
         /**

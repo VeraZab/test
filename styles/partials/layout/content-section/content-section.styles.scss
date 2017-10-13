@@ -1,0 +1,237 @@
+
+
+.content-section-p {
+  $c: &; // sets this classname to a variable omg
+
+  // This will style the text the same way with all
+  // content section styles that have a gradient background
+  // all of the gradients are dark, so the text will be lighter
+  &[class*="style--gradient"], &[class*="style--graphic_blue"], &[class*="style--black"] {
+    #{$c}-title {
+      h1, h2, h3 {
+        color: white !important;
+      }
+    }
+
+    #{$c}-pretitle {
+      h3 {
+        color: white !important;
+        opacity: 0.5 !important;
+      }
+    }
+    #{$c}-body {
+      p, ul, ol, blockquote {
+        color: white !important;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        color: white !important;
+      }
+
+      ul {
+        border-color: rgba(black, 0.5) !important;
+        &::before, &::after {
+          mix-blend-mode: multiply;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+
+  &-style {
+
+
+
+    &--graphic {
+      &_white_dotted-lines {
+        background: url(https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg) center center no-repeat fixed !important;
+        background-size: cover !important;
+      }
+      &_blue_pipes {
+        a {
+          &:link, &:visited {
+            color: $color-aqua !important;
+          }
+          &:hover {
+            color: $color-aqua-shade !important;
+          }
+        }
+        background-position: bottom center !important;
+        background-image: url(https://tamarack-prismic.imgix.net/plotly/f37440b0-c340-40a3-835c-dcbd43a5f6dd_pipes.png?auto=format), linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
+        background-size: cover !important;
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-emerald;
+              &:hover {
+                background: darken($color-emerald, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--black {
+      & + #{$c} {
+        background: $color-rhino-light-4;
+      }
+      & ~ #{$c}:nth-of-type(even) {
+        background-color: $color-rhino-light-4;
+      }
+      & ~ #{$c}:nth-of-type(odd) {
+        background-color: white;
+      }
+
+      background: #000 !important;
+
+      a {
+        &:link, &:visited {
+          color: $color-emerald !important;
+        }
+        &:hover {
+          color: $color-aqua-shade !important;
+        }
+      }
+
+      #{$c}-actions {
+        .button {
+          &-primary {
+            background: $color-emerald;
+            &:hover {
+              background: darken($color-emerald, 8%);
+            }
+          }
+          &-secondary {
+            border-color: white;
+            color: white !important;
+            &:hover {
+              background: white;
+              color: $color-dodger !important;
+            }
+          }
+        }
+      }
+    }
+    &--gradient {
+
+      /*
+       * Purple Gradient
+       */
+      &_purple {
+        background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
+
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-aqua-shade;
+              &:hover {
+                background: darken($color-aqua-shade, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+
+      /*
+       * Dark blue gradient
+       */
+      &_dark-blue {
+        background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-emerald;
+              &:hover {
+                background: darken($color-emerald, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+
+      /*
+       * Blue gradient
+       */
+      &_blue {
+        background-image: linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
+
+        a {
+          &:link, &:visited {
+            color: $color-aqua !important;
+            font-weight: bold !important;
+          }
+          &:hover {
+            color: $color-aqua-shade !important;
+          }
+        }
+
+        // Style the buttons a different way for this one
+        #{$c}-actions {
+          .button {
+            &-primary {
+              background: $color-emerald;
+              &:hover {
+                background: darken($color-emerald, 8%);
+              }
+            }
+            &-secondary {
+              border-color: white;
+              color: white !important;
+              &:hover {
+                background: white;
+                color: $color-dodger !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .content-section-p-graphic--style-bleed-parent{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    width: 50vw !important;
+    position: absolute !important;
+    height:100% !important;
+    .content-section-p-graphic-item{
+      position: absolute;
+      height:100%;
+      width:100%;
+      .image{
+        height:100% !important;
+        padding-bottom:0 !important;
+      }
+    }
+  }
+}

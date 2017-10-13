@@ -1,0 +1,59 @@
+.content-section-p {
+  $c: &; // sets this classname to a variable omg
+
+  /*
+ * Account for any column specific styles
+ */
+  &[class*="--column"] {
+    /*
+     * Alignment Styles
+     * only really apply to column layout
+     */
+    &[class*="-align"] {
+      /*
+       * If center
+       */
+      &[class*="--center"] {
+        #{$c}-title {
+          /* let's center the title,
+          this is here because there is a max-width on the title
+          */
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+        #{$c}-wrapper {
+          justify-content: center;
+
+          #{$c}-graphic,
+          #{$c}-details {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+          }
+          #{$c}-details {
+            padding-bottom:$unit*2;
+          }
+          #{$c}-graphic {
+            /* Let's prevent the graphic from getting too big */
+            max-width: 800px;
+            width: 100%;
+            padding-top: 0;
+          }
+
+          #{$c}-actions {
+            /* Let's prevent the graphic from getting too big */
+            padding-bottom: $unit*4;
+            .buttons {
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    #{$c}-wrapper {
+      flex-direction: column;
+    }
+  }
+}

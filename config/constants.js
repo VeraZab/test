@@ -6,6 +6,6 @@ export const images = {
     },
     hq: {
         quality: '45',
-        scale: '0.75'
+        scale: '1'
     }
 }

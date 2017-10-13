@@ -37,6 +37,8 @@ export default class Slices extends React.Component {
                         data.map((slice, i) => {
                             if (slice.slice_type === 'graphic_with_text') {
                                 return <ContentSection key={i} data={slice} />
+                            } else if (slice.slice_type === 'graphic_with_text_slides') {
+                                return <ContentSection key={i} data={slice} />
                             } else if (slice.slice_type === 'logos') {
                                 return <LogosSlice key={i} data={slice} />
                         } else return

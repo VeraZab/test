@@ -207,6 +207,19 @@ a {
     position: absolute;
     will-change: opacity;
     z-index:2;
+    &[data-background-image]{
+      opacity:0;
+      @include trans;
+      transition-duration: 2.5s;
+      transform-origin: center center;
+      transform: scale(1.06) !important;
+      &[data-loaded="true"]{
+        @extend .animate--fade-in;
+        animation-delay: 0.1s;
+        transform: none !important;
+      }
+    }
+
     img {
       opacity: 0;
       &:not(.img-loaded) {

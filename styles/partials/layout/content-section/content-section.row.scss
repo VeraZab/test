@@ -1,0 +1,145 @@
+.content-section-p {
+  $c: &; // sets this classname to a variable omg
+  /*
+   * Account for any row specific styles
+   */
+  &[class*="--row"] {
+    $gutter: $unit*6;
+    #{$c}-wrapper {
+      align-items: center;
+
+      @include media('<=800px') {
+        flex-direction: column;
+      }
+    }
+    /*
+     * Set some sizes for the two main sections (details, graphic)
+     */
+    #{$c}-graphic,
+    #{$c}-details {
+      &-wrapper {
+        width: 100%;
+      }
+      width: 50%;
+      @include media('<=800px') {
+        width: 100%;
+      }
+    }
+    /*
+     * row-auto
+     * If the row contains '-auto' let's style it
+     * this will alternate the order of the details
+     * vs graphic
+     */
+    &[class*="-auto"] {
+      &:nth-of-type(even) {
+        &.content-section-p-style--bleed-wrapper{
+          #{$c}-details {
+            max-width:50%;
+            margin-left:50%;
+          }
+        }
+        .content-section-p-graphic--style-bleed-parent{
+          left:auto !important;
+          right: 50% !important;
+          .content-section-p-graphic-item{
+            position: absolute;
+            height:100%;
+            width:100%;
+            .image{
+              height:100% !important;
+              padding-bottom:0 !important;
+            }
+          }
+        }
+        #{$c}-graphic {
+          @include media('>800px') {
+            order: 1;
+            padding-right: $gutter/2;
+            padding-left: 0;
+          }
+        }
+        #{$c}-details {
+          @include media('>800px') {
+            order: 2;
+            padding-left: $gutter/2;
+          }
+          @include media('<=800px') {
+            padding-bottom: $gutter/2;
+          }
+        }
+      }
+      &:nth-of-type(odd) {
+        &.content-section-p-style--bleed-wrapper{
+          #{$c}-details {
+            max-width:50%;
+            margin-right:50%;
+          }
+        }
+        .content-section-p-graphic--style-bleed-parent{
+          left: 50% !important;
+        }
+        #{$c}-graphic {
+          @include media('>800px') {
+            padding-left: $gutter/2;
+          }
+        }
+        #{$c}-details {
+          @include media('>800px') {
+            padding-right: $gutter/2;
+          }
+          @include media('<=800px') {
+            padding-bottom: $gutter/2;
+          }
+        }
+      }
+    }
+    /*
+     * row-graphic-left
+     * If the row contains '-left' let's style it
+     * this only makes sure the padding is correct,
+     * there is no need to change the order as this
+     * is the default
+     */
+    &[class*="-left"] {
+      #{$c}-graphic {
+        @include media('>800px') {
+          padding-left: $gutter/2;
+        }
+      }
+      #{$c}-details {
+        @include media('>800px') {
+          padding-right: $gutter/2;
+        }
+        @include media('<=800px') {
+          padding-bottom: $gutter/2;
+        }
+      }
+    }
+
+    /*
+    * row-graphic-right
+    * If the row contains '-right' let's style it
+    * this will place the graphic on the left
+    */
+    &[class*="-right"] {
+      #{$c}-graphic {
+        @include media('>800px') {
+          order: 1;
+          padding-right: $gutter/2;
+        }
+      }
+      #{$c}-details {
+        @include media('>800px') {
+          order: 2;
+          padding-left: $gutter/2;
+        }
+        @include media('<=800px') {
+          padding-bottom: $gutter/2;
+        }
+      }
+    }
+
+  }
+
+}

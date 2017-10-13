@@ -44,7 +44,7 @@ class Header extends React.Component {
                                     <div className='logo-wrapper'>
                                         {doc.data.alt_logo.url ? (
                                             <img src={doc.data.alt_logo.url} alt={doc.data.title}/>) : (<img
-                                            src='https://s3-us-west-1.amazonaws.com/plotly-tutorials/plotly-marketing-pages/images/new-branding/logo/images/plotly-logo-01-stripe%402x.png'
+                                            src='https://prismic-io.s3.amazonaws.com/plotly%2Feb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png'
                                             alt='Plotly'/>)}
 
                                     </div>
@@ -74,7 +74,7 @@ class Header extends React.Component {
                             <a className='logo'>
                                 <div className='logo-wrapper'>
                                     <img
-                                        src='https://prismic-io.s3.amazonaws.com/plotly%2F077eef9f-8926-404f-8a8c-eb9a7289a4a6_plotly-logo.svg'
+                                        src='https://prismic-io.s3.amazonaws.com/plotly%2Feb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png'
                                         alt='Plotly'/>
                                 </div>
                             </a>

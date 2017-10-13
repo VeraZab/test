@@ -88,6 +88,10 @@ export default class ContentSection extends React.Component {
         classes += ' ' + componentClass + '-style--' + primary.style;
 
 
+        if (primary.graphic_style === 'bleed') {
+            classes += ' ' + componentClass + '-style--bleed-wrapper';
+        }
+
         /**
          * Body
          *
@@ -118,6 +122,19 @@ export default class ContentSection extends React.Component {
          *
          */
         let graphic = () => {
+            if (this.props.data.slice_type === 'graphic_with_text_slides') {
+                return (
+                    <div
+                        className={componentClass + '-graphic ' + componentClass + '-graphic-slides ' + componentClass + '-area'}>
+                        {
+                            items.map((slide, i) => {
+                                return (<Graphic key={i}
+                                                 data={slide}/>)
+                            })
+                        }
+                    </div>
+                )
+            }
             if (primary.graphic && primary.graphic.url) {
                 if (primary.graphic_style === 'browser') {
                     return (<div className={componentClass + '-graphic ' + componentClass + '-area'}>
@@ -127,12 +144,66 @@ export default class ContentSection extends React.Component {
                         </Browser>
                     </div>)
                 }
+                if (primary.graphic_style === 'bleed') {
+                    return (<div
+                        className={componentClass + '-graphic ' + componentClass + '-graphic--style-bleed-parent ' + componentClass + '-area'}>
+                        <Graphic
+                            background={true}
+                            data={primary}/>
+                    </div>)
+                }
                 return (<div className={componentClass + '-graphic ' + componentClass + '-area'}><Graphic
                     data={primary}/></div>)
             }
 
 
         };
+
+        let actions = () => {
+
+            if (this.props.data.slice_type === 'graphic_with_text') {
+                if (items && items.length) {
+                    return (<div className={"content-section-p-actions"}>
+                        <div className="content-section-p-actions-wrapper buttons">
+                            {items.map((button, i) => {
+                                return (<Button key={i} data={button}/>)
+                            })}
+                        </div>
+                    </div>)
+                } else {
+                    return null
+                }
+            } else {
+                let buttons = []
+                if (this.props.data.primary.button_one_label) {
+                    buttons.push({
+                        label: primary.button_one_label,
+                        link: primary.button_one_link,
+                        style: primary.button_one_style
+                    })
+                }
+                if (primary.button_two_label) {
+                    buttons.push({
+                        label: primary.button_two_label,
+                        link: primary.button_two_link,
+                        style: primary.button_two_style
+                    })
+                }
+                if (buttons.length) {
+
+                    return (<div className={"content-section-p-actions"}>
+                        <div className="content-section-p-actions-wrapper buttons">
+                            {buttons.map((button, i) => {
+                                return (<Button key={i} data={button}/>)
+                            })}
+                        </div>
+                    </div>)
+
+                } else {
+                    return null
+                }
+            }
+        }
 
 
         return (
@@ -179,15 +250,8 @@ export default class ContentSection extends React.Component {
                          * If there are items, they are buttons
                          * let's display them!
                          */
-                            items && items.length ?
-                                (<div className={"content-section-p-actions"}>
-                                    <div className="content-section-p-actions-wrapper buttons">
-                                        {items.map((button, i) => {
-                                            return (<Button data={button}/>)
-                                        })}
-                                    </div>
-                                </div>)
-                                : null}
+
+                            actions()}
 
                     </div>
                     {graphic()}

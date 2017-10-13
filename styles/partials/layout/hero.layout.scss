@@ -74,6 +74,7 @@
     width: 100%;
     z-index: 1;
     position: absolute;
+
   }
 
   &-style {
@@ -207,6 +208,8 @@
 
         }
         .hero-prismic-graphic-section {
+          align-self: flex-end;
+          transform: translateY(20px);
           @include media('>900px') {
             max-width: $graphic-width;
             //transform: scale(1.15);
@@ -221,6 +224,7 @@
           flex-grow: 1;
         }
         .hero-prismic-messaging {
+          padding-right:$unit*4;
           align-items: flex-start;
           justify-content: flex-start;
           h1 {
@@ -301,11 +305,13 @@
             .logos-slice-wrapper {
               .logos {
                 justify-content: flex-start;
+                flex-wrap:wrap;
                 .logos-slice-logo {
                   &:first-of-type {
                     padding-left: 0;
                   }
                   max-width: 110px;
+                  width:110px;
 
                   @include media("<=500px") {
                     width: 50%;
@@ -345,6 +351,8 @@
     width: 100%;
     z-index: 1;
     position: absolute;
+    will-change: opacity;
+    @include animationFadein-sm;
   }
 
   .hero-prismic-messaging {
