@@ -10,7 +10,7 @@
   padding-top: 72px;
   min-height: 700px;
   flex-wrap: wrap;
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   /**
    * wrapper styles
@@ -209,7 +209,8 @@
         }
         .hero-prismic-graphic-section {
           align-self: flex-end;
-          transform: translateY(20px);
+          padding-bottom:$unit*4;
+          //transform: translateY(-20px);
           @include media('>900px') {
             max-width: $graphic-width;
             //transform: scale(1.15);
@@ -480,4 +481,24 @@
   .hero-messaging h2 {
     max-width: 620px;
   }
+}
+
+.hero-prismic-graphic-two-items{
+  position: relative;
+  padding-top:0;
+  padding-bottom:$unit*8;
+  .hero-prismic-graphic-item{
+    &:first-of-type{
+      position: absolute;
+      z-index:5;
+      width: 100%;
+      bottom:$unit*6;
+      left: 0;
+    }
+    &:nth-of-type(2){
+      max-width:85%;
+      transform: translateX($unit*15) translateY(-$unit*4);
+    }
+  }
+
 }

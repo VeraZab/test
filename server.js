@@ -57,6 +57,26 @@ app.prepare()
             return app.render(req, res, '/highcharts-alternative', queryParams)
         })
 
+
+
+        // new pages
+
+        server.get('/powerpoint-online', (req, res) => {
+            return app.render(req, res, '/prismic/slide-decks')
+        })
+
+        server.get('/dashboards', (req, res) => {
+            return app.render(req, res, '/prismic/dashboards-and-reporting')
+        })
+
+        server.get('/database-connectors', (req, res) => {
+            return app.render(req, res, '/prismic/falcon')
+        })
+
+        server.get('/online-chart-maker', (req, res) => {
+            return app.render(req, res, '/prismic/chart-studio')
+        })
+
         server.get('*', (req, res) => {
             return handle(req, res)
         })

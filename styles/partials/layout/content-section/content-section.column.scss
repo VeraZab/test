@@ -14,6 +14,17 @@
        * If center
        */
       &[class*="--center"] {
+
+        &.content-section-p-style--bleed-wrapper{
+          //display: flex;
+          //align-items: center;
+          //justify-content: center;
+          #{$c}-wrapper {
+            max-width:100%;
+            padding-left:0;
+            padding-right:0;
+          }
+        }
         #{$c}-title {
           /* let's center the title,
           this is here because there is a max-width on the title
@@ -39,6 +50,29 @@
             max-width: 800px;
             width: 100%;
             padding-top: 0;
+            &.content-section-p-graphic--style-bleed-parent{
+              width: 100%;
+              max-width:100%;
+              padding-bottom:0;
+              .image{
+                //min-height:600px;
+              }
+            //  padding-top:0 !important;
+            //  padding-bottom:0 !important;
+            //  width: 100vw !important;
+            //  max-width:100vw;
+            //  position: absolute !important;
+            //  height:100% !important;
+            //  .content-section-p-graphic-item{
+            //    position: absolute;
+            //    height:100%;
+            //    width:100%;
+            //    .image{
+            //      height:100% !important;
+            //      padding-bottom:0 !important;
+            //    }
+            //  }
+            }
           }
 
           #{$c}-actions {

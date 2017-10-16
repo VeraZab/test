@@ -13,7 +13,7 @@ class Dashboards extends React.Component {
 
     static async getInitialProps() {
         const data = await fetchData();
-        const doc = await data.find(doc => doc.uid === 'dashboards-and-reporting');
+        const doc = await data.find(doc => doc.uid === 'falcon-sql-editor');
         return {
             doc: doc,
             data: data

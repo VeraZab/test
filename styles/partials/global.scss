@@ -11,6 +11,7 @@
 @import "layout/content-sections";
 @import "layout/hero.layout";
 @import "layout/content-section-p.layout";
+@import "layout/header";
 
 $animation-delay: 0.25s;
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
@@ -237,4 +238,55 @@ a {
 .slices{
   width: 100%;
   flex-grow:1;
+}
+
+.phone{
+  $br: 40px;
+  margin:$unit*2 $unit*12;
+  margin-right:0;
+  max-width:480px;
+  border-radius: $br;
+  box-shadow: $drop-shadow-l-light;
+  overflow: hidden;
+  background: white;
+  padding:$unit $unit;
+  position: relative;
+  &-wrapper{
+
+  }
+  &-header{
+    //position: absolute;
+    width: 100%;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    z-index:4;
+    &-wrapper{
+      width: 100%;
+      display: flex;
+      justify-content:center;
+      height:40px;
+      align-items: center;
+      padding-bottom:$unit;
+    }
+    &-notch{
+      //position: absolute;
+      //top:0;
+      width: 30%;
+      height:8px;
+      opacity:0.5;
+      background: darken(white, 15%);
+      border-radius:8px;
+
+    }
+  }
+
+  &-viewport{
+    border-radius: $br/1.2;
+    overflow: hidden;
+    background: white;
+    border: 1px solid darken($color-rhino-light-4, 5%);
+    //padding-top:$unit*4;
+  }
 }

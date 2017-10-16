@@ -218,20 +218,5 @@
 
 
 
-  .content-section-p-graphic--style-bleed-parent{
-    padding-top:0 !important;
-    padding-bottom:0 !important;
-    width: 50vw !important;
-    position: absolute !important;
-    height:100% !important;
-    .content-section-p-graphic-item{
-      position: absolute;
-      height:100%;
-      width:100%;
-      .image{
-        height:100% !important;
-        padding-bottom:0 !important;
-      }
-    }
-  }
+
 }

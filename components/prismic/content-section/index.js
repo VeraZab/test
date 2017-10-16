@@ -4,6 +4,7 @@ import PrismicDOM from 'prismic-dom';
 import Graphic from './graphic'
 import Button from "components/prismic/button";
 import {Browser} from "components/browser";
+import Phone from 'components/phone'
 
 
 /**
@@ -119,9 +120,13 @@ export default class ContentSection extends React.Component {
 
         /**
          * Graphic
-         *
          */
         let graphic = () => {
+            /**
+             * If this content section is graphic_with_text_slides,
+             * we're going to render the items as graphics, rather than as actions
+             * like in the default content section slice type
+             */
             if (this.props.data.slice_type === 'graphic_with_text_slides') {
                 return (
                     <div
@@ -135,7 +140,14 @@ export default class ContentSection extends React.Component {
                     </div>
                 )
             }
+            /**
+             * graphic_style: browser
+             * If the content section has a graphic uploaded, let's show it.
+             */
             if (primary.graphic && primary.graphic.url) {
+                /**
+                 * If the graphic style is set to browser, we will wrap it in a browser component.
+                 */
                 if (primary.graphic_style === 'browser') {
                     return (<div className={componentClass + '-graphic ' + componentClass + '-area'}>
                         <Browser>
@@ -144,6 +156,21 @@ export default class ContentSection extends React.Component {
                         </Browser>
                     </div>)
                 }
+                /**
+                 * If the graphic style is set to phone, we will wrap it in a phone component.
+                 */
+                if (primary.graphic_style === 'phone') {
+                    return (<div className={componentClass + '-graphic ' + componentClass + '-area'}>
+                        <Phone>
+                            <Graphic
+                                data={primary}/>
+                        </Phone>
+                    </div>)
+                }
+                /**
+                 * graphic_style: bleed
+                 * We display bleed images a little bit differently
+                 */
                 if (primary.graphic_style === 'bleed') {
                     return (<div
                         className={componentClass + '-graphic ' + componentClass + '-graphic--style-bleed-parent ' + componentClass + '-area'}>
@@ -159,8 +186,19 @@ export default class ContentSection extends React.Component {
 
         };
 
+
+        /**
+         * Actions
+         * These are our buttons
+         */
         let actions = () => {
 
+            /**
+             * slice_type: graphic_with_text
+             *
+             * This is how I was handling the buttons before, as the repeated group in the content section
+             * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
+             */
             if (this.props.data.slice_type === 'graphic_with_text') {
                 if (items && items.length) {
                     return (<div className={"content-section-p-actions"}>
@@ -174,7 +212,17 @@ export default class ContentSection extends React.Component {
                     return null
                 }
             } else {
+                /**
+                 * slice_type: all others
+                 *
+                 * This is the new way of dealing with buttons
+                 * it'll check to see if each have values
+                 * and if so it'll push it to a new array which we then
+                 * iterate over and display the buttons.
+                 */
+
                 let buttons = []
+
                 if (this.props.data.primary.button_one_label) {
                     buttons.push({
                         label: primary.button_one_label,
@@ -182,6 +230,7 @@ export default class ContentSection extends React.Component {
                         style: primary.button_one_style
                     })
                 }
+
                 if (primary.button_two_label) {
                     buttons.push({
                         label: primary.button_two_label,
@@ -189,8 +238,8 @@ export default class ContentSection extends React.Component {
                         style: primary.button_two_style
                     })
                 }
-                if (buttons.length) {
 
+                if (buttons.length) {
                     return (<div className={"content-section-p-actions"}>
                         <div className="content-section-p-actions-wrapper buttons">
                             {buttons.map((button, i) => {
@@ -198,15 +247,16 @@ export default class ContentSection extends React.Component {
                             })}
                         </div>
                     </div>)
-
                 } else {
                     return null
                 }
             }
-        }
+
+        };
 
 
         return (
+
             <section className={classes}>
                 <div className="content-section-p-wrapper">
                     <div className={componentClass + '-details ' + componentClass + '-area'}>

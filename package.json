@@ -11,9 +11,6 @@
     "start": "NODE_ENV=production node server.js",
     "heroku-postinstall": "yarn run build"
   },
-  "engines": {
-    "node" :  "7.x.x"
-  },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
   "dependencies": {
@@ -36,7 +33,7 @@
     "lru-cache": "^4.1.1",
     "mdi": "^1.8.36",
     "module-alias": "^2.0.1",
-    "next": "^4.0.1",
+    "next": "^4.1.0",
     "next-routes": "^1.0.27",
     "next-url-prettifier": "^1.1.2",
     "node-sass": "^4.4.0",

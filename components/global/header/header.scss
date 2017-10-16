@@ -46,6 +46,13 @@
   z-index: 200;
   box-shadow: $drop-shadow;
   flex-direction: column;
+
+  &.mobile-menu-active{
+    background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
+    height:100vh !important;
+    max-height:100vh;
+    display: block;
+  }
   //@include animationFadeAndSlideInFromTop;
   * {
     user-select: none;
