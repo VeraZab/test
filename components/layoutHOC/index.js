@@ -44,9 +44,7 @@ function Layout(Child) {
             <Head>
               <style dangerouslySetInnerHTML={{ __html: styles }} />
             </Head>
-
             <Header {...this.props} />
-
             <Child {...this.props} state={this.state} />
             <Footer />
           </div>

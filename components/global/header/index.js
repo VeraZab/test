@@ -46,7 +46,7 @@ class Header extends React.Component {
           </a>
         </div>
       </div>,
-      <header className={classes}>
+      <header id="site-header" className={classes}>
         <div className="site-header-wrapper">
           <div className="site-header--section-left">
             <div className="site-header-logo">

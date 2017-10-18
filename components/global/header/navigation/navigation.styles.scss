@@ -11,18 +11,19 @@
 
         }
       }
-
-      &:hover {
-        cursor: default;
-        #{$c}-item {
-          opacity: 1;
-          transform: translateY(-4px);
-          color: white !important;
-        }
-        #{$c}-submenu {
-          transform: none;
-          opacity: 1;
-          pointer-events: auto;
+      @include media(">800px") {
+        &:hover {
+          cursor: default;
+          #{$c}-item {
+            opacity: 1;
+            transform: translateY(-4px);
+            color: white !important;
+          }
+          #{$c}-submenu {
+            transform: none;
+            opacity: 1;
+            pointer-events: auto;
+          }
         }
       }
     }
@@ -47,45 +48,45 @@
       flex-wrap: wrap;
       justify-content: flex-start;
 
-      a{
-        font-size:16px;
+      a {
+        font-size: 16px;
       }
 
       $point-size: 15px;
 
-      &:not(.navigation-product-submenu--large){
-        right:-8px;
-        &::before{
+      &:not(.navigation-product-submenu--large) {
+        right: -8px;
+        &::before {
           width: $point-size;
-          height:$point-size;
+          height: $point-size;
           background: white;
           transform: rotate(45deg);
           content: '';
           position: absolute;
-          top:-6px;
-          z-index:9999;
-          right:10px;
+          top: -6px;
+          z-index: 9999;
+          right: 10px;
         }
       }
       &--large {
         min-width: 430px;
         left: -109px;
-        &::before{
+        &::before {
           width: $point-size;
-          height:$point-size;
+          height: $point-size;
           background: white;
           transform: rotate(45deg);
           content: '';
           position: absolute;
-          top:-6px;
-          z-index:9999;
-          left:232px;
+          top: -6px;
+          z-index: 9999;
+          left: 232px;
         }
       }
       &-section {
         //width: 50%;
-        &:first-of-type{
-          padding-right:$unit*4 !important;
+        &:first-of-type {
+          padding-right: $unit*4 !important;
         }
         &--span-all {
           padding-top: $unit*2;
@@ -94,7 +95,7 @@
           flex-wrap: wrap;
           max-width: 100%;
           justify-content: flex-end;
-          margin-top:$unit*2;
+          margin-top: $unit*2;
           border-top: 1px solid rgba($color-rhino-light-1, 0.5);
         }
         &-title {
@@ -103,7 +104,7 @@
           font-weight: bold;
           letter-spacing: 1px;
           font-size: 14px;
-          line-height:20px;
+          line-height: 20px;
           padding-bottom: $unit/2;
           opacity: 0.5;
           width: 100%;
