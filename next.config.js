@@ -7,13 +7,13 @@ module.exports = {
     // assetPrefix: 'https://plotly.github.io/plotly-next/',
     exportPathMap: () => ({
         "/": { page: "/" },
-        "/dashboards": { page: "/dashboards" },
-        "/dashboards-and-reports": { page: "/dashboards" }, // SEO version
-        "/database-connectors": { page: "/database-connectors" },
-        "/free-sql-client-download": { page: "/database-connectors" }, // SEO version
-        "/online-chart-maker": { page: "/online-chart-maker" },
-        "/powerpoint-online": { page: "/powerpoint-online" },
-        "/online-presentation-tool": { page: "/powerpoint-online" }, // SEO version
+        "/dashboards": { page: "/prismic/dashboards-and-reporting" },
+        "/dashboards-and-reports": { page: "/prismic/dashboards-and-reporting" }, // SEO version
+        "/database-connectors": { page: "/prismic/falcon" },
+        "/free-sql-client-download": { page: "/prismic/falcon" }, // SEO version
+        "/online-chart-maker": { page: "/prismic/chart-studio" },
+        "/powerpoint-online": { page: "/prismic/slide-decks" },
+        "/online-presentation-tool": { page: "/prismic/slide-decks" }, // SEO version
         "/products/dash": { page: "/products/dash" },
         "/products/cloud": { page: "/products/cloud" },
         "/products/consulting-and-oem": { page: "/products/consulting-and-oem" },
@@ -38,8 +38,6 @@ module.exports = {
         "/products/enterprise/customer-stories/goji": { page: "/single-customer-stories", query: { id: 'goji' } },
         "/webinars": { page: "/webinars" },
         "/export": { page: "/export" }
-        // "/tableau-alternative": { page: "/tableau-alternative" },
-        // "/highcharts-alternative": { page: "/highcharts-alternative" }
     }),
     webpack: (config, {dev}) => {
         config.module.rules.push(

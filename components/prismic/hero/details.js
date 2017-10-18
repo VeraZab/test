@@ -55,8 +55,8 @@ export default class HeroDetailsSection extends React.Component {
                             <div className="buttons">
                                 {
                                     data.hero_buttons.map(
-                                        button => {
-                                            return <Button data={button}/>
+                                        (button, i) => {
+                                            return <Button key={i} data={button}/>
                                         }
                                     )
                                 }

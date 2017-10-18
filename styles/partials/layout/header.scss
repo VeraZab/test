@@ -50,7 +50,8 @@
         letter-spacing: 2px;
         display: flex;
         align-items: center;
-        padding-left: $unit;
+        padding-left: $unit*2;
+        //padding-right:$unit;
 
         &:hover {
           color: white;

@@ -63,7 +63,7 @@ export default () => (
             <HeroActions>
                 <Buttons items={HeroButtons[0]}/>
                 <div className="githubStar">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=plotly&repo=plotly.js&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=plotly&repo=plotly.js&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px"></iframe>
                 </div>
                 <div className="not-mobile">
                     <CodeExplorer/>

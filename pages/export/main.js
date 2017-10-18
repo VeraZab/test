@@ -177,7 +177,7 @@ export default () => (
                 <Body>
                 <iframe id="cp_embed_YXpGLQ"
                         src="//codepen.io/plotly/embed/YXpGLQ?height=268&amp;theme-id=15263&amp;slug-hash=YXpGLQ&amp;default-tab=result&amp;user=plotly"
-                        scrolling="no" frameborder="0" height="268" allowtransparency="true" allowfullscreen="true"
+                        scrolling="no" frameBorder="0" height="268" allowTransparency="true" allowFullScreen="true"
                         name="CodePen Embed" title="CodePen Embed 3" className="cp_embed_iframe "
                         style={iframeStyle}/>
                 <article className="export-step">
@@ -252,12 +252,12 @@ export default () => (
                 <Body>
                 <iframe id="cp_embed_MwYQqY"
                         src="//codepen.io/plotly/embed/MwYQqY?height=268&amp;theme-id=15263&amp;slug-hash=MwYQqY&amp;default-tab=result&amp;user=plotly"
-                        scrolling="no" frameborder="0" height="268" allowtransparency="true" allowfullscreen="true"
+                        scrolling="no" frameBorder="0" height="268" allowTransparency="true" allowFullScreen="true"
                         name="CodePen Embed" title="CodePen Embed 2" style={iframeStyle}/>
                 {
                     codeSections.map((section, i) => {
                         return (
-                            <article className="export-step">
+                            <article className="export-step" key={i}>
                                 <div className="export-step-title">
                                     <div className="export-step-number">
                                         Step {section.id}
@@ -296,12 +296,12 @@ export default () => (
                 <Body>
                 <iframe id="cp_embed_MwYQqY"
                         src="https://codepen.io/plotly/embed/vONMvo?height=268&theme-id=15263&slug-hash=vONMvo&default-tab=result&user=plotly"
-                        scrolling="no" frameborder="0" height="268" allowtransparency="true" allowfullscreen="true"
+                        scrolling="no" frameBorder="0" height="268" allowTransparency="true" allowFullScreen="true"
                         name="CodePen Embed" title="CodePen Embed 2" style={iframeStyle}/>
                 {
                     lastSection.map((section, i) => {
                         return (
-                            <article className="export-step">
+                            <article className="export-step" key={i}>
                                 <div className="export-step-title">
                                     <div className="export-step-number">
                                         Step {section.id}

@@ -39,11 +39,11 @@ export default class HeroGraphicSection extends React.Component {
                                 return (
                                     item.graphic_style === 'browser' ?
                                         (
-                                            <div className="hero-prismic-graphic-item"><Browser><Image
+                                            <div key={i} className="hero-prismic-graphic-item"><Browser><Image
                                                 data={item.graphic}/></Browser>
                                             </div>)
                                         :
-                                        (<div className="hero-prismic-graphic-item">
+                                        (<div key={i} className="hero-prismic-graphic-item">
                                             <Image data={item.graphic}/>
                                         </div>)
                                 )

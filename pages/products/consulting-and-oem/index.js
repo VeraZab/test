@@ -102,9 +102,9 @@ export default class Consulting extends React.Component {
 
     render() {
 
-        const gridItems = gridItemsData.map(item => {
+        const gridItems = gridItemsData.map((item, i) => {
             return (
-                <GridItem>
+                <GridItem key={i}>
                     <div className="grid-item-graphic">
                         <img src={item.graphic} alt={item.label}/>
                     </div>
