@@ -1,5 +1,5 @@
-import React from 'react';
-import PrismicDOM from 'prismic-dom';
+import React from 'react'
+import PrismicDOM from 'prismic-dom'
 
 /**
  * HeroBottom component
@@ -10,28 +10,24 @@ import PrismicDOM from 'prismic-dom';
  *
  */
 export default class HeroBottom extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    constructor(props) {
-        super(props);
+  componentDidMount() {}
+
+  render() {
+    let HeroBottomStyles = {}
+
+    if (this.props.style) {
+      HeroBottomStyles = this.props.style
     }
-
-    componentDidMount() {
-
-    }
-
-    render() {
-
-        let HeroBottomStyles = {};
-
-        if (this.props.style) {
-            HeroBottomStyles = this.props.style;
-        }
-        return (
-            <div className="hero-prismic-bottom" style={HeroBottomStyles}>
-                <div className="hero-prismic-bottom-wrapper hidden hidden-fade">
-                    {this.props.children}
-                </div>
-            </div>
-        );
-    }
+    return (
+      <div className="hero-prismic-bottom" style={HeroBottomStyles}>
+        <div className="hero-prismic-bottom-wrapper hidden hidden-fade">
+          {this.props.children}
+        </div>
+      </div>
+    )
+  }
 }

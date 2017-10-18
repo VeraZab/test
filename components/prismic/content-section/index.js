@@ -1,11 +1,10 @@
-import React from 'react';
-import PrismicDOM from 'prismic-dom';
+import React from 'react'
+import PrismicDOM from 'prismic-dom'
 
 import Graphic from './graphic'
-import Button from "components/prismic/button";
-import {Browser} from "components/browser";
+import Button from 'components/prismic/button'
+import { Browser } from 'components/browser'
 import Phone from 'components/phone'
-
 
 /**
  * ContentSection component
@@ -15,35 +14,32 @@ import Phone from 'components/phone'
  */
 
 export default class ContentSection extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    constructor(props) {
-        super(props);
-    }
+  componentDidMount() {}
 
-    componentDidMount() {
-    }
+  render() {
+    /** Destructure props */
+    const { data: { primary } } = this.props
+    const { data: { items } } = this.props
 
-    render() {
+    /** Define the component class name */
+    const componentClass = 'content-section-p'
 
-        /** Destructure props */
-        const {data: {primary}} = this.props;
-        const {data: {items}} = this.props;
+    /** The classes variable */
+    let classes = componentClass
 
-        /** Define the component class name */
-        const componentClass = 'content-section-p';
-
-        /** The classes variable */
-        let classes = componentClass;
-
-        /**
+    /**
          * If someone has added classes to this component,
          * let's append them to the classes variable
          */
-        if (this.props.className) {
-            classes += ' ' + this.props.className;
-        }
+    if (this.props.className) {
+      classes += ' ' + this.props.className
+    }
 
-        /**
+    /**
          * Layout
          *
          * These values will the arrangement of the elements in the content section.
@@ -56,9 +52,9 @@ export default class ContentSection extends React.Component {
          * column-graphic-top       -- vertical layout, graphic on top
          * column-graphic-bottom    -- vertical layout, graphic on bottom
          */
-        classes += ' ' + componentClass + '-layout--' + primary.layout;
+    classes += ' ' + componentClass + '-layout--' + primary.layout
 
-        /**
+    /**
          * Alignment
          *
          * These apply if the content section is in a column layout.
@@ -70,9 +66,9 @@ export default class ContentSection extends React.Component {
          * center   -- center alignment
          * right    -- right alignment
          */
-        classes += ' ' + componentClass + '-align--' + primary.alignment;
+    classes += ' ' + componentClass + '-align--' + primary.alignment
 
-        /**
+    /**
          * Style
          *
          * These values will adjust classes that change the visual appearance of the content section.
@@ -86,133 +82,180 @@ export default class ContentSection extends React.Component {
          * graphic_blue_pipes -- Uses a blue gradient and a pipe graphic for its background
          * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
          */
-        classes += ' ' + componentClass + '-style--' + primary.style;
+    classes += ' ' + componentClass + '-style--' + primary.style
 
+    if (primary.graphic_style === 'bleed') {
+      classes += ' ' + componentClass + '-style--bleed-wrapper'
+    }
 
-        if (primary.graphic_style === 'bleed') {
-            classes += ' ' + componentClass + '-style--bleed-wrapper';
-        }
-
-        /**
+    /**
          * Body
          *
          * This checks to see if there are two columns (two enties for body, body + body_two),
          * and if so it will display both
          * otherwise it will just display the one
          */
-        let body = () => {
-            if (primary.body.length && primary.body_two.length && primary.body_two[0].text !== "") {
-                return (<div className={"content-section-p-body content-section-p-body-columns"}>
-                    <div className="content-section-p-body-wrapper">
-                        <div className="content-section-p-body-column-one"
-                             dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.body)}}/>
-                        <div className="content-section-p-body-column-two"
-                             dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.body_two)}}/>
-                    </div>
-                </div>)
-            } else {
-                return (<div className={"content-section-p-body"}>
-                    <div className="content-section-p-body-wrapper"
-                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.body)}}/>
-                </div>)
-            }
-        };
+    let body = () => {
+      if (
+        primary.body.length &&
+        primary.body_two.length &&
+        primary.body_two[0].text !== ''
+      ) {
+        return (
+          <div
+            className={'content-section-p-body content-section-p-body-columns'}
+          >
+            <div className="content-section-p-body-wrapper">
+              <div
+                className="content-section-p-body-column-one"
+                dangerouslySetInnerHTML={{
+                  __html: PrismicDOM.RichText.asHtml(primary.body),
+                }}
+              />
+              <div
+                className="content-section-p-body-column-two"
+                dangerouslySetInnerHTML={{
+                  __html: PrismicDOM.RichText.asHtml(primary.body_two),
+                }}
+              />
+            </div>
+          </div>
+        )
+      } else {
+        return (
+          <div className={'content-section-p-body'}>
+            <div
+              className="content-section-p-body-wrapper"
+              dangerouslySetInnerHTML={{
+                __html: PrismicDOM.RichText.asHtml(primary.body),
+              }}
+            />
+          </div>
+        )
+      }
+    }
 
-        /**
+    /**
          * Graphic
          */
-        let graphic = () => {
-            /**
+    let graphic = () => {
+      /**
              * If this content section is graphic_with_text_slides,
              * we're going to render the items as graphics, rather than as actions
              * like in the default content section slice type
              */
-            if (this.props.data.slice_type === 'graphic_with_text_slides') {
-                return (
-                    <div
-                        className={componentClass + '-graphic ' + componentClass + '-graphic-slides ' + componentClass + '-area'}>
-                        {
-                            items.map((slide, i) => {
-                                return (<Graphic key={i}
-                                                 data={slide}/>)
-                            })
-                        }
-                    </div>
-                )
+      if (this.props.data.slice_type === 'graphic_with_text_slides') {
+        return (
+          <div
+            className={
+              componentClass +
+              '-graphic ' +
+              componentClass +
+              '-graphic-slides ' +
+              componentClass +
+              '-area'
             }
-            /**
+          >
+            {items.map((slide, i) => {
+              return <Graphic key={i} data={slide} />
+            })}
+          </div>
+        )
+      }
+      /**
              * graphic_style: browser
              * If the content section has a graphic uploaded, let's show it.
              */
-            if (primary.graphic && primary.graphic.url) {
-                /**
+      if (primary.graphic && primary.graphic.url) {
+        /**
                  * If the graphic style is set to browser, we will wrap it in a browser component.
                  */
-                if (primary.graphic_style === 'browser') {
-                    return (<div className={componentClass + '-graphic ' + componentClass + '-area'}>
-                        <Browser>
-                            <Graphic
-                                data={primary}/>
-                        </Browser>
-                    </div>)
-                }
-                /**
+        if (primary.graphic_style === 'browser') {
+          return (
+            <div
+              className={
+                componentClass + '-graphic ' + componentClass + '-area'
+              }
+            >
+              <Browser>
+                <Graphic data={primary} />
+              </Browser>
+            </div>
+          )
+        }
+        /**
                  * If the graphic style is set to phone, we will wrap it in a phone component.
                  */
-                if (primary.graphic_style === 'phone') {
-                    return (<div className={componentClass + '-graphic ' + componentClass + '-area'}>
-                        <Phone>
-                            <Graphic
-                                data={primary}/>
-                        </Phone>
-                    </div>)
-                }
-                /**
+        if (primary.graphic_style === 'phone') {
+          return (
+            <div
+              className={
+                componentClass + '-graphic ' + componentClass + '-area'
+              }
+            >
+              <Phone>
+                <Graphic data={primary} />
+              </Phone>
+            </div>
+          )
+        }
+        /**
                  * graphic_style: bleed
                  * We display bleed images a little bit differently
                  */
-                if (primary.graphic_style === 'bleed') {
-                    return (<div
-                        className={componentClass + '-graphic ' + componentClass + '-graphic--style-bleed-parent ' + componentClass + '-area'}>
-                        <Graphic
-                            background={true}
-                            data={primary}/>
-                    </div>)
-                }
-                return (<div className={componentClass + '-graphic ' + componentClass + '-area'}><Graphic
-                    data={primary}/></div>)
-            }
+        if (primary.graphic_style === 'bleed') {
+          return (
+            <div
+              className={
+                componentClass +
+                '-graphic ' +
+                componentClass +
+                '-graphic--style-bleed-parent ' +
+                componentClass +
+                '-area'
+              }
+            >
+              <Graphic background={true} data={primary} />
+            </div>
+          )
+        }
+        return (
+          <div
+            className={componentClass + '-graphic ' + componentClass + '-area'}
+          >
+            <Graphic data={primary} />
+          </div>
+        )
+      }
+    }
 
-
-        };
-
-
-        /**
+    /**
          * Actions
          * These are our buttons
          */
-        let actions = () => {
-
-            /**
+    let actions = () => {
+      /**
              * slice_type: graphic_with_text
              *
              * This is how I was handling the buttons before, as the repeated group in the content section
              * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
              */
-            if (this.props.data.slice_type === 'graphic_with_text') {
-                if (items && items.length) {
-                    return (<div className={"content-section-p-actions"}>
-                        <div className="content-section-p-actions-wrapper buttons">
-                            {items.map((button, i) => {
-                                return (<Button key={i} data={button}/>)
-                            })}
-                        </div>
-                    </div>)
-                } else {
-                    return null
-                }
-            } else {
-                /**
+      if (this.props.data.slice_type === 'graphic_with_text') {
+        if (items && items.length) {
+          return (
+            <div className={'content-section-p-actions'}>
+              <div className="content-section-p-actions-wrapper buttons">
+                {items.map((button, i) => {
+                  return <Button key={i} data={button} />
+                })}
+              </div>
+            </div>
+          )
+        } else {
+          return null
+        }
+      } else {
+        /**
                  * slice_type: all others
                  *
                  * This is the new way of dealing with buttons
@@ -221,94 +264,100 @@ export default class ContentSection extends React.Component {
                  * iterate over and display the buttons.
                  */
 
-                let buttons = []
+        let buttons = []
 
-                if (this.props.data.primary.button_one_label) {
-                    buttons.push({
-                        label: primary.button_one_label,
-                        link: primary.button_one_link,
-                        style: primary.button_one_style
-                    })
-                }
+        if (this.props.data.primary.button_one_label) {
+          buttons.push({
+            label: primary.button_one_label,
+            link: primary.button_one_link,
+            style: primary.button_one_style,
+          })
+        }
 
-                if (primary.button_two_label) {
-                    buttons.push({
-                        label: primary.button_two_label,
-                        link: primary.button_two_link,
-                        style: primary.button_two_style
-                    })
-                }
+        if (primary.button_two_label) {
+          buttons.push({
+            label: primary.button_two_label,
+            link: primary.button_two_link,
+            style: primary.button_two_style,
+          })
+        }
 
-                if (buttons.length) {
-                    return (<div className={"content-section-p-actions"}>
-                        <div className="content-section-p-actions-wrapper buttons">
-                            {buttons.map((button, i) => {
-                                return (<Button key={i} data={button}/>)
-                            })}
-                        </div>
-                    </div>)
-                } else {
-                    return null
-                }
-            }
+        if (buttons.length) {
+          return (
+            <div className={'content-section-p-actions'}>
+              <div className="content-section-p-actions-wrapper buttons">
+                {buttons.map((button, i) => {
+                  return <Button key={i} data={button} />
+                })}
+              </div>
+            </div>
+          )
+        } else {
+          return null
+        }
+      }
+    }
 
-        };
-
-
-        return (
-
-            <section className={classes}>
-                <div className="content-section-p-wrapper">
-                    <div className={componentClass + '-details ' + componentClass + '-area'}>
-                        {/**
+    return (
+      <section className={classes}>
+        <div className="content-section-p-wrapper">
+          <div
+            className={componentClass + '-details ' + componentClass + '-area'}
+          >
+            {/**
                          * If there's a pretitle,
                          * let's display it!
                          */
-                            primary.pretitle !== null ?
-                                (<div className={"content-section-p-pretitle"}>
-                                    <div className="content-section-p-pretitle-wrapper">
-                                        <h3>{primary.pretitle}</h3>
-                                    </div>
-                                </div>)
-                                : null}
-                        {/**
+            primary.pretitle !== null ? (
+              <div className={'content-section-p-pretitle'}>
+                <div className="content-section-p-pretitle-wrapper">
+                  <h3>{primary.pretitle}</h3>
+                </div>
+              </div>
+            ) : null}
+            {/**
                          * If there's a title,
                          * let's display it!
                          */
-                            primary.title.length && primary.title[0].text !== "" ?
-                                (<div className={"content-section-p-title"}>
-                                    <div className="content-section-p-title-wrapper"
-                                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.title)}}/>
-                                </div>)
-                                : null}
-                        {/**
+            primary.title.length && primary.title[0].text !== '' ? (
+              <div className={'content-section-p-title'}>
+                <div
+                  className="content-section-p-title-wrapper"
+                  dangerouslySetInnerHTML={{
+                    __html: PrismicDOM.RichText.asHtml(primary.title),
+                  }}
+                />
+              </div>
+            ) : null}
+            {/**
                          * If there's a pretitle,
                          * let's display it!
                          */
-                            primary.subtitle.length && primary.subtitle[0].text !== "" ?
-                                (<div className={"content-section-p-subtitle"}>
-                                    <div className="content-section-p-subtitle-wrapper"
-                                         dangerouslySetInnerHTML={{__html: PrismicDOM.RichText.asHtml(primary.subtitle)}}/>
-                                </div>)
-                                : null}
-                        {/**
+            primary.subtitle.length && primary.subtitle[0].text !== '' ? (
+              <div className={'content-section-p-subtitle'}>
+                <div
+                  className="content-section-p-subtitle-wrapper"
+                  dangerouslySetInnerHTML={{
+                    __html: PrismicDOM.RichText.asHtml(primary.subtitle),
+                  }}
+                />
+              </div>
+            ) : null}
+            {/**
                          * Display the body content
                          */
-                            body()}
+            body()}
 
-                        {/**
+            {/**
                          * If there are items, they are buttons
                          * let's display them!
                          */
 
-                            actions()}
-
-                    </div>
-                    {graphic()}
-
-
-                </div>
-            </section>
-        );
-    }
+            actions()}
+          </div>
+          {graphic()}
+        </div>
+      </section>
+    )
+  }
 }

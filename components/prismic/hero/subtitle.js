@@ -1,5 +1,5 @@
-import React from 'react';
-import PrismicDOM from 'prismic-dom';
+import React from 'react'
+import PrismicDOM from 'prismic-dom'
 
 /**
  * HeroSubtitle component
@@ -9,15 +9,11 @@ import PrismicDOM from 'prismic-dom';
  *
  */
 export default class HeroSubtitle extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props)
+  }
 
-    render() {
-        return (
-            <h2 className="title-sm">
-                {this.props.children}
-            </h2>
-        );
-    }
+  render() {
+    return <h2 className="title-sm">{this.props.children}</h2>
+  }
 }

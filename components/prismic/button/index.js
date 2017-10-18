@@ -2,9 +2,8 @@
  * @module Button
  */
 
-
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 /**
  * Button component
@@ -26,44 +25,46 @@ import Link from 'next/link';
  *
  */
 
-
 export default class Button extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    constructor(props) {
-        super(props);
+  componentDidMount() {}
+
+  render() {
+    let { data } = this.props
+
+    let classes = 'button'
+
+    if (data.style) {
+      classes += ' button-' + data.style
+    }
+    if (data.extra_classes) {
+      classes += ' ' + data.extra_classes
     }
 
-    componentDidMount() {
-
-    }
-
-    render() {
-        let {data} = this.props;
-
-        let classes = 'button';
-
-        if (data.style) {
-            classes += ' button-' + data.style
-        }
-        if (data.extra_classes) {
-            classes += ' ' + data.extra_classes
-        }
-
-        return (
-            <a href={data.link.url}
-               target={data.link.target}
-               title={data.title}
-               className={classes}>
-
-                {/* if: MDI icon field has content*/}
-                {data.mdi_icon ? (<div className="button-icon button-icon-mdi">
-                    <div className="button-icon-wrapper">
-                        <i className={'mdi mdi-' + data.mdi_icon}/>
-                    </div>
-                </div>) : null}
-                {/* end if */}
-                <div className="button-label" dangerouslySetInnerHTML={{__html: data.label}}/>
-            </a>
-        )
-    }
+    return (
+      <a
+        href={data.link.url}
+        target={data.link.target}
+        title={data.title}
+        className={classes}
+      >
+        {/* if: MDI icon field has content*/}
+        {data.mdi_icon ? (
+          <div className="button-icon button-icon-mdi">
+            <div className="button-icon-wrapper">
+              <i className={'mdi mdi-' + data.mdi_icon} />
+            </div>
+          </div>
+        ) : null}
+        {/* end if */}
+        <div
+          className="button-label"
+          dangerouslySetInnerHTML={{ __html: data.label }}
+        />
+      </a>
+    )
+  }
 }
