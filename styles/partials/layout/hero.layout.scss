@@ -64,6 +64,7 @@
   /**
    * Style specific styles
    * these styles deal with the various colors
+   * these styles deal with the various colors
    * and gradients that can be applied to the background
    */
   &::before {
@@ -225,7 +226,12 @@
           flex-grow: 1;
         }
         .hero-prismic-messaging {
-          padding-right:$unit*4;
+
+          @include media('>800px') {
+            padding-right:$unit*4;
+          }
+          padding-bottom:$unit*2;
+
           align-items: flex-start;
           justify-content: flex-start;
           h1 {

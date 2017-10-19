@@ -15,14 +15,21 @@
        */
       &[class*="--center"] {
 
-        &.content-section-p-style--bleed-wrapper{
+        &.content-section-p-style--bleed-wrapper {
           //display: flex;
           //align-items: center;
           //justify-content: center;
           #{$c}-wrapper {
-            max-width:100%;
-            padding-left:0;
-            padding-right:0;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+            @include media('<=800px') {
+              .content-section-p-details {
+                padding-left: $unit*2 !important;
+                padding-right: $unit*2 !important;
+              }
+            }
           }
         }
         #{$c}-title {
@@ -43,35 +50,35 @@
             text-align: center;
           }
           #{$c}-details {
-            padding-bottom:$unit*2;
+            padding-bottom: $unit*2;
           }
           #{$c}-graphic {
             /* Let's prevent the graphic from getting too big */
             max-width: 800px;
             width: 100%;
             padding-top: 0;
-            &.content-section-p-graphic--style-bleed-parent{
+            &.content-section-p-graphic--style-bleed-parent {
               width: 100%;
-              max-width:100%;
-              padding-bottom:0;
-              .image{
+              max-width: 100%;
+              padding-bottom: 0;
+              .image {
                 //min-height:600px;
               }
-            //  padding-top:0 !important;
-            //  padding-bottom:0 !important;
-            //  width: 100vw !important;
-            //  max-width:100vw;
-            //  position: absolute !important;
-            //  height:100% !important;
-            //  .content-section-p-graphic-item{
-            //    position: absolute;
-            //    height:100%;
-            //    width:100%;
-            //    .image{
-            //      height:100% !important;
-            //      padding-bottom:0 !important;
-            //    }
-            //  }
+              //  padding-top:0 !important;
+              //  padding-bottom:0 !important;
+              //  width: 100vw !important;
+              //  max-width:100vw;
+              //  position: absolute !important;
+              //  height:100% !important;
+              //  .content-section-p-graphic-item{
+              //    position: absolute;
+              //    height:100%;
+              //    width:100%;
+              //    .image{
+              //      height:100% !important;
+              //      padding-bottom:0 !important;
+              //    }
+              //  }
             }
           }
 

@@ -11,7 +11,10 @@
     "start": "NODE_ENV=production node server.js",
     "heroku-postinstall": "yarn run build",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write './{components,pages}/**/*.js'",
-    "precommit" : "yarn format"
+    "precommit": "yarn format"
+  },
+  "engines": {
+    "node": "7.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",

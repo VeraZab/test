@@ -7,20 +7,29 @@
     @include global-wrapper;
     display: flex;
     position: relative;
-    min-height: 740px;
     $tb-spacing: $unit*4;
+
     #{$c}-area {
       padding-top: $tb-spacing;
       padding-bottom: $tb-spacing;
     }
+    min-height: 60vh;
 
     @include media('>800px') {
+      padding-left:$unit*4;
+      padding-right:$unit*4;
+      min-height: 740px;
       $tb-spacing: $unit*10;
       #{$c}-area {
         padding-top: $tb-spacing;
         padding-bottom: $tb-spacing;
       }
     }
+  }
+
+  #{$c}-details {
+    position: relative;
+    z-index:99;
   }
 
   &:nth-of-type(odd) {

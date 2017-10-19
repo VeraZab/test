@@ -85,6 +85,9 @@
     p {
       max-width: 600px;
     }
+    ol{
+      padding-left:$unit*2;
+    }
     ul {
       list-style: none;
       margin: $unit*2 0;
