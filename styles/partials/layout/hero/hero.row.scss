@@ -1,0 +1,179 @@
+.hero-prismic {
+  $c: &;
+
+  /**
+ * Layout styles
+ * these styles deal the different arrangements of elements in the hero
+ */
+  &-layout {
+    &--row {
+      $details-width: 50%;
+      $graphic-width: 50%;
+      .hero-prismic-wrapper {
+        @include global-wrapper;
+        flex-direction: row !important;
+        display: flex;
+        align-items: center;
+        padding-top: 100px;
+        flex-wrap: wrap;
+        width: 100%;
+        @include media("<1060px") {
+          padding-top: 80px;
+        }
+        @include media("<=900px") {
+          flex-direction: column !important;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .hero-prismic-details-section {
+          padding-top: 0;
+          flex-grow: 1;
+
+          @include media('>900px') {
+            max-width: $details-width;
+            margin-left: 0;
+            margin-right: 0;
+            padding-bottom: $unit*10;
+          }
+          @include media("<=1250px") {
+            min-width: 620px;
+          }
+          @include media("<=960px") {
+            min-width: 420px;
+          }
+          @include media("<800px") {
+            min-width: 0px;
+          }
+
+        }
+        .hero-prismic-graphic-section {
+          align-self: flex-end;
+          padding-bottom: $unit*4;
+          //transform: translateY(-20px);
+          @include media('>900px') {
+            max-width: $graphic-width;
+            //transform: scale(1.15);
+            transform-origin: left bottom;
+          }
+          @include media('<900px') {
+            width: 100%;
+            padding-top: $unit*4;
+            padding-left: $unit*2;
+            padding-right: $unit*2;
+          }
+          flex-grow: 1;
+        }
+        .hero-prismic-messaging {
+
+          @include media('>800px') {
+            padding-right: $unit*4;
+          }
+          padding-bottom: $unit*2;
+
+          align-items: flex-start;
+          justify-content: flex-start;
+          h1 {
+            text-align: left;
+          }
+        }
+        .hero-prismic-actions {
+          @include handheld {
+            margin-left: auto;
+            width: 100%;
+            margin-right: auto;
+            .button {
+              margin-right: 0;
+            }
+          }
+          .buttons {
+            padding-top: $unit*2;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .button {
+              white-space: nowrap;
+              margin-left: 0;
+              margin-right: $unit;
+              margin-bottom: $unit;
+            }
+          }
+        }
+      }
+
+      @include media('<=900px') {
+        #{$c}-wrapper {
+          display: flex !important;
+          flex-direction: column;
+        }
+
+        #{$c}-bottom {
+          order: 2;
+        }
+
+        #{$c}-graphic-section {
+          order: 3;
+          padding-top: 0 !important;
+        }
+      }
+
+      /**
+      Slice Styles
+
+      Some slices in the hero will have different styling if they
+      are in the hero.
+
+       */
+
+      .logos-slice {
+        &-align {
+          &--left {
+
+            @include media('>900px') {
+              width: $graphic-width;
+              max-width: $details-width;
+              margin-left: 0;
+              margin-right: 0;
+              position: absolute;
+              bottom: $unit*4;
+
+            }
+            @include media("<=1250px") {
+              min-width: 620px;
+            }
+            @include media("<=960px") {
+              min-width: 420px;
+            }
+            @include media("<900px") {
+              min-width: 0px;
+            }
+
+            .logos-slice-wrapper {
+              .logos {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .logos-slice-logo {
+                  &:first-of-type {
+                    padding-left: 0;
+                  }
+                  max-width: 110px;
+                  width: 110px;
+
+                  @include media("<=500px") {
+                    width: 50%;
+                    max-width: 50%;
+                    padding-left: $unit*2;
+                    padding-right: $unit*2;
+                  }
+                  .image {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

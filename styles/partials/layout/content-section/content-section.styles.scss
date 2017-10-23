@@ -19,6 +19,12 @@
         opacity: 0.5 !important;
       }
     }
+    #{$c}-subtitle {
+      h3 {
+        color: white !important;
+        opacity: 0.65 !important;
+      }
+    }
     #{$c}-body {
       p, ul, ol, blockquote {
         color: white !important;
@@ -83,13 +89,13 @@
 
     &--black {
       & + #{$c} {
-        background: $color-rhino-light-4;
+        //background: $color-rhino-light-4;
       }
       & ~ #{$c}:nth-of-type(even) {
-        background-color: $color-rhino-light-4;
+        //background-color: $color-rhino-light-4;
       }
       & ~ #{$c}:nth-of-type(odd) {
-        background-color: white;
+        //background-color: white;
       }
 
       background: #000 !important;
