@@ -49,6 +49,14 @@
   &-details-section {
     flex-grow: 1;
     padding-top: $gutter*4;
+
+    pre{
+      background: rgba($color-rhino-core, 0.75);
+      //color: $color-lavender;
+      color: rgba($color-rhino-light-1, 0.85);
+      padding:$unit;
+      border-radius: 6px;
+    }
     @include handheld {
     }
   }

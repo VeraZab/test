@@ -72,12 +72,23 @@ export default class HeroDetailsSection extends React.Component {
     )
 
     /**
-     * Slices!
+     * Logos Slice
+     *
+     * An editor can add an array of logos to a hero
+     * you should only add one slice of logos, so this
+     * will find the first one and display it.
+     *
      */
-
     const slice_Logos = this.findSlice(data.hero_slices, 'logos')
     const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null
 
+    /**
+     * Github Stars Slice
+     *
+     * An editor can add an array of Github Repo urls to display
+     * the stars button and count. This will find the first instance of a
+     * slice with the type 'github_stars' and then display it :)
+     */
     const slice_GithubStars = this.findSlice(data.hero_slices, 'github_stars')
     const GithubStars = slice_GithubStars ? (
       <GithubStarsSlice slice={slice_GithubStars} />
