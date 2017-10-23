@@ -14,7 +14,7 @@
     "precommit": "yarn format"
   },
   "engines": {
-    "node": "7.x.x"
+    "node": "8.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
@@ -45,6 +45,7 @@
     "node-sass": "^4.4.0",
     "normalize-scss": "^6.0.0",
     "nprogress": "^0.2.0",
+    "parse-github-url": "^1.0.0",
     "postcss-easy-import": "2.0.0",
     "postcss-loader": "1.3.3",
     "postcss-uncss": "^0.14.0",

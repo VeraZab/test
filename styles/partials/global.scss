@@ -66,7 +66,7 @@ $animation-page-item-timing: 0.5s;
 @keyframes animateBar {
   from {
     transform: translateX(100%);
-    @include media('<=800px'){
+    @include media('<=800px') {
       transform: translateX(100%);
     }
   }
@@ -83,7 +83,7 @@ $animation-page-item-timing: 0.5s;
   }
   to {
     transform: translateX(100%);
-    @include media('<=800px'){
+    @include media('<=800px') {
       transform: translateX(100%);
     }
   }
@@ -99,8 +99,7 @@ $animation-page-item-timing: 0.5s;
     animation: fade-in-from-top $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-
-  &--fade-in{
+  &--fade-in {
     &-from-bottom {
       opacity: 0;
       animation: fade-in-from-bottom $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
@@ -114,24 +113,21 @@ $animation-page-item-timing: 0.5s;
 
   &--bar {
     transform: translateX(100%);
-    @include media('<=800px'){
+    @include media('<=800px') {
       transform: translateX(100%);
     }
-    animation: animateBar $animation-layout-timing  forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
-    &-reverse{
-      transform:none;
+    animation: animateBar $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+    &-reverse {
+      transform: none;
       animation: animateBarRev $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
     }
   }
 }
 
-
 a {
   color: currentColor;
   transition: $transition;
 }
-
-
 
 .image {
   width: 100%;
@@ -142,18 +138,18 @@ a {
   img {
     width: 100%;
     display: block;
-    &.img-loaded{
+    &.img-loaded {
       transform: none !important;
     }
   }
   copyright {
     position: absolute;
     right: 0;
-    bottom:0;
+    bottom: 0;
     font-size: 10px;
     //opacity: 0.5;
-    padding:$unit/2;
-    z-index:2;
+    padding: $unit/2;
+    z-index: 2;
     color: white;
     background: black;
     //mix-blend-mode: difference;
@@ -164,7 +160,7 @@ a {
     height: 100%;
     top: 0;
     left: 0;
-    img{
+    img {
       @include trans;
       transition-duration: 2.5s;
       transform-origin: center center;
@@ -183,14 +179,14 @@ a {
       box-shadow: 0 0 10px 0 rgba(white, 0.0);
     }
   }
-  &-loader{
+  &-loader {
 
     display: none;
   }
 
-  &.hq-loaded{
-    .image-preview{
-      opacity:0;
+  &.hq-loaded {
+    .image-preview {
+      opacity: 0;
     }
   }
   &-preview {
@@ -207,14 +203,14 @@ a {
     top: 0;
     position: absolute;
     will-change: opacity;
-    z-index:2;
-    &[data-background-image]{
-      opacity:0;
+    z-index: 2;
+    &[data-background-image] {
+      opacity: 0;
       @include trans;
       transition-duration: 2.5s;
       transform-origin: center center;
       transform: scale(1.06) !important;
-      &[data-loaded="true"]{
+      &[data-loaded="true"] {
         @extend .animate--fade-in;
         animation-delay: 0.1s;
         transform: none !important;
@@ -235,54 +231,58 @@ a {
 
 }
 
-.slices{
+.slices {
   width: 100%;
-  flex-grow:1;
+  flex-grow: 1;
 }
 
-.phone{
+.phone {
   $br: 40px;
-  margin:$unit*2 $unit*12;
-  margin-right:0;
-  max-width:480px;
+  margin: $unit*2 $unit*12;
+  margin-right: 0;
+  max-width: 480px;
   border-radius: $br;
   box-shadow: $drop-shadow-l-light;
   overflow: hidden;
   background: white;
-  padding:$unit $unit;
+  padding: $unit $unit;
   position: relative;
-  &-wrapper{
+  @include media('<=800px') {
+    margin-left:0;
+    margin-right:0;
+  }
+  &-wrapper {
 
   }
-  &-header{
+  &-header {
     //position: absolute;
     width: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
-    z-index:4;
-    &-wrapper{
+    z-index: 4;
+    &-wrapper {
       width: 100%;
       display: flex;
-      justify-content:center;
-      height:40px;
+      justify-content: center;
+      height: 40px;
       align-items: center;
-      padding-bottom:$unit;
+      padding-bottom: $unit;
     }
-    &-notch{
+    &-notch {
       //position: absolute;
       //top:0;
       width: 30%;
-      height:8px;
-      opacity:0.5;
+      height: 8px;
+      opacity: 0.5;
       background: darken(white, 15%);
-      border-radius:8px;
+      border-radius: 8px;
 
     }
   }
 
-  &-viewport{
+  &-viewport {
     border-radius: $br/1.2;
     overflow: hidden;
     background: white;

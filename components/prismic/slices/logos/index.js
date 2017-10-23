@@ -53,9 +53,9 @@ export default class LogosSlice extends React.Component {
             </div>
           ) : null}
           <div className="logos">
-            {data.items.map(logo => {
+            {data.items.map((logo, i) => {
               return (
-                <div className="logos-slice-logo">
+                <div className="logos-slice-logo" key={i}>
                   <Image data={logo.image} />
                 </div>
               )
