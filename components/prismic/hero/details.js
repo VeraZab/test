@@ -28,7 +28,7 @@ export default class HeroDetailsSection extends React.Component {
       : false
 
   render() {
-    let {data} = this.props
+    let { data } = this.props
 
     let HeroTopStyles = {}
 
@@ -65,7 +65,7 @@ export default class HeroDetailsSection extends React.Component {
       <HeroActions>
         <div className="buttons">
           {data.hero_buttons.map((button, i) => {
-            return <Button key={i} data={button}/>
+            return <Button key={i} data={button} />
           })}
         </div>
       </HeroActions>
@@ -76,10 +76,12 @@ export default class HeroDetailsSection extends React.Component {
      */
 
     const slice_Logos = this.findSlice(data.hero_slices, 'logos')
-    const Logos = slice_Logos ? <LogosSlice data={slice_Logos}/> : null
+    const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null
 
     const slice_GithubStars = this.findSlice(data.hero_slices, 'github_stars')
-    const GithubStars = slice_GithubStars ? <GithubStarsSlice slice={slice_GithubStars}/> : null
+    const GithubStars = slice_GithubStars ? (
+      <GithubStarsSlice slice={slice_GithubStars} />
+    ) : null
 
     return (
       <div className="hero-prismic-details-section">
