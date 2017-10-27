@@ -53,7 +53,7 @@ const webinars = [
         }
     },
     {
-        title: "Using Plolty’s Python API for Automatic Dashboards",
+        title: "Using Plotly’s Python API for Automatic Dashboards",
         date: "August 29, 2017 2PM EST",
         img: "https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133",
         presenter: {
@@ -73,7 +73,7 @@ const webinars = [
         }
     },
     {
-        title: "Using Plolty’s R API to Create and Update Online Dashboards",
+        title: "Using Plotly’s R API to Create and Update Online Dashboards",
         date: "September 20th, 2017 2PM EST",
         img: "https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-6164",
         presenter: {
