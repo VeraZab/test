@@ -3,7 +3,7 @@ import PrismicDOM from 'prismic-dom'
 
 import Graphic from './graphic'
 import Button from 'components/prismic/button'
-import {Browser} from 'components/browser'
+import { Browser } from 'components/browser'
 import Phone from 'components/phone'
 
 /**
@@ -18,13 +18,12 @@ export default class ContentSection extends React.Component {
     super(props)
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     /** Destructure props */
-    const {data: {primary}} = this.props
-    const {data: {items}} = this.props
+    const { data: { primary } } = this.props
+    const { data: { items } } = this.props
 
     /** Define the component class name */
     const componentClass = 'content-section-p'
@@ -158,7 +157,7 @@ export default class ContentSection extends React.Component {
             }
           >
             {items.map((logo, i) => {
-              return <Graphic noBlur key={i} data={logo}/>
+              return <Graphic noBlur key={i} data={logo} />
             })}
           </div>
         )
@@ -181,7 +180,7 @@ export default class ContentSection extends React.Component {
             }
           >
             {items.map((slide, i) => {
-              return <Graphic key={i} data={slide}/>
+              return <Graphic key={i} data={slide} />
             })}
           </div>
         )
@@ -202,7 +201,7 @@ export default class ContentSection extends React.Component {
               }
             >
               <Browser>
-                <Graphic data={primary}/>
+                <Graphic data={primary} />
               </Browser>
             </div>
           )
@@ -218,7 +217,7 @@ export default class ContentSection extends React.Component {
               }
             >
               <Phone>
-                <Graphic data={primary}/>
+                <Graphic data={primary} />
               </Phone>
             </div>
           )
@@ -239,7 +238,7 @@ export default class ContentSection extends React.Component {
                 '-area'
               }
             >
-              <Graphic background={true} data={primary}/>
+              <Graphic background={true} data={primary} />
             </div>
           )
         }
@@ -247,7 +246,7 @@ export default class ContentSection extends React.Component {
           <div
             className={componentClass + '-graphic ' + componentClass + '-area'}
           >
-            <Graphic data={primary}/>
+            <Graphic data={primary} />
           </div>
         )
       }
@@ -270,7 +269,7 @@ export default class ContentSection extends React.Component {
             <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {items.map((button, i) => {
-                  return <Button key={i} data={button}/>
+                  return <Button key={i} data={button} />
                 })}
               </div>
             </div>
@@ -311,7 +310,7 @@ export default class ContentSection extends React.Component {
             <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {buttons.map((button, i) => {
-                  return <Button key={i} data={button}/>
+                  return <Button key={i} data={button} />
                 })}
               </div>
             </div>
@@ -325,42 +324,45 @@ export default class ContentSection extends React.Component {
      * If there's a pretitle,
      * let's display it!
      */
-    const Pretitle = primary.pretitle !== null ? (
-      <div className={'content-section-p-pretitle'}>
-        <div className="content-section-p-pretitle-wrapper">
-          <h3>{primary.pretitle}</h3>
+    const Pretitle =
+      primary.pretitle !== null ? (
+        <div className={'content-section-p-pretitle'}>
+          <div className="content-section-p-pretitle-wrapper">
+            <h3>{primary.pretitle}</h3>
+          </div>
         </div>
-      </div>
-    ) : null;
+      ) : null
     /**
      * If there's a title,
      * let's display it!
      */
-    const Title = primary.title.length && primary.title[0].text !== '' ? (
-      <div className={'content-section-p-title'}>
-        <div
-          className="content-section-p-title-wrapper"
-          dangerouslySetInnerHTML={{
-            __html: PrismicDOM.RichText.asHtml(primary.title),
-          }}
-        />
-      </div>
-    ) : null
+    const Title =
+      primary.title.length && primary.title[0].text !== '' ? (
+        <div className={'content-section-p-title'}>
+          <div
+            className="content-section-p-title-wrapper"
+            dangerouslySetInnerHTML={{
+              __html: PrismicDOM.RichText.asHtml(primary.title),
+            }}
+          />
+        </div>
+      ) : null
 
     /**
      * If there's a Subtitle,
      * let's display it!
      */
-    const Subtitle = primary.subtitle.length && primary.subtitle[0].text !== '' ? (
-      <div className={'content-section-p-subtitle'}>
-        <div
-          className="content-section-p-subtitle-wrapper"
-          dangerouslySetInnerHTML={{
-            __html: PrismicDOM.RichText.asHtml(primary.subtitle),
-          }}
-        />
-      </div>
-    ) : null
+    const Subtitle =
+      primary.subtitle.length && primary.subtitle[0].text !== '' ? (
+        <div className={'content-section-p-subtitle'}>
+          <div
+            className="content-section-p-subtitle-wrapper"
+            dangerouslySetInnerHTML={{
+              __html: PrismicDOM.RichText.asHtml(primary.subtitle),
+            }}
+          />
+        </div>
+      ) : null
 
     return (
       <section className={classes}>
@@ -371,21 +373,22 @@ export default class ContentSection extends React.Component {
             {Pretitle}
             {Title}
             {Subtitle}
-            {this.props.data.slice_type === 'graphic_with_text_logos' ?
-              graphic() : null}
+            {this.props.data.slice_type === 'graphic_with_text_logos'
+              ? graphic()
+              : null}
 
-            {
-              body()}
+            {body()}
 
             {/**
              * If there are items, they are buttons
              * let's display them!
              */
 
-              actions()}
+            actions()}
           </div>
-          {this.props.data.slice_type !== 'graphic_with_text_logos' ?
-            graphic() : null}
+          {this.props.data.slice_type !== 'graphic_with_text_logos'
+            ? graphic()
+            : null}
         </div>
       </section>
     )

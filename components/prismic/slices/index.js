@@ -30,7 +30,10 @@ export default class Slices extends React.Component {
       <div className="slices">
         <div className="slices-wrapper">
           {data.map((slice, i) => {
-            if (slice.slice_type === 'graphic_with_text' || slice.slice_type === 'graphic_with_text_logos') {
+            if (
+              slice.slice_type === 'graphic_with_text' ||
+              slice.slice_type === 'graphic_with_text_logos'
+            ) {
               return <ContentSection key={i} data={slice} />
             } else if (slice.slice_type === 'graphic_with_text_slides') {
               return <ContentSection key={i} data={slice} />

@@ -31,7 +31,8 @@ export default class Graphic extends React.Component {
       classes += ' ' + this.props.className
     }
     if (data.graphic_blend_mode !== 'none') {
-      classes += ' content-section-p-graphic-blend-mode--' + data.graphic_blend_mode
+      classes +=
+        ' content-section-p-graphic-blend-mode--' + data.graphic_blend_mode
     }
 
     /**

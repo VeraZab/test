@@ -43,7 +43,9 @@ function Layout(Child) {
             <Metahead />
             <Head>
               <style dangerouslySetInnerHTML={{ __html: styles }} />
-              <title>{this.props.doc ? this.props.doc.data.title : 'Plotly'}</title>
+              <title>
+                {this.props.doc ? this.props.doc.data.title : 'Plotly'}
+              </title>
             </Head>
             <Header {...this.props} />
             <Child {...this.props} />
