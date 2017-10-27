@@ -86,6 +86,12 @@ export default class Hero extends React.Component {
     if (this.props.style) {
       HeroStyle = this.props.style
     }
+    const HeroWrapperBg = {
+      backgroundImage: 'url(' + data.hero_background_image.url + ')',
+      backgroundSize: data.hero_background_size,
+      backgroundPosition: data.hero_background_position,
+      backgroundRepeat: 'no-repeat',
+    }
     if (this.props.heroWrapperStyle) {
       HeroWrapperStyle = this.props.heroWrapperStyle
     }
@@ -101,7 +107,7 @@ export default class Hero extends React.Component {
         </div>
         <div
           className="hero-prismic-background-image"
-          style={HeroWrapperStyle}
+          style={HeroWrapperBg}
         />
       </section>
     )

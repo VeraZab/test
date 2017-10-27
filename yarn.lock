@@ -5468,9 +5468,9 @@ next-url-prettifier@^1.1.2:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/next-url-prettifier/-/next-url-prettifier-1.1.5.tgz#ce27eb29f584bd53aadf091874138ddd93bc8272"
 
-next@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/next/-/next-4.1.0.tgz#63828efdbb8a0f44a09ccf5880cf60b27b91ea2e"
+next@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/next/-/next-4.1.3.tgz#ff4d9c1d1bbe3ac50fc927515e3eb858ac7d6b69"
   dependencies:
     ansi-html "0.0.7"
     babel-core "6.26.0"
@@ -5511,7 +5511,7 @@ next@^4.1.0:
     pkg-up "2.0.0"
     prop-types "15.6.0"
     prop-types-exact "1.1.1"
-    react-hot-loader "^3.0.0"
+    react-hot-loader "3.1.1"
     recursive-copy "2.0.6"
     send "0.16.1"
     source-map-support "0.4.18"
@@ -7109,7 +7109,7 @@ react-ga@^2.2.0:
     object-assign "^4.0.1"
     prop-types "^15.5.6"
 
-react-hot-loader@^3.0.0:
+react-hot-loader@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.1.1.tgz#e06db8cd0841c41e3ab0b395b2b774126fc8914e"
   dependencies:

@@ -7,8 +7,8 @@
  */
   &-layout {
     &--row {
-      $details-width: 50%;
-      $graphic-width: 50%;
+      $details-width: 45%;
+      $graphic-width: 55%;
       .hero-prismic-wrapper {
         @include global-wrapper;
         flex-direction: row !important;
@@ -68,7 +68,7 @@
         .hero-prismic-messaging {
 
           @include media('>800px') {
-            padding-right: $unit*4;
+            padding-right: $unit*12;
           }
           padding-bottom: $unit*2;
 

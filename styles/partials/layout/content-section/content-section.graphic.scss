@@ -1,6 +1,12 @@
 .content-section-p {
   $c: &; // sets this classname to a variable omg
   #{$c}-graphic {
+
+    &-blend-mode{
+      &--multiply{
+        mix-blend-mode: multiply;
+      }
+    }
     @include media('<=800px') {
       padding-top: 0;
     }

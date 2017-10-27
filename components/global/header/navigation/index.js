@@ -21,6 +21,7 @@ export default class Navigation extends React.Component {
       return ''
     }
   }
+
   mobileMenuButtonText() {
     if (this.state.mobileMenu === true) {
       return 'Close'
@@ -87,7 +88,7 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div className="site-header-navigation">
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={{__html: styles}}/>
         <div className={'site-header-navigation-wrapper'}>
           <div
             className="mobile-menu-button"
@@ -109,7 +110,7 @@ export default class Navigation extends React.Component {
                 className="navigation-product-item"
                 onClick={this.togglePricingSubmenu.bind(this)}
               >
-                Pricing <i className="mdi mdi-chevron-down" />
+                Pricing <i className="mdi mdi-chevron-down"/>
               </div>
               {/** Pricing Submenu */}
               <div
@@ -148,7 +149,7 @@ export default class Navigation extends React.Component {
                 className="navigation-product-item"
                 onClick={this.toggleProductSubmenu.bind(this)}
               >
-                Products <i className="mdi mdi-chevron-down" />
+                Products <i className="mdi mdi-chevron-down"/>
               </div>
 
               {/** Products Submenu */}
@@ -166,7 +167,7 @@ export default class Navigation extends React.Component {
                   </div>
                   {/** Products Submenu Items */}
                   <Link
-                    href={{ pathname: '/prismic/chart-studio' }}
+                    href={{pathname: '/prismic/chart-studio'}}
                     as={'/online-chart-maker/'}
                     prefetch
                   >
@@ -175,7 +176,7 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                   <Link
-                    href={{ pathname: '/prismic/dashboards-and-reporting' }}
+                    href={{pathname: '/prismic/dashboards-and-reporting'}}
                     as={'/dashboards/'}
                     prefetch
                   >
@@ -183,11 +184,11 @@ export default class Navigation extends React.Component {
                       className="navigation-product-submenu-item"
                       href="/dashboards"
                     >
-                      Dashboard & Reporting
+                      Dashboards & Reporting
                     </a>
                   </Link>
                   <Link
-                    href={{ pathname: '/prismic/slide-decks' }}
+                    href={{pathname: '/prismic/slide-decks'}}
                     as={'/powerpoint-online/'}
                     prefetch
                   >
@@ -199,7 +200,7 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                   <Link
-                    href={{ pathname: '/prismic/falcon' }}
+                    href={{pathname: '/prismic/falcon'}}
                     as={'/database-connectors/'}
                     prefetch
                   >
@@ -222,15 +223,36 @@ export default class Navigation extends React.Component {
                     Dash
                   </a>
                   <Link
-                    href="/plotly-js-scientific-d3-charting-library/"
                     prefetch
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'plotly-js'
+                      }
+                    }}
+                    as={'/plotly-js-scientific-d3-charting-library/'}
                   >
                     <a className="navigation-product-submenu-item">Plotly.js</a>
                   </Link>
-                  <Link href="/d3-js-for-python-and-pandas-charts/" prefetch>
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'plotly-py'
+                      }
+                    }}
+                    as={'/d3-js-for-python-and-pandas-charts/'}
+                    prefetch>
                     <a className="navigation-product-submenu-item">Plotly.py</a>
                   </Link>
-                  <Link href="/d3-js-for-r-and-shiny-charts/" prefetch>
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'plotly-r'
+                      }
+                    }}
+                    as={'/d3-js-for-r-and-shiny-charts/'} prefetch>
                     <a className="navigation-product-submenu-item">Plotly.R</a>
                   </Link>
                 </div>
