@@ -9,6 +9,11 @@ app.prepare()
 
         const server = express()
 
+      server.get('/p/:slug', (req, res) => {
+        const queryParams = { slug: req.params.slug, docType: 'page' }
+        return app.render(req, res, '/p', queryParams)
+      })
+
         server.get('/robots.txt', (req, res) => {
             return res.sendfile('./static/robots.txt')
         })

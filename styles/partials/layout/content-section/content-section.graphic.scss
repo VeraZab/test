@@ -1,27 +1,52 @@
 .content-section-p {
   $c: &; // sets this classname to a variable omg
   #{$c}-graphic {
-    @include media('<=800px'){
-      padding-top:0;
+    @include media('<=800px') {
+      padding-top: 0;
     }
     &-style {
 
       &--bleed {
-        //position: relative;
-        //min-height: 600px;
-        //.image {
-        //  position: absolute;
-        //  top: -120px;
-        //  right: 0;
-        //  width: 50vw;
-        //  max-width: 900px;
-        //}
 
       }
       &--shadow {
         .image {
           box-shadow: $drop-shadow-l-light;
         }
+      }
+    }
+
+    &-logos {
+      padding-bottom:0;
+      padding-top:$unit*2 !important;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .content-section-p-graphic-item {
+        $size: 20%;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        width:$size;
+        max-width:$size;
+        padding: 0 $unit*2;
+        .image-preview{
+          opacity:0 !important;
+        }
+
+        @include media('<=800px') {
+          width: 50%;
+          max-width:50%;
+          padding:$unit*2;
+        }
+
+        @include media('>800px') {
+          &:not(:first-of-type):not(:nth-of-type(2)) {
+          }
+          &:nth-of-type(odd) {
+          }
+        }
+
       }
     }
 
@@ -32,12 +57,12 @@
         flex-grow: 1;
         width: calc(50% - #{$unit*2});
 
-        @include media('<=800px'){
+        @include media('<=800px') {
           width: 100%;
-          margin-bottom:$unit*2;
+          margin-bottom: $unit*2;
         }
 
-        @include media('>800px'){
+        @include media('>800px') {
           //width: 50%;
           &:not(:first-of-type):not(:nth-of-type(2)) {
             margin-top: $unit*2;
@@ -51,3 +76,6 @@
     }
   }
 }
+/* Rectangle 5: */
+
+

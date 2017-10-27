@@ -3,7 +3,7 @@ import PrismicDOM from 'prismic-dom'
 
 import Graphic from './graphic'
 import Button from 'components/prismic/button'
-import { Browser } from 'components/browser'
+import {Browser} from 'components/browser'
 import Phone from 'components/phone'
 
 /**
@@ -18,12 +18,13 @@ export default class ContentSection extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
   render() {
     /** Destructure props */
-    const { data: { primary } } = this.props
-    const { data: { items } } = this.props
+    const {data: {primary}} = this.props
+    const {data: {items}} = this.props
 
     /** Define the component class name */
     const componentClass = 'content-section-p'
@@ -32,56 +33,56 @@ export default class ContentSection extends React.Component {
     let classes = componentClass
 
     /**
-         * If someone has added classes to this component,
-         * let's append them to the classes variable
-         */
+     * If someone has added classes to this component,
+     * let's append them to the classes variable
+     */
     if (this.props.className) {
       classes += ' ' + this.props.className
     }
 
     /**
-         * Layout
-         *
-         * These values will the arrangement of the elements in the content section.
-         *
-         * Available values:
-         *
-         * row-auto                 -- will automatically alternate which side the graphic is on (even/odd)
-         * row-graphic-left         -- manually designate graphic on left
-         * row-graphic-right        -- manually designate graphic on right
-         * column-graphic-top       -- vertical layout, graphic on top
-         * column-graphic-bottom    -- vertical layout, graphic on bottom
-         */
+     * Layout
+     *
+     * These values will the arrangement of the elements in the content section.
+     *
+     * Available values:
+     *
+     * row-auto                 -- will automatically alternate which side the graphic is on (even/odd)
+     * row-graphic-left         -- manually designate graphic on left
+     * row-graphic-right        -- manually designate graphic on right
+     * column-graphic-top       -- vertical layout, graphic on top
+     * column-graphic-bottom    -- vertical layout, graphic on bottom
+     */
     classes += ' ' + componentClass + '-layout--' + primary.layout
 
     /**
-         * Alignment
-         *
-         * These apply if the content section is in a column layout.
-         * They are the standard justification settings, left, center, right...
-         *
-         * Available values:
-         *
-         * left     -- default
-         * center   -- center alignment
-         * right    -- right alignment
-         */
+     * Alignment
+     *
+     * These apply if the content section is in a column layout.
+     * They are the standard justification settings, left, center, right...
+     *
+     * Available values:
+     *
+     * left     -- default
+     * center   -- center alignment
+     * right    -- right alignment
+     */
     classes += ' ' + componentClass + '-align--' + primary.alignment
 
     /**
-         * Style
-         *
-         * These values will adjust classes that change the visual appearance of the content section.
-         *
-         * Available values:
-         *
-         * default -- The standard content section, which will alternate between white and $color-rhino-light-4 for its background color
-         * gradient_purple -- Uses the same styling as the purple gradient used in hero sections
-         * gradient_dark-blue -- Uses a darker blue gradient, white text
-         * gradient_blue -- Uses a blue gradient for its background, white text
-         * graphic_blue_pipes -- Uses a blue gradient and a pipe graphic for its background
-         * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
-         */
+     * Style
+     *
+     * These values will adjust classes that change the visual appearance of the content section.
+     *
+     * Available values:
+     *
+     * default -- The standard content section, which will alternate between white and $color-rhino-light-4 for its background color
+     * gradient_purple -- Uses the same styling as the purple gradient used in hero sections
+     * gradient_dark-blue -- Uses a darker blue gradient, white text
+     * gradient_blue -- Uses a blue gradient for its background, white text
+     * graphic_blue_pipes -- Uses a blue gradient and a pipe graphic for its background
+     * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
+     */
     classes += ' ' + componentClass + '-style--' + primary.style
 
     if (primary.graphic_style === 'bleed') {
@@ -89,13 +90,13 @@ export default class ContentSection extends React.Component {
     }
 
     /**
-         * Body
-         *
-         * This checks to see if there are two columns (two enties for body, body + body_two),
-         * and if so it will display both
-         * otherwise it will just display the one
-         */
-    let body = () => {
+     * Body
+     *
+     * This checks to see if there are two columns (two enties for body, body + body_two),
+     * and if so it will display both
+     * otherwise it will just display the one
+     */
+    const body = () => {
       if (
         primary.body.length &&
         primary.body_two.length &&
@@ -136,14 +137,37 @@ export default class ContentSection extends React.Component {
     }
 
     /**
-         * Graphic
-         */
+     * Graphic
+     */
     let graphic = () => {
       /**
-             * If this content section is graphic_with_text_slides,
-             * we're going to render the items as graphics, rather than as actions
-             * like in the default content section slice type
-             */
+       * If this content section is graphic_with_text_slides,
+       * we're going to render the items as graphics, rather than as actions
+       * like in the default content section slice type
+       */
+      if (this.props.data.slice_type === 'graphic_with_text_logos') {
+        return (
+          <div
+            className={
+              componentClass +
+              '-graphic ' +
+              componentClass +
+              '-graphic-logos ' +
+              componentClass +
+              '-area'
+            }
+          >
+            {items.map((logo, i) => {
+              return <Graphic noBlur key={i} data={logo}/>
+            })}
+          </div>
+        )
+      }
+      /**
+       * If this content section is graphic_with_text_slides,
+       * we're going to render the items as graphics, rather than as actions
+       * like in the default content section slice type
+       */
       if (this.props.data.slice_type === 'graphic_with_text_slides') {
         return (
           <div
@@ -157,19 +181,19 @@ export default class ContentSection extends React.Component {
             }
           >
             {items.map((slide, i) => {
-              return <Graphic key={i} data={slide} />
+              return <Graphic key={i} data={slide}/>
             })}
           </div>
         )
       }
       /**
-             * graphic_style: browser
-             * If the content section has a graphic uploaded, let's show it.
-             */
+       * graphic_style: browser
+       * If the content section has a graphic uploaded, let's show it.
+       */
       if (primary.graphic && primary.graphic.url) {
         /**
-                 * If the graphic style is set to browser, we will wrap it in a browser component.
-                 */
+         * If the graphic style is set to browser, we will wrap it in a browser component.
+         */
         if (primary.graphic_style === 'browser') {
           return (
             <div
@@ -178,14 +202,14 @@ export default class ContentSection extends React.Component {
               }
             >
               <Browser>
-                <Graphic data={primary} />
+                <Graphic data={primary}/>
               </Browser>
             </div>
           )
         }
         /**
-                 * If the graphic style is set to phone, we will wrap it in a phone component.
-                 */
+         * If the graphic style is set to phone, we will wrap it in a phone component.
+         */
         if (primary.graphic_style === 'phone') {
           return (
             <div
@@ -194,15 +218,15 @@ export default class ContentSection extends React.Component {
               }
             >
               <Phone>
-                <Graphic data={primary} />
+                <Graphic data={primary}/>
               </Phone>
             </div>
           )
         }
         /**
-                 * graphic_style: bleed
-                 * We display bleed images a little bit differently
-                 */
+         * graphic_style: bleed
+         * We display bleed images a little bit differently
+         */
         if (primary.graphic_style === 'bleed') {
           return (
             <div
@@ -215,7 +239,7 @@ export default class ContentSection extends React.Component {
                 '-area'
               }
             >
-              <Graphic background={true} data={primary} />
+              <Graphic background={true} data={primary}/>
             </div>
           )
         }
@@ -223,30 +247,30 @@ export default class ContentSection extends React.Component {
           <div
             className={componentClass + '-graphic ' + componentClass + '-area'}
           >
-            <Graphic data={primary} />
+            <Graphic data={primary}/>
           </div>
         )
       }
     }
 
     /**
-         * Actions
-         * These are our buttons
-         */
+     * Actions
+     * These are our buttons
+     */
     let actions = () => {
       /**
-             * slice_type: graphic_with_text
-             *
-             * This is how I was handling the buttons before, as the repeated group in the content section
-             * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
-             */
+       * slice_type: graphic_with_text
+       *
+       * This is how I was handling the buttons before, as the repeated group in the content section
+       * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
+       */
       if (this.props.data.slice_type === 'graphic_with_text') {
         if (items && items.length) {
           return (
             <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {items.map((button, i) => {
-                  return <Button key={i} data={button} />
+                  return <Button key={i} data={button}/>
                 })}
               </div>
             </div>
@@ -256,13 +280,13 @@ export default class ContentSection extends React.Component {
         }
       } else {
         /**
-                 * slice_type: all others
-                 *
-                 * This is the new way of dealing with buttons
-                 * it'll check to see if each have values
-                 * and if so it'll push it to a new array which we then
-                 * iterate over and display the buttons.
-                 */
+         * slice_type: all others
+         *
+         * This is the new way of dealing with buttons
+         * it'll check to see if each have values
+         * and if so it'll push it to a new array which we then
+         * iterate over and display the buttons.
+         */
 
         let buttons = []
 
@@ -287,7 +311,7 @@ export default class ContentSection extends React.Component {
             <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {buttons.map((button, i) => {
-                  return <Button key={i} data={button} />
+                  return <Button key={i} data={button}/>
                 })}
               </div>
             </div>
@@ -297,6 +321,46 @@ export default class ContentSection extends React.Component {
         }
       }
     }
+    /**
+     * If there's a pretitle,
+     * let's display it!
+     */
+    const Pretitle = primary.pretitle !== null ? (
+      <div className={'content-section-p-pretitle'}>
+        <div className="content-section-p-pretitle-wrapper">
+          <h3>{primary.pretitle}</h3>
+        </div>
+      </div>
+    ) : null;
+    /**
+     * If there's a title,
+     * let's display it!
+     */
+    const Title = primary.title.length && primary.title[0].text !== '' ? (
+      <div className={'content-section-p-title'}>
+        <div
+          className="content-section-p-title-wrapper"
+          dangerouslySetInnerHTML={{
+            __html: PrismicDOM.RichText.asHtml(primary.title),
+          }}
+        />
+      </div>
+    ) : null
+
+    /**
+     * If there's a Subtitle,
+     * let's display it!
+     */
+    const Subtitle = primary.subtitle.length && primary.subtitle[0].text !== '' ? (
+      <div className={'content-section-p-subtitle'}>
+        <div
+          className="content-section-p-subtitle-wrapper"
+          dangerouslySetInnerHTML={{
+            __html: PrismicDOM.RichText.asHtml(primary.subtitle),
+          }}
+        />
+      </div>
+    ) : null
 
     return (
       <section className={classes}>
@@ -304,58 +368,24 @@ export default class ContentSection extends React.Component {
           <div
             className={componentClass + '-details ' + componentClass + '-area'}
           >
-            {/**
-                         * If there's a pretitle,
-                         * let's display it!
-                         */
-            primary.pretitle !== null ? (
-              <div className={'content-section-p-pretitle'}>
-                <div className="content-section-p-pretitle-wrapper">
-                  <h3>{primary.pretitle}</h3>
-                </div>
-              </div>
-            ) : null}
-            {/**
-                         * If there's a title,
-                         * let's display it!
-                         */
-            primary.title.length && primary.title[0].text !== '' ? (
-              <div className={'content-section-p-title'}>
-                <div
-                  className="content-section-p-title-wrapper"
-                  dangerouslySetInnerHTML={{
-                    __html: PrismicDOM.RichText.asHtml(primary.title),
-                  }}
-                />
-              </div>
-            ) : null}
-            {/**
-                         * If there's a pretitle,
-                         * let's display it!
-                         */
-            primary.subtitle.length && primary.subtitle[0].text !== '' ? (
-              <div className={'content-section-p-subtitle'}>
-                <div
-                  className="content-section-p-subtitle-wrapper"
-                  dangerouslySetInnerHTML={{
-                    __html: PrismicDOM.RichText.asHtml(primary.subtitle),
-                  }}
-                />
-              </div>
-            ) : null}
-            {/**
-                         * Display the body content
-                         */
-            body()}
+            {Pretitle}
+            {Title}
+            {Subtitle}
+            {this.props.data.slice_type === 'graphic_with_text_logos' ?
+              graphic() : null}
+
+            {
+              body()}
 
             {/**
-                         * If there are items, they are buttons
-                         * let's display them!
-                         */
+             * If there are items, they are buttons
+             * let's display them!
+             */
 
-            actions()}
+              actions()}
           </div>
-          {graphic()}
+          {this.props.data.slice_type !== 'graphic_with_text_logos' ?
+            graphic() : null}
         </div>
       </section>
     )
