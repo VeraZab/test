@@ -67,6 +67,15 @@
         }
         .hero-prismic-messaging {
 
+          $cc: &;
+
+          @at-root .page--home{
+            #{$cc}{
+              @include media('>800px') {
+                padding-right: $unit*2;
+              }
+            }
+          }
           @include media('>800px') {
             padding-right: $unit*12;
           }
@@ -130,6 +139,22 @@
         &-align {
           &--left {
 
+            $cc: &;
+            @at-root .page--home {
+              #{$cc} {
+                @include media('>900px') {
+
+                  left:$unit*2;
+                  width: 100%;
+                  max-width: 100%;
+                  margin-left: 0;
+                  margin-right: 0;
+                  position: absolute;
+                  bottom: 0;
+
+                }
+              }
+            }
             @include media('>900px') {
               width: $graphic-width;
               max-width: $details-width;
@@ -166,7 +191,17 @@
                     padding-left: $unit*2;
                     padding-right: $unit*2;
                   }
-                  .image {
+                  $cc: &;
+
+                  @at-root .page--home {
+                    #{$cc} {
+                      @include media('>900px') {
+                        $width: 160px;
+                        max-width: $width;
+                        width: $width;
+
+                      }
+                    }
                   }
                 }
               }

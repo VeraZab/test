@@ -12,6 +12,12 @@
     }
     &-style {
 
+      &--no-blur{
+        .image-preview{
+          opacity:0 !important;
+        }
+      }
+
       &--bleed {
 
       }

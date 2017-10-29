@@ -58,9 +58,14 @@ export default class Img extends React.Component {
         </div>
       )
     }
+
+    let classes = 'image'
+    if(this.props.noBlur){
+      classes += ' no-blur'
+    }
     return (
       <div
-        className="image"
+        className={classes}
         style={this.props.styles}
         key={Math.random()
           .toString(36)

@@ -1,5 +1,4 @@
 
-
 .content-section-p {
   $c: &; // sets this classname to a variable omg
 
@@ -43,12 +42,27 @@
     }
   }
 
-
   &-style {
 
-
-
     &--graphic {
+      &_whitelabel {
+        background-color: white !important;
+        background-image: url(https://tamarack-prismic.imgix.net/plotly%2F69dfc2a2-587a-45bf-ba32-d9e077bb0224_embed_on_prem.svg) !important;
+        background-position: 190px 20px;
+        background-size: 1330px !important;
+        background-repeat: no-repeat;
+
+        @include media('<=1150px') {
+          background-position: 170% -120%;
+          background-size: 960px !important;
+        }
+        @include media('<=1050px') {
+          background-position: 180px 130px !important;
+        }
+        @include media('<=800px') {
+          background-position: 10px -60px !important;
+        }
+      }
       &_white_dotted-lines {
         background: url(https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg) center center no-repeat fixed !important;
         background-size: cover !important;
@@ -221,8 +235,5 @@
       }
     }
   }
-
-
-
 
 }

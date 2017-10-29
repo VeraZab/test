@@ -1,6 +1,5 @@
 import styles from 'components/code-explorer/code-explorer.scss'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/styles'
+
 
 const pythonCode = `colors=['rgb(53,195,176)',
 'rgb(168,201,121)',

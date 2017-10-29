@@ -1,75 +1,77 @@
-import React from 'react'
-import { images } from 'config/constants'
-import { imgix } from 'config/functions'
-import Img from './img'
-import lozad from 'lozad'
+import React from "react";
+import { images } from "config/constants";
+import { imgix } from "config/functions";
+import Img from "./img";
+import lozad from "lozad";
+
+const shortid = require("shortid");
 
 export default class Image extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    let observer = lozad('.lozad', {
+    let observer = lozad(".lozad", {
       load: function(el) {
-        el.src = el.dataset.src
+        el.src = el.dataset.src;
         el.onload = function() {
           el.parentElement.parentElement.parentElement.classList.add(
-            'hq-loaded'
-          )
-          el.classList.add('img-loaded')
-        }
-      },
-    })
-    observer.observe()
+            "hq-loaded"
+          );
+          el.classList.add("img-loaded");
+        };
+      }
+    });
+    observer.observe();
   }
 
   render() {
-    let { data } = this.props
+    let { data } = this.props;
 
-    data.url = imgix(data.url)
+    data.url = imgix(data.url);
 
-    let aspectRatio, imageParams, image, style
+    let aspectRatio, imageParams, image, style;
 
-    let background = false
-    let position = ''
+    let background = false;
+    let position = "";
 
     if (this.props.background) {
-      background = true
-      position = this.props.position
+      background = true;
+      position = this.props.position;
     }
 
     if (this.props.size) {
-      let aspectRatio = this.props.size.h / this.props.size.w * 100
+      let aspectRatio = this.props.size.h / this.props.size.w * 100;
       imageParams = {
-        ar: aspectRatio + '%',
+        ar: aspectRatio + "%",
         preview:
-          '?w=' +
+          "?w=" +
           Math.floor(this.props.size.w / images.preview.scale) +
-          '&h=' +
+          "&h=" +
           Math.floor(this.props.size.h / images.preview.scale) +
-          '&fit=crop&crop=' +
+          "&fit=crop&crop=" +
           this.props.size.crop +
-          '&blur=' +
+          "&blur=" +
           images.preview.blur +
-          '&q=' +
+          "&q=" +
           images.preview.quality +
-          '&auto=format',
+          "&auto=format",
         hq:
-          '?w=' +
+          "?w=" +
           Math.round(this.props.size.w * images.hq.scale) +
-          '&h=' +
+          "&h=" +
           Math.round(this.props.size.h * images.hq.scale) +
-          '&fit=crop&crop=' +
+          "&fit=crop&crop=" +
           this.props.size.crop +
-          '&q=' +
+          "&q=" +
           images.hq.quality +
-          '&auto=format',
-      }
+          "&auto=format"
+      };
       style = {
-        height: '0',
-        paddingBottom: imageParams.ar,
-      }
+        height: "0",
+        paddingBottom: imageParams.ar
+      };
       image = (
         <Img
           background={background}
@@ -79,45 +81,47 @@ export default class Image extends React.Component {
           imageParams={imageParams}
           styles={style}
         />
-      )
+      );
     } else {
-      aspectRatio = data.dimensions.height / data.dimensions.width * 100
+      aspectRatio = data.dimensions.height / data.dimensions.width * 100;
       imageParams = {
         preview:
-          '?w=' +
+          "?w=" +
           Math.floor(data.dimensions.width / images.preview.scale) +
-          '&h=' +
+          "&h=" +
           Math.floor(data.dimensions.height / images.preview.scale) +
-          '&fit=crop&blur=' +
+          "&fit=crop&blur=" +
           images.preview.blur +
-          '&q=' +
+          "&q=" +
           images.preview.quality +
-          '&auto=format',
+          "&auto=format",
         hq:
-          '?w=' +
+          "?w=" +
           Math.round(data.dimensions.width * images.hq.scale) +
-          '&h=' +
+          "&h=" +
           Math.round(data.dimensions.height * images.hq.scale) +
-          '&fit=crop&crop=top,left&q=' +
+          "&fit=crop&crop=top,left&q=" +
           images.hq.quality +
-          '&auto=format',
-      }
+          "&auto=format"
+      };
       style = {
-        height: '0',
-        paddingBottom: Math.floor(aspectRatio) + '%',
-      }
+        height: "0",
+        paddingBottom: Math.floor(aspectRatio) + "%"
+      };
       image = (
         <Img
+          key={shortid.generate()}
           background={background}
           position={position}
           attachment={this.props.attachment}
           data={data}
           imageParams={imageParams}
           styles={style}
+          noBlur={this.props.noBlur}
         />
-      )
+      );
     }
 
-    return image
+    return image;
   }
 }

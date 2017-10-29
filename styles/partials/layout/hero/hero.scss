@@ -10,7 +10,7 @@
   padding-top: 72px;
   min-height: 700px;
   flex-wrap: wrap;
-  //overflow: hidden;
+  overflow: hidden;
   position: relative;
   /**
    * wrapper styles
@@ -189,6 +189,15 @@
       text-align: left;
     }
   }
+
+  @at-root .page--home {
+    #{$c}-layout--row {
+      #{$c}-graphic-section {
+        align-self: flex-start !important;
+        padding-bottom: $unit*10 !important;
+      }
+    }
+  }
 }
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -256,8 +265,10 @@
   }
 
 }
+
 @import "hero.column";
 @import "hero.row";
 @import "hero.styles";
 @import "hero.typography";
 @import "hero.slices";
+

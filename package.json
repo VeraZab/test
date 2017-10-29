@@ -13,7 +13,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write './{components,pages}/**/*.js'"
   },
   "engines": {
-    "node": "7.x.x"
+    "node": "8.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",
@@ -54,12 +54,16 @@
     "proptypes": "^0.14.4",
     "raw-loader": "^0.5.1",
     "react": "^16.0.0",
+    "react-codemirror": "^1.0.0",
+    "react-codemirror2": "^3.0.3",
     "react-dom": "^16.0.0",
+    "react-fast-highlight": "^2.2.0",
     "react-ga": "^2.2.0",
     "react-sticky": "5.0.8",
     "react-swipe": "^5.0.6",
-    "react-syntax-highlighter": "^5.0.0",
+    "react-syntax-highlighter": "^5.8.0",
     "sass-loader": "^6.0.5",
+    "shortid": "^2.2.8",
     "swipe-js-iso": "^2.0.3",
     "vargs": "^0.1.0",
     "webpack": "2"

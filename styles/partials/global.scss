@@ -135,6 +135,12 @@ a {
   overflow: hidden;
   background: transparent;
 
+  &.no-blur{
+    .image-preview{
+      opacity:0 !important;
+    }
+  }
+
   img {
     width: 100%;
     display: block;

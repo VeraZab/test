@@ -7,6 +7,7 @@
     @include global-wrapper;
     display: flex;
     position: relative;
+    flex-wrap:wrap;
     $tb-spacing: $unit*4;
 
     #{$c}-area {
@@ -42,6 +43,19 @@
 
   #{$c}-actions {
     padding-top: $unit*2;
+  }
+
+  .github-stars{
+    width: 100%;
+    @include global-wrapper;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:$unit*4;
+    & ~ .content-section-p-area{
+
+      padding-top:$unit*4 !important;
+    }
   }
 
 }
