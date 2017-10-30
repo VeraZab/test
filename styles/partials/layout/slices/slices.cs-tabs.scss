@@ -1,0 +1,106 @@
+.tabs {
+  $c: &;
+  display: flex;
+  #{$c}__wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Tabs Header */
+
+  #{$c}__header {
+    width: 100%;
+    position: sticky;
+    top:-1px;
+    z-index:9999;
+    background: white;
+    &__wrapper {
+      display: flex;
+      flex-grow: 1;
+      @include global-wrapper;
+
+    }
+    &__item {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      padding: $unit*2;
+      align-items: center;
+      position: relative;
+      z-index:99;
+
+      &::after{
+        content: '';
+        position: absolute;
+        height:4px;
+        bottom:-1px;
+        width:100%;
+        background: $color-dodger;
+        @include trans;
+        transform-origin:center center;
+        transform: scaleX(0);
+      }
+
+      &:hover{
+        color: $color-dodger-shade;
+        cursor: pointer;
+        &::after{
+          transform: none;
+        }
+      }
+
+      &.active{
+        color: $color-dodger;
+        &::after{
+          transform: none;
+        }
+      }
+
+      &.disabled{
+        pointer-events: none;
+      }
+
+
+
+      &:not(:first-of-type){
+        margin-left:$unit*2;
+      }
+
+      &__icon {
+        width: 40px;
+        padding: $unit/2;
+        margin-right: $unit/2;
+      }
+      .label {
+        font-size: 24px;
+        @include ff-dosis;
+      }
+    }
+  }
+
+  #{$c}__content {
+    width: 100%;
+    flex-grow: 1;
+
+    .browser{
+      &-viewport{
+        max-height:400px;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  #{$c}__pagination {
+    position: absolute;
+    width: 100%;
+    top:0;
+    font-size:48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:88px;
+  }
+}

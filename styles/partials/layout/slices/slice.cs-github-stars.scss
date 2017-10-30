@@ -1,0 +1,22 @@
+.github_stars {
+  $c: &;
+
+  #{$c}__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{$c}__item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:$unit;
+    &__label{
+      padding-bottom:$unit;
+    }
+  }
+
+}
