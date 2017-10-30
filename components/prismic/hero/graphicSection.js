@@ -60,9 +60,9 @@ export default class HeroGraphicSection extends React.Component {
           <Image data={data.hero_graphic} />
         </Browser>
       )
-    } else if(data.hero_graphic_style === 'no-blur'){
+    } else if (data.hero_graphic_style === 'no-blur') {
       graphic = <Image noBlur data={data.hero_graphic} />
-    } else{
+    } else {
       graphic = <Image data={data.hero_graphic} />
     }
     return (

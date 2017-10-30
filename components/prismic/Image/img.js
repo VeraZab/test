@@ -60,7 +60,7 @@ export default class Img extends React.Component {
     }
 
     let classes = 'image'
-    if(this.props.noBlur){
+    if (this.props.noBlur) {
       classes += ' no-blur'
     }
     return (

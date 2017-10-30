@@ -1,6 +1,5 @@
 import styles from 'components/code-explorer/code-explorer.scss'
 
-
 const pythonCode = `colors=['rgb(53,195,176)',
 'rgb(168,201,121)',
 'rgb(255,210,181)',
