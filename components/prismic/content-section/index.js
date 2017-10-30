@@ -1,13 +1,13 @@
-import React from "react";
-import PrismicDOM from "prismic-dom";
+import React from 'react';
+import PrismicDOM from 'prismic-dom';
 
-import Graphic from "./graphic";
-import Button from "components/prismic/button";
-import { Browser } from "components/browser";
-import Phone from "components/phone";
-import GithubStarsSlice from "components/prismic/slices/github_stars";
-import CodeExplorer from "components/prismic/slices/code-explorer";
-const shortid = require("shortid");
+import Graphic from './graphic';
+import Button from 'components/prismic/button';
+import {Browser} from 'components/browser';
+import Phone from 'components/phone';
+import GithubStarsSlice from 'components/prismic/slices/github_stars';
+import CodeExplorer from 'components/prismic/slices/code-explorer';
+const shortid = require('shortid');
 
 /**
  * ContentSection component
@@ -21,15 +21,16 @@ export default class ContentSection extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
   render() {
     /** Destructure props */
-    const { data: { primary } } = this.props;
-    const { data: { items } } = this.props;
+    const {data: {primary}} = this.props;
+    const {data: {items}} = this.props;
 
     /** Define the component class name */
-    const componentClass = "content-section-p";
+    const componentClass = 'content-section-p';
 
     /** The classes variable */
     let classes = componentClass;
@@ -39,8 +40,10 @@ export default class ContentSection extends React.Component {
      * let's append them to the classes variable
      */
     if (this.props.className) {
-      classes += " " + this.props.className;
+      classes += ' ' + this.props.className;
     }
+
+    classes += ' ' + this.props.data.slice_type
 
     /**
      * Layout
@@ -57,9 +60,9 @@ export default class ContentSection extends React.Component {
      */
 
     if (!primary.layout) {
-      primary.layout = "row-auto";
+      primary.layout = 'row-auto';
     }
-    classes += " " + componentClass + "-layout--" + primary.layout;
+    classes += ' ' + componentClass + '-layout--' + primary.layout;
 
     /**
      * Alignment
@@ -74,9 +77,9 @@ export default class ContentSection extends React.Component {
      * right    -- right alignment
      */
     if (!primary.alignment) {
-      primary.alignment = "left";
+      primary.alignment = 'left';
     }
-    classes += " " + componentClass + "-align--" + primary.alignment;
+    classes += ' ' + componentClass + '-align--' + primary.alignment;
 
     /**
      * Style
@@ -93,12 +96,12 @@ export default class ContentSection extends React.Component {
      * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
      */
     if (!primary.style) {
-      primary.style = "default";
+      primary.style = 'default';
     }
-    classes += " " + componentClass + "-style--" + primary.style;
+    classes += ' ' + componentClass + '-style--' + primary.style;
 
-    if (primary.graphic_style === "bleed") {
-      classes += " " + componentClass + "-style--bleed-wrapper";
+    if (primary.graphic_style === 'bleed') {
+      classes += ' ' + componentClass + '-style--bleed-wrapper';
     }
 
     /**
@@ -114,11 +117,11 @@ export default class ContentSection extends React.Component {
         primary.body.length &&
         primary.body_two &&
         primary.body_two.length &&
-        primary.body_two[0].text !== ""
+        primary.body_two[0].text !== ''
       ) {
         return (
           <div
-            className={"content-section-p-body content-section-p-body-columns"}
+            className={'content-section-p-body content-section-p-body-columns'}
           >
             <div className="content-section-p-body-wrapper">
               <div
@@ -138,7 +141,7 @@ export default class ContentSection extends React.Component {
         );
       } else {
         return (
-          <div className={"content-section-p-body"}>
+          <div className={'content-section-p-body'}>
             <div
               className="content-section-p-body-wrapper"
               dangerouslySetInnerHTML={{
@@ -159,20 +162,20 @@ export default class ContentSection extends React.Component {
        * we're going to render the items as graphics, rather than as actions
        * like in the default content section slice type
        */
-      if (this.props.data.slice_type === "graphic_with_text_logos") {
+      if (this.props.data.slice_type === 'graphic_with_text_logos') {
         return (
           <div
             className={
               componentClass +
-              "-graphic " +
+              '-graphic ' +
               componentClass +
-              "-graphic-logos " +
+              '-graphic-logos ' +
               componentClass +
-              "-area"
+              '-area'
             }
           >
             {items.map((logo, i) => {
-              return <Graphic noBlur key={shortid.generate()} data={logo} />;
+              return <Graphic noBlur key={shortid.generate()} data={logo}/>;
             })}
           </div>
         );
@@ -182,20 +185,20 @@ export default class ContentSection extends React.Component {
        * we're going to render the items as graphics, rather than as actions
        * like in the default content section slice type
        */
-      if (this.props.data.slice_type === "graphic_with_text_slides") {
+      if (this.props.data.slice_type === 'graphic_with_text_slides') {
         return (
           <div
             className={
               componentClass +
-              "-graphic " +
+              '-graphic ' +
               componentClass +
-              "-graphic-slides " +
+              '-graphic-slides ' +
               componentClass +
-              "-area"
+              '-area'
             }
           >
             {items.map((slide, i) => {
-              return <Graphic key={shortid.generate()} data={slide} />;
+              return <Graphic key={shortid.generate()} data={slide}/>;
             })}
           </div>
         );
@@ -208,15 +211,15 @@ export default class ContentSection extends React.Component {
         /**
          * If the graphic style is set to browser, we will wrap it in a browser component.
          */
-        if (primary.graphic_style === "browser") {
+        if (primary.graphic_style === 'browser') {
           return (
             <div
               className={
-                componentClass + "-graphic " + componentClass + "-area"
+                componentClass + '-graphic ' + componentClass + '-area'
               }
             >
               <Browser>
-                <Graphic data={primary} />
+                <Graphic data={primary}/>
               </Browser>
             </div>
           );
@@ -224,15 +227,15 @@ export default class ContentSection extends React.Component {
         /**
          * If the graphic style is set to phone, we will wrap it in a phone component.
          */
-        if (primary.graphic_style === "phone") {
+        if (primary.graphic_style === 'phone') {
           return (
             <div
               className={
-                componentClass + "-graphic " + componentClass + "-area"
+                componentClass + '-graphic ' + componentClass + '-area'
               }
             >
               <Phone>
-                <Graphic data={primary} />
+                <Graphic data={primary}/>
               </Phone>
             </div>
           );
@@ -241,27 +244,27 @@ export default class ContentSection extends React.Component {
          * graphic_style: bleed
          * We display bleed images a little bit differently
          */
-        if (primary.graphic_style === "bleed") {
+        if (primary.graphic_style === 'bleed') {
           return (
             <div
               className={
                 componentClass +
-                "-graphic " +
+                '-graphic ' +
                 componentClass +
-                "-graphic--style-bleed-parent " +
+                '-graphic--style-bleed-parent ' +
                 componentClass +
-                "-area"
+                '-area'
               }
             >
-              <Graphic background={true} data={primary} />
+              <Graphic background={true} data={primary}/>
             </div>
           );
         }
         return (
           <div
-            className={componentClass + "-graphic " + componentClass + "-area"}
+            className={componentClass + '-graphic ' + componentClass + '-area'}
           >
-            <Graphic data={primary} />
+            <Graphic data={primary}/>
           </div>
         );
       }
@@ -279,13 +282,13 @@ export default class ContentSection extends React.Component {
        * This is how I was handling the buttons before, as the repeated group in the content section
        * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
        */
-      if (this.props.data.slice_type === "graphic_with_text") {
+      if (this.props.data.slice_type === 'graphic_with_text') {
         if (items && items.length) {
           return (
-            <div className={"content-section-p-actions"}>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {items.map((button, i) => {
-                  return <Button key={shortid.generate()} data={button} />;
+                  return <Button key={shortid.generate()} data={button}/>;
                 })}
               </div>
             </div>
@@ -323,10 +326,10 @@ export default class ContentSection extends React.Component {
 
         if (buttons.length) {
           return (
-            <div className={"content-section-p-actions"}>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
                 {buttons.map((button, i) => {
-                  return <Button key={shortid.generate()} data={button} />;
+                  return <Button key={shortid.generate()} data={button}/>;
                 })}
               </div>
             </div>
@@ -342,7 +345,7 @@ export default class ContentSection extends React.Component {
      */
     const Pretitle =
       primary.pretitle !== null ? (
-        <div className={"content-section-p-pretitle"}>
+        <div className={'content-section-p-pretitle'}>
           <div className="content-section-p-pretitle-wrapper">
             <h3>{primary.pretitle}</h3>
           </div>
@@ -353,8 +356,8 @@ export default class ContentSection extends React.Component {
      * let's display it!
      */
     const Title =
-      primary.title && primary.title.length && primary.title[0].text !== "" ? (
-        <div className={"content-section-p-title"}>
+      primary.title && primary.title.length && primary.title[0].text !== '' ? (
+        <div className={'content-section-p-title'}>
           <div
             className="content-section-p-title-wrapper"
             dangerouslySetInnerHTML={{
@@ -371,8 +374,8 @@ export default class ContentSection extends React.Component {
     const Subtitle =
       primary.subtitle &&
       primary.subtitle.length &&
-      primary.subtitle[0].text !== "" ? (
-        <div className={"content-section-p-subtitle"}>
+      primary.subtitle[0].text !== '' ? (
+        <div className={'content-section-p-subtitle'}>
           <div
             className="content-section-p-subtitle-wrapper"
             dangerouslySetInnerHTML={{
@@ -382,14 +385,14 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null;
 
-    if (this.props.data.slice_type === "cs-tabs") {
+    if (this.props.data.slice_type === 'cs-tabs') {
       return (
         <section className={classes}>
           <div className="content-section-p-wrapper">
             {graphic()}
             <div
               className={
-                componentClass + "-details " + componentClass + "-area"
+                componentClass + '-details ' + componentClass + '-area'
               }
             >
               {Pretitle}
@@ -404,16 +407,16 @@ export default class ContentSection extends React.Component {
     }
 
     const GithubStarsSection =
-      this.props.data.slice_type === "cs-github-stars" ? (
+      this.props.data.slice_type === 'cs-github-stars' ? (
         <div className="github-stars">
-          <GithubStarsSlice key={shortid.generate()} slice={this.props.data} />
+          <GithubStarsSlice key={shortid.generate()} slice={this.props.data}/>
         </div>
       ) : null;
 
     const CodeExplorerSection =
-      this.props.data.slice_type === "cs-code-explorer" ? (
+      this.props.data.slice_type === 'cs-code-explorer' ? (
         <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={this.props.data} />{" "}
+          <CodeExplorer data={this.props.data}/>{' '}
         </div>
       ) : null;
 
@@ -421,12 +424,12 @@ export default class ContentSection extends React.Component {
       <section className={classes}>
         <div className="content-section-p-wrapper">
           <div
-            className={componentClass + "-details " + componentClass + "-area"}
+            className={componentClass + '-details ' + componentClass + '-area'}
           >
             {Pretitle}
             {Title}
             {Subtitle}
-            {this.props.data.slice_type === "graphic_with_text_logos"
+            {this.props.data.slice_type === 'graphic_with_text_logos'
               ? graphic()
               : null}
 
@@ -437,10 +440,10 @@ export default class ContentSection extends React.Component {
              * let's display them!
              */
 
-            actions()}
+              actions()}
             {CodeExplorerSection}
           </div>
-          {this.props.data.slice_type !== "graphic_with_text_logos"
+          {this.props.data.slice_type !== 'graphic_with_text_logos'
             ? graphic()
             : null}
           {GithubStarsSection}

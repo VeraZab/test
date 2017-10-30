@@ -1,7 +1,7 @@
-import React from "react";
-import ContentSection from "components/prismic/content-section";
-import Image from "components/prismic/Image";
-const shortid = require("shortid");
+import React from 'react';
+import ContentSection from 'components/prismic/content-section';
+import Image from 'components/prismic/Image';
+const shortid = require('shortid');
 /**
  * Tabs slice
  *
@@ -29,7 +29,7 @@ export default class TabsSlice extends React.Component {
   async componentWillMount() {
     this.props.data.items.map((contentSection, i) => {
       contentSection.uid = shortid.generate();
-      contentSection.layout = "row-right";
+      contentSection.layout = 'row-right';
       if (i === 0) {
         this.setState({
           activeTab: contentSection.uid,
@@ -72,12 +72,12 @@ export default class TabsSlice extends React.Component {
         key={shortid.generate()}
         onClick={this.setTab(tab, i)}
         className={
-          "tabs__header__item" +
-          (this.state.index === i ? " disabled active" : "")
+          'tabs__header__item not-mobile' +
+          (this.state.index === i ? ' disabled active' : '')
         }
       >
         <div className="tabs__header__item__icon">
-          <Image data={tab.primary.tab_icon} />
+          <Image data={tab.primary.tab_icon}/>
         </div>
         <div className="label">{tab.primary.label}</div>
       </div>
@@ -85,36 +85,50 @@ export default class TabsSlice extends React.Component {
     let tab = this.state.tabs.find(
       tab => tab.primary.uid === this.state.activeTab
     );
+    const mobileTab = (
+      <div
+        key={shortid.generate()}
+        className={
+          'tabs__header__item mobile-only  disabled active'
+        }
+      >
+        <div className="tabs__header__item__icon">
+          <Image data={tab.primary.tab_icon}/>
+        </div>
+        <div className="label">{tab.primary.label}</div>
+      </div>
+    );
     return (
       <div className="tabs">
         <div className="tabs__wrapper">
           <div className="tabs__header">
-            <div className="tabs__header__wrapper">{tabs}</div>
-          </div>
-          <div className="tabs__content">
+            <div className="tabs__header__wrapper">{tabs}{mobileTab}</div>
             <div className="tabs__pagination">
               <div
                 onClick={this.prev}
                 className={
                   this.state.index === 0
-                    ? "tabs__pagination__prev disabled"
-                    : "tabs__pagination__prev"
+                    ? 'tabs__pagination__prev disabled'
+                    : 'tabs__pagination__prev'
                 }
               >
-                <i className="mdi mdi-chevron-left" />
+                <i className="mdi mdi-chevron-left"/>
               </div>
               <div
                 onClick={this.next}
                 className={
                   this.state.index === this.state.tabs.length - 1
-                    ? "tabs__pagination__next disabled"
-                    : "tabs__pagination__next"
+                    ? 'tabs__pagination__next disabled'
+                    : 'tabs__pagination__next'
                 }
               >
-                <i className="mdi mdi-chevron-right" />
+                <i className="mdi mdi-chevron-right"/>
               </div>
             </div>
-            <ContentSection key={tab.primary.uid} data={tab} />
+          </div>
+          <div className="tabs__content">
+
+            <ContentSection key={tab.primary.uid} data={tab}/>
           </div>
         </div>
       </div>

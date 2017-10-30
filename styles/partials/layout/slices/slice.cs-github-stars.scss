@@ -1,10 +1,16 @@
 .github_stars {
   $c: &;
 
+  order: 100 !important;
+
   #{$c}__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    @include media('<=900px') {
+
+    }
   }
 
   #{$c}__item {
@@ -13,10 +19,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding:$unit;
-    &__label{
-      padding-bottom:$unit;
+    padding: $unit;
+    &__label {
+      padding-bottom: $unit;
     }
   }
 
+}
+
+.content-section-p{
+  &.cs-github-stars{
+    .content-section-p-area{
+      padding-bottom:0 !important;
+    }
+  }
+}
+
+.github-stars{
+  order:100;
+  width: 100%;
+  @include global-wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:$unit*4;
+  padding-top:$unit*2;
+  & ~ .content-section-p-area{
+    padding-top:$unit*4 !important;
+  }
 }
