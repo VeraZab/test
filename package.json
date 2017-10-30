@@ -13,7 +13,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write './{components,pages}/**/*.js'"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "7.x.x"
   },
   "author": "Thomas Osmonson <hello@ineffable.co>",
   "license": "",

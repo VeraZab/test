@@ -6,20 +6,20 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
     // assetPrefix: 'https://plotly.github.io/plotly-next/',
     exportPathMap: () => ({
-        "/": { page: "/" },
-        "/dashboards": { page: "/prismic/dashboards-and-reporting" },
+        "/": { page: "/p", query: {slug: 'home'} },
+        "/dashboards": { page: "/p", query: {slug: 'dashboards-and-reporting'} },
         "/dashboards-and-reports": { page: "/prismic/dashboards-and-reporting" }, // SEO version
-        "/database-connectors": { page: "/prismic/falcon" },
+        "/database-connectors": { page: "/p", query: {slug: 'falcon'} },
         "/free-sql-client-download": { page: "/prismic/falcon" }, // SEO version
-        "/online-chart-maker": { page: "/prismic/chart-studio" },
-        "/powerpoint-online": { page: "/prismic/slide-decks" },
+        "/online-chart-maker": { page: "/p", query: {slug: 'chart-studio'} },
+        "/powerpoint-online": { page: "/p", query: {slug: 'slide-decks'} },
         "/online-presentation-tool": { page: "/prismic/slide-decks" }, // SEO version
         "/products/dash": { page: "/products/dash" },
         "/products/cloud": { page: "/products/cloud" },
         "/products/consulting-and-oem": { page: "/products/consulting-and-oem" },
-        "/plotly-js-scientific-d3-charting-library": { page: "/plotly-js-scientific-d3-charting-library" },
-        "/d3-js-for-r-and-shiny-charts": { page: "/d3-js-for-r-and-shiny-charts" },
-        "/d3-js-for-python-and-pandas-charts": { page: "/d3-js-for-python-and-pandas-charts" },
+        "/plotly-js-scientific-d3-charting-library": { page: "/p", query: {slug: 'plotly-js'} },
+        "/d3-js-for-r-and-shiny-charts": { page: "/p", query: {slug: 'plotly-r'} },
+        "/d3-js-for-python-and-pandas-charts": { page: "/p", query: {slug: 'plotly-py'} },
         "/products/on-premise": { page: "/products/on-premise" },
         "/products/industries": { page: "/industries" },
         "/products/industries/finance": { page: "/single-industries", query: { id: 'finance' } },
