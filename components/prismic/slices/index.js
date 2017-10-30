@@ -9,6 +9,7 @@
  */
 
 import React from 'react'
+const shortid = require('shortid')
 
 /**
  * Our slice options
@@ -36,13 +37,14 @@ export default class Slices extends React.Component {
               slice.slice_type === 'graphic_with_text_logos' ||
               slice.slice_type === 'graphic_with_text_slides' ||
               slice.slice_type === 'cs-code-explorer' ||
+              slice.slice_type === 'cs-advanced-cards' ||
               slice.slice_type === 'cs-github-stars'
             ) {
-              return <ContentSection key={i} data={slice} />
+              return <ContentSection key={shortid.generate()} data={slice} />
             } else if (slice.slice_type === 'cs-tabs') {
-              return <TabsSlice key={i} data={slice} />
+              return <TabsSlice key={shortid.generate()} data={slice} />
             } else if (slice.slice_type === 'logos') {
-              return <LogosSlice key={i} data={slice} />
+              return <LogosSlice key={shortid.generate()} data={slice} />
             } else return
           })}
         </div>

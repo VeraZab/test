@@ -6,14 +6,14 @@ import Layout from 'components/layoutHOC'
 import Hero from 'components/prismic/hero'
 import Slices from 'components/prismic/slices'
 
-class PlotlyPY extends Component{
+class Home extends Component{
   constructor(props) {
     super(props)
   }
 
   static async getInitialProps() {
     const data = await fetchData()
-    const doc = await data.find(doc => doc.uid === 'plotly-py')
+    const doc = await data.find(doc => doc.uid === 'home')
     return {
       doc: doc,
     }
@@ -32,4 +32,4 @@ class PlotlyPY extends Component{
   }
 }
 
-export default Layout(PlotlyPY)
+export default Layout(Home)

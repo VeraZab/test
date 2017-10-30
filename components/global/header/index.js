@@ -50,7 +50,7 @@ class Header extends React.Component {
         <div className="site-header-wrapper">
           <div className="site-header--section-left">
             <div className="site-header-logo">
-              <Link prefetch href="/">
+              <Link prefetch href="/prismic/home" as="/">
                 <a>{logo}</a>
               </Link>
             </div>

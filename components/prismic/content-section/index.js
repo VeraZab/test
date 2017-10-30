@@ -7,6 +7,7 @@ import { Browser } from 'components/browser'
 import Phone from 'components/phone'
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
 import CodeExplorer from 'components/prismic/slices/code-explorer'
+import AdvancedCards from 'components/prismic/slices/advanced-cards'
 const shortid = require('shortid')
 
 /**
@@ -419,6 +420,10 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null
 
+    const AdvancedCardsSection =
+      this.props.data.slice_type === 'cs-advanced-cards' ?
+        (<AdvancedCards data={this.props.data.items} />) : null
+
     return (
       <section className={classes}>
         <div className="content-section-p-wrapper">
@@ -445,6 +450,7 @@ export default class ContentSection extends React.Component {
           {this.props.data.slice_type !== 'graphic_with_text_logos'
             ? graphic()
             : null}
+          {AdvancedCardsSection}
           {GithubStarsSection}
         </div>
       </section>

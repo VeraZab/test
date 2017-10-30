@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 import { fetchData } from 'lib/fetchData'
 
@@ -6,7 +6,7 @@ import Layout from 'components/layoutHOC'
 import Hero from 'components/prismic/hero'
 import Slices from 'components/prismic/slices'
 
-class PlotlyR extends React.Component {
+class PlotlyR extends Component{
   constructor(props) {
     super(props)
   }
@@ -16,24 +16,17 @@ class PlotlyR extends React.Component {
     const doc = await data.find(doc => doc.uid === 'plotly-r')
     return {
       doc: doc,
-      data: data,
     }
   }
 
   render() {
-    let { doc } = this.props
-
-    const HeroWrapperStyle = {
-      backgroundImage: 'url(' + doc.data.hero_background_image.url + ')',
-      backgroundSize: doc.data.hero_background_size,
-      backgroundPosition: doc.data.hero_background_position,
-      backgroundRepeat: 'no-repeat',
-    }
+    const hero = <Hero data={this.props.doc.data} />
+    const slices = <Slices data={this.props.doc.data.slices} />
 
     return (
-      <div className="page">
-        <Hero data={doc.data} heroWrapperStyle={HeroWrapperStyle} />
-        <Slices data={doc.data.slices} />
+      <div className={"page" + " page--" + this.props.doc.uid}>
+        {hero}
+        {slices}
       </div>
     )
   }

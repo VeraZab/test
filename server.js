@@ -21,15 +21,7 @@ app.prepare()
     server.get('/products/industries', (req, res) => {
       return app.render(req, res, '/industries')
     })
-    server.get('/free-sql-client-download', (req, res) => {
-      return app.render(req, res, '/database-connectors')
-    })
-    server.get('/online-presentation-tool', (req, res) => {
-      return app.render(req, res, '/powerpoint-online')
-    })
-    server.get('/dashboards-and-reports', (req, res) => {
-      return app.render(req, res, '/dashboards')
-    })
+
     server.get('/products/industries/:id', (req, res) => {
       const queryParams = {id: req.params.id}
       return app.render(req, res, '/single-industries', queryParams)
@@ -56,19 +48,33 @@ app.prepare()
       return app.render(req, res, '/p', queryParams)
     })
 
+
+    server.get('/free-sql-client-download', (req, res) => {
+      return app.render(req, res, '/prismic/falcon')
+    })
+    server.get('/online-presentation-tool', (req, res) => {
+      return app.render(req, res, '/prismic/slide-decks')
+    })
+    server.get('/powerpoint-online', (req, res) => {
+      return app.render(req, res, '/prismic/slide-decks')
+    })
+    server.get('/dashboards-and-reports', (req, res) => {
+      return app.render(req, res, '/prismic/dashboards-and-reporting')
+    })
+
+
     server.get('/d3-js-for-python-and-pandas-charts', (req, res) => {
-      const queryParams = {slug: 'plotly-py'}
-      return app.render(req, res, '/p', queryParams)
+      return app.render(req, res, '/prismic/plotly-py')
     })
 
     server.get('/d3-js-for-r-and-shiny-charts', (req, res) => {
-      const queryParams = {slug: 'plotly-r'}
-      return app.render(req, res, '/p', queryParams)
+      return app.render(req, res, '/prismic/plotly-r')
+
     })
 
     server.get('/plotly-js-scientific-d3-charting-library', (req, res) => {
-      const queryParams = {slug: 'plotly-js'}
-      return app.render(req, res, '/p', queryParams)
+      return app.render(req, res, '/prismic/plotly-js')
+
     })
 
     server.get('/dashboards', (req, res) => {
@@ -83,6 +89,9 @@ app.prepare()
       return app.render(req, res, '/prismic/chart-studio')
     })
 
+    server.get('/', (req, res) => {
+      return app.render(req, res, '/prismic/home')
+    })
     server.get('*', (req, res) => {
       return handle(req, res)
     })

@@ -24,27 +24,39 @@
       padding-bottom: $unit;
     }
   }
+  @at-root .hero-prismic-layout--row {
 
-}
-
-.content-section-p{
-  &.cs-github-stars{
-    .content-section-p-area{
-      padding-bottom:0 !important;
+    #{$c}__wrapper {
+      justify-content: flex-start;
+    }
+    #{$c}__item{
+      flex-grow:0;
+      &:first-of-type{
+        padding-left:0;
+      }
     }
   }
 }
 
-.github-stars{
-  order:100;
+.content-section-p {
+  &.cs-github-stars {
+    .content-section-p-area {
+      padding-bottom: 0 !important;
+    }
+  }
+}
+
+.github-stars {
+  order: 100;
   width: 100%;
   @include global-wrapper;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom:$unit*4;
-  padding-top:$unit*2;
-  & ~ .content-section-p-area{
-    padding-top:$unit*4 !important;
+  padding-bottom: $unit*4;
+  padding-top: $unit*2;
+  & ~ .content-section-p-area {
+    padding-top: $unit*4 !important;
   }
 }
+
