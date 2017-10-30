@@ -1,7 +1,7 @@
 .content-section-p {
   $c: &;
 
-  overflow: hidden;
+  //overflow: hidden;
 
   &-wrapper {
     @include global-wrapper;
