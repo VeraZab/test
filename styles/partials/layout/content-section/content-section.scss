@@ -8,6 +8,7 @@
     display: flex;
     position: relative;
     flex-wrap:wrap;
+    overflow: hidden;
     $tb-spacing: $unit*4;
 
     #{$c}-area {

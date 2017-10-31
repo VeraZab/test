@@ -13,6 +13,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Button from 'components/prismic/button'
 import {images} from 'config/constants'
 import {imgix} from 'config/functions'
+
 /**
  * Tabs slice
  *

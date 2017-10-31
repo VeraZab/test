@@ -1,15 +1,20 @@
 import React from 'react'
-import ContentSection from 'components/prismic/content-section'
-import Image from 'components/prismic/Image'
+import dynamic from 'next/dynamic'
 
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/styles'
+const CodeBlock = dynamic(import('./codeblock.js'), {
+  ssr: false
+})
 
-import { UnControlled as CodeMirror } from 'react-codemirror2'
+if (typeof navigator !== 'undefined') {
+  require('codemirror/mode/javascript/javascript')
+  require('codemirror/mode/python/python')
+  require('codemirror/mode/r/r')
+  require('codemirror/mode/jsx/jsx')
+}
 
-import PrismicDOM from 'prismic-dom'
+
 const shortid = require('shortid')
-import { CopyToClipboard } from 'react-copy-to-clipboard'
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Button from 'components/prismic/button'
 /**
  * Tabs slice
@@ -30,6 +35,7 @@ export default class CodeExplorer extends React.Component {
   }
 
   componentWillMount() {
+
     this.props.data.items.map((item, i) => {
       item.uid = shortid.generate()
       item.layout = 'row-right'
@@ -49,11 +55,7 @@ export default class CodeExplorer extends React.Component {
   }
 
   componentDidMount() {
-    require('codemirror/mode/xml/xml')
-    require('codemirror/mode/javascript/javascript')
-    require('codemirror/mode/python/python')
-    require('codemirror/mode/r/r')
-    require('codemirror/mode/jsx/jsx')
+
     this.setState({
       loaded: true,
     })
@@ -118,7 +120,7 @@ export default class CodeExplorer extends React.Component {
         return (
           <div className=" buttons">
             {buttons.map((button, i) => {
-              return <Button key={shortid.generate()} data={button} />
+              return <Button key={shortid.generate()} data={button}/>
             })}
           </div>
         )
@@ -183,7 +185,7 @@ export default class CodeExplorer extends React.Component {
                         : 'code-explorer-slice__pagination__prev'
                     }
                   >
-                    <i className="mdi mdi-chevron-left" />
+                    <i className="mdi mdi-chevron-left"/>
                   </div>
                   <div
                     id="code-explorer-header-tabs"
@@ -201,7 +203,7 @@ export default class CodeExplorer extends React.Component {
                         : 'code-explorer-slice__pagination__next'
                     }
                   >
-                    <i className="mdi mdi-chevron-right" />
+                    <i className="mdi mdi-chevron-right"/>
                   </div>
                 </div>
               </div>
@@ -209,10 +211,10 @@ export default class CodeExplorer extends React.Component {
                 <div className="code-explorer-slice__content__code__copy">
                   <CopyToClipboard
                     text={tab.primary.code[0].text}
-                    onCopy={() => this.setState({ copied: true })}
+                    onCopy={() => this.setState({copied: true})}
                   >
                     <div className="code-explorer-slice__content__code__copy__content">
-                      <div className="code-explorer-slice__content__code__copy__content__icon mdi mdi-content-copy" />
+                      <div className="code-explorer-slice__content__code__copy__content__icon mdi mdi-content-copy"/>
                       <div className="code-explorer-slice__content__code__copy__content__label">
                         {this.state.copied ? 'Copied!' : 'Copy'}
                       </div>
@@ -220,15 +222,7 @@ export default class CodeExplorer extends React.Component {
                   </CopyToClipboard>
                 </div>
                 <div className="code-explorer-slice__content__code__block">
-                  <CodeMirror
-                    value={tab.primary.code[0].text}
-                    key={tab.primary.uid}
-                    options={{
-                      mode: tab.primary.language,
-                      theme: 'material',
-                      lineNumbers: true,
-                    }}
-                  />
+                  <CodeBlock tab={tab}/>
                 </div>
               </div>
               <div className="code-explorer-slice__content__code__footer">
