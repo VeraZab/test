@@ -39,6 +39,14 @@ export default class LogosSlice extends React.Component {
     if (data.primary.alignment !== null || data.primary.alignment !== '') {
       classes += ' logos-slice-align--' + data.primary.alignment
     }
+
+    const LogoItems = data.items.map((logo, i) => {
+      return (
+        <div className="logos-slice-logo" key={i}>
+          <Image data={logo.image} />
+        </div>
+      )
+    })
     return (
       <div className={classes}>
         <div className="logos-slice-wrapper">
@@ -53,13 +61,7 @@ export default class LogosSlice extends React.Component {
             </div>
           ) : null}
           <div className="logos">
-            {data.items.map((logo, i) => {
-              return (
-                <div className="logos-slice-logo" key={i}>
-                  <Image data={logo.image} />
-                </div>
-              )
-            })}
+            {LogoItems}
           </div>
         </div>
       </div>

@@ -1,14 +1,13 @@
 .content-section-p {
   $c: &;
 
-  //overflow: hidden;
+  overflow: hidden;
 
   &-wrapper {
     @include global-wrapper;
     display: flex;
     position: relative;
     flex-wrap:wrap;
-    overflow: hidden;
     $tb-spacing: $unit*4;
 
     #{$c}-area {
