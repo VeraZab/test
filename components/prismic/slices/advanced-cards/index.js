@@ -34,6 +34,12 @@ export default class AdvancedCards extends React.Component {
 
   render() {
 
+    const Logo = (data) => {
+      if(data.logo.url){
+        return (<div className="logo"><Image noBlur data={data.logo} /></div>)
+      }
+    }
+
     /**
      * Actions
      * These are our buttons
@@ -103,6 +109,7 @@ export default class AdvancedCards extends React.Component {
                   <div className="card__title"><h2><span>{card.title}</span></h2></div>
                   <div className="card__subtitle"><h3>{card.subtitle}</h3></div>
                 </div>
+                {Logo(card)}
                 {/*<div className="card__details__action">*/}
                   {/*<a*/}
                     {/*className="card-action-link"*/}

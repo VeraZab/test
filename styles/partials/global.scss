@@ -170,7 +170,7 @@ a {
       @include trans;
       transition-duration: 2.5s;
       transform-origin: center center;
-      transform: scale(1.06) !important;
+      //transform: scale(1.06) !important;
     }
 
   }
@@ -215,7 +215,7 @@ a {
       @include trans;
       transition-duration: 2.5s;
       transform-origin: center center;
-      transform: scale(1.06) !important;
+      //transform: scale(1.06) !important;
       &[data-loaded="true"] {
         @extend .animate--fade-in;
         animation-delay: 0.1s;
