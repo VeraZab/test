@@ -1,0 +1,142 @@
+
+.logos-slice {
+  $c: &;
+  &-wrapper {
+  }
+  &-header {
+    padding-bottom: $unit*2;
+  }
+  &-title {
+    h3, h4 {
+      @extend .body-l;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      opacity: 0.75;
+    }
+  }
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media('<=800px') {
+      flex-wrap: wrap;
+    }
+  }
+  &-logo {
+    @include media('<=800px') {
+      width: 50%;
+      margin-bottom: $unit*2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .image {
+        max-width: 100px;
+      }
+    }
+    flex-grow: 1;
+    max-width: 120px;
+    padding-right: $unit*4;
+    .image {
+      filter: invert(100%);
+      opacity: 0.5;
+      &-preview {
+        opacity: 0;
+      }
+    }
+  }
+  &-align {
+    &--left {
+      $cc: &;
+
+      //padding: $unit*4 0;
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+
+      .logos {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      @include media('<=900px') {
+        //padding-bottom: $unit*4;
+        .logos {
+          justify-content: center;
+        }
+      }
+
+      @at-root .page--home {
+        #{$cc} {
+          @include media('>900px') {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logos {
+  $c: &;
+
+  #{$c}__wrapper {
+
+  }
+
+  .logos-slice-logo {
+    $cc: &;
+
+    @include media('>900px') {
+      &:first-of-type {
+        padding-left: 0;
+      }
+      $width: 130px;
+      max-width: $width;
+      min-width: $width;
+      width: $width;
+
+      @at-root .page--home #{$cc} {
+        $width: 160px;
+        max-width: $width;
+        min-width: $width;
+        width: $width;
+        @include media("<=800px") {
+          $width: 33.33%;
+          width: $width;
+          max-width: $width;
+          min-width: $width;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    @include media('<=900px') {
+      flex-shrink: 0;
+      $width: 160px;
+      //max-width: $width;
+      min-width: $width;
+      width: $width;
+
+    }
+    //width: 110px;
+
+    @include media("<=500px") {
+      $width: 33.33%;
+      width: $width;
+      max-width: $width;
+      min-width: $width;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @at-root .page--home {
+      #{$cc} {
+
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import HeroDetailsSection from './details'
 import HeroGraphicSection from './graphicSection'
 import lozad from 'lozad'
 import { imgix } from 'config/functions'
+import LogosSlice from 'components/prismic/slices/logos'
 
 const shortid = require('shortid')
 
@@ -22,6 +23,11 @@ export default class Hero extends React.Component {
     const observer = lozad(); // lazy loads elements with default selector as '.lozad'
     observer.observe();
   }
+
+  findSlice = (slices, type) =>
+    slices.find(slice => slice.slice_type === type)
+      ? slices.find(slice => slice.slice_type === type)
+      : false
 
   render() {
     let classes = ''
@@ -74,13 +80,24 @@ export default class Hero extends React.Component {
       HeroWrapperStyle = this.props.heroWrapperStyle
     }
 
+    /**
+     * Logos Slice
+     *
+     * An editor can add an array of logos to a hero
+     * you should only add one slice of logos, so this
+     * will find the first one and display it.
+     *
+     */
+    const slice_Logos = this.findSlice(data.hero_slices, 'logos')
+    const Logos = slice_Logos ? <LogosSlice data={ slice_Logos }/> : null
+
     return (
       <section className={ 'hero-prismic' + classes } style={ HeroStyle } key={ shortid.generate() }>
         <div className="hero-prismic-wrapper">
           <HeroDetailsSection data={ data }/>
           <HeroGraphicSection data={ data }/>
           <div className="hero-prismic-bottom">
-            { /*<Slices data={data.hero_slices} />*/ }
+            { Logos }
           </div>
         </div>
         <div className="hero-prismic-background-image lozad"

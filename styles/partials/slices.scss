@@ -2,6 +2,7 @@
 @import "./layout/slices/slices.cs-code-explorer";
 @import "./layout/slices/slices.cs-advanced-cards";
 @import "./layout/slices/slice.cs-github-stars";
+@import "./layout/slices/slices.logos";
 
 .slices {
   &-wrapper {
@@ -12,52 +13,3 @@
   }
 }
 
-.logos-slice {
-  $c: &;
-
-  &-wrapper { }
-  &-header {
-    padding-bottom: $unit*2;
-  }
-  &-title {
-    h3, h4 {
-      @extend .body-l;
-      text-align: center;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      opacity: 0.75;
-    }
-  }
-  .logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include media('<=800px'){
-      flex-wrap:wrap;
-    }
-  }
-  &-logo {
-    @include media('<=800px'){
-      width: 50%;
-      margin-bottom:$unit*2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .image{
-        max-width:100px;
-      }
-    }
-    flex-grow: 1;
-    max-width: 120px;
-    padding: 0 $unit*4;
-    padding-left:0;
-    .image {
-      filter: invert(100%);
-      opacity: 0.5;
-      &-preview {
-        opacity: 0;
-      }
-    }
-  }
-}

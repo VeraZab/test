@@ -4,10 +4,6 @@ import Button from 'components/prismic/button'
 import HeroTitle from './title'
 import HeroSubtitle from './subtitle'
 import HeroActions from './actions'
-import Slices from 'components/prismic/slices'
-
-import LogosSlice from 'components/prismic/slices/logos'
-
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
 
 /**
@@ -71,16 +67,7 @@ export default class HeroDetailsSection extends React.Component {
       </HeroActions>
     )
 
-    /**
-     * Logos Slice
-     *
-     * An editor can add an array of logos to a hero
-     * you should only add one slice of logos, so this
-     * will find the first one and display it.
-     *
-     */
-    const slice_Logos = this.findSlice(data.hero_slices, 'logos')
-    const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null
+
 
     /**
      * Github Stars Slice
@@ -105,7 +92,6 @@ export default class HeroDetailsSection extends React.Component {
           </div>
         </div>
         {GithubStars}
-        {Logos}
       </div>
     )
   }

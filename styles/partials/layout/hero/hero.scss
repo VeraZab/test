@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
+  //padding-bottom:$unit*4;
   /**
    * wrapper styles
    */
@@ -107,7 +108,7 @@
     z-index: 1;
     position: absolute;
     will-change: opacity;
-    opacity:0;
+    opacity: 0;
     &[data-loaded="true"] {
       @include animationFadein-sm;
     }
@@ -197,7 +198,7 @@
     #{$c}-layout--row {
       #{$c}-graphic-section {
         align-self: flex-start !important;
-        padding-bottom: $unit*10 !important;
+        //padding-bottom: $unit*10 !important;
       }
     }
   }
@@ -206,32 +207,32 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Logos
 //----------------------------------------------------------------------------------------------------------------------
-.logos-display {
-  &-wrapper {
-    @include global-wrapper;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 $gutter;
-    @include handheld {
-      padding-top: $gutter;
-    }
-    .logo-item {
-      padding: $unit;
-      opacity: 0.8;
-    }
-    img {
-      max-width: 140px;
-      max-height: 70px;
-      filter: brightness(0) invert(1);
-
-      @include handheld {
-        max-width: 80px;
-      }
-    }
-  }
-}
+//.logos-display {
+//  &-wrapper {
+//    @include global-wrapper;
+//    display: flex;
+//    justify-content: space-around;
+//    flex-wrap: wrap;
+//    align-items: center;
+//    padding: 0 $gutter;
+//    @include handheld {
+//      padding-top: $gutter;
+//    }
+//    .logo-item {
+//      padding: $unit;
+//      opacity: 0.8;
+//    }
+//    img {
+//      max-width: 140px;
+//      max-height: 70px;
+//      filter: brightness(0) invert(1);
+//
+//      @include handheld {
+//        max-width: 80px;
+//      }
+//    }
+//  }
+//}
 
 .githubStar {
   display: flex;
@@ -275,3 +276,10 @@
 @import "hero.typography";
 @import "hero.slices";
 
+.page--home {
+  .hero-prismic-graphic-section {
+    @include media('<=800px') {
+      display: none;
+    }
+  }
+}
