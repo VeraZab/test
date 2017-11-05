@@ -29,6 +29,12 @@
     }
   }
 
+  &-graphic-section {
+    @include media('<=800px') {
+      padding-bottom: $unit*4;
+    }
+  }
+
   /**
    * mobile styles
    */
