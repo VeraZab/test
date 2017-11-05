@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import Layout from 'components/layoutHOC'
 import Hero from 'components/prismic/hero'
 import Slices from 'components/prismic/slices'
-
+import Head from 'components/global/head'
 import { fetchData } from 'lib/fetchData'
 import { bindActionCreators } from 'redux'
 import { initStore, saveStoreData } from 'store/global'
@@ -57,10 +57,18 @@ class P extends Component {
     if (doc === undefined) {
       return <NotFound/>
     } else {
+
+      const meta = {
+        title: `Plotly: ${doc.data.title}`,
+        description: `${doc.data.description}`
+      }
+
+
       const hero = <Hero data={ doc.data }/>
       const slices = <Slices data={ doc.data.slices }/>
       return (
         <div className={ 'page' + ` page--${doc.uid}` }>
+          <Head meta={meta}/>
           { hero }
           { slices }
         </div>

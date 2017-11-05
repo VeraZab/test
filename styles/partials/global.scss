@@ -135,9 +135,9 @@ a {
   overflow: hidden;
   background: transparent;
 
-  &.no-blur{
-    .image-preview{
-      opacity:0 !important;
+  &.no-blur {
+    .image-preview {
+      opacity: 0 !important;
     }
   }
 
@@ -255,8 +255,8 @@ a {
   padding: $unit $unit;
   position: relative;
   @include media('<=800px') {
-    margin-left:0;
-    margin-right:0;
+    margin-left: 0;
+    margin-right: 0;
   }
   &-wrapper {
 
@@ -295,5 +295,59 @@ a {
     background: white;
     border: 1px solid darken($color-rhino-light-4, 5%);
     //padding-top:$unit*4;
+  }
+}
+
+.page--404 {
+  display: flex;
+  min-height: calc(100vh - 463px) !important;
+
+}
+
+.not-found {
+  $c: &;
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  &::before {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
+  }
+
+  #{$c}__wrapper {
+    display: flex;
+    //flex-direction: column;
+    @include global-wrapper;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    //color: white;
+    padding-top: $unit*16;
+  }
+  #{$c}__messaging {
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: $drop-shadow-l-light;
+    background: white;
+    padding: $unit*2;
+    //transform: translateY(-30%);
+    margin-bottom: $unit*8;
+
+    h1 {
+      //color: white;
+      color: $color-rhino-core;
+      padding-bottom: $unit*3;
+      //text-align: center;
+    }
+    p {
+      font-weight: 300;
+    }
   }
 }
