@@ -4,6 +4,8 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import Navigation from './navigation'
 
+import shortid from 'shortid'
+
 Router.onRouteChangeStart = url => {
   NProgress.start()
 }
@@ -18,7 +20,7 @@ class Header extends React.Component {
   }
 
   render() {
-    let { doc } = this.props
+    let {doc} = this.props
 
     let classes = 'site-header site-header-style--product'
 
@@ -32,35 +34,41 @@ class Header extends React.Component {
     if (doc) {
       classes += ' ' + doc.data.hero_background_style
       if (doc.data.alt_logo.url) {
-        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />
+        logo = <img src={ doc.data.alt_logo.url } alt={ doc.data.title }/>
       }
     }
 
     return [
-      <div className="global-message">
+      <div className="global-message" key={shortid.generate()}>
         <div className="global-message-wrapper">
           2 day master classes for Dash, R Shiny, and React/Plotly.js in NYC
-          November 18-19 🎨 📈 🗽{' '}
+          November 18-19 🎨 📈 🗽{ ' ' }
           <a href="https://plotcon.plot.ly/workshops" target="_blank">
             Learn More
           </a>
         </div>
       </div>,
-      <header id="site-header" className={classes}>
+      <header id="site-header" className={ classes } key={shortid.generate()}>
         <div className="site-header-wrapper">
           <div className="site-header--section-left">
             <div className="site-header-logo">
-              <Link prefetch href="/prismic/home" as="/">
-                <a>{logo}</a>
+              <Link prefetch href={ {
+                pathname: '/p',
+                query: {
+                  slug: 'home',
+                }
+              } } as="/">
+                <a>{ logo }</a>
               </Link>
             </div>
           </div>
           <div className="site-header--section-right">
-            <Navigation pathname={this.props.pathname} />
+            <Navigation pathname={ this.props.pathname }/>
           </div>
         </div>
       </header>,
     ]
   }
 }
+
 export default Header

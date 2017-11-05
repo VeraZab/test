@@ -11,6 +11,7 @@
           "components": "./components",
           "static": "./static",
           "config": "./config",
+          "store": "./store",
           "lib": "./lib",
           "styles": "./styles"
         }
