@@ -29,6 +29,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "chromatic-sass": "^0.1.8",
     "express": "^4.15.2",
+    "github-buttons": "^0.0.1-security",
     "glob": "7.1.1",
     "husky": "^0.14.3",
     "in-view": "^0.6.1",

@@ -23,7 +23,7 @@
   #{$c}-subtitle {
     h3 {
       color: #516783;
-      font-family: "Ubuntu";
+      @include ff-ubuntu;
       opacity: 0.85;
       font-size: 22px;
       line-height: 36px;
@@ -172,7 +172,7 @@
 
     h5 {
       font-size: 18px;
-      font-family: 'Ubuntu';
+      @include ff-ubuntu;
       padding: $unit $unit*2;
       position: relative;
       opacity: 0.75;
@@ -190,7 +190,7 @@
 
       & + h6 {
         font-size: 18px;
-        font-family: 'Ubuntu';
+        @include ff-ubuntu;
         font-style: italic;
         padding: $unit $unit*2;
         margin-bottom: $unit*2;

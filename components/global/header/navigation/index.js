@@ -14,6 +14,11 @@ export default class Navigation extends React.Component {
     }
   }
 
+  componentDidMount() {
+    document.body.classList.remove('no-scroll')
+  }
+
+
   mobileMenuClasses() {
     if (this.state.mobileMenu === true) {
       return 'mobile-menu-active'
