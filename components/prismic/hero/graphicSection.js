@@ -54,6 +54,10 @@ export default class HeroGraphicSection extends React.Component {
       )
     }
 
+    if(!data.hero_graphic.url){
+      return null
+    }
+
     if (data.hero_graphic_style === 'browser') {
       graphic = (
         <Browser>

@@ -47,13 +47,13 @@ export default class HeroDetailsSection extends React.Component {
     /**
      * Hero Messaging
      */
-    const Messaging = (
+    const Messaging = data.hero_messaging.length ? (
       <div
         dangerouslySetInnerHTML={{
           __html: PrismicDOM.RichText.asHtml(data.hero_messaging),
         }}
       />
-    )
+    ) : null
     /**
      * Hero Actions
      */
