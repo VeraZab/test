@@ -12,18 +12,35 @@ export default class Image extends React.Component {
   }
 
   componentDidMount() {
-    let observer = lozad('.lozad', {
-      load: function(el) {
-        el.src = el.dataset.src
-        el.onload = function() {
-          el.parentElement.parentElement.parentElement.classList.add(
-            'hq-loaded'
-          )
-          el.classList.add('img-loaded')
-        }
-      },
-    })
-    observer.observe()
+    // let observer = lozad('.lozad', {
+    //   load: function(el) {
+    //     el.src = el.dataset.src
+    //     el.onload = function() {
+    //       el.parentElement.parentElement.parentElement.classList.add(
+    //         'hq-loaded'
+    //       )
+    //       el.classList.add('img-loaded')
+    //     }
+    //   },
+    // })
+    //
+    // let bgImages = lozad('.lozad-bg', {
+    //   load: function(el) {
+    //     el.src = el.getAttribute('data-background-image')
+    //     console.log(el.src)
+    //     el.onload = function() {
+    //       el.parentElement.parentElement.parentElement.classList.add(
+    //         'hq-loaded'
+    //       )
+    //       el.classList.add('img-loaded')
+    //     }
+    //   },
+    // })
+    // bgImages.observe()
+    // observer.observe()
+
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
   }
 
   render() {

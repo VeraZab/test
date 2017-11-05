@@ -3,6 +3,7 @@ import PrismicDOM from 'prismic-dom'
 import HeroDetailsSection from './details'
 import HeroGraphicSection from './graphicSection'
 import Slices from '../slices/index'
+import {imgix} from 'config/functions'
 
 //
 // <HeroTop>
@@ -86,8 +87,12 @@ export default class Hero extends React.Component {
     if (this.props.style) {
       HeroStyle = this.props.style
     }
+
+    if(data.hero_background_image.url){
+      data.hero_background_image.url = imgix(data.hero_background_image.url)
+    }
     const HeroWrapperBg = {
-      backgroundImage: 'url(' + data.hero_background_image.url + ')',
+      backgroundImage: 'url(' + data.hero_background_image.url + '?q=45&auto=format)',
       backgroundSize: data.hero_background_size,
       backgroundPosition: data.hero_background_position,
       backgroundRepeat: 'no-repeat',

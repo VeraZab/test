@@ -101,12 +101,12 @@ const footerData = [
         url: 'https://plot.ly/javascript/',
       },
       {
-        label: 'Plotly for R & Shiny',
+        label: 'Plotly.R',
         icon: null,
         url: 'https://plot.ly/r/',
       },
       {
-        label: 'Plotly for Python',
+        label: 'Plotly.py',
         icon: null,
         url: 'https://plot.ly/python/',
       },
@@ -116,12 +116,12 @@ const footerData = [
     label: 'Business Intelligence',
     links: [
       {
-        label: 'Charts',
+        label: 'Chart Studio',
         icon: null,
         url: 'https://plot.ly/online-chart-maker/',
       },
       {
-        label: 'Dashboards',
+        label: 'Dashboards & Reporting',
         icon: null,
         url: 'https://plot.ly/dashboards/',
       },
@@ -131,9 +131,9 @@ const footerData = [
         url: 'https://plot.ly/powerpoint-online/',
       },
       {
-        label: 'Database Connectors',
+        label: 'Falcon SQL Client (Free)',
         icon: null,
-        url: 'https://marketing.plot.ly/database-connectors/',
+        url: 'https://plot.ly/database-connectors/',
       },
     ],
   },

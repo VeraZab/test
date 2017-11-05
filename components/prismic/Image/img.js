@@ -1,6 +1,8 @@
 import React from 'react'
 import lozad from 'lozad'
 
+const shortid = require('shortid')
+
 export default class Img extends React.Component {
   constructor(props) {
     super(props)
@@ -8,21 +10,36 @@ export default class Img extends React.Component {
 
   componentDidMount() {
     // let observer = lozad('.lozad', {
-    //     threshold: 0.1,
-    //     load: function (el) {
-    //         el.src = el.dataset.src;
-    //         el.onload = function () {
-    //             el.parentElement.parentElement.parentElement.classList.add('hq-loaded')
-    //             el.classList.add('img-loaded')
-    //             console.log(el)
-    //             // document.getElementsByClassName('test');
-    //         }
+    //   load: function(el) {
+    //     el.src = el.dataset.src
+    //     el.onload = function() {
+    //       el.parentElement.parentElement.parentElement.classList.add(
+    //         'hq-loaded'
+    //       )
+    //       el.classList.add('img-loaded')
     //     }
+    //   },
     // })
-    // observer.observe();
+    //
+    // let bgImages = lozad('.lozad-bg', {
+    //   load: function(el) {
+    //     el.src = el.getAttribute('data-background-image')
+    //     console.log(el.src)
+    //     el.onload = function() {
+    //       el.parentElement.parentElement.parentElement.classList.add(
+    //         'hq-loaded'
+    //       )
+    //       el.classList.add('img-loaded')
+    //     }
+    //   },
+    // })
+    // bgImages.observe()
+    // observer.observe()
   }
 
   render() {
+
+    const key = shortid.generate()
     let { data } = this.props
     let { imageParams } = this.props
     if (this.props.background) {
@@ -33,7 +50,6 @@ export default class Img extends React.Component {
         backgroundAttachment: this.props.attachment,
       }
       let hqStyle = {
-        backgroundImage: 'url(' + data.url + imageParams.hq + ')',
         backgroundSize: 'cover',
         backgroundPosition: this.props.position,
         backgroundAttachment: this.props.attachment,
@@ -50,7 +66,7 @@ export default class Img extends React.Component {
             <div
               className="image-hq lozad"
               data-background-image={data.url + imageParams.hq}
-              style={hqStyle}
+              ref={key}
             />
             <div className="image-preview" style={previewStyle} />
           </div>

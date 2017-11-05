@@ -101,7 +101,7 @@ export default class AdvancedCards extends React.Component {
         backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')'
       }
       return (
-        <div className="card card--with-image">
+        <div className="card card--with-image" key={shortid.generate()}>
           <div className="card__wrapper">
             <div className="card__image" style={imageStyle}>
               <div className="card__details">

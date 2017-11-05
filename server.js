@@ -13,10 +13,10 @@ app.prepare()
      * Static Files
      */
     server.get('/robots.txt', (req, res) => {
-      return res.sendFile('./static/robots.txt')
+      return res.sendFile('/static/robots.txt')
     })
     server.get('/sitemap.xml', (req, res) => {
-      return res.sendFile('./static/robots.txt')
+      return res.sendFile('/static/robots.txt')
     })
 
     /**

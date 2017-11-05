@@ -144,7 +144,8 @@ a {
   img {
     width: 100%;
     display: block;
-    &.img-loaded {
+    will-change: opacity;
+    &[data-loaded="true"] {
       transform: none !important;
     }
   }
@@ -225,10 +226,10 @@ a {
 
     img {
       opacity: 0;
-      &:not(.img-loaded) {
+      &:not([data-loaded="true"]) {
 
       }
-      &.img-loaded {
+      &[data-loaded="true"] {
         @extend .animate--fade-in;
         animation-delay: 0.1s;
       }
