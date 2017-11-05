@@ -6,21 +6,93 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   // assetPrefix: 'https://plotly.github.io/plotly-next/',
   exportPathMap: () => ({
-    '/': {page: '/prismic/home'},
-    '/dashboards': {page: '/prismic/dashboards-and-reporting'},
-    '/dashboards-and-reports': {page: '/prismic/dashboards-and-reporting'}, // SEO version
-    '/database-connectors': {page: '/prismic/falcon'},
-    '/free-sql-client-download': {page: '/prismic/falcon'}, // SEO version
-    '/online-chart-maker': {page: '/prismic/chart-studio'},
-    '/powerpoint-online': {page: '/prismic/slide-decks'},
-    '/online-presentation-tool': {page: '/prismic/slide-decks'}, // SEO version
+    '/': {
+      page: '/p',
+      query: {
+        slug: 'home'
+      }
+    },
+    // Dashboards
+    '/dashboards': {
+      page: '/p',
+      query: {
+        slug: 'dashboards-and-reporting'
+      }
+    },
+    '/dashboards-and-reports': {
+      page: '/p',
+      query: {
+        slug: 'dashboards-and-reporting'
+      }
+    },
+    // Falcon
+    '/database-connectors': {
+      page: '/p',
+      query: {
+        slug: 'falcon-sql-editor'
+      }
+    },
+    '/free-sql-client-download': {
+      page: '/p',
+      query: {
+        slug: 'falcon-sql-editor'
+      }
+    },
+    // Chart Studio
+    '/online-chart-maker': {
+      page: '/p',
+      query: {
+        slug: 'chart-studio'
+      }
+    },
+    // Slide Decks
+    '/powerpoint-online': {
+      page: '/p',
+      query: {
+        slug: 'slide-decks'
+      }
+    },
+    '/online-presentation-tool': {
+      page: '/p',
+      query: {
+        slug: 'slide-decks'
+      }
+    },
+    // Plotly.js
+    '/plotly-js-scientific-d3-charting-library': {
+      page: '/p',
+      query: {
+        slug: 'plotly-js'
+      }
+    },
+    // Plotly.R
+    '/d3-js-for-r-and-shiny-charts': {
+      page: '/p',
+      query: {
+        slug: 'plotly-r'
+      }
+    },
+    // Plotly.py
+    '/d3-js-for-python-and-pandas-charts': {
+      page: '/p',
+      query: {
+        slug: 'plotly-py'
+      }
+    },
+    // Dash
     '/products/dash': {page: '/products/dash'},
+    // Pricing - cloud
     '/products/cloud': {page: '/products/cloud'},
-    '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
-    '/plotly-js-scientific-d3-charting-library': {page: '/prismic/plotly-js'},
-    '/d3-js-for-r-and-shiny-charts': {page: '/prismic/plotly-r'},
-    '/d3-js-for-python-and-pandas-charts': {page: '/prismic/plotly-py'},
+    // Pricing - on premises
     '/products/on-premise': {page: '/products/on-premise'},
+    '/products/on-premises': {page: '/products/on-premise'},
+    // Consulting and OEM (Advanced Development)
+    '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
+
+    '/webinars': {page: '/webinars'},
+    '/export': {page: '/export'},
+
+    // Industries
     '/products/industries': {page: '/industries'},
     '/products/industries/finance': {page: '/single-industries', query: {id: 'finance'}},
     '/products/industries/aerospace': {page: '/single-industries', query: {id: 'aerospace'}},
@@ -38,12 +110,10 @@ module.exports = {
       page: '/single-industries',
       query: {id: 'research-and-development-analytics'}
     },
-    // "/products/industries/tableau-alternative": { page: "/single-industries", query: { id: 'tableau-alternative' } },
+    // Customer Stories
     '/products/enterprise/customer-stories': {page: '/customer-stories'},
     '/products/enterprise/customer-stories/c12-energy': {page: '/single-customer-stories', query: {id: 'c12-energy'}},
-    '/products/enterprise/customer-stories/goji': {page: '/single-customer-stories', query: {id: 'goji'}},
-    '/webinars': {page: '/webinars'},
-    '/export': {page: '/export'}
+    '/products/enterprise/customer-stories/goji': {page: '/single-customer-stories', query: {id: 'goji'}}
   }),
   webpack: (config, {dev}) => {
     config.module.rules.push(

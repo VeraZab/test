@@ -66,7 +66,7 @@ export default class Img extends React.Component {
             <div
               className="image-hq lozad"
               data-background-image={data.url + imageParams.hq}
-              ref={key}
+              style={hqStyle}
             />
             <div className="image-preview" style={previewStyle} />
           </div>
