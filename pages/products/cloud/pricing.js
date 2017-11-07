@@ -4,45 +4,6 @@ import Buttons from 'components/buttons'
 
 const pricingLevels = [
   {
-    label: 'Community',
-    price: {
-      monthly: '0',
-      annually: null,
-      frequency: 'per year',
-      users: 'per user',
-    },
-    actions: [
-      {
-        label: 'Sign Up',
-        link: 'https://plot.ly/accounts/login/?action=signup',
-        button: {
-          classes: 'button button-primary',
-        },
-        target: '_blank',
-      },
-    ],
-    features: [
-      {
-        value: '<strong>Includes:</strong>',
-      },
-      {
-        value: '25 Charts',
-      },
-      {
-        value: 'Public Charts, Dashboards and Slide Decks',
-      },
-      {
-        value: 'Community Support for Online Workspace',
-      },
-      {
-        value: 'PNG and JPEG Export',
-      },
-      {
-        value: '<strong>100</strong> Chart and Image Saves per day',
-      },
-    ],
-  },
-  {
     label: 'Student',
     message: null,
     messageHover: true,
@@ -82,6 +43,9 @@ const pricingLevels = [
       },
       {
         value: '<strong>1000</strong> Chart and Image Saves per day',
+      },
+      {
+        value: 'Community support for <strong>Falcon Sql Client</strong>',
       },
     ],
   },
@@ -126,6 +90,9 @@ const pricingLevels = [
       {
         value: '<strong>1000</strong> Chart and Image Saves per day',
       },
+      {
+        value: 'Chat support for <strong>Falcon Sql Client</strong>, <em>not including</em> support for persistent connections or non-SQL databases',
+      },
     ],
   },
   {
@@ -168,6 +135,9 @@ const pricingLevels = [
       {
         value: '<strong>10,000</strong> Chart and Image Saves per day',
       },
+      {
+        value: 'Chat and phone support for <strong>Falcon Sql Client</strong>, <em>including</em> support for persistent connections or non-SQL databases',
+      },
     ],
   },
 ]
@@ -182,7 +152,8 @@ export default class PricingDetails extends React.Component {
     this.toggleStudentState = this.toggleStudentState.bind(this)
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
   toggleStudentState() {
     this.setState({
@@ -226,7 +197,7 @@ export default class PricingDetails extends React.Component {
           <div className="price">
             <div className="price-text">
               <span className="usd">$</span>
-              {item.price.annually}
+              { item.price.annually }
             </div>
           </div>
         )
@@ -238,22 +209,22 @@ export default class PricingDetails extends React.Component {
         return (
           <div className="notes">
             <div className="details">
-              {item.price.frequency}, <strong>{item.price.users}</strong>
+              { item.price.frequency }, <strong>{ item.price.users }</strong>
             </div>
-            {/*<div className="billed-amount">*/}
-            {/*Free forever.*/}
-            {/*</div>*/}
+            { /*<div className="billed-amount">*/ }
+            { /*Free forever.*/ }
+            { /*</div>*/ }
           </div>
         )
       } else {
         return (
           <div className="notes">
             <div className="details">
-              {item.price.frequency}, <strong>{item.price.users}</strong>
+              { item.price.frequency }, <strong>{ item.price.users }</strong>
             </div>
-            {/*<div className="billed-amount">*/}
-            {/*Billed yearly.*/}
-            {/*</div>*/}
+            { /*<div className="billed-amount">*/ }
+            { /*Billed yearly.*/ }
+            { /*</div>*/ }
           </div>
         )
       }
@@ -264,11 +235,11 @@ export default class PricingDetails extends React.Component {
         return (
           <div
             className="pricing-cards-headers-item-message hidden hidden-fade"
-            onClick={item.messageAction}
+            onClick={ item.messageAction }
           >
             <div
               className="pricing-cards-headers-item-message-text message-action"
-              dangerouslySetInnerHTML={{ __html: item.message }}
+              dangerouslySetInnerHTML={ {__html: item.message} }
             />
           </div>
         )
@@ -277,7 +248,7 @@ export default class PricingDetails extends React.Component {
           <div className="pricing-cards-headers-item-message hidden hidden-fade">
             <div
               className="pricing-cards-headers-item-message-text"
-              dangerouslySetInnerHTML={{ __html: item.message }}
+              dangerouslySetInnerHTML={ {__html: item.message} }
             />
           </div>
         )
@@ -288,10 +259,10 @@ export default class PricingDetails extends React.Component {
     let pricingCardHeader = items => {
       return items.map((item, i) => {
         return (
-          <div className="pricing-cards-headers-item" key={i}>
-            {pricingCardHeaderMessage(item)}
+          <div className="pricing-cards-headers-item" key={ i }>
+            { pricingCardHeaderMessage(item) }
             <div className="pricing-cards-headers-item-text hidden hidden-fade">
-              {item.label}
+              { item.label }
             </div>
           </div>
         )
@@ -301,14 +272,14 @@ export default class PricingDetails extends React.Component {
     let pricingCardBody = items => {
       return items.map((item, i) => {
         return (
-          <div className="pricing-cards-bodies-item" key={i}>
+          <div className="pricing-cards-bodies-item" key={ i }>
             <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
               <div className="pricing-cards-bodies-item-content">
-                {pricingCardBodyPrice(item)}
-                {pricingCardBodyNotes(item)}
+                { pricingCardBodyPrice(item) }
+                { pricingCardBodyNotes(item) }
               </div>
               <Buttons
-                items={item.actions}
+                items={ item.actions }
                 className="pricing-cards-bodies-item-actions"
               />
             </div>
@@ -321,9 +292,9 @@ export default class PricingDetails extends React.Component {
       let pricingCardFeature = items => {
         return items.map((item, i) => {
           return (
-            <div className="pricing-cards-feature-lists-item-value " key={i}>
+            <div className="pricing-cards-feature-lists-item-value " key={ i }>
               <div
-                dangerouslySetInnerHTML={{ __html: item.value }}
+                dangerouslySetInnerHTML={ {__html: item.value} }
                 className="hidden delay-med"
               />
             </div>
@@ -332,9 +303,9 @@ export default class PricingDetails extends React.Component {
       }
       return items.map((item, i) => {
         return (
-          <div className="pricing-cards-feature-lists-item" key={i}>
+          <div className="pricing-cards-feature-lists-item" key={ i }>
             <div className="pricing-cards-feature-lists-item-wrapper">
-              {pricingCardFeature(item.features)}
+              { pricingCardFeature(item.features) }
             </div>
           </div>
         )
@@ -344,21 +315,21 @@ export default class PricingDetails extends React.Component {
     let mobilePricingCard = items => {
       return items.map((item, i) => {
         return (
-          <div className="pricing-card-single" key={i}>
+          <div className="pricing-card-single" key={ i }>
             <div className="pricing-cards-headers-item">
-              {pricingCardHeaderMessage(item)}
+              { pricingCardHeaderMessage(item) }
               <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                {item.label}
+                { item.label }
               </div>
             </div>
-            <div className="pricing-cards-bodies-item" key={i}>
+            <div className="pricing-cards-bodies-item" key={ i }>
               <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
                 <div className="pricing-cards-bodies-item-content">
-                  {pricingCardBodyPrice(item)}
-                  {pricingCardBodyNotes(item)}
+                  { pricingCardBodyPrice(item) }
+                  { pricingCardBodyNotes(item) }
                 </div>
                 <Buttons
-                  items={item.actions}
+                  items={ item.actions }
                   className="pricing-cards-bodies-item-actions"
                 />
               </div>
@@ -370,26 +341,26 @@ export default class PricingDetails extends React.Component {
 
     return (
       <div className="pricing-cards">
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={ {__html: styles} }/>
 
         <div className="pricing-cards-wrapper pricing-cards-mobile mobile-only">
-          {mobilePricingCard(pricingLevels)}
+          { mobilePricingCard(pricingLevels) }
         </div>
 
         <div className="pricing-cards-wrapper desktop-only">
           <div className="pricing-cards-headers">
             <div className="pricing-cards-headers-wrapper">
-              {pricingCardHeader(pricingLevels)}
+              { pricingCardHeader(pricingLevels) }
             </div>
           </div>
           <div className="pricing-cards-bodies">
             <div className="pricing-cards-bodies-wrapper ">
-              {pricingCardBody(pricingLevels)}
+              { pricingCardBody(pricingLevels) }
             </div>
           </div>
           <div className="pricing-cards-feature-lists">
             <div className="pricing-cards-feature-lists-wrapper">
-              {pricingCardFeatures(pricingLevels)}
+              { pricingCardFeatures(pricingLevels) }
             </div>
           </div>
         </div>

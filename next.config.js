@@ -132,10 +132,10 @@ module.exports = {
         test: /\.s(a|c)ss$/,
         use: ['babel-loader', 'raw-loader', 'postcss-loader',
           {
-            loader: 'sass-loader',
+            loader: 'fast-sass-loader',
             options: {
               data: '@import "partials/abstract";',
-              includePaths: ['styles', 'node_modules']
+              includePaths: ['./', 'styles', 'node_modules']
                 .map((d) => path.join(__dirname, d))
                 .map((g) => glob.sync(g))
                 .reduce((a, c) => a.concat(c), []),

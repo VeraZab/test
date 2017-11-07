@@ -52,16 +52,15 @@ export default () => (
   <Hero heroWrapperStyle={HeroWrapperStyle}>
     <HeroTop>
       <HeroMessaging>
-        <HeroTitle>Get started now, pick a plan later.</HeroTitle>
+        <HeroTitle>Modern visualization for the data era</HeroTitle>
         <HeroSubtitle>
-          Plotly is free to use for <em>public</em> charts and dashboards.
-          Collaborate on <em>private</em> charts and dashboards with a paid
-          plan.
+          After you sign up for a plan, a plotly engineer will walk you through your first
+          dashboard, report, slide deck, or SQL database connection.
         </HeroSubtitle>
       </HeroMessaging>
-      <HeroActions>
-        <Buttons items={HeroButtons} />
-      </HeroActions>
+      {/*<HeroActions>*/}
+        {/*<Buttons items={HeroButtons} />*/}
+      {/*</HeroActions>*/}
     </HeroTop>
     <HeroBottom style={HeroBottomStyles}>
       <ClientLogos />

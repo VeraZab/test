@@ -145,6 +145,7 @@ a {
     width: 100%;
     display: block;
     will-change: opacity;
+    transform: translate3d(0, 0, 0);
     &[data-loaded="true"] {
       transform: none !important;
     }
