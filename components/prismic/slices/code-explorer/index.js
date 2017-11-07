@@ -5,6 +5,10 @@ const CodeBlock = dynamic(import('./codeblock.js'), {
   ssr: false
 })
 
+const CodeVisual = dynamic(import('./visual.js'), {
+  ssr: false
+})
+
 if (typeof navigator !== 'undefined') {
   require('codemirror/mode/javascript/javascript')
   require('codemirror/mode/python/python')
@@ -14,8 +18,9 @@ if (typeof navigator !== 'undefined') {
 
 
 const shortid = require('shortid')
-import {CopyToClipboard} from 'react-copy-to-clipboard'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Button from 'components/prismic/button'
+
 /**
  * Tabs slice
  *
@@ -119,9 +124,9 @@ export default class CodeExplorer extends React.Component {
       if (buttons.length) {
         return (
           <div className=" buttons">
-            {buttons.map((button, i) => {
-              return <Button key={shortid.generate()} data={button}/>
-            })}
+            { buttons.map((button, i) => {
+              return <Button key={ shortid.generate() } data={ button }/>
+            }) }
           </div>
         )
       } else {
@@ -131,14 +136,14 @@ export default class CodeExplorer extends React.Component {
 
     const tabs = this.state.tabs.map((tab, i) => (
       <div
-        onClick={this.setTab(tab, i)}
-        key={i}
+        onClick={ this.setTab(tab, i) }
+        key={ i }
         className={
           'code-explorer-slice__content__header__item not-mobile' +
           (this.state.index === i ? ' disabled active' : '')
         }
       >
-        <div className="label">{tab.primary.label}</div>
+        <div className="label">{ tab.primary.label }</div>
       </div>
     ))
 
@@ -152,7 +157,7 @@ export default class CodeExplorer extends React.Component {
           'code-explorer-slice__content__header__item mobile active disabled'
         }
       >
-        <div className="label">{tab.primary.label}</div>
+        <div className="label">{ tab.primary.label }</div>
       </div>
     )
 
@@ -165,20 +170,27 @@ export default class CodeExplorer extends React.Component {
       backgroundImage: 'url(' + tab.primary.graphic.url + ')',
     }
     return (
-      <div className="code-explorer-slice" key={tab.primary.uid}>
+      <div className="code-explorer-slice" key={ tab.primary.uid }>
         <div className="code-explorer-slice__wrapper">
           <div className="code-explorer-slice__content">
             <div
               className="code-explorer-slice__content__image"
-              style={codeImageStyle}
+
             >
-              {/*<Image background data={tab.primary.graphic}/>*/}
+              { tab.primary.visual_code_iframe_url ? (
+                  <div className="iframe"><iframe src={tab.primary.visual_code_iframe_url} /></div>
+                )
+                :
+                <CodeVisual data={ tab.primary.visual_code_data.length ? tab.primary.visual_code_data[0].text : null }
+                            layout={ tab.primary.visual_code_layout.length ? tab.primary.visual_code_layout[0].text : null }/>
+              }
+
             </div>
             <div className="code-explorer-slice__content__code">
               <div className="code-explorer-slice__content__header">
                 <div className="code-explorer-slice__content__header__wrapper">
                   <div
-                    onClick={this.prev}
+                    onClick={ this.prev }
                     className={
                       this.state.index === 0
                         ? 'code-explorer-slice__pagination__prev disabled'
@@ -191,12 +203,12 @@ export default class CodeExplorer extends React.Component {
                     id="code-explorer-header-tabs"
                     className="code-explorer-slice__content__header__tabs"
                   >
-                    {tabs}
-                    <div className="mobile-only">{mobileTab}</div>
+                    { tabs }
+                    <div className="mobile-only">{ mobileTab }</div>
                   </div>
 
                   <div
-                    onClick={this.next}
+                    onClick={ this.next }
                     className={
                       this.state.index === this.state.tabs.length - 1
                         ? 'code-explorer-slice__pagination__next disabled'
@@ -210,23 +222,23 @@ export default class CodeExplorer extends React.Component {
               <div className="code-explorer-slice__content__code__container">
                 <div className="code-explorer-slice__content__code__copy">
                   <CopyToClipboard
-                    text={tab.primary.code[0].text}
-                    onCopy={() => this.setState({copied: true})}
+                    text={ tab.primary.code[0].text }
+                    onCopy={ () => this.setState({copied: true}) }
                   >
                     <div className="code-explorer-slice__content__code__copy__content">
                       <div className="code-explorer-slice__content__code__copy__content__icon mdi mdi-content-copy"/>
                       <div className="code-explorer-slice__content__code__copy__content__label">
-                        {this.state.copied ? 'Copied!' : 'Copy'}
+                        { this.state.copied ? 'Copied!' : 'Copy' }
                       </div>
                     </div>
                   </CopyToClipboard>
                 </div>
                 <div className="code-explorer-slice__content__code__block">
-                  <CodeBlock tab={tab}/>
+                  <CodeBlock tab={ tab }/>
                 </div>
               </div>
               <div className="code-explorer-slice__content__code__footer">
-                {actions()}
+                { actions() }
               </div>
             </div>
           </div>

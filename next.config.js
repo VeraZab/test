@@ -118,6 +118,10 @@ module.exports = {
   webpack: (config, {dev}) => {
     config.module.rules.push(
       {
+        test: /\.js$/,
+        loader: 'ify-loader'
+      },
+      {
         test: /\.(css|scss)/,
         loader: 'emit-file-loader',
         options: {
