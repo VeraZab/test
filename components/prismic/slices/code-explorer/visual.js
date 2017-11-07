@@ -1,5 +1,9 @@
 import React from 'react'
-import PlotlyComponent from 'react-plotly.js'
+
+import createPlotlyComponent from 'react-plotly.js/factory'
+import Plotly from 'plotly.js/dist/plotly-basic'
+const PlotlyComponent = createPlotlyComponent(Plotly)
+
 
 
 export default class CodeVisual extends React.Component {
@@ -45,7 +49,6 @@ export default class CodeVisual extends React.Component {
     return (
       <PlotlyComponent
         data={ plot.data }
-
         layout={ plot.layout }
       />
     )

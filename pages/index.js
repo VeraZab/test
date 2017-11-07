@@ -1,5 +1,4 @@
 import React from 'react'
-import Home from './home/home'
 
 import { fetchData } from 'lib/fetchData'
 import { bindActionCreators } from 'redux'
@@ -44,7 +43,7 @@ class Index extends React.Component {
   }
 
   render() {
-    return <Home />
+    return <div />
   }
 }
 export default Index
