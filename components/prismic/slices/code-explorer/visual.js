@@ -2,8 +2,8 @@ import React from 'react'
 
 import createPlotlyComponent from 'react-plotly.js/factory'
 import Plotly from 'plotly.js/dist/plotly-basic'
-const PlotlyComponent = createPlotlyComponent(Plotly)
 
+const PlotlyComponent = createPlotlyComponent(Plotly)
 
 
 export default class CodeVisual extends React.Component {
@@ -12,42 +12,30 @@ export default class CodeVisual extends React.Component {
     this.state = {}
   }
 
+  componentDidMount() {
+
+  }
+
 
   render() {
-    let plot = {
-      data: [{
-        x: ['giraffes', 'orangutans', 'monkeys'],
-        y: [20, 14, 23],
-        name: 'SF Zoo',
-        type: 'bar',
-        'marker': {color: '#19d3f3'}
-      }, {
-        x: ['giraffes', 'orangutans', 'monkeys'],
-        y: [12, 18, 29],
-        name: 'LA Zoo',
-        type: 'bar',
-        marker: {color: '#ab63fa'}
-      }],
-      layout: {
-        width: 500,
-        height: 580,
-        plot_bgcolor: '#F5F7FA',
-        paper_bgcolor: '#F5F7FA',
-      }
-    }
 
     const {data, layout} = this.props;
 
 
+    let plot = {
+      data: eval(data),
+      layout: {
+        ...eval(layout),
+        width: this.props.size.width,
+        height: this.props.size.height,
+        plot_bgcolor: '#fff',
+        paper_bgcolor: '#fff'
+      }
+    }
 
-    if (data) {
-      plot.data = eval(data);
-    }
-    if (layout) {
-      plot.layout = eval(layout)
-    }
     return (
       <PlotlyComponent
+        key={this.props.key}
         data={ plot.data }
         layout={ plot.layout }
       />

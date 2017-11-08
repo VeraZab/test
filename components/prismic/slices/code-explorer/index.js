@@ -37,6 +37,7 @@ export default class CodeExplorer extends React.Component {
     this.next = this.next.bind(this)
     this.prev = this.prev.bind(this)
     this.setTab = this.setTab.bind(this)
+    this.getImageSize = this.getImageSize.bind(this)
   }
 
   componentWillMount() {
@@ -59,11 +60,23 @@ export default class CodeExplorer extends React.Component {
     })
   }
 
-  componentDidMount() {
+  getImageSize(element, variable) {
+    const getBoundingClientRect = (element) => {
+      const {top, right, bottom, left, width, height, x, y} = element.getBoundingClientRect();
+      return {top, right, bottom, left, width, height, x, y}
+    }
+
+    const imageDiv = document.body.querySelector('.js-code-explorer__image')
+    const codeVisualSize = getBoundingClientRect(imageDiv);
 
     this.setState({
-      loaded: true,
+      codeVisualSize
     })
+  }
+
+  componentDidMount() {
+    this.getImageSize()
+    window.addEventListener('resize', this.getImageSize);
   }
 
   next() {
@@ -174,14 +187,17 @@ export default class CodeExplorer extends React.Component {
         <div className="code-explorer-slice__wrapper">
           <div className="code-explorer-slice__content">
             <div
-              className="code-explorer-slice__content__image"
-
+              className="code-explorer-slice__content__image js-code-explorer__image"
             >
               { tab.primary.visual_code_iframe_url ? (
-                  <div className="iframe"><iframe src={tab.primary.visual_code_iframe_url} /></div>
+                  <div className="iframe">
+                    <iframe src={ tab.primary.visual_code_iframe_url }/>
+                  </div>
                 )
                 :
-                <CodeVisual data={ tab.primary.visual_code_data.length ? tab.primary.visual_code_data[0].text : null }
+                <CodeVisual size={ this.state.codeVisualSize }
+                            key={tab.primary.uid}
+                            data={ tab.primary.visual_code_data.length ? tab.primary.visual_code_data[0].text : null }
                             layout={ tab.primary.visual_code_layout.length ? tab.primary.visual_code_layout[0].text : null }/>
               }
 
