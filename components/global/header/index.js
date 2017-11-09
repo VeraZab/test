@@ -39,15 +39,6 @@ class Header extends React.Component {
     }
 
     return [
-      <div className="global-message" key={shortid.generate()}>
-        <div className="global-message-wrapper">
-          2 day master classes for Dash, R Shiny, and React/Plotly.js in NYC
-          November 18-19 🎨 📈 🗽{ ' ' }
-          <a href="https://plotcon.plot.ly/workshops" target="_blank">
-            Learn More
-          </a>
-        </div>
-      </div>,
       <header id="site-header" className={ classes } key={shortid.generate()}>
         <div className="site-header-wrapper">
           <div className="site-header--section-left">

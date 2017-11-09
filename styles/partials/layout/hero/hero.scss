@@ -115,8 +115,10 @@
     position: absolute;
     will-change: opacity;
     opacity: 0;
-    &[data-loaded="true"] {
-      @include animationFadein-sm;
+    @include trans;
+    &.image-loaded {
+      opacity: 1;
+      transition-duration: 2s;
     }
   }
 
@@ -137,6 +139,7 @@
       width: 100%;
     }
   }
+
   &-messaging {
     display: flex;
     flex-direction: column;
@@ -149,6 +152,9 @@
       margin-bottom: $gutter;
       text-shadow: $text-shadow-default;
       text-align: center;
+      will-change: opacity, transition;
+      @include animationFadeAndSlideInFromTop-sm;
+      animation-duration: 2s;
     }
     h2 {
       @include center-content;
@@ -267,14 +273,14 @@
       width: 100%;
       bottom: $unit*6;
       left: 0;
-      @include media('<=800px'){
-        bottom:0;
+      @include media('<=800px') {
+        bottom: 0;
       }
     }
     &:nth-of-type(2) {
       max-width: 85%;
       transform: translateX($unit*15) translateY(-$unit*4);
-      @include media('<=800px'){
+      @include media('<=800px') {
         transform: translateX($unit*15) translateY($unit*4);
       }
     }
@@ -293,5 +299,20 @@
     @include media('<=800px') {
       display: none;
     }
+  }
+}
+
+.hero-prismic {
+  $c: &;
+
+  #{$c}__messaging__body {
+    will-change: opacity, transition;
+    @include animationFadeAndSlideInFromBottom-sm;
+    animation-duration: 2s;
+  }
+  .browser {
+    will-change: opacity, transition;
+    @include animationFadeAndSlideInFromBottom-sm;
+    animation-duration: 2s;
   }
 }

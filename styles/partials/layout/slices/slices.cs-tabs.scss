@@ -33,6 +33,8 @@
       align-items: center;
       position: relative;
       z-index:99;
+      font-weight:500;
+      user-select: none;
 
       &.not-mobile{
         @include media('<=900px'){

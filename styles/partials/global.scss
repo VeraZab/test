@@ -146,7 +146,7 @@ a {
     display: block;
     will-change: opacity;
     transform: translate3d(0, 0, 0);
-    &[data-loaded="true"] {
+    &.image-loaded {
       transform: none !important;
     }
   }
@@ -218,21 +218,19 @@ a {
       transition-duration: 2.5s;
       transform-origin: center center;
       //transform: scale(1.06) !important;
-      &[data-loaded="true"] {
-        @extend .animate--fade-in;
-        animation-delay: 0.1s;
+      &.image-loaded {
+        opacity:1;
         transform: none !important;
       }
     }
 
     img {
       opacity: 0;
-      &:not([data-loaded="true"]) {
+      &:not(.image-loaded) {
 
       }
-      &[data-loaded="true"] {
-        @extend .animate--fade-in;
-        animation-delay: 0.1s;
+      &.image-loaded {
+        opacity:1;
       }
     }
   }

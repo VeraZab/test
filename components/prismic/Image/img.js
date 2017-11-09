@@ -9,32 +9,23 @@ export default class Img extends React.Component {
   }
 
   componentDidMount() {
-    // let observer = lozad('.lozad', {
-    //   load: function(el) {
-    //     el.src = el.dataset.src
-    //     el.onload = function() {
-    //       el.parentElement.parentElement.parentElement.classList.add(
-    //         'hq-loaded'
-    //       )
-    //       el.classList.add('img-loaded')
-    //     }
-    //   },
-    // })
-    //
-    // let bgImages = lozad('.lozad-bg', {
-    //   load: function(el) {
-    //     el.src = el.getAttribute('data-background-image')
-    //     console.log(el.src)
-    //     el.onload = function() {
-    //       el.parentElement.parentElement.parentElement.classList.add(
-    //         'hq-loaded'
-    //       )
-    //       el.classList.add('img-loaded')
-    //     }
-    //   },
-    // })
-    // bgImages.observe()
-    // observer.observe()
+    let observer = lozad('.lozad', {
+      threshold: 0.05,
+      load: function (el) {
+        if (el.dataset.src) {
+          el.src = el.dataset.src
+        } else if (el.dataset.backgroundImage) {
+          el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
+        }
+
+        el.classList.add('image-loaded')
+
+        el.onload = function () {
+          el.classList.add('image-loaded')
+        }
+      },
+    })
+    observer.observe()
   }
 
   render() {
@@ -58,15 +49,14 @@ export default class Img extends React.Component {
         <div
           className="image"
           style={this.props.styles}
-          key={Math.random()
-            .toString(36)
-            .substr(2, 5)}
+          key={key}
         >
           <div className="image-wrapper">
             <div
               className="image-hq lozad"
               data-background-image={data.url + imageParams.hq}
               style={hqStyle}
+              key={shortid.generate()}
             />
             <div className="image-preview" style={previewStyle} />
           </div>
@@ -83,9 +73,7 @@ export default class Img extends React.Component {
       <div
         className={classes}
         style={this.props.styles}
-        key={Math.random()
-          .toString(36)
-          .substr(2, 5)}
+        key={key}
       >
         <div className="image-wrapper">
           <div className="image-hq">

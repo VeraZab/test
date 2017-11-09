@@ -10,6 +10,7 @@ import { bindActionCreators } from 'redux'
 import { initStore, saveStoreData } from 'store/global'
 import withRedux from 'next-redux-wrapper'
 
+const shortid = require('shortid');
 import NotFound from 'components/404'
 
 class P extends Component {
@@ -64,11 +65,11 @@ class P extends Component {
       }
 
 
-      const hero = <Hero data={ doc.data }/>
+      const hero = <Hero key={ shortid.generate() } data={ doc.data }/>
       const slices = <Slices data={ doc.data.slices }/>
       return (
         <div className={ 'page' + ` page--${doc.uid}` }>
-          <Head meta={meta}/>
+          <Head meta={ meta }/>
           { hero }
           { slices }
         </div>

@@ -20,8 +20,23 @@ export default class Hero extends React.Component {
   }
 
   componentDidMount() {
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    observer.observe();
+    let observer = lozad('.hero-prismic-background-image', {
+      threshold: 0,
+      load: function (el) {
+        if (el.dataset.src) {
+          el.src = el.dataset.src
+        } else if (el.dataset.backgroundImage) {
+          el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
+        }
+
+        el.classList.add('image-loaded')
+
+        el.onload = function () {
+          el.classList.add('image-loaded')
+        }
+      },
+    })
+    observer.observe()
   }
 
   findSlice = (slices, type) =>
@@ -100,8 +115,8 @@ export default class Hero extends React.Component {
             { Logos }
           </div>
         </div>
-        <div className="hero-prismic-background-image lozad"
-             data-background-image={ `url(${data.hero_background_image.url}?w=2200&auto=format)` }
+        <div className="hero-prismic-background-image"
+             data-background-image={ `${data.hero_background_image.url}?w=2200&auto=format` }
              key={ `hero_bg_${shortid.generate()}` }
              style={ HeroWrapperBg }/>
       </section>

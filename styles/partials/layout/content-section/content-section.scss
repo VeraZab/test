@@ -3,11 +3,13 @@
 
   overflow: hidden;
 
+
+
   &-wrapper {
     @include global-wrapper;
     display: flex;
     position: relative;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     $tb-spacing: $unit*4;
 
     #{$c}-area {
@@ -17,8 +19,8 @@
     min-height: 60vh;
 
     @include media('>800px') {
-      padding-left:$unit*4;
-      padding-right:$unit*4;
+      padding-left: $unit*4;
+      padding-right: $unit*4;
       min-height: 740px;
       $tb-spacing: $unit*10;
       #{$c}-area {
@@ -28,9 +30,10 @@
     }
   }
 
+
   #{$c}-details {
     position: relative;
-    z-index:99;
+    z-index: 99;
   }
 
   &:nth-of-type(odd) {
@@ -44,8 +47,6 @@
   #{$c}-actions {
     padding-top: $unit*2;
   }
-
-
 
 }
 

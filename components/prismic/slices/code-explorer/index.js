@@ -17,6 +17,8 @@ if (typeof navigator !== 'undefined') {
 }
 
 
+import axios from 'axios'
+
 const shortid = require('shortid')
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Button from 'components/prismic/button'
@@ -45,6 +47,7 @@ export default class CodeExplorer extends React.Component {
     this.props.data.items.map((item, i) => {
       item.uid = shortid.generate()
       item.layout = 'row-right'
+
       if (i === 0) {
         this.setState({
           activeTab: item.uid,
@@ -196,9 +199,9 @@ export default class CodeExplorer extends React.Component {
                 )
                 :
                 <CodeVisual size={ this.state.codeVisualSize }
-                            key={tab.primary.uid}
-                            data={ tab.primary.visual_code_data.length ? tab.primary.visual_code_data[0].text : null }
-                            layout={ tab.primary.visual_code_layout.length ? tab.primary.visual_code_layout[0].text : null }/>
+                            key={ tab.primary.uid }
+                            data={ tab.primary.visual_code_data_url ? tab.primary.visual_code_data_url : null }
+                            layout={ tab.primary.visual_code_layout_url ? tab.primary.visual_code_layout_url : null }/>
               }
 
             </div>

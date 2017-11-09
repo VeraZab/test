@@ -5,7 +5,7 @@
   min-height: $site-header-height;
   position: absolute;
   width: 100%;
-  z-index: 444;
+  z-index: 99999999;
   display: flex;
   &.mobile-menu-active {
     @include media('<=800px') {
@@ -57,7 +57,7 @@
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
-
+      font-weight:500;
       @include media('<=800px') {
         &:not(.mobile-menu-active) {
           display: none;

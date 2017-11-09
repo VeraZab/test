@@ -103,7 +103,7 @@
       padding-left: $unit*2;
       border-radius: 8px;
       font-weight: 400;
-      border: 1px solid chromatic-color-luminance($color-rhino-core, 0.75);
+      border: 1px solid $color-rhino-medium-2;
       position: relative;
       &::before {
         content: '';
