@@ -305,7 +305,7 @@
 .hero-prismic {
   $c: &;
 
-  #{$c}__messaging__body {
+  #{$c}__messaging__body, #{$c}-actions {
     will-change: opacity, transition;
     @include animationFadeAndSlideInFromBottom-sm;
     animation-duration: 2s;

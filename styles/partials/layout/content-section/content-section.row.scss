@@ -32,20 +32,30 @@
      * vs graphic
      */
     &[class*="-auto"] {
+      --details-width: 50%;
+      --graphic-width: 50%;
+
+      &.content-section-p-proportions--25-75 {
+        --details-width: 25% !important;
+        --graphic-width: 75vw !important;
+      }
+
       &:nth-of-type(even) {
         &.content-section-p-style--bleed-wrapper {
+
           #{$c}-details {
             position: relative;
             z-index: 99;
             @include media('>800px') {
-              max-width: 50%;
-              margin-left: 50%;
+              max-width: var(--details-width);
+              margin-left: calc(100% - var(--details-width));
             }
           }
+
         }
         .content-section-p-graphic--style-bleed-parent {
           left: auto !important;
-          right: 50% !important;
+          right: calc(100% - var(--graphic-width)) !important;
 
           .content-section-p-graphic-item {
             position: absolute;
@@ -90,6 +100,8 @@
           }
         }
       }
+
+
       &:nth-of-type(odd) {
         &.content-section-p-style--bleed-wrapper {
           #{$c}-graphic {
@@ -102,8 +114,8 @@
           }
           #{$c}-details {
             @include media('>800px') {
-              max-width: 50%;
-              margin-right: 50%;
+              max-width: var(--details-width);
+              margin-left: 0;
             }
           }
           .image {
@@ -113,7 +125,7 @@
           }
         }
         .content-section-p-graphic--style-bleed-parent {
-          left: 50% !important;
+          left: var(--details-width) !important;
         }
         #{$c}-graphic {
           @include media('>800px') {
@@ -130,6 +142,8 @@
         }
       }
     }
+
+
     /*
      * row-graphic-left
      * If the row contains '-left' let's style it
@@ -179,7 +193,7 @@
     .content-section-p-graphic--style-bleed-parent {
       padding-top: 0 !important;
       padding-bottom: 0 !important;
-      width: 50vw !important;
+      width: var(--graphic-width) !important;
       position: absolute !important;
       height: 100% !important;
       .content-section-p-graphic-item {

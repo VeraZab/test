@@ -129,6 +129,9 @@ export default class ContentSection extends React.Component {
       classes += ' ' + componentClass + '-style--bleed-wrapper'
     }
 
+    classes += ` ${componentClass}-proportions--${primary.proportions}`
+
+
     /**
      * Body
      *

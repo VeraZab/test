@@ -89,6 +89,10 @@ $animation-page-item-timing: 0.5s;
   }
 }
 
+img {
+  pointer-events: none;
+}
+
 .animate {
   &--fade-in {
     opacity: 0;
@@ -219,7 +223,7 @@ a {
       transform-origin: center center;
       //transform: scale(1.06) !important;
       &.image-loaded {
-        opacity:1;
+        opacity: 1;
         transform: none !important;
       }
     }
@@ -230,7 +234,7 @@ a {
 
       }
       &.image-loaded {
-        opacity:1;
+        opacity: 1;
       }
     }
   }
