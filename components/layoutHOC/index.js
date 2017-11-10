@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import Header from 'components/global/header'
 import Footer from 'components/global/footer'
 import styles from 'components/global/layout/layout.scss'
+import ReactGA from 'react-ga'
 import Metahead from 'components/global/head'
 
 function Layout(Child) {
@@ -31,6 +31,41 @@ function Layout(Child) {
 
     componentDidMount() {
       document.body.classList.remove('no-scroll')
+
+
+      ReactGA.initialize('UA-39373211-1')
+      ReactGA.pageview(document.location.pathname)
+      ;(function() {
+        let qs,
+          js,
+          q,
+          s,
+          d = document,
+          gi = d.getElementById,
+          ce = d.createElement,
+          gt = d.getElementsByTagName,
+          id = 'typef_orm_share',
+          b = 'https://embed.typeform.com/'
+        if (!gi.call(d, id)) {
+          js = ce.call(d, 'script')
+          js.id = id
+          js.src = b + 'embed.js'
+          q = gt.call(d, 'script')[0]
+          q.parentNode.insertBefore(js, q)
+        }
+      })()
+
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(registration => {
+            console.log('service worker registration successful')
+          })
+          .catch(err => {
+            console.warn('service worker registration failed', err.message)
+          })
+      }
     }
 
     render() {

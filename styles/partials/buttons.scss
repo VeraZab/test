@@ -74,9 +74,6 @@
         font-size: 32px;
       }
     }
-    img {
-      display: block;
-    }
   }
 
   &-small {
@@ -87,7 +84,7 @@
   &-link {
 
   }
-  // -- 
+  // --
   // Primary Button Styles
   // --
 
@@ -149,9 +146,9 @@
     }
   }
 
-  // -- 
+  // --
   // Default hover + active states
-  // -- 
+  // --
   &:hover {
     //cursor: pointer;
   }

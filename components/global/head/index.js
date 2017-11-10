@@ -31,13 +31,6 @@ export default ({ children, meta = defaultMeta }) => (
     </title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <link
-      href="/static/mdi/css/materialdesignicons.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-
     <meta property="og:site_name" content={globalMeta.sitename} />
     <meta
       property="og:type"

@@ -3,11 +3,18 @@ const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dir: '.', dev})
 const handle = app.getRequestHandler()
+const {join} = require('path')
 
 app.prepare()
   .then(() => {
 
     const server = express()
+
+
+    server.use(
+      '/service-worker.js',
+      express.static(join(__dirname, '.next', '/service-worker.js'))
+    )
 
     /**
      * Static Files

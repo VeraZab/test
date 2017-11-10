@@ -14,14 +14,16 @@ export default class Img extends React.Component {
       load: function (el) {
         if (el.dataset.src) {
           el.src = el.dataset.src
+          el.onload = function () {
+            el.classList.add('image-loaded')
+          }
         } else if (el.dataset.backgroundImage) {
-          el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
-        }
-
-        el.classList.add('image-loaded')
-
-        el.onload = function () {
-          el.classList.add('image-loaded')
+          let img = new Image()
+          img.src = el.dataset.backgroundImage
+          img.onload = function () {
+            el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
+            el.classList.add('image-loaded')
+          }
         }
       },
     })
@@ -31,8 +33,8 @@ export default class Img extends React.Component {
   render() {
 
     const key = shortid.generate()
-    let { data } = this.props
-    let { imageParams } = this.props
+    let {data} = this.props
+    let {imageParams} = this.props
     if (this.props.background) {
       let previewStyle = {
         backgroundImage: 'url(' + data.url + imageParams.preview + ')',
@@ -48,19 +50,19 @@ export default class Img extends React.Component {
       return (
         <div
           className="image"
-          style={this.props.styles}
-          key={key}
+          style={ this.props.styles }
+          key={ key }
         >
           <div className="image-wrapper">
             <div
               className="image-hq lozad"
-              data-background-image={data.url + imageParams.hq}
-              style={hqStyle}
-              key={shortid.generate()}
+              data-background-image={ data.url + imageParams.hq }
+              style={ hqStyle }
+              key={ shortid.generate() }
             />
-            <div className="image-preview" style={previewStyle} />
+            <div className="image-preview" style={ previewStyle }/>
           </div>
-          {data.copyright ? <copyright>&copy; {data.copyright}</copyright> : ''}
+          { data.copyright ? <copyright>&copy; { data.copyright }</copyright> : '' }
         </div>
       )
     }
@@ -71,23 +73,23 @@ export default class Img extends React.Component {
     }
     return (
       <div
-        className={classes}
-        style={this.props.styles}
-        key={key}
+        className={ classes }
+        style={ this.props.styles }
+        key={ key }
       >
         <div className="image-wrapper">
           <div className="image-hq">
             <img
-              className={'lozad'}
-              data-src={data.url + imageParams.hq}
+              className={ 'lozad' }
+              data-src={ data.url + imageParams.hq }
               alt=""
             />
           </div>
           <div className="image-preview">
-            <img src={data.url + imageParams.preview} alt="" />
+            <img src={ data.url + imageParams.preview } alt=""/>
           </div>
         </div>
-        {data.copyright ? <copyright>&copy; {data.copyright}</copyright> : ''}
+        { data.copyright ? <copyright>&copy; { data.copyright }</copyright> : '' }
       </div>
     )
   }

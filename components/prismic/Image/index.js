@@ -12,49 +12,6 @@ export default class Image extends React.Component {
   }
 
   componentDidMount() {
-    // let observer = lozad('.lozad', {
-    //   load: function(el) {
-    //     el.src = el.dataset.src
-    //     el.onload = function() {
-    //       el.parentElement.parentElement.parentElement.classList.add(
-    //         'hq-loaded'
-    //       )
-    //       el.classList.add('img-loaded')
-    //     }
-    //   },
-    // })
-    //
-    // let bgImages = lozad('.lozad-bg', {
-    //   load: function(el) {
-    //     el.src = el.getAttribute('data-background-image')
-    //     console.log(el.src)
-    //     el.onload = function() {
-    //       el.parentElement.parentElement.parentElement.classList.add(
-    //         'hq-loaded'
-    //       )
-    //       el.classList.add('img-loaded')
-    //     }
-    //   },
-    // })
-    // bgImages.observe()
-    // observer.observe()
-
-    // let observer = lozad('.lozad', {
-    //   threshold: 0,
-    //   load: function (el) {
-    //     if (el.dataset.src) {
-    //       el.src = el.dataset.src
-    //     } else if (el.dataset.backgroundImage) {
-    //       el.style.backgroundImage = el.dataset.backgroundImage
-    //     }
-    //     el.classList.add('image-loaded')
-    //
-    //     el.onload = function () {
-    //       el.classList.add('image-loaded')
-    //     }
-    //   },
-    // })
-    // observer.observe()
   }
 
   render() {

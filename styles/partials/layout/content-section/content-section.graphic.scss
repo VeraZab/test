@@ -1,5 +1,13 @@
 .content-section-p {
   $c: &; // sets this classname to a variable omg
+
+  #{$c}-details {
+    & ~  #{$c}-graphic{
+      @include media('<=800px'){
+        padding-top:$unit*4;
+      }
+    }
+  }
   #{$c}-graphic {
 
     &-blend-mode{

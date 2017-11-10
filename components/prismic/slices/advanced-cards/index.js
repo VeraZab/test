@@ -1,18 +1,11 @@
 import React from 'react'
-import ContentSection from 'components/prismic/content-section'
 import Image from 'components/prismic/Image'
-
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import {atomOneDark} from 'react-syntax-highlighter/dist/styles'
-
-import {UnControlled as CodeMirror} from 'react-codemirror2'
-
 import PrismicDOM from 'prismic-dom'
+
 const shortid = require('shortid')
-import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Button from 'components/prismic/button'
-import {images} from 'config/constants'
-import {imgix} from 'config/functions'
+import { images } from 'config/constants'
+import { imgix } from 'config/functions'
 
 /**
  * Tabs slice
@@ -35,8 +28,8 @@ export default class AdvancedCards extends React.Component {
   render() {
 
     const Logo = (data) => {
-      if(data.logo.url){
-        return (<div className="logo"><Image noBlur data={data.logo} /></div>)
+      if (data.logo.url) {
+        return (<div className="logo"><Image noBlur data={ data.logo }/></div>)
       }
     }
 
@@ -66,9 +59,9 @@ export default class AdvancedCards extends React.Component {
       if (buttons.length) {
         return (
           <div className=" buttons">
-            {buttons.map((button, i) => {
-              return <Button key={shortid.generate()} data={button}/>
-            })}
+            { buttons.map((button, i) => {
+              return <Button key={ shortid.generate() } data={ button }/>
+            }) }
           </div>
         )
       } else {
@@ -101,48 +94,36 @@ export default class AdvancedCards extends React.Component {
         backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')'
       }
       return (
-        <div className="card card--with-image" key={shortid.generate()}>
+        <div className="card card--with-image" key={ shortid.generate() }>
           <div className="card__wrapper">
-            <div className="card__image" style={imageStyle}>
+            <div className="card__image" style={ imageStyle }>
               <div className="card__details">
                 <div className="card__details__meta">
-                  <div className="card__title"><h2><span>{card.title}</span></h2></div>
-                  <div className="card__subtitle"><h3>{card.subtitle}</h3></div>
+                  <div className="card__title"><h2><span>{ card.title }</span></h2></div>
+                  <div className="card__subtitle"><h3>{ card.subtitle }</h3></div>
                 </div>
-                {Logo(card)}
-                {/*<div className="card__details__action">*/}
-                  {/*<a*/}
-                    {/*className="card-action-link"*/}
-                    {/*href={card.button_one_link.url}*/}
-                    {/*target="_blank"*/}
-                  {/*>*/}
-                    {/*{card.button_one_label}*/}
-                  {/*</a>*/}
-                {/*</div>*/}
+                { Logo(card) }
               </div>
             </div>
 
             <div className="card__body">
               <div className="card__body__content"
-                   dangerouslySetInnerHTML={{
+                   dangerouslySetInnerHTML={ {
                      __html: PrismicDOM.RichText.asHtml(card.body),
-                   }}/>
+                   } }/>
               <div className="card__body__actions">
-                {actions(card)}
+                { actions(card) }
               </div>
             </div>
-
 
 
           </div>
         </div>
       )
     })
-
-
     return (<div className="advanced-cards">
       <div className="advanced-cards__wrapper">
-        {cards}
+        { cards }
       </div>
     </div>)
   }

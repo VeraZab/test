@@ -25,14 +25,16 @@ export default class Hero extends React.Component {
       load: function (el) {
         if (el.dataset.src) {
           el.src = el.dataset.src
+          el.onload = function () {
+            el.classList.add('image-loaded')
+          }
         } else if (el.dataset.backgroundImage) {
-          el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
-        }
-
-        el.classList.add('image-loaded')
-
-        el.onload = function () {
-          el.classList.add('image-loaded')
+          let img = new Image()
+          img.src = el.dataset.backgroundImage
+          img.onload = function () {
+            el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
+            el.classList.add('image-loaded')
+          }
         }
       },
     })
@@ -59,7 +61,7 @@ export default class Hero extends React.Component {
      * These values will adjust the layout of the hero overall
      * column || row
      */
-    if (data.hero_layout != null || data.hero_layout != '') {
+    if (data.hero_layout !== null || data.hero_layout !== '') {
       classes += ' hero-prismic-layout--' + data.hero_layout
     }
     /**
@@ -69,8 +71,8 @@ export default class Hero extends React.Component {
      * An image can still be applied regardless of style chosen
      */
     if (
-      data.hero_background_style != null ||
-      data.hero_background_style != ''
+      data.hero_background_style !== null ||
+      data.hero_background_style !== ''
     ) {
       classes += ' hero-prismic-style--' + data.hero_background_style
     }
@@ -85,12 +87,14 @@ export default class Hero extends React.Component {
     if (data.hero_background_image.url) {
       data.hero_background_image.url = imgix(data.hero_background_image.url)
     }
-    const HeroWrapperBg = {
+    const HeroWrapperBg = data.hero_background_image.url ? {
       backgroundImage: `url(${data.hero_background_image.url}?w=2200&auto=format)`,
       backgroundSize: data.hero_background_size,
       backgroundPosition: data.hero_background_position,
       backgroundRepeat: 'no-repeat',
-    }
+    } : {}
+
+
     if (this.props.heroWrapperStyle) {
       HeroWrapperStyle = this.props.heroWrapperStyle
     }
@@ -116,7 +120,7 @@ export default class Hero extends React.Component {
           </div>
         </div>
         <div className="hero-prismic-background-image"
-             data-background-image={ `${data.hero_background_image.url}?w=2200&auto=format` }
+             data-background-image={ data.hero_background_image.url ? `${data.hero_background_image.url}?w=2200&auto=format` : null }
              key={ `hero_bg_${shortid.generate()}` }
              style={ HeroWrapperBg }/>
       </section>

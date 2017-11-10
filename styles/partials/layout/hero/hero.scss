@@ -152,9 +152,6 @@
       margin-bottom: $gutter;
       text-shadow: $text-shadow-default;
       text-align: center;
-      will-change: opacity, transition;
-      @include animationFadeAndSlideInFromTop-sm;
-      animation-duration: 2s;
     }
     h2 {
       @include center-content;
@@ -306,13 +303,13 @@
   $c: &;
 
   #{$c}__messaging__body, #{$c}-actions {
-    will-change: opacity, transition;
-    @include animationFadeAndSlideInFromBottom-sm;
-    animation-duration: 2s;
+    //will-change: opacity, transition;
+    //@include animationFadeAndSlideInFromBottom-sm;
+    //animation-duration: 2s;
   }
   .browser {
-    will-change: opacity, transition;
-    @include animationFadeAndSlideInFromBottom-sm;
-    animation-duration: 2s;
+    //will-change: opacity, transition;
+    //@include animationFadeAndSlideInFromBottom-sm;
+    //animation-duration: 2s;
   }
 }

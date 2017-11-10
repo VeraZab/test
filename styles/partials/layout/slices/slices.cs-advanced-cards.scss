@@ -208,7 +208,8 @@
       width: 100%
     }
     &__content {
-      transform: translate3d(0, 0, 0);
+      filter: blur(0px);
+      will-change:filter;
       @include trans;
       transition-duration: 1s;
     }

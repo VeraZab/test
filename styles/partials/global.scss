@@ -12,6 +12,8 @@
 @import "layout/hero.layout";
 @import "layout/content-section-p.layout";
 @import "layout/header";
+@import "image";
+@import "mdi";
 
 $animation-delay: 0.25s;
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
@@ -89,9 +91,6 @@ $animation-page-item-timing: 0.5s;
   }
 }
 
-img {
-  pointer-events: none;
-}
 
 .animate {
   &--fade-in {
@@ -133,113 +132,6 @@ a {
   transition: $transition;
 }
 
-.image {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-
-  &.no-blur {
-    .image-preview {
-      opacity: 0 !important;
-    }
-  }
-
-  img {
-    width: 100%;
-    display: block;
-    will-change: opacity;
-    transform: translate3d(0, 0, 0);
-    &.image-loaded {
-      transform: none !important;
-    }
-  }
-  copyright {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 10px;
-    //opacity: 0.5;
-    padding: $unit/2;
-    z-index: 2;
-    color: white;
-    background: black;
-    //mix-blend-mode: difference;
-  }
-  &-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    img {
-      @include trans;
-      transition-duration: 2.5s;
-      transform-origin: center center;
-      //transform: scale(1.06) !important;
-    }
-
-  }
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 10px 0 rgba(white, 0.5);
-    }
-    70% {
-      box-shadow: 0 0 10px 10px rgba(white, 0.0);
-    }
-    100% {
-      box-shadow: 0 0 10px 0 rgba(white, 0.0);
-    }
-  }
-  &-loader {
-
-    display: none;
-  }
-
-  &.hq-loaded {
-    .image-preview {
-      opacity: 0;
-    }
-  }
-  &-preview {
-    @include trans;
-    transition-delay: 0.75s;
-    transition-duration: 0.5s;
-    width: 100%;
-    //opacity:0;
-  }
-  &-hq {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    will-change: opacity;
-    z-index: 2;
-    &[data-background-image] {
-      opacity: 0;
-      @include trans;
-      transition-duration: 2.5s;
-      transform-origin: center center;
-      //transform: scale(1.06) !important;
-      &.image-loaded {
-        opacity: 1;
-        transform: none !important;
-      }
-    }
-
-    img {
-      opacity: 0;
-      &:not(.image-loaded) {
-
-      }
-      &.image-loaded {
-        opacity: 1;
-      }
-    }
-  }
-
-}
 
 .slices {
   width: 100%;
