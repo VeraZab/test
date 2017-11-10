@@ -34,7 +34,7 @@ function Layout(Child) {
 
       ReactGA.initialize('UA-39373211-1')
       ReactGA.pageview(document.location.pathname)
-      ;(function() {
+      ;(function () {
         let qs,
           js,
           q,
@@ -71,16 +71,20 @@ function Layout(Child) {
       let layout_styles = {}
 
       return (
-        <div className={'page-layout ' + classes} style={layout_styles}>
+        <div className={ 'page-layout ' + classes } style={ layout_styles }>
           <div className="page-layout-wrapper">
-            <Metahead />
-            <Head>
-              <style dangerouslySetInnerHTML={{ __html: styles }} />
-              <script async src="https://cdn.plot.ly/plotly-basic-latest.min.js" />
+            <Metahead/>
+            <Head
+              doc={ this.props.doc }>
+              <style dangerouslySetInnerHTML={ {__html: styles} }/>
+              <script
+                async
+                src="https://cdn.plot.ly/plotly-basic-latest.min.js"
+              />
             </Head>
-            <Header {...this.props} />
-            <Child {...this.props} />
-            <Footer />
+            <Header { ...this.props } />
+            <Child { ...this.props } />
+            <Footer/>
           </div>
         </div>
       )

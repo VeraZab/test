@@ -26,7 +26,7 @@ class Header extends React.Component {
 
     let logo = (
       <img
-        src="https://images.ineffable.co/plotly/eb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png?w=300&auto=format"
+        src="https://tamarack-prismic.imgix.net/plotly/eb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png?w=300&auto=format"
         alt="Plotly"
       />
     )

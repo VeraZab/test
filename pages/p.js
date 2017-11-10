@@ -17,56 +17,82 @@ class P extends Component {
     super(props)
   }
 
-  static async getInitialProps({ store, req, query: { slug } }) {
-    /**
-     * Get all our data on the server
-     * (or statically exported)
-     */
-    const currentStore = store.getState()
-
-    if (currentStore.loaded === false) {
-      const appData = await fetchData()
+  static async getInitialProps({store, req, query: {slug}}) {
+    if (req) {
       /**
-       * Save data to redux store
+       * Get all our data on the server
+       * (or statically exported)
        */
+      const currentStore = store.getState()
+
+      let currentDoc = {}
+
+      if (currentStore.loaded === false) {
+        const appData = await fetchData()
+        /**
+         * Save data to redux store
+         */
+
+        currentDoc = appData.find(doc => doc.uid === slug)
+        store.dispatch(
+          saveStoreData({
+            appData: appData,
+            currentDoc,
+            req: true,
+          })
+        )
+      }
+
+      /**
+       * Let's return some helpers for figuring out where we are
+       * req means we're on the server vs client
+       */
+      return {
+        slug: slug,
+        req: true,
+      }
+    } else {
+
+      let currentDoc = {}
+
+      currentDoc = store.getState().data.appData.find(doc => doc.uid === slug)
       store.dispatch(
         saveStoreData({
-          appData: appData,
-          req: true,
+          appData: store.getState().data.appData,
+          currentDoc,
+          req: false,
         })
       )
-    }
 
-    /**
-     * Let's return some helpers for figuring out where we are
-     * req means we're on the server vs client
-     */
-    return {
-      slug: slug,
-      req: true,
+      return {
+        slug: slug,
+        req: false,
+      }
+
     }
   }
 
-  getDoc = data => data.find(doc => doc.uid === this.props.slug && doc.type === 'page')
+  getDoc = data =>
+    data.find(doc => doc.uid === this.props.slug && doc.type === 'page')
 
   render() {
-    const doc = this.getDoc(this.props.reduxData)
+    const {doc} = this.props
 
     if (doc === undefined) {
-      return <NotFound />
+      return <NotFound/>
     } else {
       const meta = {
         title: `Plotly: ${doc.data.title}`,
         description: `${doc.data.description}`,
       }
 
-      const hero = <Hero key={shortid.generate()} data={doc.data} />
-      const slices = <Slices data={doc.data.slices} />
+      const hero = <Hero key={ shortid.generate() } data={ doc.data }/>
+      const slices = <Slices data={ doc.data.slices }/>
       return (
-        <div className={'page' + ` page--${doc.uid}`}>
-          <Head meta={meta} />
-          {hero}
-          {slices}
+        <div className={ 'page' + ` page--${doc.uid}` }>
+          <Head meta={ meta }/>
+          { hero }
+          { slices }
         </div>
       )
     }
@@ -79,6 +105,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   reduxData: state.data ? state.data.appData : [],
+  doc: state.data ? state.data.currentDoc : [],
 })
 
 export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(

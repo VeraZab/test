@@ -1,5 +1,19 @@
 .hero-prismic {
+
+  --details-width: 45%;
+  --graphic-width: 55%;
+
   $c: &;
+
+  @at-root .page--falcon-sql-editor {
+    #{$c} {
+      --details-width: 55%;
+      --graphic-width: 45git%;
+      #{$c}-messaging{
+        padding-right:0 !important;
+      }
+    }
+  }
 
   /**
  * Layout styles
@@ -7,8 +21,7 @@
  */
   &-layout {
     &--row {
-      $details-width: 45%;
-      $graphic-width: 55%;
+
       .hero-prismic-wrapper {
         @include global-wrapper;
         flex-direction: row !important;
@@ -17,7 +30,6 @@
         padding-top: 100px;
         flex-wrap: wrap;
         width: 100%;
-
 
         @include media("<1060px") {
           padding-top: 80px;
@@ -30,12 +42,11 @@
           padding-right: 0;
         }
 
-
         .hero-prismic-details-section {
           padding-top: 0;
           flex-grow: 1;
           @include media('>900px') {
-            max-width: $details-width;
+            max-width: var(--details-width);
             margin-left: 0;
             margin-right: 0;
             padding-bottom: $unit*4;
@@ -53,7 +64,7 @@
         .hero-prismic-graphic-section {
           align-self: flex-end;
           @include media('>900px') {
-            max-width: $graphic-width;
+            max-width: var(--graphic-width);
             transform-origin: left bottom;
             padding-bottom: $unit*4;
           }
@@ -69,8 +80,8 @@
           $cc: &;
           //padding-bottom: $unit*2;
 
-          @at-root .page--home{
-            #{$cc}{
+          @at-root .page--home {
+            #{$cc} {
               @include media('>800px') {
                 padding-right: $unit*2;
               }
@@ -117,7 +128,7 @@
         }
 
         #{$c}-bottom {
-          padding-left:0;
+          padding-left: 0;
           padding-right: 0;
           order: 2;
         }
@@ -135,7 +146,6 @@
       are in the hero.
 
        */
-
 
     }
   }

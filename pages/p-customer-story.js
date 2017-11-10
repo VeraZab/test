@@ -19,7 +19,7 @@ class PCS extends Component {
     super(props)
   }
 
-  static async getInitialProps({store, req, query: {slug}}) {
+  static async getInitialProps({ store, req, query: { slug } }) {
     /**
      * Get all our data on the server
      * (or statically exported)
@@ -49,48 +49,53 @@ class PCS extends Component {
     }
   }
 
-  getDoc = data => data.find(doc => doc.uid === this.props.slug && doc.type === 'customer-story')
+  getDoc = data =>
+    data.find(
+      doc => doc.uid === this.props.slug && doc.type === 'customer-story'
+    )
 
   render() {
     const doc = this.getDoc(this.props.reduxData)
 
     if (doc === undefined) {
-      return <NotFound/>
+      return <NotFound />
     } else {
       const meta = {
         title: `Plotly: ${doc.data.client}`,
         description: `${doc.data.overview}`,
       }
 
-      const hero = <Hero key={ shortid.generate() } data={ doc.data }/>
-      const slices = <Slices data={ doc.data.body }/>
+      const hero = <Hero key={shortid.generate()} data={doc.data} />
+      const slices = <Slices data={doc.data.body} />
       return (
-        <div className={ `page page--${doc.uid} page--cs` }>
-          <Head meta={ meta }/>
+        <div className={`page page--${doc.uid} page--cs`}>
+          <Head meta={meta} />
 
           <div className="page--cs__wrapper">
             <div className="page--cs__sidebar">
               <div className="page--cs__sidebar__wrapper">
                 <div className="page--cs__sidebar__logo">
-                  <Image noBlur data={ doc.data.client_logo }/>
+                  <Image noBlur data={doc.data.client_logo} />
                 </div>
                 <div className="page--cs__sidebar__title">
-                  <h1>{ doc.data.client }</h1>
+                  <h1>{doc.data.client}</h1>
                 </div>
-                <div className="page--cs__sidebar__overview"
-                     dangerouslySetInnerHTML={ {
-                       __html: PrismicDOM.RichText.asHtml(doc.data.overview),
-                     } }/>
-                <div className="page--cs__sidebar__quote"
-                     dangerouslySetInnerHTML={ {
-                       __html: PrismicDOM.RichText.asHtml(doc.data.quote),
-                     } }/>
+                <div
+                  className="page--cs__sidebar__overview"
+                  dangerouslySetInnerHTML={{
+                    __html: PrismicDOM.RichText.asHtml(doc.data.overview),
+                  }}
+                />
+                <div
+                  className="page--cs__sidebar__quote"
+                  dangerouslySetInnerHTML={{
+                    __html: PrismicDOM.RichText.asHtml(doc.data.quote),
+                  }}
+                />
               </div>
             </div>
 
-            <div className="page--cs__main">
-              { slices }
-            </div>
+            <div className="page--cs__main">{slices}</div>
           </div>
         </div>
       )

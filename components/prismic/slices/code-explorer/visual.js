@@ -76,14 +76,12 @@ export default class CodeVisual extends React.Component {
 
     return (
       <div>
-
         <PlotlyComponent
           key={this.props.key}
           data={plot.data}
           layout={plot.layout}
         />
       </div>
-
     )
   }
 }
