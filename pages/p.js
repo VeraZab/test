@@ -47,7 +47,7 @@ class P extends Component {
     }
   }
 
-  getDoc = data => data.find(doc => doc.uid === this.props.slug)
+  getDoc = data => data.find(doc => doc.uid === this.props.slug && doc.type === 'page')
 
   render() {
     const doc = this.getDoc(this.props.reduxData)

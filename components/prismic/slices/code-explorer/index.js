@@ -194,6 +194,7 @@ export default class CodeExplorer extends React.Component {
     }
     return (
       <div className="code-explorer-slice" key={tab.primary.uid}>
+
         <div className="code-explorer-slice__wrapper">
           <div className="code-explorer-slice__content">
             <div className="code-explorer-slice__content__image js-code-explorer__image">

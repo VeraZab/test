@@ -1,7 +1,6 @@
 import React from 'react'
 
 import createPlotlyComponent from 'react-plotly.js/factory'
-import Plotly from 'plotly.js/dist/plotly-basic'
 import axios from 'axios'
 const PlotlyComponent = createPlotlyComponent(Plotly)
 
@@ -76,11 +75,15 @@ export default class CodeVisual extends React.Component {
     }
 
     return (
-      <PlotlyComponent
-        key={this.props.key}
-        data={plot.data}
-        layout={plot.layout}
-      />
+      <div>
+
+        <PlotlyComponent
+          key={this.props.key}
+          data={plot.data}
+          layout={plot.layout}
+        />
+      </div>
+
     )
   }
 }

@@ -11,20 +11,22 @@ app.prepare()
     const server = express()
 
 
-    server.use(
-      '/service-worker.js',
-      express.static(join(__dirname, '.next', '/service-worker.js'))
-    )
+    if (!dev) {
+      server.use(
+        '/service-worker.js',
+        express.static(join(__dirname, '.next', '/service-worker.js'))
+      )
 
-    /**
-     * Static Files
-     */
-    server.get('/robots.txt', (req, res) => {
-      return res.sendFile('/static/robots.txt')
-    })
-    server.get('/sitemap.xml', (req, res) => {
-      return res.sendFile('/static/robots.txt')
-    })
+      /**
+       * Static Files
+       */
+      server.get('/robots.txt', (req, res) => {
+        return res.sendFile('/static/robots.txt')
+      })
+      server.get('/sitemap.xml', (req, res) => {
+        return res.sendFile('/static/sitemap.xm')
+      })
+    }
 
     /**
      * New Pages
@@ -110,9 +112,9 @@ app.prepare()
     server.get('/products/enterprise/customer-stories', (req, res) => {
       return app.render(req, res, '/customer-stories')
     })
-    server.get('/products/enterprise/customer-stories/:id', (req, res) => {
-      const queryParams = {id: req.params.id}
-      return app.render(req, res, '/single-customer-stories', queryParams)
+    server.get('/products/enterprise/customer-stories/:slug', (req, res) => {
+      const queryParams = {slug: req.params.slug}
+      return app.render(req, res, '/p-customer-story', queryParams)
     })
     // server.get('/tableau-alternative', (req, res) => {
     //   return app.render(req, res, '/tableau-alternative')
