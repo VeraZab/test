@@ -20,7 +20,7 @@ class Header extends React.Component {
   }
 
   render() {
-    let {doc} = this.props
+    let { doc } = this.props
 
     let classes = 'site-header site-header-style--product'
 
@@ -34,27 +34,31 @@ class Header extends React.Component {
     if (doc) {
       classes += ' ' + doc.data.hero_background_style
       if (doc.data.alt_logo.url) {
-        logo = <img src={ doc.data.alt_logo.url } alt={ doc.data.title }/>
+        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />
       }
     }
 
     return [
-      <header id="site-header" className={ classes } key={shortid.generate()}>
+      <header id="site-header" className={classes} key={shortid.generate()}>
         <div className="site-header-wrapper">
           <div className="site-header--section-left">
             <div className="site-header-logo">
-              <Link prefetch href={ {
-                pathname: '/p',
-                query: {
-                  slug: 'home',
-                }
-              } } as="/">
-                <a>{ logo }</a>
+              <Link
+                prefetch
+                href={{
+                  pathname: '/p',
+                  query: {
+                    slug: 'home',
+                  },
+                }}
+                as="/"
+              >
+                <a>{logo}</a>
               </Link>
             </div>
           </div>
           <div className="site-header--section-right">
-            <Navigation pathname={ this.props.pathname }/>
+            <Navigation pathname={this.props.pathname} />
           </div>
         </div>
       </header>,

@@ -17,7 +17,7 @@ export default class Graphic extends React.Component {
     /**
      * Set the data as a easier thing to type
      */
-    const {data} = this.props
+    const { data } = this.props
 
     let graphic,
       caption = null
@@ -41,25 +41,25 @@ export default class Graphic extends React.Component {
      */
     classes += ' content-section-p-graphic-style--' + data.graphic_style
 
-    let img = <Image data={ data.graphic }/>
+    let img = <Image data={data.graphic} />
 
     if (this.props.background) {
       if (data.graphic_background_position !== '') {
         img = (
           <Image
-            background={ true }
-            position={ data.graphic_background_position }
-            attachment={ data.graphic_background_attachment }
-            data={ data.graphic }
+            background={true}
+            position={data.graphic_background_position}
+            attachment={data.graphic_background_attachment}
+            data={data.graphic}
           />
         )
       } else {
         img = (
           <Image
-            background={ true }
-            position={ 'center center' }
-            attachment={ data.graphic_background_attachment }
-            data={ data.graphic }
+            background={true}
+            position={'center center'}
+            attachment={data.graphic_background_attachment}
+            data={data.graphic}
           />
         )
       }
@@ -71,8 +71,12 @@ export default class Graphic extends React.Component {
      */
     if (data.graphic_link && data.graphic_link.url) {
       graphic = (
-        <a key={ shortid.generate() } href={ data.graphic_link.url } target="_blank">
-          { img }
+        <a
+          key={shortid.generate()}
+          href={data.graphic_link.url}
+          target="_blank"
+        >
+          {img}
         </a>
       )
     } else {
@@ -88,14 +92,19 @@ export default class Graphic extends React.Component {
     if (data.graphic_link_caption !== '') {
       if (data.graphic_link && data.graphic_link.url) {
         caption = (
-          <a href={ data.graphic_link.url } target="_blank">
-            { data.graphic_link_caption }
+          <a href={data.graphic_link.url} target="_blank">
+            {data.graphic_link_caption}
           </a>
         )
       } else {
         caption = data.graphic_link_caption
       }
     }
-    return <div className={ classes }>{ graphic }{ caption }</div>
+    return (
+      <div className={classes}>
+        {graphic}
+        {caption}
+      </div>
+    )
   }
 }

@@ -14,9 +14,9 @@ const data = [
               href: {
                 pathname: '/p',
                 query: {
-                  slug: 'chart-studio'
-                }
-              }
+                  slug: 'chart-studio',
+                },
+              },
             },
             {
               label: 'Dashboards & Reporting',
@@ -24,9 +24,9 @@ const data = [
               href: {
                 pathname: '/p',
                 query: {
-                  slug: 'dashboards-and-reporting'
-                }
-              }
+                  slug: 'dashboards-and-reporting',
+                },
+              },
             },
             {
               label: 'Slide Decks',
@@ -34,9 +34,9 @@ const data = [
               href: {
                 pathname: '/p',
                 query: {
-                  slug: 'slide-decks'
-                }
-              }
+                  slug: 'slide-decks',
+                },
+              },
             },
             {
               label: 'Falcon SQL Client (Free)',
@@ -44,13 +44,13 @@ const data = [
               href: {
                 pathname: '/p',
                 query: {
-                  slug: 'falcon'
-                }
-              }
-            }
-          ]
-        }
-      ]
-    }
+                  slug: 'falcon',
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
   },
 ]

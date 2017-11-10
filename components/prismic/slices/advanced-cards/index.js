@@ -16,20 +16,18 @@ export default class AdvancedCards extends React.Component {
     super(props)
   }
 
-  componentWillMount() {
+  componentWillMount() {}
 
-  }
-
-  componentDidMount() {
-
-  }
-
+  componentDidMount() {}
 
   render() {
-
-    const Logo = (data) => {
+    const Logo = data => {
       if (data.logo.url) {
-        return (<div className="logo"><Image noBlur data={ data.logo }/></div>)
+        return (
+          <div className="logo">
+            <Image noBlur data={data.logo} />
+          </div>
+        )
       }
     }
 
@@ -37,7 +35,7 @@ export default class AdvancedCards extends React.Component {
      * Actions
      * These are our buttons
      */
-    let actions = (data) => {
+    let actions = data => {
       let buttons = []
 
       if (data.button_one_label) {
@@ -59,9 +57,9 @@ export default class AdvancedCards extends React.Component {
       if (buttons.length) {
         return (
           <div className=" buttons">
-            { buttons.map((button, i) => {
-              return <Button key={ shortid.generate() } data={ button }/>
-            }) }
+            {buttons.map((button, i) => {
+              return <Button key={shortid.generate()} data={button} />
+            })}
           </div>
         )
       } else {
@@ -69,62 +67,67 @@ export default class AdvancedCards extends React.Component {
       }
     }
 
-
     const cards = this.props.data.map((card, i) => {
       card.graphic.url = imgix(card.graphic.url)
       const imageParams = {
-        preview: '?w=' +
-        Math.floor(card.graphic.dimensions.width / images.preview.scale) +
-        '&h=' +
-        Math.floor(card.graphic.dimensions.height / images.preview.scale) +
-        '&fit=crop&blur=' +
-        images.preview.blur +
-        '&q=' +
-        images.preview.quality +
-        '&auto=format',
-        hq: '?w=' +
-        Math.round(card.graphic.dimensions.width * images.hq.scale) +
-        '&h=' +
-        Math.round(card.graphic.dimensions.height * images.hq.scale) +
-        '&fit=crop&crop=top,left&q=' +
-        images.hq.quality +
-        '&auto=format',
+        preview:
+          '?w=' +
+          Math.floor(card.graphic.dimensions.width / images.preview.scale) +
+          '&h=' +
+          Math.floor(card.graphic.dimensions.height / images.preview.scale) +
+          '&fit=crop&blur=' +
+          images.preview.blur +
+          '&q=' +
+          images.preview.quality +
+          '&auto=format',
+        hq:
+          '?w=' +
+          Math.round(card.graphic.dimensions.width * images.hq.scale) +
+          '&h=' +
+          Math.round(card.graphic.dimensions.height * images.hq.scale) +
+          '&fit=crop&crop=top,left&q=' +
+          images.hq.quality +
+          '&auto=format',
       }
       const imageStyle = {
-        backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')'
+        backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')',
       }
       return (
-        <div className="card card--with-image" key={ shortid.generate() }>
+        <div className="card card--with-image" key={shortid.generate()}>
           <div className="card__wrapper">
-            <div className="card__image" style={ imageStyle }>
+            <div className="card__image" style={imageStyle}>
               <div className="card__details">
                 <div className="card__details__meta">
-                  <div className="card__title"><h2><span>{ card.title }</span></h2></div>
-                  <div className="card__subtitle"><h3>{ card.subtitle }</h3></div>
+                  <div className="card__title">
+                    <h2>
+                      <span>{card.title}</span>
+                    </h2>
+                  </div>
+                  <div className="card__subtitle">
+                    <h3>{card.subtitle}</h3>
+                  </div>
                 </div>
-                { Logo(card) }
+                {Logo(card)}
               </div>
             </div>
 
             <div className="card__body">
-              <div className="card__body__content"
-                   dangerouslySetInnerHTML={ {
-                     __html: PrismicDOM.RichText.asHtml(card.body),
-                   } }/>
-              <div className="card__body__actions">
-                { actions(card) }
-              </div>
+              <div
+                className="card__body__content"
+                dangerouslySetInnerHTML={{
+                  __html: PrismicDOM.RichText.asHtml(card.body),
+                }}
+              />
+              <div className="card__body__actions">{actions(card)}</div>
             </div>
-
-
           </div>
         </div>
       )
     })
-    return (<div className="advanced-cards">
-      <div className="advanced-cards__wrapper">
-        { cards }
+    return (
+      <div className="advanced-cards">
+        <div className="advanced-cards__wrapper">{cards}</div>
       </div>
-    </div>)
+    )
   }
 }

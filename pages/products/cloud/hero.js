@@ -54,12 +54,12 @@ export default () => (
       <HeroMessaging>
         <HeroTitle>Modern visualization for the data era</HeroTitle>
         <HeroSubtitle>
-          After you sign up for a plan, a plotly engineer will walk you through your first
-          dashboard, report, slide deck, or SQL database connection.
+          After you sign up for a plan, a plotly engineer will walk you through
+          your first dashboard, report, slide deck, or SQL database connection.
         </HeroSubtitle>
       </HeroMessaging>
       {/*<HeroActions>*/}
-        {/*<Buttons items={HeroButtons} />*/}
+      {/*<Buttons items={HeroButtons} />*/}
       {/*</HeroActions>*/}
     </HeroTop>
     <HeroBottom style={HeroBottomStyles}>

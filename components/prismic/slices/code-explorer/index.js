@@ -2,11 +2,11 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 
 const CodeBlock = dynamic(import('./codeblock.js'), {
-  ssr: false
+  ssr: false,
 })
 
 const CodeVisual = dynamic(import('./visual.js'), {
-  ssr: false
+  ssr: false,
 })
 
 if (typeof navigator !== 'undefined') {
@@ -15,7 +15,6 @@ if (typeof navigator !== 'undefined') {
   require('codemirror/mode/r/r')
   require('codemirror/mode/jsx/jsx')
 }
-
 
 import axios from 'axios'
 
@@ -43,7 +42,6 @@ export default class CodeExplorer extends React.Component {
   }
 
   componentWillMount() {
-
     this.props.data.items.map((item, i) => {
       item.uid = shortid.generate()
       item.layout = 'row-right'
@@ -64,22 +62,31 @@ export default class CodeExplorer extends React.Component {
   }
 
   getImageSize(element, variable) {
-    const getBoundingClientRect = (element) => {
-      const {top, right, bottom, left, width, height, x, y} = element.getBoundingClientRect();
-      return {top, right, bottom, left, width, height, x, y}
+    const getBoundingClientRect = element => {
+      const {
+        top,
+        right,
+        bottom,
+        left,
+        width,
+        height,
+        x,
+        y,
+      } = element.getBoundingClientRect()
+      return { top, right, bottom, left, width, height, x, y }
     }
 
     const imageDiv = document.body.querySelector('.js-code-explorer__image')
-    const codeVisualSize = getBoundingClientRect(imageDiv);
+    const codeVisualSize = getBoundingClientRect(imageDiv)
 
     this.setState({
-      codeVisualSize
+      codeVisualSize,
     })
   }
 
   componentDidMount() {
     this.getImageSize()
-    window.addEventListener('resize', this.getImageSize);
+    window.addEventListener('resize', this.getImageSize)
   }
 
   next() {
@@ -140,9 +147,9 @@ export default class CodeExplorer extends React.Component {
       if (buttons.length) {
         return (
           <div className=" buttons">
-            { buttons.map((button, i) => {
-              return <Button key={ shortid.generate() } data={ button }/>
-            }) }
+            {buttons.map((button, i) => {
+              return <Button key={shortid.generate()} data={button} />
+            })}
           </div>
         )
       } else {
@@ -152,14 +159,14 @@ export default class CodeExplorer extends React.Component {
 
     const tabs = this.state.tabs.map((tab, i) => (
       <div
-        onClick={ this.setTab(tab, i) }
-        key={ i }
+        onClick={this.setTab(tab, i)}
+        key={i}
         className={
           'code-explorer-slice__content__header__item not-mobile' +
           (this.state.index === i ? ' disabled active' : '')
         }
       >
-        <div className="label">{ tab.primary.label }</div>
+        <div className="label">{tab.primary.label}</div>
       </div>
     ))
 
@@ -173,7 +180,7 @@ export default class CodeExplorer extends React.Component {
           'code-explorer-slice__content__header__item mobile active disabled'
         }
       >
-        <div className="label">{ tab.primary.label }</div>
+        <div className="label">{tab.primary.label}</div>
       </div>
     )
 
@@ -186,78 +193,84 @@ export default class CodeExplorer extends React.Component {
       backgroundImage: 'url(' + tab.primary.graphic.url + ')',
     }
     return (
-      <div className="code-explorer-slice" key={ tab.primary.uid }>
+      <div className="code-explorer-slice" key={tab.primary.uid}>
         <div className="code-explorer-slice__wrapper">
           <div className="code-explorer-slice__content">
-            <div
-              className="code-explorer-slice__content__image js-code-explorer__image"
-            >
-              { tab.primary.visual_code_iframe_url ? (
-                  <div className="iframe">
-                    <iframe src={ tab.primary.visual_code_iframe_url }/>
-                  </div>
-                )
-                :
-                <CodeVisual size={ this.state.codeVisualSize }
-                            key={ tab.primary.uid }
-                            data={ tab.primary.visual_code_data_url ? tab.primary.visual_code_data_url : null }
-                            layout={ tab.primary.visual_code_layout_url ? tab.primary.visual_code_layout_url : null }/>
-              }
-
+            <div className="code-explorer-slice__content__image js-code-explorer__image">
+              {tab.primary.visual_code_iframe_url ? (
+                <div className="iframe">
+                  <iframe src={tab.primary.visual_code_iframe_url} />
+                </div>
+              ) : (
+                <CodeVisual
+                  size={this.state.codeVisualSize}
+                  key={tab.primary.uid}
+                  data={
+                    tab.primary.visual_code_data_url
+                      ? tab.primary.visual_code_data_url
+                      : null
+                  }
+                  layout={
+                    tab.primary.visual_code_layout_url
+                      ? tab.primary.visual_code_layout_url
+                      : null
+                  }
+                />
+              )}
             </div>
             <div className="code-explorer-slice__content__code">
               <div className="code-explorer-slice__content__header">
                 <div className="code-explorer-slice__content__header__wrapper">
                   <div
-                    onClick={ this.prev }
+                    onClick={this.prev}
                     className={
                       this.state.index === 0
                         ? 'code-explorer-slice__pagination__prev disabled'
                         : 'code-explorer-slice__pagination__prev'
                     }
                   >
-                    <i className="mdi mdi-chevron-left"/>
+                    <i className="mdi mdi-chevron-left" />
                   </div>
                   <div
                     id="code-explorer-header-tabs"
                     className="code-explorer-slice__content__header__tabs"
                   >
-                    { tabs }
-                    <div className="mobile-only">{ mobileTab }</div>
+                    {tabs}
+                    <div className="mobile-only">{mobileTab}</div>
                   </div>
 
                   <div
-                    onClick={ this.next }
+                    onClick={this.next}
                     className={
                       this.state.index === this.state.tabs.length - 1
                         ? 'code-explorer-slice__pagination__next disabled'
                         : 'code-explorer-slice__pagination__next'
                     }
                   >
-                    <i className="mdi mdi-chevron-right"/>
+                    <i className="mdi mdi-chevron-right" />
                   </div>
                 </div>
               </div>
               <div className="code-explorer-slice__content__code__container">
                 <div className="code-explorer-slice__content__code__copy">
                   <CopyToClipboard
-                    text={ tab.primary.code[0].text }
-                    onCopy={ () => this.setState({copied: true}) }
+                    text={tab.primary.code[0].text}
+                    onCopy={() => this.setState({ copied: true })}
                   >
                     <div className="code-explorer-slice__content__code__copy__content">
-                      <div className="code-explorer-slice__content__code__copy__content__icon mdi mdi-content-copy"/>
+                      <div className="code-explorer-slice__content__code__copy__content__icon mdi mdi-content-copy" />
                       <div className="code-explorer-slice__content__code__copy__content__label">
-                        { this.state.copied ? 'Copied!' : 'Copy' }
+                        {this.state.copied ? 'Copied!' : 'Copy'}
                       </div>
                     </div>
                   </CopyToClipboard>
                 </div>
                 <div className="code-explorer-slice__content__code__block">
-                  <CodeBlock tab={ tab }/>
+                  <CodeBlock tab={tab} />
                 </div>
               </div>
               <div className="code-explorer-slice__content__code__footer">
-                { actions() }
+                {actions()}
               </div>
             </div>
           </div>

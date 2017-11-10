@@ -32,7 +32,6 @@ function Layout(Child) {
     componentDidMount() {
       document.body.classList.remove('no-scroll')
 
-
       ReactGA.initialize('UA-39373211-1')
       ReactGA.pageview(document.location.pathname)
       ;(function() {
@@ -54,7 +53,6 @@ function Layout(Child) {
           q.parentNode.insertBefore(js, q)
         }
       })()
-
 
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker

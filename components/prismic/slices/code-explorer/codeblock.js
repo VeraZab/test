@@ -5,7 +5,6 @@ require('codemirror/mode/python/python')
 require('codemirror/mode/r/r')
 require('codemirror/mode/jsx/jsx')
 
-
 export default class CodeBlock extends React.Component {
   constructor(props) {
     super(props)

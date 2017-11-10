@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 import Layout from 'components/layoutHOC'
 import Hero from 'components/prismic/hero'
 import Slices from 'components/prismic/slices'
@@ -10,7 +9,7 @@ import { bindActionCreators } from 'redux'
 import { initStore, saveStoreData } from 'store/global'
 import withRedux from 'next-redux-wrapper'
 
-const shortid = require('shortid');
+const shortid = require('shortid')
 import NotFound from 'components/404'
 
 class P extends Component {
@@ -18,7 +17,7 @@ class P extends Component {
     super(props)
   }
 
-  static async getInitialProps({store, req, query: {slug}}) {
+  static async getInitialProps({ store, req, query: { slug } }) {
     /**
      * Get all our data on the server
      * (or statically exported)
@@ -38,7 +37,6 @@ class P extends Component {
       )
     }
 
-
     /**
      * Let's return some helpers for figuring out where we are
      * req means we're on the server vs client
@@ -52,39 +50,35 @@ class P extends Component {
   getDoc = data => data.find(doc => doc.uid === this.props.slug)
 
   render() {
-
     const doc = this.getDoc(this.props.reduxData)
 
     if (doc === undefined) {
-      return <NotFound/>
+      return <NotFound />
     } else {
-
       const meta = {
         title: `Plotly: ${doc.data.title}`,
-        description: `${doc.data.description}`
+        description: `${doc.data.description}`,
       }
 
-
-      const hero = <Hero key={ shortid.generate() } data={ doc.data }/>
-      const slices = <Slices data={ doc.data.slices }/>
+      const hero = <Hero key={shortid.generate()} data={doc.data} />
+      const slices = <Slices data={doc.data.slices} />
       return (
-        <div className={ 'page' + ` page--${doc.uid}` }>
-          <Head meta={ meta }/>
-          { hero }
-          { slices }
+        <div className={'page' + ` page--${doc.uid}`}>
+          <Head meta={meta} />
+          {hero}
+          {slices}
         </div>
       )
     }
   }
 }
 
-
 const mapDispatchToProps = dispatch => ({
   saveStoreData: bindActionCreators(saveStoreData, dispatch),
 })
 
 const mapStateToProps = state => ({
-  reduxData: state.data ? state.data.appData : []
+  reduxData: state.data ? state.data.appData : [],
 })
 
 export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(

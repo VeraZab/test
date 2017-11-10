@@ -10,7 +10,7 @@ class Index extends React.Component {
     super(props)
   }
 
-  static async getInitialProps({store, req, query: {slug}}) {
+  static async getInitialProps({ store, req, query: { slug } }) {
     /**
      * Get all our data on the server
      * (or statically exported)

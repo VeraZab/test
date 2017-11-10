@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './navigation.styles.scss'
 import Link from 'next/link'
 
-
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props)
@@ -17,7 +16,6 @@ export default class Navigation extends React.Component {
   componentDidMount() {
     document.body.classList.remove('no-scroll')
   }
-
 
   mobileMenuClasses() {
     if (this.state.mobileMenu === true) {
@@ -94,31 +92,31 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div className="site-header-navigation">
-        <style dangerouslySetInnerHTML={ {__html: styles} }/>
-        <div className={ 'site-header-navigation-wrapper' }>
+        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <div className={'site-header-navigation-wrapper'}>
           <div
             className="mobile-menu-button"
-            onClick={ this.toggleMobileMenu.bind(this) }
+            onClick={this.toggleMobileMenu.bind(this)}
           >
             <a className="navigation-product-item">
-              { this.mobileMenuButtonText() }
+              {this.mobileMenuButtonText()}
             </a>
           </div>
-          <nav className={ 'site-header-nav ' + this.mobileMenuClasses() }>
-            { /** Consulting */ }
+          <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
+            {/** Consulting */}
             <Link href="/products/consulting-and-oem/" prefetch>
               <a className="navigation-product-item">Consulting</a>
             </Link>
 
-            { /** Pricing */ }
+            {/** Pricing */}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
-                onClick={ this.togglePricingSubmenu.bind(this) }
+                onClick={this.togglePricingSubmenu.bind(this)}
               >
-                Pricing <i className="mdi mdi-chevron-down"/>
+                Pricing <i className="mdi mdi-chevron-down" />
               </div>
-              { /** Pricing Submenu */ }
+              {/** Pricing Submenu */}
               <div
                 className={
                   this.state.pricingSubmenuActive
@@ -149,16 +147,16 @@ export default class Navigation extends React.Component {
               </div>
             </div>
 
-            { /** Products */ }
+            {/** Products */}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
-                onClick={ this.toggleProductSubmenu.bind(this) }
+                onClick={this.toggleProductSubmenu.bind(this)}
               >
-                Products <i className="mdi mdi-chevron-down"/>
+                Products <i className="mdi mdi-chevron-down" />
               </div>
 
-              { /** Products Submenu */ }
+              {/** Products Submenu */}
               <div
                 className={
                   this.state.productSubmenuActive
@@ -166,20 +164,20 @@ export default class Navigation extends React.Component {
                     : 'navigation-product-submenu navigation-product-submenu--large '
                 }
               >
-                { /** Products Submenu Section */ }
+                {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Business<br/>Intelligence
+                    Business<br />Intelligence
                   </div>
-                  { /** Products Submenu Items */ }
+                  {/** Products Submenu Items */}
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
-                        slug: 'chart-studio'
-                      }
-                    } }
-                    as={ '/online-chart-maker/' }
+                        slug: 'chart-studio',
+                      },
+                    }}
+                    as={'/online-chart-maker/'}
                     prefetch
                   >
                     <a className="navigation-product-submenu-item">
@@ -187,11 +185,11 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
-                      query: {slug: 'dashboards-and-reporting'},
-                    } }
-                    as={ '/dashboards' }
+                      query: { slug: 'dashboards-and-reporting' },
+                    }}
+                    as={'/dashboards'}
                     prefetch
                   >
                     <a
@@ -202,13 +200,13 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
-                        slug: 'slide-decks'
-                      }
-                    } }
-                    as={ '/powerpoint-online' }
+                        slug: 'slide-decks',
+                      },
+                    }}
+                    as={'/powerpoint-online'}
                     prefetch
                   >
                     <a
@@ -219,13 +217,13 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
-                        slug: 'falcon-sql-editor'
-                      }
-                    } }
-                    as={ '/database-connectors/' }
+                        slug: 'falcon-sql-editor',
+                      },
+                    }}
+                    as={'/database-connectors/'}
                     prefetch
                   >
                     <a className="navigation-product-submenu-item">
@@ -234,12 +232,12 @@ export default class Navigation extends React.Component {
                   </Link>
                 </div>
 
-                { /** Products Submenu Section */ }
+                {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Data Science &amp;<br/>Open Source
+                    Data Science &amp;<br />Open Source
                   </div>
-                  { /** Products Submenu Items */ }
+                  {/** Products Submenu Items */}
                   <a
                     className="navigation-product-submenu-item"
                     href="/products/dash"
@@ -248,49 +246,49 @@ export default class Navigation extends React.Component {
                   </a>
                   <Link
                     prefetch
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
                         slug: 'plotly-js',
                       },
-                    } }
-                    as={ '/plotly-js-scientific-d3-charting-library/' }
+                    }}
+                    as={'/plotly-js-scientific-d3-charting-library/'}
                   >
                     <a className="navigation-product-submenu-item">Plotly.js</a>
                   </Link>
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
                         slug: 'plotly-py',
                       },
-                    } }
-                    as={ '/d3-js-for-python-and-pandas-charts/' }
+                    }}
+                    as={'/d3-js-for-python-and-pandas-charts/'}
                     prefetch
                   >
                     <a className="navigation-product-submenu-item">Plotly.py</a>
                   </Link>
                   <Link
-                    href={ {
+                    href={{
                       pathname: '/p',
                       query: {
                         slug: 'plotly-r',
                       },
-                    } }
-                    as={ '/d3-js-for-r-and-shiny-charts/' }
+                    }}
+                    as={'/d3-js-for-r-and-shiny-charts/'}
                     prefetch
                   >
                     <a className="navigation-product-submenu-item">Plotly.R</a>
                   </Link>
                 </div>
 
-                { /** Products Submenu Section */ }
+                {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section navigation-product-submenu-section--span-all">
                   <div className="navigation-product-submenu-section-title">
                     Platforms
                   </div>
 
-                  { /** Products Submenu Items */ }
+                  {/** Products Submenu Items */}
                   <Link href="/products/on-premise" prefetch>
                     <a className="navigation-product-submenu-item">
                       Plotly On-Premises
@@ -304,7 +302,7 @@ export default class Navigation extends React.Component {
                 </div>
               </div>
             </div>
-            { /** Master Classes */ }
+            {/** Master Classes */}
             <a
               className="navigation-product-item"
               href="https://plotcon.plot.ly/"

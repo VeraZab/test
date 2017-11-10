@@ -54,7 +54,7 @@ export default class HeroGraphicSection extends React.Component {
       )
     }
 
-    if(!data.hero_graphic.url){
+    if (!data.hero_graphic.url) {
       return null
     }
 

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import { fetchData } from 'lib/fetchData'
 
@@ -6,7 +6,7 @@ import Layout from 'components/layoutHOC'
 import Hero from 'components/prismic/hero'
 import Slices from 'components/prismic/slices'
 
-class Home extends Component{
+class Home extends Component {
   constructor(props) {
     super(props)
   }
@@ -24,7 +24,7 @@ class Home extends Component{
     const slices = <Slices data={this.props.doc.data.slices} />
 
     return (
-      <div className={"page" + " page--" + this.props.doc.uid}>
+      <div className={'page' + ' page--' + this.props.doc.uid}>
         {hero}
         {slices}
       </div>

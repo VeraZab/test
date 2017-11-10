@@ -48,7 +48,8 @@ export default class HeroDetailsSection extends React.Component {
      * Hero Messaging
      */
     const Messaging = data.hero_messaging.length ? (
-      <div className={`hero-prismic__messaging__body`}
+      <div
+        className={`hero-prismic__messaging__body`}
         dangerouslySetInnerHTML={{
           __html: PrismicDOM.RichText.asHtml(data.hero_messaging),
         }}
@@ -66,8 +67,6 @@ export default class HeroDetailsSection extends React.Component {
         </div>
       </HeroActions>
     )
-
-
 
     /**
      * Github Stars Slice

@@ -24,7 +24,6 @@ export default class ContentSection extends React.Component {
   }
 
   componentDidMount() {
-
     // if (IntersectionObserver) {
     //   const sections = document.querySelectorAll('.content-section-p');
     //
@@ -46,13 +45,12 @@ export default class ContentSection extends React.Component {
     //     section.classList.add('ignore-animation');
     //   });
     // }
-
   }
 
   render() {
     /** Destructure props */
-    const {data: {primary}} = this.props
-    const {data: {items}} = this.props
+    const { data: { primary } } = this.props
+    const { data: { items } } = this.props
 
     /** Define the component class name */
     const componentClass = 'content-section-p'
@@ -131,7 +129,6 @@ export default class ContentSection extends React.Component {
 
     classes += ` ${componentClass}-proportions--${primary.proportions}`
 
-
     /**
      * Body
      *
@@ -149,32 +146,32 @@ export default class ContentSection extends React.Component {
       ) {
         return (
           <div
-            className={ 'content-section-p-body content-section-p-body-columns' }
+            className={'content-section-p-body content-section-p-body-columns'}
           >
             <div className="content-section-p-body-wrapper">
               <div
                 className="content-section-p-body-column-one"
-                dangerouslySetInnerHTML={ {
+                dangerouslySetInnerHTML={{
                   __html: PrismicDOM.RichText.asHtml(primary.body),
-                } }
+                }}
               />
               <div
                 className="content-section-p-body-column-two"
-                dangerouslySetInnerHTML={ {
+                dangerouslySetInnerHTML={{
                   __html: PrismicDOM.RichText.asHtml(primary.body_two),
-                } }
+                }}
               />
             </div>
           </div>
         )
       } else {
         return (
-          <div className={ 'content-section-p-body' }>
+          <div className={'content-section-p-body'}>
             <div
               className="content-section-p-body-wrapper"
-              dangerouslySetInnerHTML={ {
+              dangerouslySetInnerHTML={{
                 __html: PrismicDOM.RichText.asHtml(primary.body),
-              } }
+              }}
             />
           </div>
         )
@@ -202,9 +199,9 @@ export default class ContentSection extends React.Component {
               '-area'
             }
           >
-            { items.map((logo, i) => {
-              return <Graphic noBlur key={ shortid.generate() } data={ logo }/>
-            }) }
+            {items.map((logo, i) => {
+              return <Graphic noBlur key={shortid.generate()} data={logo} />
+            })}
           </div>
         )
       }
@@ -225,9 +222,9 @@ export default class ContentSection extends React.Component {
               '-area'
             }
           >
-            { items.map((slide, i) => {
-              return <Graphic key={ shortid.generate() } data={ slide }/>
-            }) }
+            {items.map((slide, i) => {
+              return <Graphic key={shortid.generate()} data={slide} />
+            })}
           </div>
         )
       }
@@ -247,7 +244,7 @@ export default class ContentSection extends React.Component {
               }
             >
               <Browser>
-                <Graphic data={ primary }/>
+                <Graphic data={primary} />
               </Browser>
             </div>
           )
@@ -263,7 +260,7 @@ export default class ContentSection extends React.Component {
               }
             >
               <Phone>
-                <Graphic data={ primary }/>
+                <Graphic data={primary} />
               </Phone>
             </div>
           )
@@ -284,15 +281,15 @@ export default class ContentSection extends React.Component {
                 '-area'
               }
             >
-              <Graphic background={ true } data={ primary }/>
+              <Graphic background={true} data={primary} />
             </div>
           )
         }
         return (
           <div
-            className={ componentClass + '-graphic ' + componentClass + '-area' }
+            className={componentClass + '-graphic ' + componentClass + '-area'}
           >
-            <Graphic data={ primary }/>
+            <Graphic data={primary} />
           </div>
         )
       }
@@ -313,11 +310,11 @@ export default class ContentSection extends React.Component {
       if (this.props.data.slice_type === 'graphic_with_text') {
         if (items && items.length) {
           return (
-            <div className={ 'content-section-p-actions' }>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
-                { items.map((button, i) => {
-                  return <Button key={ shortid.generate() } data={ button }/>
-                }) }
+                {items.map((button, i) => {
+                  return <Button key={shortid.generate()} data={button} />
+                })}
               </div>
             </div>
           )
@@ -354,11 +351,11 @@ export default class ContentSection extends React.Component {
 
         if (buttons.length) {
           return (
-            <div className={ 'content-section-p-actions' }>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
-                { buttons.map((button, i) => {
-                  return <Button key={ shortid.generate() } data={ button }/>
-                }) }
+                {buttons.map((button, i) => {
+                  return <Button key={shortid.generate()} data={button} />
+                })}
               </div>
             </div>
           )
@@ -373,9 +370,9 @@ export default class ContentSection extends React.Component {
      */
     const Pretitle =
       primary.pretitle !== null ? (
-        <div className={ 'content-section-p-pretitle' }>
+        <div className={'content-section-p-pretitle'}>
           <div className="content-section-p-pretitle-wrapper">
-            <h3>{ primary.pretitle }</h3>
+            <h3>{primary.pretitle}</h3>
           </div>
         </div>
       ) : null
@@ -385,12 +382,12 @@ export default class ContentSection extends React.Component {
      */
     const Title =
       primary.title && primary.title.length && primary.title[0].text !== '' ? (
-        <div className={ 'content-section-p-title' }>
+        <div className={'content-section-p-title'}>
           <div
             className="content-section-p-title-wrapper"
-            dangerouslySetInnerHTML={ {
+            dangerouslySetInnerHTML={{
               __html: PrismicDOM.RichText.asHtml(primary.title),
-            } }
+            }}
           />
         </div>
       ) : null
@@ -403,31 +400,31 @@ export default class ContentSection extends React.Component {
       primary.subtitle &&
       primary.subtitle.length &&
       primary.subtitle[0].text !== '' ? (
-        <div className={ 'content-section-p-subtitle' }>
+        <div className={'content-section-p-subtitle'}>
           <div
             className="content-section-p-subtitle-wrapper"
-            dangerouslySetInnerHTML={ {
+            dangerouslySetInnerHTML={{
               __html: PrismicDOM.RichText.asHtml(primary.subtitle),
-            } }
+            }}
           />
         </div>
       ) : null
 
     if (this.props.data.slice_type === 'cs-tabs') {
       return (
-        <section className={ classes }>
+        <section className={classes}>
           <div className="content-section-p-wrapper">
-            { graphic() }
+            {graphic()}
             <div
               className={
                 componentClass + '-details ' + componentClass + '-area'
               }
             >
-              { Pretitle }
-              { Title }
-              { Subtitle }
-              { body() }
-              { actions() }
+              {Pretitle}
+              {Title}
+              {Subtitle}
+              {body()}
+              {actions()}
             </div>
           </div>
         </section>
@@ -437,49 +434,50 @@ export default class ContentSection extends React.Component {
     const GithubStarsSection =
       this.props.data.slice_type === 'cs-github-stars' ? (
         <div className="github-stars">
-          <GithubStarsSlice key={ shortid.generate() } slice={ this.props.data }/>
+          <GithubStarsSlice key={shortid.generate()} slice={this.props.data} />
         </div>
       ) : null
 
     const CodeExplorerSection =
       this.props.data.slice_type === 'cs-code-explorer' ? (
         <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={ this.props.data }/>{ ' ' }
+          <CodeExplorer data={this.props.data} />{' '}
         </div>
       ) : null
 
     const AdvancedCardsSection =
-      this.props.data.slice_type === 'cs-advanced-cards' ?
-        (<AdvancedCards data={ this.props.data.items }/>) : null
+      this.props.data.slice_type === 'cs-advanced-cards' ? (
+        <AdvancedCards data={this.props.data.items} />
+      ) : null
 
     return (
-      <section className={ classes }>
+      <section className={classes}>
         <div className="content-section-p-wrapper">
           <div
-            className={ componentClass + '-details ' + componentClass + '-area' }
+            className={componentClass + '-details ' + componentClass + '-area'}
           >
-            { Pretitle }
-            { Title }
-            { Subtitle }
-            { this.props.data.slice_type === 'graphic_with_text_logos'
+            {Pretitle}
+            {Title}
+            {Subtitle}
+            {this.props.data.slice_type === 'graphic_with_text_logos'
               ? graphic()
-              : null }
+              : null}
 
-            { body() }
+            {body()}
 
-            { /**
+            {/**
              * If there are items, they are buttons
              * let's display them!
              */
 
-              actions() }
-            { CodeExplorerSection }
+            actions()}
+            {CodeExplorerSection}
           </div>
-          { this.props.data.slice_type !== 'graphic_with_text_logos'
+          {this.props.data.slice_type !== 'graphic_with_text_logos'
             ? graphic()
-            : null }
-          { AdvancedCardsSection }
-          { GithubStarsSection }
+            : null}
+          {AdvancedCardsSection}
+          {GithubStarsSection}
         </div>
       </section>
     )

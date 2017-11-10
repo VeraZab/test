@@ -60,9 +60,7 @@ export default class LogosSlice extends React.Component {
               />
             </div>
           ) : null}
-          <div className="logos">
-            {LogoItems}
-          </div>
+          <div className="logos">{LogoItems}</div>
         </div>
       </div>
     )

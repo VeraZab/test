@@ -5,12 +5,12 @@ import Plotly from 'plotly.js/dist/plotly-basic'
 import axios from 'axios'
 const PlotlyComponent = createPlotlyComponent(Plotly)
 
-
 export default class CodeVisual extends React.Component {
   constructor(props) {
     super(props)
 
-    let data, layout = false
+    let data,
+      layout = false
 
     if (props.data) {
       data = true
@@ -23,42 +23,38 @@ export default class CodeVisual extends React.Component {
       layout: null,
       needToLoad: {
         data,
-        layout
-      }
+        layout,
+      },
     }
   }
 
   componentDidMount() {
     if (this.state.needToLoad.data) {
-      axios.get(this.props.data)
+      axios
+        .get(this.props.data)
         .then(data => {
           this.setState({
-            data: data.data
+            data: data.data,
           })
         })
-        .catch(function (error) {
-
-        });
+        .catch(function(error) {})
     }
     if (this.state.needToLoad.layout) {
-      axios.get(this.props.layout)
+      axios
+        .get(this.props.layout)
         .then(data => {
           this.setState({
-            layout: data.data
+            layout: data.data,
           })
         })
-        .catch(function (error) {
-
-        });
+        .catch(function(error) {})
     }
   }
 
-
   render() {
-
     // const {data, layout} = this.props;
 
-    let data, layout;
+    let data, layout
 
     if (this.state.data.length) {
       data = eval(this.state.data)
@@ -68,7 +64,6 @@ export default class CodeVisual extends React.Component {
       layout = eval(this.state.layout)
     }
 
-
     let plot = {
       data,
       layout: {
@@ -76,15 +71,15 @@ export default class CodeVisual extends React.Component {
         width: this.props.size.width,
         height: this.props.size.height,
         plot_bgcolor: '#fff',
-        paper_bgcolor: '#fff'
-      }
+        paper_bgcolor: '#fff',
+      },
     }
 
     return (
       <PlotlyComponent
-        key={ this.props.key }
-        data={ plot.data }
-        layout={ plot.layout }
+        key={this.props.key}
+        data={plot.data}
+        layout={plot.layout}
       />
     )
   }
