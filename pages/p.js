@@ -18,42 +18,15 @@ class P extends Component {
   }
 
   static async getInitialProps({store, req, query: {slug}}) {
-    if (req) {
-      /**
-       * Get all our data on the server
-       * (or statically exported)
-       */
-      const currentStore = store.getState()
+    /**
+     * Get all our data on the server
+     * (or statically exported)
+     */
+    const currentStore = store.getState()
 
-      let currentDoc = {}
+    let currentDoc = {}
 
-      if (currentStore.loaded === false) {
-        const appData = await fetchData()
-        /**
-         * Save data to redux store
-         */
-
-        currentDoc = appData.find(doc => doc.uid === slug)
-        store.dispatch(
-          saveStoreData({
-            appData: appData,
-            currentDoc,
-            req: true,
-          })
-        )
-      }
-
-      /**
-       * Let's return some helpers for figuring out where we are
-       * req means we're on the server vs client
-       */
-      return {
-        slug: slug,
-        req: true,
-      }
-    } else {
-
-      let currentDoc = {}
+    if (currentStore && currentStore.loaded) {
 
       currentDoc = store.getState().data.appData.find(doc => doc.uid === slug)
       store.dispatch(
@@ -64,6 +37,21 @@ class P extends Component {
         })
       )
 
+      return {
+        slug: slug,
+        req: true,
+      }
+
+    } else {
+      const appData = await fetchData()
+      currentDoc = appData.find(doc => doc.uid === slug)
+      store.dispatch(
+        saveStoreData({
+          appData: appData,
+          currentDoc,
+          req: true,
+        })
+      )
       return {
         slug: slug,
         req: false,

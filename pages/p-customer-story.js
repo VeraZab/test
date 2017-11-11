@@ -19,33 +19,46 @@ class PCS extends Component {
     super(props)
   }
 
-  static async getInitialProps({ store, req, query: { slug } }) {
+  static async getInitialProps({store, req, query: {slug}}) {
     /**
      * Get all our data on the server
      * (or statically exported)
      */
     const currentStore = store.getState()
 
-    if (currentStore.loaded === false) {
+    let currentDoc = {}
+
+    if (currentStore && currentStore.loaded) {
+
+      currentDoc = store.getState().data.appData.find(doc => doc.uid === slug && doc.type === 'customer-story')
+      store.dispatch(
+        saveStoreData({
+          appData: store.getState().data.appData,
+          currentDoc,
+          req: false,
+        })
+      )
+
+      return {
+        slug: slug,
+        req: true,
+      }
+
+    } else {
       const appData = await fetchData()
-      /**
-       * Save data to redux store
-       */
+      currentDoc = appData.find(doc => doc.uid === slug && doc.type === 'customer-story')
       store.dispatch(
         saveStoreData({
           appData: appData,
+          currentDoc,
           req: true,
         })
       )
-    }
+      return {
+        slug: slug,
+        req: false,
+      }
 
-    /**
-     * Let's return some helpers for figuring out where we are
-     * req means we're on the server vs client
-     */
-    return {
-      slug: slug,
-      req: true,
     }
   }
 
@@ -109,7 +122,9 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   reduxData: state.data ? state.data.appData : [],
+  doc: state.data ? state.data.currentDoc : [],
 })
+
 
 export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(
   Layout(PCS)
