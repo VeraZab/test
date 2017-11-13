@@ -137,12 +137,12 @@ module.exports = {
     // Customer Stories
     "/products/enterprise/customer-stories": { page: "/customer-stories" },
     "/products/enterprise/customer-stories/c12-energy": {
-      page: "/single-customer-stories",
-      query: { id: "c12-energy" }
+      page: "/p-customer-story",
+      query: { slug: "c12-energy" }
     },
     "/products/enterprise/customer-stories/goji": {
-      page: "/single-customer-stories",
-      query: { id: "goji" }
+      page: "/p-customer-story",
+      query: { slug: "goji" }
     }
   }),
   webpack: (config, { dev }) => {
