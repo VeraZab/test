@@ -1,6 +1,6 @@
 {
   "name": "plotly-next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "New and improved branding and marketing pages with React and next.js.",
   "scripts": {
     "dev": "node server.js",
