@@ -1,0 +1,352 @@
+/**
+ * Hero styles
+ *
+ * Here are all the styles for /components/prismic/hero
+ *
+ */
+.hero-prismic {
+  $c: &;
+  display: flex;
+  padding-top: 72px;
+  min-height: 700px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  //padding-bottom:$unit*4;
+  /**
+   * wrapper styles
+   */
+  #{$c}-wrapper {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: column;
+    @include media('<=800px') {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-graphic-section {
+    @include media('<=800px') {
+      padding-bottom: $unit*4;
+    }
+  }
+
+  /**
+   * mobile styles
+   */
+  @include media('<=800px') {
+    height: auto !important;
+  }
+  /**
+   * Top & bottom styles
+   */
+  &-details-section,
+  &-bottom {
+    padding-left: $unit*2;
+    padding-right: $unit*2;
+
+  }
+  /**
+   * Top specific styles
+   */
+  &-details-section {
+    flex-grow: 1;
+    padding-top: $gutter*4;
+
+    pre {
+      background: rgba($color-rhino-core, 0.75);
+      //color: $color-lavender;
+      color: rgba($color-rhino-light-1, 0.85);
+      padding: $unit;
+      border-radius: 6px;
+    }
+    @include handheld {
+    }
+  }
+  /**
+   * Bottom specific styles
+   */
+  &-bottom {
+    //padding-top: $unit*2;
+    //padding-bottom: $unit*2;
+    width: 100%;
+    flex-grow: 1;
+  }
+  /**
+   * Style specific styles
+   * these styles deal with the various colors
+   * these styles deal with the various colors
+   * and gradients that can be applied to the background
+   */
+  &::before {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+
+  }
+
+  &:not(.no-fade) {
+    .hero-background-image {
+      @include animationFadein-sm;
+    }
+  }
+
+  &.no-dots {
+    &::before {
+      display: none;
+    }
+  }
+
+  &-background-image {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    will-change: opacity;
+    opacity: 0;
+    @include trans;
+    &.image-loaded {
+      opacity: 1;
+      transition-duration: 2s;
+    }
+  }
+
+  .hero-prismic-messaging {
+    p {
+      color: white;
+      font-size: 18px;
+      font-weight: 300;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      & + P {
+        margin-top: $unit;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    h1 {
+      width: 100%;
+    }
+  }
+
+  &-messaging {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: white;
+      @include center-content;
+      margin-bottom: $gutter;
+      text-shadow: $text-shadow-default;
+      text-align: center;
+    }
+    h2 {
+      @include center-content;
+      max-width: 480px;
+      color: white;
+      font-weight: 100;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      @include ff-ubuntu;
+      margin-bottom: $gutter;
+      text-align: center;
+      text-shadow: $text-shadow-default;
+    }
+  }
+
+  &-actions {
+    padding-top: $unit;
+    .buttons {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .footnote {
+    text-align: center;
+    font-size: 0.85rem;
+    color: $color-rhino-medium-1;
+    margin-top: $gutter;
+    @include handheld {
+      margin-top: $gutter*2;
+    }
+    a {
+      color: currentColor;
+      text-decoration: underline;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+      &:active {
+        @include active-state-transform;
+      }
+    }
+  }
+  &-list {
+    list-style: none;
+    li {
+      padding: $unit 0;
+      text-align: left;
+    }
+  }
+
+  @at-root .page--home {
+    #{$c}-layout--row {
+      #{$c}-graphic-section {
+        align-self: flex-start !important;
+        //padding-bottom: $unit*10 !important;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Logos
+//----------------------------------------------------------------------------------------------------------------------
+//.logos-display {
+//  &-wrapper {
+//    @include global-wrapper;
+//    display: flex;
+//    justify-content: space-around;
+//    flex-wrap: wrap;
+//    align-items: center;
+//    padding: 0 $gutter;
+//    @include handheld {
+//      padding-top: $gutter;
+//    }
+//    .logo-item {
+//      padding: $unit;
+//      opacity: 0.8;
+//    }
+//    img {
+//      max-width: 140px;
+//      max-height: 70px;
+//      filter: brightness(0) invert(1);
+//
+//      @include handheld {
+//        max-width: 80px;
+//      }
+//    }
+//  }
+//}
+
+.githubStar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: $gutter;
+  iframe {
+    border: 0;
+  }
+}
+
+.on-prem-pricing {
+  .hero-messaging h2 {
+    max-width: 620px;
+  }
+}
+
+.hero-prismic-graphic-two-items {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: $unit*8;
+  .hero-prismic-graphic-item {
+    &:first-of-type {
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      bottom: $unit*6;
+      left: 0;
+      @include media('<=800px') {
+        bottom: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      max-width: 85%;
+      transform: translateX($unit*15) translateY(-$unit*4);
+      @include media('<=800px') {
+        transform: translateX($unit*15) translateY($unit*4);
+      }
+    }
+  }
+
+}
+
+.hero-prismic-graphic-many-items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:$unit;
+  .hero-prismic-graphic-item {
+    width: 50%;
+    max-width: 50%;
+    padding-left: $unit;
+    padding-bottom: $unit;
+    @include media('<=800px') {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-bottom: $unit;
+    }
+    //&:first-of-type {
+    //  position: absolute;
+    //  z-index: 5;
+    //  width: 100%;
+    //  bottom: $unit*6;
+    //  left: 0;
+    //  @include media('<=800px') {
+    //    bottom: 0;
+    //  }
+    //}
+    //&:nth-of-type(2) {
+    //  max-width: 85%;
+    //  transform: translateX($unit*15) translateY(-$unit*4);
+    //  @include media('<=800px') {
+    //    transform: translateX($unit*15) translateY($unit*4);
+    //  }
+    //}
+  }
+
+}
+
+@import "hero.column";
+@import "hero.row";
+@import "hero.styles";
+@import "hero.typography";
+@import "hero.slices";
+
+.page--home {
+  .hero-prismic-graphic-section {
+    @include media('<=800px') {
+      display: none;
+    }
+  }
+}
+
+.hero-prismic {
+  $c: &;
+
+  #{$c}__messaging__body, #{$c}-actions {
+    //will-change: opacity, transition;
+    //@include animationFadeAndSlideInFromBottom-sm;
+    //animation-duration: 2s;
+  }
+  .browser {
+    //will-change: opacity, transition;
+    //@include animationFadeAndSlideInFromBottom-sm;
+    //animation-duration: 2s;
+  }
+}

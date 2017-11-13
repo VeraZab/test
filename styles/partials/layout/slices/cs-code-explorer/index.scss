@@ -1,0 +1,34 @@
+@import "./codeblock";
+@import "./visual";
+
+:root {
+  --code-visual--height: 500px;
+  --code-visual--width: 500px;
+}
+
+.code-explorer-slice {
+
+  $c: &;
+  width: 100%;
+  box-shadow: $drop-shadow-l-light;
+  border: 1px solid $color-rhino-light-1;
+  border-radius: 12px;
+  overflow: hidden;
+  #{$c}__wrapper {
+    flex-grow: 1;
+  }
+  #{$c}__content {
+    display: flex;
+    width: 100%;
+    background: white;
+    @include media('<=900px') {
+      flex-direction: column;
+    }
+
+  }
+}
+
+.content-section-p-area--code-explorer {
+  width: 100%;
+  flex-grow: 1;
+}

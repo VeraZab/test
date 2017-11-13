@@ -1,0 +1,42 @@
+.hero-prismic {
+  $c: &;
+  &-style {
+    &--gradient {
+      &_blue--with-dots {
+        &::before {
+          content: '';
+          height: 100%;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1;
+          position: absolute;
+          background: url(https://images.plot.ly/static/marketing/background-dots.png) repeat center center, linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%);
+          background-size: 14.5px, cover;
+        }
+      }
+      &_dark-blue {
+        &::before {
+          background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+        }
+      }
+      &_purple {
+        .buttons {
+
+          .button {
+            &-primary {
+              background: $color-aqua-shade;
+              &:hover {
+                background: darken($color-aqua-shade, 8%);
+              }
+            }
+          }
+        }
+        &::before {
+          background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%);
+        }
+      }
+    }
+  }
+
+}

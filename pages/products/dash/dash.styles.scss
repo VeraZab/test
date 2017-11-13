@@ -56,7 +56,6 @@
       @include trans;
       text-shadow: $text-shadow-default;
       &:hover{
-
         @include media('>600px'){
           transform: translateY(-4px);
           cursor: pointer;
