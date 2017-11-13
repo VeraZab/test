@@ -1,0 +1,264 @@
+@import 'codemirror/lib/codemirror.css';
+@import 'codemirror/theme/material.css';
+
+.code-explorer-slice {
+  $c: &;
+
+  #{$c}__pagination {
+    &__next,
+    &__prev {
+      padding: $unit;
+      font-size: 24px;
+      opacity: 0.75;
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.25;
+      }
+    }
+  }
+
+  // --
+  // Tabs
+  // --
+  #{$c}__content {
+    &__header {
+      width: 100%;
+      flex-grow: 1;
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+      &__tabs {
+        flex-grow: 1;
+        user-select: none;
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        font-weight:500;
+        max-width: calc(100% - 102px);
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: darken($color-rhino-core, 0%);
+        }
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 3px;
+          background-color: darken($color-rhino-core, 0%);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: rgba($color-dodger, 0.25);
+          &:hover {
+            background-color: rgba($color-dodger, 0.75);
+          }
+        }
+      }
+
+      .mobile-only, .not-mobile {
+        width: 100%;
+      }
+      .mobile-only {
+        @include media('>900px') {
+          display: none;
+        }
+        @include media('<=900px') {
+          display: block !important;
+
+        }
+      }
+      &__item {
+        flex-grow: 1;
+        padding: $unit;
+        min-width: 90px;
+        opacity: 0.5;
+        position: relative;
+        @include trans;
+
+        &.not-mobile {
+          @include media('<=900px') {
+            display: none;
+          }
+        }
+
+        &.mobile {
+          width: 100%;
+        }
+
+        &::after {
+          $width: 20px;
+          $offset: calc(50% - #{$width/2});
+          content: '';
+          position: absolute;
+          height: 2px;
+          border-radius: 4px;
+          bottom: 8px;
+          left: $offset;
+          width: $width;
+          background: $color-aqua;
+          @include trans;
+          transform-origin: center center;
+          transform: scaleX(0);
+        }
+
+        &:hover {
+          cursor: pointer;
+          color: white;
+          opacity: 1;
+          &::after {
+            transform: none;
+          }
+        }
+
+        &.active {
+          &::after {
+            transform: none;
+          }
+        }
+
+        &.disabled {
+          pointer-events: none;
+          opacity: 1;
+        }
+      }
+    }
+
+    // --
+    // Code block
+    // --
+    &__code {
+      background: $color-rhino-core;
+      min-height: 400px;
+      flex-grow: 1;
+
+      max-width: calc(100% - var(--code-visual--width));
+      padding: 0 $unit;
+      position: relative;
+
+      @include media('<=900px') {
+        width: 100%;
+        max-width: 100%;
+      }
+      &__copy {
+        background: rgba(darken($color-rhino-core, 5%), 0.85);
+        position: absolute;
+        top: $unit*5;
+        right: $unit*5;
+        z-index: 444;
+        @include media('<=900px') {
+          display: none;
+        }
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+        &__content {
+          display: flex;
+          align-items: center;
+          &__icon {
+            margin-right: $unit/2;
+          }
+        }
+      }
+      &__container {
+        padding: $unit;
+        background: darken($color-rhino-core, 5%);
+        border-radius: 8px;
+      }
+      &__block {
+        width: 100%;
+        padding: 0 $unit;
+        max-height: 507px;
+        min-height: 507px;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+        position: relative;
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: darken($color-rhino-core, 5%);
+        }
+
+        &::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+          background-color: darken($color-rhino-core, 5%);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: rgba($color-dodger, 0.25);
+          &:hover {
+            background-color: rgba($color-dodger, 0.75);
+          }
+        }
+        .CodeMirror {
+          @include animationFadein-sm;
+          height: auto;
+          background: darken($color-rhino-core, 5%) !important;
+          .CodeMirror-gutters {
+            background: darken($color-rhino-core, 5%) !important;
+          }
+
+          &-code {
+            font-size: 14px;
+            span {
+              line-height: 22px;
+            }
+          }
+          .CodeMirror-hscrollbar {
+            &::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: darken($color-rhino-core, 5%) !important;
+            }
+            &::-webkit-scrollbar {
+              width: 6px;
+              height: 6px;
+              background-color: darken($color-rhino-core, 5%) !important;
+            }
+            &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+              background-color: rgba($color-dodger, 0.25) !important;
+              &:hover {
+                background-color: rgba($color-dodger, 0.75) !important;
+              }
+            }
+          }
+        }
+        * {
+          text-align: left;
+        }
+      }
+      &__footer {
+        padding: $unit;
+        display: flex;
+        justify-content: flex-end;
+        .buttons {
+          .button-primary {
+            background: $color-emerald;
+          }
+          .button-secondary {
+            border-color: white;
+            &:hover {
+              border-color: $color-emerald !important;
+            }
+            .button-label {
+              color: white;
+            }
+          }
+        }
+        @include media('<=900px') {
+          justify-content: center;
+
+        }
+      }
+    }
+
+  }
+}

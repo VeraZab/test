@@ -74,9 +74,6 @@
         font-size: 32px;
       }
     }
-    img {
-      display: block;
-    }
   }
 
   &-small {
@@ -87,7 +84,7 @@
   &-link {
 
   }
-  // -- 
+  // --
   // Primary Button Styles
   // --
 
@@ -149,9 +146,9 @@
     }
   }
 
-  // -- 
+  // --
   // Default hover + active states
-  // -- 
+  // --
   &:hover {
     //cursor: pointer;
   }
@@ -163,9 +160,9 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Hero buttons
 //----------------------------------------------------------------------------------------------------------------------
-.hero {
+.hero, .hero-prismic {
   .button {
-    padding: $unit*1.5;
+    padding: $unit;
     font-size: 1rem;
     letter-spacing: 2px;
     &-icon {
@@ -211,7 +208,7 @@
     // Secondary Hero Button
     // --
     &-secondary {
-      padding: ($unit*1.5)-2px;
+      padding: calc(#{$unit} - 1px);
       border-color: white;
       color: white !important;
       border-width: 2px;

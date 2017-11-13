@@ -19,7 +19,7 @@ git checkout -b gh-pages
 
 
 # Delete and move files.
-find . -maxdepth 1 ! -name 'out' ! -name '.git' ! -name '.gitignore' ! -name '.nojekyll' ! -name 'CNAME' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name 'out' ! -name '.git' ! -name '.gitignore' ! -name '.nojekyll' ! -name 'manifest.json' ! -name 'CNAME' -exec rm -rf {} \;
 mv out/* .
 rm -R out/
 

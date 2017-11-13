@@ -1,7 +1,8 @@
 // @import "partials/abstract";
 
 .footer-main {
-  background: $color-rhino-light-2;
+  background: $color-rhino-light-4;
+  border-top:$color-rhino-light-1 1px solid;
   color: $color-rhino-core;
 
   &-wrapper {
@@ -30,6 +31,7 @@
 
 
     copyright{
+       color: rgba($color-rhino-core, 0.5);
       @include handheld{
         display: flex;
         align-items: center;

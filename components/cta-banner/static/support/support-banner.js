@@ -1,99 +1,93 @@
-import React from 'react';
-import {CtaBanner, CtaBannerBody} from "../../index";
-import Buttons from "../../../buttons/index"
-
+import React from 'react'
+import { CtaBanner, CtaBannerBody } from '../../index'
+import Buttons from '../../../buttons/index'
 
 const columnData = [
-    {
-        title: 'Support Open Source',
-        message: 'These libraries are free forever. Your support helps to keep them top notch.',
-        graphic: 'https://now.plot.ly/static/images/illustrations/support_open_source@2x.png',
-        actions: null
-    },
-    {
-        title: 'Need Engineering Support?',
-        message: 'Get chat and support from our awesome engineering team.',
-        graphic: 'https://now.plot.ly/static/images/illustrations/engineering_supoort@2x.png',
-        actions: [
-            {
-                label: 'See Support Plans',
-                title: 'We offer a number of paid support plans to service everyone from individual developers to the largest enterprises',
-                icon: null,
-                target: '_blanks',
-                link: 'https://support.plot.ly/plans/',
-                button: {
-                    classes: 'button button-primary'
-                }
-            }
-        ]
-    },
-    {
-        title: 'Share Online',
-        message: 'Share charts, dashboards, Jupyter notebooks, and presentations online.',
-        graphic: 'https://now.plot.ly/static/images/illustrations/share_online@2x.png',
-        actions: null
-    }
-];
+  {
+    title: 'Support Open Source',
+    message:
+      'These libraries are free forever. Your support helps to keep them top notch.',
+    graphic:
+      'https://now.plot.ly/static/images/illustrations/support_open_source@2x.png',
+    actions: null,
+  },
+  {
+    title: 'Need Engineering Support?',
+    message: 'Get chat and support from our awesome engineering team.',
+    graphic:
+      'https://now.plot.ly/static/images/illustrations/engineering_supoort@2x.png',
+    actions: [
+      {
+        label: 'See Support Plans',
+        title:
+          'We offer a number of paid support plans to service everyone from individual developers to the largest enterprises',
+        icon: null,
+        target: '_blanks',
+        link: 'https://support.plot.ly/plans/',
+        button: {
+          classes: 'button button-primary',
+        },
+      },
+    ],
+  },
+  {
+    title: 'Share Online',
+    message:
+      'Share charts, dashboards, Jupyter notebooks, and presentations online.',
+    graphic:
+      'https://now.plot.ly/static/images/illustrations/share_online@2x.png',
+    actions: null,
+  },
+]
 
 export default class SupportBanner extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-
-
-
-        let renderColumns = (columnData) => {
+  render() {
+    let renderColumns = columnData => {
+      return columnData.map((column, i) => {
+        let columnActions = () => {
+          if (column.actions) {
             return (
-                columnData.map((column, i) => {
-
-
-                    let columnActions = () => {
-
-                        if(column.actions){
-                            return (<div className="column-actions center"> <Buttons className="center padding-top" items={column.actions}/></div>)
-                        } else {
-                            return null;
-                        }
-                    };
-
-
-                    return (
-                        <div className="column">
-                            <div className="column-wrapper">
-                                <div className="column-graphic">
-                                    <div className="column-graphic-wrapper">
-                                        <img src={column.graphic} alt={column.title} />
-                                    </div>
-                                </div>
-                                <div className="column-title">
-                                    {column.title}
-                                </div>
-                                <div className="column-message">
-                                    {column.message}
-                                </div>
-                                {columnActions()}
-                            </div>
-                        </div>
-                    )
-                })
+              <div className="column-actions center">
+                {' '}
+                <Buttons
+                  className="center padding-top"
+                  items={column.actions}
+                />
+              </div>
             )
-        };
+          } else {
+            return null
+          }
+        }
+
         return (
-
-                <CtaBanner>
-                    <CtaBannerBody>
-                        <div className="columns">
-                            <div className="columns-wrapper">
-                                {renderColumns(columnData)}
-                            </div>
-                        </div>
-                    </CtaBannerBody>
-                </CtaBanner>
-
+          <div className="column">
+            <div className="column-wrapper">
+              <div className="column-graphic">
+                <div className="column-graphic-wrapper">
+                  <img src={column.graphic} alt={column.title} />
+                </div>
+              </div>
+              <div className="column-title">{column.title}</div>
+              <div className="column-message">{column.message}</div>
+              {columnActions()}
+            </div>
+          </div>
         )
+      })
     }
+    return (
+      <CtaBanner>
+        <CtaBannerBody>
+          <div className="columns">
+            <div className="columns-wrapper">{renderColumns(columnData)}</div>
+          </div>
+        </CtaBannerBody>
+      </CtaBanner>
+    )
+  }
 }
-

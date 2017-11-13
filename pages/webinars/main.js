@@ -116,7 +116,7 @@ const webinars = [
 
 export default () => (
   <div className="sections">
-    <style dangerouslySetInnerHTML={{__html: styles}}/>
+    <style dangerouslySetInnerHTML={ {__html: styles} }/>
     <ContentSection>
       <ContentPane full center center-vertically text>
         <Subtitle>
@@ -131,31 +131,31 @@ export default () => (
             {
               webinars.map((webinar, i) => {
                 return (
-                  <div className="webinar" key={i}>
+                  <div className="webinar" key={ i }>
                     <div className="webinar-wrapper">
                       <div className="webinar-section">
-                        <div className="webinar-img">{webinar.img ? (<div className="webinar-img-wrapper" style={{
+                        <div className="webinar-img">{ webinar.img ? (<div className="webinar-img-wrapper" style={ {
                           backgroundImage: 'url(' + webinar.img + '?w=100&h=100&fit=crop)',
                           backgroundSize: 'cover',
                           backgroundPosition: 'center center'
-                        }}/>) : ''}</div>
+                        } }/>) : '' }</div>
                         <div className="webinar-details">
                           <div className="webinar-details-title">
-                            {webinar.title}
+                            { webinar.title }
                           </div>
                           <div className="webinar-details-row">
                             <div className="webinar-details-date">
-                              <span>When:</span> {webinar.date}
+                              <span>When:</span> { webinar.date }
                             </div>
                             <div className="webinar-details-presenter">
-                              <span>Presented by:</span> {webinar.presenter.name}
+                              <span>Presented by:</span> { webinar.presenter.name }
                             </div>
                           </div>
                         </div>
                       </div>
                       <div className="webinar-section">
                         <div className="webinar-actions">
-                          <Button item={webinar.action}/>
+                          <Button item={ webinar.action }/>
                         </div>
                       </div>
                     </div>

@@ -1,486 +1,129 @@
-// @import "partials/abstract";
-
-.header-main {
-  &-navigation {
-    width: 100%;
-    display: flex;
-    flex-grow: 1;
-
-    .not-tablet, .not-mobile {
-      @include media("<=1150px") {
-        display: none;
-      }
-    }
-    .not-tablet {
-      @include media("<=1055px") {
-        display: block;
-      }
-    }
-  }
-  &-navigation-wrapper {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    @include tablet {
-      justify-content: flex-end;
-    }
-  }
-  &-navigations {
-    @include desktop {
-      display: flex;
-      flex-grow: 1;
-      width: 100%;
-      justify-content: space-between;
-    }
-    @include tablet {
-      opacity: 0;
-      will-change: opacity;
-      //transition: $timing*2 opacity $easing;
-      position: fixed;
-      top: 72px;
-      max-height: 0;
-      max-height: 0;
-      width: 100%;
-      background: white url("https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg") right top no-repeat;
-      background-size: cover;
-      left: 0;
-      height: 0;
-      padding: 0 $gutter;
-    }
-    &.mobile-menu-active {
-      height: calc(100vh - 72px);
-      max-height: calc(100vh - 72px);
-      opacity: 1;
-      //@include animationFadein-sm;
-      animation-delay: 0s;
-      //animation-duration: 0.25s;
-      nav {
-        display: block;
-        .nav-main-wrapper {
-          display: block;
-        }
-        .buttons {
-          padding: $unit $gutter;
-        }
-        &.nav-main-actions {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-      }
-
-      .nav-item {
-        //@include animation-stagger-menu;
-
-        //@for $i from 1 through 50 {
-        //  &:nth-child(#{$i}) {
-        //    animation-delay: (#{0.1 + ($i*0.08s)}) !important;
-        //  }
-        //}
-      }
-      .button {
-        //@include animationFadeAndSlideInFromBottom-sm;
-
-        //@for $i from 1 through 50 {
-        //  &:nth-child(#{$i}) {
-        //    animation-delay: (#{0.47 + ($i*0.08s)}) !important;
-        //  }
-        //}
-      }
-    }
-  }
-}
-
-.nav {
-
-  &-main {
-    @include tablet {
-      flex-grow: 1;
-    }
-    display: flex;
-    &-wrapper {
-      flex-grow: 1;
-      display: flex;
-
-      & > .nav-item {
-
-        &:hover {
-          &::before {
-            //transform: scale(1);
-          }
-        }
-        &::before {
-          $width: 20px;
-          border-radius: 3px;
-          content: '';
-          position: absolute;
-          bottom: 16px;
-          height: 3px;
-          background: $color-rhino-dark;
-          opacity: 0.5;
-          width: $width;
-          left: 50%;
-          margin-left: -$width/2;
-          transition: $transition;
-          transform: scale(0);
-          display: block !important;
-          transform-origin: center;
-        }
-      }
-    }
-  }
-
-  &-main-actions {
-    display: flex;
-
-    .buttons {
-      flex-grow: 1;
-      .button {
-
-        @include handheld {
-
-        }
-      }
-    }
-  }
-
+.navigation-product {
+  $c: &;
   &-item {
-    display: flex;
-    color: $color-rhino-dark;
-    position: relative;
-
-    a {
-      &::after {
-        @include trans;
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 3px;
-        bottom: 0px;
-        left: 0;
-        transform: scale(0);
-        transform-origin: center center;
-        background: $color-dodger;
-        will-change: transform;
-        z-index: 999;
-      }
-      &:hover{
-        &::after{
-          transform: none;
-        }
-      }
-    }
-
-    &:hover {
-      & > .nav-item-wrapper > .nav-item-label > .nav-item-label-text {
-        color: $color-dodger !important;
-      }
-      &::after {
-        @include tablet-up {
-          transform: scale(1);
-        }
-      }
-    }
-
-    &.active {
-      a{
-        &::after{
-          transform: none;
-        }
-      }
-      .nav-item-label-text {
-        color: $color-dodger !important;
-      }
-    }
-
-    &:not(.mobile-menu-button) {
-      flex-grow: 1;
-    }
-    &.mobile-menu-button {
-      display: none;
-      @include tablet {
-        display: flex;
-      }
-    }
-    &-wrapper {
-      flex-grow: 1;
+    flex-grow: 1;
+    &-with-submenu {
       display: flex;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: currentColor;
-      font-weight: bold;
-      letter-spacing: 1px;
-      padding: 0 $unit*1.5;
       position: relative;
-
-    }
-    &-label {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      position: relative;
-      transition: $transition;
-      white-space: nowrap;
-      @extend %font-smoothing;
-
-      &-text {
-        transition: $transition;
-      }
-
-    }
-
-    a {
-      white-space: nowrap;
-    }
-
-    @include desktop {
-      // Nav Item hover state
-      &:hover {
-        color: $color-rhino-core;
-        .nav-item-label {
-          &::after {
-            transform: none;
-          }
-        }
-      }
-    }
-
-    // Transform label text on active state
-    & > a.nav-item-wrapper {
-      &:active {
-        .nav-item-label-text {
-          @include active-state-transform;
-        }
-      }
-    }
-
-    //--
-    // Nav Item with submenu
-    //--
-    &--with-submenu {
-      position: relative;
-      a{
-        &::after{
-          display: none;
-        }
-      }
-
-      &.nav-item-button {
-        height: $header-height;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: $unit;
-
-        &.not-mobile {
-          @include media('<=1060px') {
-            display: none !important;
-          }
-        }
-
-        .nav-item-icon {
-          margin-right: 8px;
-          flex-shrink: 0;
-        }
-      }
-
-      &.button {
-        //margin:$gutter 0;
-        .nav-item-submenu {
-          top: 29px;
-          margin-top: $gutter;
-
-          .nav-item-label-text {
-            font-size: 16px;
-          }
-
-        }
-      }
-      // keep default pointer when over an item with submenu (item itself is not link)
-      & > .nav-item-wrapper {
-        position: relative;
-        @include desktop {
-          &:hover {
-            cursor: default;
-          }
-        }
-      }
-      // Show submenu on hover
-      @include desktop {
+      flex-wrap: wrap;
+      & > #{$c}-item {
         &:hover {
-          .nav-item-submenu {
-            display: block;
+
+        }
+      }
+      @include media(">800px") {
+        &:hover {
+          cursor: default;
+          #{$c}-item {
             opacity: 1;
+            transform: translateY(-4px);
+            color: white !important;
+          }
+          #{$c}-submenu {
+            transform: none;
+            opacity: 1;
+            pointer-events: auto;
           }
         }
       }
     }
-
-    // Sumenu styles
-    &-submenu {
-      position: absolute;
-      left: 0;
-      z-index: 99;
-      top: $header-height;
-      background: white;
-      box-shadow: $drop-shadow-xl;
-      display: none;
-      opacity: 0;
-      transition: $transition;
-      @include tablet {
-        right: 0;
-        left: auto;
-        //transform: translateY(-20px);
-
-        &.active {
-          display: block;
-          opacity: 1;
-          top: -50px !important;
-          z-index: 400000 !important;
-          width: 100%;
-          //max-height:calc(100% - 100px);
-          //overflow-y: scroll;
-          .nav-item-submenu-section-label {
-            padding-top: $unit/2;
-            padding-bottom: $unit/2;
-          }
-          .nav-item-wrapper {
-            padding: 4px 0;
-            padding-right: 0;
-          }
-        }
+  }
+  &-submenu {
+    @include trans;
+    @include media(">800px") {
+      * {
+        //text-align: right;
       }
-      //@include animationFadeAndSlideInFromBottom-sm-fast;
+      box-shadow: $drop-shadow-l-light;
+      border-radius: 8px;
+      position: absolute;
+      top: calc(100% - 20px);
+      right: 0px;
+      background: white;
+      padding: $unit*2;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(20px);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
-      &-wrapper {
-        max-width: 720px;
-        position: relative;
-        padding: $unit $gutter;
-        transition: $transition;
-        display: flex;
-        @include tablet {
-          max-width: 100%;
-          display: flex;
-          flex-direction: column;
-        }
-        &::after {
+      a {
+        font-size: 16px;
+      }
+
+      $point-size: 15px;
+
+      &:not(.navigation-product-submenu--large) {
+        right: -8px;
+        &::before {
+          width: $point-size;
+          height: $point-size;
+          background: white;
+          transform: rotate(45deg);
           content: '';
           position: absolute;
-          top: -3px;
-          height: 3px;
-          background: $color-dodger;
-          width: 100%;
-          left: 0;
-          transform-origin: left;
-          display: none !important;
+          top: -6px;
+          z-index: 9999;
+          right: 10px;
         }
       }
-      // Submenu Sections
+      &--large {
+        min-width: 430px;
+        left: -109px;
+        &::before {
+          width: $point-size;
+          height: $point-size;
+          background: white;
+          transform: rotate(45deg);
+          content: '';
+          position: absolute;
+          top: -6px;
+          z-index: 9999;
+          left: 232px;
+        }
+      }
       &-section {
-        & + & {
-          margin-left: $gutter;
+        //width: 50%;
+        &:first-of-type {
+          padding-right: $unit*4 !important;
         }
-        &-label {
-          white-space: nowrap;
-          color: $color-rhino-dark;
-          opacity: 0.5;
-          letter-spacing: 2px;
-          font-size: 0.85rem;
-          font-weight: bold;
+        &--span-all {
+          padding-top: $unit*2;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 100%;
+          justify-content: flex-end;
+          margin-top: $unit*2;
+          border-top: 1px solid rgba($color-rhino-light-1, 0.5);
+        }
+        &-title {
           text-transform: uppercase;
-          font-family: 'Dosis', sans-serif;
+          @include ff-dosis;
+          font-weight: bold;
+          letter-spacing: 1px;
+          font-size: 14px;
+          line-height: 20px;
           padding-bottom: $unit/2;
-          user-select: none;
-          @include tablet {
-            text-align: right;
-          }
-          &:hover {
-            cursor: default;
-          }
+          opacity: 0.5;
+          width: 100%;
+          //padding-left: $unit*4;
         }
       }
-
-      // Nav items in submenu styles
-      .nav-item {
-
-        &-wrapper {
-          padding-left: 0;
-          padding-bottom: $unit;
-          padding-top: $unit/2;
-          transition: none;
-        }
-        &-label {
-          &-text {
-            text-transform: none;
-            letter-spacing: normal;
-            font-weight: 600;
-            transition: none;
-            white-space: nowrap;
-          }
-        }
-        &:hover {
-          .nav-item-label-text {
-            color: $color-dodger;
-          }
+      &-item {
+        color: $color-rhino-dark !important;
+        display: block;
+        width: 100%;
+        white-space: nowrap;
+        text-decoration: none !important;
+        background-image: none !important;
+        font-weight: 400 !important;
+        font-size: 18px;
+        &:not(:last-of-type) {
+          padding-bottom: $unit/2;
         }
       }
     }
-
-    // .nav-item mobile styles
-    @include tablet {
-
-      //@include animation-stagger-menu;
-
-      @for $i from 1 through 50 {
-        &:nth-child(#{$i}) {
-          animation-delay: (#{0.15 + ($i*0.08s)}) !important;
-        }
-      }
-
-      &-wrapper {
-        padding: $unit $gutter;
-      }
-      .nav-item-label {
-        justify-content: flex-end;
-      }
-    }
-
   }
 }
-
-.section-label {
-  pointer-events: none;
-  .nav-item-label-text {
-
-  }
-}
-
-.mobile-only {
-  display: none;
-
-  @include tablet {
-    display: block;
-  }
-}
-
-.submenu-close {
-  position: absolute;
-  padding-top: $unit/2;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  z-index: 99;
-}
-
-small.down-arrow {
-  opacity: 0.5;
-  font-size: 8px;
-  display: block;
-  position: absolute;
-  right: -14px;
-  top: 24px;
-  @include tablet {
-    display: none;
-  }
-}
-

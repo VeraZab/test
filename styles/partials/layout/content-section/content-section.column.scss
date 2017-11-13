@@ -1,0 +1,114 @@
+.content-section-p {
+  $c: &; // sets this classname to a variable omg
+
+  /*
+ * Account for any column specific styles
+ */
+  &[class*="--column"] {
+    /*
+     * Alignment Styles
+     * only really apply to column layout
+     */
+    &[class*="-align"] {
+      /*
+       * If center
+       */
+      &[class*="--center"] {
+
+        &.content-section-p-style--bleed-wrapper {
+          //display: flex;
+          //align-items: center;
+          //justify-content: center;
+          #{$c}-wrapper {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+            @include media('<=800px') {
+              .content-section-p-details {
+                padding-left: $unit*2 !important;
+                padding-right: $unit*2 !important;
+              }
+            }
+          }
+        }
+        #{$c}-title {
+          /* let's center the title,
+          this is here because there is a max-width on the title
+          */
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+        #{$c}-wrapper {
+          justify-content: center;
+
+          #{$c}-graphic,
+          #{$c}-details {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            align-items: center;
+          }
+          #{$c}-details {
+            padding-bottom: $unit*2;
+            width:100%;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+          }
+          #{$c}-graphic {
+            /* Let's prevent the graphic from getting too big */
+            max-width: 800px;
+            width: 100%;
+            padding-top: 0;
+            flex-grow:0;
+            &.content-section-p-graphic--style-bleed-parent {
+              width: 100%;
+              max-width: 100%;
+              padding-bottom: 0;
+              .image {
+                //min-height:600px;
+              }
+              //  padding-top:0 !important;
+              //  padding-bottom:0 !important;
+              //  width: 100vw !important;
+              //  max-width:100vw;
+              //  position: absolute !important;
+              //  height:100% !important;
+              //  .content-section-p-graphic-item{
+              //    position: absolute;
+              //    height:100%;
+              //    width:100%;
+              //    .image{
+              //      height:100% !important;
+              //      padding-bottom:0 !important;
+              //    }
+              //  }
+            }
+          }
+
+          #{$c}-body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right:auto;
+            margin-left:auto;
+          }
+
+          #{$c}-actions {
+            /* Let's prevent the graphic from getting too big */
+            padding-bottom: $unit*4;
+            .buttons {
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    #{$c}-wrapper {
+      flex-direction: column;
+    }
+  }
+}

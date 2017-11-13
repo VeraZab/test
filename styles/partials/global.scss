@@ -5,11 +5,244 @@
 @import "buttons";
 @import "cards";
 @import "layout";
+@import "slices";
 @import "layout/devices";
 @import "layout/panes";
 @import "layout/content-sections";
+@import "layout/hero.layout";
+@import "layout/content-section-p.layout";
+@import "layout/header";
+@import "image";
+@import "mdi";
+
+$animation-delay: 0.25s;
+$easing: cubic-bezier(0.19, 1, 0.22, 1);
+$animate--time-base: 1.7s;
+$animation-layout-timing: 0.75s;
+$animation-page-item-timing: 0.5s;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes animateBar {
+  from {
+    transform: translateX(100%);
+    @include media('<=800px') {
+      transform: translateX(100%);
+    }
+  }
+
+  to {
+    transform: translateX(0);
+
+  }
+}
+
+@keyframes animateBarRev {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+    @include media('<=800px') {
+      transform: translateX(100%);
+    }
+  }
+}
+
+
+.animate {
+  &--fade-in {
+    opacity: 0;
+    animation: fade-in $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &--fade-in-from-top {
+    opacity: 0;
+    animation: fade-in-from-top $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &--fade-in {
+    &-from-bottom {
+      opacity: 0;
+      animation: fade-in-from-bottom $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  &--fade-out {
+    opacity: 1;
+    animation: fade-out $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  &--bar {
+    transform: translateX(100%);
+    @include media('<=800px') {
+      transform: translateX(100%);
+    }
+    animation: animateBar $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+    &-reverse {
+      transform: none;
+      animation: animateBarRev $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+    }
+  }
+}
 
 a {
   color: currentColor;
   transition: $transition;
+}
+
+
+.slices {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.phone {
+  $br: 40px;
+  margin: $unit*2 $unit*12;
+  margin-right: 0;
+  max-width: 480px;
+  border-radius: $br;
+  box-shadow: $drop-shadow-l-light;
+  overflow: hidden;
+  background: white;
+  padding: $unit $unit;
+  position: relative;
+  @include media('<=800px') {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &-wrapper {
+
+  }
+  &-header {
+    //position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    &-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 40px;
+      align-items: center;
+      padding-bottom: $unit;
+    }
+    &-notch {
+      //position: absolute;
+      //top:0;
+      width: 30%;
+      height: 8px;
+      opacity: 0.5;
+      background: darken(white, 15%);
+      border-radius: 8px;
+
+    }
+  }
+
+  &-viewport {
+    border-radius: $br/1.2;
+    overflow: hidden;
+    background: white;
+    border: 1px solid darken($color-rhino-light-4, 5%);
+    //padding-top:$unit*4;
+  }
+}
+
+.page--404 {
+  display: flex;
+  min-height: calc(100vh - 463px) !important;
+
+}
+
+.not-found {
+  $c: &;
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  &::before {
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
+  }
+
+  #{$c}__wrapper {
+    display: flex;
+    //flex-direction: column;
+    @include global-wrapper;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    //color: white;
+    padding-top: $unit*16;
+  }
+  #{$c}__messaging {
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: $drop-shadow-l-light;
+    background: white;
+    padding: $unit*2;
+    //transform: translateY(-30%);
+    margin-bottom: $unit*8;
+
+    h1 {
+      //color: white;
+      color: $color-rhino-core;
+      padding-bottom: $unit*3;
+      //text-align: center;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
 }
