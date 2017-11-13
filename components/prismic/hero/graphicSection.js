@@ -27,6 +27,33 @@ export default class HeroGraphicSection extends React.Component {
 
     let graphic = null
 
+    if (data.hero_slices.find(slice => slice.slice_type === 'multiple_graphics')) {
+      let hero_graphics = data.hero_slices.find(
+        slice => slice.slice_type === 'multiple_graphics'
+      )
+      return (
+        <div className="hero-prismic-graphic-section" style={styles}>
+          <div className="hero-prismic-graphic-section-wrapper">
+            <div className="hero-prismic-graphic-many-items">
+              {hero_graphics.items.map((item, i) => {
+                return item.graphic_style === 'browser' ? (
+                  <div key={i} className="hero-prismic-graphic-item">
+                    <Browser>
+                      <Image data={item.graphic} />
+                    </Browser>
+                  </div>
+                ) : (
+                  <div key={i} className="hero-prismic-graphic-item">
+                    <Image data={item.graphic} />
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     if (data.hero_slices.find(slice => slice.slice_type === 'two_graphics')) {
       let hero_graphics = data.hero_slices.find(
         slice => slice.slice_type === 'two_graphics'

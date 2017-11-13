@@ -8,5 +8,5 @@ const aws = 'prismic-io.s3.amazonaws.com'
 const original = aws;
 
 export function imgix(url) {
-  return url.replace(`https://${original}/plotly`, `https://${imgixurl}/plotly`)
+  return url.replace(`https://${original}/plotly`, `https://${cloudfront}/plotly`)
 }

@@ -30,10 +30,11 @@ export default class Button extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
   render() {
-    let { data } = this.props
+    let {data} = this.props
 
     let classes = 'button'
 
@@ -44,25 +45,31 @@ export default class Button extends React.Component {
       classes += ' ' + data.extra_classes
     }
 
+    let download = {};
+    if (data.download) {
+      download['download'] = '';
+    }
+
     return (
       <a
-        href={data.link.url}
-        target={data.link.target}
-        title={data.title}
-        className={classes}
+        href={ data.link.url }
+        target={ data.link.target }
+        title={ data.title }
+        className={ classes }
+        { ...download }
       >
-        {/* if: MDI icon field has content*/}
-        {data.mdi_icon ? (
+        { /* if: MDI icon field has content*/ }
+        { data.mdi_icon ? (
           <div className="button-icon button-icon-mdi">
             <div className="button-icon-wrapper">
-              <i className={'mdi mdi-' + data.mdi_icon} />
+              <i className={ 'mdi mdi-' + data.mdi_icon }/>
             </div>
           </div>
-        ) : null}
-        {/* end if */}
+        ) : null }
+        { /* end if */ }
         <div
           className="button-label"
-          dangerouslySetInnerHTML={{ __html: data.label }}
+          dangerouslySetInnerHTML={ {__html: data.label} }
         />
       </a>
     )

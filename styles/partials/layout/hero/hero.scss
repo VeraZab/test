@@ -285,6 +285,43 @@
 
 }
 
+.hero-prismic-graphic-many-items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:$unit;
+  .hero-prismic-graphic-item {
+    width: 50%;
+    max-width: 50%;
+    padding-left: $unit;
+    padding-bottom: $unit;
+    @include media('<=800px') {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-bottom: $unit;
+    }
+    //&:first-of-type {
+    //  position: absolute;
+    //  z-index: 5;
+    //  width: 100%;
+    //  bottom: $unit*6;
+    //  left: 0;
+    //  @include media('<=800px') {
+    //    bottom: 0;
+    //  }
+    //}
+    //&:nth-of-type(2) {
+    //  max-width: 85%;
+    //  transform: translateX($unit*15) translateY(-$unit*4);
+    //  @include media('<=800px') {
+    //    transform: translateX($unit*15) translateY($unit*4);
+    //  }
+    //}
+  }
+
+}
+
 @import "hero.column";
 @import "hero.row";
 @import "hero.styles";

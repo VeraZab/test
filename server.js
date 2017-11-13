@@ -42,6 +42,21 @@ app.prepare()
       const queryParams = {slug: 'home'}
       return app.render(req, res, '/p', queryParams)
     })
+
+    /**
+     * Customer Stories: Goji
+     */
+    server.get('/products/enterprise/customer-stories/goji', (req, res) => {
+      const queryParams = {slug: 'goji'}
+      return app.render(req, res, '/p-customer-story', queryParams)
+    })
+    /**
+     * Customer Stories: C12
+     */
+    server.get('/products/enterprise/customer-stories/c12-energy', (req, res) => {
+      const queryParams = {slug: 'c12-energy'}
+      return app.render(req, res, '/p-customer-story', queryParams)
+    })
     /**
      * Chart Studio
      */

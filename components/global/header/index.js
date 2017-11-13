@@ -33,7 +33,7 @@ class Header extends React.Component {
 
     if (doc) {
       classes += ' ' + doc.data.hero_background_style
-      if (doc.data.alt_logo.url) {
+      if (doc.data && doc.data.alt_logo && doc.data.alt_logo.url) {
         logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />
       }
     }
