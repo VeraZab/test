@@ -34,7 +34,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
-      - run: yarn build
       - run: yarn export
       - deploy:
                 name: Deploy (Production)

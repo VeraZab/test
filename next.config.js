@@ -4,7 +4,7 @@ const glob = require("glob");
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
-  // assetPrefix: 'https://plotly.github.io/plotly-next/',
+  assetPrefix: 'https://plotly.github.io/plotly-next/',
   exportPathMap: () => ({
     "/": {
       page: "/p",
