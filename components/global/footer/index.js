@@ -62,7 +62,7 @@ const footerData = [
         url: 'https://plot.ly/products/industries/'
       },
       {
-        label: 'PLOTCON',
+        label: 'Workshops',
         icon: null,
         url: 'https://plotcon.plot.ly/'
       },
@@ -104,17 +104,17 @@ const footerData = [
       {
         label: 'Plotly.js',
         icon: null,
-        url: 'https://plot.ly/javascript/'
+        url: 'https://plot.ly/plotly-js-scientific-d3-charting-library/'
       },
       {
-        label: 'Plotly for R & Shiny',
+        label: 'Plotly.py',
         icon: null,
-        url: 'https://plot.ly/r/'
+        url: 'https://plot.ly/d3-js-for-python-and-pandas-charts/'
       },
       {
-        label: 'Plotly for Python',
+        label: 'Plotly.R',
         icon: null,
-        url: 'https://plot.ly/python/'
+        url: 'https://plot.ly/d3-js-for-r-and-shiny-charts/'
       }
     ]
   },
@@ -122,7 +122,7 @@ const footerData = [
     label: 'Business Intelligence',
     links: [
       {
-        label: 'Charts',
+        label: 'Chart Studio',
         icon: null,
         url: 'https://plot.ly/online-chart-maker/'
       },
@@ -137,7 +137,7 @@ const footerData = [
         url: 'https://plot.ly/powerpoint-online/'
       },
       {
-        label: 'Database Connectors',
+        label: 'Falcon SQL Client (Free)',
         icon: null,
         url: 'https://marketing.plot.ly/database-connectors/'
       }
