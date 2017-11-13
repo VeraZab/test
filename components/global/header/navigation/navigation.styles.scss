@@ -127,3 +127,24 @@
     }
   }
 }
+
+.login-button {
+  @include media('<=800px') {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .button {
+    &-secondary {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      color: white !important;
+      &:hover {
+        border-color: white !important;
+      }
+    }
+    &-label {
+      font-size: 12px !important;
+    }
+  }
+}
