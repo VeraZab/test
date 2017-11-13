@@ -1,0 +1,27 @@
+{
+  "name": "Plotly",
+  "start_url": "plot.ly",
+  "description": "Modern Visualization for the Data Era.",
+  "icons": [
+    {
+      "src": "https://d3n6sqn01en2u4.cloudfront.net/plotly%2Fb3ea9e09-1198-4824-a5d4-f28d0a1f8554_plotly-logomark.png?w=128",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://d3n6sqn01en2u4.cloudfront.net/plotly%2Fb3ea9e09-1198-4824-a5d4-f28d0a1f8554_plotly-logomark.png?w=192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://d3n6sqn01en2u4.cloudfront.net/plotly%2Fb3ea9e09-1198-4824-a5d4-f28d0a1f8554_plotly-logomark.png?w=256",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://d3n6sqn01en2u4.cloudfront.net/plotly%2Fb3ea9e09-1198-4824-a5d4-f28d0a1f8554_plotly-logomark.png?w=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
