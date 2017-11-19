@@ -52,6 +52,10 @@ export default class ContentSection extends React.Component {
     const {data: {primary}} = this.props
     const {data: {items}} = this.props
 
+    if(primary && primary.published && primary.published === 'false') {
+      return null
+    }
+
     /** Define the component class name */
     const componentClass = 'content-section-p'
 
