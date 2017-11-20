@@ -84,6 +84,7 @@ module.exports = {
     '/products/dash': {page: '/products/dash'},
     // Pricing - cloud
     '/products/cloud': {page: '/products/cloud'},
+    '/products/cloud/compare': {page: '/products/cloud'},
     // Pricing - on premises
     '/products/on-premise': {page: '/products/on-premise'},
     '/products/on-premises': {page: '/products/on-premise'},
@@ -108,11 +109,19 @@ module.exports = {
       page: '/single-industries',
       query: {id: 'aerospace'}
     },
+    '/products/industries/aerospace-analytics': {
+      page: '/single-industries',
+      query: {id: 'aerospace'}
+    },
     '/products/industries/automotive-analytics': {
       page: '/single-industries',
       query: {id: 'automotive-analytics'}
     },
     '/products/industries/business-intelligence': {
+      page: '/single-industries',
+      query: {id: 'business-intelligence'}
+    },
+    '/products/industries/business-intelligence-analytics': {
       page: '/single-industries',
       query: {id: 'business-intelligence'}
     },
@@ -125,6 +134,10 @@ module.exports = {
       query: {id: 'government-and-public-analytics'}
     },
     '/products/industries/insurance': {
+      page: '/single-industries',
+      query: {id: 'insurance'}
+    },
+    '/products/industries/insurance-analytics': {
       page: '/single-industries',
       query: {id: 'insurance'}
     },
@@ -142,7 +155,12 @@ module.exports = {
     },
     // Customer Stories
     '/products/enterprise/customer-stories': {page: '/customer-stories'},
+    '/products/on-premise/customer-stories': {page: '/customer-stories'},
     '/products/enterprise/customer-stories/c12-energy': {
+      page: '/p-customer-story',
+      query: {slug: 'c12-energy'}
+    },
+    '/products/on-premise/customer-stories/c12-energy': {
       page: '/p-customer-story',
       query: {slug: 'c12-energy'}
     },
@@ -150,7 +168,7 @@ module.exports = {
       page: '/p-customer-story',
       query: {slug: 'goji'}
     },
-    '/products/on-premises/customer-stories/goji': {
+    '/products/on-premise/customer-stories/goji': {
       page: '/p-customer-story',
       query: {slug: 'goji'}
     }
