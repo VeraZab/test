@@ -77,10 +77,6 @@ function Layout(Child) {
             <Head
               doc={ this.props.doc }>
               <style dangerouslySetInnerHTML={ {__html: styles} }/>
-              <script
-                async
-                src="https://cdn.plot.ly/plotly-basic-latest.min.js"
-              />
             </Head>
             <Header { ...this.props } />
             <Child { ...this.props } />
