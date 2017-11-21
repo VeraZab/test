@@ -89,6 +89,9 @@
         }
       }
       &:nth-of-type(even) {
+        .content-section-p-graphic--style-bleed-parent {
+          top: 0;
+        }
         &.content-section-p-style--bleed-wrapper {
           #{$c}-graphic {
             @include media('<=800px') {
@@ -100,7 +103,6 @@
           }
         }
       }
-
 
       &:nth-of-type(odd) {
         &.content-section-p-style--bleed-wrapper {
@@ -126,6 +128,7 @@
         }
         .content-section-p-graphic--style-bleed-parent {
           left: var(--details-width) !important;
+          top: 0;
         }
         #{$c}-graphic {
           @include media('>800px') {
@@ -142,7 +145,6 @@
         }
       }
     }
-
 
     /*
      * row-graphic-left
