@@ -56,12 +56,12 @@ function Layout(Child) {
 
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-          .register('/service-worker.js')
+          .register('/_next/service-worker.js')
           .then(registration => {
-            console.log('service worker registration successful')
+            // console.log('service worker registration successful')
           })
           .catch(err => {
-            console.warn('service worker registration failed', err.message)
+            // console.warn('service worker registration failed', err.message)
           })
       }
     }
