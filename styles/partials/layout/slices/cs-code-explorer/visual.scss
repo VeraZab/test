@@ -9,6 +9,7 @@
       display: flex;
       max-width: var(--code-visual--width);
       min-height: var(--code-visual--height);
+      max-height: 648px;
       flex-grow: 1;
 
       @include animationFadein-sm;

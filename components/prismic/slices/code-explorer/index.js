@@ -61,7 +61,7 @@ export default class CodeExplorer extends React.Component {
     })
   }
 
-  getImageSize(element, variable) {
+  getImageSize() {
     const getBoundingClientRect = element => {
       const {
         top,
