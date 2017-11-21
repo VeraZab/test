@@ -37,6 +37,7 @@ export default class Slices extends React.Component {
               slice.slice_type === 'graphic_with_text_logos' ||
               slice.slice_type === 'graphic_with_text_slides' ||
               slice.slice_type === 'cs-advanced-cards' ||
+              slice.slice_type === 'cs-code-explorer' ||
               slice.slice_type === 'cs-github-stars'
             ) {
               return <ContentSection key={shortid.generate()} data={slice} />
