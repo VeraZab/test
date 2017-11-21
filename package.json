@@ -7,7 +7,7 @@
     "build": "next build",
     "preexport": "yarn run build",
     "export": "next export",
-    "postexport": "cp .next/service-worker.js out",
+    "postexport": "cp .next/service-worker.js out/_next",
     "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "deploy": "yarn run export && yarn run ghpages",
     "start": "NODE_ENV=production node server.js",

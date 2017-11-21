@@ -56,12 +56,12 @@ function Layout(Child) {
 
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-          .register('/service-worker.js')
+          .register('/_next/service-worker.js')
           .then(registration => {
-            console.log('service worker registration successful')
+            // console.log('service worker registration successful')
           })
           .catch(err => {
-            console.warn('service worker registration failed', err.message)
+            // console.warn('service worker registration failed', err.message)
           })
       }
     }
@@ -77,10 +77,6 @@ function Layout(Child) {
             <Head
               doc={ this.props.doc }>
               <style dangerouslySetInnerHTML={ {__html: styles} }/>
-              <script
-                async
-                src="https://cdn.plot.ly/plotly-basic-latest.min.js"
-              />
             </Head>
             <Header { ...this.props } />
             <Child { ...this.props } />
