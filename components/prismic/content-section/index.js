@@ -8,6 +8,7 @@ import Phone from 'components/phone'
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
 import CodeExplorer from 'components/prismic/slices/code-explorer'
 import AdvancedCards from 'components/prismic/slices/advanced-cards'
+import Iframes from 'components/prismic/slices/iframe'
 
 const shortid = require('shortid')
 
@@ -435,6 +436,11 @@ export default class ContentSection extends React.Component {
         <AdvancedCards data={ this.props.data.items }/>
       ) : null
 
+    const IframesSection =
+      this.props.data.slice_type === 'cs-iframe' && (
+        <Iframes data={ this.props.data.items }/>
+      )
+
     return (
       <section className={ classes }>
         <div className="content-section-p-wrapper">
@@ -457,6 +463,7 @@ export default class ContentSection extends React.Component {
 
               actions() }
             { CodeExplorerSection }
+            { IframesSection }
           </div>
           { this.props.data.slice_type !== 'graphic_with_text_logos'
             ? graphic()
