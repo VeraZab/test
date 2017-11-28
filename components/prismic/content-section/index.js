@@ -24,27 +24,6 @@ export default class ContentSection extends React.Component {
   }
 
   componentDidMount() {
-    // if (IntersectionObserver) {
-    //   const sections = document.querySelectorAll('.content-section-p');
-    //
-    //   const observer = new IntersectionObserver((entries) => {
-    //       entries.filter(entry => entry.isIntersecting).forEach(entry => {
-    //         entry.target.classList.add('animate-in');
-    //       });
-    //     },
-    //     {
-    //       threshold: [0.15]
-    //     });
-    //
-    //   sections.forEach(section => {
-    //     observer.observe(section);
-    //   });
-    // } else {
-    //   const sections = document.querySelectorAll('.content-section-p');
-    //   sections.forEach(section => {
-    //     section.classList.add('ignore-animation');
-    //   });
-    // }
   }
 
   render() {

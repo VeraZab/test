@@ -16,12 +16,6 @@ export default class AdvancedCards extends React.Component {
     super(props)
   }
 
-  componentWillMount() {
-  }
-
-  componentDidMount() {
-  }
-
   render() {
     const Logo = data => {
       if (data.logo.url) {
@@ -70,35 +64,38 @@ export default class AdvancedCards extends React.Component {
     }
 
     const cards = this.props.data.map((card, i) => {
-      card.graphic.url = imgix(card.graphic.url)
-      const imageParams = {
-        preview:
-        '?w=' +
-        Math.floor(card.graphic.dimensions.width / images.preview.scale) +
-        '&h=' +
-        Math.floor(card.graphic.dimensions.height / images.preview.scale) +
-        '&fit=crop&blur=' +
-        images.preview.blur +
-        '&q=' +
-        images.preview.quality +
-        '&auto=format',
-        hq:
-        '?w=' +
-        Math.round(card.graphic.dimensions.width * images.hq.scale) +
-        '&h=' +
-        Math.round(card.graphic.dimensions.height * images.hq.scale) +
-        '&fit=crop&crop=top,left&q=' +
-        images.hq.quality +
-        '&auto=format',
+      if (card.graphic && card.graphic.url) {
+        card.graphic.url = imgix(card.graphic.url)
+        const imageParams = {
+          preview:
+          '?w=' +
+          Math.floor(card.graphic.dimensions.width / images.preview.scale) +
+          '&h=' +
+          Math.floor(card.graphic.dimensions.height / images.preview.scale) +
+          '&fit=crop&blur=' +
+          images.preview.blur +
+          '&q=' +
+          images.preview.quality +
+          '&auto=format',
+          hq:
+          '?w=' +
+          Math.round(card.graphic.dimensions.width * images.hq.scale) +
+          '&h=' +
+          Math.round(card.graphic.dimensions.height * images.hq.scale) +
+          '&fit=crop&crop=top,left&q=' +
+          images.hq.quality +
+          '&auto=format',
+        }
+        let imageStyle = {
+          backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')',
+        }
       }
-      const imageStyle = {
-        backgroundImage: 'url(' + card.graphic.url + imageParams.hq + ')',
-      }
+
       if (card.display === 'true') {
         return (
           <div className="card card--with-image" key={ shortid.generate() }>
             <div className="card__wrapper">
-              <div className="card__image" style={ imageStyle }>
+              <div className="card__image">
                 <div className="card__details">
                   <div className="card__details__meta">
                     <div className="card__title">
