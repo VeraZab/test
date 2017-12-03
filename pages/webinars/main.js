@@ -13,26 +13,6 @@ import Button from 'components/button';
 
 const webinars = [
   {
-    title: 'Using the Falcon SQL Editor to Generate Dashboards in Plotly',
-    date: 'Wed, Nov 15, 2017 2:00 PM EST',
-    img: 'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
-    presenter: {
-      name: 'Charley Ferrari',
-      avatar: 'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif'
-    },
-    action: {
-      label: 'Register',
-      subtitle: null,
-      title: 'Register for this webinar',
-      icon: null,
-      target: '_blank',
-      link: 'https://www.crowdcast.io/e/using-the-falcon-sql/register',
-      button: {
-        classes: 'button button-primary'
-      }
-    }
-  },
-  {
     title: 'Using Excel to Generate Online Dashboards in Plotly',
     date: 'December 6th, 2017 2PM EST',
     img: 'https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif',
@@ -47,6 +27,26 @@ const webinars = [
       icon: null,
       target: '_blank',
       link: 'https://www.crowdcast.io/e/using-excel-to-generate/register',
+      button: {
+        classes: 'button button-primary'
+      }
+    }
+  },
+  {
+    title: 'Using the Falcon SQL Editor to Generate Dashboards in Plotly',
+    date: 'Wed, Nov 15, 2017 2:00 PM EST',
+    img: 'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
+    presenter: {
+      name: 'Charley Ferrari',
+      avatar: 'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif'
+    },
+    action: {
+      label: 'Watch Recording',
+      subtitle: null,
+      title: 'Register for this webinar',
+      icon: null,
+      target: '_blank',
+      link: 'https://www.crowdcast.io/e/using-the-falcon-sql/register',
       button: {
         classes: 'button button-primary'
       }
