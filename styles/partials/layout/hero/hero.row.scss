@@ -9,8 +9,8 @@
     #{$c} {
       --details-width: 55%;
       --graphic-width: 45%;
-      #{$c}-messaging{
-        padding-right:0 !important;
+      #{$c}-messaging {
+        padding-right: 0 !important;
       }
     }
   }
@@ -31,6 +31,12 @@
         flex-wrap: wrap;
         width: 100%;
 
+        h2 {
+          text-align: left;
+          width: 100%;
+          margin-left:0;
+          padding-left:0;
+        }
         @include media("<1060px") {
           padding-top: 80px;
         }

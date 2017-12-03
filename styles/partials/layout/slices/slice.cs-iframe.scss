@@ -1,0 +1,30 @@
+.iframe-embed {
+  $c: &;
+  width: 100%;
+  #{$c}__wrapper {
+    iframe {
+      width: 100%;
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: darken($color-rhino-light-4, 0%) !important;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 3px;
+        background-color: darken($color-rhino-light-4, 0%) !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba($color-dodger, 0.25) !important;
+        &:hover {
+          background-color: rgba($color-dodger, 0.75) !important;
+        }
+      }
+    }
+  }
+  #{$c}__iframe {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}

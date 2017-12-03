@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
+  order: 10;
 }
 
 .card {
@@ -209,7 +209,7 @@
     }
     &__content {
       filter: blur(0px);
-      will-change:filter;
+      will-change: filter;
       @include trans;
       transition-duration: 1s;
     }

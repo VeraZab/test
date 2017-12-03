@@ -14,6 +14,6 @@ export default class HeroSubtitle extends React.Component {
   }
 
   render() {
-    return <h2 className="title-sm">{this.props.children}</h2>
+    return <h2 className="title-sm pretitle">{this.props.children}</h2>
   }
 }

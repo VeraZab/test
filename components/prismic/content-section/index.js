@@ -8,6 +8,7 @@ import Phone from 'components/phone'
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
 import CodeExplorer from 'components/prismic/slices/code-explorer'
 import AdvancedCards from 'components/prismic/slices/advanced-cards'
+import Iframes from 'components/prismic/slices/iframe'
 
 const shortid = require('shortid')
 
@@ -24,27 +25,6 @@ export default class ContentSection extends React.Component {
   }
 
   componentDidMount() {
-    // if (IntersectionObserver) {
-    //   const sections = document.querySelectorAll('.content-section-p');
-    //
-    //   const observer = new IntersectionObserver((entries) => {
-    //       entries.filter(entry => entry.isIntersecting).forEach(entry => {
-    //         entry.target.classList.add('animate-in');
-    //       });
-    //     },
-    //     {
-    //       threshold: [0.15]
-    //     });
-    //
-    //   sections.forEach(section => {
-    //     observer.observe(section);
-    //   });
-    // } else {
-    //   const sections = document.querySelectorAll('.content-section-p');
-    //   sections.forEach(section => {
-    //     section.classList.add('ignore-animation');
-    //   });
-    // }
   }
 
   render() {
@@ -456,6 +436,11 @@ export default class ContentSection extends React.Component {
         <AdvancedCards data={ this.props.data.items }/>
       ) : null
 
+    const IframesSection =
+      this.props.data.slice_type === 'cs-iframe' && (
+        <Iframes data={ this.props.data.items }/>
+      )
+
     return (
       <section className={ classes }>
         <div className="content-section-p-wrapper">
@@ -478,6 +463,7 @@ export default class ContentSection extends React.Component {
 
               actions() }
             { CodeExplorerSection }
+            { IframesSection }
           </div>
           { this.props.data.slice_type !== 'graphic_with_text_logos'
             ? graphic()
