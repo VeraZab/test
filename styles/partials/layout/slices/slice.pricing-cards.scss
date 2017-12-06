@@ -9,5 +9,22 @@
     display: flex;
     padding: $unit*2;
     @include global-wrapper;
+    justify-content: center;
+    padding-left: $unit*4;
+    padding-right: $unit*4;
   }
 }
+
+.pricing__card {
+  $c: &;
+  flex-grow: 1;
+  background: white;
+  #{$c}__wrapper {
+
+  }
+
+  &:not(:first-child):not(:last-child) {
+  }
+}
+
+

@@ -15,7 +15,7 @@ class PricingCard extends React.Component {
   }
 
   getChildContext() {
-    let {card: {primary: content, items: features}} = this.props
+    const {card: {primary: content, items: features}} = this.props
 
     return {
       content,
@@ -24,12 +24,9 @@ class PricingCard extends React.Component {
   }
 
   render() {
-    let {card: {primary: content, items: features}} = this.props
-
-    // const Features = features.map(feature => 'feature')
-
+    const {style, className} = this.props;
     return (
-      <div className="pricing__card">
+      <div className="pricing__card" style={ style }>
         <div className="pricing__card__wrapper">
           <PricingCardHeader/>
           <PricingCardFeatures/>
