@@ -10,6 +10,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import PricingCard from 'components/prismic/slices/pricing-cards/card'
 
 const shortid = require('shortid')
 
@@ -24,10 +25,12 @@ class PricingCards extends React.Component {
 
   render() {
     let {cards} = this.props
+
+    const Cards = cards.map(card => <PricingCard key={ shortid.generate() } card={ card }/>)
     return (
       <div className="pricing__cards">
         <div className="pricing__cards__wrapper">
-          Pricing Cards
+          { Cards }
         </div>
       </div>
     )
@@ -37,7 +40,6 @@ class PricingCards extends React.Component {
 PricingCards.propTypes = {
   cards: PropTypes.array.isRequired,
 }
-
 export default PricingCards
 
 
