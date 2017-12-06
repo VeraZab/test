@@ -52,6 +52,7 @@
     "postcss-uncss": "^0.14.0",
     "prismic-dom": "^2.0.4",
     "prismic-javascript": "^1.4.0",
+    "prop-types": "^15.6.0",
     "proptypes": "^0.14.4",
     "raw-loader": "^0.5.1",
     "react": "^16.0.0",

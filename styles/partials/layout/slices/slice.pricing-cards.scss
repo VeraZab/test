@@ -1,0 +1,13 @@
+.pricing__cards {
+  $c: &;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  #{$c}__wrapper {
+    flex-grow: 1;
+    display: flex;
+    padding: $unit*2;
+    @include global-wrapper;
+  }
+}

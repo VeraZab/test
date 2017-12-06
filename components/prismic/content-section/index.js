@@ -10,6 +10,8 @@ import CodeExplorer from 'components/prismic/slices/code-explorer'
 import AdvancedCards from 'components/prismic/slices/advanced-cards'
 import Iframes from 'components/prismic/slices/iframe'
 
+import PricingCards from 'components/prismic/slices/pricing-cards'
+
 const shortid = require('shortid')
 
 /**
@@ -29,10 +31,9 @@ export default class ContentSection extends React.Component {
 
   render() {
     /** Destructure props */
-    const {data: {primary}} = this.props
-    const {data: {items}} = this.props
+    const {data, data: {primary, items, slice_type}, className} = this.props
 
-    if(primary && primary.published && primary.published === 'false') {
+    if (primary && primary.published && primary.published === 'false') {
       return null
     }
 
@@ -46,11 +47,11 @@ export default class ContentSection extends React.Component {
      * If someone has added classes to this component,
      * let's append them to the classes variable
      */
-    if (this.props.className) {
-      classes += ' ' + this.props.className
+    if (className) {
+      classes += ' ' + className
     }
 
-    classes += ' ' + this.props.data.slice_type
+    classes += ' ' + slice_type
 
     /**
      * Layout
@@ -171,7 +172,7 @@ export default class ContentSection extends React.Component {
        * we're going to render the items as graphics, rather than as actions
        * like in the default content section slice type
        */
-      if (this.props.data.slice_type === 'graphic_with_text_logos') {
+      if (slice_type === 'graphic_with_text_logos') {
         return (
           <div
             className={
@@ -194,7 +195,7 @@ export default class ContentSection extends React.Component {
        * we're going to render the items as graphics, rather than as actions
        * like in the default content section slice type
        */
-      if (this.props.data.slice_type === 'graphic_with_text_slides') {
+      if (slice_type === 'graphic_with_text_slides') {
         return (
           <div
             className={
@@ -291,7 +292,7 @@ export default class ContentSection extends React.Component {
        * This is how I was handling the buttons before, as the repeated group in the content section
        * but I need to update this to reflect the new way of just including at most 3 buttons (see below)
        */
-      if (this.props.data.slice_type === 'graphic_with_text') {
+      if (slice_type === 'graphic_with_text') {
         if (items && items.length) {
           return (
             <div className={ 'content-section-p-actions' }>
@@ -317,7 +318,7 @@ export default class ContentSection extends React.Component {
 
         let buttons = []
 
-        if (this.props.data.primary.button_one_label) {
+        if (data.primary.button_one_label) {
           buttons.push({
             label: primary.button_one_label,
             link: primary.button_one_link,
@@ -396,7 +397,7 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null
 
-    if (this.props.data.slice_type === 'cs-tabs') {
+    if (slice_type === 'cs-tabs') {
       return (
         <section className={ classes }>
           <div className="content-section-p-wrapper">
@@ -418,28 +419,30 @@ export default class ContentSection extends React.Component {
     }
 
     const GithubStarsSection =
-      this.props.data.slice_type === 'cs-github-stars' ? (
+      slice_type === 'cs-github-stars' ? (
         <div className="github-stars">
-          <GithubStarsSlice key={ shortid.generate() } slice={ this.props.data }/>
+          <GithubStarsSlice key={ shortid.generate() } slice={ data }/>
         </div>
       ) : null
 
     const CodeExplorerSection =
-      this.props.data.slice_type === 'cs-code-explorer' ? (
+      slice_type === 'cs-code-explorer' ? (
         <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={ this.props.data }/>{ ' ' }
+          <CodeExplorer data={ data }/>{ ' ' }
         </div>
       ) : null
 
     const AdvancedCardsSection =
-      this.props.data.slice_type === 'cs-advanced-cards' ? (
-        <AdvancedCards data={ this.props.data.items }/>
+      slice_type === 'cs-advanced-cards' ? (
+        <AdvancedCards data={ items }/>
       ) : null
 
     const IframesSection =
-      this.props.data.slice_type === 'cs-iframe' && (
-        <Iframes data={ this.props.data.items }/>
+      slice_type === 'cs-iframe' && (
+        <Iframes data={ items }/>
       )
+
+    const PricingCardsSection = slice_type === 'cs-pricing' && items && <PricingCards cards={ data.pricing_cards }/>
 
     return (
       <section className={ classes }>
@@ -450,7 +453,7 @@ export default class ContentSection extends React.Component {
             { Pretitle }
             { Title }
             { Subtitle }
-            { this.props.data.slice_type === 'graphic_with_text_logos'
+            { slice_type === 'graphic_with_text_logos'
               ? graphic()
               : null }
 
@@ -465,12 +468,13 @@ export default class ContentSection extends React.Component {
             { CodeExplorerSection }
             { IframesSection }
           </div>
-          { this.props.data.slice_type !== 'graphic_with_text_logos'
+          { slice_type !== 'graphic_with_text_logos'
             ? graphic()
             : null }
           { AdvancedCardsSection }
           { GithubStarsSection }
         </div>
+        { PricingCardsSection }
       </section>
     )
   }
