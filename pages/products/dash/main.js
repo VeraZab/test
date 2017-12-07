@@ -108,7 +108,7 @@ if __name__ == '__main__':
     app.run_server()`
 const plotcon_button = {
   label: 'Buy a Ticket',
-  title: 'PLOTCON NYC 2017',
+  title: 'PLOTCON WORKSHOPS 2018',
   icon: null,
   target: '_blank',
   link: 'https://plotcon.plot.ly/workshops',
@@ -323,7 +323,7 @@ class DashMain extends React.Component {
             <Graphic image="https://plotly-images.imgix.net/plotcon/staff-uploads/90d13bfa34a5fd265620d5b991fdc794/DSC05146.jpg?w=1200&h=2000&fit=crop&crop=faces&auto=compress&auto=format" />
           </ContentPane>
           <ContentPane half center-vertically text>
-            <div className="pre-title">PLOTCON NYC 2017</div>
+            <div className="pre-title">PLOTCON WORKSHOPS 2018</div>
             <Title>Dash Master Class</Title>
             <Body>
               <p>Chris will walk you through his own creation Dash.</p>
