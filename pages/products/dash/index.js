@@ -17,8 +17,7 @@ export default () => (
     <style dangerouslySetInnerHTML={{ __html: styles }} />
     <div className="header-message">
       <div className="header-message-wrapper">
-        2 day master classes for Dash, R Shiny, and React/Plotly.js in NYC
-        November 18-19 🎨 📈 🗽{' '}
+        2 day master classes for Dash, R Shiny, and SQL &amp; Dashboards 🎨 📈{' '}
         <a href="https://plotcon.plot.ly/workshops" target="_blank">
           Learn More
         </a>
