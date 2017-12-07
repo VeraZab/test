@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { constructButtons } from 'lib/construct-buttons'
+import { numberWithCommas } from 'lib/format-currency'
 import Button from 'components/prismic/button'
 
 const shortid = require('shortid')
@@ -25,23 +26,23 @@ class PricingCardHeader extends React.Component {
       <div className="pricing__card__header__title"><h2 className="title">{ content.title }</h2></div>
 
     const Price = content.price &&
-      <div className="pricing__card__header__price"><h2 className="title">{ content.price }</h2></div>
+      <div className="pricing__card__header__price"><h2
+        className="title price"><span className="price__symbol">$</span>{ numberWithCommas(parseInt(content.price)) }</h2>
+      </div>
 
     const buttons = constructButtons(content);
 
-    const Buttons = <div className="buttons">{ buttons.map(button => <Button key={ shortid.generate() }
+    const Buttons = <div className="pricing__card__header__actions buttons">{ buttons.map(button => <Button key={ shortid.generate() }
                                                                              data={ button }/>) }</div>
 
 
     return (
       <div className="pricing__card__header">
         <div className="pricing__card__header__wrapper">
-          <div className="pricing__card__header__title">
-            { Pretitle }
-            { Title }
-            { Price }
-            { Buttons }
-          </div>
+          { Pretitle }
+          { Title }
+          { Price }
+          { Buttons }
         </div>
       </div>
     )

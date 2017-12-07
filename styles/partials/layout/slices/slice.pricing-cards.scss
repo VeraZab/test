@@ -1,3 +1,16 @@
+.content-section-p {
+  &.cs-pricing {
+    padding-bottom: $unit*8;
+    .content-section-p-wrapper {
+      min-height: 200px;
+      .content-section-p-area {
+        //padding-top: $unit*2 !important;
+        //padding-bottom: $unit*2 !important;
+      }
+    }
+  }
+}
+
 .pricing__cards {
   $c: &;
   width: 100%;
@@ -6,12 +19,22 @@
   display: flex;
   #{$c}__wrapper {
     flex-grow: 1;
-    display: flex;
+    //display: flex;
     padding: $unit*2;
     @include global-wrapper;
-    justify-content: center;
+    //justify-content: center;
     padding-left: $unit*4;
     padding-right: $unit*4;
+    display: grid;
+    grid-column-gap: $unit*2;
+    grid-row-gap: $unit*2;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    @include media('<=1385px') {
+      grid-template-columns: repeat(auto-fill, minmax(33%, 2fr));
+    }
+    @include media('<=1060px') {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
   }
 }
 
@@ -19,11 +42,59 @@
   $c: &;
   flex-grow: 1;
   background: white;
-  #{$c}__wrapper {
+  box-shadow: $drop-shadow-l-light;
+  border-radius: 8px;
+  overflow: hidden;
 
+  #{$c}__wrapper {
   }
 
-  &:not(:first-child):not(:last-child) {
+  #{$c}__header {
+
+    &__title {
+      background: $color-rhino-core;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $unit;
+      h2 {
+        color: white;
+      }
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $unit*4 $unit*2;
+      h2 {
+        font-size: 42px;
+      }
+      .price {
+        &__symbol {
+          color: $color-rhino-medium-1;
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 $unit*2;
+      padding-bottom: $unit*2;
+    }
+  }
+
+  #{$c}__features {
+    border-top: 1px solid $color-rhino-light-2;
+  }
+
+  #{$c}__feature {
+    text-align: center;
+    padding: 0 $unit*2;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-rhino-light-2;
+    }
   }
 }
 

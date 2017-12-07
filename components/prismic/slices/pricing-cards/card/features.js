@@ -16,9 +16,13 @@ class PricingCardFeatures extends React.Component {
   render() {
     const {features} = this.context;
 
-    const Features = features.map(feature => <div key={ shortid.generate() } dangerouslySetInnerHTML={ {
-      __html: PrismicDOM.RichText.asHtml(feature.feature),
-    } }/>)
+    const Features = features.map(feature => <div className="pricing__card__feature">
+      <div key={ shortid.generate() } className={ 'pricing__card__feature__value' }
+           dangerouslySetInnerHTML={ {
+             __html: PrismicDOM.RichText.asHtml(feature.feature),
+           } }/>
+
+    </div>)
 
     return (
       <div className="pricing__card__features">
