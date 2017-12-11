@@ -65,6 +65,9 @@
     }
   }
   &--with-image {
+    #{$c}__body {
+      width: 60%;
+    }
   }
 
   #{$c}__image {
@@ -96,6 +99,14 @@
       top: 0;
       opacity: 0.85;
       background-image: linear-gradient(145deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
+    }
+  }
+
+  #{$c}__section {
+    flex-grow: 1;
+    &:first-child {
+      min-width: 300px;
+      margin-right: $unit*2;
     }
   }
 
@@ -153,14 +164,6 @@
 
   #{$c}__title {
     position: relative;
-    &::before {
-      position: absolute;
-      content: '';
-      background: $color-dodger;
-      height: 2px;
-      width: 100%;
-      bottom: 0px;
-    }
     h2 {
       position: relative;
       z-index: 4;
@@ -169,13 +172,11 @@
       text-shadow: 1px 3px 0 white;
       span {
         box-decoration-break: clone;
-
       }
     }
   }
   #{$c}__subtitle {
     margin-top: $unit;
-
     h3 {
       color: $color-rhino-core;
       opacity: 0.7;
@@ -188,13 +189,14 @@
     justify-content: flex-start;
     padding: 0 $unit*2;
     padding-top: $unit;
+    flex-grow: 1;
     transform: translate3d(0, 0, 0);
     @include media('<=900px') {
       padding-left: 0;
       padding-right: 0;
     }
     position: relative;
-    width: 60%;
+    //width: 60%;
     @include media('<=1150px') {
       padding-top: 0;
       width: 100%
@@ -252,20 +254,34 @@
       font-weight: 300;
     }
   }
-  &:hover {
-    @include media('>900px') {
-      #{$c}__wrapper {
-        transform: translateY(-6px);
+  &.card--with-blur {
+    #{$c}__title {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        background: $color-dodger;
+        height: 2px;
+        width: 100%;
+        bottom: 0px;
       }
-      #{$c}__image {
-      }
-      #{$c}__body__content {
-        transform: scale(.95);
-        filter: blur(10px);
-      }
-      #{$c}__body__actions {
-        opacity: 1;
+    }
+    &:hover {
+      @include media('>900px') {
+        #{$c}__wrapper {
+          transform: translateY(-6px);
+        }
+        #{$c}__image {
+        }
+        #{$c}__body__content {
+          transform: scale(.95);
+          filter: blur(10px);
+        }
+        #{$c}__body__actions {
+          opacity: 1;
+        }
       }
     }
   }
+
 }

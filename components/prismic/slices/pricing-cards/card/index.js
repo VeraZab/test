@@ -24,9 +24,16 @@ class PricingCard extends React.Component {
   }
 
   render() {
-    const {style, className} = this.props;
+    const {style, className, card: {primary: content, items: features}} = this.props;
+    let classes = 'pricing__card';
+    if (content.style && content.style !== 'default') {
+      classes += ` pricing__card--${content.style}`
+    }
+    if (content.pretitle) {
+      classes += ' pricing__card--has-pretitle'
+    }
     return (
-      <div className="pricing__card" style={ style }>
+      <div className={ classes } style={ style }>
         <div className="pricing__card__wrapper">
           <PricingCardHeader/>
           <PricingCardFeatures/>

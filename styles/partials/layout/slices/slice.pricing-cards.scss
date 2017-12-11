@@ -17,6 +17,7 @@
   position: relative;
   z-index: 5;
   display: flex;
+  margin-top: $unit*5;
   #{$c}__wrapper {
     flex-grow: 1;
     //display: flex;
@@ -39,24 +40,58 @@
 }
 
 .pricing__card {
+
+  --header-bg: $color-rhino-core;
   $c: &;
   flex-grow: 1;
   background: white;
   box-shadow: $drop-shadow-l-light;
   border-radius: 8px;
-  overflow: hidden;
+
+  &--emerald {
+    --header-bg: $color-emerald;
+
+    @include media('>1385px') {
+      transform: translateY(-20px)
+    }
+  }
+
+  &--has-pretitle {
+    @include media('<=1385px') {
+      margin-top: $unit*2;
+    }
+  }
 
   #{$c}__wrapper {
   }
 
   #{$c}__header {
 
+    position: relative;
+
+    &__pretitle {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: -30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.75;
+      h3 {
+        font-size: 16px !important;
+        text-align: center !important;
+      }
+    }
+
     &__title {
-      background: $color-rhino-core;
+      background: var(--header-bg);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: $unit;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
       h2 {
         color: white;
       }

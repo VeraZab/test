@@ -1,28 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PrismicDOM from 'prismic-dom'
-
-const shortid = require('shortid')
+import { renderPrismic } from 'lib/renderPrismicRichText'
+import shortid from 'shortid'
 
 
 class PricingCardFeatures extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  componentDidMount() {
-  }
 
   render() {
     const {features} = this.context;
 
-    const Features = features.map(feature => <div className="pricing__card__feature">
-      <div key={ shortid.generate() } className={ 'pricing__card__feature__value' }
-           dangerouslySetInnerHTML={ {
-             __html: PrismicDOM.RichText.asHtml(feature.feature),
-           } }/>
-
-    </div>)
+    const Features = features.map(feature => (<div key={ shortid.generate() } className="pricing__card__feature">
+      <div className='pricing__card__feature__value'>
+        { renderPrismic(feature.feature) }
+      </div>
+    </div>))
 
     return (
       <div className="pricing__card__features">

@@ -17,23 +17,24 @@ class PricingCardHeader extends React.Component {
 
   render() {
 
-    const {content} = this.context;
+    const {content, content: {pretitle, title, price}} = this.context;
 
-    const Pretitle = content.pretitle &&
-      <div className="pricing__card__header__pretitle"><h3 className="pre-title">{ content.preitle }</h3></div>
+    const Pretitle = pretitle &&
+      <div className="pricing__card__header__pretitle"><h3 className="pre-title">{ pretitle }</h3></div>
 
-    const Title = content.title &&
-      <div className="pricing__card__header__title"><h2 className="title">{ content.title }</h2></div>
+    const Title = title &&
+      <div className="pricing__card__header__title"><h2 className="title">{ title }</h2></div>
 
-    const Price = content.price &&
+    const Price = price &&
       <div className="pricing__card__header__price"><h2
-        className="title price"><span className="price__symbol">$</span>{ numberWithCommas(parseInt(content.price)) }</h2>
+        className="title price"><span className="price__symbol">$</span>{ numberWithCommas(parseInt(price)) }</h2>
       </div>
 
     const buttons = constructButtons(content);
 
-    const Buttons = <div className="pricing__card__header__actions buttons">{ buttons.map(button => <Button key={ shortid.generate() }
-                                                                             data={ button }/>) }</div>
+    const Buttons = <div className="pricing__card__header__actions buttons">{ buttons.map(button => <Button
+      key={ shortid.generate() }
+      data={ button }/>) }</div>
 
 
     return (

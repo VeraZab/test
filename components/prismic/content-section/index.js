@@ -11,6 +11,7 @@ import AdvancedCards from 'components/prismic/slices/advanced-cards'
 import Iframes from 'components/prismic/slices/iframe'
 
 import PricingCards from 'components/prismic/slices/pricing-cards'
+import { constructButtons } from '../../../lib/construct-buttons'
 
 const shortid = require('shortid')
 
@@ -316,25 +317,7 @@ export default class ContentSection extends React.Component {
          * iterate over and display the buttons.
          */
 
-        let buttons = []
-
-        if (data.primary.button_one_label) {
-          buttons.push({
-            label: primary.button_one_label,
-            link: primary.button_one_link,
-            style: primary.button_one_style,
-            download: primary.download_attr === 'both' || primary.download_attr === 'button-one'
-          })
-        }
-
-        if (primary.button_two_label) {
-          buttons.push({
-            label: primary.button_two_label,
-            link: primary.button_two_link,
-            style: primary.button_two_style,
-            download: primary.download_attr === 'both' || primary.download_attr === 'button-two'
-          })
-        }
+        const buttons = constructButtons(data.primary)
 
         if (buttons.length) {
           return (
@@ -434,7 +417,7 @@ export default class ContentSection extends React.Component {
 
     const AdvancedCardsSection =
       slice_type === 'cs-advanced-cards' ? (
-        <AdvancedCards data={ items }/>
+        <AdvancedCards variant={ primary.card_variant } data={ items }/>
       ) : null
 
     const IframesSection =
