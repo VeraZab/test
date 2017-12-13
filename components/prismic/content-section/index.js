@@ -417,7 +417,8 @@ export default class ContentSection extends React.Component {
 
     const AdvancedCardsSection =
       slice_type === 'cs-advanced-cards' ? (
-        <AdvancedCards variant={ primary.card_variant } data={ items }/>
+        <AdvancedCards columns={ primary.card_columns ? primary.card_columns : '2' } variant={ primary.card_variant }
+                       data={ items }/>
       ) : null
 
     const IframesSection =
