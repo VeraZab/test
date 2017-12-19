@@ -26,14 +26,10 @@ class PricingCards extends React.Component {
   render() {
     const {cards} = this.props
 
-    const card_styles = {
-      // gridTemplateColumns: `repeat(auto-fill, minmax(300px, 1fr))`
-    }
-
-    const Cards = cards.map(card => <PricingCard key={ shortid.generate() } card={ card }/>)
+    const Cards = cards.map(card => <PricingCard key={ shortid.generate() } cardWidth={`${100/cards.length}%`} card={ card }/>)
     return (
       <div className="pricing__cards">
-        <div className="pricing__cards__wrapper" style={ card_styles }>
+        <div className="pricing__cards__wrapper" >
           { Cards }
         </div>
       </div>

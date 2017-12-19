@@ -19,6 +19,17 @@
         &::before {
           background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
         }
+        a {
+          &:link, &:visited {
+            color: $color-aqua !important;
+            opacity: 1 !important;
+          }
+          &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item):hover:not(.card-action-link) {
+            &:hover {
+              color: lighten($color-aqua, 8%) !important;
+            }
+          }
+        }
       }
       &_purple {
         .buttons {

@@ -18,6 +18,9 @@
   z-index: 5;
   display: flex;
   margin-top: $unit*5;
+  @include media('<=800px') {
+    margin-top: 0;
+  }
   #{$c}__wrapper {
     flex-grow: 1;
     //display: flex;
@@ -26,33 +29,50 @@
     //justify-content: center;
     padding-left: $unit*4;
     padding-right: $unit*4;
-    display: grid;
-    grid-column-gap: $unit*2;
-    grid-row-gap: $unit*2;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    @include media('<=1385px') {
-      grid-template-columns: repeat(auto-fill, minmax(33%, 2fr));
-    }
-    @include media('<=1060px') {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    //display: grid;
+    //grid-column-gap: $unit*2;
+    //grid-row-gap: $unit*2;
+    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    @include media('<=800px') {
+      padding-left: $unit*2;
+      padding-right: $unit*2;
     }
   }
 }
 
 .pricing__card {
-
   --header-bg: $color-rhino-core;
   $c: &;
   flex-grow: 1;
-  background: white;
-  box-shadow: $drop-shadow-l-light;
-  border-radius: 8px;
+
+  &:not(:first-child) {
+    padding-left: $unit*2;
+    @include media('<=1385px') {
+      &:nth-of-type(odd) {
+        padding-left: 0;
+      }
+    }
+    @include media('<=800px') {
+      padding-left: 0;
+    }
+  }
+
+  @include media('<=1385px') {
+    //grid-template-columns: repeat(auto-fill, minmax(33%, 2fr));
+    width: 50% !important;
+    margin-bottom: $unit*2;
+  }
+  @include media('<=800px') {
+    width: 100% !important;
+  }
 
   &--emerald {
     --header-bg: $color-emerald;
 
     @include media('>1385px') {
-      transform: translateY(-20px)
+      transform: translateY(-20px);
     }
   }
 
@@ -63,10 +83,13 @@
   }
 
   #{$c}__wrapper {
+    box-shadow: $drop-shadow-l-light;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
   }
 
   #{$c}__header {
-
     position: relative;
 
     &__pretitle {
@@ -132,5 +155,3 @@
     }
   }
 }
-
-

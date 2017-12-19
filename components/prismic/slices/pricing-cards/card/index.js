@@ -1,58 +1,62 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import PricingCardHeader from 'components/prismic/slices/pricing-cards/card/header'
-import PricingCardFeatures from 'components/prismic/slices/pricing-cards/card/features'
+import React from 'react';
+import PropTypes from 'prop-types';
+import PricingCardHeader from 'components/prismic/slices/pricing-cards/card/header';
+import PricingCardFeatures from 'components/prismic/slices/pricing-cards/card/features';
 
-const shortid = require('shortid')
-
+const shortid = require('shortid');
 
 class PricingCard extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   getChildContext() {
-    const {card: {primary: content, items: features}} = this.props
+    const { card: { primary: content, items: features } } = this.props;
 
     return {
       content,
-      features
+      features,
     };
   }
 
   render() {
-    const {style, className, card: {primary: content, items: features}} = this.props;
+    const {
+      style,
+      className,
+      card: { primary: content, items: features },
+      cardWidth,
+    } = this.props;
     let classes = 'pricing__card';
     if (content.style && content.style !== 'default') {
-      classes += ` pricing__card--${content.style}`
+      classes += ` pricing__card--${content.style}`;
     }
     if (content.pretitle) {
-      classes += ' pricing__card--has-pretitle'
+      classes += ' pricing__card--has-pretitle';
     }
+
+    const styles = {
+      ...style,
+      width: cardWidth,
+    };
     return (
-      <div className={ classes } style={ style }>
+      <div className={classes} style={styles}>
         <div className="pricing__card__wrapper">
-          <PricingCardHeader/>
-          <PricingCardFeatures/>
+          <PricingCardHeader />
+          <PricingCardFeatures />
         </div>
       </div>
-    )
+    );
   }
 }
 
-
 PricingCard.propTypes = {
   card: PropTypes.object.isRequired,
-}
+};
 PricingCard.childContextTypes = {
   content: PropTypes.object,
   features: PropTypes.array,
-}
+};
 
-
-export default PricingCard
-
-
+export default PricingCard;

@@ -49,6 +49,9 @@
       &_dash_controls {
         background: #ffffff url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format) center top no-repeat !important;
         background-size: 1290px !important;
+        @include media('<=800px') {
+          padding-top: $unit*6;
+        }
       }
       &_whitelabel {
         background-color: white !important;
@@ -166,6 +169,10 @@
               }
             }
           }
+        }
+
+        h1, h2, h3, p {
+          color: white !important;
         }
 
         // Style the buttons a different way for this one
