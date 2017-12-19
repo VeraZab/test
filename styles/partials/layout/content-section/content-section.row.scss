@@ -33,7 +33,7 @@
      */
     &[class*="-auto"] {
       --details-width: 50%;
-      --graphic-width: 50%;
+      --graphic-width: 50vw;
 
       &.content-section-p-proportions--25-75 {
         --details-width: 25% !important;

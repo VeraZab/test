@@ -40,8 +40,8 @@ export default ({ children, meta = defaultMeta }) => (
       property="og:title"
       content={
         meta.title
-          ? meta.title + ' • ' + defaultMeta.sitename
-          : defaultMeta.title + ' • ' + defaultMeta.sitename
+          ? meta.title
+          : defaultMeta.title
       }
     />
     <meta

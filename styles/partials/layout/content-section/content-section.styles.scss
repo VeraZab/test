@@ -45,6 +45,14 @@
   &-style {
 
     &--graphic {
+
+      &_dash_controls {
+        background: #ffffff url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format) center top no-repeat !important;
+        background-size: 1290px !important;
+        @include media('<=800px') {
+          padding-top: $unit*6;
+        }
+      }
       &_whitelabel {
         background-color: white !important;
         background-image: url(https://tamarack-prismic.imgix.net/plotly%2F69dfc2a2-587a-45bf-ba32-d9e077bb0224_embed_on_prem.svg?auto=format) !important;
@@ -112,7 +120,7 @@
         //background-color: white;
       }
 
-      background: #000 !important;
+      background: #000000 !important;
 
       a {
         &:link, &:visited {
@@ -150,6 +158,23 @@
       &_purple {
         background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
 
+        p {
+          a {
+            &:link, &:visited {
+              color: $color-aqua-shade !important;
+            }
+            &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item):hover:not(.card-action-link) {
+              &:hover {
+                color: lighten($color-aqua-shade, 8%) !important;
+              }
+            }
+          }
+        }
+
+        h1, h2, h3, p {
+          color: white !important;
+        }
+
         // Style the buttons a different way for this one
         #{$c}-actions {
           .button {
@@ -175,7 +200,7 @@
        * Dark blue gradient
        */
       &_dark-blue {
-        background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+        background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
         // Style the buttons a different way for this one
         #{$c}-actions {
           .button {

@@ -8,6 +8,7 @@ import { fetchData } from 'lib/fetchData'
 import { bindActionCreators } from 'redux'
 import { initStore, saveStoreData } from 'store/global'
 import withRedux from 'next-redux-wrapper'
+import { transformData } from 'lib/transform-data.prismic'
 
 const shortid = require('shortid')
 import NotFound from 'components/404'
@@ -28,10 +29,13 @@ class P extends Component {
 
     if (currentStore && currentStore.loaded) {
 
+      const content = await transformData(store.getState().data.appData, slug);
       currentDoc = store.getState().data.appData.find(doc => doc.uid === slug)
+
       store.dispatch(
         saveStoreData({
           appData: store.getState().data.appData,
+          content,
           currentDoc,
           req: false,
         })
@@ -44,10 +48,12 @@ class P extends Component {
 
     } else {
       const appData = await fetchData()
+      const content = await transformData(appData, slug);
       currentDoc = appData.find(doc => doc.uid === slug)
       store.dispatch(
         saveStoreData({
           appData: appData,
+          content,
           currentDoc,
           req: true,
         })
@@ -93,7 +99,9 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => ({
   reduxData: state.data ? state.data.appData : [],
-  doc: state.data ? state.data.currentDoc : [],
+  content: state.data ? state.data.content : {},
+  doc: state.data ? state.data.content.current_page : {}
+
 })
 
 export default withRedux(initStore, mapStateToProps, mapDispatchToProps)(

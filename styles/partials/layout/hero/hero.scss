@@ -157,13 +157,12 @@
       @include center-content;
       max-width: 480px;
       color: white;
-      font-weight: 100;
       font-size: 1.25rem;
       line-height: 2rem;
-      @include ff-ubuntu;
-      margin-bottom: $gutter;
+      margin-bottom: $unit;
       text-align: center;
       text-shadow: $text-shadow-default;
+      opacity: 0.6;
     }
   }
 

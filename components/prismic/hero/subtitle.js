@@ -1,5 +1,5 @@
 import React from 'react'
-import PrismicDOM from 'prismic-dom'
+import Typography from 'components/styled/typography'
 
 /**
  * HeroSubtitle component
@@ -14,6 +14,6 @@ export default class HeroSubtitle extends React.Component {
   }
 
   render() {
-    return <h2 className="title-sm pretitle">{this.props.children}</h2>
+    return <Typography.h2 pretitle>{this.props.children}</Typography.h2>
   }
 }

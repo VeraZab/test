@@ -17,13 +17,23 @@
           "lib": "./lib",
           "styles": "./styles"
         }
-      },
+      }
+    ],
+    [
       "wrap-in-js",
       {
         "extensions": [
           "css$",
           "scss$"
         ]
+      }
+    ],
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": false,
+        "preprocess": false
       }
     ]
   ],
