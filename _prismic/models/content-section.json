@@ -1,0 +1,574 @@
+{
+  "Content": {
+    "pretitle": {
+      "type": "Text",
+      "config": {
+        "label": "Pretitle",
+        "placeholder": "Add a pretitle element, eg: step 1"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "title",
+        "placeholder": "Title of the content section (optional)"
+      }
+    },
+    "subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "Subtitle"
+      }
+    },
+    "body": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "body_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+              "allowTargetBlank": true,
+              "label": "Body Content"
+            }
+          }
+        },
+        "label": "Body"
+      }
+    },
+    "buttons": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "label": {
+            "config": {
+              "label": "Button Label",
+              "placeholder": "Add a nice label for this button..."
+            },
+            "type": "Text"
+          },
+          "title": {
+            "type": "Text",
+            "config": {
+              "label": "Title"
+            }
+          },
+          "link": {
+            "config": {
+              "label": "Button Link",
+              "placeholder": "Add a link for this button...",
+              "allowTargetBlank": true
+            },
+            "type": "Link"
+          },
+          "style": {
+            "type": "Select",
+            "config": {
+              "options": [
+                "primary",
+                "secondary",
+                "upgrade"
+              ],
+              "default_value": "primary",
+              "label": "Button Style",
+              "placeholder": "Select a style..."
+            }
+          },
+          "mdi_icon": {
+            "config": {
+              "label": "Button MDI Icon",
+              "placeholder": "Add an icon from material design icons..."
+            },
+            "type": "Text"
+          },
+          "extra_classes": {
+            "type": "Text",
+            "config": {
+              "label": "Extra Classes"
+            }
+          }
+        },
+        "label": "Buttons"
+      }
+    },
+    "content_slices": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "choices": {
+          "advanced_cards": {
+            "type": "Slice",
+            "fieldset": "Advanced Cards",
+            "description": "Add configurable cards to this content section.",
+            "icon": "attach_money",
+            "non-repeat": {},
+            "repeat" : {
+              "graphic" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Graphic"
+                }
+              },
+              "logo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Logo"
+                }
+              },
+              "title" : {
+                "config" : {
+                  "label" : "Title"
+                },
+                "type" : "Text"
+              },
+              "subtitle" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Subtitle"
+                }
+              },
+              "body" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "allowTargetBlank" : true,
+                  "label" : "Body"
+                }
+              },
+              "subbody" : {
+                "config" : {
+                  "label" : "Sub-body",
+                  "placeholder" : "eg: quotee"
+                },
+                "type" : "Text"
+              },
+              "button_one_label" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Button One Label"
+                }
+              },
+              "button_one_style" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "primary", "secondary" ],
+                  "default_value" : "primary",
+                  "label" : "Button One Style"
+                }
+              },
+              "button_one_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button One Link"
+                }
+              },
+              "button_two_label" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Button Two Label"
+                }
+              },
+              "display" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "false", "true" ],
+                  "default_value" : "false",
+                  "label" : "Display"
+                }
+              },
+              "button_two_link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Button Two Link"
+                }
+              },
+              "button_two_style" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "primary", "secondary" ],
+                  "default_value" : "primary",
+                  "label" : "Button Two Style"
+                }
+              }
+            }
+          },
+          "code_explorer": {
+            "type": "Slice",
+            "fieldset": "Code Explorer",
+            "description": "Add a code explorer to this content section.",
+            "icon": "code",
+            "non-repeat": {},
+            "repeat": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Tab Label"
+                }
+              },
+              "code": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "preformatted",
+                  "label": "Code"
+                }
+              },
+              "visual_code_iframe_url": {
+                "type": "Text",
+                "config": {
+                  "label": "Visual Code Iframe Url"
+                }
+              },
+              "visual_code_data_url": {
+                "type": "Text",
+                "config": {
+                  "label": "Visual Code Data URL"
+                }
+              },
+              "visual_code_layout_url": {
+                "type": "Text",
+                "config": {
+                  "label": "Visual Code Layout URL"
+                }
+              },
+              "language": {
+                "type": "Text",
+                "config": {
+                  "label": "Code Language"
+                }
+              },
+              "button_one_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Button One Label"
+                }
+              },
+              "button_one_link": {
+                "config": {
+                  "label": "Button One Link",
+                  "allowTargetBlank": true
+                },
+                "type": "Link"
+              },
+              "button_one_style": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "primary",
+                    "secondary"
+                  ],
+                  "default_value": "primary",
+                  "label": "Button One Style"
+                }
+              },
+              "button_two_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Two Label"
+                }
+              },
+              "button_two_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Two Link",
+                  "allowTargetBlank": true
+                }
+              },
+              "button_two_style": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "primary",
+                    "secondary"
+                  ],
+                  "default_value": "primary",
+                  "label": "Button Two Style"
+                }
+              },
+              "embed_plotly_graph": {
+                "type": "Link",
+                "config": {
+                  "label": "Embed Plotly Graph"
+                }
+              },
+              "embed_iframe_url": {
+                "type": "Link",
+                "config": {
+                  "label": "Embed Iframe Url"
+                }
+              },
+              "graphic": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Graphic"
+                }
+              }
+            }
+          },
+          "tabs": {
+            "type": "Slice",
+            "fieldset": "Tabs",
+            "description": "Connect this content section with an already existing content section and display them as tabs.",
+            "icon": "attach_money",
+            "non-repeat": {},
+            "repeat": {
+              "tab_title" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Tab Title"
+                }
+              },
+              "tab_icon" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Tab Icon"
+                }
+              },
+              "content_section": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "content-section"
+                  ],
+                  "label": "Content Section"
+                }
+              }
+            }
+          },
+          "github_stars": {
+            "type": "Slice",
+            "fieldset": "Github Stars",
+            "description": "Add one or many github links to display their star count.",
+            "icon": "attach_money",
+            "non-repeat": {},
+            "repeat": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              },
+              "repository_url": {
+                "type": "Link",
+                "config": {
+                  "label": "Repository URL"
+                }
+              }
+            }
+          },
+          "pricing_card": {
+            "type": "Slice",
+            "fieldset": "Pricing Card",
+            "description": "Connect this content section with an already existing pricing card.",
+            "icon": "attach_money",
+            "non-repeat": {
+              "pricing_card": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "pricing-cards"
+                  ],
+                  "label": "Pricing Card"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "iframe_embed": {
+            "type": "Slice",
+            "fieldset": "Embed Iframe",
+            "description": "Embed one or many iframes in this content section.",
+            "icon": "attach_money",
+            "non-repeat": {},
+            "repeat" : {
+              "iframe_url" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Iframe URL"
+                }
+              },
+              "min_height" : {
+                "config" : {
+                  "label" : "Min-height",
+                  "placeholder" : "include units eg: 100vh || 100px"
+                },
+                "type" : "Text"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Display": {
+    "published": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "true",
+          "false"
+        ],
+        "default_value": "true",
+        "label": "Published"
+      }
+    },
+    "layout": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "row-auto",
+          "row-graphic-left",
+          "row-graphic-right",
+          "column-graphic-top",
+          "column-graphic-bottom"
+        ],
+        "default_value": "row-auto",
+        "label": "Layout (order of elements)",
+        "placeholder": "Select the layout for this content section..."
+      }
+    },
+    "alignment": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "left",
+          "center",
+          "right"
+        ],
+        "default_value": "left",
+        "label": "Alignment (for column layout)",
+        "placeholder": "Left, center, right..."
+      }
+    }
+  },
+  "Graphics": {
+    "graphic_slices": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "choices": {
+          "single_graphic": {
+            "type": "Slice",
+            "fieldset": "A Single Graphic",
+            "description": "Just one graphic",
+            "icon": "image",
+            "non-repeat": {
+              "graphic": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": null,
+                    "height": null
+                  },
+                  "thumbnails": [],
+                  "label": "Graphic"
+                }
+              },
+              "graphic_blend_mode": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "none",
+                    "multiply"
+                  ],
+                  "default_value": "none",
+                  "label": "Graphic Blend Mode",
+                  "placeholder": "Select an optional blend mode"
+                }
+              },
+              "graphic_style": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "shadow",
+                    "no-shadow",
+                    "bleed",
+                    "browser",
+                    "no-blur",
+                    "phone"
+                  ],
+                  "default_value": "shadow",
+                  "label": "Graphic Style",
+                  "placeholder": "Select a style..."
+                }
+              },
+              "graphic_background_position": {
+                "type": "Text",
+                "config": {
+                  "label": "Graphic Background Position"
+                }
+              },
+              "graphic_background_attachment": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "static",
+                    "fixed"
+                  ],
+                  "default_value": "static",
+                  "label": "Graphic Background Attachment",
+                  "placeholder": "Select an option..."
+                }
+              },
+              "graphic_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Graphic Link",
+                  "placeholder": "Link the graphic to another page, url, etc...",
+                  "allowTargetBlank": true
+                }
+              },
+              "graphic_link_caption": {
+                "type": "Text",
+                "config": {
+                  "label": "Graphic Link Caption",
+                  "placeholder": "Add an optional caption to the graphic"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  },
+  "Background": {
+    "style": {
+      "type": "Select",
+      "config": {
+        "options": [
+          "default",
+          "black",
+          "gradient_purple",
+          "gradient_dark-blue",
+          "gradient_blue",
+          "graphic_blue_pipes",
+          "graphic_white_dotted-lines",
+          "graphic_whitelabel"
+        ],
+        "default_value": "default",
+        "label": "Style",
+        "placeholder": "Select a style for this content section..."
+      }
+    },
+    "background_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Background Image"
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import HeroTitle from './title'
 import HeroSubtitle from './subtitle'
 import HeroActions from './actions'
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
+import { renderPrismic } from 'lib/renderPrismicRichText'
 
 /**
  * HeroDetails component **to rename**
@@ -24,36 +25,35 @@ export default class HeroDetailsSection extends React.Component {
       : false
 
   render() {
-    let { data } = this.props
+    let {data, style} = this.props
 
     let HeroTopStyles = {}
 
-    if (this.props.style) {
-      HeroTopStyles = this.props.style
+    if (style) {
+      HeroTopStyles = style
     }
     /**
      * Hero Title
      */
     const Title = data.hero_title ? (
-      <HeroTitle>{data.hero_title}</HeroTitle>
+      <HeroTitle>{ data.hero_title }</HeroTitle>
     ) : null
     /**
      * Display the subtitle if it has content
      */
     const Subtitle =
       data.hero_subtitle !== '' || data.hero_subtitle !== null ? (
-        <HeroSubtitle>{data.hero_subtitle}</HeroSubtitle>
+        <HeroSubtitle>{ data.hero_subtitle }</HeroSubtitle>
       ) : null
     /**
      * Hero Messaging
      */
     const Messaging = data.hero_messaging.length ? (
       <div
-        className={`hero-prismic__messaging__body`}
-        dangerouslySetInnerHTML={{
-          __html: PrismicDOM.RichText.asHtml(data.hero_messaging),
-        }}
-      />
+        className={ `hero-prismic__messaging__body` }
+      >
+        { renderPrismic(data.hero_messaging) }
+      </div>
     ) : null
     /**
      * Hero Actions
@@ -61,9 +61,9 @@ export default class HeroDetailsSection extends React.Component {
     const Actions = (
       <HeroActions>
         <div className="buttons">
-          {data.hero_buttons.map((button, i) => {
-            return <Button key={i} data={button} />
-          })}
+          { data.hero_buttons.map((button, i) => {
+            return <Button key={ i } data={ button }/>
+          }) }
         </div>
       </HeroActions>
     )
@@ -77,20 +77,20 @@ export default class HeroDetailsSection extends React.Component {
      */
     const slice_GithubStars = this.findSlice(data.hero_slices, 'github_stars')
     const GithubStars = slice_GithubStars ? (
-      <GithubStarsSlice slice={slice_GithubStars} />
+      <GithubStarsSlice slice={ slice_GithubStars }/>
     ) : null
 
     return (
       <div className="hero-prismic-details-section">
         <div className="hero-prismic-details-section-wrapper">
           <div className="hero-prismic-messaging">
-            {Subtitle}
-            {Title}
-            {Messaging}
-            {Actions}
+            { Subtitle }
+            { Title }
+            { Messaging }
+            { Actions }
           </div>
         </div>
-        {GithubStars}
+        { GithubStars }
       </div>
     )
   }
