@@ -76,7 +76,7 @@ class P extends Component {
       return <NotFound/>
     } else {
       const meta = {
-        title: `Plotly: ${doc.data.title}`,
+        title: `${doc.data.title}`,
         description: `${doc.data.description}`,
       }
 
