@@ -36,16 +36,30 @@ DeviceWrapper.propTypes = {
   content: PropTypes.object,
 };
 
+function checkPercy() {
+  const hasHostname =
+    typeof window === 'object' &&
+    window.location &&
+    window.location.hostname;
+  return (
+    hasHostname &&
+    /proxyme\.percy\.io|renderer\.percy\.local/.test(
+      window.location.hostname
+    )
+  );
+};
+
 class ContentFrame extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      percy: false,
+      percy: inPercy(),
     };
   }
   componentDidMount() {
-    const percy = inPercy();
+
+    const percy = checkPercy();
 
     if (percy) {
       this.setState({
@@ -55,8 +69,7 @@ class ContentFrame extends React.Component {
   }
   render() {
     const { image, videoSources, contentType, color, device } = this.props;
-    const { percy } = this.state;
-    const autoplay = percy
+    const autoplay = checkPercy()
       ? null
       : {
           autoPlay: 'autoplay',
