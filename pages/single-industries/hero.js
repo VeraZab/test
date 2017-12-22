@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Hero,
   HeroTop,
@@ -7,14 +7,13 @@ import {
   HeroSubtitle,
   HeroActions,
   HeroBottom,
-} from 'components/hero'
-import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
+} from 'components/hero';
+import Head from 'components/global/head';
 
 const HeroBottomStyles = {
   paddingBottom: '0px',
   paddingTop: '20px',
-}
+};
 
 const HeroSubTitle = {
   textTransform: 'uppercase',
@@ -22,27 +21,34 @@ const HeroSubTitle = {
   letterSpacing: '2px',
   fontWeight: 300,
   fontSize: '12px',
-}
+};
 
 const HeroTopStyle = {
   padding: '120px 0',
-}
+};
 
 class IndustriesHero extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    document.body.classList.remove('no-scroll')
+    document.body.classList.remove('no-scroll');
   }
 
   render() {
-    const header = this.props.header
-    const styles = this.props.style
-    styles.backgroundSize = 'cover'
+    const header = this.props.header;
+    const styles = this.props.style;
+    styles.backgroundSize = 'cover';
+
+    const meta = {
+      title: `${header.title} | Industries`,
+      description: `${header.desc}`,
+    };
+
     return (
       <Hero heroWrapperStyle={styles} className="industries-hero">
+        <Head meta={meta} />
         <HeroTop style={HeroTopStyle}>
           <HeroMessaging>
             <HeroSubtitle style={HeroSubTitle} children={header.group} />
@@ -53,7 +59,7 @@ class IndustriesHero extends React.Component {
         </HeroTop>
         <HeroBottom style={HeroBottomStyles} />
       </Hero>
-    )
+    );
   }
 }
-export default IndustriesHero
+export default IndustriesHero;
