@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@percy-io/in-percy@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@percy-io/in-percy/-/in-percy-0.1.9.tgz#e7f8a7533ba686958b5c06b1427b4c5bbf69d40b"
+
 "@semantic-release/commit-analyzer@^3.0.1":
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/@semantic-release/commit-analyzer/-/commit-analyzer-3.0.7.tgz#dc955444a6d3d2ae9b8e21f90c2c80c4e9142b2f"

@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-
+import PropTypes from 'prop-types';
+import React from 'react';
+import inPercy from '@percy-io/in-percy';
 export class DeviceWrapper extends React.Component {
   render() {
     const { content } = this.props,
@@ -13,61 +13,81 @@ export class DeviceWrapper extends React.Component {
           contentType={content.type}
           device={content.device}
         />
-      )
+      );
 
-    if (!device) return contentFrame
-
-    // console.log('content', content);
+    if (!device) return contentFrame;
 
     return (
       <div className={'device-wrapper'} style={device.styles}>
         <div
-          className={`device-svg framecolor-${content.color} backgroundcolor-${content.background}`}
+          className={`device-svg framecolor-${content.color} backgroundcolor-${
+            content.background
+          }`}
           data-device-type={content.device}
           dangerouslySetInnerHTML={{ __html: device.svg }}
         />
         {contentFrame}
       </div>
-    )
+    );
   }
 }
 
 DeviceWrapper.propTypes = {
   content: PropTypes.object,
-}
+};
 
 class ContentFrame extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      percy: false,
+    };
+  }
+  componentDidMount() {
+    const percy = inPercy();
+
+    if (percy) {
+      this.setState({
+        percy: true,
+      });
+    }
+  }
   render() {
-    const { image, videoSources, contentType, color, device } = this.props,
-      content =
-        contentType === 'video' ? (
-          <div className="video-wrapper">
-            <video
-              id="editor-video"
-              autoPlay="autoplay"
-              preload="auto"
-              loop="true"
-              className="device-content"
-              style={{ width: '100%' }}
-            >
-              <source src={videoSources[0]} type="video/mp4" />
-              <source src={videoSources[1]} type="video/webm" />
-              <img src={videoSources[2]} />
-            </video>
-          </div>
-        ) : (
-          <img src={image} />
-        )
+    const { image, videoSources, contentType, color, device } = this.props;
+    const { percy } = this.state;
+    const autoplay = percy
+      ? null
+      : {
+          autoPlay: 'autoplay',
+        };
+    let content =
+      contentType === 'video' ? (
+        <div className="video-wrapper">
+          <video
+            id="editor-video"
+            preload="auto"
+            loop="true"
+            className="device-content"
+            style={{ width: '100%' }}
+            {...autoplay}
+          >
+            <source src={videoSources[0]} type="video/mp4" />
+            <source src={videoSources[1]} type="video/webm" />
+            <img src={videoSources[2]} />
+          </video>
+        </div>
+      ) : (
+        <img src={image} />
+      );
 
-    // console.log('color', color);
-
-    if (!device) return content
+    if (!device) return content;
 
     return (
       <div className={`frame-content ${device} frame --${color}`}>
         {content}
       </div>
-    )
+    );
   }
 }
 
@@ -156,4 +176,4 @@ const devices = {
     svg:
       '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="264.1 0 431.7 560" enable-background="new 264.1 0 431.7 560" xml:space="preserve"><g/><g><path d="M622.9,2.4v68.4v2.2h2.4h68v484.6H266.6V2.4H622.9 M625.3,0H264.1v560h431.7V70.6h-70.5V0L625.3,0z"></path><path d="M640.4,6.1l49.8,51.2h-49.8V6.1 M638,0v59.7h58.1L638,0L638,0z"></path></g></svg>',
   },
-}
+};
