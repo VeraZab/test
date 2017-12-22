@@ -39,6 +39,7 @@ DeviceWrapper.propTypes = {
 function checkPercy() {
   const hasHostname =
     typeof window === 'object' && window.location && window.location.hostname;
+  return true;
   return (
     hasHostname &&
     /proxyme\.percy\.io|renderer\.percy\.local/.test(window.location.hostname)
