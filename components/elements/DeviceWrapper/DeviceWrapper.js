@@ -39,7 +39,6 @@ DeviceWrapper.propTypes = {
 function checkPercy() {
   const hasHostname =
     typeof window === 'object' && window.location && window.location.hostname;
-  return true;
   return (
     hasHostname &&
     /proxyme\.percy\.io|renderer\.percy\.local/.test(window.location.hostname)
@@ -51,27 +50,26 @@ class ContentFrame extends React.Component {
     super(props);
 
     this.state = {
-      percy: inPercy(),
+      mounted: false,
+      autoplay: null,
     };
   }
   componentDidMount() {
-    const percy = checkPercy();
-
-    if (percy) {
-      this.setState({
-        percy: true,
-      });
-    }
+    this.setState({
+      mounted: true,
+      autoplay: !checkPercy()
+        ? {
+            autoPlay: 'autoplay',
+          }
+        : null,
+    });
   }
   render() {
     const { image, videoSources, contentType, color, device } = this.props;
-    const autoplay = checkPercy()
-      ? null
-      : {
-          autoPlay: 'autoplay',
-        };
-    let content =
-      contentType === 'video' ? (
+    const { mounted } = this.state;
+
+    const Video =
+      videoSources && mounted ? (
         <div className="video-wrapper">
           <video
             id="editor-video"
@@ -79,16 +77,20 @@ class ContentFrame extends React.Component {
             loop="true"
             className={`device-content ${checkPercy() ? 'in-percy' : ''}`}
             style={{ width: '100%' }}
-            {...autoplay}
+            {...this.state.autoplay}
           >
             <source src={videoSources[0]} type="video/mp4" />
             <source src={videoSources[1]} type="video/webm" />
             <img src={videoSources[2]} />
           </video>
         </div>
+      ) : videoSources ? (
+        <img src={videoSources[2]} />
       ) : (
-        <img src={image} />
+        'loading...'
       );
+
+    const content = contentType === 'video' ? Video : <img src={image} />;
 
     if (!device) return content;
 
