@@ -20,7 +20,7 @@ class Body extends React.Component {
 }
 
 Body.contextTypes = {
-  body: PropTypes.object,
+  body: PropTypes.array,
 }
 
 Body.propTypes = {

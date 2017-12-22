@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Hero,
   HeroTop,
@@ -7,21 +7,20 @@ import {
   HeroSubtitle,
   HeroActions,
   HeroBottom,
-} from 'components/hero'
-import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
+} from 'components/hero';
+import Head from 'components/global/head';
 
 const HeroWrapperStyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundImage:
     'url("https://images-plotly.imgix.net/static/marketing/banner-splash.jpg")',
-}
+};
 
 const HeroBottomStyles = {
   paddingBottom: '0px',
   paddingTop: '20px',
-}
+};
 
 const header = {
   sitename: 'Plotly',
@@ -39,22 +38,28 @@ const header = {
     data2: '',
     site: '@plotlygraphs',
   },
-}
+};
 
 class IndustriesHero extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    document.body.classList.remove('no-scroll')
+    document.body.classList.remove('no-scroll');
   }
 
   render() {
-    const header = this.props.header
+    const { header } = this.props;
+
+    const meta = {
+      title: `${header.title}`,
+      description: `${header.desc}`,
+    };
 
     return (
       <Hero heroWrapperStyle={HeroWrapperStyle} className="industries-hero">
+        <Head meta={meta} />
         <HeroTop>
           <HeroMessaging>
             <HeroTitle children={header.title} />
@@ -64,7 +69,7 @@ class IndustriesHero extends React.Component {
         </HeroTop>
         <HeroBottom style={HeroBottomStyles} />
       </Hero>
-    )
+    );
   }
 }
-export default IndustriesHero
+export default IndustriesHero;

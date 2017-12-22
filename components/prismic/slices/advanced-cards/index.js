@@ -18,7 +18,7 @@ class AdvancedCards extends React.Component {
     const {data, variant} = this.props;
 
 
-    const Cards = this.props.data.map((card) => <AdvancedCard variant={ variant } key={ shortid.generate() }
+    const Cards = data.map((card) => <AdvancedCard variant={ variant } key={ shortid.generate() }
                                                               card={ card }/>)
     return (
       <div className="advanced-cards">

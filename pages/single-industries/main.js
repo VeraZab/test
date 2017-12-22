@@ -1,25 +1,27 @@
+import React from 'react';
 import {
   Body,
   ContentPane,
   ContentSection,
   Title,
-} from 'components/content-section'
-import { Grid, GridItem } from 'components/grid'
+} from 'components/content-section';
+import Head from 'components/global/head'
+import { Grid, GridItem } from 'components/grid';
 
-import { DeviceWrapper } from 'components/elements/DeviceWrapper/DeviceWrapper'
+import { DeviceWrapper } from 'components/elements/DeviceWrapper/DeviceWrapper';
 
 class IndustriesMain extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     const sponsorImage = {
       width: '100%',
-    }
+    };
 
-    const data = this.props.mainData
-    const sponsors = data.sponsors
+    const data = this.props.mainData;
+    const sponsors = data.sponsors;
 
     const gridItems = sponsors[0]
       ? data.sponsors.map((item, key) => {
@@ -30,27 +32,27 @@ class IndustriesMain extends React.Component {
               </div>
               <div className="grid-item-label" />
             </GridItem>
-          )
+          );
         })
-      : null
+      : null;
 
-    const quoteItemOne = this.getQuoteWithIndexFromData(0, data)
+    const quoteItemOne = this.getQuoteWithIndexFromData(0, data);
 
-    const quoteItemTwo = this.getQuoteWithIndexFromData(1, data)
+    const quoteItemTwo = this.getQuoteWithIndexFromData(1, data);
 
-    const quoteItemThree = this.getQuoteWithIndexFromData(2, data)
+    const quoteItemThree = this.getQuoteWithIndexFromData(2, data);
 
-    const quoteItemFour = this.getQuoteWithIndexFromData(3, data)
+    const quoteItemFour = this.getQuoteWithIndexFromData(3, data);
 
-    const quoteItemFive = this.getQuoteWithIndexFromData(4, data)
+    const quoteItemFive = this.getQuoteWithIndexFromData(4, data);
 
     const sectionItems = data.sections
       ? data.sections.map((section, key) => {
           return (
             <ContentSection
-              className={`single-industries${section.content[0].showBackground
-                ? ' showBackground'
-                : ''}`}
+              className={`single-industries${
+                section.content[0].showBackground ? ' showBackground' : ''
+              }`}
               key={key}
               style={{
                 background: section.content[0].showBackground
@@ -74,9 +76,9 @@ class IndustriesMain extends React.Component {
                 <p dangerouslySetInnerHTML={{ __html: section.body }} />
               </ContentPane>
             </ContentSection>
-          )
+          );
         })
-      : null
+      : null;
 
     const learnMoreItems = data.learnMore ? (
       <ContentSection>
@@ -94,13 +96,15 @@ class IndustriesMain extends React.Component {
                       </a>
                     </div>
                   </GridItem>
-                )
+                );
               })}
             </Grid>
           </Body>
         </ContentPane>
       </ContentSection>
-    ) : null
+    ) : null;
+
+
 
     return (
       <div>
@@ -129,11 +133,11 @@ class IndustriesMain extends React.Component {
 
         {learnMoreItems}
       </div>
-    )
+    );
   }
 
   getQuoteWithIndexFromData(index, data) {
-    const contentSectionClass = index % 2 ? 'background-color-light-2' : ''
+    const contentSectionClass = index % 2 ? 'background-color-light-2' : '';
     return data.quotes[index] ? (
       <ContentSection className={contentSectionClass + ' quote-section'}>
         <ContentPane full center-vertically text center>
@@ -143,8 +147,8 @@ class IndustriesMain extends React.Component {
           </Body>
         </ContentPane>
       </ContentSection>
-    ) : null
+    ) : null;
   }
 }
 
-export default IndustriesMain
+export default IndustriesMain;

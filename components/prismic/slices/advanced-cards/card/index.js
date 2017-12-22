@@ -66,14 +66,14 @@ class AdvancedCard extends React.Component {
 
 AdvancedCard.propTypes = {
   card: PropTypes.object.isRequired,
-  variant: PropTypes.string.isRequired
+  variant: PropTypes.string
 }
 AdvancedCard.childContextTypes = {
   card: PropTypes.object,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   logo: PropTypes.object,
-  body: PropTypes.object
+  body: PropTypes.array
 }
 
 
