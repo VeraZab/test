@@ -38,16 +38,12 @@ DeviceWrapper.propTypes = {
 
 function checkPercy() {
   const hasHostname =
-    typeof window === 'object' &&
-    window.location &&
-    window.location.hostname;
+    typeof window === 'object' && window.location && window.location.hostname;
   return (
     hasHostname &&
-    /proxyme\.percy\.io|renderer\.percy\.local/.test(
-      window.location.hostname
-    )
+    /proxyme\.percy\.io|renderer\.percy\.local/.test(window.location.hostname)
   );
-};
+}
 
 class ContentFrame extends React.Component {
   constructor(props) {
@@ -58,7 +54,6 @@ class ContentFrame extends React.Component {
     };
   }
   componentDidMount() {
-
     const percy = checkPercy();
 
     if (percy) {
@@ -81,7 +76,7 @@ class ContentFrame extends React.Component {
             id="editor-video"
             preload="auto"
             loop="true"
-            className="device-content"
+            className={`device-content ${checkPercy() ? 'in-percy' : ''}`}
             style={{ width: '100%' }}
             {...autoplay}
           >
