@@ -75,7 +75,7 @@ class ContentFrame extends React.Component {
             id="editor-video"
             preload="auto"
             loop="true"
-            className={`device-content ${checkPercy() ? 'in-percy' : ''}`}
+            className={`device-content`}
             style={{ width: '100%' }}
             {...this.state.autoplay}
           >
