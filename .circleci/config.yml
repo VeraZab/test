@@ -33,8 +33,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      # run tests!
+      # run export
       - run: yarn export
+      - run: gem install percy-cli
+      - run: percy snapshot out/ --enable_javascript
       - deploy:
                 name: Deploy (Production)
                 command: |
