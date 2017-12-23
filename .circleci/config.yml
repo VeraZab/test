@@ -29,16 +29,17 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
+      - run: gem install percy-cli
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       # run export
       - run: yarn export
-      - run: gem install percy-cli
-      - run: percy snapshot out/ --enable_javascript
+      # run visual diff testing
+      - run: percy snapshot --widths "375,1280,1800" out/ --enable_javascript
       - deploy:
-                name: Deploy (Production)
+                name: Deploy GitHub Pages (Production)
                 command: |
                   if [ "${CIRCLE_BRANCH}" == "production" ]; then
                     ./scripts/deploy-ghpages.sh build
