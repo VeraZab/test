@@ -364,14 +364,14 @@ class DashMain extends React.Component {
               <p>
                 <a
                   className="typeform-share link special-link"
-                  href="https://plotly.typeform.com/to/seG7Vb"
+                  href="https://plot.ly/dash/pricing/"
                   data-mode="drawer_right"
                   data-hide-headers="true"
                   data-hide-footer="true"
                   data-submit-close-delay="2"
                   target="_blank"
                 >
-                  <span className="special-link-label">Request a Demo →</span>
+                  <span className="special-link-label">Learn More →</span>
                 </a>
               </p>
             </Body>
