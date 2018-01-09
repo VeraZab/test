@@ -75,7 +75,7 @@ export default class HeroSection extends React.Component {
                 MASTER CLASS
               </a>
               <a
-                href="/products/on-premise/"
+                href="/dash/pricing/"
                 target="_blank"
                 className="dash-navigation-item"
               >

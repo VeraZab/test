@@ -45,22 +45,22 @@ const onPremDashata = [
   {
     features: [
       {
-        value: 'Includes everything in the <strong>On-Premises Plan</strong>',
+        value: 'Includes everything in the <strong>On-Premises Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
       },
       {
         value: 'Email and Phone Support',
       },
       {
-        value: 'Unlimited Dash Applications',
+        value: 'Unlimited <a href="https://plot.ly/dash/pricing/">Dash Applications</a>',
       },
       {
-        value: 'Unlimited Dash App Viewers',
+        value: 'Unlimited <a href="https://plot.ly/dash/pricing/">Dash App</a> Viewers',
       },
       {
-        value: 'Automatic Git Based Deployments of Dash Apps',
+        value: '<a href="https://plot.ly/dash/pricing/">Automatic Git Based Deployments</a> of Dash Apps',
       },
       {
-        value: 'Shareable “Snapshot Views” of Dash Apps',
+        value: '<a href="https://plot.ly/dash/pricing/">Learn More About Dash Deployment Server</a>',
       },
     ],
   },
