@@ -78,6 +78,13 @@ module.exports = {
         slug: 'plotly-py',
       },
     },
+    // React Component Suite
+    '/products/react': {
+      page: '/p',
+      query: {
+        slug: 'react-component-suite',
+      },
+    },
     // Dash
     '/products/dash': { page: '/products/dash' },
     // Dash Pricing
