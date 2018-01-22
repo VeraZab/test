@@ -79,7 +79,7 @@ module.exports = {
       },
     },
     // React Component Suite
-    '/react-component-suite': {
+    '/products/react': {
       page: '/p',
       query: {
         slug: 'react-component-suite',

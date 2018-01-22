@@ -1,6 +1,6 @@
-import React from 'react'
-import { CtaBanner, CtaBannerBody } from '../../index'
-import Buttons from '../../../buttons/index'
+import React from 'react';
+import { CtaBanner, CtaBannerBody } from '../../index';
+import Buttons from '../../../buttons/index';
 
 const columnData = [
   {
@@ -38,11 +38,11 @@ const columnData = [
       'https://now.plot.ly/static/images/illustrations/share_online@2x.png',
     actions: null,
   },
-]
+];
 
 export default class SupportBanner extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -51,18 +51,18 @@ export default class SupportBanner extends React.Component {
         let columnActions = () => {
           if (column.actions) {
             return (
-              <div className="column-actions center">
+              <div key={i} className="column-actions center">
                 {' '}
                 <Buttons
                   className="center padding-top"
                   items={column.actions}
                 />
               </div>
-            )
+            );
           } else {
-            return null
+            return null;
           }
-        }
+        };
 
         return (
           <div className="column">
@@ -77,9 +77,9 @@ export default class SupportBanner extends React.Component {
               {columnActions()}
             </div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
     return (
       <CtaBanner>
         <CtaBannerBody>
@@ -88,6 +88,6 @@ export default class SupportBanner extends React.Component {
           </div>
         </CtaBannerBody>
       </CtaBanner>
-    )
+    );
   }
 }
