@@ -1,5 +1,5 @@
-import Layout from 'components/global/layout'
-import Hero from './hero'
+import Layout from 'components/global/layout';
+import Hero from './hero';
 
 import {
   ContentSection,
@@ -7,9 +7,9 @@ import {
   Title,
   Body,
   Subtitle,
-} from 'components/content-section'
-import Buttons from 'components/buttons'
-import { Grid, GridItem } from 'components/grid'
+} from 'components/content-section';
+import Buttons from 'components/buttons';
+import { Grid, GridItem } from 'components/grid';
 const meta = {
   title: 'Advanced Development',
   description:
@@ -20,21 +20,21 @@ const meta = {
     data1:
       'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.',
   },
-}
+};
 
 const contentSectionStyles = {
   paddingTop: '0px',
-}
+};
 const cardBoxStyles = {
   marginTop: '40px',
   width: '480px',
   marginRight: 'auto',
   marginLeft: 'auto',
-}
+};
 
 const cardsStyles = {
   display: 'block',
-}
+};
 
 const buttons = [
   {
@@ -47,7 +47,7 @@ const buttons = [
       classes: 'button button-primary',
     },
   },
-]
+];
 const oemButton = [
   {
     label: 'Inquire about an Oem',
@@ -59,7 +59,7 @@ const oemButton = [
       classes: 'button button-primary',
     },
   },
-]
+];
 
 const gridItemsData = [
   {
@@ -102,15 +102,15 @@ const gridItemsData = [
       'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_integrated.svg',
     label: 'Advanced Integrations',
   },
-]
+];
 
 export default class Consulting extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   static async getInitialProps({ req, pathname }) {
-    return { pathname: (req && req.url) || pathname }
+    return { pathname: (req && req.url) || pathname };
   }
 
   render() {
@@ -122,11 +122,11 @@ export default class Consulting extends React.Component {
           </div>
           <div className="grid-item-label">{item.label}</div>
         </GridItem>
-      )
-    })
+      );
+    });
 
     return (
-      <Layout meta={meta} pathname={this.props.pathname}>
+      <Layout meta={meta} pathname={this.props.pathname} className="consulting--layout">
         <Hero />
 
         <ContentSection
@@ -167,7 +167,12 @@ export default class Consulting extends React.Component {
           </ContentPane>
         </ContentSection>
 
-        <ContentSection style={contentSectionStyles}>
+        <ContentSection className="light-grey-bg"
+          style={{
+            ...contentSectionStyles,
+            backgroundColor: '#f2f4f5',
+          }}
+        >
           <ContentPane full center>
             <Body>
               <Grid columns="4">{gridItems}</Grid>
@@ -199,6 +204,6 @@ export default class Consulting extends React.Component {
           <ContentPane half graphic center-vertically />
         </ContentSection>
       </Layout>
-    )
+    );
   }
 }

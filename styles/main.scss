@@ -1,6 +1,20 @@
-@import "partials/normalize";
-@import "partials/global";
-@import "partials/pages/customer-story";
+@import 'partials/normalize';
+@import 'partials/global';
+@import 'partials/pages/customer-story';
+
+.light-grey-bg {
+  background: #f2f4f5 !important;
+}
+
+.consulting--layout {
+  overflow: hidden;
+  .card-simple {
+    @include media('<=800px') {
+      min-width: 0 !important;
+      width: auto !important;
+    }
+  }
+}
 
 * {
   box-sizing: border-box;

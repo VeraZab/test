@@ -1,21 +1,21 @@
-import Head from '../head'
-import Header from '../header'
-import Footer from '../footer'
-import styles from './layout.scss'
-import React from 'react'
-import ReactGA from 'react-ga'
+import Head from '../head';
+import Header from '../header';
+import Footer from '../footer';
+import styles from './layout.scss';
+import React from 'react';
+import ReactGA from 'react-ga';
 
 class Layout extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    document.body.classList.remove('no-scroll')
+    document.body.classList.remove('no-scroll');
     // Plotly's code
-    ReactGA.initialize('UA-39373211-1')
-    ReactGA.pageview(document.location.pathname)
-    ;(function() {
+    ReactGA.initialize('UA-39373211-1');
+    ReactGA.pageview(document.location.pathname);
+    (function() {
       let qs,
         js,
         q,
@@ -25,25 +25,25 @@ class Layout extends React.Component {
         ce = d.createElement,
         gt = d.getElementsByTagName,
         id = 'typef_orm_share',
-        b = 'https://embed.typeform.com/'
+        b = 'https://embed.typeform.com/';
       if (!gi.call(d, id)) {
-        js = ce.call(d, 'script')
-        js.id = id
-        js.src = b + 'embed.js'
-        q = gt.call(d, 'script')[0]
-        q.parentNode.insertBefore(js, q)
+        js = ce.call(d, 'script');
+        js.id = id;
+        js.src = b + 'embed.js';
+        q = gt.call(d, 'script')[0];
+        q.parentNode.insertBefore(js, q);
       }
-    })()
+    })();
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then(registration => {
-          console.log('service worker registration successful')
+          console.log('service worker registration successful');
         })
         .catch(err => {
-          console.warn('service worker registration failed', err.message)
-        })
+          console.warn('service worker registration failed', err.message);
+        });
     }
   }
 
@@ -56,18 +56,22 @@ class Layout extends React.Component {
           <div className="page">{this.props.children}</div>
           <Footer />
         </div>
-      )
+      );
     } else {
       return (
-        <div>
+        <div
+          className={`page-container${
+            this.props.className ? ' ' + this.props.className : ''
+          }`}
+        >
           <style dangerouslySetInnerHTML={{ __html: styles }} />
           <Head meta={this.props.meta} />
           <Header pathname={this.props.pathname} />
           <div className="page">{this.props.children}</div>
           <Footer />
         </div>
-      )
+      );
     }
   }
 }
-export default Layout
+export default Layout;

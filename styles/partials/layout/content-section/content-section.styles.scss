@@ -1,13 +1,16 @@
-
 .content-section-p {
   $c: &; // sets this classname to a variable omg
 
   // This will style the text the same way with all
   // content section styles that have a gradient background
   // all of the gradients are dark, so the text will be lighter
-  &[class*="style--gradient"], &[class*="style--graphic_blue"], &[class*="style--black"] {
+  &[class*='style--gradient'],
+  &[class*='style--graphic_blue'],
+  &[class*='style--black'] {
     #{$c}-title {
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         color: white !important;
       }
     }
@@ -25,16 +28,27 @@
       }
     }
     #{$c}-body {
-      p, ul, ol, blockquote, pre, code {
+      p,
+      ul,
+      ol,
+      blockquote,
+      pre,
+      code {
         color: white !important;
       }
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: white !important;
       }
 
       ul {
         border-color: rgba(black, 0.5) !important;
-        &::before, &::after {
+        &::before,
+        &::after {
           mix-blend-mode: multiply;
           opacity: 1 !important;
         }
@@ -43,16 +57,25 @@
   }
 
   &-style {
-
     &--graphic {
-
       &_dash_controls {
-        background: #ffffff url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format) center top no-repeat !important;
+        background: #ffffff
+          url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format)
+          center top no-repeat !important;
         background-size: 1290px !important;
         @include media('<=800px') {
           padding-top: $unit*6;
         }
       }
+      &_react {
+        background: #ffffff url(https://tamarack-prismic.imgix.net/plotly%2Fd16f43ac-de73-4e78-aad4-2146dbe0da4b_plotly-react-banner-visual%402x.png?auto=format)
+          center top no-repeat !important;
+        background-size: 1290px !important;
+        @include media('<=800px') {
+          padding-top: $unit*6;
+        }
+      }
+
       &_whitelabel {
         background-color: white !important;
         background-image: url(https://tamarack-prismic.imgix.net/plotly%2F69dfc2a2-587a-45bf-ba32-d9e077bb0224_embed_on_prem.svg?auto=format) !important;
@@ -72,12 +95,14 @@
         }
       }
       &_white_dotted-lines {
-        background: url(https://tamarack-prismic.imgix.net/plotly/f79d5a70-1490-4c90-9eef-cc44cd8e3bff_bg-graph.svg?auto=format) center center no-repeat !important;
+        background: url(https://tamarack-prismic.imgix.net/plotly/f79d5a70-1490-4c90-9eef-cc44cd8e3bff_bg-graph.svg?auto=format)
+          center center no-repeat !important;
         background-size: cover !important;
       }
       &_blue_pipes {
         a {
-          &:link, &:visited {
+          &:link,
+          &:visited {
             color: $color-aqua !important;
           }
           &:hover {
@@ -85,7 +110,8 @@
           }
         }
         background-position: bottom center !important;
-        background-image: url(https://tamarack-prismic.imgix.net/plotly/f37440b0-c340-40a3-835c-dcbd43a5f6dd_pipes.png?auto=format), linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
+        background-image: url(https://tamarack-prismic.imgix.net/plotly/f37440b0-c340-40a3-835c-dcbd43a5f6dd_pipes.png?auto=format),
+          linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
         background-size: cover !important;
         // Style the buttons a different way for this one
         #{$c}-actions {
@@ -123,7 +149,8 @@
       background: #000000 !important;
 
       a {
-        &:link, &:visited {
+        &:link,
+        &:visited {
           color: $color-emerald !important;
         }
         &:hover {
@@ -151,16 +178,20 @@
       }
     }
     &--gradient {
-
       /*
        * Purple Gradient
        */
       &_purple {
-        background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
+        background: linear-gradient(
+          135deg,
+          #7e6fdc 15%,
+          #6b5dca 100%
+        ) !important;
 
         p {
           a {
-            &:link, &:visited {
+            &:link,
+            &:visited {
               color: $color-aqua-shade !important;
             }
             &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item):hover:not(.card-action-link) {
@@ -171,7 +202,10 @@
           }
         }
 
-        h1, h2, h3, p {
+        h1,
+        h2,
+        h3,
+        p {
           color: white !important;
         }
 
@@ -200,7 +234,25 @@
        * Dark blue gradient
        */
       &_dark-blue {
-        background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
+        background-image: linear-gradient(
+          0deg,
+          #3b9aca 0%,
+          #2d6ca5 39%,
+          #222654 100%
+        ) !important;
+
+        a {
+          &:link,
+          &:visited {
+            color: $color-emerald !important;
+          }
+          &:not(.button):not(.nav-item-wrapper):not(.card):not(.navigation-product-item):hover:not(.card-action-link) {
+            &:hover {
+              color: darken($color-emerald, 8%) !important;
+            }
+          }
+        }
+
         // Style the buttons a different way for this one
         #{$c}-actions {
           .button {
@@ -226,10 +278,15 @@
        * Blue gradient
        */
       &_blue {
-        background-image: linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
+        background-image: linear-gradient(
+          135deg,
+          #1d8ee8 40%,
+          #1e427d 150%
+        ) !important;
 
         a {
-          &:link, &:visited {
+          &:link,
+          &:visited {
             color: $color-aqua !important;
             font-weight: bold !important;
           }
@@ -260,5 +317,4 @@
       }
     }
   }
-
 }
