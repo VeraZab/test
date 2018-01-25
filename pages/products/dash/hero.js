@@ -8,6 +8,7 @@ import {
   HeroActions,
   HeroBottom,
 } from 'components/hero'
+import GithubStarsSlice from 'components/prismic/slices/github_stars'
 import Buttons from 'components/buttons'
 
 const HeroButtons = [
@@ -112,6 +113,10 @@ export default class HeroSection extends React.Component {
               <Buttons items={HeroButtons[0]} />
               <Buttons items={HeroButtons[1]} />
             </HeroActions>
+            <GithubStarsSlice slice={[{
+              repository_url: {url: 'https://github.com/plotly/dash'},
+              label: 'plotly/dash'
+            }]}/>
           </HeroMessaging>
 
           <div className="hero-graphic dash dash-graphic">
