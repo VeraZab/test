@@ -55,14 +55,14 @@ const demoAppGold = [
   },
 ]
 
-const demoAppUber = [
+const demoAppOil = [
   {
     label: 'Live Demo →',
     subtitle: null,
-    title: 'EXAMPLE APP #4 -- NYC Uber Rides',
+    title: 'EXAMPLE APP #4 -- Oil and Gas Dashboard',
     icon: null,
     target: '_blank',
-    link: 'https://plot.ly/dash/gallery/uber-rides/',
+    link: 'https://plot.ly/dash/gallery/new-york-oil-and-gas/',
     button: {
       classes: 'button button-primary',
     },
@@ -296,7 +296,7 @@ class DashMain extends React.Component {
         <ContentSection>
           <ContentPane half graphic center-vertically>
             <Graphic
-              link={demoAppUber[0].link}
+              link={demoAppOil[0].link}
               image="https://images-plotly.imgix.net/static/marketing/dash/uber-example.png?auto=compress&auto=format"
             />
           </ContentPane>
@@ -305,16 +305,17 @@ class DashMain extends React.Component {
             <Title>NYC Uber Rides</Title>
             <Body>
               <p>
-                This Dash App displays the departure of all Uber rides in 2014.
-                A histogram below map displays the popularity of rides and
-                selecting different hours filters data in the map.
+                This Dash App displays oil production in western New York.
+                Filters at the top of the app update the graphs below. 
+                Selecting or hovering over data in one plot will update the other
+                plots ("crossfiltering").
               </p>
               <p>
                 Dash apps are powered by Plotly.js, a fully featured charting
                 library including maps like these, financial charts, scientific
                 graphs, and more.
               </p>
-              <Buttons className="gutter-top" items={demoAppUber} />
+              <Buttons className="gutter-top" items={demoAppOil} />
             </Body>
           </ContentPane>
         </ContentSection>
