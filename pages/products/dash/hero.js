@@ -112,11 +112,11 @@ export default class HeroSection extends React.Component {
             <HeroActions>
               <Buttons items={HeroButtons[0]} />
               <Buttons items={HeroButtons[1]} />
+              <GithubStarsSlice start slice={{items:[{
+                  repository_url: {url: 'https://github.com/plotly/dash'},
+                  label: null
+                }]}}/>
             </HeroActions>
-            <GithubStarsSlice slice={[{
-              repository_url: {url: 'https://github.com/plotly/dash'},
-              label: 'plotly/dash'
-            }]}/>
           </HeroMessaging>
 
           <div className="hero-graphic dash dash-graphic">
