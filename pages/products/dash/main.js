@@ -297,16 +297,16 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppOil[0].link}
-              image="https://images-plotly.imgix.net/static/marketing/dash/uber-example.png?auto=compress&auto=format"
+              image="https://tamarack-prismic.imgix.net/plotly%2Fa47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png?auto=compress&auto=format"
             />
           </ContentPane>
           <ContentPane half center-vertically text>
             <div className="pre-title">Example App #4</div>
-            <Title>NYC Uber Rides</Title>
+            <Title>Oil and Gas Dashboard</Title>
             <Body>
               <p>
                 This Dash App displays oil production in western New York.
-                Filters at the top of the app update the graphs below. 
+                Filters at the top of the app update the graphs below.
                 Selecting or hovering over data in one plot will update the other
                 plots ("crossfiltering").
               </p>
