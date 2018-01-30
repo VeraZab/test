@@ -1,15 +1,21 @@
-import React from 'react'
-const gh = require('parse-github-url')
-const shortid = require('shortid')
-export default function GithubStarsSlice({ slice }) {
+import React from 'react';
+const gh = require('parse-github-url');
+const shortid = require('shortid');
+
+export default function GithubStarsSlice({ slice, start }) {
+  let classes = 'slice github_stars';
+
+  if (start) {
+    classes += ' align-start';
+  }
   const Stars = slice.items.map((item, i) => {
-    const github_repo = gh(item.repository_url.url)
+    const github_repo = gh(item.repository_url.url);
     const src =
       'https://ghbtns.com/github-btn.html?user=' +
       github_repo.owner +
       '&repo=' +
       github_repo.name +
-      '&type=star&count=true&size=large'
+      '&type=star&count=true&size=large';
 
     const Label = item.label ? (
       <div
@@ -18,7 +24,7 @@ export default function GithubStarsSlice({ slice }) {
       >
         <p className="">{item.label}</p>
       </div>
-    ) : null
+    ) : null;
     return (
       <div className="github_stars__item" key={shortid.generate()}>
         {Label}
@@ -30,11 +36,11 @@ export default function GithubStarsSlice({ slice }) {
           height="30px"
         />
       </div>
-    )
-  })
+    );
+  });
   return (
-    <div className="slice github_stars">
+    <div className={classes}>
       <div className="github_stars__wrapper">{Stars}</div>
     </div>
-  )
+  );
 }

@@ -3,13 +3,24 @@
 
   order: 100 !important;
 
+  &.align-start {
+    #{$c}__wrapper {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: row;
+      #{$c}__item {
+        align-self: flex-start;
+        flex-grow: 0;
+        padding-left: 0;
+      }
+    }
+  }
   #{$c}__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     @include media('<=900px') {
-
     }
   }
 
@@ -25,14 +36,13 @@
     }
   }
   @at-root .hero-prismic-layout--row {
-
     #{$c}__wrapper {
       justify-content: flex-start;
     }
-    #{$c}__item{
-      flex-grow:0;
-      &:first-of-type{
-        padding-left:0;
+    #{$c}__item {
+      flex-grow: 0;
+      &:first-of-type {
+        padding-left: 0;
       }
     }
   }
@@ -59,4 +69,3 @@
     padding-top: $unit*4 !important;
   }
 }
-
