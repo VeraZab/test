@@ -1,24 +1,11 @@
 {
   "name": "plotly-next",
-  "version": "0.0.2",
   "description": "New and improved branding and marketing pages with React and next.js.",
-  "scripts": {
-    "dev": "node server.js",
-    "build": "next build",
-    "preexport": "yarn run build",
-    "export": "next export",
-    "postexport": "cp .next/service-worker.js out/_next",
-    "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
-    "deploy": "yarn run export && yarn run ghpages",
-    "start": "NODE_ENV=production node server.js",
-    "heroku-postinstall": "yarn run build",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write './{components,pages}/**/*.js'"
-  },
-  "engines": {
-    "node": "9.x.x"
-  },
+  "version": "0.0.2",
   "author": "Thomas Osmonson <hello@ineffable.co>",
-  "license": "",
+  "bugs": {
+    "email": "hello@ineffable.co"
+  },
   "dependencies": {
     "@percy-io/in-percy": "^0.1.9",
     "axios": "^0.17.0",
@@ -41,7 +28,7 @@
     "lru-cache": "^4.1.1",
     "mdi": "^1.8.36",
     "module-alias": "^2.0.1",
-    "next": "^4.1.4-canary.2",
+    "next": "^4.4.0-canary.3",
     "next-redux-wrapper": "^1.3.4",
     "next-routes": "^1.0.27",
     "node-sass": "^4.6.1",
@@ -80,12 +67,29 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.2.1",
-    "now": "^9.0.0-canary.8",
     "prettier": "^1.7.4",
     "react-scripts": "^1.0.10",
     "redux-devtools-extension": "^2.13.2"
   },
+  "engines": {
+    "node": "9.x.x"
+  },
+  "homepage": "https://plot.ly/",
+  "license": "UNLICENSED",
   "now": {
     "alias": "plotly-prismic.ineffable.digital"
+  },
+  "repository": "plotly/plotly-next",
+  "scripts": {
+    "build": "next build",
+    "deploy": "yarn run export && yarn run ghpages",
+    "dev": "node server.js",
+    "export": "next export",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write './{components,pages}/**/*.js'",
+    "ghpages": "cp .nojekyll out && git add out; timestamp=$(date \"+%c\") && git commit -m \"$timestamp deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "heroku-postinstall": "yarn run build",
+    "postexport": "cp .next/service-worker.js out/_next",
+    "preexport": "yarn run build",
+    "start": "NODE_ENV=production node server.js"
   }
 }
