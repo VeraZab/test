@@ -5,14 +5,14 @@ import {
   Subtitle,
   Body,
   Graphic,
-} from 'components/content-section'
-import Buttons from 'components/buttons'
-import Button from 'components/button'
-import CodeExplorer from './code-explorer/code-explorer'
+} from 'components/content-section';
+import Buttons from 'components/buttons';
+import Button from 'components/button';
+import CodeExplorer from './code-explorer/code-explorer';
 
 const bg = {
   backgroundImage: 'linear-gradient(27deg, #1E427D 0%, #1D9CFC 100%)',
-}
+};
 
 const demoAppStock = [
   {
@@ -26,7 +26,7 @@ const demoAppStock = [
       classes: 'button button-primary',
     },
   },
-]
+];
 
 const demoAppDrugs = [
   {
@@ -40,7 +40,7 @@ const demoAppDrugs = [
       classes: 'button button-primary',
     },
   },
-]
+];
 const demoAppGold = [
   {
     label: 'Live Demo →',
@@ -53,7 +53,7 @@ const demoAppGold = [
       classes: 'button button-primary',
     },
   },
-]
+];
 
 const demoAppOil = [
   {
@@ -67,7 +67,7 @@ const demoAppOil = [
       classes: 'button button-primary',
     },
   },
-]
+];
 
 const ExampleCodeBlock = `import dash
 from dash.dependencies import Input, Output
@@ -105,7 +105,7 @@ def update_graph(selected_dropdown_value):
     }
 
 if __name__ == '__main__':
-    app.run_server()`
+    app.run_server()`;
 const plotcon_button = {
   label: 'Buy a Ticket',
   title: 'PLOTCON WORKSHOPS 2018',
@@ -115,17 +115,17 @@ const plotcon_button = {
   button: {
     classes: 'button button-primary',
   },
-}
+};
 
-import React from 'react'
+import React from 'react';
 
 class DashMain extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    ;(function() {
+    (function() {
       let qs,
         js,
         q,
@@ -135,15 +135,15 @@ class DashMain extends React.Component {
         ce = d.createElement,
         gt = d.getElementsByTagName,
         id = 'typef_orm_share',
-        b = 'https://embed.typeform.com/'
+        b = 'https://embed.typeform.com/';
       if (!gi.call(d, id)) {
-        js = ce.call(d, 'script')
-        js.id = id
-        js.src = b + 'embed.js'
-        q = gt.call(d, 'script')[0]
-        q.parentNode.insertBefore(js, q)
+        js = ce.call(d, 'script');
+        js.id = id;
+        js.src = b + 'embed.js';
+        q = gt.call(d, 'script')[0];
+        q.parentNode.insertBefore(js, q);
       }
-    })()
+    })();
   }
 
   render() {
@@ -306,9 +306,9 @@ class DashMain extends React.Component {
             <Body>
               <p>
                 This Dash App displays oil production in western New York.
-                Filters at the top of the app update the graphs below.
-                Selecting or hovering over data in one plot will update the other
-                plots ("crossfiltering").
+                Filters at the top of the app update the graphs below. Selecting
+                or hovering over data in one plot will update the other plots
+                ("crossfiltering").
               </p>
               <p>
                 Dash apps are powered by Plotly.js, a fully featured charting
@@ -364,12 +364,8 @@ class DashMain extends React.Component {
               </p>
               <p>
                 <a
-                  className="typeform-share link special-link"
+                  className="link special-link"
                   href="https://plot.ly/dash/pricing/"
-                  data-mode="drawer_right"
-                  data-hide-headers="true"
-                  data-hide-footer="true"
-                  data-submit-close-delay="2"
                   target="_blank"
                 >
                   <span className="special-link-label">Learn More →</span>
@@ -472,7 +468,7 @@ class DashMain extends React.Component {
           </ContentPane>
         </ContentSection>
       </div>
-    )
+    );
   }
 }
-export default DashMain
+export default DashMain;
