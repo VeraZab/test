@@ -8,14 +8,14 @@ const columnData = [
     message:
       'These libraries are free forever. Your support helps to keep them top notch.',
     graphic:
-      'https://now.plot.ly/static/images/illustrations/support_open_source@2x.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F3a1e30c4-c4c1-4ce8-af06-962c1912853f_support_open_source%402x.png',
     actions: null,
   },
   {
     title: 'Need Engineering Support?',
     message: 'Get chat and support from our awesome engineering team.',
     graphic:
-      'https://now.plot.ly/static/images/illustrations/engineering_supoort@2x.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Fa0259b03-5b79-46da-ab4a-9c64cc50e284_engineering_supoort%402x.png',
     actions: [
       {
         label: 'See Support Plans',
@@ -35,7 +35,7 @@ const columnData = [
     message:
       'Share charts, dashboards, Jupyter notebooks, and presentations online.',
     graphic:
-      'https://now.plot.ly/static/images/illustrations/share_online@2x.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F44724c0b-2f05-40c3-8224-8d1705c8db2b_share_online%402x.png',
     actions: null,
   },
 ];
