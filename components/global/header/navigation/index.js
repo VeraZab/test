@@ -141,11 +141,12 @@ export default class Navigation extends React.Component {
                     Plotly Cloud
                   </a>
                 </Link>
-                <Link href="/products/on-premise" prefetch>
-                  <a className="navigation-product-submenu-item">
-                    Plotly On-Premises
-                  </a>
-                </Link>
+                <a
+                  className="navigation-product-submenu-item"
+                  href="/products/on-premise"
+                >
+                  Plotly On-Premises
+                </a>
                 <Link
                   href={{
                     pathname: '/p',
@@ -322,11 +323,12 @@ export default class Navigation extends React.Component {
                   </div>
 
                   {/** Products Submenu Items */}
-                  <Link href="/products/on-premise" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Plotly On-Premises
-                    </a>
-                  </Link>
+                  <a
+                    className="navigation-product-submenu-item"
+                    href="/products/on-premise"
+                  >
+                    Plotly On-Premises
+                  </a>
                   <Link href="/products/cloud" prefetch>
                     <a className="navigation-product-submenu-item">
                       Plotly Cloud
