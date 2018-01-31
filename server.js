@@ -131,12 +131,6 @@ app.prepare()
       const queryParams = {slug: req.params.slug}
       return app.render(req, res, '/p-customer-story', queryParams)
     })
-    // server.get('/tableau-alternative', (req, res) => {
-    //   return app.render(req, res, '/tableau-alternative')
-    // })
-    // server.get('/highcharts-alternative', (req, res) => {
-    //   return app.render(req, res, '/highcharts-alternative', queryParams)
-    // })
 
     /**
      * Catch all
