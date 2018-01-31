@@ -213,9 +213,9 @@ const meta = {
   url: 'https://plot.ly/products/on-premise/',
   twitter: {
     label1: 'On-Premises',
-    data1: '$9,950 per year, 5 user license',
+    data1: '$9,960 per year, 5 user license',
     label2: 'On-Premises + Dash',
-    data2: '$15,950 per year, 5 user license',
+    data2: '$15,960 per year, 5 user license',
   },
 };
 
