@@ -86,6 +86,7 @@ const SwitchItem = styled.div`
     left: ${props => (props.second ? 'auto' : '-20%')};
     right: ${props => (props.second ? '-20%' : 'auto')};
     transform-origin: center center;
+    will-change: transform;
     transition: 0.2s transform ease-in-out;
     transform: ${props =>
       props.active
@@ -122,6 +123,7 @@ const H1 = styled.h1`
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 40px;
+  will-change: opacity, transform;
 `;
 
 const H2 = styled.h2`
@@ -134,6 +136,7 @@ const H2 = styled.h2`
   font-family: 'Ubuntu', sans-serif;
   color: rgba(81, 103, 131, 1);
   font-weight: 300;
+  will-change: opacity, transform;
 `;
 
 const onPremData = [
