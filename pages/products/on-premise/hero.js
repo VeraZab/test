@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Hero,
   HeroTop,
@@ -7,9 +7,10 @@ import {
   HeroSubtitle,
   HeroActions,
   HeroBottom,
-} from 'components/hero'
-import { ClientLogos } from 'components/global/client-logos'
-import Buttons from 'components/buttons'
+} from 'components/hero';
+import { ClientLogos } from 'components/global/client-logos';
+import Buttons from 'components/buttons';
+
 
 const HeroButtons = [
   {
@@ -23,7 +24,7 @@ const HeroButtons = [
       classes: 'button button-primary',
     },
   },
-]
+];
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -31,12 +32,12 @@ const HeroWrapperStyle = {
   backgroundSize: 'cover',
   backgroundPosition: '50% 80%',
   backgroundRepeat: 'no-repeat',
-}
+};
 
 const HeroBottomStyles = {
-  paddingBottom: '100px',
+  paddingBottom: '20px',
   paddingTop: '20px',
-}
+};
 
 export default () => (
   <Hero heroWrapperStyle={HeroWrapperStyle}>
@@ -57,4 +58,4 @@ export default () => (
       <ClientLogos />
     </HeroBottom>
   </Hero>
-)
+);

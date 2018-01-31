@@ -1,5 +1,5 @@
-import Layout from 'components/global/layout'
-import Hero from './hero'
+import Layout from 'components/global/layout';
+import Hero from './hero';
 import {
   ContentSection,
   ContentPane,
@@ -7,10 +7,134 @@ import {
   Subtitle,
   Body,
   Graphic,
-} from 'components/content-section'
-import Buttons from 'components/buttons'
+} from 'components/content-section';
+import Buttons from 'components/buttons';
+import styles from '../cloud/pricing.styles.scss';
+import styled, { css } from 'styled-components';
+import shortid from 'shortid';
 
-import styles from '../cloud/pricing.styles.scss'
+const SwitchContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 120px;
+`;
+
+const HeadingContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 40px;
+`;
+
+const Switch = styled.div`
+  display: flex;
+  overflow: hidden;
+  border-radius: 48px;
+  width: 360px;
+  height: 48px;
+  background: white;
+  border: 1px solid #dce4ed;
+  box-shadow: rgba(80, 103, 132, 0.2) 0 2px 8px 0;
+`;
+
+const hoverSyles = css`
+  &:hover {
+    cursor: pointer;
+    color: rgba(81, 103, 131, 1);
+    font-weight: 400;
+
+    span {
+      &::before {
+        transform: none;
+      }
+    }
+  }
+`;
+
+const SwitchItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width: 50%;
+  cursor: default;
+  background-color: ${props => (props.active ? 'transparent' : 'transparent')};
+  color: ${props => (props.active ? '#ffffff' : 'rgba(81, 103, 131, 0.75)')};
+  font-weight: ${props => (props.active ? 'bold' : 'normal')};
+  text-shadow: ${props =>
+    props.active ? '0 1px 2px rgba(42, 63, 95, 0.5)' : 'none'};
+  ${props => (props.active ? null : hoverSyles)};
+
+  user-select: none;
+  transition: 0.1s all ease-in-out;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 100%;
+    opacity: ${props => (props.active ? '1' : '0')};
+    background-color: #00cc96;
+    top: 0;
+    left: ${props => (props.second ? 'auto' : '-20%')};
+    right: ${props => (props.second ? '-20%' : 'auto')};
+    transform-origin: center center;
+    transition: 0.2s transform ease-in-out;
+    transform: ${props =>
+      props.active
+        ? props.second ? 'skewX(-30deg)' : 'skewX(30deg)'
+        : props.second ? 'skewX(30deg)' : 'skewX(-30deg)'};
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: #00cc96;
+      top: 100%;
+      transform-origin: center center;
+      transform: scaleX(0);
+      transition: 0.1s all ease-in-out;
+    }
+  }
+`;
+
+const H1 = styled.h1`
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+`;
+
+const H2 = styled.h2`
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 36px;
+  max-width: 460px;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgba(81, 103, 131, 1);
+  font-weight: 300;
+`;
 
 const onPremData = [
   {
@@ -39,32 +163,37 @@ const onPremData = [
       },
     ],
   },
-]
+];
 
 const onPremDashata = [
   {
     features: [
       {
-        value: 'Includes everything in the <strong>On-Premises Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
+        value:
+          'Includes everything in the <strong>On-Premises Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
       },
       {
         value: 'Email and Phone Support',
       },
       {
-        value: 'Unlimited <a href="https://plot.ly/dash/pricing/">Dash Applications</a>',
+        value:
+          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash Applications</a>',
       },
       {
-        value: 'Unlimited <a href="https://plot.ly/dash/pricing/">Dash App</a> Viewers',
+        value:
+          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash App</a> Viewers',
       },
       {
-        value: '<a href="https://plot.ly/dash/pricing/">Automatic Git Based Deployments</a> of Dash Apps',
+        value:
+          '<a href="https://plot.ly/dash/pricing/">Automatic Git Based Deployments</a> of Dash Apps',
       },
       {
-        value: '<a href="https://plot.ly/dash/pricing/">Learn More About Dash Deployment Server</a>',
+        value:
+          '<a href="https://plot.ly/dash/pricing/">Learn More About Dash Deployment Server</a>',
       },
     ],
   },
-]
+];
 
 const actions = [
   {
@@ -75,7 +204,7 @@ const actions = [
     },
     target: '_blank',
   },
-]
+];
 
 const meta = {
   title: 'Plotly On-Premises and Dash Pricing',
@@ -88,38 +217,31 @@ const meta = {
     label2: 'On-Premises + Dash',
     data2: '$15,950 per year, 5 user license',
   },
-}
+};
 
 export default class OnPrem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      pricingMode: 'ON_CLOUD',
+    };
   }
 
-  componentDidMount() {
-    ;(function() {
-      let qs,
-        js,
-        q,
-        s,
-        d = document,
-        gi = d.getElementById,
-        ce = d.createElement,
-        gt = d.getElementsByTagName,
-        id = 'typef_orm_share',
-        b = 'https://embed.typeform.com/'
-      if (!gi.call(d, id)) {
-        js = ce.call(d, 'script')
-        js.id = id
-        js.src = b + 'embed.js'
-        q = gt.call(d, 'script')[0]
-        q.parentNode.insertBefore(js, q)
-      }
-    })()
+  togglePricingMode() {
+    const { pricingMode } = this.state;
+    if (pricingMode === 'ON_CLOUD') {
+      this.setState({
+        pricingMode: 'ON_SITE',
+      });
+    } else {
+      this.setState({
+        pricingMode: 'ON_CLOUD',
+      });
+    }
   }
-
   render() {
-    let pricingCardFeatures = items => {
-      let pricingCardFeature = items => {
+    const pricingCardFeatures = items => {
+      const pricingCardFeature = items => {
         return items.map((item, i) => {
           return (
             <div className="pricing-cards-feature-lists-item-value " key={i}>
@@ -128,9 +250,10 @@ export default class OnPrem extends React.Component {
                 className="hidden delay-med"
               />
             </div>
-          )
-        })
-      }
+          );
+        });
+      };
+
       return items.map((item, i) => {
         return (
           <div className="pricing-cards-feature-lists-item" key={i}>
@@ -138,17 +261,62 @@ export default class OnPrem extends React.Component {
               {pricingCardFeature(item.features)}
             </div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
 
     return (
       <Layout meta={meta}>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <div className="on-prem-pricing">
-          <Hero />
+          <Hero togglePricingMode={() => this.togglePricingMode()} />
         </div>
         <ContentSection className="onprem-pricing">
+          <SwitchContainer>
+            <Switch>
+              <SwitchItem
+                active={this.state.pricingMode === 'ON_CLOUD'}
+                onClick={
+                  this.state.pricingMode !== 'ON_CLOUD'
+                    ? () => this.togglePricingMode()
+                    : null
+                }
+              >
+                <span>Private Cloud</span>
+              </SwitchItem>
+              <SwitchItem
+                second
+                active={this.state.pricingMode === 'ON_SITE'}
+                onClick={
+                  this.state.pricingMode !== 'ON_SITE'
+                    ? () => this.togglePricingMode()
+                    : null
+                }
+              >
+                <span>On-Site</span>
+              </SwitchItem>
+            </Switch>
+            <HeadingContainer>
+              <H1
+                key={shortid.generate()}
+                className="animate--fade-in-from-top"
+              >
+                {this.state.pricingMode === 'ON_CLOUD'
+                  ? `Private Cloud`
+                  : `On-Site Installation`}
+              </H1>
+              <H2
+                key={shortid.generate()}
+                className="animate--fade-in-from-bottom"
+              >
+                {this.state.pricingMode === 'ON_CLOUD'
+                  ? `Automatically installed and maintained. Login to a dedicated,
+              private cloud server with your work email.`
+                  : `Installed and maintained by your IT staff on your company's server.`}
+              </H2>
+            </HeadingContainer>
+          </SwitchContainer>
+
           <ContentPane full center center-vertically text>
             <Body>
               <div className="on-prem-pricing-cards">
@@ -162,8 +330,14 @@ export default class OnPrem extends React.Component {
                     <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
                       <div className="pricing-cards-bodies-item-content">
                         <div className="price">
-                          <div className="price-text">
-                            <span className="usd">$</span>9,950
+                          <div
+                            className="price-text animate--fade-in-from-top"
+                            key={shortid.generate()}
+                          >
+                            <span className="usd">$</span>
+                            {this.state.pricingMode === 'ON_CLOUD'
+                              ? `9,960`
+                              : `14,940`}
                           </div>
                         </div>
                         <div className="details">
@@ -193,8 +367,14 @@ export default class OnPrem extends React.Component {
                     <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
                       <div className="pricing-cards-bodies-item-content">
                         <div className="price">
-                          <div className="price-text">
-                            <span className="usd">$</span>15,950
+                          <div
+                            className="price-text animate--fade-in-from-top"
+                            key={shortid.generate()}
+                          >
+                            <span className="usd">$</span>
+                            {this.state.pricingMode === 'ON_CLOUD'
+                              ? `15,960`
+                              : `24,960`}
                           </div>
                         </div>
                         <div className="details">
@@ -403,6 +583,6 @@ export default class OnPrem extends React.Component {
           </ContentPane>
         </ContentSection>
       </Layout>
-    )
+    );
   }
 }
