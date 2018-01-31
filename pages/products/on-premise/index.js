@@ -341,7 +341,7 @@ export default class OnPrem extends React.Component {
                           </div>
                         </div>
                         <div className="details">
-                          per year, <strong>5 User License </strong>
+                          per year, <strong>5 Developer License </strong>
                         </div>
                       </div>
                       <Buttons
@@ -378,7 +378,7 @@ export default class OnPrem extends React.Component {
                           </div>
                         </div>
                         <div className="details">
-                          per year, <strong>5 User License </strong>
+                          per year, <strong>5 Developer License </strong>
                         </div>
                       </div>
                       <Buttons
