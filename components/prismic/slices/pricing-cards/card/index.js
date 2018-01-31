@@ -28,12 +28,17 @@ class PricingCard extends React.Component {
       card: { primary: content, items: features },
       cardWidth,
     } = this.props;
+
     let classes = 'pricing__card';
+
     if (content.style && content.style !== 'default') {
       classes += ` pricing__card--${content.style}`;
     }
     if (content.pretitle) {
       classes += ' pricing__card--has-pretitle';
+    }
+    if (content.has_toggle === 'true') {
+      classes += ' pricing__card--has-toggle';
     }
 
     const styles = {

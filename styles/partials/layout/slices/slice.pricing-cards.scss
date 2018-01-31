@@ -85,8 +85,8 @@
   #{$c}__wrapper {
     box-shadow: $drop-shadow-l-light;
     border-radius: 8px;
-    overflow: hidden;
     background: white;
+    position: relative;
   }
 
   #{$c}__header {
@@ -145,6 +145,7 @@
 
   #{$c}__features {
     border-top: 1px solid $color-rhino-light-2;
+    padding-bottom: 1px;
   }
 
   #{$c}__feature {
