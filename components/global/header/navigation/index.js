@@ -301,6 +301,18 @@ export default class Navigation extends React.Component {
                   >
                     <a className="navigation-product-submenu-item">Plotly.R</a>
                   </Link>
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'react-component-suite',
+                      },
+                    }}
+                    as={'/products/react/'}
+                    prefetch
+                  >
+                    <a className="navigation-product-submenu-item">React</a>
+                  </Link>
                 </div>
 
                 {/** Products Submenu Section */}
