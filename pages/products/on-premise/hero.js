@@ -11,7 +11,6 @@ import {
 import { ClientLogos } from 'components/global/client-logos';
 import Buttons from 'components/buttons';
 
-
 const HeroButtons = [
   {
     label: 'Contact Us',
@@ -36,7 +35,7 @@ const HeroWrapperStyle = {
 
 const HeroBottomStyles = {
   paddingBottom: '20px',
-  paddingTop: '20px',
+  paddingTop: '80px',
 };
 
 export default () => (
