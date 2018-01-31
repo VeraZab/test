@@ -42,7 +42,7 @@ export default class Slices extends React.Component {
               slice.slice_type === 'cs-pricing' ||
               slice.slice_type === 'cs-github-stars'
             ) {
-              return <ContentSection key={shortid.generate()} data={slice} />
+              return <ContentSection key={i} data={slice} />
             } else if (slice.slice_type === 'cs-tabs') {
               return <TabsSlice key={shortid.generate()} data={slice} />
             } else if (slice.slice_type === 'logos') {

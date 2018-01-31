@@ -19,6 +19,8 @@ import {
 } from 'components/styled/on-prem';
 import shortid from 'shortid';
 
+import SwitchComponent from 'components/switch';
+
 const onPremData = [
   {
     features: [
@@ -106,7 +108,7 @@ class OnPrem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pricingMode: 'ON_CLOUD',
+      pricingMode: 'Private Cloud',
     };
   }
 
@@ -118,13 +120,13 @@ class OnPrem extends React.Component {
 
   togglePricingMode() {
     const { pricingMode } = this.state;
-    if (pricingMode === 'ON_CLOUD') {
+    if (pricingMode === 'Private Cloud') {
       this.setState({
-        pricingMode: 'ON_SITE',
+        pricingMode: 'On-Site',
       });
     } else {
       this.setState({
-        pricingMode: 'ON_CLOUD',
+        pricingMode: 'Private Cloud',
       });
     }
   }
@@ -154,6 +156,25 @@ class OnPrem extends React.Component {
       });
     };
 
+    const toggle_content = {
+      tabs: [
+        {
+          label: 'Private Cloud',
+          action:
+            this.state.pricingMode !== 'Private Cloud'
+              ? () => this.togglePricingMode()
+              : null,
+        },
+        {
+          label: 'On-Site',
+          action:
+            this.state.pricingMode !== 'On-Site'
+              ? () => this.togglePricingMode()
+              : null,
+        },
+      ],
+    };
+
     return (
       <Layout meta={meta}>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -162,35 +183,16 @@ class OnPrem extends React.Component {
         </div>
         <ContentSection className="onprem-pricing">
           <SwitchContainer>
-            <Switch>
-              <SwitchItem
-                active={this.state.pricingMode === 'ON_CLOUD'}
-                onClick={
-                  this.state.pricingMode !== 'ON_CLOUD'
-                    ? () => this.togglePricingMode()
-                    : null
-                }
-              >
-                <span>Private Cloud</span>
-              </SwitchItem>
-              <SwitchItem
-                second
-                active={this.state.pricingMode === 'ON_SITE'}
-                onClick={
-                  this.state.pricingMode !== 'ON_SITE'
-                    ? () => this.togglePricingMode()
-                    : null
-                }
-              >
-                <span>On-Site</span>
-              </SwitchItem>
-            </Switch>
+            <SwitchComponent
+              active={this.state.pricingMode}
+              data={toggle_content}
+            />
             <HeadingContainer>
               <H1
                 key={shortid.generate()}
                 className="animate--fade-in-from-top"
               >
-                {this.state.pricingMode === 'ON_CLOUD'
+                {this.state.pricingMode === 'Private Cloud'
                   ? `Private Cloud`
                   : `On-Site Installation`}
               </H1>
@@ -198,7 +200,7 @@ class OnPrem extends React.Component {
                 key={shortid.generate()}
                 className="animate--fade-in-from-bottom"
               >
-                {this.state.pricingMode === 'ON_CLOUD'
+                {this.state.pricingMode === 'Private Cloud'
                   ? `Automatically installed and maintained. Login to a dedicated,
               private cloud server with your work email.`
                   : `Installed and maintained by your IT staff on your company's server.`}
@@ -224,7 +226,7 @@ class OnPrem extends React.Component {
                             key={shortid.generate()}
                           >
                             <span className="usd">$</span>
-                            {this.state.pricingMode === 'ON_CLOUD'
+                            {this.state.pricingMode === 'Private Cloud'
                               ? `9,960`
                               : `14,940`}
                           </div>
@@ -261,7 +263,7 @@ class OnPrem extends React.Component {
                             key={shortid.generate()}
                           >
                             <span className="usd">$</span>
-                            {this.state.pricingMode === 'ON_CLOUD'
+                            {this.state.pricingMode === 'Private Cloud'
                               ? `15,960`
                               : `24,960`}
                           </div>

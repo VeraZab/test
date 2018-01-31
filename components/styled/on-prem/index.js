@@ -25,7 +25,8 @@ const Switch = styled.div`
   display: flex;
   overflow: hidden;
   border-radius: 48px;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 48px;
   background: white;
   border: 1px solid #dce4ed;
@@ -72,15 +73,15 @@ const SwitchItem = styled.div`
     opacity: ${props => (props.active ? '1' : '0')};
     background-color: #00cc96;
     top: 0;
-    left: ${props => (props.second ? 'auto' : '-20%')};
-    right: ${props => (props.second ? '-20%' : 'auto')};
+    left: ${props => (props.index.toString() === "1" ? 'auto' : '-20%')};
+    right: ${props => (props.index.toString() === "1" ? '-20%' : 'auto')};
     transform-origin: center center;
     will-change: transform;
     transition: 0.2s transform ease-in-out;
     transform: ${props =>
       props.active
-        ? props.second ? 'skewX(-30deg)' : 'skewX(30deg)'
-        : props.second ? 'skewX(30deg)' : 'skewX(-30deg)'};
+        ? props.index.toString() === "1" ? 'skewX(-30deg)' : 'skewX(30deg)'
+        : props.index.toString() === "1" ? 'skewX(30deg)' : 'skewX(-30deg)'};
   }
 
   span {

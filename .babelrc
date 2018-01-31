@@ -6,8 +6,8 @@
       {
         "ssr": true,
         "displayName": true,
-        "preprocess": false,
-        "transpileTemplateLiterals": false
+        "preprocess": true,
+        "transpileTemplateLiterals": true
       }
     ],
     [
