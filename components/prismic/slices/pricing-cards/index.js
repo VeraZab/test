@@ -26,7 +26,7 @@ class PricingCards extends React.Component {
   render() {
     const {cards} = this.props
 
-    const Cards = cards.map(card => <PricingCard key={ shortid.generate() } cardWidth={`${100/cards.length}%`} card={ card }/>)
+    const Cards = cards.map((card, i) => <PricingCard key={ i } cardWidth={`${100/cards.length}%`} card={ card }/>)
     return (
       <div className="pricing__cards">
         <div className="pricing__cards__wrapper" >
