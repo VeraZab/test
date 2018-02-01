@@ -41,25 +41,12 @@ const demoAppDrugs = [
     },
   },
 ];
-const demoAppGold = [
-  {
-    label: 'Live Demo →',
-    subtitle: null,
-    title: 'EXAMPLE APP #3 -- Goldman Sachs Interactive Report',
-    icon: null,
-    target: '_blank',
-    link: 'https://plot.ly/dash/gallery/goldman-sachs-report/',
-    button: {
-      classes: 'button button-primary',
-    },
-  },
-];
 
 const demoAppOil = [
   {
     label: 'Live Demo →',
     subtitle: null,
-    title: 'EXAMPLE APP #4 -- Oil and Gas Dashboard',
+    title: 'EXAMPLE APP #3 -- Oil and Gas Dashboard',
     icon: null,
     target: '_blank',
     link: 'https://plot.ly/dash/gallery/new-york-oil-and-gas/',
@@ -270,38 +257,6 @@ class DashMain extends React.Component {
         <ContentSection>
           <ContentPane half center-vertically text>
             <div className="pre-title">Example App #3</div>
-            <Title>Goldman Sachs Interactive Report</Title>
-            <Body>
-              <p>
-                This Dash App is branded just like a Goldman Sachs report
-                through the use of custom CSS. It includes a "Print to PDF"
-                button and is formatted to look great on both the web and in PDF
-                form. On the web version, the charts are interactive.
-              </p>
-              <p>
-                With Dash, you can automate reports from Python and use the same
-                platform for the web and for print.
-              </p>
-              <Buttons className="gutter-top" items={demoAppGold} />
-            </Body>
-          </ContentPane>
-          <ContentPane half graphic center-vertically>
-            <Graphic
-              link={demoAppGold[0].link}
-              image="https://images-plotly.imgix.net/static/marketing/dash/goldman-sachs.png?auto=compress&auto=format"
-            />
-          </ContentPane>
-        </ContentSection>
-
-        <ContentSection>
-          <ContentPane half graphic center-vertically>
-            <Graphic
-              link={demoAppOil[0].link}
-              image="https://tamarack-prismic.imgix.net/plotly%2Fa47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png?auto=compress&auto=format"
-            />
-          </ContentPane>
-          <ContentPane half center-vertically text>
-            <div className="pre-title">Example App #4</div>
             <Title>Oil and Gas Dashboard</Title>
             <Body>
               <p>
@@ -318,8 +273,14 @@ class DashMain extends React.Component {
               <Buttons className="gutter-top" items={demoAppOil} />
             </Body>
           </ContentPane>
+          <ContentPane half graphic center-vertically>
+            <Graphic
+              link={demoAppOil[0].link}
+              image="https://tamarack-prismic.imgix.net/plotly%2Fa47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png?auto=compress&auto=format"
+            />
+          </ContentPane>    
         </ContentSection>
-        <ContentSection>
+    <ContentSection>
           <ContentPane half graphic>
             <Graphic image="https://plotly-images.imgix.net/plotcon/staff-uploads/90d13bfa34a5fd265620d5b991fdc794/DSC05146.jpg?w=1200&h=2000&fit=crop&crop=faces&auto=compress&auto=format" />
           </ContentPane>
