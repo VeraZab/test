@@ -1,42 +1,49 @@
 # Plotly Marketing Pages (next.js)
+![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg) ![with-love](https://img.shields.io/badge/made%20with-%F0%9F%92%8C-red.svg)
+
 
 ## Sitemap
 
-****/****
-- https://plotly.github.io/plotly-next/
-- https://plotly.github.io/plotly-next/online-chart-maker/
-- https://plotly.github.io/plotly-next/dashboards/
-- https://plotly.github.io/plotly-next/powerpoint-online/
-- https://plotly.github.io/plotly-next/database-connectors/
-- https://plotly.github.io/plotly-next/webinars/
-- https://plotly.github.io/plotly-next/export/
-- https://plotly.github.io/plotly-next/plotly-js-scientific-d3-charting-library/
-- https://plotly.github.io/plotly-next/d3-js-for-r-and-shiny-charts/
-- https://plotly.github.io/plotly-next/d3-js-for-python-and-pandas-charts/
+****root****
+- [home](https://plot.ly/)
+- [online-chart-maker](https://plot.ly/online-chart-maker/)
+- [dashboards-and-reports](https://plot.ly/dashboards-and-reports/)
+- [online-presentation-tool](https://plot.ly/online-presentation-tool/)
+- [free-sql-client-download](https://plot.ly/free-sql-client-download/)
+- [webinars](https://plot.ly/webinars/)
+- [export](https://plot.ly/export/)
+- [plotly-js-scientific-d3-charting-library](https://plot.ly/plotly-js-scientific-d3-charting-library/)
+- [d3-js-for-r-and-shiny-charts](https://plot.ly/d3-js-for-r-and-shiny-charts/)
+- [d3-js-for-python-and-pandas-charts](https://plot.ly/d3-js-for-python-and-pandas-charts/)
+
+****/dash/****
+- [dash](https://plot.ly/dash/)
+- [dash/pricing](https://plot.ly/dash/pricing/)
 
 ****/products/****
-- https://plotly.github.io/plotly-next/products/cloud/
-- https://plotly.github.io/plotly-next/products/on-premise/
-- https://plotly.github.io/plotly-next/products/consulting-and-oem/
-- https://plotly.github.io/plotly-next/products/dash/
+- [products/cloud](https://plot.ly/products/cloud/)
+- [products/on-premise](https://plot.ly/products/on-premise/)
+- [products/consulting-and-oem](https://plot.ly/products/consulting-and-oem/)
+- [products/dash](https://plot.ly/products/dash/)
+- [products/react](https://plot.ly/products/react/)
 
 ****/products/industries/****
-- https://plotly.github.io/plotly-next/products/industries/
-- https://plotly.github.io/plotly-next/products/industries/finance
-- https://plotly.github.io/plotly-next/products/industries/aerospace
-- https://plotly.github.io/plotly-next/products/industries/automotive-analytics
-- https://plotly.github.io/plotly-next/products/industries/business-intelligence
-- https://plotly.github.io/plotly-next/products/industries/energy-analytics
-- https://plotly.github.io/plotly-next/products/industries/government-and-public-analytics
-- https://plotly.github.io/plotly-next/products/industries/insurance
-- https://plotly.github.io/plotly-next/products/industries/journalism
-- https://plotly.github.io/plotly-next/products/industries/pharma-analytics
-- https://plotly.github.io/plotly-next/products/industries/research-and-development-analytics
+- [products/industries](https://plot.ly/products/industries/)
+- [products/industries/financ](https://plot.ly/products/industries/finance)
+- [products/industries/aerospac](https://plot.ly/products/industries/aerospace)
+- [products/industries/automotive-analytic](https://plot.ly/products/industries/automotive-analytics)
+- [products/industries/business-intelligenc](https://plot.ly/products/industries/business-intelligence)
+- [products/industries/energy-analytic](https://plot.ly/products/industries/energy-analytics)
+- [products/industries/government-and-public-analytic](https://plot.ly/products/industries/government-and-public-analytics)
+- [products/industries/insuranc](https://plot.ly/products/industries/insurance)
+- [products/industries/journalis](https://plot.ly/products/industries/journalism)
+- [products/industries/pharma-analytic](https://plot.ly/products/industries/pharma-analytics)
+- [products/industries/research-and-development-analytic](https://plot.ly/products/industries/research-and-development-analytics)
 
 ****/products/enterprise/customer-stories/****
-- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/
-- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/c12-energy
-- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/goji
+- [products/enterprise/customer-stories](https://plot.ly/products/enterprise/customer-stories/)
+- [products/enterprise/customer-stories/c12-energ](https://plot.ly/products/enterprise/customer-stories/c12-energy)
+- [products/enterprise/customer-stories/goj](https://plot.ly/products/enterprise/customer-stories/goji)
 
 ## Development
 
