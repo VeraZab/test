@@ -34,6 +34,21 @@ const register = {
 
 const webinars = [
   {
+    title: "Automatic Email Reporting with Plotly's Python API",
+    date: 'Thursday, Feb 15, 2018 2:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
+    presenter: {
+      name: 'Chelsea Douglas',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...register,
+      link: 'https://www.crowdcast.io/e/automatic-email/register',
+    },
+  },
+  {
     title: "Using Plotly's Falcon Database Connector to Create Live Dashboards",
     date: 'Wed, Jan 17, 2018 2:00 PM EST',
     img:
@@ -44,7 +59,7 @@ const webinars = [
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
     action: {
-      ...register,
+      ...watch,
       link: 'https://www.crowdcast.io/e/falcon-database-connector/register',
     },
   },
