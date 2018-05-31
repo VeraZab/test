@@ -1,11 +1,11 @@
-import React from 'react'
-import HeroDetailsSection from './details'
-import HeroGraphicSection from './graphicSection'
-import lozad from 'lozad'
-import { imgix } from 'config/functions'
-import LogosSlice from 'components/prismic/slices/logos'
+import React from 'react';
+import HeroDetailsSection from './details';
+import HeroGraphicSection from './graphicSection';
 
-const shortid = require('shortid')
+import { imgix } from 'config/functions';
+import LogosSlice from 'components/prismic/slices/logos';
+
+const shortid = require('shortid');
 
 /**
  * Hero component
@@ -15,43 +15,46 @@ const shortid = require('shortid')
  */
 export default class Hero extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    let observer = lozad('.hero-prismic-background-image', {
-      threshold: 0,
-      load: function(el) {
-        if (el.dataset.src) {
-          el.src = el.dataset.src
-          el.onload = function() {
-            el.classList.add('image-loaded')
+    const lozad = require('lozad');
+    if (lozad) {
+      let observer = lozad('.hero-prismic-background-image', {
+        threshold: 0,
+        load: function(el) {
+          if (el.dataset.src) {
+            el.src = el.dataset.src;
+            el.onload = function() {
+              el.classList.add('image-loaded');
+            };
+          } else if (el.dataset.backgroundImage) {
+            let img = new Image();
+            img.src = el.dataset.backgroundImage;
+            img.onload = function() {
+              el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`;
+              el.classList.add('image-loaded');
+            };
           }
-        } else if (el.dataset.backgroundImage) {
-          let img = new Image()
-          img.src = el.dataset.backgroundImage
-          img.onload = function() {
-            el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`
-            el.classList.add('image-loaded')
-          }
-        }
-      },
-    })
-    observer.observe()
+        },
+      });
+      observer.observe();
+    }
   }
 
   findSlice = (slices, type) =>
     slices.find(slice => slice.slice_type === type)
       ? slices.find(slice => slice.slice_type === type)
-      : false
+      : false;
 
   render() {
-    let classes = ''
+    let classes = '';
 
-    let { data } = this.props
+    let { data } = this.props;
 
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
     /**
@@ -61,7 +64,7 @@ export default class Hero extends React.Component {
      * column || row
      */
     if (data.hero_layout !== null || data.hero_layout !== '') {
-      classes += ' hero-prismic-layout--' + data.hero_layout
+      classes += ' hero-prismic-layout--' + data.hero_layout;
     }
     /**
      * Background Style
@@ -73,31 +76,32 @@ export default class Hero extends React.Component {
       data.hero_background_style !== null ||
       data.hero_background_style !== ''
     ) {
-      classes += ' hero-prismic-style--' + data.hero_background_style
+      classes += ' hero-prismic-style--' + data.hero_background_style;
     }
 
-    let HeroStyle = {}
-    let HeroWrapperStyle = {}
+    let HeroStyle = {};
+    let HeroWrapperStyle = {};
 
     if (this.props.style) {
-      HeroStyle = this.props.style
+      HeroStyle = this.props.style;
     }
 
     if (data.hero_background_image.url) {
-      data.hero_background_image.url = imgix(data.hero_background_image.url)
+      data.hero_background_image.url = imgix(data.hero_background_image.url);
     }
     const HeroWrapperBg = data.hero_background_image.url
       ? {
-          backgroundImage: `url(${data.hero_background_image
-            .url}?w=2200&auto=format)`,
+          backgroundImage: `url(${
+            data.hero_background_image.url
+          }?w=2200&auto=format)`,
           backgroundSize: data.hero_background_size,
           backgroundPosition: data.hero_background_position,
           backgroundRepeat: 'no-repeat',
         }
-      : {}
+      : {};
 
     if (this.props.heroWrapperStyle) {
-      HeroWrapperStyle = this.props.heroWrapperStyle
+      HeroWrapperStyle = this.props.heroWrapperStyle;
     }
 
     /**
@@ -108,8 +112,8 @@ export default class Hero extends React.Component {
      * will find the first one and display it.
      *
      */
-    const slice_Logos = this.findSlice(data.hero_slices, 'logos')
-    const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null
+    const slice_Logos = this.findSlice(data.hero_slices, 'logos');
+    const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null;
 
     return (
       <section
@@ -133,6 +137,6 @@ export default class Hero extends React.Component {
           style={HeroWrapperBg}
         />
       </section>
-    )
+    );
   }
 }
