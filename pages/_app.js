@@ -13,6 +13,11 @@ import { transformData } from 'lib/transform-data.prismic';
 import { connect } from 'react-redux';
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {};
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
     const { reduxStore, query = { slug: 'home' } } = ctx;
     const { slug = 'home' } = query;
     /**
@@ -23,26 +28,12 @@ class MyApp extends App {
 
     let currentDoc = {};
 
-    if (
-      state.subscriptions &&
-      !state.subscriptions.error &&
-      !state.subscriptions.fetching
-    ) {
-      reduxStore.dispatch(fetchSubscriptionData());
-      await fetch('https://api.plot.ly/v2/subscriptions')
-        .then(res => res.json())
-        .then(data => reduxStore.dispatch(fetchSubscriptionDataFinished(data)))
-        .catch(error => reduxStore.dispatch(fetchSubscriptionDataError(error)));
-    }
-
     if (state && state.loaded) {
       const content = await transformData(
         reduxStore.getState().data.appData,
         slug,
       );
-      currentDoc = reduxStore
-        .getState()
-        .data.appData.find(doc => doc.uid === slug);
+      currentDoc = content.pages.find(doc => doc.uid === slug);
 
       reduxStore.dispatch(
         saveStoreData({
@@ -56,11 +47,12 @@ class MyApp extends App {
       return {
         slug: slug,
         req: true,
+        pageProps,
       };
     } else {
       const appData = await fetchData();
       const content = await transformData(appData, slug);
-      currentDoc = appData.find(doc => doc.uid === slug);
+      currentDoc = content.pages.find(doc => doc.uid === slug);
       reduxStore.dispatch(
         saveStoreData({
           appData: appData,
@@ -72,6 +64,7 @@ class MyApp extends App {
       return {
         slug: slug,
         req: false,
+        pageProps,
       };
     }
   }
@@ -93,6 +86,7 @@ class MyApp extends App {
 const ConnectedComponent = Component => {
   const mapStateToProps = state => ({
     doc: state.data.currentDoc,
+    content: state.data.content,
   });
 
   return connect(mapStateToProps)(Component);

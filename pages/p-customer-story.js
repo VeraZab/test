@@ -4,10 +4,6 @@ import Layout from 'components/layoutHOC';
 import Hero from 'components/prismic/hero';
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
-import { fetchData } from 'lib/fetchData';
-import { bindActionCreators } from 'redux';
-import { initStore, saveStoreData } from 'store/global';
-import withRedux from 'next-redux-wrapper';
 
 const shortid = require('shortid');
 import NotFound from 'components/404';
@@ -19,13 +15,15 @@ class PCS extends Component {
     super(props);
   }
 
-  getDoc = data =>
-    data.find(
+  getDoc = () =>
+    this.props.content &&
+    this.props.content.customer_stories &&
+    this.props.content.customer_stories.find(
       doc => doc.uid === this.props.slug && doc.type === 'customer-story',
     );
 
   render() {
-    const doc = this.getDoc(this.props.reduxData);
+    const doc = this.getDoc(this.props.content);
 
     if (doc === undefined) {
       return <NotFound />;
@@ -72,14 +70,5 @@ class PCS extends Component {
     }
   }
 }
-
-const mapDispatchToProps = dispatch => ({
-  saveStoreData: bindActionCreators(saveStoreData, dispatch),
-});
-
-const mapStateToProps = state => ({
-  reduxData: state.data ? state.data.appData : [],
-  doc: state.data ? state.data.currentDoc : [],
-});
 
 export default Layout(PCS);

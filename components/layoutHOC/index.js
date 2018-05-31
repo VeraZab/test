@@ -18,7 +18,7 @@ function Layout(Child) {
     }
 
     static getInitialProps(context) {
-      return Child.getInitialProps(context);
+      return Child.getInitialProps ? Child.getInitialProps(context) : {};
     }
 
     componentWillMount() {
