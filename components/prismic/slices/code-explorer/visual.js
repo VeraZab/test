@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import createPlotlyComponent from 'react-plotly.js/factory';
 import axios from 'axios';
 const PlotlyComponent = createPlotlyComponent(Plotly);
@@ -25,7 +25,7 @@ export default class CodeVisual extends React.Component {
   async fetchData() {
     const { data, layout } = this.props;
 
-    if (data || layout) {
+    if ((data || layout) && !this.state.loading) {
       this.setState({
         loading: true,
       });
@@ -34,7 +34,7 @@ export default class CodeVisual extends React.Component {
     if (data) {
       await axios
         .get(data)
-        .then((res) => {
+        .then(res => {
           this.setState({
             data: res.data,
             dataLoaded: true,
@@ -45,7 +45,7 @@ export default class CodeVisual extends React.Component {
     if (layout) {
       await axios
         .get(layout)
-        .then((res) => {
+        .then(res => {
           this.setState({
             layout: res.data,
             layoutLoaded: true,
@@ -71,12 +71,12 @@ export default class CodeVisual extends React.Component {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (
       (this.props.data && !this.state.dataLoaded) ||
       (this.props.layout && !this.state.layoutLoaded)
     ) {
-      this.fetchData();
+      await this.fetchData();
     }
   }
 
@@ -86,12 +86,18 @@ export default class CodeVisual extends React.Component {
     const { key, size: { width, height } } = this.props;
 
     if (loading) {
-      return <div style={{
-        flexGrow: '1',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>Loading...</div>;
+      return (
+        <div
+          style={{
+            flexGrow: '1',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          Loading...
+        </div>
+      );
     }
 
     let Data = null;
