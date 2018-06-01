@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 
+export const offset = 240;
 const StyledPricing = styled.div`
   position: relative;
   z-index: 99;
@@ -139,8 +140,8 @@ const StyledLine = styled.div`
       }
       border-bottom: 0;
       position: sticky;
-      top: 210px;
-      transform: translateY(-210px);
+      top: ${offset - 1}px;
+      transform: translateY(-${offset}px);
       z-index: 99;
 
       ${Item} {
@@ -232,7 +233,7 @@ const Subtitle = styled.div`
 `;
 
 const Rows = styled.div`
-  transform: translateY(-210px);
+  transform: translateY(-${offset}px);
   background: #f3f6fa;
   ${StyledLine} {
     @media (max-width: 999px) {

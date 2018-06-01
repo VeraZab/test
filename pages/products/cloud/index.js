@@ -3,7 +3,7 @@ import Layout from 'components/global/layout';
 import Hero from './hero';
 import Type from 'components/styled/typography';
 import SupportBanner from 'components/cta-banner/static/support/support-banner';
-import { Plan, StyledPricing } from './partials/plans';
+import { Plan, StyledPricing, offset } from './partials/plans';
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon, QuestionMarkCircleIcon, SchoolIcon } from 'mdi-react';
 import { Button } from 'components/styled/button';
 import numeral from 'numeral';
@@ -164,21 +164,21 @@ const Plans = ({items, showing, navigation, ...rest}) =>
     <StyledPricing.Line header { ...rest }>
       <StyledPricing.Navigation>{ navigation }</StyledPricing.Navigation>
       <StyledPricing.Line.Item spacer>&nbsp;</StyledPricing.Line.Item>
-      { items.map(({title, subtitle, slug, cost, link}, i) => (
+      { items.map(({title, tooltip, slug, cost, subtitle, link}, i) => (
         <>
           <StyledPricing.Line.Item key={ i } heading showing={ i === showing }>
-            <Plan.Name onClick={ subtitle && subtitle.onClick ? () => subtitle.onClick() : null }>
+            <Plan.Name onClick={ tooltip && tooltip.onClick ? () => tooltip.onClick() : null }>
               <Type.h4 color="currentColor">{ title }</Type.h4>
-              { subtitle && (
-                <Subtitle { ...subtitle } />
+              { tooltip && (
+                <ToolTip { ...tooltip } />
               ) }
             </Plan.Name>
             <Plan.Content>
               <Plan.Content.Price>
                 <Type.h3>{ numeral(cost).format('$0,0') }</Type.h3>
-                <small>per year, per user</small>
+                { subtitle ? <small style={{textAlign: 'center', lineHeight: 1.8, paddingTop: '10px'}}>{ subtitle }</small> : null }
               </Plan.Content.Price>
-              <Button primary href={link} target="_blank">Sign Up</Button>
+              <Button primary href={ link } target="_blank">Sign Up</Button>
             </Plan.Content>
           </StyledPricing.Line.Item>
         </>
@@ -197,7 +197,7 @@ const NoMarkItem = props => (
   </StyledPricing.Line.Item>
 );
 
-const Subtitle = ({value, icon, onClick, ...rest}) => {
+const ToolTip = ({value, icon, onClick, ...rest}) => {
   const Icon = icon ? icon : QuestionMarkCircleIcon
   const handleClick = () => onClick ? () => onClick : () => null
   return <Plan.Content.Subtitle onClick={ () => handleClick() } { ...rest }>
@@ -289,11 +289,12 @@ export default class CloudPricing extends React.Component {
     const dynamicPlan = {
       title: isPersonalPlan ? 'Personal' : 'Student',
       slug: isPersonalPlan ? PLANS.PERSONAL : PLANS.STUDENT,
-      subtitle: {
+      tooltip: {
         value: 'Toggle Student Pricing',
         icon: SchoolIcon,
         onClick: () => this.togglePersonalPlan()
       },
+      subtitle: <>per year,<br />per single user</>,
       cost: isPersonalPlan ? 420 : 96,
       link: isPersonalPlan ? 'https://plot.ly/settings/subscription?modal=subscription&plan=personal' : 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
     }
@@ -302,23 +303,23 @@ export default class CloudPricing extends React.Component {
         title: 'Community',
         slug: PLANS.COMMUNITY,
         cost: 0,
-        link: 'https://plot.ly/accounts/login/?action=signup#/'
+        link: 'https://plot.ly/accounts/login/?action=signup#/',
+        subtitle: <>per year,<br />per single user</>,
       },
       {...dynamicPlan},
       {
         title: 'Professional',
         slug: PLANS.PROFESSIONAL,
         cost: 840,
-        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional'
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
+        subtitle: <>per year,<br />per single user</>,
       },
       {
         title: 'Private Cloud',
-        subtitle: {
-          value: 'Comes with 5 Pro accounts'
-        },
         slug: PLANS.PRIVATE_CLOUD,
         cost: 9960,
-        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=private_cloud'
+        link: 'https://plot.ly/products/on-premise/',
+        subtitle: <>per year,<br />comes with 5 Pro. users</>,
       },
     ];
     return (
@@ -338,7 +339,7 @@ export default class CloudPricing extends React.Component {
         </StyledPricing>
         { /*<PricingDetails />*/ }
         <SupportBanner style={ {
-          transform: 'translateY(-211px)'
+          transform: `translateY(-${offset + 1}px)`
         } }/>
       </Layout>
     );
