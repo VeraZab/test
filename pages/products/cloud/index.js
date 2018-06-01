@@ -188,12 +188,12 @@ const Plans = ({items, showing, navigation, ...rest}) =>
 
 const CheckMarkItem = props => (
   <StyledPricing.Line.Item { ...props }>
-    <CheckIcon color="green"/>
+    <CheckIcon color="#119dff"/>
   </StyledPricing.Line.Item>
 );
 const NoMarkItem = props => (
-  <StyledPricing.Line.Item { ...props }>
-    <CloseIcon color="red"/>
+  <StyledPricing.Line.Item { ...props } mobileOnlyIcon>
+    <CloseIcon color="#a2b1c6"/>
   </StyledPricing.Line.Item>
 );
 
@@ -338,7 +338,7 @@ export default class CloudPricing extends React.Component {
         </StyledPricing>
         { /*<PricingDetails />*/ }
         <SupportBanner style={ {
-          transform: 'translateY(-216px)'
+          transform: 'translateY(-211px)'
         } }/>
       </Layout>
     );

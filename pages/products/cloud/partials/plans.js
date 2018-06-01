@@ -6,6 +6,11 @@ const StyledPricing = styled.div`
   position: relative;
   z-index: 99;
 
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   * {
     box-sizing: border-box;
   }
@@ -22,6 +27,16 @@ const Item = styled.div`
   border-right: 1px solid #dfe8f3;
   position: relative;
   z-index: 99;
+
+  ${({ mobileOnlyIcon }) =>
+    mobileOnlyIcon &&
+    css`
+      svg {
+        @media (min-width: 1000px) {
+          display: none !important;
+        }
+      }
+    `};
 
   @media (max-width: 999px) {
     width: 100%;
@@ -50,9 +65,9 @@ const Item = styled.div`
     label &&
     css`
       background: white;
-      padding-left: 100px;
+      padding-left: 40px;
       border-right: 1px solid #dfe8f3;
-
+      font-weight: 500;
       align-items: flex-end;
       text-align: right;
     `};
@@ -76,6 +91,7 @@ const PlanName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
   svg {
     padding-left: 8px;
     display: block;
@@ -123,8 +139,8 @@ const StyledLine = styled.div`
       }
       border-bottom: 0;
       position: sticky;
-      top: 215px;
-      transform: translateY(-215px);
+      top: 210px;
+      transform: translateY(-210px);
       z-index: 99;
 
       ${Item} {
@@ -171,6 +187,7 @@ const Price = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  user-select: none;
 `;
 
 const Navigation = styled.div`
@@ -215,7 +232,7 @@ const Subtitle = styled.div`
 `;
 
 const Rows = styled.div`
-  transform: translateY(-215px);
+  transform: translateY(-210px);
   background: #f3f6fa;
   ${StyledLine} {
     @media (max-width: 999px) {
