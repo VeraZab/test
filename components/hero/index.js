@@ -32,7 +32,7 @@ export class Hero extends React.Component {
     }
 
     return (
-      <section className={'hero' + classes} style={HeroStyle}>
+      <section className={'hero-prismic' + classes} style={HeroStyle}>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <div className="hero-wrapper">{this.props.children}</div>
         <div className="hero-background-image" style={HeroWrapperStyle} />

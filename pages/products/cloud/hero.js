@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Hero,
   HeroTop,
@@ -7,9 +7,9 @@ import {
   HeroSubtitle,
   HeroActions,
   HeroBottom,
-} from 'components/hero'
-import Buttons from 'components/buttons'
-import { ClientLogos } from 'components/global/client-logos'
+} from 'components/hero';
+import Buttons from 'components/buttons';
+import { ClientLogos } from 'components/global/client-logos';
 
 const HeroButtons = [
   {
@@ -33,7 +33,7 @@ const HeroButtons = [
       classes: 'button button-secondary',
     },
   },
-]
+];
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -41,15 +41,18 @@ const HeroWrapperStyle = {
   backgroundSize: '1640px',
   backgroundPosition: '50% 80%',
   backgroundRepeat: 'no-repeat',
-}
+};
 
 const HeroBottomStyles = {
-  paddingBottom: '130px',
+  paddingBottom: '270px',
   paddingTop: '20px',
-}
+};
 
 export default () => (
-  <Hero heroWrapperStyle={HeroWrapperStyle}>
+  <Hero
+    heroWrapperStyle={HeroWrapperStyle}
+    className="hero-prismic hero-prismic-style--gradient_dark-blue"
+  >
     <HeroTop>
       <HeroMessaging>
         <HeroTitle>Modern visualization for the data era</HeroTitle>
@@ -66,4 +69,4 @@ export default () => (
       <ClientLogos />
     </HeroBottom>
   </Hero>
-)
+);

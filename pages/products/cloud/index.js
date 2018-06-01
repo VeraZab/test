@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from 'components/global/layout';
 import Hero from './hero';
 import Type from 'components/styled/typography';
-import PricingDetails from './pricing';
 import SupportBanner from 'components/cta-banner/static/support/support-banner';
-import { StyledPricing, Plan } from './partials/plans';
-import styled, { css } from 'styled-components';
-import { CheckIcon } from 'mdi-react';
+import { Plan, StyledPricing } from './partials/plans';
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon, QuestionMarkCircleIcon, SchoolIcon } from 'mdi-react';
 import { Button } from 'components/styled/button';
 import numeral from 'numeral';
+import Tooltip from '@atlaskit/tooltip';
+
 const meta = {
   title: 'Pricing and Plans',
   description:
@@ -158,130 +158,183 @@ const features = [
   },
 ];
 
-const studentPlan = {
-  title: 'Student',
-  slug: PLANS.STUDENT,
-  cost: 96,
-};
 
-const personalPlan = {
-  title: 'Personal',
-  slug: PLANS.PERSONAL,
-  cost: 420,
-};
-
-const Plans = ({ items, ...rest }) =>
+const Plans = ({items, showing, navigation, ...rest}) =>
   items.length ? (
-    <StyledPricing.Line header>
+    <StyledPricing.Line header { ...rest }>
+      <StyledPricing.Navigation>{ navigation }</StyledPricing.Navigation>
       <StyledPricing.Line.Item spacer>&nbsp;</StyledPricing.Line.Item>
-      {items.map(({ title, subtitle, slug, cost }, i) => (
-        <StyledPricing.Line.Item key={slug} heading>
-          <Plan.Name>
-            <Type.h4 color="currentColor">{title}</Type.h4>
-          </Plan.Name>
-          <Plan.Content>
-            <Plan.Content.Price>
-              <Type.h3>{numeral(cost).format('$0,0')}</Type.h3>
-            </Plan.Content.Price>
-            <Button primary>Sign Up</Button>
-            {/*{subtitle && (*/}
-              {/*<Plan.Content.Subtitle>*/}
-                {/*<Type.h6 color="currentColor">({subtitle})</Type.h6>*/}
-              {/*</Plan.Content.Subtitle>*/}
-            {/*)}*/}
-          </Plan.Content>
-        </StyledPricing.Line.Item>
-      ))}
+      { items.map(({title, subtitle, slug, cost}, i) => (
+        <>
+          <StyledPricing.Line.Item key={ i } heading showing={ i === showing }>
+            <Plan.Name onClick={ subtitle && subtitle.onClick ? () => subtitle.onClick() : null }>
+              <Type.h4 color="currentColor">{ title }</Type.h4>
+              { subtitle && (
+                <Subtitle { ...subtitle } />
+              ) }
+            </Plan.Name>
+            <Plan.Content>
+              <Plan.Content.Price>
+                <Type.h3>{ numeral(cost).format('$0,0') }</Type.h3>
+              </Plan.Content.Price>
+              <Button primary>Sign Up</Button>
+            </Plan.Content>
+          </StyledPricing.Line.Item>
+        </>
+      )) }
     </StyledPricing.Line>
   ) : null;
 
 const CheckMarkItem = props => (
-  <StyledPricing.Line.Item {...props}>
-    <CheckIcon color="green" />
+  <StyledPricing.Line.Item { ...props }>
+    <CheckIcon color="green"/>
+  </StyledPricing.Line.Item>
+);
+const NoMarkItem = props => (
+  <StyledPricing.Line.Item { ...props }>
+    <CloseIcon color="red"/>
   </StyledPricing.Line.Item>
 );
 
-const renderPlanCheckMarks = (plans, feature) =>
-  plans.map(plan => {
-    console.log(plan.slug);
+const Subtitle = ({value, icon, onClick, ...rest}) => {
+  const Icon = icon ? icon : QuestionMarkCircleIcon
+  const handleClick = () => onClick ? () => onClick : () => null
+  return <Plan.Content.Subtitle onClick={ () => handleClick() } { ...rest }>
+    <Tooltip content={ value }>
+      <Icon color="white"/>
+    </Tooltip>
+  </Plan.Content.Subtitle>
+
+}
+const renderPlanCheckMarks = (plans, feature, showing) =>
+  plans.map((plan, i) => {
     return !!feature.plans.find(featurePlan => featurePlan === plan.slug) ? (
-      <CheckMarkItem />
+      <CheckMarkItem showing={ i === showing }/>
     ) : (
-      <StyledPricing.Line.Item />
+      <NoMarkItem showing={ i === showing }/>
     );
   });
 
-const Features = ({ items, plans, ...rest }) =>
+const Features = ({items, plans, showing, ...rest}) =>
   items.length ? (
     <StyledPricing.Rows>
-      {items.map((feature, i) => {
+      { items.map((feature, i) => {
         return (
-          <StyledPricing.Line key={i} row>
+          <StyledPricing.Line key={ i } row>
             <StyledPricing.Line.Item label>
-              {feature.value}
+              { feature.value }
             </StyledPricing.Line.Item>
-            {renderPlanCheckMarks(plans, feature)}
+            { renderPlanCheckMarks(plans, feature, showing) }
           </StyledPricing.Line>
         );
-      })}
+      }) }
     </StyledPricing.Rows>
   ) : null;
 
 export default class CloudPricing extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  state = {
-    plan: personalPlan,
-  };
-
   togglePersonalPlan = () => {
-    if (this.state.plan.slug === PLANS.PERSONAL) {
+    console.log('toggle')
+    if (this.state.plan === PLANS.PERSONAL) {
       this.setState({
-        plan: studentPlan,
+        plan: PLANS.STUDENT,
       });
     } else {
       this.setState({
-        plan: personalPlan,
+        plan: PLANS.PERSONAL,
       });
     }
   };
 
-  plans = [
-    {
-      title: 'Community',
-      slug: PLANS.COMMUNITY,
-      cost: 0,
-    },
-    { ...this.state.plan },
-    {
-      title: 'Professional',
-      slug: PLANS.PROFESSIONAL,
-      cost: 840,
-    },
-    {
-      title: 'Private Cloud',
-      subtitle: 'comes with 5 Pro accounts',
-      slug: PLANS.PRIVATE_CLOUD,
-      cost: 9960,
-    },
-  ];
 
-  static async getInitialProps({ req, pathname }) {
-    return { pathname: (req && req.url) || pathname };
+  state = {
+    plan: PLANS.PERSONAL,
+    planInViewIndex: 1,
+  };
+
+  updatePlanInViewIndex = (planInViewIndex) => this.setState({
+    planInViewIndex
+  })
+
+  nextPlan = (total) => {
+    const current = this.state.planInViewIndex
+    if (current === total - 1) {
+      this.updatePlanInViewIndex(0)
+    } else {
+      this.updatePlanInViewIndex(current + 1)
+    }
+  }
+
+  prevPlan = (total) => {
+    const current = this.state.planInViewIndex
+    if (current === 0) {
+      this.updatePlanInViewIndex(total - 1)
+    } else {
+      this.updatePlanInViewIndex(current - 1)
+    }
+  }
+
+  constructor(props) {
+    super(props);
+  }
+
+  static async getInitialProps({req, pathname}) {
+    return {pathname: (req && req.url) || pathname};
   }
 
   render() {
+
+    const isPersonalPlan = this.state.plan === PLANS.PERSONAL
+
+    const dynamicPlan = {
+      title: isPersonalPlan ? 'Personal' : 'Student',
+      slug: isPersonalPlan ? PLANS.PERSONAL : PLANS.STUDENT,
+      subtitle: {
+        value: 'Toggle Student Pricing',
+        icon: SchoolIcon,
+        onClick: () => this.togglePersonalPlan()
+      },
+      cost: isPersonalPlan ? 420 : 96,
+    }
+    const plans = [
+      {
+        title: 'Community',
+        slug: PLANS.COMMUNITY,
+        cost: 0,
+      },
+      {...dynamicPlan},
+      {
+        title: 'Professional',
+        slug: PLANS.PROFESSIONAL,
+        cost: 840,
+      },
+      {
+        title: 'Private Cloud',
+        subtitle: {
+          value: 'Comes with 5 Pro accounts'
+        },
+        slug: PLANS.PRIVATE_CLOUD,
+        cost: 9960,
+      },
+    ];
     return (
-      <Layout meta={meta} pathname={this.props.pathname}>
-        <Hero />
+      <Layout meta={ meta } pathname={ this.props.pathname }>
+        <Hero/>
         <StyledPricing>
-          <Plans items={this.plans} />
-          <Features items={features} plans={this.plans} />
+          <Plans items={ plans } showing={ this.state.planInViewIndex }
+                 navigation={ <>
+                   <StyledPricing.Navigation.Button
+                     onClick={ () => this.prevPlan(plans.length) }><ChevronLeftIcon
+                     color="currentColor"/></StyledPricing.Navigation.Button>
+                   <StyledPricing.Navigation.Button
+                     onClick={ () => this.nextPlan(plans.length) }><ChevronRightIcon
+                     color="currentColor"/></StyledPricing.Navigation.Button>
+                 </> }/>
+          <Features items={ features } plans={ plans } showing={ this.state.planInViewIndex }/>
         </StyledPricing>
-        {/*<PricingDetails />*/}
-        <SupportBanner />
+        { /*<PricingDetails />*/ }
+        <SupportBanner style={ {
+          transform: 'translateY(-186px)'
+        } }/>
       </Layout>
     );
   }

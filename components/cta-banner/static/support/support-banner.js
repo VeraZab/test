@@ -81,7 +81,7 @@ export default class SupportBanner extends React.Component {
       });
     };
     return (
-      <CtaBanner>
+      <CtaBanner style={this.props.style}>
         <CtaBannerBody>
           <div className="columns">
             <div className="columns-wrapper">{renderColumns(columnData)}</div>
