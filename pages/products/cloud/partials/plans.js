@@ -27,10 +27,10 @@ const Item = styled.div`
     width: 100%;
   }
 
-  ${({showing, label}) =>
-  !showing &&
-  !label &&
-  css`
+  ${({ showing, label }) =>
+    !showing &&
+    !label &&
+    css`
       @media (max-width: 999px) {
         display: none !important;
       }
@@ -40,15 +40,15 @@ const Item = styled.div`
   }
   &:not(:last-of-type) {
   }
-  ${({spacer}) =>
-  spacer &&
-  css`
+  ${({ spacer }) =>
+    spacer &&
+    css`
       border-right: 0 !important;
       border-bottom: 0 !important;
     `};
-  ${({label}) =>
-  label &&
-  css`
+  ${({ label }) =>
+    label &&
+    css`
       background: white;
       padding-left: 100px;
       border-right: 1px solid #dfe8f3;
@@ -57,9 +57,9 @@ const Item = styled.div`
       text-align: right;
     `};
 
-  ${({heading}) =>
-  heading &&
-  css`
+  ${({ heading }) =>
+    heading &&
+    css`
       border-right: 0;
       display: flex !important;
       flex-direction: column !important;
@@ -100,9 +100,9 @@ const StyledLine = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
-  ${({row}) =>
-  row &&
-  css`
+  ${({ row }) =>
+    row &&
+    css`
       &:hover {
         background: white;
         ${Item} {
@@ -110,9 +110,9 @@ const StyledLine = styled.div`
         }
       }
     `};
-  ${({header}) =>
-  header &&
-  css`
+  ${({ header }) =>
+    header &&
+    css`
       h1,
       h2,
       h3,
@@ -123,8 +123,8 @@ const StyledLine = styled.div`
       }
       border-bottom: 0;
       position: sticky;
-      top: 185px;
-      transform: translateY(-185px);
+      top: 215px;
+      transform: translateY(-215px);
       z-index: 99;
 
       ${Item} {
@@ -168,6 +168,9 @@ const Plan = styled.div`
 const Price = styled.div`
   padding-top: 0;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Navigation = styled.div`
@@ -212,7 +215,7 @@ const Subtitle = styled.div`
 `;
 
 const Rows = styled.div`
-  transform: translateY(-185px);
+  transform: translateY(-215px);
   background: #f3f6fa;
   ${StyledLine} {
     @media (max-width: 999px) {

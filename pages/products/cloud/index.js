@@ -176,6 +176,7 @@ const Plans = ({items, showing, navigation, ...rest}) =>
             <Plan.Content>
               <Plan.Content.Price>
                 <Type.h3>{ numeral(cost).format('$0,0') }</Type.h3>
+                <small>per year, per user</small>
               </Plan.Content.Price>
               <Button primary>Sign Up</Button>
             </Plan.Content>
@@ -294,18 +295,21 @@ export default class CloudPricing extends React.Component {
         onClick: () => this.togglePersonalPlan()
       },
       cost: isPersonalPlan ? 420 : 96,
+      link: isPersonalPlan ? 'https://plot.ly/settings/subscription?modal=subscription&plan=personal' : 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
     }
     const plans = [
       {
         title: 'Community',
         slug: PLANS.COMMUNITY,
         cost: 0,
+        signUpLink: 'https://plot.ly/accounts/login/?action=signup#/'
       },
       {...dynamicPlan},
       {
         title: 'Professional',
         slug: PLANS.PROFESSIONAL,
         cost: 840,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional'
       },
       {
         title: 'Private Cloud',
@@ -314,6 +318,7 @@ export default class CloudPricing extends React.Component {
         },
         slug: PLANS.PRIVATE_CLOUD,
         cost: 9960,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=private_cloud'
       },
     ];
     return (
@@ -333,7 +338,7 @@ export default class CloudPricing extends React.Component {
         </StyledPricing>
         { /*<PricingDetails />*/ }
         <SupportBanner style={ {
-          transform: 'translateY(-186px)'
+          transform: 'translateY(-216px)'
         } }/>
       </Layout>
     );
