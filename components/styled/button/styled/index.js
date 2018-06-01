@@ -5,10 +5,10 @@ import { rgba } from 'polished';
 const Label = styled.div`
   color: currentColor;
 `;
-const StyledButton = styled.div`
+const StyledButton = styled.a`
   padding: 8px 24px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 500 !important;
   letter-spacing: 1px;
   font-size: 14px;
   border-radius: 5px;
@@ -17,6 +17,7 @@ const StyledButton = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
+  text-decoration: none !important;
   ${({ primary }) =>
     primary &&
     css`

@@ -16,7 +16,7 @@ const meta = {
   url: 'https://plot.ly/products/cloud/',
   twitter: {
     label1: 'Most Popular Plan',
-    data1: 'Plotly Professional @ $948/year',
+    data1: 'Plotly Professional @ $840/year',
   },
 };
 
@@ -164,7 +164,7 @@ const Plans = ({items, showing, navigation, ...rest}) =>
     <StyledPricing.Line header { ...rest }>
       <StyledPricing.Navigation>{ navigation }</StyledPricing.Navigation>
       <StyledPricing.Line.Item spacer>&nbsp;</StyledPricing.Line.Item>
-      { items.map(({title, subtitle, slug, cost}, i) => (
+      { items.map(({title, subtitle, slug, cost, link}, i) => (
         <>
           <StyledPricing.Line.Item key={ i } heading showing={ i === showing }>
             <Plan.Name onClick={ subtitle && subtitle.onClick ? () => subtitle.onClick() : null }>
@@ -178,7 +178,7 @@ const Plans = ({items, showing, navigation, ...rest}) =>
                 <Type.h3>{ numeral(cost).format('$0,0') }</Type.h3>
                 <small>per year, per user</small>
               </Plan.Content.Price>
-              <Button primary>Sign Up</Button>
+              <Button primary href={link} target="_blank">Sign Up</Button>
             </Plan.Content>
           </StyledPricing.Line.Item>
         </>
@@ -302,7 +302,7 @@ export default class CloudPricing extends React.Component {
         title: 'Community',
         slug: PLANS.COMMUNITY,
         cost: 0,
-        signUpLink: 'https://plot.ly/accounts/login/?action=signup#/'
+        link: 'https://plot.ly/accounts/login/?action=signup#/'
       },
       {...dynamicPlan},
       {
