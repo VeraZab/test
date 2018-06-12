@@ -10,7 +10,7 @@ const meta = {
   url: 'https://plot.ly/products/cloud/',
   twitter: {
     label1: 'Most Popular Plan',
-    data1: 'Plotly Professional @ $948/year',
+    data1: 'Plotly Professional @ $840/year',
   },
 }
 
