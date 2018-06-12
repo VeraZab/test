@@ -10,7 +10,7 @@ const pricingLevels = [
     messageAction: null,
     price: {
       monthly: '33',
-      annually: '59',
+      annually: '99',
       frequency: 'per year',
       users: 'per user',
     },
@@ -56,7 +56,7 @@ const pricingLevels = [
     messageAction: null,
     price: {
       monthly: '33',
-      annually: '396',
+      annually: '420',
       frequency: 'per year',
       users: 'per user',
     },
@@ -102,7 +102,7 @@ const pricingLevels = [
     messageAction: null,
     price: {
       monthly: '79',
-      annually: '948',
+      annually: '840',
       frequency: 'per year',
       users: 'per user',
     },
