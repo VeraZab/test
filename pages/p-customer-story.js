@@ -4,23 +4,31 @@ import Layout from 'components/layoutHOC';
 import Hero from 'components/prismic/hero';
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
-
-const shortid = require('shortid');
 import NotFound from 'components/404';
 import Image from 'components/prismic/Image/index';
 import PrismicDOM from 'prismic-dom';
 
-class PCS extends Component {
-  constructor(props) {
-    super(props);
-  }
+const shortid = require('shortid');
 
+class PCS extends Component {
   getDoc = () =>
     this.props.content &&
     this.props.content.customer_stories &&
     this.props.content.customer_stories.find(
       doc => doc.uid === this.props.slug && doc.type === 'customer-story',
     );
+
+  constructor(props) {
+    super(props);
+  }
+
+  static getInitialProps({ query }) {
+    const { slug } = query;
+
+    return {
+      slug,
+    };
+  }
 
   render() {
     const doc = this.getDoc(this.props.content);

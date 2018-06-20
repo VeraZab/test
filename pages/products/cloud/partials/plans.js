@@ -115,7 +115,8 @@ const StyledLine = styled.div`
   @media (min-width: 1000px) {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: ${({ amount }) =>
+      amount ? `repeat(${amount}, 1fr);` : 'repeat(5, 1fr);'};
   }
   ${({ row }) =>
     row &&
