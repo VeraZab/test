@@ -46,8 +46,9 @@ Run `yarn run dev` to enter development mode. This will launch a server for you 
 
 ## Deployment
 
-Please make PR's to add anything. PR's will be merged to `master` and then to `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
+If you make changes to the actual code, make a PR. PR's will be merged to `master` and then to `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
 
+If you only make changes to the content on prismic.io, then you'll need to publish on prismic.io and then manually rebuild the `production` branch on circleci (https://circleci.com/gh/plotly/plotly-next/tree/production). This will get the changes from prismic.io and redeploy to `gh-pages`.
 
 ## Next.js
 
