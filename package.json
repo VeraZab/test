@@ -81,9 +81,6 @@
   },
   "homepage": "https://plot.ly/",
   "license": "UNLICENSED",
-  "now": {
-    "alias": "plotly-prismic.ineffable.digital"
-  },
   "repository": "plotly/plotly-next",
   "scripts": {
     "build": "next build",
