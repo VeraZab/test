@@ -1,1 +1,4 @@
-{ "name": "plotly-www" }
+{
+  "name": "plotly-www",
+  "type": "npm"
+}
