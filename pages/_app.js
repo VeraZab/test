@@ -3,12 +3,7 @@ import React from 'react';
 import withReduxStore from 'lib/withReduxStore';
 import { Provider } from 'react-redux';
 import { fetchData } from 'lib/fetchData';
-import {
-  saveStoreData,
-  fetchSubscriptionData,
-  fetchSubscriptionDataFinished,
-  fetchSubscriptionDataError,
-} from 'store/global';
+import { saveStoreData } from 'store/global';
 import { transformData } from 'lib/transform-data.prismic';
 import { connect } from 'react-redux';
 class MyApp extends App {
@@ -68,6 +63,12 @@ class MyApp extends App {
       };
     }
   }
+
+  componentDidMount() {
+    require('intersection-observer');
+
+  }
+
 
   render() {
     const { Component, pageProps, reduxStore } = this.props;
