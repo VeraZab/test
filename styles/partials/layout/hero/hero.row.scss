@@ -1,7 +1,9 @@
 .hero-prismic {
 
   --details-width: 45%;
+  $details-width: 45%;
   --graphic-width: 55%;
+  $graphic-width: 55%;
 
   $c: &;
 
@@ -52,25 +54,29 @@
           padding-top: 0;
           flex-grow: 1;
           @include media('>900px') {
-            max-width: var(--details-width);
+            max-width: $details-width;
+            width: $details-width;
             margin-left: 0;
             margin-right: 0;
             padding-bottom: $unit*4;
           }
           @include media("<=1250px") {
             min-width: 620px;
+            width: 620px;
           }
           @include media("<=960px") {
             min-width: 420px;
+            width: 420px;
           }
           @include media("<800px") {
             min-width: 0px;
+            width: 100%;
           }
         }
         .hero-prismic-graphic-section {
           align-self: flex-end;
           @include media('>900px') {
-            max-width: var(--graphic-width);
+            max-width: $graphic-width;
             transform-origin: left bottom;
             padding-bottom: $unit*4;
           }

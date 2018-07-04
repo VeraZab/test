@@ -1,35 +1,34 @@
-import React from 'react'
-import { images } from 'config/constants'
-import { imgix } from 'config/functions'
-import Img from './img'
-import lozad from 'lozad'
+import React from 'react';
+import { images } from 'config/constants';
+import { imgix } from 'config/functions';
+import Img from './img';
 
-const shortid = require('shortid')
+const shortid = require('shortid');
 
 export default class Image extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {}
 
   render() {
-    let { data } = this.props
+    let { data } = this.props;
 
-    data.url = imgix(data.url)
+    data.url = imgix(data.url);
 
-    let aspectRatio, imageParams, image, style
+    let aspectRatio, imageParams, image, style;
 
-    let background = false
-    let position = ''
+    let background = false;
+    let position = '';
 
     if (this.props.background) {
-      background = true
-      position = this.props.position
+      background = true;
+      position = this.props.position;
     }
 
     if (this.props.size) {
-      let aspectRatio = this.props.size.h / this.props.size.w * 100
+      let aspectRatio = this.props.size.h / this.props.size.w * 100;
       imageParams = {
         ar: aspectRatio + '%',
         preview:
@@ -54,11 +53,11 @@ export default class Image extends React.Component {
           '&q=' +
           images.hq.quality +
           '&auto=format',
-      }
+      };
       style = {
         height: '0',
         paddingBottom: imageParams.ar,
-      }
+      };
       image = (
         <Img
           background={background}
@@ -68,9 +67,9 @@ export default class Image extends React.Component {
           imageParams={imageParams}
           styles={style}
         />
-      )
+      );
     } else {
-      aspectRatio = data.dimensions.height / data.dimensions.width * 100
+      aspectRatio = data.dimensions.height / data.dimensions.width * 100;
       imageParams = {
         preview:
           '?w=' +
@@ -90,11 +89,11 @@ export default class Image extends React.Component {
           '&fit=crop&crop=top,left&q=' +
           images.hq.quality +
           '&auto=format',
-      }
+      };
       style = {
         height: '0',
         paddingBottom: Math.floor(aspectRatio) + '%',
-      }
+      };
       image = (
         <Img
           key={shortid.generate()}
@@ -106,9 +105,9 @@ export default class Image extends React.Component {
           styles={style}
           noBlur={this.props.noBlur}
         />
-      )
+      );
     }
 
-    return image
+    return image;
   }
 }

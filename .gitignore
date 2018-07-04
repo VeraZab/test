@@ -80,4 +80,7 @@ Thumbs.db`
 .nvmrc
 .dropbox
 
+package-lock.json
+yarn.lock
+
 
