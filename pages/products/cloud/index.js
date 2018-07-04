@@ -169,18 +169,18 @@ export default class CloudPricing extends React.Component {
         subtitle: <>per year,<br/>per single user</>,
       },
       {
-        title: 'Personal',
-        slug: PLANS.PERSONAL,
-        subtitle: <>per year,<br/>per single user</>,
-        cost: 420,
-        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
-      },
-      {
         title: 'Student',
         slug: PLANS.STUDENT,
         subtitle: <>per year,<br/>per single user</>,
         cost: 96,
         link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
+      },
+      {
+        title: 'Personal',
+        slug: PLANS.PERSONAL,
+        subtitle: <>per year,<br/>per single user</>,
+        cost: 420,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
       },
       {
         title: 'Professional',
