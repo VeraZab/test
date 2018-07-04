@@ -69,7 +69,10 @@
   }
 
   &--emerald {
-    --header-bg: $color-emerald;
+
+    .pricing__card__header__title{
+      background: $color-emerald;
+    }
 
     @include media('>1385px') {
       transform: translateY(-20px);
@@ -108,7 +111,8 @@
     }
 
     &__title {
-      background: var(--header-bg);
+      background: $color-rhino-core;
+      text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
