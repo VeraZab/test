@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import App, { Container } from 'next/app';
 import React from 'react';
 import withReduxStore from 'lib/withReduxStore';
@@ -63,12 +64,6 @@ class MyApp extends App {
       };
     }
   }
-
-  componentDidMount() {
-    require('intersection-observer');
-
-  }
-
 
   render() {
     const { Component, pageProps, reduxStore } = this.props;

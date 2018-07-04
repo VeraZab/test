@@ -5,7 +5,7 @@
       {
         "modules": false,
         "debug": true,
-        "useBuiltIns": "usage",
+        "useBuiltIns": "entry",
         "targets": {
           "browsers": [
             "Explorer 11",

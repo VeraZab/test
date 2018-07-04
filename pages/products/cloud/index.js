@@ -4,10 +4,11 @@ import Hero from './hero';
 import Type from 'components/styled/typography';
 import SupportBanner from 'components/cta-banner/static/support/support-banner';
 import { offset, Plan, StyledPricing } from './partials/plans';
-import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon, QuestionMarkCircleIcon, SchoolIcon } from 'mdi-react';
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon, QuestionMarkCircleIcon } from 'mdi-react';
 import { Button } from 'components/styled/button';
 import numeral from 'numeral';
 import Tooltip from '@atlaskit/tooltip';
+import { features, PLANS, PLANS_TO_HIDE } from './data/new';
 
 const meta = {
   title: 'Pricing and Plans',
@@ -20,148 +21,6 @@ const meta = {
   },
 };
 
-const PLANS = {
-  COMMUNITY: 'plans/community',
-  PERSONAL: 'plans/personal',
-  PROFESSIONAL: 'plans/professional',
-  PRIVATE_CLOUD: 'plans/private_cloud',
-  STUDENT: 'plans/student',
-};
-
-/**
- * To hide a plan, add its slug here
- */
-const PLANS_TO_HIDE = [PLANS.PRIVATE_CLOUD]
-
-const features = [
-  {
-    value: `25 public charts`,
-    plans: [
-      PLANS.COMMUNITY,
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `Unlimited public charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `800 private charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `Unlimited private charts`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Unlimited dashboards`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `No watermark on charts`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Community support`,
-    plans: [
-      PLANS.COMMUNITY,
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `24h Chat support`,
-    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Phone support`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Live update charts with Python, R, or SQL`,
-    plans: [
-      PLANS.COMMUNITY,
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `1,000 chart and image saves / day`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `10,000 chart and image saves / day`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `25 secret link chart views / day`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `Unlimited secret link chart views / day`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `2 collaborators per chart`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `Unlimited collaborators per chart`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Dedicated, private Plotly server on AWS, Google Cloud, or Azure`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Unlimited Dash apps and app viewers ($5,000 add-on)`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `LDAP authentication`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `LDAP group permissions control`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Falcon server for data warehouse connection`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-];
 
 const filteredAmount = (items) => items.filter(item => PLANS_TO_HIDE.find(hide => hide !== item.slug)).length + 1;
 
@@ -301,20 +160,6 @@ export default class CloudPricing extends React.Component {
 
   render() {
 
-    const isPersonalPlan = this.state.plan === PLANS.PERSONAL
-
-    const dynamicPlan = {
-      title: isPersonalPlan ? 'Personal' : 'Student',
-      slug: isPersonalPlan ? PLANS.PERSONAL : PLANS.STUDENT,
-      tooltip: {
-        value: 'Toggle Student & Instructor Pricing',
-        icon: SchoolIcon,
-        onClick: () => this.togglePersonalPlan()
-      },
-      subtitle: <>per year,<br/>per single user</>,
-      cost: isPersonalPlan ? 420 : 96,
-      link: isPersonalPlan ? 'https://plot.ly/settings/subscription?modal=subscription&plan=personal' : 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
-    }
     const plans = [
       {
         title: 'Community',
@@ -323,20 +168,26 @@ export default class CloudPricing extends React.Component {
         link: 'https://plot.ly/accounts/login/?action=signup#/',
         subtitle: <>per year,<br/>per single user</>,
       },
-      {...dynamicPlan},
+      {
+        title: 'Personal',
+        slug: PLANS.PERSONAL,
+        subtitle: <>per year,<br/>per single user</>,
+        cost: 420,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
+      },
+      {
+        title: 'Student',
+        slug: PLANS.STUDENT,
+        subtitle: <>per year,<br/>per single user</>,
+        cost: 96,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
+      },
       {
         title: 'Professional',
         slug: PLANS.PROFESSIONAL,
         cost: 840,
         link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
         subtitle: <>per year,<br/>per single user</>,
-      },
-      {
-        title: 'Private Cloud',
-        slug: PLANS.PRIVATE_CLOUD,
-        cost: 9960,
-        link: 'https://plot.ly/products/on-premise/',
-        subtitle: <>per year,<br/>comes with 5 Pro. users</>,
       },
     ];
     return (
