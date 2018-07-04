@@ -12,7 +12,7 @@ const columnData = [
     actions: null,
   },
   {
-    title: 'Need Engineering Support?',
+    title: 'Need Developer Support?',
     message: 'Get chat and support from our awesome engineering team.',
     graphic:
       'https://prismic-io.s3.amazonaws.com/plotly%2Fa0259b03-5b79-46da-ab4a-9c64cc50e284_engineering_supoort%402x.png',

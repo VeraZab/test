@@ -41,7 +41,8 @@ const Plans = ({items, showing, navigation, ...rest}) =>
             </Plan.Name>
             <Plan.Content>
               <Plan.Content.Price>
-                <Type.h3>{ numeral(cost).format('$0,0') }</Type.h3>
+                <Type.h3>{
+                  cost ? numeral(cost).format('$0,0') : "Free" }</Type.h3>
                 { subtitle ? <small
                   style={ {textAlign: 'center', lineHeight: 1.8, paddingTop: '10px'} }>{ subtitle }</small> : null }
               </Plan.Content.Price>
@@ -162,32 +163,32 @@ export default class CloudPricing extends React.Component {
 
     const plans = [
       {
-        title: 'Community',
-        slug: PLANS.COMMUNITY,
-        cost: 0,
-        link: 'https://plot.ly/accounts/login/?action=signup#/',
-        subtitle: <>per year,<br/>per single user</>,
-      },
-      {
-        title: 'Student',
-        slug: PLANS.STUDENT,
-        subtitle: <>per year,<br/>per single user</>,
-        cost: 96,
-        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
-      },
-      {
-        title: 'Personal',
-        slug: PLANS.PERSONAL,
-        subtitle: <>per year,<br/>per single user</>,
-        cost: 420,
-        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
-      },
-      {
         title: 'Professional',
         slug: PLANS.PROFESSIONAL,
         cost: 840,
         link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
-        subtitle: <>per year,<br/>per single user</>,
+        subtitle: <>USD per year, per user</>,
+      },
+      {
+        title: 'Personal',
+        slug: PLANS.PERSONAL,
+        subtitle: <>USD per year, per user</>,
+        cost: 420,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
+      },
+      {
+        title: 'Student',
+        slug: PLANS.STUDENT,
+        subtitle: <>USD per year, per user</>,
+        cost: 99,
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
+      },
+      {
+        title: 'Community',
+        slug: PLANS.COMMUNITY,
+        cost: 0,
+        link: 'https://plot.ly/accounts/login/?action=signup#/',
+        subtitle: <>&nbsp;</>,
       },
     ];
     return (

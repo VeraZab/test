@@ -13,7 +13,7 @@ const PLANS_TO_HIDE = [PLANS.PRIVATE_CLOUD];
 
 const features = [
   {
-    value: `25 public charts`,
+    value: `Public charts & dashboards`,
     plans: [
       PLANS.COMMUNITY,
       PLANS.PERSONAL,
@@ -23,52 +23,13 @@ const features = [
     ],
   },
   {
-    value: `Unlimited public charts`,
+    value: `Private charts & dashboards`,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
       PLANS.PRIVATE_CLOUD,
       PLANS.STUDENT,
     ],
-  },
-  {
-    value: `800 private charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `Unlimited private charts`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Unlimited dashboards`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `No watermark on charts`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Community support`,
-    plans: [
-      PLANS.COMMUNITY,
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
-  },
-  {
-    value: `24h Chat support`,
-    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Phone support`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
     value: `Live update charts with Python, R, or SQL`,
@@ -81,7 +42,17 @@ const features = [
     ],
   },
   {
-    value: `1,000 chart and image saves / day`,
+    value: `25 charts`,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: `2500 charts`,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
@@ -90,11 +61,23 @@ const features = [
     ],
   },
   {
-    value: `10,000 chart and image saves / day`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
+    value: `Unlimited charts`,
+    plans: [
+      PLANS.PROFESSIONAL,
+    ],
   },
   {
-    value: `25 secret link chart views / day`,
+    value: <>Export to PNG & JPG</>,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: <>Export to <br /> SVG, EPS, HTML & PDF</>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
@@ -103,11 +86,17 @@ const features = [
     ],
   },
   {
-    value: `Unlimited secret link chart views / day`,
-    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
+    value: `500KB datasets`,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
   },
   {
-    value: `2 collaborators per chart`,
+    value: `10MB datasets`,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
@@ -116,28 +105,72 @@ const features = [
     ],
   },
   {
-    value: `Unlimited collaborators per chart`,
+    value:  <>100 chart saves & exports<br/> per 24h period</>,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value:  <>1,000 chart saves & exports<br/> per 24h period</>,
+    plans: [
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: <>10,000 chart saves & exports<br/> per 24h period</>,
+    plans: [
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+    ],
+  },
+  {
+    value: <>500 embedded views <br />per 24h period</>,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: <>Unlimited embedded views</>,
+    plans: [
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: `Community support`,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: <>24h Chat support<br />including Falcon SQL Client</>,
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
+  },
+  {
+    value: <>Phone support<br />including Falcon SQL Client</>,
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: `Dedicated, private Plotly server on AWS, Google Cloud, or Azure`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Unlimited Dash apps and app viewers ($5,000 add-on)`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `LDAP authentication`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `LDAP group permissions control`,
-    plans: [PLANS.PRIVATE_CLOUD],
-  },
-  {
-    value: `Falcon server for data warehouse connection`,
-    plans: [PLANS.PRIVATE_CLOUD],
+    value: <>Support for Falcon SQL Client persistent connections
+    or non-SQL databases</>,
+    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
 ];
 
