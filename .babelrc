@@ -1,19 +1,42 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "debug": true,
+        "useBuiltIns": "entry",
+        "targets": {
+          "browsers": [
+            "Explorer 11",
+            "Explorer 10",
+            "last 2 Chrome versions",
+            "last 2 ChromeAndroid versions",
+            "last 2 Edge versions",
+            "last 2 Firefox versions",
+            "last 2 FirefoxAndroid versions",
+            "last 2 iOS versions",
+            "last 2 Opera versions",
+            "last 2 Safari versions"
+          ]
+        }
+      }
+    ],
+    "next/babel"
+  ],
   "plugins": [
     [
       "styled-components",
       {
-        "ssr": true,
-        "displayName": true,
-        "preprocess": true,
-        "transpileTemplateLiterals": true
+        "ssr": true
       }
     ],
     [
       "module-resolver",
       {
-        "root": ["./"],
+        "root": [
+          "./"
+        ],
         "alias": {
           "components": "./components",
           "static": "./static",
@@ -27,7 +50,10 @@
     [
       "wrap-in-js",
       {
-        "extensions": ["css$", "scss$"]
+        "extensions": [
+          "css$",
+          "scss$"
+        ]
       }
     ]
   ],

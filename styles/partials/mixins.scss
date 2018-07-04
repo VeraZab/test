@@ -102,6 +102,7 @@
 
 @mixin global-wrapper {
   @include center-content;
+  width: 100%;
   padding-left: $gutter;
   padding-right: $gutter;
   max-width: $global-width;

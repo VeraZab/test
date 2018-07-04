@@ -1,87 +1,127 @@
-import React from 'react'
-
-import createPlotlyComponent from 'react-plotly.js/factory'
-import axios from 'axios'
-const PlotlyComponent = createPlotlyComponent(Plotly)
+import React from 'react';
+import createPlotlyComponent from 'react-plotly.js/factory';
+import axios from 'axios';
+const PlotlyComponent = createPlotlyComponent(Plotly);
 
 export default class CodeVisual extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    let data,
-      layout = false
+    const { data, layout } = props;
 
-    if (props.data) {
-      data = true
-    }
-    if (props.layout) {
-      layout = true
-    }
     this.state = {
       data: [],
       layout: null,
+      loading: true,
+      dataLoaded: false,
+      layoutLoaded: false,
       needToLoad: {
         data,
         layout,
       },
+    };
+  }
+
+  async fetchData() {
+    const { data, layout } = this.props;
+
+    if ((data || layout) && !this.state.loading) {
+      this.setState({
+        loading: true,
+      });
+    }
+
+    if (data) {
+      await axios
+        .get(data)
+        .then(res => {
+          this.setState({
+            data: res.data,
+            dataLoaded: true,
+          });
+        })
+        .catch(function(error) {});
+    }
+    if (layout) {
+      await axios
+        .get(layout)
+        .then(res => {
+          this.setState({
+            layout: res.data,
+            layoutLoaded: true,
+          });
+        })
+        .catch(function(error) {});
+    }
+
+    if (data && layout && this.state.dataLoaded && this.state.layoutLoaded) {
+      this.setState({
+        loading: false,
+      });
+    }
+    if (data && !layout && this.state.dataLoaded) {
+      this.setState({
+        loading: false,
+      });
+    }
+    if (!data && layout && this.state.layoutLoaded) {
+      this.setState({
+        loading: false,
+      });
     }
   }
 
-  componentDidMount() {
-    if (this.state.needToLoad.data) {
-      axios
-        .get(this.props.data)
-        .then(data => {
-          this.setState({
-            data: data.data,
-          })
-        })
-        .catch(function(error) {})
-    }
-    if (this.state.needToLoad.layout) {
-      axios
-        .get(this.props.layout)
-        .then(data => {
-          this.setState({
-            layout: data.data,
-          })
-        })
-        .catch(function(error) {})
+  async componentDidMount() {
+    if (
+      (this.props.data && !this.state.dataLoaded) ||
+      (this.props.layout && !this.state.layoutLoaded)
+    ) {
+      await this.fetchData();
     }
   }
 
   render() {
-    // const {data, layout} = this.props;
+    const { data, layout, loading } = this.state;
 
-    let data, layout
+    const { key, size: { width, height } } = this.props;
 
-    if (this.state.data.length) {
-      data = eval(this.state.data)
+    if (loading) {
+      return (
+        <div
+          style={{
+            flexGrow: '1',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          Loading...
+        </div>
+      );
     }
 
-    if (this.state.layout) {
-      layout = eval(this.state.layout)
+    let Data = null;
+    let Layout = null;
+
+    if (data && data.length) {
+      Data = eval(data);
     }
 
-    let plot = {
-      data,
+    if (layout) {
+      Layout = eval(layout);
+    }
+
+    const plot = {
+      data: Data,
       layout: {
-        ...layout,
-        width: this.props.size.width,
-        height: this.props.size.height,
+        ...Layout,
+        width,
+        height,
         plot_bgcolor: '#fff',
         paper_bgcolor: '#fff',
       },
-    }
+    };
 
-    return (
-      <div>
-        <PlotlyComponent
-          key={this.props.key}
-          data={plot.data}
-          layout={plot.layout}
-        />
-      </div>
-    )
+    return <PlotlyComponent key={key} data={plot.data} layout={plot.layout} />;
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-const CodeBlock = dynamic(import('./codeblock.js'), {
+const CodeBlock = dynamic(import('./codeblock'), {
   ssr: false,
 })
 
-const CodeVisual = dynamic(import('./visual.js'), {
+const CodeVisual = dynamic(import('./visual'), {
   ssr: false,
 })
 

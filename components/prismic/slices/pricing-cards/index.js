@@ -8,38 +8,36 @@
  *
  */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import PricingCard from 'components/prismic/slices/pricing-cards/card'
+import React from 'react';
+import PropTypes from 'prop-types';
+import PricingCard from 'components/prismic/slices/pricing-cards/card';
 
-const shortid = require('shortid')
-
+const shortid = require('shortid');
 
 class PricingCards extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
-    const {cards} = this.props
-
-    const Cards = cards.map((card, i) => <PricingCard key={ i } cardWidth={`${100/cards.length}%`} card={ card }/>)
+    const { cards } = this.props;
+    if (!cards) {
+      return null;
+    }
+    const Cards = cards.map((card, i) => (
+      <PricingCard key={i} cardWidth={`${100 / cards.length}%`} card={card} />
+    ));
     return (
       <div className="pricing__cards">
-        <div className="pricing__cards__wrapper" >
-          { Cards }
-        </div>
+        <div className="pricing__cards__wrapper">{Cards}</div>
       </div>
-    )
+    );
   }
 }
 
 PricingCards.propTypes = {
   cards: PropTypes.array.isRequired,
-}
-export default PricingCards
-
-
+};
+export default PricingCards;

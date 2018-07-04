@@ -1,43 +1,47 @@
-import React from 'react'
-import styles from './hero.styles.scss'
+import React from 'react';
+import styles from './hero.styles.scss';
 
 // Main wrapper
 export class Hero extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {}
 
   render() {
-    let classes = ''
+    let classes = '';
 
     if (this.props.alignLeft) {
-      classes += ' align-left'
+      classes += ' align-left';
     }
     if (this.props.splitHalf) {
-      classes += ' split-half'
+      classes += ' split-half';
     }
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
-    let HeroStyle = {}
-    let HeroWrapperStyle = {}
+    let HeroStyle = {};
+    let HeroWrapperStyle = {};
 
     if (this.props.style) {
-      HeroStyle = this.props.style
+      HeroStyle = this.props.style;
     }
     if (this.props.heroWrapperStyle) {
-      HeroWrapperStyle = this.props.heroWrapperStyle
+      HeroWrapperStyle = this.props.heroWrapperStyle;
+    }
+
+    if (!classes.includes('hero-prismic')) {
+      classes = 'hero ' + classes;
     }
 
     return (
-      <section className={'hero' + classes} style={HeroStyle}>
+      <section className={classes} style={HeroStyle}>
         <style dangerouslySetInnerHTML={{ __html: styles }} />
         <div className="hero-wrapper">{this.props.children}</div>
         <div className="hero-background-image" style={HeroWrapperStyle} />
       </section>
-    )
+    );
   }
 }
 
@@ -46,20 +50,20 @@ export class Hero extends React.Component {
 // --
 export class HeroTop extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let HeroTopStyles = {}
+    let HeroTopStyles = {};
 
     if (this.props.style) {
-      HeroTopStyles = this.props.style
+      HeroTopStyles = this.props.style;
     }
     return (
       <div className="hero-top" style={HeroTopStyles}>
         <div className="hero-top-wrapper">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 // --
@@ -68,34 +72,34 @@ export class HeroTop extends React.Component {
 
 export class HeroMessaging extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <div className="hero-messaging">{this.props.children}</div>
+    return <div className="hero-messaging">{this.props.children}</div>;
   }
 }
 export class HeroTitle extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <h1 className="title-xl hidden">{this.props.children}</h1>
+    return <h1 className="title-xl hidden">{this.props.children}</h1>;
   }
 }
 export class HeroSubtitle extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <h2 className="title-sm hidden hidden-up">{this.props.children}</h2>
+    return <h2 className="title-sm hidden hidden-up">{this.props.children}</h2>;
   }
 }
 export class HeroActions extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -103,7 +107,7 @@ export class HeroActions extends React.Component {
       <div className="hero-actions hidden hidden-fade">
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 
@@ -112,15 +116,15 @@ export class HeroActions extends React.Component {
 // --
 export class HeroBottom extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   componentDidMount() {}
 
   render() {
-    let HeroBottomStyles = {}
+    let HeroBottomStyles = {};
 
     if (this.props.style) {
-      HeroBottomStyles = this.props.style
+      HeroBottomStyles = this.props.style;
     }
     return (
       <div className="hero-bottom" style={HeroBottomStyles}>
@@ -128,6 +132,6 @@ export class HeroBottom extends React.Component {
           {this.props.children}
         </div>
       </div>
-    )
+    );
   }
 }
