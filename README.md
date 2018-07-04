@@ -1,60 +1,54 @@
 # Plotly Marketing Pages (next.js)
 
-![with-coffee](https://img.shields.io/badge/made%20with-%E2%98%95%EF%B8%8F%20coffee-yellow.svg) ![with-love](https://img.shields.io/badge/made%20with-%F0%9F%92%8C-red.svg)
-
 ## Sitemap
 
-**root**
+****/****
+- https://plotly.github.io/plotly-next/
+- https://plotly.github.io/plotly-next/online-chart-maker/
+- https://plotly.github.io/plotly-next/dashboards/
+- https://plotly.github.io/plotly-next/powerpoint-online/
+- https://plotly.github.io/plotly-next/database-connectors/
+- https://plotly.github.io/plotly-next/webinars/
+- https://plotly.github.io/plotly-next/export/
+- https://plotly.github.io/plotly-next/plotly-js-scientific-d3-charting-library/
+- https://plotly.github.io/plotly-next/d3-js-for-r-and-shiny-charts/
+- https://plotly.github.io/plotly-next/d3-js-for-python-and-pandas-charts/
 
-* [home](https://plot.ly/)
-* [online-chart-maker](https://plot.ly/online-chart-maker/)
-* [dashboards-and-reports](https://plot.ly/dashboards-and-reports/)
-* [online-presentation-tool](https://plot.ly/online-presentation-tool/)
-* [free-sql-client-download](https://plot.ly/free-sql-client-download/)
-* [plotly-js-scientific-d3-charting-library](https://plot.ly/plotly-js-scientific-d3-charting-library/)
-* [d3-js-for-r-and-shiny-charts](https://plot.ly/d3-js-for-r-and-shiny-charts/)
-* [d3-js-for-python-and-pandas-charts](https://plot.ly/d3-js-for-python-and-pandas-charts/)
-* [webinars](https://plot.ly/webinars/) **not prismic**
-* [export](https://plot.ly/export/) **not prismic**
+****/products/****
+- https://plotly.github.io/plotly-next/products/cloud/
+- https://plotly.github.io/plotly-next/products/on-premise/
+- https://plotly.github.io/plotly-next/products/consulting-and-oem/
+- https://plotly.github.io/plotly-next/products/dash/
 
-**/products/**
+****/products/industries/****
+- https://plotly.github.io/plotly-next/products/industries/
+- https://plotly.github.io/plotly-next/products/industries/finance
+- https://plotly.github.io/plotly-next/products/industries/aerospace
+- https://plotly.github.io/plotly-next/products/industries/automotive-analytics
+- https://plotly.github.io/plotly-next/products/industries/business-intelligence
+- https://plotly.github.io/plotly-next/products/industries/energy-analytics
+- https://plotly.github.io/plotly-next/products/industries/government-and-public-analytics
+- https://plotly.github.io/plotly-next/products/industries/insurance
+- https://plotly.github.io/plotly-next/products/industries/journalism
+- https://plotly.github.io/plotly-next/products/industries/pharma-analytics
+- https://plotly.github.io/plotly-next/products/industries/research-and-development-analytics
 
-* [products/cloud](https://plot.ly/products/cloud/) **not prismic**
-* [products/on-premise](https://plot.ly/products/on-premise/) **not prismic**
-* [products/consulting-and-oem](https://plot.ly/products/consulting-and-oem/) **not prismic**
-* [products/dash](https://plot.ly/products/dash/) **not prismic**
-* [dash/pricing](https://plot.ly/dash/pricing/)
-* [products/react](https://plot.ly/products/react/)
-
-**/products/industries/** -- **not prismic**
-
-* [products/industries](https://plot.ly/products/industries/)
-* [products/industries/financ](https://plot.ly/products/industries/finance)
-* [products/industries/aerospac](https://plot.ly/products/industries/aerospace)
-* [products/industries/automotive-analytic](https://plot.ly/products/industries/automotive-analytics)
-* [products/industries/business-intelligenc](https://plot.ly/products/industries/business-intelligence)
-* [products/industries/energy-analytic](https://plot.ly/products/industries/energy-analytics)
-* [products/industries/government-and-public-analytic](https://plot.ly/products/industries/government-and-public-analytics)
-* [products/industries/insuranc](https://plot.ly/products/industries/insurance)
-* [products/industries/journalis](https://plot.ly/products/industries/journalism)
-* [products/industries/pharma-analytic](https://plot.ly/products/industries/pharma-analytics)
-* [products/industries/research-and-development-analytic](https://plot.ly/products/industries/research-and-development-analytics)
-
-**/products/enterprise/customer-stories/** -- **not prismic**
-
-* [products/enterprise/customer-stories](https://plot.ly/products/enterprise/customer-stories/)
-* [products/enterprise/customer-stories/c12-energ](https://plot.ly/products/enterprise/customer-stories/c12-energy)
-* [products/enterprise/customer-stories/goj](https://plot.ly/products/enterprise/customer-stories/goji)
+****/products/enterprise/customer-stories/****
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/c12-energy
+- https://plotly.github.io/plotly-next/products/enterprise/customer-stories/goji
 
 ## Development
 
-Clone the repo and run `yarn install` to install all of the dependencies.
+Clone the repo and run `yarn install` to install all of the dependencies. 
 
 Run `yarn run dev` to enter development mode. This will launch a server for you to actively develop with hot module reloading and live reloading of styles.
 
 ## Deployment
 
-Please make PR's to add anything. PR's will be merged to `master` and then to `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
+If you make changes to the actual code, make a PR. PR's will be merged to `master` and then to `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
+
+If you only make changes to the content on prismic.io, then you'll need to publish on prismic.io and then manually rebuild the `production` branch on circleci (https://circleci.com/gh/plotly/plotly-next/tree/production). This will get the changes from prismic.io and redeploy to `gh-pages`.
 
 ## Next.js
 
