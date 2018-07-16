@@ -104,13 +104,13 @@ const features = [
       PLANS.STUDENT,
     ],
   },
-  {
-    value: `30MB datasets`,
-    plans: [
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-    ],
-  },
+  //{
+  //  value: `30MB datasets`,
+  //  plans: [
+  //    PLANS.PROFESSIONAL,
+  //    PLANS.PRIVATE_CLOUD,
+  //  ],
+  //},
   {
     value:  <>100 chart saves & exports<br/> per 24h period</>,
     plans: [
