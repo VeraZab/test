@@ -337,13 +337,6 @@ export default class Navigation extends React.Component {
                 </div>
               </div>
             </div>
-            {/** Master Classes */}
-            <a
-              className="navigation-product-item"
-              href="https://plotcon.plot.ly/"
-            >
-              Master Classes
-            </a>
 
             <div
               className="login-button"
