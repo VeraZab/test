@@ -320,16 +320,17 @@ export default class Navigation extends React.Component {
                       Dash Deployment Server
                     </a>
                   </Link>
-                  <Link href="https://www.dashdaq.io/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash DAQ
-                    </a>
-                  </Link>
-                  <Link href="https://dash.bio/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash Bio
-                    </a>
-                  </Link>
+                  // Temporarily hold until release
+                  // <Link href="https://www.dashdaq.io/" prefetch>
+                  //   <a className="navigation-product-submenu-item">
+                  //     Dash DAQ
+                  //   </a>
+                  // </Link>
+                  // <Link href="https://dash.bio/" prefetch>
+                  //   <a className="navigation-product-submenu-item">
+                  //     Dash Bio
+                  //   </a>
+                  // </Link>
                 </div>
               </div>
             </div>
