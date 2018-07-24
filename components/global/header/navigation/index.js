@@ -221,51 +221,14 @@ export default class Navigation extends React.Component {
                       Dashboards & Reporting
                     </a>
                   </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'slide-decks',
-                      },
-                    }}
-                    as={'/powerpoint-online'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/powerpoint-online/"
-                    >
-                      Slide Decks
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'falcon-sql-editor',
-                      },
-                    }}
-                    as={'/database-connectors/'}
-                    prefetch
-                  >
-                    <a className="navigation-product-submenu-item">
-                      Falcon SQL Client (Free)
-                    </a>
-                  </Link>
                 </div>
 
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Data Science &amp;<br />Open Source
+                    Open-Source<br />Data Visualization
                   </div>
                   {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/dash"
-                  >
-                    Dash
-                  </a>
                   <Link
                     prefetch
                     href={{
@@ -306,13 +269,13 @@ export default class Navigation extends React.Component {
                     href={{
                       pathname: '/p',
                       query: {
-                        slug: 'react-component-suite',
+                        slug: 'falcon-sql-editor',
                       },
                     }}
-                    as={'/products/react/'}
+                    as={'/database-connectors/'}
                     prefetch
                   >
-                    <a className="navigation-product-submenu-item">React</a>
+                    <a className="navigation-product-submenu-item">SQL</a>
                   </Link>
                 </div>
 
@@ -332,6 +295,46 @@ export default class Navigation extends React.Component {
                   <Link href="/products/cloud" prefetch>
                     <a className="navigation-product-submenu-item">
                       Plotly Cloud
+                    </a>
+                  </Link>
+                </div>
+
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                  <div className="navigation-product-submenu-section-title">
+                    Dash
+                  </div>
+                  {/** Products Submenu Items */}
+                  <Link
+                    prefetch
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'dash',
+                      },
+                    }}
+                    as={'/products/dash/'}
+                  >
+                    <a className="navigation-product-submenu-item">Dash Overview</a>
+                  </Link>
+                  <Link href="https://github.com/plotly/dash" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Open-Source
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/dash/pricing/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Deployment Server
+                    </a>
+                  </Link>
+                  <Link href="https://www.dashdaq.io/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash DAQ
+                    </a>
+                  </Link>
+                  <Link href="https://dash.bio/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Bio
                     </a>
                   </Link>
                 </div>
