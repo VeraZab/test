@@ -305,19 +305,12 @@ export default class Navigation extends React.Component {
                     Dash
                   </div>
                   {/** Products Submenu Items */}
-                  <Link
-                    prefetch
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'dash',
-                      },
-                    }}
-                    as={'/products/dash/'}
-                  >
-                    <a className="navigation-product-submenu-item">Dash Overview</a>
+                  <Link href="https://plot.ly/products/dash" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Overview
+                    </a>
                   </Link>
-                  <Link href="https://github.com/plotly/dash" prefetch>
+                  <Link href="https://dash.plot.ly" prefetch>
                     <a className="navigation-product-submenu-item">
                       Open-Source
                     </a>
