@@ -272,7 +272,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding: $unit $gutter*1.75;
+        padding: $unit $gutter * 1.75;
         text-align: center;
         display: flex;
         align-items: center;
@@ -293,7 +293,7 @@
           content: '';
           position: absolute;
           top: 100%;
-          width: calc(100% - #{$gutter*2});
+          width: calc(100% - #{$gutter * 2});
           left: $gutter;
           border-bottom: 1px solid lighten($color-rhino-medium-2, 4%);
         }
@@ -394,6 +394,12 @@
 }
 
 .onprem-pricing {
+  .pricing__cards{
+    margin-top: 0;
+  }
+  p {
+    font-size: 16px !important;
+  }
   background: #fff
     url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format)
     center top no-repeat !important;
@@ -408,6 +414,7 @@
       margin-right: auto;
       margin-left: auto;
     }
+
     padding: 0;
     position: relative;
     z-index: 4;
@@ -432,7 +439,7 @@
 .architecture-section,
 .plotlyjs-section {
   .content-section-wrapper {
-    padding-top: $gutter*2;
+    padding-top: $gutter * 2;
     padding-bottom: 0;
   }
 }
@@ -475,7 +482,7 @@
 
     .text-item {
       .text-item-wrapper {
-        padding: $unit*2;
+        padding: $unit * 2;
       }
       &:last-of-type {
         margin-bottom: $gutter;
@@ -562,7 +569,7 @@
 
           &-second {
             top: 270px;
-            padding-right: $gutter*2.5;
+            padding-right: $gutter * 2.5;
 
             width: 440px;
             transform: translate3d(-7px, -7px, 0);
@@ -697,7 +704,7 @@
 
           &-top {
             top: 120px;
-            padding-left: $gutter*3;
+            padding-left: $gutter * 3;
             right: 0;
             width: 340px;
             transform: translate3d(-7px, -7px, 0);
@@ -755,10 +762,10 @@
       position: relative;
       min-height: 560px;
 
-      @include media ('<=800px') {
+      @include media('<=800px') {
         min-height: 700px;
       }
-      @include media ('<=600px') {
+      @include media('<=600px') {
         min-height: 800px;
       }
     }
@@ -780,17 +787,17 @@
         padding-bottom: $unit;
       }
       .text-item-wrapper {
-        padding: $unit*2;
+        padding: $unit * 2;
       }
 
       &--left {
         &-top {
           width: 45%;
 
-          @include media ('<=800px') {
+          @include media('<=800px') {
             width: 80%;
             position: relative;
-            margin-top: $gutter*2;
+            margin-top: $gutter * 2;
           }
           .text-item-lines {
             position: absolute;
@@ -800,7 +807,7 @@
             border-left: $color-dodger 2px solid;
             border-bottom: $color-dodger 2px solid;
             width: 81%;
-            @include media ('<=800px') {
+            @include media('<=800px') {
               $width: 45%;
               width: $width;
             }
@@ -826,7 +833,7 @@
               border-right: #119dff 2px solid;
               width: 81%;
 
-              @include media ('<=800px') {
+              @include media('<=800px') {
                 $width: 45%;
                 width: $width;
               }
@@ -850,7 +857,7 @@
           right: 0;
           width: 45%;
 
-          @include media ('<=800px') {
+          @include media('<=800px') {
             width: 100%;
             position: relative;
           }
@@ -864,7 +871,7 @@
             border-bottom: $color-dodger 2px solid;
             width: 70%;
 
-            @include media ('<=800px') {
+            @include media('<=800px') {
               $width: 90%;
               width: $width;
             }
@@ -888,7 +895,7 @@
               top: 100%;
               border-right: #119dff 2px solid;
               width: 70%;
-              @include media ('<=800px') {
+              @include media('<=800px') {
                 $width: 90%;
                 width: $width;
                 height: 180%;
