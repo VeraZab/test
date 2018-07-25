@@ -94,6 +94,12 @@ module.exports = {
         slug: 'dash-services',
       },
     },
+    '/company/careers': {
+      page: '/p',
+      query: {
+        slug: 'company',
+      },
+    },
     // Pricing - cloud
     '/products/cloud': { page: '/products/cloud' },
     '/products/cloud/compare': { page: '/products/cloud' },
@@ -197,7 +203,7 @@ module.exports = {
             urlPattern: /^https?.*/,
           },
         ],
-      })
+      }),
     );
     config.module.rules.push(
       {
@@ -222,13 +228,13 @@ module.exports = {
             options: {
               data: '@import "partials/abstract";',
               includePaths: ['./', 'styles', 'node_modules']
-                .map(d => path.join(__dirname, d))
-                .map(g => glob.sync(g))
+                .map((d) => path.join(__dirname, d))
+                .map((g) => glob.sync(g))
                 .reduce((a, c) => a.concat(c), []),
             },
           },
         ],
-      }
+      },
     );
     return config;
   },
