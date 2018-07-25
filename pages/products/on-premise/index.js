@@ -18,8 +18,9 @@ import {
   H2,
 } from 'components/styled/on-prem';
 import shortid from 'shortid';
-
+import PricingCardSlice from 'components/prismic/slices/pricing-cards';
 import SwitchComponent from 'components/switch';
+import PricingCards from '../../../components/prismic/slices/pricing-cards';
 
 const onPremData = [
   {
@@ -131,8 +132,23 @@ class OnPrem extends React.Component {
     }
   }
   render() {
-    const pricingCardFeatures = items => {
-      const pricingCardFeature = items => {
+    const { pricing_cards } = this.props.content;
+
+    const pricingData = pricing_cards.find(
+      (card) => card.uid === 'on-premises',
+    );
+    const cards = pricingData.data.body.map((card) => ({
+      ...card,
+      primary: {
+        ...card.primary,
+        price:
+          this.state.pricingMode === 'Private Cloud'
+            ? card.primary.price
+            : card.primary.toggle_state_second_price,
+      },
+    }));
+    const pricingCardFeatures = (items) => {
+      const pricingCardFeature = (items) => {
         return items.map((item, i) => {
           return (
             <div className="pricing-cards-feature-lists-item-value " key={i}>
@@ -206,87 +222,8 @@ class OnPrem extends React.Component {
                   : `Installed and maintained by your IT staff on your company's server.`}
               </H2>
             </HeadingContainer>
+            <PricingCards cards={cards} />
           </SwitchContainer>
-
-          <ContentPane full center center-vertically text>
-            <Body>
-              <div className="on-prem-pricing-cards">
-                <div className="pricing-card-single full-width">
-                  <div className="pricing-cards-headers-item">
-                    <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                      On-Premises
-                    </div>
-                  </div>
-                  <div className="pricing-cards-bodies-item">
-                    <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
-                      <div className="pricing-cards-bodies-item-content">
-                        <div className="price">
-                          <div
-                            className="price-text animate--fade-in-from-top"
-                            key={shortid.generate()}
-                          >
-                            <span className="usd">$</span>
-                            {this.state.pricingMode === 'Private Cloud'
-                              ? `9,960`
-                              : `14,940`}
-                          </div>
-                        </div>
-                        <div className="details">
-                          per year, <strong>5 Developer License </strong>
-                        </div>
-                      </div>
-                      <Buttons
-                        items={actions}
-                        className="pricing-cards-bodies-item-actions"
-                      />
-                    </div>
-                  </div>
-                  <div className="pricing-cards-feature-lists">
-                    <div className="pricing-cards-feature-lists-wrapper">
-                      {pricingCardFeatures(onPremData)}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pricing-card-single full-width">
-                  <div className="pricing-cards-headers-item">
-                    <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                      On-Premises + Dash
-                    </div>
-                  </div>
-                  <div className="pricing-cards-bodies-item">
-                    <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
-                      <div className="pricing-cards-bodies-item-content">
-                        <div className="price">
-                          <div
-                            className="price-text animate--fade-in-from-top"
-                            key={shortid.generate()}
-                          >
-                            <span className="usd">$</span>
-                            {this.state.pricingMode === 'Private Cloud'
-                              ? `15,960`
-                              : `24,960`}
-                          </div>
-                        </div>
-                        <div className="details">
-                          per year, <strong>5 Developer License </strong>
-                        </div>
-                      </div>
-                      <Buttons
-                        items={actions}
-                        className="pricing-cards-bodies-item-actions"
-                      />
-                    </div>
-                  </div>
-                  <div className="pricing-cards-feature-lists">
-                    <div className="pricing-cards-feature-lists-wrapper">
-                      {pricingCardFeatures(onPremDashata)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Body>
-          </ContentPane>
         </ContentSection>
         <ContentSection className="architecture-section">
           <ContentPane full center center-vertically text>
