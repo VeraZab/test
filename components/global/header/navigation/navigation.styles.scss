@@ -84,10 +84,7 @@
         }
       }
       &-section {
-        //width: 50%;
-        &:first-of-type {
-          padding-right: $unit*4 !important;
-        }
+        flex: 1;
         &--span-all {
           padding-top: $unit*2;
           width: 100%;
