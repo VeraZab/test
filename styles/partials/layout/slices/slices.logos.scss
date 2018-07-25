@@ -94,7 +94,8 @@
       margin-right: 0;
 
       .logos {
-        justify-content: flex-start;
+        // justify-content: flex-start;
+        justify-content: space-evenly;
         flex-wrap: wrap;
       }
 
