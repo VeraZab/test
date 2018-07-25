@@ -278,13 +278,13 @@ export default class Navigation extends React.Component {
                     <a className="navigation-product-submenu-item">SQL</a>
                   </Link>
                 </div>
-
+                <div className="navigation-product-submenu-section--span-all">
+                </div>
                 {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section navigation-product-submenu-section--span-all">
+                <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     Platforms
                   </div>
-
                   {/** Products Submenu Items */}
                   <a
                     className="navigation-product-submenu-item"
@@ -321,17 +321,6 @@ export default class Navigation extends React.Component {
                       Dash Deployment Server
                     </a>
                   </Link>
-                  // Temporarily hold until release
-                  // <Link href="https://www.dashdaq.io/" prefetch>
-                  //   <a className="navigation-product-submenu-item">
-                  //     Dash DAQ
-                  //   </a>
-                  // </Link>
-                  // <Link href="https://dash.bio/" prefetch>
-                  //   <a className="navigation-product-submenu-item">
-                  //     Dash Bio
-                  //   </a>
-                  // </Link>
                 </div>
               </div>
             </div>
