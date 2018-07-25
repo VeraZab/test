@@ -56,7 +56,7 @@ const onPremDashata = [
     features: [
       {
         value:
-          'Includes everything in the <strong>On-Premises Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
+          'Includes everything in the <strong>Enterprise Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
       },
       {
         value: 'Email and Phone Support',
@@ -93,14 +93,14 @@ const actions = [
 ];
 
 const meta = {
-  title: 'Plotly On-Premises and Dash Pricing',
+  title: 'Plotly Enterprise and Dash Pricing',
   description:
     'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
   url: 'https://plot.ly/products/on-premise/',
   twitter: {
-    label1: 'On-Premises',
+    label1: 'Plotly Enterprise',
     data1: '$9,960 per year, 5 user license',
-    label2: 'On-Premises + Dash',
+    label2: 'Plotly Enterprise + Dash Deployment Server',
     data2: '$15,960 per year, 5 user license',
   },
 };
@@ -123,7 +123,7 @@ class OnPrem extends React.Component {
     const { pricingMode } = this.state;
     if (pricingMode === 'Private Cloud') {
       this.setState({
-        pricingMode: 'On-Site',
+        pricingMode: 'On-Premises',
       });
     } else {
       this.setState({
@@ -182,9 +182,9 @@ class OnPrem extends React.Component {
               : null,
         },
         {
-          label: 'On-Site',
+          label: 'On-Premises',
           action:
-            this.state.pricingMode !== 'On-Site'
+            this.state.pricingMode !== 'On-Premises'
               ? () => this.togglePricingMode()
               : null,
         },
@@ -210,7 +210,7 @@ class OnPrem extends React.Component {
               >
                 {this.state.pricingMode === 'Private Cloud'
                   ? `Private Cloud`
-                  : `On-Site Installation`}
+                  : `On-Premises Installation`}
               </H1>
               <H2
                 key={shortid.generate()}
@@ -227,8 +227,8 @@ class OnPrem extends React.Component {
         </ContentSection>
         <ContentSection className="architecture-section">
           <ContentPane full center center-vertically text>
-            <div className="pre-title">Plotly On-Premises</div>
-            <Title>Our On-Premises Architecture</Title>
+            <div className="pre-title">Plotly Enterprise</div>
+            <Title>Our Enterprise Architecture</Title>
             <Body>
               <div className="image-with-complex-text-overlay architecture">
                 <div className="image-with-complex-text-overlay-wrapper">
@@ -243,7 +243,7 @@ class OnPrem extends React.Component {
                       <div className="text-item-wrapper">
                         <div className="text-item-lines" />
                         <p>
-                          Plotly On-Premises ships as an easy-to-install Docker
+                          Plotly Enterprise ships as an easy-to-install Docker
                           container.
                         </p>
                       </div>
@@ -254,7 +254,7 @@ class OnPrem extends React.Component {
 
                         <p>
                           Your app with plotly.js charts can easily export
-                          charts and data to a white-labeled Plotly On-Premises
+                          charts and data to a white-labeled Plotly Enterprise
                           for advanced editing, analytics and image export.
                         </p>
                       </div>
@@ -285,7 +285,7 @@ class OnPrem extends React.Component {
                           <p>
                             {' '}
                             Dash apps can be hosted and run on Plotly
-                            On-Premises.
+                            Enterprise.
                           </p>
                         </p>
                       </div>
@@ -301,9 +301,9 @@ class OnPrem extends React.Component {
         </ContentSection>
         <ContentSection className="plotlyjs-section">
           <ContentPane full center center-vertically text>
-            <div className="pre-title">Plotly On-Premises</div>
+            <div className="pre-title">Plotly Enterprise</div>
             <Title>
-              Link Plotly.js charts in your application to Plotly On-Premise
+              Link Plotly.js charts in your application to Plotly Enterprise
             </Title>
             <Body>
               <div className="image-with-complex-text-overlay plotlyjs">
@@ -357,7 +357,7 @@ class OnPrem extends React.Component {
             <Title>Built on the Shoulders of Giants</Title>
             <Body>
               <p>
-                Plotly On-Premises is built on a foundation of open-source
+                Plotly Enterprise is built on a foundation of open-source
                 libraries that are constantly improving. To name a few:
               </p>
 

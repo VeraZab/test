@@ -145,7 +145,7 @@ export default class Navigation extends React.Component {
                   className="navigation-product-submenu-item"
                   href="/products/on-premise"
                 >
-                  Plotly On-Premises
+                  Plotly Enterprise
                 </a>
                 <Link
                   href={{
@@ -156,7 +156,7 @@ export default class Navigation extends React.Component {
                   prefetch
                 >
                   <a className="navigation-product-submenu-item">
-                    Dash Pricing
+                    Dash Deployment Server
                   </a>
                 </Link>
                 <a
@@ -327,7 +327,7 @@ export default class Navigation extends React.Component {
                     className="navigation-product-submenu-item"
                     href="/products/on-premise"
                   >
-                    Plotly On-Premises
+                    Plotly Enterprise
                   </a>
                   <Link href="/products/cloud" prefetch>
                     <a className="navigation-product-submenu-item">
