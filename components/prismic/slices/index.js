@@ -8,26 +8,28 @@
  *
  */
 
-import React from 'react'
-const shortid = require('shortid')
+import React from 'react';
+const shortid = require('shortid');
 
 /**
  * Our slice options
  */
 
-import ContentSection from 'components/prismic/content-section'
-import LogosSlice from 'components/prismic/slices/logos'
-import TabsSlice from './tabs'
+import ContentSection from 'components/prismic/content-section';
+import LogosSlice from 'components/prismic/slices/logos';
+import TabsSlice from './tabs';
+import { Jobs } from './jobs';
+import { ImageSectionSlice } from './image-section';
 
 export default class Slices extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {}
 
   render() {
-    let { data } = this.props
+    let { data } = this.props;
     return (
       <div className="slices">
         <div className="slices-wrapper">
@@ -42,18 +44,21 @@ export default class Slices extends React.Component {
               slice.slice_type === 'cs-pricing' ||
               slice.slice_type === 'cs-github-stars'
             ) {
-              return <ContentSection key={i} data={slice} />
+              return <ContentSection key={i} data={slice} />;
             } else if (slice.slice_type === 'cs-tabs') {
-              return <TabsSlice key={shortid.generate()} data={slice} />
+              return <TabsSlice key={shortid.generate()} data={slice} />;
             } else if (slice.slice_type === 'logos') {
-              return <LogosSlice key={shortid.generate()} data={slice} />
-            } else return
+              return <LogosSlice key={shortid.generate()} data={slice} />;
+            } else if (slice.slice_type === 'jobs') {
+              return <Jobs {...slice} key={i} />;
+            } else if (slice.slice_type === 'image') {
+              return <ImageSectionSlice {...slice} key={i} />;
+            } else return;
           })}
         </div>
       </div>
-    )
+    );
   }
 }
-
 
 // slice.slice_type === 'cs-code-explorer' ||

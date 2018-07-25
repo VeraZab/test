@@ -1,19 +1,19 @@
-import React from 'react'
-import PrismicDOM from 'prismic-dom'
+import React from 'react';
+import PrismicDOM from 'prismic-dom';
 
-import Graphic from './graphic'
-import Button from 'components/prismic/button'
-import { Browser } from 'components/browser'
-import Phone from 'components/phone'
-import GithubStarsSlice from 'components/prismic/slices/github_stars'
-import CodeExplorer from 'components/prismic/slices/code-explorer'
-import AdvancedCards from 'components/prismic/slices/advanced-cards'
-import Iframes from 'components/prismic/slices/iframe'
+import Graphic from './graphic';
+import Button from 'components/prismic/button';
+import { Browser } from 'components/browser';
+import Phone from 'components/phone';
+import GithubStarsSlice from 'components/prismic/slices/github_stars';
+import CodeExplorer from 'components/prismic/slices/code-explorer';
+import AdvancedCards from 'components/prismic/slices/advanced-cards';
+import Iframes from 'components/prismic/slices/iframe';
 
-import PricingCards from 'components/prismic/slices/pricing-cards'
-import { constructButtons } from '../../../lib/construct-buttons'
+import PricingCards from 'components/prismic/slices/pricing-cards';
+import { constructButtons } from '../../../lib/construct-buttons';
 
-const shortid = require('shortid')
+const shortid = require('shortid');
 
 /**
  * ContentSection component
@@ -24,35 +24,45 @@ const shortid = require('shortid')
 
 export default class ContentSection extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     /** Destructure props */
-    const {data, data: {primary, items, slice_type}, className} = this.props
+    const {
+      data,
+      data: { primary, items, slice_type },
+      className,
+    } = this.props;
 
     if (primary && primary.published && primary.published === 'false') {
-      return null
+      return null;
     }
 
     /** Define the component class name */
-    const componentClass = 'content-section-p'
+    const componentClass = 'content-section-p';
 
     /** The classes variable */
-    let classes = componentClass
+    let classes = componentClass;
+
+    const noGraphic =
+      !primary.graphic || (primary.graphic && !primary.graphic.url);
+
+    if (noGraphic) {
+      classes += ' no-graphic';
+    }
 
     /**
      * If someone has added classes to this component,
      * let's append them to the classes variable
      */
     if (className) {
-      classes += ' ' + className
+      classes += ' ' + className;
     }
 
-    classes += ' ' + slice_type
+    classes += ' ' + slice_type;
 
     /**
      * Layout
@@ -69,9 +79,9 @@ export default class ContentSection extends React.Component {
      */
 
     if (!primary.layout) {
-      primary.layout = 'row-auto'
+      primary.layout = 'row-auto';
     }
-    classes += ' ' + componentClass + '-layout--' + primary.layout
+    classes += ' ' + componentClass + '-layout--' + primary.layout;
 
     /**
      * Alignment
@@ -86,9 +96,9 @@ export default class ContentSection extends React.Component {
      * right    -- right alignment
      */
     if (!primary.alignment) {
-      primary.alignment = 'left'
+      primary.alignment = 'left';
     }
-    classes += ' ' + componentClass + '-align--' + primary.alignment
+    classes += ' ' + componentClass + '-align--' + primary.alignment;
 
     /**
      * Style
@@ -105,15 +115,15 @@ export default class ContentSection extends React.Component {
      * graphic_white_dotted-lines -- White background with angled, different colored dotted lines in its background
      */
     if (!primary.style) {
-      primary.style = 'default'
+      primary.style = 'default';
     }
-    classes += ' ' + componentClass + '-style--' + primary.style
+    classes += ' ' + componentClass + '-style--' + primary.style;
 
     if (primary.graphic_style === 'bleed') {
-      classes += ' ' + componentClass + '-style--bleed-wrapper'
+      classes += ' ' + componentClass + '-style--bleed-wrapper';
     }
 
-    classes += ` ${componentClass}-proportions--${primary.proportions}`
+    classes += ` ${componentClass}-proportions--${primary.proportions}`;
 
     /**
      * Body
@@ -132,37 +142,37 @@ export default class ContentSection extends React.Component {
       ) {
         return (
           <div
-            className={ 'content-section-p-body content-section-p-body-columns' }
+            className={'content-section-p-body content-section-p-body-columns'}
           >
             <div className="content-section-p-body-wrapper">
               <div
                 className="content-section-p-body-column-one"
-                dangerouslySetInnerHTML={ {
+                dangerouslySetInnerHTML={{
                   __html: PrismicDOM.RichText.asHtml(primary.body),
-                } }
+                }}
               />
               <div
                 className="content-section-p-body-column-two"
-                dangerouslySetInnerHTML={ {
+                dangerouslySetInnerHTML={{
                   __html: PrismicDOM.RichText.asHtml(primary.body_two),
-                } }
+                }}
               />
             </div>
           </div>
-        )
+        );
       } else {
         return (
-          <div className={ 'content-section-p-body' }>
+          <div className={'content-section-p-body'}>
             <div
               className="content-section-p-body-wrapper"
-              dangerouslySetInnerHTML={ {
+              dangerouslySetInnerHTML={{
                 __html: PrismicDOM.RichText.asHtml(primary.body),
-              } }
+              }}
             />
           </div>
-        )
+        );
       }
-    }
+    };
 
     /**
      * Graphic
@@ -185,11 +195,11 @@ export default class ContentSection extends React.Component {
               '-area'
             }
           >
-            { items.map((logo, i) => {
-              return <Graphic noBlur key={ shortid.generate() } data={ logo }/>
-            }) }
+            {items.map((logo, i) => {
+              return <Graphic noBlur key={shortid.generate()} data={logo} />;
+            })}
           </div>
-        )
+        );
       }
       /**
        * If this content section is graphic_with_text_slides,
@@ -208,11 +218,11 @@ export default class ContentSection extends React.Component {
               '-area'
             }
           >
-            { items.map((slide, i) => {
-              return <Graphic key={ shortid.generate() } data={ slide }/>
-            }) }
+            {items.map((slide, i) => {
+              return <Graphic key={shortid.generate()} data={slide} />;
+            })}
           </div>
-        )
+        );
       }
       /**
        * graphic_style: browser
@@ -230,10 +240,10 @@ export default class ContentSection extends React.Component {
               }
             >
               <Browser>
-                <Graphic data={ primary }/>
+                <Graphic data={primary} />
               </Browser>
             </div>
-          )
+          );
         }
         /**
          * If the graphic style is set to phone, we will wrap it in a phone component.
@@ -246,10 +256,10 @@ export default class ContentSection extends React.Component {
               }
             >
               <Phone>
-                <Graphic data={ primary }/>
+                <Graphic data={primary} />
               </Phone>
             </div>
-          )
+          );
         }
         /**
          * graphic_style: bleed
@@ -267,20 +277,20 @@ export default class ContentSection extends React.Component {
                 '-area'
               }
             >
-              <Graphic background={ true } data={ primary }/>
+              <Graphic background={true} data={primary} />
             </div>
-          )
+          );
         }
         return (
           <div
-            className={ componentClass + '-graphic ' + componentClass + '-area' }
+            className={componentClass + '-graphic ' + componentClass + '-area'}
           >
-            <Graphic data={ primary }/>
+            <Graphic data={primary} />
           </div>
-        )
+        );
       }
-      return null
-    }
+      return null;
+    };
 
     /**
      * Actions
@@ -296,16 +306,16 @@ export default class ContentSection extends React.Component {
       if (slice_type === 'graphic_with_text') {
         if (items && items.length) {
           return (
-            <div className={ 'content-section-p-actions' }>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
-                { items.map((button, i) => {
-                  return <Button key={ shortid.generate() } data={ button }/>
-                }) }
+                {items.map((button, i) => {
+                  return <Button key={shortid.generate()} data={button} />;
+                })}
               </div>
             </div>
-          )
+          );
         } else {
-          return null
+          return null;
         }
       } else {
         /**
@@ -317,50 +327,50 @@ export default class ContentSection extends React.Component {
          * iterate over and display the buttons.
          */
 
-        const buttons = constructButtons(data.primary)
+        const buttons = constructButtons(data.primary);
 
         if (buttons.length) {
           return (
-            <div className={ 'content-section-p-actions' }>
+            <div className={'content-section-p-actions'}>
               <div className="content-section-p-actions-wrapper buttons">
-                { buttons.map((button, i) => {
-                  return <Button key={ shortid.generate() } data={ button }/>
-                }) }
+                {buttons.map((button, i) => {
+                  return <Button key={shortid.generate()} data={button} />;
+                })}
               </div>
             </div>
-          )
+          );
         } else {
-          return null
+          return null;
         }
       }
-    }
+    };
     /**
      * If there's a pretitle,
      * let's display it!
      */
     const Pretitle =
       primary.pretitle !== null ? (
-        <div className={ 'content-section-p-pretitle' }>
+        <div className={'content-section-p-pretitle'}>
           <div className="content-section-p-pretitle-wrapper">
-            <h3>{ primary.pretitle }</h3>
+            <h3>{primary.pretitle}</h3>
           </div>
         </div>
-      ) : null
+      ) : null;
     /**
      * If there's a title,
      * let's display it!
      */
     const Title =
       primary.title && primary.title.length && primary.title[0].text !== '' ? (
-        <div className={ 'content-section-p-title' }>
+        <div className={'content-section-p-title'}>
           <div
             className="content-section-p-title-wrapper"
-            dangerouslySetInnerHTML={ {
+            dangerouslySetInnerHTML={{
               __html: PrismicDOM.RichText.asHtml(primary.title),
-            } }
+            }}
           />
         </div>
-      ) : null
+      ) : null;
 
     /**
      * If there's a Subtitle,
@@ -370,96 +380,95 @@ export default class ContentSection extends React.Component {
       primary.subtitle &&
       primary.subtitle.length &&
       primary.subtitle[0].text !== '' ? (
-        <div className={ 'content-section-p-subtitle' }>
+        <div className={'content-section-p-subtitle'}>
           <div
             className="content-section-p-subtitle-wrapper"
-            dangerouslySetInnerHTML={ {
+            dangerouslySetInnerHTML={{
               __html: PrismicDOM.RichText.asHtml(primary.subtitle),
-            } }
+            }}
           />
         </div>
-      ) : null
+      ) : null;
 
     if (slice_type === 'cs-tabs') {
       return (
-        <section className={ classes }>
+        <section className={classes}>
           <div className="content-section-p-wrapper">
-            { graphic() }
+            {graphic()}
             <div
               className={
                 componentClass + '-details ' + componentClass + '-area'
               }
             >
-              { Pretitle }
-              { Title }
-              { Subtitle }
-              { body() }
-              { actions() }
+              {Pretitle}
+              {Title}
+              {Subtitle}
+              {body()}
+              {actions()}
             </div>
           </div>
         </section>
-      )
+      );
     }
 
     const GithubStarsSection =
       slice_type === 'cs-github-stars' ? (
         <div className="github-stars">
-          <GithubStarsSlice key={ shortid.generate() } slice={ data }/>
+          <GithubStarsSlice key={shortid.generate()} slice={data} />
         </div>
-      ) : null
+      ) : null;
 
     const CodeExplorerSection =
       slice_type === 'cs-code-explorer' ? (
         <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={ data }/>{ ' ' }
+          <CodeExplorer data={data} />{' '}
         </div>
-      ) : null
+      ) : null;
 
     const AdvancedCardsSection =
       slice_type === 'cs-advanced-cards' ? (
-        <AdvancedCards columns={ primary.card_columns ? primary.card_columns : '2' } variant={ primary.card_variant }
-                       data={ items }/>
-      ) : null
+        <AdvancedCards
+          columns={primary.card_columns ? primary.card_columns : '2'}
+          variant={primary.card_variant}
+          data={items}
+        />
+      ) : null;
 
-    const IframesSection =
-      slice_type === 'cs-iframe' && (
-        <Iframes data={ items }/>
-      )
+    const IframesSection = slice_type === 'cs-iframe' && (
+      <Iframes data={items} />
+    );
 
-    const PricingCardsSection = slice_type === 'cs-pricing' && items && <PricingCards cards={ data.pricing_cards }/>
+    const PricingCardsSection = slice_type === 'cs-pricing' &&
+      items && <PricingCards cards={data.pricing_cards} />;
 
     return (
-      <section className={ classes }>
+      <section className={classes}>
         <div className="content-section-p-wrapper">
           <div
-            className={ componentClass + '-details ' + componentClass + '-area' }
+            className={componentClass + '-details ' + componentClass + '-area'}
           >
-            { Pretitle }
-            { Title }
-            { Subtitle }
-            { slice_type === 'graphic_with_text_logos'
-              ? graphic()
-              : null }
+            {Pretitle}
+            {Title}
+            {Subtitle}
+            {slice_type === 'graphic_with_text_logos' ? graphic() : null}
 
-            { body() }
+            {body()}
 
-            { /**
+            {/**
              * If there are items, they are buttons
              * let's display them!
              */
 
-              actions() }
-            { CodeExplorerSection }
-            { IframesSection }
+            actions()}
+            {CodeExplorerSection}
+            {IframesSection}
           </div>
-          { slice_type !== 'graphic_with_text_logos'
-            ? graphic()
-            : null }
-          { AdvancedCardsSection }
-          { GithubStarsSection }
+          {slice_type !== 'graphic_with_text_logos' ? graphic() : null}
+          {AdvancedCardsSection}
+          {GithubStarsSection}
         </div>
-        { PricingCardsSection }
+        {PricingCardsSection}
       </section>
-    )
+    );
   }
 }

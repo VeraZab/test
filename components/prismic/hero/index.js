@@ -44,8 +44,8 @@ export default class Hero extends React.Component {
   }
 
   findSlice = (slices, type) =>
-    slices.find(slice => slice.slice_type === type)
-      ? slices.find(slice => slice.slice_type === type)
+    slices.find((slice) => slice.slice_type === type)
+      ? slices.find((slice) => slice.slice_type === type)
       : false;
 
   render() {
@@ -114,6 +114,15 @@ export default class Hero extends React.Component {
      */
     const slice_Logos = this.findSlice(data.hero_slices, 'logos');
     const Logos = slice_Logos ? <LogosSlice data={slice_Logos} /> : null;
+
+    if (data.custom_height) {
+      HeroStyle = {
+        ...HeroStyle,
+        height: data.custom_height,
+        minHeight: data.custom_height,
+        overflow: 'hidden',
+      };
+    }
 
     return (
       <section
