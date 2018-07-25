@@ -114,11 +114,11 @@ Add Plotly’s best-in-class chart editor and dashboards to your own analytics p
 
 *Body:*
 
-Through our open source toolkits or a Plotly On-Premises server, your product’s data visualization tools will be seamless with its brand and lightyears beyond the competition.
+Through our open source toolkits or a Plotly Enterprise server, your product’s data visualization tools will be seamless with its brand and lightyears beyond the competition.
 
 *CTA:*
 
-White label Plotly On-Premises
+White label Plotly Enterprise
 
 ---
 
@@ -168,7 +168,7 @@ Plotly’s team maintains the fastest growing open-source visualization librarie
 
 *Body:*
 
-These libraries seamlessly interface with our hosting servers (cloud or on premises) for easy collaboration, code-free editing, collaboration with designers, and dashboard composition.
+These libraries seamlessly interface with our hosting servers (cloud or on-premises) for easy collaboration, code-free editing, collaboration with designers, and dashboard composition.
 
 Our software is embedded in mission critical projects across the Fortune 500.
 

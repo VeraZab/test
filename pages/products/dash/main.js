@@ -278,7 +278,7 @@ class DashMain extends React.Component {
               link={demoAppOil[0].link}
               image="https://tamarack-prismic.imgix.net/plotly%2Fa47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png?auto=compress&auto=format"
             />
-          </ContentPane>    
+          </ContentPane>
         </ContentSection>
     <ContentSection>
           <ContentPane half graphic>
@@ -318,8 +318,8 @@ class DashMain extends React.Component {
                 Run Dash on your desktop environment for free.
               </p>
               <p>
-                Using Dash inside your enterprise? Plotly offers Dash
-                On-Premises for 1-click app deployment and app permissioning
+                Using Dash inside your enterprise? Plotly offers the Dash
+                Deployment Server for 1-click app deployment and app permissioning
                 with LDAP and Active Directory, all behind your corporate
                 firewall.&nbsp;
               </p>
@@ -352,19 +352,19 @@ class DashMain extends React.Component {
                         className="card-image-label"
                         style={{ width: '100%' }}
                       >
-                        Dash On-Premises Deployment
+                        Dash Deployment Server
                       </div>
                     </div>
                     <div className="card-body">
                       <p>
                         Managing apps and servers inside your enterprise is
-                        usually a full time job. Our goal with Dash On-Premises
+                        usually a full time job. Our goal with the Dash Deployment Server
                         is to make deploying and sharing a Dash app internally
                         as easy and secure as possible. No dev-ops required.
                       </p>
 
                       <p>
-                        Dash On-Premises handles all of the hard parts about
+                        The Dash Deployment Server handles all of the hard parts about
                         managing apps for you: deployment, managing updates,
                         error handling, URL routing, LDAP integration, and more.
                         Deploy and share an app behind your firewall in minutes.
@@ -398,12 +398,12 @@ class DashMain extends React.Component {
                         className="card-image-label"
                         style={{ width: '100%' }}
                       >
-                        Dash On-Premises<br />App Portal
+                        Dash Deployment Server<br />App Portal
                       </div>
                     </div>
                     <div className="card-body">
                       <p>
-                        Dash On-Premises ties into Plotly On-Premises, storing
+                        The Dash Deployment Server ties into Plotly Enterprise, storing
                         your analytical Dash applications with plotly graphs,
                         datasets, SQL queries, and dashboards in one
                         company-wide portal.
