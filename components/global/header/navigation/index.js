@@ -189,36 +189,33 @@ export default class Navigation extends React.Component {
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Business<br />Intelligence
+                    Dash<br /> Products
                   </div>
                   {/** Products Submenu Items */}
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'chart-studio',
-                      },
-                    }}
-                    as={'/online-chart-maker/'}
-                    prefetch
+                  <a
+                    className="navigation-product-submenu-item"
+                    href="/products/dash"
                   >
+                    Dash Overview
+                  </a>
+                  <Link href="https://dash.plot.ly" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Chart Studio
+                      Open-Source
                     </a>
                   </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: { slug: 'dashboards-and-reporting' },
-                    }}
-                    as={'/dashboards'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/dashboards"
-                    >
-                      Dashboards & Reporting
+                  <Link href="https://www.dashdaq.io/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash DAQ
+                    </a>
+                  </Link>
+                  <Link href="https://dash.bio/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Bio
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/dash/pricing/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Deployment Server
                     </a>
                   </Link>
                 </div>
@@ -283,6 +280,42 @@ export default class Navigation extends React.Component {
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
+                    Business Intelligence
+                  </div>
+                  {/** Products Submenu Items */}
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'chart-studio',
+                      },
+                    }}
+                    as={'/online-chart-maker/'}
+                    prefetch
+                  >
+                    <a className="navigation-product-submenu-item">
+                      Chart Studio
+                    </a>
+                  </Link>
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: { slug: 'dashboards-and-reporting' },
+                    }}
+                    as={'/dashboards'}
+                    prefetch
+                  >
+                    <a
+                      className="navigation-product-submenu-item"
+                      href="/dashboards"
+                    >
+                      Dashboards & Reporting
+                    </a>
+                  </Link>
+                </div>
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                  <div className="navigation-product-submenu-section-title">
                     Platforms
                   </div>
                   {/** Products Submenu Items */}
@@ -295,30 +328,6 @@ export default class Navigation extends React.Component {
                   <Link href="/products/cloud" prefetch>
                     <a className="navigation-product-submenu-item">
                       Plotly Cloud
-                    </a>
-                  </Link>
-                </div>
-
-                {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Dash
-                  </div>
-                  {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/dash"
-                  >
-                    Dash Overview
-                  </a>
-                  <Link href="https://dash.plot.ly" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Open-Source
-                    </a>
-                  </Link>
-                  <Link href="https://plot.ly/dash/pricing/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash Deployment Server
                     </a>
                   </Link>
                 </div>
