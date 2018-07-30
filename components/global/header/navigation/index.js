@@ -189,67 +189,33 @@ export default class Navigation extends React.Component {
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Business<br />Intelligence
+                    Dash<br /> Products
                   </div>
                   {/** Products Submenu Items */}
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'chart-studio',
-                      },
-                    }}
-                    as={'/online-chart-maker/'}
-                    prefetch
+                  <a
+                    className="navigation-product-submenu-item"
+                    href="/products/dash"
                   >
+                    Dash Overview
+                  </a>
+                  <Link href="https://dash.plot.ly" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Chart Studio
+                      Open-Source
                     </a>
                   </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: { slug: 'dashboards-and-reporting' },
-                    }}
-                    as={'/dashboards'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/dashboards"
-                    >
-                      Dashboards & Reporting
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'slide-decks',
-                      },
-                    }}
-                    as={'/powerpoint-online'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/powerpoint-online/"
-                    >
-                      Slide Decks
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'falcon-sql-editor',
-                      },
-                    }}
-                    as={'/database-connectors/'}
-                    prefetch
-                  >
+                  <Link href="https://www.dashdaq.io/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Falcon SQL Client (Free)
+                      Dash DAQ
+                    </a>
+                  </Link>
+                  <Link href="https://dash.bio/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Bio
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/dash/pricing/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Dash Deployment Server
                     </a>
                   </Link>
                 </div>
@@ -257,15 +223,9 @@ export default class Navigation extends React.Component {
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Data Science &amp;<br />Open Source
+                    Open-Source<br />Data Visualization
                   </div>
                   {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/dash"
-                  >
-                    Dash
-                  </a>
                   <Link
                     prefetch
                     href={{
@@ -306,22 +266,58 @@ export default class Navigation extends React.Component {
                     href={{
                       pathname: '/p',
                       query: {
-                        slug: 'react-component-suite',
+                        slug: 'falcon-sql-editor',
                       },
                     }}
-                    as={'/products/react/'}
+                    as={'/database-connectors/'}
                     prefetch
                   >
-                    <a className="navigation-product-submenu-item">React</a>
+                    <a className="navigation-product-submenu-item">SQL</a>
                   </Link>
                 </div>
-
+                <div className="navigation-product-submenu-section--span-all">
+                </div>
                 {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section navigation-product-submenu-section--span-all">
+                <div className="navigation-product-submenu-section">
+                  <div className="navigation-product-submenu-section-title">
+                    Business Intelligence
+                  </div>
+                  {/** Products Submenu Items */}
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: {
+                        slug: 'chart-studio',
+                      },
+                    }}
+                    as={'/online-chart-maker/'}
+                    prefetch
+                  >
+                    <a className="navigation-product-submenu-item">
+                      Chart Studio
+                    </a>
+                  </Link>
+                  <Link
+                    href={{
+                      pathname: '/p',
+                      query: { slug: 'dashboards-and-reporting' },
+                    }}
+                    as={'/dashboards'}
+                    prefetch
+                  >
+                    <a
+                      className="navigation-product-submenu-item"
+                      href="/dashboards"
+                    >
+                      Dashboards & Reporting
+                    </a>
+                  </Link>
+                </div>
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     Platforms
                   </div>
-
                   {/** Products Submenu Items */}
                   <a
                     className="navigation-product-submenu-item"
@@ -337,13 +333,6 @@ export default class Navigation extends React.Component {
                 </div>
               </div>
             </div>
-            {/** Master Classes */}
-            <a
-              className="navigation-product-item"
-              href="https://plotcon.plot.ly/"
-            >
-              Master Classes
-            </a>
 
             <div
               className="login-button"
