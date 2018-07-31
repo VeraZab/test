@@ -16,8 +16,15 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {this.props.styleTags}
-          <script id="mcjs"
-          dangerouslySetInnerHTML={{__html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/28d7f8f0685d044fb51f0d4ee/203374fe718271c5edd4a39be.js");`}}
+          <script async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-1009791370"
+          />
+          <script dangerouslySetInnerHTML={
+            {__html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-1009791370');`}}
           />
         </Head>
         <body>
