@@ -37,14 +37,9 @@ const footerData = [
     label: 'Company',
     links: [
       {
-        label: 'About',
+        label: 'Careers',
         icon: null,
-        url: 'https://plot.ly/company/jobs/'
-      },
-      {
-        label: 'Team',
-        icon: null,
-        url: 'https://plot.ly/company/team/'
+        url: 'https://plot.ly/company/careers/'
       },
       {
         label: 'Blog',
