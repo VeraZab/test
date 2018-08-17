@@ -196,7 +196,7 @@ class Footer extends React.Component {
             <div className="footer-main-bottom-wrapper">
               <div className="footer-main-bottom-section">
                 <copyright>
-                  <span>Copyright &copy; 2017 Plotly.</span>{ ' ' }
+                  <span>Copyright &copy; 2018 Plotly.</span>{ ' ' }
                   <span>All rights reserved.</span>
                 </copyright>
               </div>
