@@ -40,13 +40,29 @@
 
 ## Development
 
-Clone the repo and run `yarn install` to install all of the dependencies. 
+1. Clone the repo.
 
-Run `yarn run dev` to enter development mode. This will launch a server for you to actively develop with hot module reloading and live reloading of styles.
+```
+$ git clone https://github.com/plotly/plotly-next.git
+$ git fetch origin
+$ cd plotly-next
+```
+
+2. Install the site's dependencies on your local machine. 
+
+```yarn install```
+
+3. Launch a test server with hot module reloading and live reloading of styles. 
+
+```
+yarn run dev
+``` 
+
+Note: You must have Node version 9 installed in order to build the site. Use [N](https://github.com/tj/n#installingactivating-versions) to interactively manage Node versions. 
 
 ## Deployment
 
-If you make changes to the actual code, make a PR against `master`. After your PR reviewed, approved, and merged to `master` you must merge `master` into `production`. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
+If you make changes to the actual code, make a PR against `master`. After your PR reviewed, approved, and merged to `master` you must merge `master` into `production`. There is no need to review the `master` -> `production` merge. Merging to the `production` branch will automatically deploy the changes to the `gh-pages` branch via circleci.
 
 If you only make changes to the content on prismic.io, then you'll need to publish on prismic.io and then manually rebuild the `production` branch on circleci (https://circleci.com/gh/plotly/plotly-next/tree/production). This will get the changes from prismic.io and redeploy to `gh-pages`.
 
