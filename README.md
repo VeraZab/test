@@ -21,6 +21,7 @@ https://plotly.github.io/plotly-next/products/cloud/ |
 https://plotly.github.io/plotly-next/products/on-premise/| 
 https://plotly.github.io/plotly-next/products/consulting-and-oem/ | 
 https://plotly.github.io/plotly-next/products/dash/ | 
+https://plotly.github.io/plotly-next/dash/pricing/ |
 
 /products/industries/ |
 ---------------------- |
