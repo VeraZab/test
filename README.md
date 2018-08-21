@@ -44,7 +44,7 @@ https://plotly.github.io/plotly-next/products/enterprise/customer-stories/goji |
 
 ## Setting Up a Development Environment
 
-0. Note: You must have Node version 9 installed in order to build the site. Use [N](https://github.com/tj/n#installingactivating-versions) to interactively manage Node versions on in your development environment. 
+0. Note: You must have Node version 9 installed in order to build the site. Use [N](https://github.com/tj/n#installingactivating-versions) to interactively manage Node versions in your development environment. 
 
 1. Clone the plotly/plotly-next repo. As this is a private repo, you must be logged into a GitHub account with read access to the repo. 
 ```
