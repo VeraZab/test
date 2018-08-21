@@ -104,4 +104,4 @@ For more documentation about Percy.io, visit the [docs](https://docs.percy.io/do
 
 ## CircleCI
 
-For more documentation about CircleCI, visit the [docs](https://github.com/zeit/next.js). Learn more about the creators [here](https://zeit.co).
+For more documentation about CircleCI, visit the [docs](https://circleci.com/docs/2.0/). 
