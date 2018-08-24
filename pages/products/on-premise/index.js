@@ -217,8 +217,8 @@ class OnPrem extends React.Component {
                 className="animate--fade-in-from-bottom"
               >
                 {this.state.pricingMode === 'Private Cloud'
-                  ? `Set up and managed by Plotly. The easiest way to set up your own Plotly Enterprise and Dash Deployment servers. Single sign-on through LDAP or AD is not possible with Private Cloud - see On-Premises if SSO is required.`
-                  : `Installed and maintained by your IT staff on your company's server or company AWS account.`}
+                  ? `Set up and managed by Plotly. The easiest way to set up your own Plotly Enterprise and Dash Deployment Server. Single sign-on through LDAP or AD is not possible with Private Cloud - see On-Premises if SSO is required.`
+                  : `Installed and maintained by your IT staff on your company's server or AWS account.`}
               </H2>
             </HeadingContainer>
             <PricingCards cards={cards} />
