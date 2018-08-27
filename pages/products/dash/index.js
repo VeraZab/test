@@ -15,14 +15,6 @@ const meta = {
 export default () => (
   <Layout meta={meta} hideHeader="true">
     <style dangerouslySetInnerHTML={{ __html: styles }} />
-    <div className="header-message">
-      <div className="header-message-wrapper">
-        2 day master classes for Dash, R, Shiny & Dash R. 🎨 📈{' '}
-        <a href="https://plotcon.plot.ly/workshops" target="_blank">
-          Learn More
-        </a>
-      </div>
-    </div>
     <HeroSection />
     <DashMain />
   </Layout>
