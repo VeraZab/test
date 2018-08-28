@@ -217,9 +217,8 @@ class OnPrem extends React.Component {
                 className="animate--fade-in-from-bottom"
               >
                 {this.state.pricingMode === 'Private Cloud'
-                  ? `Automatically installed and maintained. Login to a dedicated,
-              private cloud server with your work email.`
-                  : `Installed and maintained by your IT staff on your company's server.`}
+                  ? `Set up and managed by Plotly. The easiest way to set up your own Plotly Enterprise and Dash Deployment Server. Single sign-on through LDAP or AD is not possible with Private Cloud - see On-Premises if SSO is required.`
+                  : `Installed and maintained by your IT staff on your company's server or AWS account.`}
               </H2>
             </HeadingContainer>
             <PricingCards cards={cards} />
@@ -297,117 +296,6 @@ class OnPrem extends React.Component {
                 </div>
               </div>
             </Body>
-          </ContentPane>
-        </ContentSection>
-        <ContentSection className="plotlyjs-section">
-          <ContentPane full center center-vertically text>
-            <div className="pre-title">Plotly Enterprise</div>
-            <Title>
-              Link Plotly.js charts in your application to Plotly Enterprise
-            </Title>
-            <Body>
-              <div className="image-with-complex-text-overlay plotlyjs">
-                <div className="image-with-complex-text-overlay-wrapper">
-                  <div className="text-overlay">
-                    <div className="text-item text-item--right-top">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <div className="text-item-lines-bottom" />
-
-                        <div className="pre-title">
-                          Users can 1-click import those charts into a
-                          white-labeled chart editor for advanced editing,
-                          analytics, and PDF export.
-                        </div>
-                        <div>
-                          <p>
-                            Built on React/Redux, Plotly’s chart editor is fully
-                            customizable and has been continuously improved over
-                            4&nbsp;years.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="text-item text-item--left-top">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <div className="text-item-lines-bottom" />
-                        <div className="pre-title">
-                          Embed Plotly.js charts inside your application.
-                        </div>
-                        <div>
-                          <p>
-                            Plotly.js is an enterprise-ready, open-source
-                            replacement for D3, Highcharts, or echarts.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Body>
-          </ContentPane>
-        </ContentSection>
-
-        <ContentSection>
-          <ContentPane half center-vertically text>
-            <div className="pre-title">Support Open-Source</div>
-            <Title>Built on the Shoulders of Giants</Title>
-            <Body>
-              <p>
-                Plotly Enterprise is built on a foundation of open-source
-                libraries that are constantly improving. To name a few:
-              </p>
-
-              <ul className="body-list blue">
-                <li>
-                  <a href="https://github.com/d3" target="_blank">
-                    D3.js
-                  </a>{' '}
-                  ⟶ SVG graphics
-                </li>
-                <li>
-                  <a href="https://github.com/sheetjs" target="_blank">
-                    SheetJS
-                  </a>{' '}
-                  ⟶ Excel file parsing
-                </li>
-                <li>
-                  <a href="https://github.com/handsontable" target="_blank">
-                    Handsontable
-                  </a>{' '}
-                  ⟶ Online spreadsheet editor
-                </li>
-                <li>
-                  <a href="https://facebook.github.io/react/" target="_blank">
-                    React
-                  </a>{' '}
-                  ⟶ Facebook's library for UI building
-                </li>
-                <li>
-                  <a href="https://github.com/plotly/plotly.js" target="_blank">
-                    Plotly.js
-                  </a>{' '}
-                  ⟶ Performance charting library
-                </li>
-              </ul>
-
-              <a
-                href="https://moderndata.plot.ly/all-oss-used-in-plotly-cloud-and-plotly-on-premise/"
-                className="center"
-                target="_blank"
-              >
-                See all OSS libraries and licenses
-              </a>
-            </Body>
-          </ContentPane>
-          <ContentPane half graphic center-vertically>
-            <Graphic
-              link="https://moderndata.plot.ly/all-oss-used-in-plotly-cloud-and-plotly-on-premise/"
-              image="https://plot.ly/static/enterprise/img/alternatives/videos/3d.c876ca23cc00.jpg"
-            />
           </ContentPane>
         </ContentSection>
       </Layout>
