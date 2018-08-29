@@ -77,7 +77,7 @@ const features = [
     ],
   },
   {
-    value: <>Export to <br /> SVG, EPS, HTML & PDF</>,
+    value: <>Export to <br /> SVG, EPS, HTML & PDF *Note: SVG export is not offered for WebGL rendered graphs.</>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
