@@ -209,7 +209,7 @@ export default class CloudPricing extends React.Component {
         <SupportBanner style={ {
           transform: `translateY(-${offset + 1}px)`
         } }/>
-        <a href = "https://plot.ly/python/static-image-export/#supported-formats">*It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image.</a>
+        <span id="footer_note"><a href="https://plot.ly/python/static-image-export/">*It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image.</a></span>
       </Layout>
     );
   }

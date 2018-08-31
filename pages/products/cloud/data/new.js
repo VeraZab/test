@@ -77,7 +77,7 @@ const features = [
     ],
   },
   {
-    value: <>Export to <br /> SVG, EPS, HTML & PDF*</>,
+    value: <>Export to<br /> SVG, EPS, HTML & PDF<a href="#footer_note">*Note</a></>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
