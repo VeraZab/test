@@ -1,3 +1,5 @@
+import Tooltip from '@atlaskit/tooltip';
+
 const PLANS = {
   COMMUNITY: 'plans/community',
   PERSONAL: 'plans/personal',
@@ -77,7 +79,7 @@ const features = [
     ],
   },
   {
-    value: <>Export to<br /> SVG, EPS, HTML & PDF<a href="#footer_note">*Note</a></>,
+    value: <><Tooltip content="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image.">Export to<br /> SVG, EPS, HTML & PDF</Tooltip></>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
