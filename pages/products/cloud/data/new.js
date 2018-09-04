@@ -1,4 +1,4 @@
-import Tooltip from '@atlaskit/tooltip';
+import microtip from 'microtip/microtip.css'
 
 const PLANS = {
   COMMUNITY: 'plans/community',
@@ -79,7 +79,7 @@ const features = [
     ],
   },
   {
-    value: <><Tooltip content="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image.">Export to<br /> SVG, EPS, HTML & PDF</Tooltip></>,
+    value: <>Export to<br /> SVG, EPS, HTML & PDF<a aria-label="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image." data-microtip-position="top-left" role="tooltip" >Note</a></>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
