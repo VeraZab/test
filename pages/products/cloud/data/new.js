@@ -1,4 +1,3 @@
-import microtip from 'microtip/microtip.css'
 
 const PLANS = {
   COMMUNITY: 'plans/community',
@@ -79,7 +78,7 @@ const features = [
     ],
   },
   {
-    value: <>Export to<br /> SVG, EPS, HTML & PDF<a aria-label="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image." data-microtip-position="top-left" role="tooltip" >Note</a></>,
+    value: <div aria-label="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image." data-microtip-position="top" data-microtip-size="medium" role="tooltip">Export to<br /> SVG, EPS, HTML & PDF*</div>,
     plans: [
       PLANS.PERSONAL,
       PLANS.PROFESSIONAL,
