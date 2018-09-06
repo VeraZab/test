@@ -21,6 +21,7 @@
 
 [aria-label][role~="tooltip"] {
   position: relative;
+  line-height: 1.6;
 }
 
 [aria-label][role~="tooltip"]::before,
