@@ -280,34 +280,7 @@ class DashMain extends React.Component {
             />
           </ContentPane>
         </ContentSection>
-    <ContentSection>
-          <ContentPane half graphic>
-            <Graphic image="https://plotly-images.imgix.net/plotcon/staff-uploads/90d13bfa34a5fd265620d5b991fdc794/DSC05146.jpg?w=1200&h=2000&fit=crop&crop=faces&auto=compress&auto=format" />
-          </ContentPane>
-          <ContentPane half center-vertically text>
-            <div className="pre-title">PLOTCON WORKSHOPS 2018</div>
-            <Title>Dash Master Class</Title>
-            <Body>
-              <p>Chris will walk you through his own creation Dash.</p>
-              <p>
-                This two day workshop will go over the foundations and guiding
-                principles of dash, starting with simple examples on the first
-                day and more advanced use cases on the second day. Each section
-                of the Dash workshop will be focused around complete examples
-                that the attendees can run on their own computers. Attendees
-                will learn the principles of Dash by customizing these examples
-                through gentle, interactive “challenges”.
-              </p>
-              <p>
-                This workshop is taught by the author of the Dash library
-                itself, with help from other Dash solutions experts at Plotly.
-              </p>
-              <div className="buttons padding-top padding-bottom">
-                <Button item={plotcon_button} />
-              </div>
-            </Body>
-          </ContentPane>
-        </ContentSection>
+
         <ContentSection className="dash-section-open-source">
           <ContentPane full center-vertically center text>
             <Title>Open Source with Enterprise Addons</Title>
@@ -335,6 +308,7 @@ class DashMain extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
+
         <ContentSection className="dash-section-more-details">
           <ContentPane full center-vertically center text>
             <Body>
