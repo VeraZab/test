@@ -7,7 +7,7 @@ const footerData = [
     label: 'Developers',
     links: [
       {
-        label: 'Dash',
+        label: 'Dash (Python)',
         icon: null,
         url: 'https://plot.ly/products/dash'
       },
@@ -17,17 +17,17 @@ const footerData = [
         url: 'https://plot.ly/python/'
       },
       {
-        label: 'R & Shiny',
+        label: 'R Graphing Library',
         icon: null,
         url: 'https://plot.ly/r/'
       },
       {
-        label: 'MATLAB',
+        label: 'MATLAB Graphing Library',
         icon: null,
         url: 'https://plot.ly/matlab/'
       },
       {
-        label: 'Javascript',
+        label: 'Javascript Graphing Library',
         icon: null,
         url: 'https://plot.ly/javascript-graphing-library/'
       },
