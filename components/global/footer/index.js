@@ -7,7 +7,12 @@ const footerData = [
     label: 'Developers',
     links: [
       {
-        label: 'Python',
+        label: 'Dash',
+        icon: null,
+        url: 'https://plot.ly/products/dash'
+      },
+      {
+        label: 'Python Graphing Library',
         icon: null,
         url: 'https://plot.ly/python/'
       },
@@ -44,7 +49,7 @@ const footerData = [
       {
         label: 'Blog',
         icon: null,
-        url: 'https://blog.plot.ly/'
+        url: 'https://medium.com/@plotlygraphs'
       },
       {
         label: 'Modern Data',
@@ -55,11 +60,6 @@ const footerData = [
         label: 'Industries',
         icon: null,
         url: 'https://plot.ly/products/industries/'
-      },
-      {
-        label: 'Workshops',
-        icon: null,
-        url: 'https://plotcon.plot.ly/'
       },
       {
         label: 'Customer Contact',
@@ -82,7 +82,7 @@ const footerData = [
         url: 'https://community.plot.ly/'
       },
       {
-        label: 'Documentation',
+        label: 'Help Center',
         icon: null,
         url: 'http://help.plot.ly/'
       }
@@ -134,7 +134,7 @@ const footerData = [
       {
         label: 'Falcon SQL Client (Free)',
         icon: null,
-        url: 'https://marketing.plot.ly/database-connectors/'
+        url: 'https://plot.ly/free-sql-client-download/'
       }
     ]
   }
