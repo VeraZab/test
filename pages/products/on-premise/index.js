@@ -5,92 +5,17 @@ import {
   ContentPane,
   Title,
   Body,
-  Graphic,
 } from 'components/content-section';
-import Buttons from 'components/buttons';
 import styles from '../cloud/pricing.styles.scss';
 import {
   SwitchContainer,
   HeadingContainer,
-  Switch,
-  SwitchItem,
   H1,
   H2,
 } from 'components/styled/on-prem';
 import shortid from 'shortid';
-import PricingCardSlice from 'components/prismic/slices/pricing-cards';
 import SwitchComponent from 'components/switch';
 import PricingCards from '../../../components/prismic/slices/pricing-cards';
-
-const onPremData = [
-  {
-    features: [
-      {
-        value:
-          'Includes everything in the <strong>Professional Plotly Plan</strong>',
-      },
-      {
-        value: 'Email and Phone Support',
-      },
-      {
-        value: 'Unlimited Charts, Dashboards and Slide Decks',
-      },
-      {
-        value: 'Unlimited Viewers',
-      },
-      {
-        value: 'LDAP Integration',
-      },
-      {
-        value: 'Plotly On Line API Support',
-      },
-      {
-        value: 'Behind your firewall Security',
-      },
-    ],
-  },
-];
-
-const onPremDashata = [
-  {
-    features: [
-      {
-        value:
-          'Includes everything in the <strong>Enterprise Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
-      },
-      {
-        value: 'Email and Phone Support',
-      },
-      {
-        value:
-          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash Applications</a>',
-      },
-      {
-        value:
-          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash App</a> Viewers',
-      },
-      {
-        value:
-          '<a href="https://plot.ly/dash/pricing/">Automatic Git Based Deployments</a> of Dash Apps',
-      },
-      {
-        value:
-          '<a href="https://plot.ly/dash/pricing/">Learn More About Dash Deployment Server</a>',
-      },
-    ],
-  },
-];
-
-const actions = [
-  {
-    label: 'Request a Demo',
-    link: 'https://plotly.typeform.com/to/seG7Vb',
-    button: {
-      classes: 'button button-primary',
-    },
-    target: '_blank',
-  },
-];
 
 const meta = {
   title: 'Plotly Enterprise and Dash Pricing',
@@ -131,6 +56,7 @@ class OnPrem extends React.Component {
       });
     }
   }
+
   render() {
     const { pricing_cards } = this.props.content;
 
@@ -147,6 +73,15 @@ class OnPrem extends React.Component {
             : card.primary.toggle_state_second_price,
       },
     }));
+
+    //toggle button url and text based on this.state.pricingMode
+    if (this.state.pricingMode === 'Private Cloud'){
+      cards[0].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
+      cards[0].primary.button_one_label = "START A TRIAL";
+      cards[1].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
+      cards[1].primary.button_one_label = "START A TRIAL";
+    }
+
     const pricingCardFeatures = (items) => {
       const pricingCardFeature = (items) => {
         return items.map((item, i) => {
@@ -197,6 +132,7 @@ class OnPrem extends React.Component {
         <div className="on-prem-pricing">
           <Hero togglePricingMode={() => this.togglePricingMode()} />
         </div>
+
         <ContentSection className="onprem-pricing">
           <SwitchContainer>
             <SwitchComponent
@@ -224,6 +160,7 @@ class OnPrem extends React.Component {
             <PricingCards cards={cards} />
           </SwitchContainer>
         </ContentSection>
+
         <ContentSection className="architecture-section">
           <ContentPane full center center-vertically text>
             <div className="pre-title">Plotly Enterprise</div>
@@ -298,6 +235,7 @@ class OnPrem extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
+        
       </Layout>
     );
   }
