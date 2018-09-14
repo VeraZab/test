@@ -9,7 +9,6 @@ import {
   HeroBottom,
 } from 'components/hero'
 import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
 
 const HeroButtons = [
   [
@@ -30,7 +29,7 @@ const HeroButtons = [
 
 const HeroStyles = {
   minHeight: '0',
-  paddingTop: '100px',
+  paddingTop: '0px',
 }
 
 const HeroWrapperStyle = {
@@ -42,8 +41,8 @@ const HeroWrapperStyle = {
 }
 
 const HeroBottomStyles = {
-  paddingBottom: '30px',
-  paddingTop: '120px',
+  paddingBottom: '0px',
+  paddingTop: '50px',
 }
 
 export default class HeroSection extends React.Component {
