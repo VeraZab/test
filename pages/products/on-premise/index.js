@@ -147,6 +147,15 @@ class OnPrem extends React.Component {
             : card.primary.toggle_state_second_price,
       },
     }));
+
+    //toggle button url and text based on this.state.pricingMode
+    if (this.state.pricingMode === 'Private Cloud'){
+      cards[0].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
+      cards[0].primary.button_one_label = "START A TRIAL";
+      cards[1].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
+      cards[1].primary.button_one_label = "START A TRIAL";
+    }
+    
     const pricingCardFeatures = (items) => {
       const pricingCardFeature = (items) => {
         return items.map((item, i) => {
