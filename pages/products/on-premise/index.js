@@ -56,7 +56,6 @@ class OnPrem extends React.Component {
       });
     }
   }
-
   render() {
     const { pricing_cards } = this.props.content;
 
@@ -81,7 +80,7 @@ class OnPrem extends React.Component {
       cards[1].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
       cards[1].primary.button_one_label = "START A TRIAL";
     }
-
+    
     const pricingCardFeatures = (items) => {
       const pricingCardFeature = (items) => {
         return items.map((item, i) => {
@@ -132,7 +131,6 @@ class OnPrem extends React.Component {
         <div className="on-prem-pricing">
           <Hero togglePricingMode={() => this.togglePricingMode()} />
         </div>
-
         <ContentSection className="onprem-pricing">
           <SwitchContainer>
             <SwitchComponent
@@ -160,7 +158,6 @@ class OnPrem extends React.Component {
             <PricingCards cards={cards} />
           </SwitchContainer>
         </ContentSection>
-
         <ContentSection className="architecture-section">
           <ContentPane full center center-vertically text>
             <div className="pre-title">Plotly Enterprise</div>
@@ -235,7 +232,6 @@ class OnPrem extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
-        
       </Layout>
     );
   }
