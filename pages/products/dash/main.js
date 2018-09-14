@@ -2,17 +2,12 @@ import {
   ContentSection,
   ContentPane,
   Title,
-  Subtitle,
   Body,
   Graphic,
 } from 'components/content-section';
 import Buttons from 'components/buttons';
 import Button from 'components/button';
 import CodeExplorer from './code-explorer/code-explorer';
-
-const bg = {
-  backgroundImage: 'linear-gradient(27deg, #1E427D 0%, #1D9CFC 100%)',
-};
 
 const demoAppStock = [
   {
@@ -56,43 +51,6 @@ const demoAppOil = [
   },
 ];
 
-const ExampleCodeBlock = `import dash
-from dash.dependencies import Input, Output
-import dash_core_components as dcc
-import dash_html_components as html
-from pandas_datareader import data as web
-from datetime import datetime as dt
-
-app = dash.Dash()
-
-app.layout = html.Div([
-    html.H1('Stock Tickers'),
-    dcc.Dropdown(
-        id='my-dropdown',
-        options=[
-            {'label': 'Coke', 'value': 'COKE'},
-            {'label': 'Tesla', 'value': 'TSLA'},
-            {'label': 'Apple', 'value': 'AAPL'}
-        ],
-        value='COKE'
-    ),
-    dcc.Graph(id='my-graph')
-])
-
-@app.callback(Output('my-graph', 'figure'), [Input('my-dropdown', 'value')])
-def update_graph(selected_dropdown_value):
-    df = web.DataReader(
-        selected_dropdown_value, data_source='google',
-        start=dt(2017, 1, 1), end=dt.now())
-    return {
-        'data': [{
-            'x': df.index,
-            'y': df.Close
-        }]
-    }
-
-if __name__ == '__main__':
-    app.run_server()`;
 const plotcon_button = {
   label: 'Buy a Ticket',
   title: 'PLOTCON WORKSHOPS 2018',
@@ -148,6 +106,7 @@ class DashMain extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
+
         <ContentSection className="dash-section-features-thirds">
           <ContentPane thirds center-vertically>
             <div className="icon">
@@ -162,6 +121,7 @@ class DashMain extends React.Component {
               like this weighs in at just 40 lines of pure Python.
             </p>
           </ContentPane>
+
           <ContentPane thirds center-vertically>
             <div className="icon">
               <img
@@ -176,6 +136,7 @@ class DashMain extends React.Component {
               code.
             </p>
           </ContentPane>
+
           <ContentPane thirds center-vertically>
             <div className="icon">
               <img
@@ -190,6 +151,7 @@ class DashMain extends React.Component {
               available.
             </p>
           </ContentPane>
+
         </ContentSection>
 
         <ContentSection className="dash-section-dash-apps">
@@ -220,6 +182,7 @@ class DashMain extends React.Component {
               <Buttons className="gutter-top" items={demoAppStock} />
             </Body>
           </ContentPane>
+
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppStock[0].link}
@@ -235,6 +198,7 @@ class DashMain extends React.Component {
               image="https://images-plotly.imgix.net/static/marketing/dash/drug-discovery.gif"
             />
           </ContentPane>
+
           <ContentPane half center-vertically text>
             <div className="pre-title">Example App #2</div>
             <Title>Drug Discovery</Title>
@@ -273,6 +237,7 @@ class DashMain extends React.Component {
               <Buttons className="gutter-top" items={demoAppOil} />
             </Body>
           </ContentPane>
+
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppOil[0].link}
@@ -280,6 +245,7 @@ class DashMain extends React.Component {
             />
           </ContentPane>
         </ContentSection>
+
     <ContentSection>
           <ContentPane half graphic>
             <Graphic image="https://plotly-images.imgix.net/plotcon/staff-uploads/90d13bfa34a5fd265620d5b991fdc794/DSC05146.jpg?w=1200&h=2000&fit=crop&crop=faces&auto=compress&auto=format" />
@@ -308,6 +274,7 @@ class DashMain extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
+
         <ContentSection className="dash-section-open-source">
           <ContentPane full center-vertically center text>
             <Title>Open Source with Enterprise Addons</Title>
@@ -335,6 +302,7 @@ class DashMain extends React.Component {
             </Body>
           </ContentPane>
         </ContentSection>
+
         <ContentSection className="dash-section-more-details">
           <ContentPane full center-vertically center text>
             <Body>
