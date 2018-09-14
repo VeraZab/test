@@ -8,41 +8,12 @@ import {
   HeroActions,
   HeroBottom,
 } from 'components/hero'
-import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
 
 const HeroWrapperStyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundImage:
     'url("https://plotly.github.io/plotly-next/static/enterprise/img/customer-stories/enterprise-customer-stories-banner.jpg")',
-}
-
-const heroStyles = {
-  minHeight: '400px',
-}
-
-const HeroBottomStyles = {
-  paddingBottom: '0px',
-  paddingTop: '0px',
-}
-
-const header = {
-  sitename: 'Plotly',
-  title: 'Visualize Data, Together',
-  description:
-    'Plotly is the modern platform for agile business intelligence and data science.',
-  url: 'https://plot.ly',
-  image: '',
-  tags: [],
-  publisher: 'https://www.facebook.com/Plotly/',
-  twitter: {
-    label1: '',
-    data1: '',
-    label2: '',
-    data2: '',
-    site: '@plotlygraphs',
-  },
 }
 
 class CustomerServiceHero extends React.Component {
@@ -58,7 +29,7 @@ class CustomerServiceHero extends React.Component {
     const header = this.props.header
 
     return (
-      <Hero styles={heroStyles} heroWrapperStyle={HeroWrapperStyle}>
+      <Hero heroWrapperStyle={HeroWrapperStyle}>
         <HeroTop>
           <HeroMessaging>
             <HeroTitle children={header.title} />
@@ -66,7 +37,7 @@ class CustomerServiceHero extends React.Component {
           </HeroMessaging>
           <HeroActions />
         </HeroTop>
-        <HeroBottom style={HeroBottomStyles} />
+        <HeroBottom />
       </Hero>
     )
   }
