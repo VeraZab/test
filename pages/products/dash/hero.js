@@ -69,13 +69,6 @@ export default class HeroSection extends React.Component {
             </div>
             <div className="dash-navigation">
               <a
-                href="https://plotcon.plot.ly/workshops"
-                target="_blank"
-                className="dash-navigation-item"
-              >
-                MASTER CLASS
-              </a>
-              <a
                 href="/dash/pricing/"
                 target="_blank"
                 className="dash-navigation-item"
