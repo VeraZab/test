@@ -4,42 +4,29 @@ import styles from './footer.scss'
 const footerData = [
 
   {
-    label: 'Developers',
+    label: 'DASH',
+    labelColor: '#e763fa',
     links: [
       {
-        label: 'Dash (Python)',
+        label: 'Overview',
         icon: null,
-        url: 'https://plot.ly/products/dash'
+        url: 'https://plot.ly/products/dash/'
       },
       {
-        label: 'Python Graphing Library',
+        label: 'Dash DAQ',
         icon: null,
-        url: 'https://plot.ly/python/'
+        url: 'https://www.dashdaq.io/'
       },
       {
-        label: 'R Graphing Library',
+        label: 'Dash Deployment Server',
         icon: null,
-        url: 'https://plot.ly/r/'
-      },
-      {
-        label: 'MATLAB Graphing Library',
-        icon: null,
-        url: 'https://plot.ly/matlab/'
-      },
-      {
-        label: 'Javascript Graphing Library',
-        icon: null,
-        url: 'https://plot.ly/javascript-graphing-library/'
-      },
-      {
-        label: 'REST API',
-        icon: null,
-        url: 'https://api.plot.ly/v2/'
+        url: 'https://plot.ly/dash/pricing/'
       }
     ]
   },
   {
     label: 'Company',
+    labelColor: '#636efa',
     links: [
       {
         label: 'Careers',
@@ -47,29 +34,25 @@ const footerData = [
         url: 'https://plot.ly/company/careers/'
       },
       {
-        label: 'Blog',
-        icon: null,
-        url: 'https://medium.com/@plotlygraphs'
-      },
-      {
-        label: 'Modern Data',
-        icon: null,
-        url: 'https://moderndata.plot.ly/'
-      },
-      {
-        label: 'Industries',
-        icon: null,
-        url: 'https://plot.ly/products/industries/'
-      },
-      {
         label: 'Customer Contact',
         icon: null,
         url: 'https://plotly.typeform.com/to/r4OilH'
+      },
+      {
+        label: '#plotlylife',
+        icon: null,
+        url: 'https://www.instagram.com/plotly/?hl=en'
+      },
+      {
+        label: 'Twitter',
+        icon: null,
+        url: 'https://twitter.com/plotlygraphs'
       }
     ]
   },
   {
     label: 'Resources',
+    labelColor: '#00cc96',
     links: [
       {
         label: 'Developer Support',
@@ -82,14 +65,15 @@ const footerData = [
         url: 'https://community.plot.ly/'
       },
       {
-        label: 'Help Center',
+        label: 'Documentation',
         icon: null,
         url: 'http://help.plot.ly/'
       }
     ]
   },
   {
-    label: 'Data Science',
+    label: 'Graphing Libraries',
+    labelColor: '#EF553B',
     links: [
       {
         label: 'Dash',
@@ -114,7 +98,8 @@ const footerData = [
     ]
   },
   {
-    label: 'Business Intelligence',
+    label: 'Embedded BI/OEM',
+    labelColor: '#19d3f3',
     links: [
       {
         label: 'Chart Studio',
@@ -125,24 +110,14 @@ const footerData = [
         label: 'Dashboards',
         icon: null,
         url: 'https://plot.ly/dashboards/'
-      },
-      {
-        label: 'Slide Decks',
-        icon: null,
-        url: 'https://plot.ly/powerpoint-online/'
-      },
-      {
-        label: 'Falcon SQL Client (Free)',
-        icon: null,
-        url: 'https://plot.ly/free-sql-client-download/'
       }
     ]
   }
 ];
+
 const footerNavLinkIcon = (icon) => (
   <div className="footer-main-section-link-icon"><i className={ 'mdi mdi-' + icon }/></div>
 );
-
 
 const generateFooterNavLinks = links => {
   return links.map((link, i) => {
@@ -167,7 +142,7 @@ const assembleFooterNavigation = data => {
     return (
       <div className="footer-main-section" key={ i }>
         <div className="footer-main-section-wrapper">
-          <div className="footer-main-section-header">{ section.label }</div>
+          <div className="footer-main-section-header" style={{color: section.labelColor}}>{ section.label }</div>
           <nav className="footer-main-section-links">
             { generateFooterNavLinks(section.links) }
           </nav>
