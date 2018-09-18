@@ -174,9 +174,9 @@ export default class Navigation extends React.Component {
               {/** Products Submenu */}
               <div
                 className={
-                  this.state.productSubmenuActive
-                    ? 'navigation-product-submenu navigation-product-submenu--large submenu-active'
-                    : 'navigation-product-submenu navigation-product-submenu--large '
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
                 }
               >
                 {/** Products Submenu Section */}
@@ -202,11 +202,15 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                 </div>
-
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Business Intelligence
+                    Embedded BI/OEM
                   </div>
                   {/** Products Submenu Items */}
                   <Link
