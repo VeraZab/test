@@ -159,13 +159,6 @@ export default class Navigation extends React.Component {
                     Dash Deployment Server
                   </a>
                 </Link>
-                <a
-                  className="navigation-product-submenu-item"
-                  href="https://support.plot.ly"
-                  target="_blank"
-                >
-                  Support Plans
-                </a>
               </div>
             </div>
 
@@ -181,36 +174,26 @@ export default class Navigation extends React.Component {
               {/** Products Submenu */}
               <div
                 className={
-                  this.state.productSubmenuActive
-                    ? 'navigation-product-submenu navigation-product-submenu--large submenu-active'
-                    : 'navigation-product-submenu navigation-product-submenu--large '
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
                 }
               >
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Dash<br /> Products
+                    Dash
                   </div>
                   {/** Products Submenu Items */}
                   <a
                     className="navigation-product-submenu-item"
                     href="/products/dash"
                   >
-                    Dash Overview
+                    Overview
                   </a>
-                  <Link href="https://dash.plot.ly" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Open-Source
-                    </a>
-                  </Link>
                   <Link href="https://www.dashdaq.io/" prefetch>
                     <a className="navigation-product-submenu-item">
                       Dash DAQ
-                    </a>
-                  </Link>
-                  <Link href="https://dash.bio/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash Bio
                     </a>
                   </Link>
                   <Link href="https://plot.ly/dash/pricing/" prefetch>
@@ -219,68 +202,15 @@ export default class Navigation extends React.Component {
                     </a>
                   </Link>
                 </div>
-
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
-                    Open-Source<br />Data Visualization
-                  </div>
-                  {/** Products Submenu Items */}
-                  <Link
-                    prefetch
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'plotly-js',
-                      },
-                    }}
-                    as={'/plotly-js-scientific-d3-charting-library/'}
-                  >
-                    <a className="navigation-product-submenu-item">Plotly.js</a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'plotly-py',
-                      },
-                    }}
-                    as={'/d3-js-for-python-and-pandas-charts/'}
-                    prefetch
-                  >
-                    <a className="navigation-product-submenu-item">Plotly.py</a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'plotly-r',
-                      },
-                    }}
-                    as={'/d3-js-for-r-and-shiny-charts/'}
-                    prefetch
-                  >
-                    <a className="navigation-product-submenu-item">Plotly.R</a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/p',
-                      query: {
-                        slug: 'falcon-sql-editor',
-                      },
-                    }}
-                    as={'/database-connectors/'}
-                    prefetch
-                  >
-                    <a className="navigation-product-submenu-item">SQL</a>
-                  </Link>
-                </div>
-                <div className="navigation-product-submenu-section--span-all">
-                </div>
-                {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Business Intelligence
+                    Embedded BI/OEM
                   </div>
                   {/** Products Submenu Items */}
                   <Link
@@ -309,25 +239,7 @@ export default class Navigation extends React.Component {
                       className="navigation-product-submenu-item"
                       href="/dashboards"
                     >
-                      Dashboards & Reporting
-                    </a>
-                  </Link>
-                </div>
-                {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Platforms
-                  </div>
-                  {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/on-premise"
-                  >
-                    Plotly Enterprise
-                  </a>
-                  <Link href="/products/cloud" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Plotly Cloud
+                      Dashboards
                     </a>
                   </Link>
                 </div>
