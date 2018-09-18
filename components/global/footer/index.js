@@ -5,6 +5,7 @@ const footerData = [
 
   {
     label: 'DASH',
+    labelColor: '#e763fa',
     links: [
       {
         label: 'Overview',
@@ -25,6 +26,7 @@ const footerData = [
   },
   {
     label: 'Company',
+    labelColor: '#636efa',
     links: [
       {
         label: 'Careers',
@@ -50,6 +52,7 @@ const footerData = [
   },
   {
     label: 'Resources',
+    labelColor: '#00cc96',
     links: [
       {
         label: 'Developer Support',
@@ -70,6 +73,7 @@ const footerData = [
   },
   {
     label: 'Graphing Libraries',
+    labelColor: '#EF553B',
     links: [
       {
         label: 'Dash',
@@ -95,6 +99,7 @@ const footerData = [
   },
   {
     label: 'Embedded BI/OEM',
+    labelColor: '#19d3f3',
     links: [
       {
         label: 'Chart Studio',
@@ -137,7 +142,7 @@ const assembleFooterNavigation = data => {
     return (
       <div className="footer-main-section" key={ i }>
         <div className="footer-main-section-wrapper">
-          <div className="footer-main-section-header">{ section.label }</div>
+          <div className="footer-main-section-header" style={{color: section.labelColor}}>{ section.label }</div>
           <nav className="footer-main-section-links">
             { generateFooterNavLinks(section.links) }
           </nav>
