@@ -24,8 +24,8 @@ const readMore = {
 
 const articles = [
   {
-    title: "Story",
-    date: 'Thursday, Feb 15, 2018 2:00 PM EST',
+    title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
+    date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
     presenter: {
