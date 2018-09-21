@@ -1,15 +1,14 @@
 import Layout from 'components/global/layout';
 import Hero from './hero';
-
 import {
   ContentSection,
   ContentPane,
   Title,
   Body,
-  Subtitle,
 } from 'components/content-section';
 import Buttons from 'components/buttons';
 import { Grid, GridItem } from 'components/grid';
+
 const meta = {
   title: 'Advanced Development',
   description:
@@ -25,6 +24,7 @@ const meta = {
 const contentSectionStyles = {
   paddingTop: '0px',
 };
+
 const cardBoxStyles = {
   marginTop: '40px',
   width: '480px',
@@ -48,6 +48,7 @@ const buttons = [
     },
   },
 ];
+
 const oemButton = [
   {
     label: 'Inquire about an Oem',

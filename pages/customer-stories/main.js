@@ -1,25 +1,10 @@
-import { ContentSection, ContentPane, Body } from 'components/content-section'
-import Link from 'next/link'
-
 class CustomerServiceMain extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
-    const cardWithImageStyles = {
-      width: '100%',
-      marginBottom: '60px',
-      maxWidth: '475px',
-    }
-
-    const removeActionOnLink = {
-      transform: 'initial',
-      color: '#fff',
-    }
-
     const story = this.props.story
-    const spacing = this.props.spacing
 
     return (
       <a href={story.url} className="enterprise-card">

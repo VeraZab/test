@@ -5,35 +5,9 @@ import {
   HeroMessaging,
   HeroTitle,
   HeroSubtitle,
-  HeroActions,
   HeroBottom,
 } from 'components/hero';
-import Buttons from 'components/buttons';
 import { ClientLogos } from 'components/global/client-logos';
-
-const HeroButtons = [
-  {
-    label: 'Get Started For Free',
-    title: 'See what you can create with Plotly!',
-    icon: null,
-    target: '_self',
-    link: 'https://plot.ly/accounts/login/?action=signin',
-    button: {
-      classes: 'button button-primary',
-    },
-  },
-  {
-    label: 'Plotly Enterprise',
-    title:
-      'Looking for a behind-the-firewall solution? Deploy Plotly Enterprise on your secure, local network.',
-    icon: null,
-    target: '_self',
-    link: '/products/on-premise/',
-    button: {
-      classes: 'button button-secondary',
-    },
-  },
-];
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -44,8 +18,7 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-  paddingBottom: '270px',
-  paddingTop: '20px',
+  paddingBottom: '270px'
 };
 
 export default () => (
@@ -61,9 +34,6 @@ export default () => (
           your first chart, dashboard, or SQL database connection.
         </HeroSubtitle>
       </HeroMessaging>
-      {/*<HeroActions>*/}
-      {/*<Buttons items={HeroButtons} />*/}
-      {/*</HeroActions>*/}
     </HeroTop>
     <HeroBottom style={HeroBottomStyles}>
       <ClientLogos />
