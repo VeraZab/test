@@ -53,7 +53,6 @@ const footerData = [
         icon: null,
         url: 'https://github.com/plotly'
       }
-      
     ]
   },
   {
