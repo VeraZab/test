@@ -47,6 +47,11 @@ const footerData = [
         label: 'Twitter',
         icon: null,
         url: 'https://twitter.com/plotlygraphs'
+      },
+      {
+        label: 'GitHub',
+        icon: null,
+        url: 'https://github.com/plotly'
       }
     ]
   },
