@@ -5,92 +5,17 @@ import {
   ContentPane,
   Title,
   Body,
-  Graphic,
 } from 'components/content-section';
-import Buttons from 'components/buttons';
 import styles from '../cloud/pricing.styles.scss';
 import {
   SwitchContainer,
   HeadingContainer,
-  Switch,
-  SwitchItem,
   H1,
   H2,
 } from 'components/styled/on-prem';
 import shortid from 'shortid';
-import PricingCardSlice from 'components/prismic/slices/pricing-cards';
 import SwitchComponent from 'components/switch';
 import PricingCards from '../../../components/prismic/slices/pricing-cards';
-
-const onPremData = [
-  {
-    features: [
-      {
-        value:
-          'Includes everything in the <strong>Professional Plotly Plan</strong>',
-      },
-      {
-        value: 'Email and Phone Support',
-      },
-      {
-        value: 'Unlimited Charts, Dashboards and Slide Decks',
-      },
-      {
-        value: 'Unlimited Viewers',
-      },
-      {
-        value: 'LDAP Integration',
-      },
-      {
-        value: 'Plotly On Line API Support',
-      },
-      {
-        value: 'Behind your firewall Security',
-      },
-    ],
-  },
-];
-
-const onPremDashata = [
-  {
-    features: [
-      {
-        value:
-          'Includes everything in the <strong>Enterprise Plan</strong> + support for <a href="https://plot.ly/dash/pricing/">Dash Apps</a>',
-      },
-      {
-        value: 'Email and Phone Support',
-      },
-      {
-        value:
-          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash Applications</a>',
-      },
-      {
-        value:
-          'Unlimited <a href="https://plot.ly/dash/pricing/">Dash App</a> Viewers',
-      },
-      {
-        value:
-          '<a href="https://plot.ly/dash/pricing/">Automatic Git Based Deployments</a> of Dash Apps',
-      },
-      {
-        value:
-          '<a href="https://plot.ly/dash/pricing/">Learn More About Dash Deployment Server</a>',
-      },
-    ],
-  },
-];
-
-const actions = [
-  {
-    label: 'Request a Demo',
-    link: 'https://plotly.typeform.com/to/seG7Vb',
-    button: {
-      classes: 'button button-primary',
-    },
-    target: '_blank',
-  },
-];
 
 const meta = {
   title: 'Plotly Enterprise and Dash Pricing',

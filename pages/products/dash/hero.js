@@ -4,9 +4,7 @@ import {
   HeroTop,
   HeroMessaging,
   HeroTitle,
-  HeroSubtitle,
   HeroActions,
-  HeroBottom,
 } from 'components/hero'
 import GithubStarsSlice from 'components/prismic/slices/github_stars'
 import Buttons from 'components/buttons'
@@ -40,11 +38,6 @@ const HeroButtons = [
 ]
 
 const HeroStyles = {}
-
-const HeroBottomStyles = {
-  paddingBottom: '0px',
-  paddingTop: '20px',
-}
 
 export default class HeroSection extends React.Component {
   constructor(props) {

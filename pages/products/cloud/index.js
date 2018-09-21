@@ -21,9 +21,7 @@ const meta = {
   },
 };
 
-
 const filteredAmount = (items) => items.filter(item => PLANS_TO_HIDE.find(hide => hide !== item.slug)).length + 1;
-
 
 const Plans = ({items, showing, navigation, ...rest}) =>
   items.length ? (
@@ -59,6 +57,7 @@ const CheckMarkItem = props => (
     <CheckIcon color="#119dff"/>
   </StyledPricing.Line.Item>
 );
+
 const NoMarkItem = props => (
   <StyledPricing.Line.Item { ...props } mobileOnlyIcon>
     <CloseIcon color="#a2b1c6"/>
@@ -75,6 +74,7 @@ const ToolTip = ({value, icon, onClick, ...rest}) => {
   </Plan.Content.Subtitle>
 
 }
+
 const renderPlanCheckMarks = (plans, feature, showing) =>
   plans.map((plan, i) => {
       if (PLANS_TO_HIDE.find(hide => hide !== plan.slug)) {
@@ -122,7 +122,6 @@ export default class CloudPricing extends React.Component {
       });
     }
   };
-
 
   state = {
     plan: PLANS.PERSONAL,
@@ -191,6 +190,7 @@ export default class CloudPricing extends React.Component {
         subtitle: <>&nbsp;</>,
       },
     ];
+
     return (
       <Layout meta={ meta } pathname={ this.props.pathname }>
         <Hero/>

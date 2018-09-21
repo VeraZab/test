@@ -163,28 +163,6 @@ export default class PricingDetails extends React.Component {
   }
 
   render() {
-    // pricingLevels[1].messageAction = this.toggleStudentState;
-    //
-    // if (this.state.student === true) {
-    //     pricingLevels[1].label = "Student";
-    //     pricingLevels[1].message = "See non-student pricing.";
-    //     pricingLevels[1].price = {
-    //         monthly: '5',
-    //         annually: '59',
-    //         frequency: 'per year',
-    //         users: 'per user'
-    //     }
-    // };
-    // if (this.state.student === false) {
-    //     pricingLevels[1].label = "Personal";
-    //     pricingLevels[1].message = "Are you a student?";
-    //     pricingLevels[1].price = {
-    //         monthly: '33',
-    //             annually: '396',
-    //             frequency: 'per year',
-    //             users: 'per user'
-    //     }
-    // };
 
     let pricingCardBodyPrice = item => {
       if (item.price.monthly === '0') {
@@ -212,9 +190,6 @@ export default class PricingDetails extends React.Component {
             <div className="details">
               {item.price.frequency}, <strong>{item.price.users}</strong>
             </div>
-            {/*<div className="billed-amount">*/}
-            {/*Free forever.*/}
-            {/*</div>*/}
           </div>
         )
       } else {
@@ -223,9 +198,6 @@ export default class PricingDetails extends React.Component {
             <div className="details">
               {item.price.frequency}, <strong>{item.price.users}</strong>
             </div>
-            {/*<div className="billed-amount">*/}
-            {/*Billed yearly.*/}
-            {/*</div>*/}
           </div>
         )
       }
