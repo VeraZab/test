@@ -106,3 +106,13 @@ For more documentation about Percy.io, visit the [docs](https://docs.percy.io/do
 ## CircleCI
 
 For more documentation about CircleCI, visit the [docs](https://circleci.com/docs/2.0/). 
+
+## Updating the Newsroom
+
+To add a new article to /newsroom:
+
+1. Create a copy of the /template folder and rename it. The name of the folder will be the URL of the page.
+
+2. In the index.js file, change the title and URL. 
+
+3. In the main.js file, insert the post HTML into the webinars div. 
