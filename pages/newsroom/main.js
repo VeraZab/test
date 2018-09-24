@@ -35,7 +35,7 @@ const articles = [
     },
     action: {
       ...readMore,
-      link: '/plotcon',
+      link: '/newsroom/plotcon',
     },
   },
   {
