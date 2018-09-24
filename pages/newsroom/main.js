@@ -20,21 +20,6 @@ const readMore = {
 
 const articles = [
   {
-    title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
-    date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
-    img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
-    presenter: {
-      name: 'Ashley Pace',
-      avatar:
-        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
-    },
-    action: {
-      ...readMore,
-      link: '/newsroom/plotcon',
-    },
-  },
-  {
     title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
     date: 'Wed, Jan 17, 2018 2:00 PM EST',
     img:
@@ -49,6 +34,21 @@ const articles = [
       link: '/newsroom/mitacs',
     },
   },
+  {
+    title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
+    date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/plotcon',
+    },
+  }
 ];
 
 export default () => (
