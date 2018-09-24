@@ -56,7 +56,7 @@ const footerData = [
       {
         label: 'Newsroom',
         icon: null,
-        url: 'https://plotly.com/newsroom'
+        url: 'https://plot.ly/newsroom'
       }
     ]
   },
