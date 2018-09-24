@@ -1,13 +1,9 @@
 import {
   ContentSection,
   ContentPane,
-  Title,
-  Subtitle,
   Body,
-  Graphic,
 } from 'components/content-section';
 import React from 'react';
-import Link from 'next/link';
 import styles from './newsroom.styles.scss';
 import Button from 'components/button';
 
