@@ -116,3 +116,5 @@ To add a new article to /newsroom:
 2. In the index.js file, change the title and URL. 
 
 3. In the main.js file, insert the post HTML into the webinars div. 
+
+4. Add the post's information to the articles object in /newsroom/main.js.
