@@ -50,7 +50,7 @@ const articles = [
     },
     action: {
       ...readMore,
-      link: '/mitacs',
+      link: '/newsroom/mitacs',
     },
   },
 ];

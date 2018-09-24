@@ -138,39 +138,30 @@ export default () => (
       <ContentPane full center center-vertically text>
         <Body>
           <div className="webinars">
-          #### PLOTLY ANNOUNCES 2ND ANNUAL DATA VISUALIZATION Conference PLOTCON 2017
-PLOTCON Oakland Registration now open for professionals in technical computing, data science, journalism, business intelligence, finance, biotech, and pharma
- 
-**SAN FRANCISCO, CA** -- APRIL 4, 2017 - Plotly, the preferred data visualization platform for modern data science, today announced the expansion of its 2nd Annual conference PLOTCON to be hosted in Oakland, CA and New York in 2017:  Oakland, CA (May 2-5), and New York (November 14-17). Registration is now open for PLOTCON Oakland, CA May 2-5.  PLOTCON Oakland consists of fast-paced tracks with 30 minute visualization-focused presentations, four, two-day-long, all-inclusive workshops and the first Open Data Visualization Hackathon. PLOTCON industry professionals will discuss best-practices in creating Web-based data visualizations in technical computing, finance, journalism, biotech and pharmaceutical industries.
 
-**WHEN:**  May 2-5, 2017
+<p><strong>08/22/2018</strong></p>
 
-**WHERE:**  Oakland Scottish Rite Center, 1547 Lakeside Dr., Oakland, CA 94612
+<p><strong>Montreal, CAN</strong> - Plotly, a Montreal data visualization company, and Université de Sherbrooke will develop new research and analytical tools to explore and visualize genetic structures. Three interns, with support from Mitacs, will use Plotly’s Dash product to develop new data visualization software in their research at the university’s CoBIUS Lab.</p>
 
-This year's theme, Let Data Speak, will cover new data visualization tools for popular open-source languages (Python, R, and Julia), focusing especially on the union of these tools with modern Web technology (D3.js, WebGI, stack.gl, React.js).  Together, attendees will have the opportunity to work through technical challenges and ask questions during speaker talks and workshops. PLOTCON cultivates a data economy dependent on the currency of collaboration, open-source, and trust.
+<p>Rapid developments in gene sequencing are producing growing levels of genomic data, leaving researchers in need of new models and tools to help them interactively explore that data, and curate and share results quickly. Plotly is developing its open-source data visualization library, Dash, for application in this growing area of research.</p>
 
-PLOTCON 2017, Oakland will feature data experts including: Maxime Beauchemin, Creator and Main Committer of Apache Airflow, Head of Airbnb's Superset, Nicolas Belmonte, Head of Data Visualization, Uber, Alan Jacobson, Director of Global Analytics, Ford. PLOTCON 2016 saw past presenters and panelists focus on discussing examples of iterating problems in R and Python. Whether coming from leading tech. companies, financial institutions, or bio/pharma organizations, attendees will benefit from personal interactions with executives and practitioners who have recognized data requires new technologies and new ways of thinking.
+<p>Dash is popular with bioinformaticians because it allows users to create and publish real-time, interactive data visualizations using only Python, a well-known language in the field.</p>
 
-"PLOTCON brings together the sharpest minds in the industry to address how businesses can thrive in today's economy by understanding and leveraging their data," said Plotly CEO Jack Parmer. "The event series represents an opportunity to share best-practices, network, and learn from like-minded peers and thought leaders in the data science space."
+<p>“Plotly is grateful for the support from Mitacs, and we are excited to partner with Université de Sherbrooke for this project,” said Jack Parmer, Plotly CEO. “Quebec has a real asset in its bioinformatics community, and we’re happy to be able to provide training and resources to develop this important research.”</p>
 
-To hear more from PLOTCON's past speakers, watch posted YouTube videos by [clicking here](https://www.youtube.com/channel/UCedQXrEEyH8M9aTuuUXJA3g).
+<p>Dr. Aïda Ouangraoua, Canada Research Chair in Computational and Biological Complexity at Université de Sherbrooke, said, “We thank Mitacs and Plotly for this internship funding and the partnership. They will accelerate the transfer of CoBIUS Lab research results to practice.”</p>
 
-To register for the PLOTCON visit https://plotcon.plot.ly/.
+<p>Dr. Ouangraoua will supervise one postdoc and two postgraduate interns in their research. CoBIUS Lab develops mathematical models and software tools to study and solve computational biology questions related to the comparison of biological data, with a focus on the evolution of genome structures, gene structures and RNA structures.</p>
 
-#### About PLOTLY
-Plotly is the creator of Plotly.js, Dash, PLOTCON, and the fastest growing charting libraries for R and Python. Plotly's online chart maker at plot.ly is the easiest and fastest way to graph and share D3.js charts online. Plotly customers include Tesla, Red Hat, Facebook, Google, and government institutions. Join the data visualization conversation by visiting the Plotly blog, Twitter, LinkedIn and Facebook pages.
+<p>Plotly will provide training and access to its software engineers, who will assist the researchers with using Dash to visualize both the very small, such as RNA and gene structures, and the very large, like the evolutionary relationships between transcripts, genes and species.</p>
 
-**Media Contacts**
-Jessica Gomez  
-Formulated By  
-Email: Jess@formulated.by  
-Phone: +1-415-889-7444  
+<p>Mitacs, a national not-for-profit research and training organization, is awarding the funding for the Plotly-CoBIUS Lab partnership through its internship program. Mitacs connects Canadian companies with graduate students and fellows who apply their specialized expertise to business challenges.</p>
 
-Head of Events  
-Anna Anisin  
-Formulated By  
-Email: Anna@formulated.by  
-Phone: +1-415-320-2663
+<p>Alejandro Adem, CEO and Scientific Director of Mitacs, said:</p>
+
+<p>“We’re pleased to partner with Plotly to support the development of their innovative visualization platform, Dash, while also providing Université de Sherbrooke researchers with the opportunity to solve industry challenges that will prepare them for a successful transition to Quebec’s growing digital technology job market.”</p>
+
+<p><strong>Please direct queries to: ashley@plot.ly.</strong></p>
           </div>
         </Body>
       </ContentPane>
