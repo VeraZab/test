@@ -172,7 +172,7 @@ const features = [
     plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">Phone support*</div>,
+    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">User Interface phone support*</div>,
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {

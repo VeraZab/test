@@ -29,10 +29,6 @@ export default () => (
     <HeroTop>
       <HeroMessaging>
         <HeroTitle>Modern visualization for the data era</HeroTitle>
-        <HeroSubtitle>
-          When you sign up for a Professional or Personal plan, a Plotly engineer will walk you through
-          your first chart, dashboard, or SQL database connection.
-        </HeroSubtitle>
       </HeroMessaging>
     </HeroTop>
     <HeroBottom style={HeroBottomStyles}>
