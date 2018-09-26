@@ -110,6 +110,7 @@ module.exports = {
     '/products/consulting-and-oem': { page: '/products/consulting-and-oem' },
 
     '/webinars': { page: '/webinars' },
+    '/newsroom': { page: '/newsroom' },
     '/export': { page: '/export' },
 
     // Industries
