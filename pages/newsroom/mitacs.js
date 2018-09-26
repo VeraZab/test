@@ -1,13 +1,18 @@
-import {
-  ContentSection,
-  ContentPane,
-  Body,
-} from 'components/content-section';
+import Layout from 'components/global/layout'
+import HeroSection from './hero'
+import { ContentSection, ContentPane, Body, } from 'components/content-section';
 import React from 'react';
 import styles from './newsroom.styles.scss';
 
+const meta = {
+  title: 'Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding',
+  description: '',
+}
+
 export default () => (
-  <div className="sections">
+  <Layout meta={meta}>
+    <HeroSection data={meta} />
+    <div className="sections">
     <style dangerouslySetInnerHTML={{ __html: styles }} />
     <ContentSection>
       <ContentPane full center center-vertically text>
@@ -37,9 +42,11 @@ export default () => (
 <p>“We’re pleased to partner with Plotly to support the development of their innovative visualization platform, Dash, while also providing Université de Sherbrooke researchers with the opportunity to solve industry challenges that will prepare them for a successful transition to Quebec’s growing digital technology job market.”</p>
 
 <p><strong>Please direct queries to: ashley@plot.ly.</strong></p>
+
           </div>
         </Body>
       </ContentPane>
     </ContentSection>
   </div>
-);
+  </Layout>
+)

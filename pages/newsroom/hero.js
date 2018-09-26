@@ -5,11 +5,7 @@ import {
   HeroMessaging,
   HeroTitle,
   HeroSubtitle,
-  HeroActions,
-  HeroBottom,
 } from 'components/hero'
-import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -19,10 +15,6 @@ const HeroWrapperStyle = {
   backgroundRepeat: 'no-repeat',
 }
 
-const HeroBottomStyles = {
-  paddingBottom: '0px',
-  paddingTop: '0px',
-}
 
 export default class HeroSection extends React.Component {
   constructor(props) {
@@ -38,7 +30,7 @@ export default class HeroSection extends React.Component {
             <HeroSubtitle>{this.props.data.description}</HeroSubtitle>
           </HeroMessaging>
         </HeroTop>
-        
+
       </Hero>
     )
   }

@@ -1,13 +1,18 @@
-import {
-  ContentSection,
-  ContentPane,
-  Body,
-} from 'components/content-section';
+import Layout from 'components/global/layout'
+import HeroSection from './hero'
+import { ContentSection, ContentPane, Body, } from 'components/content-section';
 import React from 'react';
 import styles from './newsroom.styles.scss';
 
+const meta = {
+  title: 'Plotly Announces 2ND Annual Data Visualization Conference PLOTCON 2017',
+  description: '',
+}
+
 export default () => (
-  <div className="sections">
+  <Layout meta={meta}>
+    <HeroSection data={meta} />
+    <div className="sections">
     <style dangerouslySetInnerHTML={{ __html: styles }} />
     <ContentSection>
       <ContentPane full center center-vertically text>
@@ -45,9 +50,11 @@ Anna Anisin <br />
 Formulated By <br />
 Email: Anna@formulated.by <br />
 Phone: +1-415-320-2663</p>
+
           </div>
         </Body>
       </ContentPane>
     </ContentSection>
   </div>
-);
+  </Layout>
+)

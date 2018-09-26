@@ -12,7 +12,6 @@ const readMore = {
   subtitle: null,
   title: 'Read More',
   icon: null,
-  target: '_blank',
   button: {
     classes: 'button button-primary',
   },
