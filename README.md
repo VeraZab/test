@@ -2,25 +2,25 @@
 
 ## Sitemap
 
-/ | 
------------- | 
-https://plotly.github.io/plotly-next/ | 
-https://plotly.github.io/plotly-next/online-chart-maker/ | 
-https://plotly.github.io/plotly-next/dashboards/ | 
-https://plotly.github.io/plotly-next/powerpoint-online/ | 
-https://plotly.github.io/plotly-next/database-connectors/ | 
-https://plotly.github.io/plotly-next/webinars/ | 
-https://plotly.github.io/plotly-next/export/ | 
-https://plotly.github.io/plotly-next/plotly-js-scientific-d3-charting-library/ | 
-https://plotly.github.io/plotly-next/d3-js-for-r-and-shiny-charts/ | 
-https://plotly.github.io/plotly-next/d3-js-for-python-and-pandas-charts/ | 
+/ |
+------------ |
+https://plotly.github.io/plotly-next/ |
+https://plotly.github.io/plotly-next/online-chart-maker/ |
+https://plotly.github.io/plotly-next/dashboards/ |
+https://plotly.github.io/plotly-next/powerpoint-online/ |
+https://plotly.github.io/plotly-next/database-connectors/ |
+https://plotly.github.io/plotly-next/webinars/ |
+https://plotly.github.io/plotly-next/export/ |
+https://plotly.github.io/plotly-next/plotly-js-scientific-d3-charting-library/ |
+https://plotly.github.io/plotly-next/d3-js-for-r-and-shiny-charts/ |
+https://plotly.github.io/plotly-next/d3-js-for-python-and-pandas-charts/ |
 
-/products/ | 
------------- | 
-https://plotly.github.io/plotly-next/products/cloud/ | 
-https://plotly.github.io/plotly-next/products/on-premise/| 
-https://plotly.github.io/plotly-next/products/consulting-and-oem/ | 
-https://plotly.github.io/plotly-next/products/dash/ | 
+/products/ |
+------------ |
+https://plotly.github.io/plotly-next/products/cloud/ |
+https://plotly.github.io/plotly-next/products/on-premise/|
+https://plotly.github.io/plotly-next/products/consulting-and-oem/ |
+https://plotly.github.io/plotly-next/products/dash/ |
 https://plotly.github.io/plotly-next/dash/pricing/ |
 
 /products/industries/ |
@@ -45,36 +45,36 @@ https://plotly.github.io/plotly-next/products/enterprise/customer-stories/goji |
 
 ## Setting Up a Development Environment
 
-0. Note: You must have Node version 9 installed in order to build the site. Use [N](https://github.com/tj/n#installingactivating-versions) to interactively manage Node versions in your development environment. 
+0. Note: You must have Node version 9 installed in order to build the site. Use [N](https://github.com/tj/n#installingactivating-versions) to interactively manage Node versions in your development environment.
 
-1. Clone the plotly/plotly-next repo. As this is a private repo, you must be logged into a GitHub account with read access to the repo. 
+1. Clone the plotly/plotly-next repo. As this is a private repo, you must be logged into a GitHub account with read access to the repo.
 ```
 $ git clone https://github.com/plotly/plotly-next.git # or use SSH
 $ cd plotly-next
 $ git fetch origin
 ```
 
-2. Install the site's dependencies on your local machine. 
+2. Install the site's dependencies on your local machine.
 ```
 $ yarn install
 ```
 
-3. Launch a test server with hot module reloading and live reloading of styles. 
+3. Launch a test server with hot module reloading and live reloading of styles.
 ```
 $ yarn run dev
-``` 
+```
 
 ## Deployment
 
-1. Make a pull request against the `master` branch of plotly/plotly-next. 
+1. Make a pull request against the `master` branch of plotly/plotly-next.
 
 2. Ensure that your change passes the CircleCI and Percy tests integrated into GitHub. Approve visual diffs in Percy.
 
-3. Request a code review from an authorized user. Follow the [Code Review Checklist](https://github.com/plotly/dev-docs/blob/master/basics/code-review-checklist.md). 
+3. Request a code review from an authorized user. Follow the [Code Review Checklist](https://github.com/plotly/dev-docs/blob/master/basics/code-review-checklist.md).
 
 4. After your pull request is reviewed and approved, merge your changes to the `master` branch of plotly/plotly-next.
 
-5. Merge the `master` branch of plotly/plotly-next into the `production` branch. There is no need to review the `master` -> `production` merge. Note: merging to the `production` branch will automatically deploy the changes to the plotly/plotly-next`gh-pages` branch via CircleCI. At this point GitHub pages will begin serving your changes live. 
+5. Merge the `master` branch of plotly/plotly-next into the `production` branch. There is no need to review the `master` -> `production` merge. Note: merging to the `production` branch will automatically deploy the changes to the plotly/plotly-next`gh-pages` branch via CircleCI. At this point GitHub pages will begin serving your changes live.
 
 ### A Note on Prismic.io Integration
 
@@ -93,16 +93,26 @@ For more documentation about next.js, visit the [repo here](https://github.com/z
 
 ## GitHub Pages
 
-For more documentation about GitHub Pages, visit the [docs](https://help.github.com/categories/github-pages-basics/). 
+For more documentation about GitHub Pages, visit the [docs](https://help.github.com/categories/github-pages-basics/).
 
 ## Prismic.io
 
-For more documentation about Prismic.io, visit the [docs](https://prismic.io/docs). 
+For more documentation about Prismic.io, visit the [docs](https://prismic.io/docs).
 
 ## Percy.io
 
-For more documentation about Percy.io, visit the [docs](https://docs.percy.io/docs). 
+For more documentation about Percy.io, visit the [docs](https://docs.percy.io/docs).
 
 ## CircleCI
 
-For more documentation about CircleCI, visit the [docs](https://circleci.com/docs/2.0/). 
+For more documentation about CircleCI, visit the [docs](https://circleci.com/docs/2.0/).
+
+## Updating the Newsroom
+
+To add a new article to `/newsroom`:
+
+1. Create a copy of the `/pages/newsroom/template.js` file in the same directory and rename it. The name of the file will be the URL of the page.
+
+2. In the new `.js` file, change the title and fill in the post HTML.
+
+4. Add the post's information to the articles object in `pages/newsroom/main.js`.

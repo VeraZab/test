@@ -52,6 +52,11 @@ const footerData = [
         label: 'GitHub',
         icon: null,
         url: 'https://github.com/plotly'
+      },
+      {
+        label: 'Newsroom',
+        icon: null,
+        url: 'https://plot.ly/newsroom'
       }
     ]
   },
