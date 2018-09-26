@@ -168,11 +168,11 @@ const features = [
     ],
   },
   {
-    value: <>24h Chat support<br />including Falcon SQL Client</>,
+    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">User Interface chat support*</div>,
     plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: <>Phone support<br />including Falcon SQL Client</>,
+    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">User Interface phone support*</div>,
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
