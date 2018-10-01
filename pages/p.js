@@ -33,28 +33,40 @@ class P extends Component {
           {hero}
           {doc.uid != 'home' ? null : <div><br/><br/><br/><h1 style={{textAlign:"center"}}>So, you've heard about Dash...</h1><br/><br/><br/><div style={{display:"inline-block",
     marginRight: "auto",
-    marginLeft: "auto"}}><table>
+    marginLeft: "auto"}}><div><table style={{float:"center"}}>
     <tr>
-        <td style={{borderRight:"5px solid grey"}}><img style={{display:"block",
-    margin:"auto"}} height="150" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/whiteops-16-march-2018.png"/></td>
+        <td style={{borderRight:"10px solid grey"}}><img style={{display:"block",
+    margin:"auto"}} height="100" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/whiteops-16-march-2018.png"/></td>
         <td>Some of the best ROI i've achieved for my time is from Plotly and Dash. Plotly is a major thought leader in data science right now. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Dan Kaiminsky, Chief Scientist @ WhiteOps </td>
     </tr>
+    <br/>
+    <br/>
+
     <tr>
-        <td style={{borderRight:"5px solid grey"}}><img style={{display:"block",
-    margin:"auto"}} height="150" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/goji_red179C.png"/></td>
+        <td style={{borderRight:"10px solid grey"}}><img style={{display:"block",
+    margin:"auto"}} height="100" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/goji_red179C.png"/></td>
         <td>Plotly was the big business intelligence killer we'd been waiting for.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Lead Data Scientist @ Goji Auto Insurance</td>
     </tr>
+    <br/>
+    <br/>
+
     <tr>
-        <td style={{borderRight:"5px solid grey"}}><img style={{display:"block",
-    margin:"auto"}} height="150" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco-log.png"/></td>
+        <td style={{borderRight:"10px solid grey"}}><img style={{display:"block",
+    margin:"auto"}} height="100" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco-log.png"/></td>
         <td>Dash has given our quant team a powerful framework for next generation analytical apps.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Julio Guzman, Sr. Manager of Technology Investments @ Invesco</td>
     </tr>
+    <br/>
+    <br/>
+
+
     <tr>
-        <td style={{borderRight:"5px solid grey"}}><img style={{display:"block",
-    margin:"auto"}} height="150" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/squarelogo-greytext-orangebody-greymoons.png"/></td>
+        <td style={{borderRight:"10px solid grey"}}><img style={{display:"block",
+    margin:"auto"}} height="100" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/squarelogo-greytext-orangebody-greymoons.png"/></td>
         <td>Plotly and Dash bring data to life: interactive exploration tied to the source data and models pulls out insight and lets organizations maximize ROI. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -Fernando Pérez, co-founder of Project Jupyter and Plotly Advisor</td>
     </tr>
 </table>
+</div>
+
           </div></div> }
           {slices}
         </div>
