@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Layout from 'components/layoutHOC';
 import Hero from 'components/prismic/hero';
+import Quotes from 'components/global/quotes';
+
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 
@@ -12,9 +14,6 @@ class P extends Component {
   constructor(props) {
     super(props);
   }
-
-  getDoc = data =>
-    data.find(doc => doc.uid === this.props.slug && doc.type === 'page');
 
   render() {
     const { doc } = this.props;
@@ -29,10 +28,14 @@ class P extends Component {
 
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
+      const quotes = <Quotes/>;
+
+
       return (
         <div className={'page' + ` page--${doc.uid}`}>
           <Head meta={meta} />
           {hero}
+          {doc.uid != 'home' ? null : quotes}
           {slices}
         </div>
       );
