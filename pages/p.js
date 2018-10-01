@@ -28,13 +28,14 @@ class P extends Component {
 
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
+      const quotes = <Quotes/>;
 
 
       return (
         <div className={'page' + ` page--${doc.uid}`}>
           <Head meta={meta} />
           {hero}
-          {doc.uid != 'home' ? null : <Quotes/> }
+          {doc.uid != 'home' ? null : quotes}
           {slices}
         </div>
       );
