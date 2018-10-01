@@ -36,7 +36,7 @@ class Quotes extends React.Component {
 
                         <tr>
                             <td style={{borderRight:"10px solid lightgrey"}}><img style={{display:"block",
-                        margin:"auto"}} height="75" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco-logo+blue.png"/></td>
+                        margin:"auto"}} height="75" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco-logo.png"/></td>
                             <td style={{paddingLeft:"24px"}}>Dash has given our quant team a powerful framework for next generation<br/> analytical apps.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;<i> Julio Guzman, Sr. Manager of Technology Investments @ Invesco</i></td>
                         </tr>
 
