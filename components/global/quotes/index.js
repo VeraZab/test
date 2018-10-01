@@ -18,7 +18,7 @@ class Quotes extends React.Component {
                     <table style={{marginLeft:"auto", marginRight:"auto"}}>
                         <tr>
                             <td style={{borderRight:"10px solid lightgrey"}}><img style={{display:"block",
-                        margin:"auto"}} height="50" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/whiteops-16-march-2018.png"/></td>
+                        margin:"auto"}} src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/whiteops.png"/></td>
                             <td style={{paddingLeft:"24px"}}>Some of the best ROI i've achieved for my time is from Plotly and Dash. Plotly is a <br/>major thought leader in data science right now. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &mdash;<i> Dan Kaiminsky, Chief Scientist @ WhiteOps</i> </td>
                         </tr>
 
@@ -27,7 +27,7 @@ class Quotes extends React.Component {
 
                         <tr>
                             <td style={{borderRight:"10px solid lightgrey"}}><img style={{display:"block",
-                        margin:"auto"}} height="50" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/goji_red179C.png"/></td>
+                        margin:"auto"}} src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/goji.png"/></td>
                             <td style={{paddingLeft:"24px"}}>Plotly was the big business intelligence killer we'd been waiting for.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;<i> Lead Data Scientist @ Goji Auto Insurance</i><br/><br/></td>
                         </tr>
 
@@ -36,7 +36,7 @@ class Quotes extends React.Component {
 
                         <tr>
                             <td style={{borderRight:"10px solid lightgrey"}}><img style={{display:"block",
-                        margin:"auto"}} height="75" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco-logo.png"/></td>
+                        margin:"auto"}} src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/Invesco.png"/></td>
                             <td style={{paddingLeft:"24px"}}>Dash has given our quant team a powerful framework for next generation<br/> analytical apps.<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;<i> Julio Guzman, Sr. Manager of Technology Investments @ Invesco</i></td>
                         </tr>
 
@@ -45,7 +45,7 @@ class Quotes extends React.Component {
 
                         <tr>
                             <td style={{borderRight:"10px solid lightgrey"}}><img style={{display:"block",
-                        margin:"auto"}} height="100" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/squarelogo-greytext-orangebody-greymoons.png"/></td>
+                        margin:"auto"}} src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/quotes-logos/jupyter.png"/></td>
                             <td style={{paddingLeft:"24px"}}>Plotly and Dash bring data to life: interactive exploration tied to the source data and <br/> models pulls out insight and lets organizations maximize ROI. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;<i> Fernando Pérez, co-founder of Project Jupyter and Plotly Advisor</i></td>
                         </tr>
 
