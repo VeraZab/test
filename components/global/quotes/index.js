@@ -15,23 +15,21 @@ class Quotes extends React.Component {
 
     ];
 
-    const generateQuotesTable = () => {
-        return quotes.map((quote) => {
-            return (
-                    <tr>
-                        <td className="logo"><img src={quote.logoImg}/></td>
-                        <td className="cell"><div>{quote.text}</div><div className="author">{quote.author}</div></td>
-                    </tr>
-          )
-        })
-      };
-
     return (
         <div>
             <style dangerouslySetInnerHTML={{ __html: styles }} />
             <h1 className="title">So, you've heard about Dash...</h1>
             <table className="quotesTable">
-                {generateQuotesTable()}
+                {
+                    quotes.map((quote) => {
+                        return (
+                            <tr>
+                                <td className="logo"><img src={quote.logoImg}/></td>
+                                <td className="cell"><div>{quote.text}</div><div className="author">{quote.author}</div></td>
+                            </tr>
+                        )
+                    })
+                }
             </table>
         </div>
     )
