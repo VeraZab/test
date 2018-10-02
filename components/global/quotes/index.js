@@ -7,7 +7,7 @@ class Quotes extends React.Component {
   render() {
     const titleStyle = {paddingTop:"30px", paddingBottom:"30px", textAlign:"center"};
 
-    const tableStyle = {marginLeft:"auto", marginRight:"auto", borderSpacing:"30px"};
+    const tableStyle = {width:"75%", marginLeft:"auto", marginRight:"auto", borderSpacing:"30px"};
 
     const cellStyle = {borderRight:"10px solid lightgrey"};
 
