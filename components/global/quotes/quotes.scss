@@ -16,9 +16,6 @@
     border-right: 10px solid lightgrey;
 }
 
-.image {
-max-width: none;}
-
 .cell {
     padding-left: 24px;
 }
@@ -28,3 +25,8 @@ max-width: none;}
     text-align: right;
     font-style: italic;
 }
+
+.author::before {
+    content: "— ";
+}
+
