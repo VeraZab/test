@@ -1,32 +1,34 @@
+.quotes{
 
-.title{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-}
+    .title{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
 
-.quotesTable{
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border-spacing: 30px;
-}
+    .quotesTable{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 30px;
+    }
 
-.logo {
-    border-right: 10px solid lightgrey;
-}
+    .logo {
+        border-right: 10px solid lightgrey;
+    }
 
-.cell {
-    padding-left: 24px;
-}
+    .cell {
+        padding-left: 24px;
+    }
 
-.author {
-    padding-top: 24px;
-    text-align: right;
-    font-style: italic;
-}
+    .author {
+        padding-top: 24px;
+        text-align: right;
+        font-style: italic;
+    }
 
-.author::before {
-    content: "— ";
+    .author::before {
+        content: "— ";
+    }
 }
 
