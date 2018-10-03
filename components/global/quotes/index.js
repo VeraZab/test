@@ -19,7 +19,7 @@ class Quotes extends React.Component {
                         this.props.data.map((prop) => {
                             return (
                                 <tr>
-                                    <td className="logo"><img src={prop.logo.url}/></td>
+                                    <td className="logo"><img alt="client logo" src={prop.logo.url}/></td>
                                     <td className="cell"><div>{prop.quote1[0].text}</div><div className="author">{prop.author1[0].text}</div></td>
                                 </tr>
                             )
