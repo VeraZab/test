@@ -4,7 +4,6 @@ import {
   HeroTop,
   HeroMessaging,
   HeroTitle,
-  HeroSubtitle,
   HeroBottom,
 } from 'components/hero';
 import { ClientLogos } from 'components/global/client-logos';
