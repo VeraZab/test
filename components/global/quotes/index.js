@@ -4,7 +4,6 @@ import styles from './quotes.scss'
 class Quotes extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.data[1].quote1);
   }
   render() {
     <style dangerouslySetInnerHTML={{ __html: styles }} />
