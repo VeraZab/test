@@ -14,7 +14,7 @@ class Quotes extends React.Component {
             <style dangerouslySetInnerHTML={{ __html: styles }} />
 
             <div className="quotes">
-                <h1 className="title">So, you've heard about Dash...</h1>
+                <h1 className="title">{this.props.title}</h1>
                 <table className="quotesTable">
                     {
                         this.props.data.map((prop) => {

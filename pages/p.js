@@ -26,7 +26,8 @@ class P extends Component {
       };
 
       const prismicQuotes = doc.data.slices[doc.data.slices.length -1];
-      const quotes = <Quotes data={prismicQuotes.items}/>;
+      console.log(prismicQuotes.primary.title1[0].text);
+      const quotes = <Quotes title={prismicQuotes.primary.title1[0].text} data={prismicQuotes.items}/>;
 
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
