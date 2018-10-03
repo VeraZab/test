@@ -5,6 +5,7 @@ class Quotes extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     <style dangerouslySetInnerHTML={{ __html: styles }} />
 
@@ -27,7 +28,6 @@ class Quotes extends React.Component {
                     }
                 </table>
             </div>
-
         </div>
     )
   }

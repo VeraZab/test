@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Layout from 'components/layoutHOC';
 import Hero from 'components/prismic/hero';
 import Quotes from 'components/global/quotes';
-
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 
@@ -26,13 +25,10 @@ class P extends Component {
         description: `${doc.data.description}`,
       };
 
-
       const prismicQuotes = doc.data.slices[doc.data.slices.length -1];
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
       const quotes = <Quotes data={prismicQuotes.items}/>;
-
-
 
       return (
         <div className={'page' + ` page--${doc.uid}`}>
