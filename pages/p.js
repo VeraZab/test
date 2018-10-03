@@ -31,7 +31,6 @@ class P extends Component {
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
 
-
       return (
         <div className={'page' + ` page--${doc.uid}`}>
           <Head meta={meta} />
@@ -43,6 +42,5 @@ class P extends Component {
     }
   }
 }
-
 
 export default Layout(P);
