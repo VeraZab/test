@@ -26,9 +26,11 @@ class P extends Component {
       };
 
       const prismicQuotes = doc.data.slices[doc.data.slices.length -1];
+      const quotes = <Quotes data={prismicQuotes.items}/>;
+
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
       const slices = <Slices data={doc.data.slices} />;
-      const quotes = <Quotes data={prismicQuotes.items}/>;
+
 
       return (
         <div className={'page' + ` page--${doc.uid}`}>
