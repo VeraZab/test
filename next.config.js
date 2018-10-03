@@ -5,6 +5,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   exportPathMap: () => ({
+    //Home
     '/': {
       page: '/p',
       query: {
@@ -94,10 +95,17 @@ module.exports = {
         slug: 'dash-services',
       },
     },
+    //Careers
     '/company/careers': {
       page: '/p',
       query: {
         slug: 'company',
+      },
+    },
+    '/compagnie/carrieres/fr': {
+      page: '/p',
+      query: {
+        slug: 'company-fr',
       },
     },
     // Pricing - cloud

@@ -15,9 +15,9 @@ class Quotes extends React.Component {
 
             <div className="quotesContainer">
                     {
-                        this.props.data.items.map((prop) => {
+                        this.props.data.items.map((prop, i) => {
                             return (
-                                <div className="quotesItem">
+                                <div className="quotesItem" key={i}>
                                     <div className="logo"><img className="logoImage" alt="client logo" src={prop.logo.url}/></div>
                                     <div className="cell"><div>{prop.quote1[0].text}</div><div className="author">{prop.author1[0].text}</div></div>
                                 </div>
