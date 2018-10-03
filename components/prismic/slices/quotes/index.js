@@ -14,10 +14,10 @@ class Quotes extends React.Component {
             <style dangerouslySetInnerHTML={{ __html: styles }} />
 
             <div className="quotes">
-                <h1 className="title">{this.props.title}</h1>
+                <h1 className="title">{this.props.data.primary.title1[0].text}</h1>
                 <table className="quotesTable">
                     {
-                        this.props.data.map((prop) => {
+                        this.props.data.items.map((prop) => {
                             return (
                                 <tr>
                                     <td className="logo"><img alt="client logo" src={prop.logo.url}/></td>
