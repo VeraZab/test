@@ -7,10 +7,9 @@ class Quotes extends React.Component {
   }
 
   render() {
-    <style dangerouslySetInnerHTML={{ __html: styles }} />
 
     return (
-        <div>
+        <React.Fragment>
             <style dangerouslySetInnerHTML={{ __html: styles }} />
 
             <div className="quotes">
@@ -28,7 +27,7 @@ class Quotes extends React.Component {
                     }
                 </table>
             </div>
-        </div>
+        </React.Fragment>
     )
   }
 }

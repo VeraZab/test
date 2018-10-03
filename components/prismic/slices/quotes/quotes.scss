@@ -1,16 +1,18 @@
 .quotes{
 
     .title{
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         text-align: center;
     }
 
     .quotesTable{
-        width: 75%;
+        max-width: 66%;
         margin-left: auto;
         margin-right: auto;
         border-spacing: 30px;
+        padding-bottom: 70px;
+
     }
 
     .logo {
@@ -22,7 +24,7 @@
     }
 
     .author {
-        padding-top: 24px;
+        padding-top: 6px;
         text-align: right;
         font-style: italic;
     }
@@ -30,5 +32,6 @@
     .author::before {
         content: "— ";
     }
+
 }
 
