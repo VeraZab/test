@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Layout from 'components/layoutHOC';
 import Hero from 'components/prismic/hero';
-import Quotes from 'components/global/quotes';
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 
