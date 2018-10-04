@@ -4,8 +4,8 @@
     text-align: center;
 }
 
-.quotesContainer{
-    max-width: 66%;
+.flexContainer{
+    max-width: auto;
     margin-left: auto;
     margin-right: auto;
     border-spacing: 30px;
@@ -17,14 +17,9 @@
         flex-direction: row;
     }
 
-    .quoteItem {
+    .flexItem {
         display: flex;
         padding-bottom: 40px;
-
-
-        @media screen and (max-width: $desktop) {
-            flex-direction: row;
-        }
 
         .logo {
             border-right: 10px solid lightgrey;
