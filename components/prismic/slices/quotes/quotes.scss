@@ -14,7 +14,7 @@
     flex-direction: column;
 
     @media screen and (max-width: $desktop) {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .flexItem {
@@ -46,6 +46,8 @@
 
         .cell {
             padding-left: 24px;
+            padding-right: 24px;
+
             flex: 0 2 90%;
 
             .author {
