@@ -1,42 +1,62 @@
-.quotes{
-
-    .title{
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
-    }
-
-    .quotesTable{
-        max-width: 66%;
-        margin-left: auto;
-        margin-right: auto;
-        border-spacing: 30px;
-        padding-bottom: 70px;
-
-    }
-
-    .logo {
-        border-right: 10px solid lightgrey;
-    }
-
-    .cell {
-        padding-left: 24px;
-    }
-
-    .author {
-        padding-top: 6px;
-        text-align: right;
-        font-style: italic;
-    }
-
-    .author::before {
-        content: "— ";
-    }
-
-    .logoImage{
-        display: block;
-        margin: auto;
-    }
-
+.title{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
+
+.quotesContainer{
+    max-width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 30px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $desktop) {
+        flex-direction: row;
+    }
+
+    .quoteItem {
+        display: flex;
+        padding-bottom: 40px;
+
+
+        @media screen and (max-width: $desktop) {
+            flex-direction: row;
+        }
+
+        .logo {
+            border-right: 10px solid lightgrey;
+            flex: 0 1 10%;
+            display: flex;
+
+            .logoImage{
+                margin: auto;
+                display: block;
+            }
+        }
+
+        .cell {
+            padding-left: 24px;
+            flex: 0 2 90%;
+
+            .author {
+                padding-top: 6px;
+                text-align: right;
+                font-style: italic;
+            }
+
+            .author::before {
+                content: "— ";
+            }
+        }
+    }
+}
+
+
+
+
+
+
 

@@ -11,21 +11,20 @@ class Quotes extends React.Component {
     return (
         <React.Fragment>
             <style dangerouslySetInnerHTML={{ __html: styles }} />
+            <h1 className="title">{this.props.data.primary.title1[0].text}</h1>
 
-            <div className="quotes">
-                <h1 className="title">{this.props.data.primary.title1[0].text}</h1>
-                <table className="quotesTable">
+            <div className="quotesContainer">
+
                     {
                         this.props.data.items.map((prop) => {
                             return (
-                                <tr>
-                                    <td className="logo"><img className="logoImage" alt="client logo" src={prop.logo.url}/></td>
-                                    <td className="cell"><div>{prop.quote1[0].text}</div><div className="author">{prop.author1[0].text}</div></td>
-                                </tr>
+                                <div className="quoteItem">
+                                    <div className="logo"><img className="logoImage" alt="client logo" src={prop.logo.url}/></div>
+                                    <div className="cell"><div>{prop.quote1[0].text}</div><div className="author">{prop.author1[0].text}</div></div>
+                                </div>
                             )
                         })
                     }
-                </table>
             </div>
         </React.Fragment>
     )
