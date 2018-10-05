@@ -68,7 +68,7 @@ const renderItems = (items) =>
       <JobListing key={i}>
         <JobsHeader>
           <div>
-            <JobsTime>{time}</JobsTime>
+            <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Plein Temps' : time}</JobsTime>
             <div className="content-section-p-title">
               <h2>{position}</h2>
             </div>
@@ -80,14 +80,13 @@ const renderItems = (items) =>
               primary
               href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}
             >
-              Apply for this position
+              {misc_extra_text[0].text == 'fr' ? 'Postuler à ce poste' : 'Apply for this position'}
             </Button>
           </div>
         </JobsHeader>
         <Wrapper>
           <div>
             <Description>{renderPrismic(description1)}</Description>
-            <Description>{renderPrismic(misc_extra_text)}</Description>
           </div>
           <Description>{renderPrismic(requirements)}</Description>
         </Wrapper>
@@ -105,7 +104,7 @@ const Jobs = ({ items, ...rest }) => {
               className="content-section-p-title"
               style={{ paddingBottom: '80px' }}
             >
-              <h1>Open Positions</h1>
+              <h1>{items[0].misc_extra_text[0].text == 'fr' ? "Positions Ouvertes" : 'Open Positions'}</h1>
             </div>
             {renderItems(items)}
           </div>
