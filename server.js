@@ -32,6 +32,7 @@ app.prepare().then(() => {
     const queryParams = { slug: req.params.slug, docType: 'page' };
     return app.render(req, res, '/p', queryParams);
   });
+
   /**
    * Home
    */
