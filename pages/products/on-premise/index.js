@@ -56,6 +56,7 @@ class OnPrem extends React.Component {
       });
     }
   }
+
   render() {
     const { pricing_cards } = this.props.content;
 
@@ -80,7 +81,7 @@ class OnPrem extends React.Component {
       cards[1].primary.button_one_link.url = "https://plotly.typeform.com/to/mOAiug";
       cards[1].primary.button_one_label = "START A TRIAL";
     }
-    
+
     const pricingCardFeatures = (items) => {
       const pricingCardFeature = (items) => {
         return items.map((item, i) => {

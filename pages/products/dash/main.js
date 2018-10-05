@@ -6,7 +6,6 @@ import {
   Graphic,
 } from 'components/content-section';
 import Buttons from 'components/buttons';
-import Button from 'components/button';
 import CodeExplorer from './code-explorer/code-explorer';
 
 const demoAppStock = [
@@ -51,18 +50,6 @@ const demoAppOil = [
   },
 ];
 
-
-const plotcon_button = {
-  label: 'Buy a Ticket',
-  title: 'PLOTCON WORKSHOPS 2018',
-  icon: null,
-  target: '_blank',
-  link: 'https://plotcon.plot.ly/workshops',
-  button: {
-    classes: 'button button-primary',
-  },
-};
-
 import React from 'react';
 
 class DashMain extends React.Component {
@@ -72,10 +59,9 @@ class DashMain extends React.Component {
 
   componentDidMount() {
     (function() {
-      let qs,
+      let
         js,
         q,
-        s,
         d = document,
         gi = d.getElementById,
         ce = d.createElement,
@@ -365,4 +351,5 @@ class DashMain extends React.Component {
     );
   }
 }
+
 export default DashMain;

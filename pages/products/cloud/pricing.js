@@ -229,6 +229,7 @@ export default class PricingDetails extends React.Component {
         return ''
       }
     }
+
     let pricingCardHeader = items => {
       return items.map((item, i) => {
         return (

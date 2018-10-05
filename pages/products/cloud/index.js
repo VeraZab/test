@@ -72,7 +72,6 @@ const ToolTip = ({value, icon, onClick, ...rest}) => {
       <Icon color="white"/>
     </Tooltip>
   </Plan.Content.Subtitle>
-
 }
 
 const renderPlanCheckMarks = (plans, feature, showing) =>

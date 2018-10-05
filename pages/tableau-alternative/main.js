@@ -1,5 +1,3 @@
-import { ContentSection, ContentPane, Body } from 'components/content-section'
-
 class CustomerServiceMain extends React.Component {
   constructor(props) {
     super(props)
@@ -7,7 +5,6 @@ class CustomerServiceMain extends React.Component {
 
   render() {
     const story = this.props.story
-    const spacing = this.props.spacing
 
     return (
       <div styclassName="card card-with-image">

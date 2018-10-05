@@ -5,7 +5,6 @@ import {
   ContentSection,
   Title,
 } from 'components/content-section';
-import Head from 'components/global/head'
 import { Grid, GridItem } from 'components/grid';
 
 import { DeviceWrapper } from 'components/elements/DeviceWrapper/DeviceWrapper';
@@ -104,8 +103,6 @@ class IndustriesMain extends React.Component {
       </ContentSection>
     ) : null;
 
-
-
     return (
       <div>
         {gridItems ? (
@@ -119,6 +116,7 @@ class IndustriesMain extends React.Component {
             </ContentPane>
           </ContentSection>
         ) : null}
+
         {quoteItemOne}
 
         {sectionItems}
