@@ -14,6 +14,13 @@ app.prepare().then(() => {
       express.static(join(__dirname, '.next', '/service-worker.js'))
     );
   }
+  /**
+   * Home
+   */
+  server.get('/', (req, res) => {
+    const queryParams = { slug: 'home' };
+    return app.render(req, res, '/p', queryParams);
+  });
 
   /**
    * Catch all
@@ -26,4 +33,5 @@ app.prepare().then(() => {
     if (err) throw err;
     console.log('> Ready on http://localhost:8080');
   });
+
 });
