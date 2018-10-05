@@ -8,8 +8,6 @@ import {
   HeroActions,
   HeroBottom,
 } from 'components/hero'
-import Buttons from 'components/buttons'
-import { Browser } from 'components/browser'
 
 const HeroWrapperStyle = {
   // backgroundImage: 'url(/static/images/banner-splash.jpg)',
@@ -21,24 +19,6 @@ const HeroWrapperStyle = {
 const HeroBottomStyles = {
   paddingBottom: '0px',
   paddingTop: '20px',
-}
-
-const header = {
-  sitename: 'Plotly',
-  title: 'Visualize Data, Together',
-  description:
-    'Plotly is the modern platform for agile business intelligence and data science.',
-  url: 'https://plot.ly',
-  image: '',
-  tags: [],
-  publisher: 'https://www.facebook.com/Plotly/',
-  twitter: {
-    label1: '',
-    data1: '',
-    label2: '',
-    data2: '',
-    site: '@plotlygraphs',
-  },
 }
 
 class CustomerServiceHero extends React.Component {
@@ -67,4 +47,5 @@ class CustomerServiceHero extends React.Component {
     )
   }
 }
+
 export default CustomerServiceHero

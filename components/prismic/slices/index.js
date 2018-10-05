@@ -19,6 +19,8 @@ import ContentSection from 'components/prismic/content-section';
 import LogosSlice from 'components/prismic/slices/logos';
 import TabsSlice from './tabs';
 import { Jobs } from './jobs';
+import Quotes from './quotes';
+
 import { ImageSectionSlice } from './image-section';
 
 export default class Slices extends React.Component {
@@ -53,7 +55,10 @@ export default class Slices extends React.Component {
               return <Jobs {...slice} key={i} />;
             } else if (slice.slice_type === 'image') {
               return <ImageSectionSlice {...slice} key={i} />;
-            } else return;
+            } else if (slice.slice_type === 'quotes_logos') {
+              return <Quotes data={slice} />;
+            }
+              else return;
           })}
         </div>
       </div>

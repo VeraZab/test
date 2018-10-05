@@ -35,10 +35,9 @@ function Layout(Child) {
       ReactGA.initialize('UA-39373211-1');
       ReactGA.pageview(document.location.pathname);
       (function() {
-        let qs,
+        let
           js,
           q,
-          s,
           d = document,
           gi = d.getElementById,
           ce = d.createElement,
