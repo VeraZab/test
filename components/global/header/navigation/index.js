@@ -196,7 +196,7 @@ export default class Navigation extends React.Component {
                       Dash DAQ
                     </a>
                   </Link>
-                  <Link href="https://plot.ly/dash/pricing/" prefetch>
+                  <Link href="/dash/pricing/" prefetch>
                     <a className="navigation-product-submenu-item">
                       Dash Deployment Server
                     </a>
