@@ -102,7 +102,7 @@ module.exports = {
         slug: 'company',
       },
     },
-    '/compagnie/carrieres/fr': {
+    '/fr/company/careers': {
       page: '/p',
       query: {
         slug: 'company-fr',
