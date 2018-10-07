@@ -56,7 +56,7 @@ export default class Slices extends React.Component {
             } else if (slice.slice_type === 'image') {
               return <ImageSectionSlice {...slice} key={i} />;
             } else if (slice.slice_type === 'quotes_logos') {
-              return <Quotes data={slice} />;
+              return <Quotes key={i} data={slice} />;
             }
               else return;
           })}
