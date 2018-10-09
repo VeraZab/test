@@ -184,19 +184,19 @@ module.exports = {
     '/products/enterprise/customer-stories': { page: '/customer-stories' },
     '/products/on-premise/customer-stories': { page: '/customer-stories' },
     '/products/enterprise/customer-stories/c12-energy': {
-      page: '/prismic-custom-story-generator',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'c12-energy' },
     },
     '/products/on-premise/customer-stories/c12-energy': {
-      page: '/prismic-custom-story-generator',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'c12-energy' },
     },
     '/products/enterprise/customer-stories/goji': {
-      page: '/prismic-custom-story-generator',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'goji' },
     },
     '/products/on-premise/customer-stories/goji': {
-      page: '/prismic-custom-story-generator',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'goji' },
     },
   }),
