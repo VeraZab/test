@@ -19,7 +19,7 @@ app.prepare().then(() => {
    */
   server.get('/', (req, res) => {
     const queryParams = { slug: 'home' };
-    return app.render(req, res, '/p', queryParams);
+    return app.render(req, res, '/prismic-generator', queryParams);
   });
 
   /**

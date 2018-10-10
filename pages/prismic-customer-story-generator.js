@@ -10,7 +10,7 @@ import PrismicDOM from 'prismic-dom';
 
 const shortid = require('shortid');
 
-class PCS extends Component {
+class PrismicCustomerStoryGenerator extends Component {
   getDoc = () =>
     this.props.content &&
     this.props.content.customer_stories &&
@@ -79,4 +79,4 @@ class PCS extends Component {
   }
 }
 
-export default Layout(PCS);
+export default Layout(PrismicCustomerStoryGenerator);
