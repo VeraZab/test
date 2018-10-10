@@ -12,7 +12,7 @@ const data = [
               label: 'Chart Studio',
               as: 'chart-studio',
               href: {
-                pathname: '/p',
+                pathname: '/prismic-generator',
                 query: {
                   slug: 'chart-studio',
                 },
@@ -22,7 +22,7 @@ const data = [
               label: 'Dashboards & Reporting',
               as: 'dashboards',
               href: {
-                pathname: '/p',
+                pathname: '/prismic-generator',
                 query: {
                   slug: 'dashboards-and-reporting',
                 },
@@ -32,7 +32,7 @@ const data = [
               label: 'Slide Decks',
               as: 'powerpoint-online',
               href: {
-                pathname: '/p',
+                pathname: '/prismic-generator',
                 query: {
                   slug: 'slide-decks',
                 },
@@ -42,7 +42,7 @@ const data = [
               label: 'Falcon SQL Client (Free)',
               as: 'database-connectors',
               href: {
-                pathname: '/p',
+                pathname: '/prismic-generator',
                 query: {
                   slug: 'falcon',
                 },

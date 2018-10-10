@@ -7,81 +7,81 @@ module.exports = {
   exportPathMap: () => ({
     //Home
     '/': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'home',
       },
     },
     // Dashboards
     '/dashboards': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'dashboards-and-reporting',
       },
     },
     '/dashboards-and-reports': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'dashboards-and-reporting',
       },
     },
     // Falcon
     '/database-connectors': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'falcon-sql-editor',
       },
     },
     '/free-sql-client-download': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'falcon-sql-editor',
       },
     },
     // Chart Studio
     '/online-chart-maker': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'chart-studio',
       },
     },
     // Slide Decks
     '/powerpoint-online': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'slide-decks',
       },
     },
     '/online-presentation-tool': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'slide-decks',
       },
     },
     // Plotly.js
     '/plotly-js-scientific-d3-charting-library': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'plotly-js',
       },
     },
     // Plotly.R
     '/d3-js-for-r-and-shiny-charts': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'plotly-r',
       },
     },
     // Plotly.py
     '/d3-js-for-python-and-pandas-charts': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'plotly-py',
       },
     },
     // React Component Suite
     '/products/react': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'react-component-suite',
       },
@@ -90,20 +90,20 @@ module.exports = {
     '/products/dash': { page: '/products/dash' },
     // Dash Pricing
     '/dash/pricing': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'dash-services',
       },
     },
     //Careers
     '/company/careers': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'company',
       },
     },
     '/fr/company/careers': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'company-fr',
       },
@@ -184,19 +184,19 @@ module.exports = {
     '/products/enterprise/customer-stories': { page: '/customer-stories' },
     '/products/on-premise/customer-stories': { page: '/customer-stories' },
     '/products/enterprise/customer-stories/c12-energy': {
-      page: '/p-customer-story',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'c12-energy' },
     },
     '/products/on-premise/customer-stories/c12-energy': {
-      page: '/p-customer-story',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'c12-energy' },
     },
     '/products/enterprise/customer-stories/goji': {
-      page: '/p-customer-story',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'goji' },
     },
     '/products/on-premise/customer-stories/goji': {
-      page: '/p-customer-story',
+      page: '/prismic-customer-story-generator',
       query: { slug: 'goji' },
     },
   }),

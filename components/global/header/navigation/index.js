@@ -149,7 +149,7 @@ export default class Navigation extends React.Component {
                 </a>
                 <Link
                   href={{
-                    pathname: '/p',
+                    pathname: '/prismic-generator',
                     query: { slug: 'dash-services' },
                   }}
                   as={'/dash/pricing'}
@@ -215,7 +215,7 @@ export default class Navigation extends React.Component {
                   {/** Products Submenu Items */}
                   <Link
                     href={{
-                      pathname: '/p',
+                      pathname: '/prismic-generator',
                       query: {
                         slug: 'chart-studio',
                       },
@@ -229,7 +229,7 @@ export default class Navigation extends React.Component {
                   </Link>
                   <Link
                     href={{
-                      pathname: '/p',
+                      pathname: '/prismic-generator',
                       query: { slug: 'dashboards-and-reporting' },
                     }}
                     as={'/dashboards'}

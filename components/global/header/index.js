@@ -46,7 +46,7 @@ class Header extends React.Component {
               <Link
                 prefetch
                 href={{
-                  pathname: '/p',
+                  pathname: '/prismic-generator',
                   query: {
                     slug: 'home',
                   },
