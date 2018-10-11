@@ -2,8 +2,7 @@
 
 .hero {
   display: flex;
-  padding-top: 72px;
-  min-height: 700px;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
   @include media('<=800px') {
