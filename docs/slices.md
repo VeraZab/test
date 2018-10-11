@@ -6,7 +6,7 @@ When a new page is being built at run-time, the global Prismic slices object is 
 
 Those slices are then passed as `props` to the `<Slices>` component, which renders them.
 
-To see which slices make up a page, uncomment line 29 in `/pages/p.js` and look at your console.
+To see which slices make up a page, uncomment line 29 in `/pages/prismcic-generator.js` and look at your console.
 
 The `<Slices>` component can render 12 different kinds of slices.
 

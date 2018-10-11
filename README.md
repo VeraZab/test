@@ -29,7 +29,7 @@ $ yarn run dev
 
 ## Using Prismic.io
 
-If the page you want to edit has a `page:` key whose value is `/p` in `/next.config.js`, then you must edit its copy and structure in Prismic.io.
+If the page you want to edit has a `page:` key whose value is `/prismic-generator` in `/next.config.js`, then you must edit its copy and structure in Prismic.io.
 
 ```
 @username: prismic@plot.ly
@@ -43,14 +43,14 @@ After making changes to the content on Prismic.io, then you'll need to:
 1. Save & publish your changes -  at this point your changes will be visible in your local dev environment.
 2. Rebuild the `production` branch on CircleCI (https://circleci.com/gh/plotly/plotly-next/tree/production). Rebuilding forces a fresh API call to Prismic, integrating changes made into the the production version of the site.
 
-## Adding New Pages with the PageGenerator component
+## Adding New Pages with the PrismicGenerator component
 0. Use the Prismic.io GUI to create/translate a page or create a React component in `/pages`.
 
 1. Add a new route to `next.config.js`
 ```
 // New Route
     '/new-route-url': {
-      page: '/p',
+      page: '/prismic-generator',
       query: {
         slug: 'new-route-slug',
       },
