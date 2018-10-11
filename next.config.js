@@ -83,7 +83,7 @@ module.exports = {
     '/products/react': {
       page: '/prismic-generator',
       query: {
-        slug: 'react-component-suite',
+        slug: 'plotly-js',
       },
     },
     // Dash
