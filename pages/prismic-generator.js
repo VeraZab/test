@@ -8,7 +8,7 @@ import Head from 'components/global/head';
 const shortid = require('shortid');
 import NotFound from 'components/404';
 
-class P extends Component {
+class PrismicGenerator extends Component {
   constructor(props) {
     super(props);
   }
@@ -40,4 +40,4 @@ class P extends Component {
   }
 }
 
-export default Layout(P);
+export default Layout(PrismicGenerator);

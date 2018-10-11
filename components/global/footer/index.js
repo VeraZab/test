@@ -10,7 +10,7 @@ const footerData = [
       {
         label: 'Overview',
         icon: null,
-        url: 'https://plot.ly/products/dash/'
+        url: '/products/dash/'
       },
       {
         label: 'Dash DAQ',
@@ -20,7 +20,7 @@ const footerData = [
       {
         label: 'Dash Deployment Server',
         icon: null,
-        url: 'https://plot.ly/dash/pricing/'
+        url: '/dash/pricing/'
       }
     ]
   },
@@ -31,7 +31,7 @@ const footerData = [
       {
         label: 'Careers',
         icon: null,
-        url: 'https://plot.ly/company/careers/'
+        url: '/company/careers/'
       },
       {
         label: 'Customer Contact',
@@ -88,17 +88,17 @@ const footerData = [
       {
         label: 'Plotly.js',
         icon: null,
-        url: 'https://plot.ly/plotly-js-scientific-d3-charting-library/'
+        url: '/plotly-js-scientific-d3-charting-library/'
       },
       {
         label: 'Plotly.py',
         icon: null,
-        url: 'https://plot.ly/d3-js-for-python-and-pandas-charts/'
+        url: '/d3-js-for-python-and-pandas-charts/'
       },
       {
         label: 'Plotly.R',
         icon: null,
-        url: 'https://plot.ly/d3-js-for-r-and-shiny-charts/'
+        url: '/d3-js-for-r-and-shiny-charts/'
       }
     ]
   },
@@ -109,12 +109,12 @@ const footerData = [
       {
         label: 'Chart Studio',
         icon: null,
-        url: 'https://plot.ly/online-chart-maker/'
+        url: '/online-chart-maker/'
       },
       {
         label: 'Dashboards',
         icon: null,
-        url: 'https://plot.ly/dashboards/'
+        url: '/dashboards/'
       }
     ]
   }
@@ -131,7 +131,7 @@ const generateFooterNavLinks = links => {
         className="footer-main-section-link"
         href={ link.url }
         key={ i }
-        target="_blank"
+        target={link.url && link.url[0] !== '/' ? "_blank" : null}
       >
         <div className="footer-main-section-link-wrapper">
           { link.icon ? footerNavLinkIcon(link.icon) : '' }
