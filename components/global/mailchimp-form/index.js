@@ -8,7 +8,7 @@ class MailChimpForm extends React.Component {
 
       render() {
           return (
-            <form action="https://plot.us12.list-manage.com/subscribe/post" method="POST" noValidate>
+            <form className="footer-main-section" action="https://plot.us12.list-manage.com/subscribe/post" method="POST" noValidate>
               <input type="hidden" name="u" value="28d7f8f0685d044fb51f0d4ee"/>
               <input type="hidden" name="id" value="0c1cb734d7"/>
 
