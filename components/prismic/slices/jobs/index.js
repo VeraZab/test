@@ -68,7 +68,7 @@ const renderItems = (items) =>
       <JobListing key={i}>
         <JobsHeader>
           <div>
-            <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Plein Temps' : time}</JobsTime>
+            <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Temps Plein' : time}</JobsTime>
             <div className="content-section-p-title">
               <h2>{position}</h2>
             </div>
@@ -80,7 +80,7 @@ const renderItems = (items) =>
               primary
               href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}
             >
-              {misc_extra_text[0].text == 'fr' ? 'Postuler à ce poste' : 'Apply for this position'}
+              {misc_extra_text[0].text == 'fr' ? 'Soumetez votre candidature' : 'Apply for this position'}
             </Button>
           </div>
         </JobsHeader>
@@ -104,7 +104,7 @@ const Jobs = ({ items, ...rest }) => {
               className="content-section-p-title"
               style={{ paddingBottom: '80px' }}
             >
-              <h1>{items[0].misc_extra_text[0].text == 'fr' ? "Positions Ouvertes" : 'Open Positions'}</h1>
+              <h1>{items[0].misc_extra_text[0].text == 'fr' ? "Offres d'Emploi" : 'Open Positions'}</h1>
             </div>
             {renderItems(items)}
           </div>
