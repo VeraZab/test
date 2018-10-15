@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './footer.scss'
+import MailChimpForm from '../mailchimp-form'
 
 const footerData = [
 
@@ -170,6 +171,7 @@ class Footer extends React.Component {
           <div className="footer-main-top">
             <div className="footer-main-top-wrapper">
               { assembleFooterNavigation(footerData) }
+              <MailChimpForm/>
             </div>
           </div>
           <div className="footer-main-bottom">
