@@ -14,6 +14,7 @@
 @import "layout/header";
 @import "image";
 @import "mdi";
+@import "mailchimp-form";
 
 $animation-delay: 0.25s;
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
@@ -251,3 +252,4 @@ a {
 .in-percy{
   border: 5px solid green;
 }
+
