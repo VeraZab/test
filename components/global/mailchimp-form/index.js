@@ -14,7 +14,7 @@ class MailChimpForm extends React.Component {
 
               <label htmlFor='MERGE0'>
                 <div className="footer-main-section-header">Join the Dash Club</div>
-                <p> Dash Club is a no-fluff collection of links and notes on the latest Dash developments and community happenings.</p>
+                <p className="mailchimp-footer-text"> Dash Club is a no-fluff, twice-a-month email with links and notes on the latest Dash developments and community happenings.</p>
                 <input
                   type="email"
                   name="EMAIL"
