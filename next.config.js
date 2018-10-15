@@ -118,7 +118,12 @@ module.exports = {
     '/products/consulting-and-oem': { page: '/products/consulting-and-oem' },
 
     '/webinars': { page: '/webinars' },
+
+    // Plotly Newsroom
     '/newsroom': { page: '/newsroom' },
+    '/newsroom/mitacs': { page: '/newsroom/mitacs' },
+    '/newsroom/plotcon': { page: '/newsroom/plotcon' },
+
     '/export': { page: '/export' },
 
     // Industries
