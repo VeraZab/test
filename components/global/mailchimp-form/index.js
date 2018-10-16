@@ -8,7 +8,7 @@ class MailChimpForm extends React.Component {
 
       render() {
           return (
-            <form className="footer-main-section" action="https://plot.us12.list-manage.com/subscribe/post" method="POST" noValidate>
+            <form className="footer-main-section" action="https://plot.us12.list-manage.com/subscribe/post" method="POST" target="_blank" noValidate>
               <input type="hidden" name="u" value="28d7f8f0685d044fb51f0d4ee"/>
               <input type="hidden" name="id" value="0c1cb734d7"/>
 
@@ -19,7 +19,7 @@ class MailChimpForm extends React.Component {
                   type="email"
                   name="EMAIL"
                   id="MERGE0"
-                  placeholder="Your Email Address:"
+                  placeholder="Your Email Address"
                   value={this.state.emailValue}
                   onChange={ (e)=>{this.setState({emailValue: e.target.value});} }
                   autoCapitalize="off"
