@@ -19,6 +19,21 @@ const readMore = {
 
 const articles = [
   {
+    title: "Sight Machine Customer Story",
+    date: 'Wednesday, Oct 17, 2017 1:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/products/enterprise/customer-stories/sight-machine',
+    },
+  },
+  {
     title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
     date: 'Wed, Jan 17, 2018 2:00 PM EST',
     img:
