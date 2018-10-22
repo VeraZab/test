@@ -5,6 +5,9 @@ const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
 const { join } = require('path');
 
+const Cookies = require('cookies');
+const Prismic = require('prismic-javascript');
+
 app.prepare().then(() => {
   const server = express();
 
@@ -14,6 +17,24 @@ app.prepare().then(() => {
       express.static(join(__dirname, '.next', '/service-worker.js'))
     );
   }
+
+  server.get('/preview', (req, res) => {
+    const { token } = req.query;
+    Prismic.getApi('https://plotly.prismic.io/api/v2', {
+      req: req
+    }).then(api => {
+      api.previewSession(token, () => '/', '/').then(url => {
+        const cookies = new Cookies(req, res);
+        cookies.set(Prismic.previewCookie, token, {
+          maxAge: 30 * 60 * 1000,
+          path: '/',
+          httpOnly: false
+        });
+        res.redirect(302, url);
+      });
+    });
+  });
+
   /**
    * Home
    */
