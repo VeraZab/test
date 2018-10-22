@@ -44,7 +44,7 @@ export default () => (
       <HeroMessaging>
         <HeroTitle>Safe and secure, behind your firewall</HeroTitle>
         <HeroSubtitle className="wider-subtitle">
-          Plotly Enterprise provides the best of both worlds: web based
+          Chart Studio Enterprise provides the best of both worlds: web based
           collaboration and sharing capabilities with data and visualizations
           that never leave your corporate environment.
         </HeroSubtitle>

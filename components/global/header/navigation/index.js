@@ -138,14 +138,14 @@ export default class Navigation extends React.Component {
                     className="navigation-product-submenu-item"
                     href="/products/cloud"
                   >
-                    Plotly Cloud
+                    Chart Studio Cloud
                   </a>
                 </Link>
                 <a
                   className="navigation-product-submenu-item"
                   href="/products/on-premise"
                 >
-                  Plotly Enterprise
+                  Chart Studio Enterprise
                 </a>
                 <Link
                   href={{

@@ -99,8 +99,8 @@
       "image": "https://images-plotly.imgix.net/static/marketing/industries/filewell.52db0527affc.jpg",
       "color": "lightgrey"
     }],
-    "title": "Whitelabel Platforms with Plotly Enterprise",
-    "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Plotly Enterprise servers with their own branding and user experience. <br><br><a href='https://plot.ly/product/enterprise/'>PLOTLY ENTERPRISE</a>"
+    "title": "Whitelabel Platforms with Chart Studio Enterprise",
+    "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Chart Studio Enterprise servers with their own branding and user experience. <br><br><a href='https://plot.ly/product/enterprise/'>Chart Studio Enterprise</a>"
   }, {
     "content": [{
       "device": "desktop",
@@ -142,7 +142,7 @@
       "title": "SUBREDDIT TOXICITY IN VICE MOTHERBOARD",
       "url": "http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic"
       }, {
-      "title": "PLOTLY ENTERPRISE",
+      "title": "CHART STUDIO ENTERPRISE",
       "url": "https://plot.ly/product/enterprise/"
       }, {
       "title": "STEP BY STEP PLOTLY TUTORIALS TO GET YOU STARTED",
