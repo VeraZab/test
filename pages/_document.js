@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {this.props.styleTags}
+          {/* Google Tag Manager Tags */ }
           <script async
             src="https://www.googletagmanager.com/gtag/js?id=AW-1009791370"
           />
@@ -23,7 +24,6 @@ export default class MyDocument extends Document {
             {__html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'AW-1009791370');`}}
           />
           <script dangerouslySetInnerHTML={
@@ -33,6 +33,9 @@ export default class MyDocument extends Document {
               src="//static.cdn.prismic.io/prismic.min.js"/>
         </Head>
         <body>
+        {/* Google Tag Manager Tags */ }
+        <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6T2RXG"
+          height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe>`}} />
           <Main />
           <NextScript />
         </body>
