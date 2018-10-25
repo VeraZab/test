@@ -20,7 +20,7 @@ import PricingCards from '../../../components/prismic/slices/pricing-cards';
 const meta = {
   title: 'Chart Studio Enterprise and Dash Pricing',
   description:
-    'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
+    'Chart Studio Enterprise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
   url: 'https://plot.ly/products/on-premise/',
   twitter: {
     label1: 'Chart Studio Enterprise',
@@ -218,7 +218,7 @@ class OnPrem extends React.Component {
                           <div className="pre-title">Optional</div>
                           <p>
                             {' '}
-                            Dash apps can be hosted and run on Chart Studio Enterprise.
+                            Dash apps can be hosted and run on Dash Deployment Server.
                           </p>
                         </p>
                       </div>
