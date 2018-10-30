@@ -40,6 +40,7 @@ export default ({ children, meta = defaultMeta }) => {
       <meta property="og:type" content={defaultMeta.type} />
       <meta property="og:title" content={OgTitle} />
       <meta property="og:description" content={Description} />
+      <meta property="description" content={Description} />
       <meta property="og:url" content={meta.url ? meta.url : defaultMeta.url} />
       <meta
         property="og:image"
