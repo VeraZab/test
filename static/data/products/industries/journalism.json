@@ -1,0 +1,162 @@
+{
+  "id": "aerospace",
+  "meta": {
+    "title": "Aerospace Analytics"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Journalism",
+    "desc": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
+  },
+  "style": {
+    "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-journalism.jpg)"
+  },
+  "sponsors": [{
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-washingtonpost.47df50bf33f1.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-fortune.f28adce08bb8.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-wired.4741a4a4eb66.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-gtm.49428e042ac0.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-bostonglobe.33d4d0cf1bc5.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-vice.e7df0217015a.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-maplight.7b04c6d3ad5b.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-dailyprogress.bf63206d935a.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-sportsillustrated.9949f0963df1.png",
+    "label": "Sponsor"
+  }],
+  "quotes": [{
+    "author": "- Andrew Tran, reporter at Boston Globe",
+    "desc": "  I use plotly for my articles because of how easily the API integrates with my data story workflow. It takes the dataviz I created in R, adds interactivity, and gives me code I can quickly embed into my article on deadline. "
+  }, {
+    "author": "- Dylan Matthews, Columnist, Washington Post",
+    "desc": "  Plotly is my absolute favorite way to communicate data and complex ideas to my readers. "
+  }, {
+    "author": "- Thijs Roes, Amsterdam reporter for Vice",
+    "desc": "  Plotly gives me the opportunity to easily share complicated data in a visually appealing way. It's easier to use than its offline competitors, it works in the cloud, and in the end I manage to get a point across more effectively because of it. "
+  }, {
+    "author": "- Mike Munsell, Manager, Research Marketing, GreenTech Media Research",
+    "desc": "  With Plotly charts, GTM clients and readers have more access to our data than ever before. Plotly increases user engagement, an important metric for us as a media and research company. "
+  }, {
+    "author": "- Rhett Allain, Science Writer at Wired",
+    "desc": "  When I create a graph, I am looking for a platform that has two things: it should be easy and it should look nice. Plotly does both of these things and more. Plotly offers two more features that are great for my readers: interactive graphs and access to the original data. Plotly is a great tool to effectively communicate scientific ideas. "
+  }],
+  "sections": [{
+    "content": [{
+      "device": "iphone",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone2-content.f2eaa1a57cf6.jpg",
+      "color": "columbiablue"
+    }, {
+      "device": "iphone",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone1-content.b6f0c57744f3.jpg",
+      "color": "columbiablue"
+    }],
+    "title": "Used by some of the world's largest digital news outlets",
+    "body": "Plotly allows online reporters to make D3.js graphs without coding, for free, and the graphs are optimized for mobile and fluid/responsive layouts."
+  }, {
+    "content": [{
+      "device": "newspapper",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/washingtonpost-plotly.081d7978b0ea.jpg",
+      "color": "mayablue"
+    }],
+    "title": "A GUI for D3.js",
+    "body": "Everyone knows that D3.js is the gold-standard for interactive graphics on the web. Plotly allows news outlets to rapidly create D3.js graphs without needing programmers, like this one in the Washington Post. <br><br><a href='http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/'>PLOTLY GRAPHS AT THE WASHINGTON POST</a>"
+  }, {
+    "content": [{
+      "device": "iphone",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone-vice1.f766900c81a0.jpg",
+      "color": "lightgrey"
+    }, {
+      "device": "iphone",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/iphone-vice2.4550e9bdb1c0.jpg",
+      "color": "lightgrey"
+    }],
+    "title": "Graphs optimized for fluid layout and mobile",
+    "body": "Unlike Tableau graphs, Plotly graphs use 100% web-native technologies that display on mobile and respond to fluid layouts. See this article in VICE for example. <br><br><a href='http://www.vice.com/nl/read/deze-man-houdt-alle-moorden-in-de-hoofdstad-bij-161'>MURDER RATE IN VICE NETHERLANDS</a><br><a href='http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic'>SUBREDDIT TOXICITY IN VICE MOTHERBOARD</a>"
+  }, {
+    "content": [{
+      "device": "browser",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/filewell.52db0527affc.jpg",
+      "color": "lightgrey"
+    }],
+    "title": "Whitelabel Platforms with Chart Studio Enterprise",
+    "body": "Want to run Plotly on your own servers? Plotly helps digital news outlets deploy Chart Studio Enterprise servers with their own branding and user experience. <br><br><a href='https://plot.ly/product/enterprise/'>Chart Studio Enterprise</a>"
+  }, {
+    "content": [{
+      "device": "desktop",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/life-expectancy.5196f2276cb6.gif",
+      "color": "cornflowerblue"
+    }],
+    "title": "Increase engagement and time-on-site with interactive graphs",
+    "body": "Plotly graphs are drawn in D3.js and are fully interactive - zoom, hover text, pan, and line toggling all come for free."
+  }, {
+    "content": [{
+      "device": "laptop",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/parenthood-evolution.e42d2391530f.svg",
+      "color": "lightgreyblue"
+    }],
+    "title": "Plotly Pew Research graph collection",
+    "body": "Curious how publication-quality, interactive graphs look in Plotly? Explore Plotly's collection of Pew Research graphs for inspiration. <br><br><a href='http://plot.ly/~PewResearch'>PLOTLY PEW RESEARCH GRAPH COLLECTION</a>"
+  }, {
+    "content": [{
+      "device": "ipad",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/animated-map-no-legend.82104817f1a2.jpg",
+      "color": "lightgrey"
+    }],
+    "title": "Interactive maps like the New York Times",
+    "body": "Plotly has the most fully featured D3.js map editor available online. Plotly maps are all drawn with D3.js, the same Javascript library used by the New York Times. <br><br><a href='http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/'>LEARN TO USE PLOTLY MAPS</a>"
+  }],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [
+      {
+      "title": "PLOTLY GRAPHS AT THE WASHINGTON POST",
+      "url": "http://www.washingtonpost.com/blogs/wonkblog/wp/2013/05/13/millions-of-americans-live-in-extreme-poverty-heres-how-they-get-by/"
+      }, {
+      "title": "MURDER RATE IN VICE NETHERLANDS",
+      "url": "http://www.vice.com/nl/read/deze-man-houdt-alle-moorden-in-de-hoofdstad-bij-161"
+      }, {
+      "title": "SUBREDDIT TOXICITY IN VICE MOTHERBOARD",
+      "url": "http://motherboard.vice.com/read/someone-quantified-which-subreddits-are-the-most-toxic"
+      }, {
+      "title": "CHART STUDIO ENTERPRISE",
+      "url": "https://plot.ly/product/enterprise/"
+      }, {
+      "title": "STEP BY STEP PLOTLY TUTORIALS TO GET YOU STARTED",
+      "url": "https://plot.ly/products/industries/journalism/help.plot.ly/tutorials"
+      }, {
+      "title": "PLOTLY PEW RESEARCH GRAPH COLLECTION",
+      "url": "http://plot.ly/~PewResearch"
+      }, {
+      "title": "LEARN TO USE PLOTLY MAPS",
+      "url": "http://moderndata.plot.ly/graph-flight-plans-on-a-3d-globe-with-matlab-mapping-toolbox-and-plotly/"
+      }, {
+      "title": "PLOTLY CHARTS IN THE BOSTON GLOBE",
+      "url": "http://www.bostonglobe.com/metro/2014/07/31/where-trucks-crash-storrow-and-memorial-drives/A1rQpXZtcV4PIPPmSDNxKI/story.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "id": "pharma-analytics",
+  "meta": {
+    "title": "Pharma Analytics, Life Sciences & Computational Biology"
+  },
+  "header": {
+    "group": "Industries",
+    "title": "Pharma Analytics, Life Sciences & Computational Biology",
+    "desc": "Graphing and dashboards for bioinformatics, collaborative analytics, and the modern life sciences."
+  },
+  "style": {
+    "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-pharma.jpg)"
+  },
+  "sponsors": [{
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-lifecode.68c856d37cdd.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-smplbio.820dab3c3420.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-nih.30010f024aea.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-pli.52456d205eef.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-helynx.b3d2598841ab.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-synthego.c0c23c5863ae.png",
+    "label": "Sponsor"
+  }, {
+    "graphic": "https://images-plotly.imgix.net/static/marketing/logos/logo-dtubio.0faccaa7b5b2.png",
+    "label": "Sponsor"
+  }],
+  "sections": [{
+    "content": [{
+      "device": "ipad",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/dendogram2.966c3f31f02e.png",
+      "color": "columbiablue"
+    }],
+    "title": "Scientific-grade graphs and dashboard tools",
+    "body": "Plotly has unparalleled capability when it comes to importing data from MATLAB, R, Excel, and other formats popular in the life sciences. Create and work independently with different graph layers, combine them into composite graphs, and export for print or web publication in any image format."
+  }, {
+    "content": [{
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/turtles.jpg"
+    }],
+    "title": "Monitoring sea turtle migrations with Plotly and MATLAB",
+    "body": "Project Leatherback analyzes data from sensors attached to migrating sea turtles in MATLAB, then publishes the results with Plotly."
+  }, {
+    "content": [{
+      "device": "laptop",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/ribbon.ee4efd98ef65.jpg",
+      "color": "lightgrey"
+    }],
+    "title": "Dashboards for bioinformatics",
+    "body": "Plotly.js makes it easy to build scientific-grade dashboards in D3.js without JavaScript programming expertise."
+  }, {
+    "content": [{
+      "device": "desktop",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/lifespans.c61ee845feb5.svg",
+      "color": "mayablue"
+    }],
+    "title": "Publishing R and ggplot graphs to the web",
+    "body": "Plotly collaborates with rOpenSci on ggplotly - An open-source R library that redraws ggplot figures in D3.js for web publishability, interactivity, and easy sharing. <br><br><a href='http://plot.ly/ipython-notebooks/survival-analysis-r-vs-python/'>SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON</a>"
+  }, {
+    "content": [{
+      "device": "ipad",
+      "type": "image",
+      "image": "https://images-plotly.imgix.net/static/marketing/industries/latex.2a7ddc195ee1.svg",
+      "color": "lightgrey"
+    }],
+    "title":"Built for scientists",
+    "body":"Plotly's online web app supports all the features popular in Minitab and OriginLab:<br><br>• LaTeX typesetting<br>• Error bars<br>• Regression analysis<br>• Statistics<br>• Powerpoint export<br><br><a href='http://help.plot.ly/fitting-data-to-custom-functions-video/'>NON-LINEAR REGRESSION ANALYSIS IN THE PLOTLY WEB APP</a><br><a href='http://help.plot.ly/fitting-data-with-error-bars-video/'>FITTING DATA WITH ERROR BARS</a><br><a href='http://help.plot.ly/LaTeX-basics/'>LATEX TYPESETTING</a>"
+  }],
+  "quotes": [{
+    "author": "- Chris Rivest, Lifecode CEO",
+    "desc": " Lifecode's research team shares and visualizes data with Plotly's Python API. Plotly is emerging as the leading cloud platform for visualization in computational biology. "
+  }, {
+    "author": "- Chris Johsnon, Project Leatherback lead",
+    "desc": " We are a small non profit in Florida studying endangered leatherback sea turtles. Each summer we track these animals using a bunch of tech (GPS, VHF tags, IMU's and depth/temperature loggers) as they travel the coast between nesting events. We are hoping to post most of our data online with Plotly so others can can view and play with the data. "
+  }, {
+    "author": "- James, SMPL BIO",
+    "desc": " Smpl Bio aims to simplify experimental design for biologists and geneticists by providing easy to use tools and visualizations. We were searching for a visualization platform that looked great for the end user but was also intuitive for the developer. Plotly easily filled both of those requirements, its unified interface and documentation lets us focus on our core algorithm development. "
+  }, {
+    "author": "- Karthik Ram, ROpenSci Founder and BIDS Data Science Fellow",
+    "desc": " Plotly provides R users with stunning interactive visualizations made exceedingly simple by leveraging ggplot2's syntax that is already available to a large group of researchers. "
+  }, {
+    "author": "- Mingzhang Yang, Visiting Fellow researcher at NIH",
+    "desc": " Plotly helps me analyze and plot my data easily, with flexible options and high quality. It's easy to access, edit, and share with others. Plotly's support team is extremely responsive. "
+  }],
+  "learnMore": {
+    "name": "Learn More",
+    "links": [{
+      "title": "SURVIVAL ANALYSIS WITH PLOTLY: R VS PYTHON",
+      "url": "http://plot.ly/ipython-notebooks/survival-analysis-r-vs-python/"
+    }, {
+      "title": "LATEX TYPESETTING",
+      "url": "http://help.plot.ly/LaTeX-basics/"
+    }, {
+      "title": "CONTINUOUS FILLED ERROR BARS",
+      "url": "http://help.plot.ly/continuous-filled-error-bars/"
+    }, {
+      "title": "FITTING DATA WITH ERROR BARS",
+      "url": "http://help.plot.ly/fitting-data-with-error-bars-video/"
+    }, {
+      "title": "REGRESSION ANALYSIS",
+      "url": "http://help.plot.ly/make-a-line-of-best-fit/"
+    }, {
+      "title": "FITTING DATA TO CUSTOM FUNCTIONS",
+      "url": "http://help.plot.ly/fitting-data-to-custom-functions-video/"
+    }, {
+      "title": "BASIC STATISTICS MEAN MEDIAN STANDARD DEVIATION",
+      "url": "http://help.plot.ly/basic-statistics-mean-median-standard-deviation/"
+    }, {
+      "title": "CHI SQUARE TEST",
+      "url": "http://help.plot.ly/chi-square-test/"
+    }]
+  }
+}
