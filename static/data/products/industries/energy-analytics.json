@@ -73,7 +73,7 @@
         "background": "mayablue"
       }],
       "title": "Dashboards for utility-scale batteries",
-      "body": "Energy start-up Ambri uses web dashboards made with Plotly Enterprise for process monitoring on their R&D manufacturing line. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB</a>"
+      "body": "Energy start-up Ambri uses web dashboards made with Chart Studio Enterprise for process monitoring on their R&D manufacturing line. <a href='http://moderndata.plot.ly/r-python-matlab-dashboards-graphs-with-d3-js-webgl/'>WEB DASHBOARDS MADE WITH PYTHON, R, OR MATLAB</a>"
     },
     {
       "content": [{

@@ -322,7 +322,7 @@ class DashMain extends React.Component {
                     </div>
                     <div className="card-body">
                       <p>
-                        The Dash Deployment Server ties into Plotly Enterprise, storing
+                        The Dash Deployment Server ties into Chart Studio Enterprise, storing
                         your analytical Dash applications with plotly graphs,
                         datasets, SQL queries, and dashboards in one
                         company-wide portal.

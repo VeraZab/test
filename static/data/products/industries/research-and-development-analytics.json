@@ -70,7 +70,7 @@
       "color": "cornflowerblue"
     }],
     "title": "Automating HTML reports of sensor data",
-    "body": "<b>The Advanced Technologies and Projects team at Google</b> uses Plotly Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Plotly Enterprise for further exploration and pdf download. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY</a>"
+    "body": "<b>The Advanced Technologies and Projects team at Google</b> uses Chart Studio Enterprise with IPython notebook to automatically generate reports of Plotly graphs. The HTML reports are emailed to company executives, who open the report graphs in Chart Studio Enterprise for further exploration and pdf download. <a href='http://moderndata.plot.ly/generate-html-reports-with-python-pandas-and-plotly/'>GENERATE HTML REPORTS WITH PYTHON, PANDAS, AND PLOTLY</a>"
   }, {
     "content": [{
       "device": "laptop",
@@ -79,7 +79,7 @@
       "color": "lightgrey"
     }],
     "title": "Liquid metal batteries for utility-scale storage",
-    "body": "<b>Ambri</b> uses <b>Plotly Enterprise with Research Box</b> to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with <b>RStudio</b> and <b>Excel</b> to generate client cost saving curves for Ambri commercial deployments."
+    "body": "<b>Ambri</b> uses <b>Chart Studio Enterprise with Research Box</b> to develop new chemistries and cell materials for its liquid metal batteries. The business development team uses Plotly with <b>RStudio</b> and <b>Excel</b> to generate client cost saving curves for Ambri commercial deployments."
   },{
     "content": [{
       "device": "ipython",
@@ -118,13 +118,13 @@
       "color": "lightgrey"
     }],
     "title": "Plotly for research at NYU",
-    "body": "New York University has a site-license of Plotly Enterprise available to its research labs, classrooms and faculty at graphs.nyu.edu."
+    "body": "New York University has a site-license of Chart Studio Enterprise available to its research labs, classrooms and faculty at graphs.nyu.edu."
   }],
   "quotes": [{
     "desc": " Plotly is core to our research and development efforts at Ambri, and serves us along the entire spectrum of our data needs from operator input to data analysis and visualization. The Plotly platform enables Ambri engineers and scientists to quickly and easily digest large quantities of data and gain insights into how our batteries and processes are performing on a real time basis. These insights are critical as we work towards Ambri’s mission to create cost-effective, scalable, and safe energy storage technology that will change the future of the electric power industry. ",
     "author": "- Dana Guernsey, Director of Corporate Development at Ambri"
   }, {
-    "desc": " The Plotly Enterprise solution also acts as a corporate memory and it is extremely easy to reuse plots and embed them into any web content. ",
+    "desc": " The Chart Studio Enterprise solution also acts as a corporate memory and it is extremely easy to reuse plots and embed them into any web content. ",
     "author": "- Dr. Pekka, VTT senior scientist"
   }, {
     "desc": " Using Plotly lets our customers quickly visualize key performance data while allowing them to closely inspect the data as well. That's a huge advantage over static plots for us. ",
