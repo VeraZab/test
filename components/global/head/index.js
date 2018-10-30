@@ -8,7 +8,7 @@ const defaultMeta = {
   description:
     'Plotly is the modern platform for agile business intelligence and data science.',
   url: 'https://plot.ly',
-  image: 'https://now.plot.ly/static/images/meta/social-plotly.png',
+  image: 'https://brand.plot.ly/static/images/plotly-logo-01-stripe@2x.png',
   tags: [],
   publisher: 'https://www.facebook.com/Plotly/',
   twitter: {
