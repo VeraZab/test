@@ -72,7 +72,7 @@
       "color": "lightgrey"
     }],
     "title": "Live-streaming dashboards on mobile, tablet, or laptop",
-    "body": "Using Plotly Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
+    "body": "Using Chart Studio Enterprise and the Plotly Python client, Goji has built a suite of internal dashboards to share sales performance across the company. Because Plotly uses 100% web native tech, the dashboards are viewable on mobile and tablet with no extra work. <br><br><a href='https://plot.ly/products/enterprise/customer-stories/goji/'>GOJI CUSTOMER STORY</a>"
   }, {
     "content": [{
       "device": "desktop",

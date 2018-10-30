@@ -18,14 +18,14 @@ import SwitchComponent from 'components/switch';
 import PricingCards from '../../../components/prismic/slices/pricing-cards';
 
 const meta = {
-  title: 'Plotly Enterprise and Dash Pricing',
+  title: 'Chart Studio Enterprise and Dash Pricing',
   description:
-    'Plotly On Premise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
+    'Chart Studio Enterprise provides the best of both worlds: web based collaboration and sharing capabilities with data and visualizations that never leave your corporate environment.',
   url: 'https://plot.ly/products/on-premise/',
   twitter: {
-    label1: 'Plotly Enterprise',
+    label1: 'Chart Studio Enterprise',
     data1: '$9,960 per year, 5 user license',
-    label2: 'Plotly Enterprise + Dash Deployment Server',
+    label2: 'Chart Studio Enterprise + Dash Deployment Server',
     data2: '$15,960 per year, 5 user license',
   },
 };
@@ -152,7 +152,7 @@ class OnPrem extends React.Component {
                 className="animate--fade-in-from-bottom"
               >
                 {this.state.pricingMode === 'Private Cloud'
-                  ? `Set up and managed by Plotly. The easiest way to set up your own Plotly Enterprise and Dash Deployment Server. Single sign-on through LDAP or AD is not possible with Private Cloud - see On-Premises if SSO is required.`
+                  ? `Set up and managed by Plotly. The easiest way to set up your own Chart Studio Enterprise and Dash Deployment Server. Single sign-on through LDAP or AD is not possible with Private Cloud - see On-Premises if SSO is required.`
                   : `Installed and maintained by your IT staff on your company's server or AWS account.`}
               </H2>
             </HeadingContainer>
@@ -161,7 +161,7 @@ class OnPrem extends React.Component {
         </ContentSection>
         <ContentSection className="architecture-section">
           <ContentPane full center center-vertically text>
-            <div className="pre-title">Plotly Enterprise</div>
+            <div className="pre-title">Chart Studio Enterprise</div>
             <Title>Our Enterprise Architecture</Title>
             <Body>
               <div className="image-with-complex-text-overlay architecture">
@@ -177,7 +177,7 @@ class OnPrem extends React.Component {
                       <div className="text-item-wrapper">
                         <div className="text-item-lines" />
                         <p>
-                          Plotly Enterprise ships as an easy-to-install Docker
+                          Chart Studio Enterprise ships as an easy-to-install Docker
                           container.
                         </p>
                       </div>
@@ -188,7 +188,7 @@ class OnPrem extends React.Component {
 
                         <p>
                           Your app with plotly.js charts can easily export
-                          charts and data to a white-labeled Plotly Enterprise
+                          charts and data to a white-labeled Chart Studio Enterprise
                           for advanced editing, analytics and image export.
                         </p>
                       </div>
@@ -207,7 +207,7 @@ class OnPrem extends React.Component {
                         <div className="text-item-lines" />
                         <p>
                           <div className="pre-title">Optional</div>
-                          <p>External databases</p>
+                          <p>External databases.</p>
                         </p>
                       </div>
                     </div>
@@ -218,8 +218,7 @@ class OnPrem extends React.Component {
                           <div className="pre-title">Optional</div>
                           <p>
                             {' '}
-                            Dash apps can be hosted and run on Plotly
-                            Enterprise.
+                            Dash apps can be hosted and run on Dash Deployment Server.
                           </p>
                         </p>
                       </div>

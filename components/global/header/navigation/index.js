@@ -133,21 +133,7 @@ export default class Navigation extends React.Component {
                     : 'navigation-product-submenu'
                 }
               >
-                <Link href="/products/cloud" prefetch>
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/cloud"
-                  >
-                    Plotly Cloud
-                  </a>
-                </Link>
-                <a
-                  className="navigation-product-submenu-item"
-                  href="/products/on-premise"
-                >
-                  Plotly Enterprise
-                </a>
-                <Link
+              <Link
                   href={{
                     pathname: '/prismic-generator',
                     query: { slug: 'dash-services' },
@@ -157,6 +143,20 @@ export default class Navigation extends React.Component {
                 >
                   <a className="navigation-product-submenu-item">
                     Dash Deployment Server
+                  </a>
+                </Link>
+                <a
+                  className="navigation-product-submenu-item"
+                  href="/products/on-premise"
+                >
+                  Chart Studio Enterprise
+                </a>
+                 <Link href="/products/cloud" prefetch>
+                  <a
+                    className="navigation-product-submenu-item"
+                    href="/products/cloud"
+                  >
+                    Chart Studio Cloud
                   </a>
                 </Link>
               </div>

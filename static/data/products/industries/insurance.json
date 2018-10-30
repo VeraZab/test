@@ -42,7 +42,7 @@
         "background": "white"
       }],
       "title": "Car insurance sales with Plotly dashboards and Python (Goji)",
-      "body": "Car insurance provider Goji uses Plotly Enterprise and the Plotly Python client for all their internal dashboards on sales performance. By switching to internal tools built on Plotly Enterprise, they were able to save over a hundred thousand dollars in BI infrastructure because they no longer needed to pay for traditional data warehouse functionality. Read more in the full customer story linked below."
+      "body": "Car insurance provider Goji uses Chart Studio Enterprise and the Plotly Python client for all their internal dashboards on sales performance. By switching to internal tools built on Chart Studio Enterprise, they were able to save over a hundred thousand dollars in BI infrastructure because they no longer needed to pay for traditional data warehouse functionality. Read more in the full customer story linked below."
     }, {
       "content": [{
         "device": "iphone",
