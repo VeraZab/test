@@ -12,6 +12,12 @@ module.exports = {
         slug: 'home',
       },
     },
+    '/preview': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'home',
+      },
+    },
     // Dashboards
     '/dashboards': {
       page: '/prismic-generator',

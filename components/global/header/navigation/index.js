@@ -96,7 +96,7 @@ export default class Navigation extends React.Component {
       style: 'secondary',
       link: {
         target: '_blank',
-        url: 'https://plot.ly/accounts/login/?action=login',
+        url: '/accounts/login/?action=login',
       },
     };
     return (

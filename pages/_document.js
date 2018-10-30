@@ -26,6 +26,11 @@ export default class MyDocument extends Document {
 
             gtag('config', 'AW-1009791370');`}}
           />
+          <script dangerouslySetInnerHTML={
+            {__html: `window.prismic = {endpoint: 'https://plotly.prismic.io/api/v2'};`}}
+          />
+          <script async type="text/javascript"
+              src="//static.cdn.prismic.io/prismic.min.js"/>
         </Head>
         <body>
           <Main />

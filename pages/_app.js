@@ -7,6 +7,9 @@ import { fetchData } from 'lib/fetchData';
 import { saveStoreData } from 'store/global';
 import { transformData } from 'lib/transform-data.prismic';
 import { connect } from 'react-redux';
+import getCookies from 'next-cookies';
+
+
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
@@ -46,7 +49,7 @@ class MyApp extends App {
         pageProps,
       };
     } else {
-      const appData = await fetchData();
+      const appData = await fetchData(getCookies(ctx)['io.prismic.preview']);
       const content = await transformData(appData, slug);
       currentDoc = content.pages.find(doc => doc.uid === slug);
       reduxStore.dispatch(

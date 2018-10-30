@@ -26,6 +26,7 @@ class PrismicGenerator extends Component {
 
 
       const hero = <Hero key={shortid.generate()} data={doc.data} />;
+      // console.log(doc.data.slices);
       const slices = <Slices data={doc.data.slices} />;
 
       return (
