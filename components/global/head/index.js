@@ -4,7 +4,7 @@ const globalMeta = {};
 const defaultMeta = {
   type: 'article',
   sitename: 'Plotly',
-  title: 'Visualize Data, Together',
+  title: 'Modern Analytics Apps For The Enterprise',
   description:
     'Plotly is the modern platform for agile business intelligence and data science.',
   url: 'https://plot.ly',
