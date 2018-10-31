@@ -80,7 +80,7 @@ const renderItems = (items) =>
               primary
               href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}
             >
-              {misc_extra_text[0].text == 'fr' ? 'Soumetez votre candidature' : 'Apply for this position'}
+              {misc_extra_text[0].text == 'fr' ? 'Soumettez votre candidature' : 'Apply for this position'}
             </Button>
           </div>
         </JobsHeader>
