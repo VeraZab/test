@@ -79,6 +79,21 @@ const articles = [
     },
   },
   {
+    title: "Alteryx Joins Forces with Plotly to Enable Data Visualization Throughout the Analytics Lifecycle",
+    date: 'Fri, Aug 11, 2017 7:57 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://www.businesswire.com/news/home/20170811005626/en/Alteryx-Joins-Forces-Plotly-Enable-Data-Visualization',
+    },
+  },
+  {
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
     date: 'Tue, Apr 04, 2017 2:00 PM EST',
     img:
