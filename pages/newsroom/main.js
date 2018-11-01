@@ -19,23 +19,8 @@ const readMore = {
 
 const articles = [
   {
-    title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
-    date: 'Wed, Jan 17, 2018 2:00 PM EST',
-    img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
-    presenter: {
-      name: 'Ashley Pace',
-      avatar:
-        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
-    },
-    action: {
-      ...readMore,
-      link: '/newsroom/mitacs',
-    },
-  },
-  {
     title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
-    date: 'Mon, Oct 29, 2018 0:00 PM EST',
+    date: 'Mon, Oct 29, 2018 12:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
@@ -49,8 +34,23 @@ const articles = [
     },
   },
   {
+    title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
+    date: 'Thu, Aug 23, 2018 2:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/mitacs',
+    },
+  },
+  {
     title: "Forbes: Comparing Data Visualization Software: Here Are The 7 Best Tools for 2018",
-    date: 'Wed, Jun 20, 2018 0:35 AM EST',
+    date: 'Wed, Jun 20, 2018 12:35 AM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
@@ -80,7 +80,7 @@ const articles = [
   },
   {
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
-    date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
+    date: 'Tue, Apr 04, 2017 2:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
     presenter: {
