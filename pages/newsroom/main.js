@@ -107,6 +107,21 @@ const articles = [
       ...readMore,
       link: '/newsroom/plotcon',
     },
+  },
+  {
+    title: "VentureBeat: Data science cloud service Plotly raises $5.5M",
+    date: 'Wed, Jun 03, 2015 5:30 PM PST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://venturebeat.com/2015/06/03/data-science-cloud-service-plotly-raises-5-5m/',
+    },
   }
 ];
 
