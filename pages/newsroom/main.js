@@ -34,6 +34,21 @@ const articles = [
     },
   },
   {
+    title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
+    date: 'Mon, Oct 29, 2018 0:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://blogs.msdn.microsoft.com/uk_faculty_connection/2018/10/29/data-science-in-visual-studio-code-using-neuron-a-new-vs-code-extension/',
+    },
+  },
+  {
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
     date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
     img:
