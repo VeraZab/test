@@ -49,6 +49,21 @@ const articles = [
     },
   },
   {
+    title: "Forbes: Comparing Data Visualization Software: Here Are The 7 Best Tools for 2018",
+    date: 'Wed, Jun 20, 2018 0:35 AM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://www.forbes.com/sites/bernardmarr/2018/06/20/comparing-data-visualization-software-here-are-the-7-best-tools-for-2018/#6060bc886d0b',
+    },
+  },
+  {
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
     date: 'Tuesday, Apr 04, 2017 2:00 PM EST',
     img:
