@@ -122,6 +122,21 @@ const articles = [
       ...readMore,
       link: 'https://venturebeat.com/2015/06/03/data-science-cloud-service-plotly-raises-5-5m/',
     },
+  },
+  {
+    title: "BetaKit: Plotly raises $5.5 million Series A from Rho Ventures, MHS Capital, Real Ventures, others",
+    date: 'Wed, Jun 03, 2015 12:00 PM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://betakit.com/plotly-raises-5-5-million-series-a-from-mhs-capital-real-ventures-others/',
+    },
   }
 ];
 
