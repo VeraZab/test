@@ -37,7 +37,7 @@
     {
       "id": "energy",
       "style": {
-        "backgroundImage": "url(//plot.ly/static/enterprise/img/industries/thumbnail-energy.d20a8a5e7c3e.jpg)", "maxHeight": "275px"
+        "backgroundImage": "url(https://images-plotly.imgix.net/static/marketing/industries/banner-energy.jpg)", "maxHeight": "275px"
       },
       "label": "Energy",
       "cta": "Learn More →",
