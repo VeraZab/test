@@ -24,7 +24,7 @@ const articles = [
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Lorenzo Silvestri',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -37,7 +37,7 @@ const articles = [
     title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
     date: 'Thu, Aug 23, 2018 2:00 PM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+      'https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif',
     presenter: {
       name: 'Ashley Pace',
       avatar:
@@ -52,9 +52,9 @@ const articles = [
     title: "Forbes: Comparing Data Visualization Software: Here Are The 7 Best Tools for 2018",
     date: 'Wed, Jun 20, 2018 12:35 AM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Bernard Marr',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -67,9 +67,9 @@ const articles = [
     title: "SD Times: Companies to Watch in 2018",
     date: 'Mon, Oct 02, 2017 12:00 AM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+      'https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'SD Times',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -82,9 +82,9 @@ const articles = [
     title: "Alteryx Joins Forces with Plotly to Enable Data Visualization Throughout the Analytics Lifecycle",
     date: 'Fri, Aug 11, 2017 7:57 PM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Business Wire',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -97,9 +97,9 @@ const articles = [
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
     date: 'Tue, Apr 04, 2017 2:00 PM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-1916?w=800',
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-6164',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Anna Anisin',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -114,7 +114,7 @@ const articles = [
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Sindy Nanclares',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
@@ -127,9 +127,9 @@ const articles = [
     title: "BetaKit: Plotly raises $5.5 million Series A from Rho Ventures, MHS Capital, Real Ventures, others",
     date: 'Wed, Jun 03, 2015 12:00 PM EST',
     img:
-      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
+      'https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif',
     presenter: {
-      name: 'Ashley Pace',
+      name: 'Douglas Soltys',
       avatar:
         'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
     },
