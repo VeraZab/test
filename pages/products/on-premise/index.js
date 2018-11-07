@@ -82,6 +82,13 @@ class OnPrem extends React.Component {
       cards[1].primary.button_one_label = "START A TRIAL";
     }
 
+    if (this.state.pricingMode === 'On-Premises'){
+      cards[0].primary.button_one_link.url = "https://plotly.typeform.com/to/seG7Vb";
+      cards[0].primary.button_one_label = "REQUEST A DEMO";
+      cards[1].primary.button_one_link.url = "https://plotly.typeform.com/to/rkO85m";
+      cards[1].primary.button_one_label = "REQUEST A DEMO";
+    }
+
     const pricingCardFeatures = (items) => {
       const pricingCardFeature = (items) => {
         return items.map((item, i) => {
