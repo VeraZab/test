@@ -127,6 +127,12 @@ module.exports = {
     '/newsroom': { page: '/newsroom' },
     '/newsroom/mitacs': { page: '/newsroom/mitacs' },
     '/newsroom/plotcon': { page: '/newsroom/plotcon' },
+    '/newsroom/sight-machine': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'sight-machine',
+      },
+    },
 
     '/export': { page: '/export' },
   }),
