@@ -18,15 +18,6 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styleTags}
           {/* Google Tag Manager Tags */ }
-          <script async
-            src="https://www.googletagmanager.com/gtag/js?id=AW-1009791370"
-          />
-          <script dangerouslySetInnerHTML={
-            {__html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-1009791370');`}}
-          />
           <script dangerouslySetInnerHTML={{__html:
             `(
               function(w,d,s,l,i){
