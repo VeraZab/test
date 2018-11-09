@@ -196,7 +196,13 @@ export default class Navigation extends React.Component {
                       Dash DAQ
                     </a>
                   </Link>
-                  <Link href="/dash/pricing/" prefetch>
+                  <Link
+                    href={{
+                      pathname: '/prismic-generator',
+                      query: { slug: 'dash-services' },
+                    }}
+                    as={'/dash/pricing'}
+                    prefetch>
                     <a className="navigation-product-submenu-item">
                       Dash Deployment Server
                     </a>
