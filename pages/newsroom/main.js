@@ -30,7 +30,7 @@ const articles = [
     },
     action: {
       ...readMore,
-      link: '/products/enterprise/customer-stories/sight-machine',
+      link: '/newsroom/sight-machine',
     },
   },
   {
