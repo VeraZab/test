@@ -123,93 +123,12 @@ module.exports = {
     // Consulting and OEM (Advanced Development)
     '/products/consulting-and-oem': { page: '/products/consulting-and-oem' },
 
-    '/webinars': { page: '/webinars' },
-
     // Plotly Newsroom
     '/newsroom': { page: '/newsroom' },
     '/newsroom/mitacs': { page: '/newsroom/mitacs' },
     '/newsroom/plotcon': { page: '/newsroom/plotcon' },
 
     '/export': { page: '/export' },
-
-    // Industries
-    '/products/industries': { page: '/industries' },
-
-    '/products/industries/finance': {
-      page: '/single-industries',
-      query: { id: 'finance' },
-    },
-    '/products/industries/finance-analytics': {
-      page: '/single-industries',
-      query: { id: 'finance' },
-    },
-    '/products/industries/aerospace': {
-      page: '/single-industries',
-      query: { id: 'aerospace' },
-    },
-    '/products/industries/aerospace-analytics': {
-      page: '/single-industries',
-      query: { id: 'aerospace' },
-    },
-    '/products/industries/automotive-analytics': {
-      page: '/single-industries',
-      query: { id: 'automotive-analytics' },
-    },
-    '/products/industries/business-intelligence': {
-      page: '/single-industries',
-      query: { id: 'business-intelligence' },
-    },
-    '/products/industries/business-intelligence-analytics': {
-      page: '/single-industries',
-      query: { id: 'business-intelligence' },
-    },
-    '/products/industries/energy-analytics': {
-      page: '/single-industries',
-      query: { id: 'energy-analytics' },
-    },
-    '/products/industries/government-and-public-analytics': {
-      page: '/single-industries',
-      query: { id: 'government-and-public-analytics' },
-    },
-    '/products/industries/insurance': {
-      page: '/single-industries',
-      query: { id: 'insurance' },
-    },
-    '/products/industries/insurance-analytics': {
-      page: '/single-industries',
-      query: { id: 'insurance' },
-    },
-    '/products/industries/journalism': {
-      page: '/single-industries',
-      query: { id: 'journalism' },
-    },
-    '/products/industries/pharma-analytics': {
-      page: '/single-industries',
-      query: { id: 'pharma-analytics' },
-    },
-    '/products/industries/research-and-development-analytics': {
-      page: '/single-industries',
-      query: { id: 'research-and-development-analytics' },
-    },
-    // Customer Stories
-    '/products/enterprise/customer-stories': { page: '/customer-stories' },
-    '/products/on-premise/customer-stories': { page: '/customer-stories' },
-    '/products/enterprise/customer-stories/c12-energy': {
-      page: '/prismic-customer-story-generator',
-      query: { slug: 'c12-energy' },
-    },
-    '/products/on-premise/customer-stories/c12-energy': {
-      page: '/prismic-customer-story-generator',
-      query: { slug: 'c12-energy' },
-    },
-    '/products/enterprise/customer-stories/goji': {
-      page: '/prismic-customer-story-generator',
-      query: { slug: 'goji' },
-    },
-    '/products/on-premise/customer-stories/goji': {
-      page: '/prismic-customer-story-generator',
-      query: { slug: 'goji' },
-    },
   }),
   webpack: (config, { dev }) => {
     config.plugins.push(
