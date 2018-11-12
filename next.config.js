@@ -12,6 +12,8 @@ module.exports = {
         slug: 'home',
       },
     },
+    
+    // Preview needed for Prismic preview flow
     '/preview': {
       page: '/prismic-generator',
       query: {
@@ -19,12 +21,6 @@ module.exports = {
       },
     },
     // Dashboards
-    '/dashboards': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'dashboards-and-reporting',
-      },
-    },
     '/dashboards-and-reports': {
       page: '/prismic-generator',
       query: {
@@ -32,12 +28,6 @@ module.exports = {
       },
     },
     // Falcon
-    '/database-connectors': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'falcon-sql-editor',
-      },
-    },
     '/free-sql-client-download': {
       page: '/prismic-generator',
       query: {
@@ -52,12 +42,6 @@ module.exports = {
       },
     },
     // Slide Decks
-    '/powerpoint-online': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'slide-decks',
-      },
-    },
     '/online-presentation-tool': {
       page: '/prismic-generator',
       query: {
@@ -85,15 +69,6 @@ module.exports = {
         slug: 'plotly-py',
       },
     },
-    // React Component Suite
-    '/products/react': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'plotly-js',
-      },
-    },
-    // Dash
-    '/products/dash': { page: '/products/dash' },
     // Dash Pricing
     '/dash/pricing': {
       page: '/prismic-generator',
@@ -114,16 +89,16 @@ module.exports = {
         slug: 'company-fr',
       },
     },
-    // Pricing - cloud
+    
+    // non-prismic
+    
+    // Products
+    '/products/dash': { page: '/products/dash' },
     '/products/cloud': { page: '/products/cloud' },
-    '/products/cloud/compare': { page: '/products/cloud' },
-    // Pricing - on premises
     '/products/on-premise': { page: '/products/on-premise' },
-    '/products/on-premises': { page: '/products/on-premise' },
-    // Consulting and OEM (Advanced Development)
     '/products/consulting-and-oem': { page: '/products/consulting-and-oem' },
 
-    // Plotly Newsroom
+    // Newsroom
     '/newsroom': { page: '/newsroom' },
     '/newsroom/mitacs': { page: '/newsroom/mitacs' },
     '/newsroom/plotcon': { page: '/newsroom/plotcon' },
