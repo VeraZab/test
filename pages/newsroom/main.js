@@ -36,7 +36,7 @@ const articles = [
     },
   },
   {
-    title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
+    title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
     date: 'Wed, Jan 17, 2018 2:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
@@ -54,7 +54,7 @@ const articles = [
     title: "Plotly and Université de Sherbrooke to develop genomic visualization with innovation funding",
     date: 'Thu, Aug 23, 2018 2:00 PM EST',
     img:
-      'https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif',
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-6164',
     presenter: {
       name: 'Ashley Pace',
       avatar:
@@ -144,7 +144,7 @@ const articles = [
     title: "BetaKit: Plotly raises $5.5 million Series A from Rho Ventures, MHS Capital, Real Ventures, others",
     date: 'Wed, Jun 03, 2015 12:00 PM EST',
     img:
-      'https://marketing.plot.ly/static/marketing/assets/images/dashboards/dashboard.gif',
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
     presenter: {
       name: 'Douglas Soltys',
       avatar:
