@@ -3,6 +3,7 @@ import {
   Hero,
   HeroTop,
   HeroMessaging,
+  HeroSubtitle,
   HeroTitle,
   HeroBottom,
 } from 'components/hero';
@@ -27,7 +28,10 @@ export default () => (
   >
     <HeroTop>
       <HeroMessaging>
-        <HeroTitle>Modern visualization for the data era</HeroTitle>
+        <HeroTitle>Chart Studio Cloud</HeroTitle>
+        <HeroSubtitle className="wider-subtitle">
+        Modern visualization for the data era.
+        </HeroSubtitle>
       </HeroMessaging>
     </HeroTop>
     <HeroBottom style={HeroBottomStyles}>
