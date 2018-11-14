@@ -19,10 +19,8 @@ const readMore = {
 
 const articles = [
   {
-    title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
-    date: 'Mon, Oct 29, 2018 12:00 PM EST',
-    title: "Sight Machine Customer Story",
-    date: 'Wednesday, Oct 17, 2017 1:00 PM EST',
+    title: "User Story: Sight Machine",
+    date: 'Wednesday, Oct 17, 2018 1:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
     presenter: {
