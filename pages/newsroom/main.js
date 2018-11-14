@@ -20,7 +20,7 @@ const readMore = {
 const articles = [
   {
     title: "User Story: Sight Machine",
-    date: 'Wednesday, Oct 17, 2017 1:00 PM EST',
+    date: 'Wednesday, Oct 17, 2018 1:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
     presenter: {
