@@ -112,56 +112,6 @@ export default class Navigation extends React.Component {
             </a>
           </div>
           <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-            {/** Consulting */}
-            <Link href="/products/consulting-and-oem/" prefetch>
-              <a className="navigation-product-item">Consulting</a>
-            </Link>
-
-            {/** Pricing */}
-            <div className="navigation-product-item-with-submenu">
-              <div
-                className="navigation-product-item"
-                onClick={this.togglePricingSubmenu.bind(this)}
-              >
-                Pricing <i className="mdi mdi-chevron-down" />
-              </div>
-              {/** Pricing Submenu */}
-              <div
-                className={
-                  this.state.pricingSubmenuActive
-                    ? 'navigation-product-submenu submenu-active'
-                    : 'navigation-product-submenu'
-                }
-              >
-              <Link
-                  href={{
-                    pathname: '/prismic-generator',
-                    query: { slug: 'dash-services' },
-                  }}
-                  as={'/dash/pricing'}
-                  prefetch
-                >
-                  <a className="navigation-product-submenu-item">
-                    Dash Deployment Server
-                  </a>
-                </Link>
-                <a
-                  className="navigation-product-submenu-item"
-                  href="/products/on-premise"
-                >
-                  Chart Studio Enterprise
-                </a>
-                 <Link href="/products/cloud" prefetch>
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/cloud"
-                  >
-                    Chart Studio Cloud
-                  </a>
-                </Link>
-              </div>
-            </div>
-
             {/** Products */}
             <div className="navigation-product-item-with-submenu">
               <div
@@ -185,26 +135,10 @@ export default class Navigation extends React.Component {
                     Dash
                   </div>
                   {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/dash"
-                  >
-                    Overview
-                  </a>
-                  <Link href="https://www.dashdaq.io/" prefetch>
+                    #1 Python tool for analytic apps
+                  <Link href="https://plot.ly/products/dash/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Dash DAQ
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: { slug: 'dash-services' },
-                    }}
-                    as={'/dash/pricing'}
-                    prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash Deployment Server
+                      Learn More
                     </a>
                   </Link>
                 </div>
@@ -215,48 +149,112 @@ export default class Navigation extends React.Component {
                 <br/>
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Embedded BI/OEM
+                <div className="navigation-product-submenu-section-title">
+                Chart Studio
                   </div>
                   {/** Products Submenu Items */}
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: {
-                        slug: 'chart-studio',
-                      },
-                    }}
-                    as={'/online-chart-maker/'}
-                    prefetch
-                  >
+                  Collaboratively create and publish charts
+                  <Link href="https://plot.ly/online-chart-maker/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Chart Studio
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: { slug: 'dashboards-and-reporting' },
-                    }}
-                    as={'/dashboards'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/dashboards"
-                    >
-                      Dashboards
+                      Learn More
                     </a>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div
-              className="login-button"
-              style={{ paddingLeft: '20px', alignSelf: 'center' }}
-            >
-              <Button data={login} />
+            {/** Pricing */}
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.toggleProductSubmenu.bind(this)}
+              >
+                Pricing <i className="mdi mdi-chevron-down" />
+              </div>
+
+              {/** Products Submenu */}
+              <div
+                className={
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                  <div className="navigation-product-submenu-section-title">
+                    Dash
+                  </div>
+                  {/** Products Submenu Items */}
+                    #1 Python tool for analytic apps
+                  <Link href="#" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Design Kit
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/dash/pricing/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Deployment Server
+                    </a>
+                  </Link>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                <div className="navigation-product-submenu-section-title">
+                Chart Studio
+                  </div>
+                  {/** Products Submenu Items */}
+                  Collaboratively create and publish charts
+                  <Link href="https://plot.ly/products/cloud/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Cloud
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/products/on-premise/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Enterprise
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/** Sign Up */}
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.toggleProductSubmenu.bind(this)}
+              >
+                Sign Up <i className="mdi mdi-chevron-down" />
+              </div>
+
+              {/** Products Submenu */}
+              <div
+                className={
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                {/** Products Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                  {/** Products Submenu Items */}
+                  <Link href="https://community.plot.ly" prefetch>
+                    <a className="navigation-product-submenu-item">
+                    Community Forum
+                    </a>
+                  </Link>
+                  <Link href="https://plot.ly/create/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Chart Studio Cloud
+                    </a>
+                  </Link>
+              </div>
+              </div>
             </div>
           </nav>
         </div>
