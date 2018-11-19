@@ -189,11 +189,14 @@ class Footer extends React.Component {
               </div>
               <div className="footer-main-bottom-section">
                 <div className="footer-main-bottom-links">
-                  <a href="https://plot.ly/terms-of-service/" target="_blank">
+                  <a href="/terms-of-service/" target="_blank">
                     Terms of Service
                   </a>
-                  <a href="https://plot.ly/privacy/" target="_blank">
+                  <a href="/privacy/" target="_blank">
                     Privacy Policy
+                  </a>
+                  <a href="/fr/">
+                    Français
                   </a>
                 </div>
               </div>
