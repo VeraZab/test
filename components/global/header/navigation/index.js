@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './navigation.styles.scss';
 import Link from 'next/link';
-import Button from 'components/prismic/button';
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -10,6 +9,7 @@ export default class Navigation extends React.Component {
       mobileMenu: false,
       productSubmenuActive: false,
       pricingSubmenuActive: false,
+      signUpSubmenuActive: false,
       submenu: '',
     };
   }
@@ -39,6 +39,7 @@ export default class Navigation extends React.Component {
 
   toggleMobileMenu(event) {
     event.preventDefault();
+
     this.setState({
       mobileMenu: !this.state.mobileMenu,
     });
@@ -51,7 +52,6 @@ export default class Navigation extends React.Component {
 
   toggleProductSubmenu(event) {
     event.preventDefault();
-
     if (this.state.productSubmenuActive) {
       this.setState({
         productSubmenuActive: false,
@@ -60,11 +60,29 @@ export default class Navigation extends React.Component {
       this.setState({
         productSubmenuActive: true,
         pricingSubmenuActive: false,
+        signUpSubMenuActive: false
+      });
+    }
+  }
+
+  toggleSignUpSubmenu(event) {
+    event.preventDefault();
+
+    if (this.state.signUpSubmenuActive) {
+      this.setState({
+        signUpSubmenuActive: false,
+      });
+    } else {
+      this.setState({
+        signUpSubmenuActive: true,
+        productSubmenuActive: false,
+        pricingSubmenuActive: false,
       });
     }
   }
 
   togglePricingSubmenu(event) {
+
     event.preventDefault();
     if (this.state.pricingSubmenuActive) {
       this.setState({
@@ -74,6 +92,7 @@ export default class Navigation extends React.Component {
       this.setState({
         pricingSubmenuActive: true,
         productSubmenuActive: false,
+        signUpSubMenuActive: false,
       });
     }
   }
@@ -91,14 +110,6 @@ export default class Navigation extends React.Component {
   }
 
   render() {
-    const login = {
-      label: 'Log In',
-      style: 'secondary',
-      link: {
-        target: '_blank',
-        url: '/accounts/login/?action=login',
-      },
-    };
     return (
       <div className="site-header-navigation">
         <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -112,7 +123,8 @@ export default class Navigation extends React.Component {
             </a>
           </div>
           <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-            {/** Products */}
+
+            {/** Products Drop Down Menu */}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
@@ -124,7 +136,7 @@ export default class Navigation extends React.Component {
               {/** Products Submenu */}
               <div
                 className={
-                  this.state.pricingSubmenuActive
+                  this.state.productSubmenuActive
                     ? 'navigation-product-submenu submenu-active'
                     : 'navigation-product-submenu'
                 }
@@ -163,16 +175,16 @@ export default class Navigation extends React.Component {
               </div>
             </div>
 
-            {/** Pricing */}
+            {/** Pricing Drop Down Menu */}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
-                onClick={this.toggleProductSubmenu.bind(this)}
+                onClick={this.togglePricingSubmenu.bind(this)}
               >
                 Pricing <i className="mdi mdi-chevron-down" />
               </div>
 
-              {/** Products Submenu */}
+              {/** Pricing Submenu */}
               <div
                 className={
                   this.state.pricingSubmenuActive
@@ -180,12 +192,12 @@ export default class Navigation extends React.Component {
                     : 'navigation-product-submenu'
                 }
               >
-                {/** Products Submenu Section */}
+                {/** Pricing Submenu Section */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     Dash
                   </div>
-                  {/** Products Submenu Items */}
+                  {/** Pricing Submenu Items */}
                     #1 Python tool for analytic apps
                   <Link href="#" prefetch>
                     <a className="navigation-product-submenu-item">
@@ -203,12 +215,12 @@ export default class Navigation extends React.Component {
                 <br/>
                 <br/>
                 <br/>
-                {/** Products Submenu Section */}
+                {/** Pricing Submenu Section */}
                 <div className="navigation-product-submenu-section">
                 <div className="navigation-product-submenu-section-title">
                 Chart Studio
                   </div>
-                  {/** Products Submenu Items */}
+                  {/** Pricing Submenu Items */}
                   Collaboratively create and publish charts
                   <Link href="https://plot.ly/products/cloud/" prefetch>
                     <a className="navigation-product-submenu-item">
@@ -223,29 +235,29 @@ export default class Navigation extends React.Component {
                 </div>
               </div>
             </div>
-            {/** Sign Up */}
+
+            {/** Sign Up Drop Down Menu*/}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
-                onClick={this.toggleProductSubmenu.bind(this)}
+                onClick={this.toggleSignUpSubmenu.bind(this)}
               >
                 Sign Up <i className="mdi mdi-chevron-down" />
               </div>
-
-              {/** Products Submenu */}
               <div
                 className={
-                  this.state.pricingSubmenuActive
+                  this.state.signUpSubmenuActive
                     ? 'navigation-product-submenu submenu-active'
                     : 'navigation-product-submenu'
                 }
               >
-                {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  {/** Products Submenu Items */}
+              {console.log(this.state.signUpSubmenuActive)}
+              {/** Pricing Submenu Section */}
+              <div className="navigation-product-submenu-section">
+                  {/** Pricing Submenu Items */}
                   <Link href="https://community.plot.ly" prefetch>
                     <a className="navigation-product-submenu-item">
-                    Community Forum
+                      Community Forum
                     </a>
                   </Link>
                   <Link href="https://plot.ly/create/" prefetch>
@@ -253,8 +265,8 @@ export default class Navigation extends React.Component {
                       Chart Studio Cloud
                     </a>
                   </Link>
-              </div>
-              </div>
+                </div>
+            </div>
             </div>
           </nav>
         </div>
