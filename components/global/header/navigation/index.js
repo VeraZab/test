@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './navigation.styles.scss';
 import Link from 'next/link';
-import Button from 'components/prismic/button';
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -10,6 +9,7 @@ export default class Navigation extends React.Component {
       mobileMenu: false,
       productSubmenuActive: false,
       pricingSubmenuActive: false,
+      signUpSubmenuActive: false,
       submenu: '',
     };
   }
@@ -39,6 +39,7 @@ export default class Navigation extends React.Component {
 
   toggleMobileMenu(event) {
     event.preventDefault();
+
     this.setState({
       mobileMenu: !this.state.mobileMenu,
     });
@@ -51,7 +52,6 @@ export default class Navigation extends React.Component {
 
   toggleProductSubmenu(event) {
     event.preventDefault();
-
     if (this.state.productSubmenuActive) {
       this.setState({
         productSubmenuActive: false,
@@ -60,11 +60,29 @@ export default class Navigation extends React.Component {
       this.setState({
         productSubmenuActive: true,
         pricingSubmenuActive: false,
+        signUpSubMenuActive: false
+      });
+    }
+  }
+
+  toggleSignUpSubmenu(event) {
+    event.preventDefault();
+
+    if (this.state.signUpSubmenuActive) {
+      this.setState({
+        signUpSubmenuActive: false,
+      });
+    } else {
+      this.setState({
+        signUpSubmenuActive: true,
+        productSubmenuActive: false,
+        pricingSubmenuActive: false,
       });
     }
   }
 
   togglePricingSubmenu(event) {
+
     event.preventDefault();
     if (this.state.pricingSubmenuActive) {
       this.setState({
@@ -74,6 +92,7 @@ export default class Navigation extends React.Component {
       this.setState({
         pricingSubmenuActive: true,
         productSubmenuActive: false,
+        signUpSubMenuActive: false,
       });
     }
   }
@@ -91,14 +110,6 @@ export default class Navigation extends React.Component {
   }
 
   render() {
-    const login = {
-      label: 'Log In',
-      style: 'secondary',
-      link: {
-        target: '_blank',
-        url: '/accounts/login/?action=login',
-      },
-    };
     return (
       <div className="site-header-navigation">
         <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -112,57 +123,8 @@ export default class Navigation extends React.Component {
             </a>
           </div>
           <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-            {/** Consulting */}
-            <Link href="/products/consulting-and-oem/" prefetch>
-              <a className="navigation-product-item">Consulting</a>
-            </Link>
 
-            {/** Pricing */}
-            <div className="navigation-product-item-with-submenu">
-              <div
-                className="navigation-product-item"
-                onClick={this.togglePricingSubmenu.bind(this)}
-              >
-                Pricing <i className="mdi mdi-chevron-down" />
-              </div>
-              {/** Pricing Submenu */}
-              <div
-                className={
-                  this.state.pricingSubmenuActive
-                    ? 'navigation-product-submenu submenu-active'
-                    : 'navigation-product-submenu'
-                }
-              >
-              <Link
-                  href={{
-                    pathname: '/prismic-generator',
-                    query: { slug: 'dash-services' },
-                  }}
-                  as={'/dash/pricing'}
-                  prefetch
-                >
-                  <a className="navigation-product-submenu-item">
-                    Dash Deployment Server
-                  </a>
-                </Link>
-                <a
-                  className="navigation-product-submenu-item"
-                  href="/products/on-premise"
-                >
-                  Chart Studio Enterprise
-                </a>
-                 <Link href="/products/cloud" prefetch>
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/cloud"
-                  >
-                    Chart Studio Cloud
-                  </a>
-                </Link>
-              </div>
-            </div>
-
-            {/** Products */}
+            {/** Products Drop Down Menu */}
             <div className="navigation-product-item-with-submenu">
               <div
                 className="navigation-product-item"
@@ -174,7 +136,7 @@ export default class Navigation extends React.Component {
               {/** Products Submenu */}
               <div
                 className={
-                  this.state.pricingSubmenuActive
+                  this.state.productSubmenuActive
                     ? 'navigation-product-submenu submenu-active'
                     : 'navigation-product-submenu'
                 }
@@ -185,78 +147,110 @@ export default class Navigation extends React.Component {
                     Dash
                   </div>
                   {/** Products Submenu Items */}
-                  <a
-                    className="navigation-product-submenu-item"
-                    href="/products/dash"
-                  >
-                    Overview
-                  </a>
-                  <Link href="https://www.dashdaq.io/" prefetch>
+                  <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
+                  <Link href="/products/dash/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Dash DAQ
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: { slug: 'dash-services' },
-                    }}
-                    as={'/dash/pricing'}
-                    prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Dash Deployment Server
+                      &raquo; Learn More
                     </a>
                   </Link>
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Embedded BI/OEM
+                <div className="navigation-product-submenu-section-title">
+                Chart Studio
                   </div>
                   {/** Products Submenu Items */}
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: {
-                        slug: 'chart-studio',
-                      },
-                    }}
-                    as={'/online-chart-maker/'}
-                    prefetch
-                  >
+                  <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
+                  <Link href="/online-chart-maker/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Chart Studio
-                    </a>
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: '/prismic-generator',
-                      query: { slug: 'dashboards-and-reporting' },
-                    }}
-                    as={'/dashboards'}
-                    prefetch
-                  >
-                    <a
-                      className="navigation-product-submenu-item"
-                      href="/dashboards"
-                    >
-                      Dashboards
+                    &raquo; Learn More
                     </a>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div
-              className="login-button"
-              style={{ paddingLeft: '20px', alignSelf: 'center' }}
-            >
-              <Button data={login} />
+            {/** Pricing Drop Down Menu */}
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.togglePricingSubmenu.bind(this)}
+              >
+                Pricing <i className="mdi mdi-chevron-down" />
+              </div>
+
+              {/** Pricing Submenu */}
+              <div
+                className={
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                {/** Pricing Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                  <div className="navigation-product-submenu-section-title">
+                    Dash
+                  </div>
+                  {/** Pricing Submenu Items */}
+                  <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
+                  <Link href="/dash/pricing/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      &raquo; Deployment Server
+                    </a>
+                  </Link>
+                </div>
+                {/** Pricing Submenu Section */}
+                <div className="navigation-product-submenu-section">
+                <div className="navigation-product-submenu-section-title">
+                Chart Studio
+                  </div>
+                  {/** Pricing Submenu Items */}
+                  <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
+                  <Link href="/products/on-premise/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                    &raquo; Enterprise
+                    </a>
+                  </Link>
+                  <Link href="/products/cloud/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                    &raquo; Cloud
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/** Sign Up Drop Down Menu*/}
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.toggleSignUpSubmenu.bind(this)}
+              >
+                Sign Up <i className="mdi mdi-chevron-down" />
+              </div>
+              <div
+                className={
+                  this.state.signUpSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+              {/** Pricing Submenu Section */}
+              <div className="navigation-product-submenu-section">
+                  {/** Pricing Submenu Items */}
+                  <Link href="https://community.plot.ly" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Community Forum
+                    </a>
+                  </Link>
+                  <Link href="/Auth/login/?action=signup#/" prefetch>
+                    <a className="navigation-product-submenu-item">
+                      Chart Studio Cloud
+                    </a>
+                  </Link>
+                </div>
+            </div>
             </div>
           </nav>
         </div>
