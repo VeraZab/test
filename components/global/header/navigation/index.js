@@ -147,9 +147,10 @@ export default class Navigation extends React.Component {
                     Dash
                   </div>
                   {/** Products Submenu Items */}
-                  <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>                  <Link href="https://plot.ly/products/dash/" prefetch>
+                  <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
+                  <Link href="/products/dash/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Learn More
+                      &raquo; Learn More
                     </a>
                   </Link>
                 </div>
@@ -160,9 +161,9 @@ export default class Navigation extends React.Component {
                   </div>
                   {/** Products Submenu Items */}
                   <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
-                  <Link href="https://plot.ly/online-chart-maker/" prefetch>
+                  <Link href="/online-chart-maker/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Learn More
+                    &raquo; Learn More
                     </a>
                   </Link>
                 </div>
@@ -193,14 +194,9 @@ export default class Navigation extends React.Component {
                   </div>
                   {/** Pricing Submenu Items */}
                   <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
-                  <Link href="#" prefetch>
+                  <Link href="/dash/pricing/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Design Kit
-                    </a>
-                  </Link>
-                  <Link href="https://plot.ly/dash/pricing/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Deployment Server
+                      &raquo; Deployment Server
                     </a>
                   </Link>
                 </div>
@@ -211,14 +207,14 @@ export default class Navigation extends React.Component {
                   </div>
                   {/** Pricing Submenu Items */}
                   <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
-                  <Link href="https://plot.ly/products/cloud/" prefetch>
+                  <Link href="/products/on-premise/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Cloud
+                    &raquo; Enterprise
                     </a>
                   </Link>
-                  <Link href="https://plot.ly/products/on-premise/" prefetch>
+                  <Link href="/products/cloud/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      Enterprise
+                    &raquo; Cloud
                     </a>
                   </Link>
                 </div>
@@ -248,7 +244,7 @@ export default class Navigation extends React.Component {
                       Community Forum
                     </a>
                   </Link>
-                  <Link href="https://plot.ly/create/" prefetch>
+                  <Link href="/Auth/login/?action=signup#/" prefetch>
                     <a className="navigation-product-submenu-item">
                       Chart Studio Cloud
                     </a>
