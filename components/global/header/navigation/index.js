@@ -150,7 +150,7 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
                   <Link href="/products/dash/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      &raquo; Learn More
+                    &#10145; Learn More
                     </a>
                   </Link>
                 </div>
@@ -163,7 +163,7 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
                   <Link href="/online-chart-maker/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    &raquo; Learn More
+                    &#10145; Learn More
                     </a>
                   </Link>
                 </div>
@@ -196,7 +196,7 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-item"> #1 Python tool <br/> for analytic apps</div>
                   <Link href="/dash/pricing/" prefetch>
                     <a className="navigation-product-submenu-item">
-                      &raquo; Deployment Server
+                      &#10145; Deployment Server
                     </a>
                   </Link>
                 </div>
@@ -209,12 +209,12 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-item">Collaboratively create <br/> and publish charts</div>
                   <Link href="/products/on-premise/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    &raquo; Enterprise
+                    &#10145; Enterprise
                     </a>
                   </Link>
                   <Link href="/products/cloud/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    &raquo; Cloud
+                    &#10145; Cloud
                     </a>
                   </Link>
                 </div>
