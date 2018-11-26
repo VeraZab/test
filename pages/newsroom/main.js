@@ -20,7 +20,7 @@ const readMore = {
 const articles = [
   {
     title: "User Story: Sight Machine",
-    date: 'Wednesday, Oct 17, 2018 1:00 PM EST',
+    date: 'Wednesday, Nov 14, 2018 1:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
     presenter: {
@@ -35,7 +35,7 @@ const articles = [
   },
   {
     title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
-    date: 'Wed, Jan 17, 2018 2:00 PM EST',
+    date: 'Wed, Oct 29, 2018 2:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
