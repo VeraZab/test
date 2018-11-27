@@ -19,6 +19,21 @@ const readMore = {
 
 const articles = [
   {
+    title: "MIT researcher creates Dash machine learning tool, study published in Nature",
+    date: 'Monday, Nov 26, 2018 11:23 PM EST',
+    img:
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/indelphi',
+    },
+  },
+  {
     title: "User Story: Sight Machine",
     date: 'Wednesday, Nov 14, 2018 1:00 PM EST',
     img:

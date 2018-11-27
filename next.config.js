@@ -12,7 +12,7 @@ module.exports = {
         slug: 'home',
       },
     },
-    
+
     // Preview needed for Prismic preview flow
     '/preview': {
       page: '/prismic-generator',
@@ -89,9 +89,9 @@ module.exports = {
         slug: 'company-fr',
       },
     },
-    
+
     // non-prismic
-    
+
     // Products
     '/products/dash': { page: '/products/dash' },
     '/products/cloud': { page: '/products/cloud' },
@@ -106,6 +106,12 @@ module.exports = {
       page: '/prismic-generator',
       query: {
         slug: 'sight-machine',
+      },
+    },
+    '/newsroom/indelphi': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'indelphi-dash-app',
       },
     },
 
