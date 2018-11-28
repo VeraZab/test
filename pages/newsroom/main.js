@@ -34,6 +34,21 @@ const articles = [
     },
   },
   {
+    title: "Dash for Good: South African research team liberates decades of data to power communities",
+    date: 'Wednesday, Nov 21, 2018 3:44 AM EST',
+    img:
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-6164',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/erc',
+    },
+  },
+  {
     title: "User Story: Sight Machine",
     date: 'Wednesday, Nov 14, 2018 1:00 PM EST',
     img:
