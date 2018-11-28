@@ -103,6 +103,7 @@ module.exports = {
     '/newsroom/mitacs': { page: '/newsroom/mitacs' },
     '/newsroom/plotcon': { page: '/newsroom/plotcon' },
 
+    
     '/newsroom/sight-machine': {
       page: '/prismic-generator',
       query: {
