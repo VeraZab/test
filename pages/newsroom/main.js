@@ -19,8 +19,38 @@ const readMore = {
 
 const articles = [
   {
+    title: "MIT researcher creates Dash machine learning tool, study published in Nature",
+    date: 'Monday, Nov 26, 2018 11:23 PM EST',
+    img:
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/indelphi',
+    },
+  },
+  {
+    title: "Dash for Good: South African research team liberates decades of data to power communities",
+    date: 'Wednesday, Nov 21, 2018 3:44 AM EST',
+    img:
+    'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-6164',
+    presenter: {
+      name: 'Ashley Pace',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: '/newsroom/erc',
+    },
+  },
+  {
     title: "User Story: Sight Machine",
-    date: 'Wednesday, Oct 17, 2018 1:00 PM EST',
+    date: 'Wednesday, Nov 14, 2018 1:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-7133',
     presenter: {
@@ -35,7 +65,7 @@ const articles = [
   },
   {
     title: "Microsoft Faculty Connection: Data Science in Visual Studio Code using Neuron, a new VS Code extension",
-    date: 'Wed, Jan 17, 2018 2:00 PM EST',
+    date: 'Wed, Oct 29, 2018 2:00 PM EST',
     img:
       'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-725?w=800',
     presenter: {
