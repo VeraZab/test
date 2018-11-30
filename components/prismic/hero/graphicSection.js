@@ -85,6 +85,8 @@ export default class HeroGraphicSection extends React.Component {
       return null
     }
 
+    let hero_animation = <video height="550" id="sampleMovie" src="static/hero.mp4" loop="true" autoplay="autoplay" muted="true"></video>;
+
     if (data.hero_graphic_style === 'browser') {
       graphic = (
         <Browser>
@@ -93,6 +95,8 @@ export default class HeroGraphicSection extends React.Component {
       )
     } else if (data.hero_graphic_style === 'no-blur') {
       graphic = <Image noBlur data={data.hero_graphic} />
+    } else if (data.title == 'Modern Analytics Apps for the Enterprise'){
+      graphic = hero_animation;
     } else {
       graphic = <Image data={data.hero_graphic} />
     }
