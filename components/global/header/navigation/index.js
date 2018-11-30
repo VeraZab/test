@@ -200,7 +200,7 @@ export default class Navigation extends React.Component {
                     Dash
                   </div>
                   {/** Pricing Submenu Items */}
-                  <Link href="/products/dash/" prefetch>
+                  <Link href="/dash/pricing/" prefetch>
                     <a className="navigation-product-submenu-item">
                     #1 Python tool <br/> for analytic apps
                     </a>
@@ -217,7 +217,7 @@ export default class Navigation extends React.Component {
                 Chart Studio
                   </div>
                   {/** Pricing Submenu Items */}
-                  <Link href="/online-chart-maker/" prefetch>
+                  <Link href="/products/on-premise/" prefetch>
                     <a className="navigation-product-submenu-item">
                     Collaboratively create <br/> and publish charts</a>
                   </Link>
