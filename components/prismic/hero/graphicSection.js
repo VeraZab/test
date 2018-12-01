@@ -85,7 +85,9 @@ export default class HeroGraphicSection extends React.Component {
       return null
     }
 
-    let hero_animation = <video height="550" id="sampleMovie" src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4" loop="true" autoplay="autoplay" muted="true"></video>;
+    let hero_animation = <video id="sampleMovie" style={{width: "80%", float: "right", marginRight: "50px"}}
+      src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4" 
+        loop="true" autoplay="autoplay" muted="true"></video>;
 
     if (data.hero_graphic_style === 'browser') {
       graphic = (
