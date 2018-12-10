@@ -36,11 +36,11 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 18px;
   line-height: 36px;
-  max-width: 460px;
+  max-width: 900px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   color: rgba(81, 103, 131, 1);

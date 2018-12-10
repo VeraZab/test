@@ -17,11 +17,14 @@ const shortid = require('shortid');
 
 import ContentSection from 'components/prismic/content-section';
 import LogosSlice from 'components/prismic/slices/logos';
+import ArchitectureSection from 'components/prismic/slices/architecture';
+import PricingCardsSection from 'components/prismic/pricing-cards-section';
+
 import TabsSlice from './tabs';
-import { Jobs } from './jobs';
+import {Jobs} from './jobs';
 import Quotes from './quotes';
 
-import { ImageSectionSlice } from './image-section';
+import {ImageSectionSlice} from './image-section';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -31,7 +34,7 @@ export default class Slices extends React.Component {
   componentDidMount() {}
 
   render() {
-    let { data } = this.props;
+    let {data} = this.props;
     return (
       <div className="slices">
         <div className="slices-wrapper">
@@ -43,7 +46,6 @@ export default class Slices extends React.Component {
               slice.slice_type === 'cs-advanced-cards' ||
               slice.slice_type === 'cs-iframe' ||
               slice.slice_type === 'cs-code-explorer' ||
-              slice.slice_type === 'cs-pricing' ||
               slice.slice_type === 'cs-github-stars'
             ) {
               return <ContentSection key={i} data={slice} />;
@@ -55,10 +57,13 @@ export default class Slices extends React.Component {
               return <Jobs {...slice} key={i} />;
             } else if (slice.slice_type === 'image') {
               return <ImageSectionSlice {...slice} key={i} />;
+            } else if (slice.slice_type === 'cs-architecture') {
+              return <ArchitectureSection key={i} data={slice} />;
             } else if (slice.slice_type === 'quotes_logos') {
               return <Quotes key={i} data={slice} />;
-            }
-              else return;
+            } else if (slice.slice_type === 'cs-pricing') {
+              return <PricingCardsSection key={i} data={slice} />;
+            } else return;
           })}
         </div>
       </div>

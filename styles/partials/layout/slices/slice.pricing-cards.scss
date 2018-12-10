@@ -1,161 +1,230 @@
-.content-section-p {
-  &.cs-pricing {
-    padding-bottom: $unit*8;
-    .content-section-p-wrapper {
-      min-height: 200px;
-      .content-section-p-area {
-        padding-top: $unit*8 !important;
-      }
-    }
-  }
-}
-
-.pricing__cards {
-  $c: &;
-  width: 100%;
-  position: relative;
-  z-index: 5;
+.pricing__cards__container {
   display: flex;
-  margin-top: $unit*5;
-  @include media('<=800px') {
-    margin-top: 0;
-  }
-  #{$c}__wrapper {
-    flex-grow: 1;
-    //display: flex;
-    padding: $unit*2;
-    @include global-wrapper;
-    //justify-content: center;
-    padding-left: $unit*4;
-    padding-right: $unit*4;
-    //display: grid;
-    //grid-column-gap: $unit*2;
-    //grid-row-gap: $unit*2;
-    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    display: flex;
-    flex-wrap: wrap;
-    @include media('<=800px') {
-      padding-left: $unit*2;
-      padding-right: $unit*2;
-    }
-  }
+  flex-direction: column;
 }
 
 .pricing__card {
-  --header-bg: $color-rhino-core;
-  $c: &;
-  flex-grow: 1;
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
+  padding-bottom: 50px;
+  padding-top: 15px;
+}
 
-  &:not(:first-child) {
-    padding-left: $unit*2;
-    @include media('<=1385px') {
-      &:nth-of-type(odd) {
-        padding-left: 0;
-      }
-    }
-    @include media('<=800px') {
-      padding-left: 0;
+.pricing__card__features__wrapper {
+  font-family: sans-serif;
+  font-weight: 400;
+  max-width: 400px;
+  text-align: left;
+  align-content: left;
+  justify-content: left;
+  justify-items: left;
+  @include tablet {
+    text-align: center !important;
+  }
+}
+
+.pricing__card__feature {
+  &:not(:last-child) {
+    border-bottom: 2px solid $color-rhino-light-2;
+  }
+}
+
+.pricing__card__addons {
+  background: #f1f4f9;
+  -ms-flex-align: stretch;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 40px 80px 40px;
+  position: relative;
+  z-index: 15;
+  width: 100% !important;
+  align-content: flex-start;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.header__price {
+  display: flex;
+  justify-content: center;
+  padding: $unit * 2 0;
+  h2 {
+    font-size: 42px;
+  }
+  .price {
+    &__symbol {
+      color: $color-rhino-medium-1;
     }
   }
+}
 
-  @include media('<=1385px') {
-    //grid-template-columns: repeat(auto-fill, minmax(33%, 2fr));
-    width: 50% !important;
-    margin-bottom: $unit*2;
+.frequency {
+  background: white;
+  display: flex;
+  font-size: 0.6rem;
+  padding-bottom: 10px;
+  justify-content: center;
+  h2 {
+    color: $color-rhino-dark;
+    text-transform: uppercase;
   }
-  @include media('<=800px') {
-    width: 100% !important;
+}
+
+.addon_label {
+  color: $color-rhino-core;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 18px;
+  @include media('<=450px') {
+    margin-bottom: 40px;
+  }
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  height: 30px;
+}
+
+.addon_label::before {
+  color: #fff;
+  background: $color-emerald;
+  border-radius: 100%;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+  content: '+';
+  display: block;
+  font-size: 24px;
+  line-height: 40px !important;
+  height: 40px;
+  left: -80px;
+  position: absolute;
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40px;
+}
+
+.pricing__card__title {
+  background: white;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  font-size: 1.7rem;
+  @include media('<=500px') {
+    margin-bottom: 40px;
+  }
+  @include tablet {
+    text-align: center !important;
+  }
+  h2 {
+    color: $color-rhino-core;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.1;
+    width: auto;
+  }
+}
+
+.pricing__card__title:after {
+  content: '';
+  border-bottom: 6px solid $color-rhino-core;
+  width: 480px; /* Change this to whatever width you want. */
+  display: block;
+  padding-bottom: 10px;
+  @include tablet {
+    width: 90%; /* Change this to whatever width you want. */
+  }
+}
+
+.addon_title {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  line-height: 1.333;
+  color: $color-rhino-dark;
+  @include tablet {
+    text-align: center !important;
+  }
+}
+
+.addon_title::after {
+  content: '';
+  border-bottom: 3px solid $color-dodger;
+  width: 100%; /* Change this to whatever width you want. */
+  display: block;
+  padding-top: 10px;
+}
+
+.addon_price {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #506784;
+  text-decoration: bold;
+  @include tablet {
+    text-align: center !important;
+  }
+}
+
+.addon_description {
+  width: 250px;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  font-family: sans-serif;
+  @include tablet {
+    text-align: center !important;
+    padding-right: 109px;
+  }
+}
+
+.addon_url {
+  color: $color-aqua-shade;
+  text-decoration: underline !important;
+  @include tablet {
+    text-align: center !important;
+  }
+}
+
+.addon {
+  padding-right: 60px;
+  margin-top: 70px;
+  margin-left: 60px;
+  @include tablet {
+    margin-left: 0px;
+  }
+}
+
+.pricing__card__header__actions {
+  justify-content: center;
+}
+
+.pricing__card__header {
+  @include tablet {
+    max-width: 400px;
+  }
+}
+
+.pricing__card__left {
+  width: 350px;
+  @include tablet {
+    text-align: center !important;
+  }
+}
+
+.pre-title {
+  @include tablet {
   }
 
-  &--emerald {
-
-    .pricing__card__header__title{
-      background: $color-emerald;
-    }
-
-    @include media('>1385px') {
-      transform: translateY(-20px);
+  .pre-title {
+    @include handheld {
+      text-align: center !important;
+      margin-left: 250px;
     }
   }
+}
 
-  &--has-pretitle {
-    @include media('<=1385px') {
-      margin-top: $unit*2;
-    }
-  }
-
-  #{$c}__wrapper {
-    box-shadow: $drop-shadow-l-light;
-    border-radius: 8px;
-    background: white;
-    position: relative;
-  }
-
-  #{$c}__header {
-    position: relative;
-
-    &__pretitle {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: -30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0.75;
-      h3 {
-        font-size: 16px !important;
-        text-align: center !important;
-      }
-    }
-
-    &__title {
-      background: $color-rhino-core;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $unit;
-      border-top-right-radius: 8px;
-      border-top-left-radius: 8px;
-      h2 {
-        color: white;
-      }
-    }
-    &__price {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $unit*4 $unit*2;
-      h2 {
-        font-size: 42px;
-      }
-      .price {
-        &__symbol {
-          color: $color-rhino-medium-1;
-        }
-      }
-    }
-
-    &__actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 $unit*2;
-      padding-bottom: $unit*2;
-    }
-  }
-
-  #{$c}__features {
-    border-top: 1px solid $color-rhino-light-2;
-    padding-bottom: 1px;
-  }
-
-  #{$c}__feature {
-    text-align: center;
-    padding: 0 $unit*2;
-    &:not(:last-child) {
-      border-bottom: 1px solid $color-rhino-light-2;
-    }
+.architecture-section {
+  @include handheld {
+    text-align: center !important;
   }
 }

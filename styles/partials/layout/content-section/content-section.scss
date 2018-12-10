@@ -1,8 +1,6 @@
 .content-section-p {
   $c: &;
-
   overflow: hidden;
-
   &.no-graphic {
     #{$c}-area {
       //padding-top: 0;
