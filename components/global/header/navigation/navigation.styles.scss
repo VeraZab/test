@@ -26,21 +26,22 @@
   &-submenu {
     @include trans;
     @include media(">800px") {
-      box-shadow: $drop-shadow-l-light;
-      border-radius: 8px;
+      box-shadow: 3px 3px 14px #000a;
+      border-radius: 0px;
       position: absolute;
       top: calc(100% - 20px);
       right: 0px;
       background: #283752;
-      padding: $unit*2;
+      padding: $unit $unit*2;
       pointer-events: none;
       opacity: 0;
       transform: translateY(20px);
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-start;
+      line-height: 1.6;
       a {
-        font-size: 16px;
+        font-size: 12px;
       }
 
       $point-size: 15px;
@@ -78,7 +79,7 @@
           padding-bottom: $unit/2;
           opacity: 0.5;
           width: 100%;
-          color: #95A2B6;
+          color: #A2B1C6;
         }
       }
       &-item {
@@ -89,17 +90,13 @@
         text-decoration: none !important;
         background-image: none !important;
         font-weight: 400 !important;
-        font-size: 18px;
+        font-size: 12px;
         padding-top: 5px;
         &:not(:last-of-type) {
           padding-bottom: $unit/2;
         }
       }
-
     }
   }
 }
 
-a:hover{
-  color: #09ffff;
-}
