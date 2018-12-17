@@ -139,6 +139,21 @@ const articles = [
     },
   },
   {
+    title: "S&P Global: RatingsDirect® Launches New Data Visualization Feature",
+    date: 'Tue, Aug 01, 2017 12:00 AM EST',
+    img:
+      'https://crowdcast-prod.imgix.net/-KeordaLkGx83O8xLUFe/event-cover-9924?w=800',
+    presenter: {
+      name: 'Business Wire',
+      avatar:
+        'https://s3.amazonaws.com/cc-user-media-prod/-KeordaLkGx83O8xLUFe%2F1503955015814-charley+ferrari.jfif',
+    },
+    action: {
+      ...readMore,
+      link: 'https://www.spglobal.com/marketintelligence/en/media-center/press-release/ratingsdirect-launches-new-data-visualization-feature',
+    },
+  },
+  {
     title: "PLOTLY announces 2nd Annual Data Visualization Conference PLOTCON 2017",
     date: 'Tue, Apr 04, 2017 2:00 PM EST',
     img:
