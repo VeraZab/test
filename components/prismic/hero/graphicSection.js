@@ -86,8 +86,8 @@ export default class HeroGraphicSection extends React.Component {
     }
 
     let hero_animation = <video id="sampleMovie" style={{width: "80%", float: "right", marginRight: "50px"}}
-      src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4" 
-        loop="true" autoplay="autoplay" muted="true"></video>;
+      src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4"
+        loop={true} autoPlay="autoplay" muted={true}></video>;
 
     if (data.hero_graphic_style === 'browser') {
       graphic = (
@@ -97,7 +97,7 @@ export default class HeroGraphicSection extends React.Component {
       )
     } else if (data.hero_graphic_style === 'no-blur') {
       graphic = <Image noBlur data={data.hero_graphic} />
-    } else if (data.title == 'Modern Analytics Apps for the Enterprise'){
+    } else if (data.title === 'Modern Analytics Apps for the Enterprise'){
       graphic = hero_animation;
     } else {
       graphic = <Image data={data.hero_graphic} />
