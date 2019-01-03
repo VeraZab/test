@@ -63,9 +63,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: $unit*4;
-  padding-top: $unit*2;
+  padding-bottom: $unit * 4;
+  padding-top: $unit * 2;
   & ~ .content-section-p-area {
-    padding-top: $unit*4 !important;
+    padding-top: $unit * 4 !important;
   }
 }

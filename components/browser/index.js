@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './browser.styles.scss'
 
 export class Browser extends React.Component {
   constructor(props) {
@@ -11,7 +10,6 @@ export class Browser extends React.Component {
       <div className="browser">
         <div className="browser-wrapper">
           <div className={'browser-header ' + this.props.className}>
-            <style dangerouslySetInnerHTML={{ __html: styles }} />
             <div className="browser-header-wrapper">
               <div className="browser-header-buttons">
                 <div className="browser-header-button" />
