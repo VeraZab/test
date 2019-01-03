@@ -5,7 +5,7 @@
 
   &.no-graphic {
     #{$c}-area {
-      padding-top: 0;
+      //padding-top: 0;
       padding-bottom: 0;
     }
   }
@@ -17,7 +17,7 @@
     $tb-spacing: $unit * 4;
 
     #{$c}-area {
-      padding-top: $tb-spacing;
+      padding-top: 0.5 * $tb-spacing;
       padding-bottom: $tb-spacing;
     }
     min-height: 60vh;
@@ -28,7 +28,7 @@
       min-height: 740px;
       $tb-spacing: $unit * 10;
       #{$c}-area {
-        padding-top: $tb-spacing;
+        padding-top: 0.5 * $tb-spacing;
         padding-bottom: $tb-spacing;
       }
     }
@@ -51,6 +51,8 @@
     padding-top: $unit * 2;
   }
 }
+
+
 
 @import 'content-section.column';
 @import 'content-section.row';
