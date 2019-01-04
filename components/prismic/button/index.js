@@ -30,8 +30,6 @@ export default class Button extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     let { data } = this.props;
 

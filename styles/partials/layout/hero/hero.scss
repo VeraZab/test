@@ -8,7 +8,7 @@
   $c: &;
   display: flex;
   padding-top: 72px;
-  min-height: 700px;
+  min-height: 550px;
   flex-wrap: wrap;
   overflow: hidden;
   position: relative;
@@ -29,14 +29,14 @@
     }
   }
 
-  &__messaging__body{
+  &__messaging__body {
     width: 100%;
     max-width: 100%;
   }
 
   &-graphic-section {
     @include media('<=800px') {
-      padding-bottom: $unit*4;
+      padding-bottom: $unit * 4;
     }
   }
 
@@ -51,16 +51,15 @@
    */
   &-details-section,
   &-bottom {
-    padding-left: $unit*2;
-    padding-right: $unit*2;
-
+    padding-left: $unit * 2;
+    padding-right: $unit * 2;
   }
   /**
    * Top specific styles
    */
   &-details-section {
     flex-grow: 1;
-    padding-top: $gutter*4;
+    padding-top: $gutter * 4;
 
     pre {
       background: rgba($color-rhino-core, 0.75);
@@ -95,7 +94,6 @@
     width: 100%;
     z-index: 1;
     position: absolute;
-
   }
 
   &:not(.no-fade) {
@@ -134,7 +132,7 @@
       font-weight: 300;
       padding-bottom: 0;
       margin-bottom: 0;
-      & + P {
+      & + p {
         margin-top: $unit;
         padding-top: 0;
         padding-bottom: 0;
@@ -185,7 +183,7 @@
     color: $color-rhino-medium-1;
     margin-top: $gutter;
     @include handheld {
-      margin-top: $gutter*2;
+      margin-top: $gutter * 2;
     }
     a {
       color: currentColor;
@@ -266,13 +264,13 @@
 .hero-prismic-graphic-two-items {
   position: relative;
   padding-top: 0;
-  padding-bottom: $unit*8;
+  padding-bottom: $unit * 8;
   .hero-prismic-graphic-item {
     &:first-of-type {
       position: absolute;
       z-index: 5;
       width: 100%;
-      bottom: $unit*6;
+      bottom: $unit * 6;
       left: 0;
       @include media('<=800px') {
         bottom: 0;
@@ -280,20 +278,19 @@
     }
     &:nth-of-type(2) {
       max-width: 85%;
-      transform: translateX($unit*15) translateY(-$unit*4);
+      transform: translateX($unit * 15) translateY(-$unit * 4);
       @include media('<=800px') {
-        transform: translateX($unit*15) translateY($unit*4);
+        transform: translateX($unit * 15) translateY($unit * 4);
       }
     }
   }
-
 }
 
 .hero-prismic-graphic-many-items {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-top:$unit;
+  padding-top: $unit;
   .hero-prismic-graphic-item {
     width: 50%;
     max-width: 50%;
@@ -323,14 +320,13 @@
     //  }
     //}
   }
-
 }
 
-@import "hero.column";
-@import "hero.row";
-@import "hero.styles";
-@import "hero.typography";
-@import "hero.slices";
+@import 'hero.column';
+@import 'hero.row';
+@import 'hero.styles';
+@import 'hero.typography';
+@import 'hero.slices';
 
 .page--home {
   .hero-prismic-graphic-section {
@@ -343,7 +339,8 @@
 .hero-prismic {
   $c: &;
 
-  #{$c}__messaging__body, #{$c}-actions {
+  #{$c}__messaging__body,
+  #{$c}-actions {
     //will-change: opacity, transition;
     //@include animationFadeAndSlideInFromBottom-sm;
     //animation-duration: 2s;

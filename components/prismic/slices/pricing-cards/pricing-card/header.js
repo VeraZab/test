@@ -20,13 +20,13 @@ class PricingCardHeader extends React.Component {
     } = this.context;
 
     const Frequency = frequency && (
-      <div className="frequency">
+      <div className="pricing__card__header__frequency">
         <h2>{frequency}</h2>
       </div>
     );
 
     const Price = price && (
-      <div className="header__price">
+      <div className="pricing__card__header__price">
         <h2 className="price">
           <span className="price__symbol">$</span>
           {numberWithCommas(
@@ -50,11 +50,9 @@ class PricingCardHeader extends React.Component {
 
     return (
       <div className="pricing__card__header">
-        <div className="pricing__card__header__wrapper">
-          {Price}
-          {Frequency}
-          {Buttons}
-        </div>
+        {Price}
+        {Frequency}
+        {Buttons}
       </div>
     );
   }

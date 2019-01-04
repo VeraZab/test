@@ -10,8 +10,6 @@ export default class Image extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     let { data } = this.props;
 

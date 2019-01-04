@@ -8,35 +8,25 @@ class PricingCardFeatures extends React.Component {
     const features = this.props;
 
     const Features = (
-      <div key={shortid.generate()} className="pricing__card__feature">
-        <div className="pricing__card__feature pricing__card__feature__value">
+      <>
+        <div className="pricing__card__feature">
           {renderPrismic(features.data.content.feature1)}
         </div>
-        <div className="pricing__card__feature pricing__card__feature__value">
+        <div className="pricing__card__feature">
           {renderPrismic(features.data.content.feature2)}
         </div>
-        <div className="pricing__card__feature pricing__card__feature__value">
+        <div className="pricing__card__feature">
           {renderPrismic(features.data.content.feature31)}
         </div>
-        <div className="pricing__card__feature pricing__card__feature__value">
+        <div className="pricing__card__feature">
           {renderPrismic(features.data.content.feature4)}
         </div>
-        <div className="pricing__card__feature pricing__card__feature__value">
+        <div className="pricing__card__feature">
           {renderPrismic(features.data.content.feature51)}
         </div>
-        {Boolean(features.data.content.feature6.text) && (
-          <div className="pricing__card__feature pricing__card__feature__value">
-            {renderPrismic(features.data.content.feature6)}
-          </div>
-        )}
-      </div>
+      </>
     );
-
-    return (
-      <div className="pricing__card__features">
-        <div className="pricing__card__features__wrapper">{Features}</div>
-      </div>
-    );
+    return <div className="pricing__card__features">{Features}</div>;
   }
 }
 

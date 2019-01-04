@@ -27,8 +27,6 @@ export default class ContentSection extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     /** Destructure props */
     const {

@@ -6,8 +6,6 @@ class ArchitectureSection extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     return (
       <>

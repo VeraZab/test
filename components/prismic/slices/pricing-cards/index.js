@@ -36,8 +36,6 @@ class PricingCardsContainer extends React.Component {
     }
   }
 
-  componentDidMount() {}
-
   render() {
     const {cards} = this.props;
     if (!cards) {
@@ -81,7 +79,9 @@ class PricingCardsContainer extends React.Component {
                 : cards[0].primary.on_premise_copy[0].text}
             </H2>
           </HeadingContainer>
-          <div className="content-section-wrapper hidden pricing__cards__container">{Cards}</div>
+          <div className="content-section-wrapper hidden pricing__cards__content-section">
+            {Cards}
+          </div>
         </SwitchContainer>
       </>
     );

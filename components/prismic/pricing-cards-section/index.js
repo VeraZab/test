@@ -14,12 +14,7 @@ export default class PricingCardsSection extends React.Component {
 
   render() {
     /** Destructure props */
-    const {
-      data,
-      data: {primary, items, slice_type},
-      className,
-    } = this.props;
-
-    return items && <PricingCardContainer cards={data.pricing_cards} />;
+    const {data: {linked_items}} = this.props;
+    return <PricingCardContainer cards={linked_items[0].pricing_cards.data.body} />;
   }
 }

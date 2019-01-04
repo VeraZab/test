@@ -9,8 +9,6 @@ class PricingCard extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   getChildContext() {
     const {
       card: {primary: content, items: features},
@@ -28,8 +26,8 @@ class PricingCard extends React.Component {
         <div className="pricing__card__title">
           <h2 className="title">{this.getChildContext().content.title}</h2>
         </div>
-        <div className="pricing__card">
-          <div className="pricing__card__left">
+        <div className="pricing__card__wrapper">
+          <div className="pricing__card__header__and__features__section">
             <PricingCardHeader pricingMode={this.props.pricingMode} />
             <PricingCardFeatures data={this.getChildContext()} />
           </div>
