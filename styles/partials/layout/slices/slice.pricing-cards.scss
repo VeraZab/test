@@ -33,7 +33,7 @@
     .pricing__card__header__and__features__section {
       width: 75vw;
       @include tablet {
-        width: 90vw;
+        width: calc(100% - 5px);
       }
       .pricing__card__header {
         .pricing__card__header__price {
