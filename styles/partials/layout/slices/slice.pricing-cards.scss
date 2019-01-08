@@ -1,161 +1,184 @@
-.content-section-p {
-  &.cs-pricing {
-    padding-bottom: $unit*8;
-    .content-section-p-wrapper {
-      min-height: 200px;
-      .content-section-p-area {
-        padding-top: $unit*8 !important;
-      }
-    }
-  }
-}
-
-.pricing__cards {
-  $c: &;
-  width: 100%;
-  position: relative;
-  z-index: 5;
+.pricing__cards__content-section {
   display: flex;
-  margin-top: $unit*5;
-  @include media('<=800px') {
-    margin-top: 0;
-  }
-  #{$c}__wrapper {
-    flex-grow: 1;
-    //display: flex;
-    padding: $unit*2;
-    @include global-wrapper;
-    //justify-content: center;
-    padding-left: $unit*4;
-    padding-right: $unit*4;
-    //display: grid;
-    //grid-column-gap: $unit*2;
-    //grid-row-gap: $unit*2;
-    //grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    display: flex;
-    flex-wrap: wrap;
-    @include media('<=800px') {
-      padding-left: $unit*2;
-      padding-right: $unit*2;
-    }
-  }
-}
-
-.pricing__card {
-  --header-bg: $color-rhino-core;
-  $c: &;
-  flex-grow: 1;
-
-  &:not(:first-child) {
-    padding-left: $unit*2;
-    @include media('<=1385px') {
-      &:nth-of-type(odd) {
-        padding-left: 0;
-      }
-    }
-    @include media('<=800px') {
-      padding-left: 0;
-    }
-  }
-
-  @include media('<=1385px') {
-    //grid-template-columns: repeat(auto-fill, minmax(33%, 2fr));
-    width: 50% !important;
-    margin-bottom: $unit*2;
-  }
-  @include media('<=800px') {
-    width: 100% !important;
-  }
-
-  &--emerald {
-
-    .pricing__card__header__title{
-      background: $color-emerald;
-    }
-
-    @include media('>1385px') {
-      transform: translateY(-20px);
-    }
-  }
-
-  &--has-pretitle {
-    @include media('<=1385px') {
-      margin-top: $unit*2;
-    }
-  }
-
-  #{$c}__wrapper {
-    box-shadow: $drop-shadow-l-light;
-    border-radius: 8px;
+  flex-direction: column;
+  .pricing__card__title {
     background: white;
-    position: relative;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+
+    h2 {
+      color: $color-rhino-core;
+      text-transform: uppercase;
+      text-align: left;
+      line-height: 1.1;
+      width: auto;
+      border-bottom: 6px solid $color-rhino-core;
+      display: table;
+    }
+    @include tablet {
+      margin: auto;
+    }
   }
 
-  #{$c}__header {
-    position: relative;
-
-    &__pretitle {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: -30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0.75;
-      h3 {
-        font-size: 16px !important;
-        text-align: center !important;
-      }
+  .pricing__card__wrapper {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
     }
+    padding-bottom: 50px;
 
-    &__title {
-      background: $color-rhino-core;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $unit;
-      border-top-right-radius: 8px;
-      border-top-left-radius: 8px;
-      h2 {
-        color: white;
+    padding-top: 15px;
+    .pricing__card__header__and__features__section {
+      width: 75vw;
+      @include tablet {
+        width: calc(100% - 5px);
       }
-    }
-    &__price {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: $unit*4 $unit*2;
-      h2 {
-        font-size: 42px;
+      .pricing__card__header {
+        .pricing__card__header__price {
+          display: flex;
+          justify-content: center;
+          padding: $unit * 2 0;
+          h2 {
+            font-size: 42px;
+          }
+          .price {
+            &__symbol {
+              color: $color-rhino-medium-1;
+            }
+          }
+          @include tablet {
+            width: 90vw;
+          }
+        }
+        .pricing__card__header__frequency {
+          background: white;
+          display: flex;
+          font-size: 0.6rem;
+          padding-bottom: 10px;
+          justify-content: center;
+          h2 {
+            color: $color-rhino-dark;
+            text-transform: uppercase;
+          }
+          @include tablet {
+            width: 90vw;
+          }
+        }
+        .pricing__card__header__actions {
+          justify-content: center;
+          @include tablet {
+            width: 90vw;
+          }
+        }
       }
-      .price {
-        &__symbol {
-          color: $color-rhino-medium-1;
+      .pricing__card__features {
+        font-family: sans-serif;
+        font-weight: 400;
+        margin: auto;
+        .pricing__card__feature {
+          text-align: center !important;
+          &:not(:last-child) {
+            border-bottom: 2px solid $color-rhino-light-2;
+          }
+          @include tablet {
+            padding-left: 0px;
+          }
         }
       }
     }
-
-    &__actions {
+    .pricing__card__addons__section {
+      background: #f1f4f9;
+      align-items: stretch;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 $unit*2;
-      padding-bottom: $unit*2;
-    }
-  }
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 40px 40px 0;
+      position: relative;
+      width: calc(100% - 5px);
+      z-index: 15;
 
-  #{$c}__features {
-    border-top: 1px solid $color-rhino-light-2;
-    padding-bottom: 1px;
-  }
+      @include tablet {
+        flex-direction: column;
+        align-items: center;
+        text-align: center !important;
+      }
+      .pricing__card__addons__section__label {
+        color: $color-rhino-core;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        font-size: 14px;
+        position: relative;
+        width: 100%;
+        padding-left: 9px;
 
-  #{$c}__feature {
-    text-align: center;
-    padding: 0 $unit*2;
-    &:not(:last-child) {
-      border-bottom: 1px solid $color-rhino-light-2;
+        text-transform: uppercase;
+        height: 30px;
+        @include tablet {
+          padding-bottom: 80px;
+        }
+      }
+      .pricing__card__addons__section__label::before {
+        color: #fff;
+        background: $color-emerald;
+        border-radius: 100%;
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+        content: '+';
+        display: block;
+        font-size: 20px;
+        line-height: 40px !important;
+        height: 40px;
+        left: -40px;
+        top: 15px;
+        position: absolute;
+        text-align: center;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 40px;
+      }
+      .pricing__card__addon {
+        flex-shrink: 0;
+        margin: 10px;
+        width: calc(33.33% - 20px);
+        @include tablet {
+          width: 100%; /* Change this to whatever width you want. */
+        }
+        .pricing__card__addon_title {
+          font-size: 1rem;
+          padding-bottom: 10px;
+          line-height: 1.333;
+          color: $color-rhino-dark;
+          border-bottom: 3px solid $color-dodger;
+          display: table;
+          @include tablet {
+            margin: auto;
+          }
+        }
+        .pricing__card__addon_price {
+          font-size: 2rem;
+          font-weight: bold;
+          font-family: 'Dosis';
+          padding-bottom: 10px;
+          padding-top: 10px;
+          color: #506784;
+        }
+        .pricing__card__addon_price:after {
+          content: ' per year';
+          font-size: 1rem;
+          font-weight: normal;
+        }
+        .pricing__card__addon_description {
+          font-size: 0.7rem;
+          padding-top: 10px;
+          font-family: sans-serif;
+        }
+        .pricing__card__addon_url {
+          color: $color-aqua-shade;
+          text-decoration: underline !important;
+        }
+      }
     }
   }
 }

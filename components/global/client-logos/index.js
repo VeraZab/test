@@ -5,8 +5,6 @@ export class ClientLogos extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   render() {
     return (
       <div className="logos-display">

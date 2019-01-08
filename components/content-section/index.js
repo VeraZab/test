@@ -266,8 +266,6 @@ export class ContentSection extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   render() {
     let classes = ''
     let contentSectionStyles = null

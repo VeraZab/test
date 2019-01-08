@@ -5,12 +5,32 @@ import withReduxStore from 'lib/withReduxStore';
 import { Provider } from 'react-redux';
 import { fetchData } from 'lib/fetchData';
 import { saveStoreData } from 'store/global';
-import { transformData } from 'lib/transform-data.prismic';
 import { connect } from 'react-redux';
 import getCookies from 'next-cookies';
 
 
+function inlineLinkedItems(data) {
+  const pages = data.filter(doc => doc.type === 'page');
+  pages.forEach(page => {
+    page.data.slices.forEach(slice => {
+        slice.linked_items = slice.items.map(item => {
+          const linked_items = {}
+          for (let [key, value] of Object.entries(item)) {
+            if(value.link_type && value.link_type == "Document" && value.id) {
+              linked_items[key] = data.find(d => d.id === value.id);
+            }
+          return linked_items;
+        }
+      });
+    });
+  });
+  return {pages};
+};
+
 class MyApp extends App {
+
+
+
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -28,10 +48,7 @@ class MyApp extends App {
     let currentDoc = {};
 
     if (state && state.loaded) {
-      const content = await transformData(
-        reduxStore.getState().data.appData,
-        slug,
-      );
+      const content = inlineLinkedItems(reduxStore.getState().data.appData);
       currentDoc = content.pages.find(doc => doc.uid === slug);
 
       reduxStore.dispatch(
@@ -50,7 +67,7 @@ class MyApp extends App {
       };
     } else {
       const appData = await fetchData(getCookies(ctx)['io.prismic.preview']);
-      const content = await transformData(appData, slug);
+      const content = inlineLinkedItems(appData);
       currentDoc = content.pages.find(doc => doc.uid === slug);
       reduxStore.dispatch(
         saveStoreData({

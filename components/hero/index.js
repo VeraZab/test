@@ -7,8 +7,6 @@ export class Hero extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     let classes = '';
 
@@ -118,7 +116,6 @@ export class HeroBottom extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {}
 
   render() {
     let HeroBottomStyles = {};

@@ -20,8 +20,6 @@ export default class LogosSlice extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   render() {
     let { data } = this.props
     let classes = 'logos-slice'
