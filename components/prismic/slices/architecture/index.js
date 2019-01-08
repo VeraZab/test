@@ -7,6 +7,22 @@ class ArchitectureSection extends React.Component {
   }
 
   render() {
+    const renderTextItem = position => {
+      return (
+        <div className={`text-item text-item--${position.x}-${position.y}`}>
+          <div className="text-item-wrapper">
+            <div className="text-item-lines" />
+            {position.title && (
+              <div className="pre-title">
+                {this.props.data.items[0][`${position.x}_${position.y}_pretitle`]}
+              </div>
+            )}
+            <p>{this.props.data.items[0][`${position.x}_${position.y}`]}</p>
+          </div>
+        </div>
+      );
+    };
+
     return (
       <>
         <ContentSection className="architecture-section">
@@ -23,42 +39,15 @@ class ArchitectureSection extends React.Component {
                     />
                   </div>
                   <div className="text-overlay">
-                    <div className="text-item text-item--left-top">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <p>{this.props.data.items[0].left_top}</p>
-                      </div>
-                    </div>
-                    <div className="text-item text-item--left-second">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <p>{this.props.data.items[0].left_second}</p>
-                      </div>
-                    </div>
-                    <div className="text-item text-item--right-top">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <p>{this.props.data.items[0].right_top}</p>
-                      </div>
-                    </div>
-                    <div className="text-item text-item--right-bottom">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <div className="pre-title">
-                          {this.props.data.items[0].right_bottom_pretitle}
-                        </div>
-                        <p>{this.props.data.items[0].right_bottom}</p>
-                      </div>
-                    </div>
-                    <div className="text-item text-item--center-bottom">
-                      <div className="text-item-wrapper">
-                        <div className="text-item-lines" />
-                        <div className="pre-title">
-                          {this.props.data.items[0].center_bottom_pretitle}
-                        </div>
-                        <p> {this.props.data.items[0].center_bottom}</p>
-                      </div>
-                    </div>
+                    {[
+                      {x: 'left', y: 'top', title: false},
+                      {x: 'left', y: 'second', title: false},
+                      {x: 'right', y: 'top', title: false},
+                      {x: 'right', y: 'bottom', title: true},
+                      {x: 'center', y: 'bottom', title: true},
+                    ].map(n => {
+                      return renderTextItem(n);
+                    })}
                   </div>
                   <div className="image">
                     <img src="" alt="" />
