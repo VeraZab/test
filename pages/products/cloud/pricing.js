@@ -154,8 +154,6 @@ export default class PricingDetails extends React.Component {
     this.toggleStudentState = this.toggleStudentState.bind(this)
   }
 
-  componentDidMount() {}
-
   toggleStudentState() {
     this.setState({
       student: !this.state.student,

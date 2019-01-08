@@ -1,11 +1,10 @@
-
 .logos-slice {
   $c: &;
 
   @include media('<=800px') {
     overflow-x: auto;
     margin-bottom: $unit;
-    padding-left: $unit*2;
+    padding-left: $unit * 2;
     .logos {
       //transform: translateX(-$unit*2);
     }
@@ -30,10 +29,11 @@
   &-wrapper {
   }
   &-header {
-    padding-bottom: $unit*2;
+    padding-bottom: $unit * 2;
   }
   &-title {
-    h3, h4 {
+    h3,
+    h4 {
       @extend .body-l;
       text-align: center;
       color: white;
@@ -72,9 +72,9 @@
     max-width: 120px !important;
     min-width: 120px !important;
     width: 120px !important;
-    flex-grow:0 !important;
-    flex-shrink:0 !important;
-    padding-right: $unit*4;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    padding-right: $unit * 4;
     .image {
       filter: invert(100%);
       opacity: 0.5;
@@ -122,7 +122,6 @@
   $c: &;
 
   #{$c}__wrapper {
-
   }
 
   .logos-slice-logo {
@@ -142,7 +141,7 @@
         max-width: $width;
         min-width: $width;
         width: $width;
-        @include media("<=800px") {
+        @include media('<=800px') {
           $width: 33.33%;
           width: $width;
           max-width: $width;
@@ -158,11 +157,10 @@
       //max-width: $width;
       min-width: $width;
       width: $width;
-
     }
     //width: 110px;
 
-    @include media("<=500px") {
+    @include media('<=500px') {
       $width: 33.33%;
       width: $width;
       max-width: $width;
@@ -173,7 +171,6 @@
 
     @at-root .page--home {
       #{$cc} {
-
       }
     }
   }

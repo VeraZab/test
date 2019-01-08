@@ -14,8 +14,6 @@ export default class HeroBottom extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   render() {
     let HeroBottomStyles = {}
 

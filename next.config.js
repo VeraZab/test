@@ -93,17 +93,20 @@ module.exports = {
     // non-prismic
 
     // Products
-    '/products/dash': { page: '/products/dash' },
-    '/products/cloud': { page: '/products/cloud' },
-    '/products/on-premise': { page: '/products/on-premise' },
-    '/products/consulting-and-oem': { page: '/products/consulting-and-oem' },
+    '/products/dash': {page: '/products/dash'},
+    '/products/cloud': {page: '/products/cloud'},
+    '/products/on-premise': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'on-premise-pricing',
+      },
+    },
+    '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
 
     // Newsroom
-    '/newsroom': { page: '/newsroom' },
-    '/newsroom/mitacs': { page: '/newsroom/mitacs' },
-    '/newsroom/plotcon': { page: '/newsroom/plotcon' },
-
-    
+    '/newsroom': {page: '/newsroom'},
+    '/newsroom/mitacs': {page: '/newsroom/mitacs'},
+    '/newsroom/plotcon': {page: '/newsroom/plotcon'},
     '/newsroom/sight-machine': {
       page: '/prismic-generator',
       query: {
@@ -123,9 +126,9 @@ module.exports = {
       },
     },
 
-    '/export': { page: '/export' },
+    '/export': {page: '/export'},
   }),
-  webpack: (config, { dev }) => {
+  webpack: (config, {dev}) => {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
         minify: true,
@@ -137,7 +140,7 @@ module.exports = {
             urlPattern: /^https?.*/,
           },
         ],
-      }),
+      })
     );
     config.module.rules.push(
       {
@@ -162,13 +165,13 @@ module.exports = {
             options: {
               data: '@import "partials/abstract";',
               includePaths: ['./', 'styles', 'node_modules']
-                .map((d) => path.join(__dirname, d))
-                .map((g) => glob.sync(g))
+                .map(d => path.join(__dirname, d))
+                .map(g => glob.sync(g))
                 .reduce((a, c) => a.concat(c), []),
             },
           },
         ],
-      },
+      }
     );
     return config;
   },

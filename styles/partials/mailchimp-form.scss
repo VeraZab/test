@@ -1,14 +1,17 @@
-.mailchimp-footer-text{
-    margin-block-start: 0em;
-    font-size: 80%;
-  }
+.mailchimp-footer-text {
+  margin-block-start: 0em;
+  font-size: 80%;
+}
 
-  .mc-input{
-    margin-bottom: 10px;
-    border: none;
-    border-color: #fff;
+.mc-input {
+  margin-bottom: 10px;
+  border: none;
+  border-color: #fff;
+  @include tablet {
+    width: 90%; /* Change this to whatever width you want. */
   }
+}
 
-  #mc-embedded-subscribe{
-    color: #fff;
-  }
+#mc-embedded-subscribe {
+  color: #fff;
+}

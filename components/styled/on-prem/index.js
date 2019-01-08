@@ -9,6 +9,13 @@ const SwitchContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   padding-top: 120px;
+  background: #ffffff
+    url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format)
+    center top no-repeat !important;
+  background-size: 1290px !important;
+  @include media('<=800px') {
+    padding-top: $unit * 6;
+  }
 `;
 
 const HeadingContainer = styled.div`
@@ -36,11 +43,11 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 18px;
   line-height: 36px;
-  max-width: 460px;
+  max-width: 900px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   color: rgba(81, 103, 131, 1);
@@ -48,4 +55,4 @@ const H2 = styled.h2`
   will-change: opacity, transform;
 `;
 
-export { SwitchContainer, HeadingContainer, H1, H2 };
+export {SwitchContainer, HeadingContainer, H1, H2};

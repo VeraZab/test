@@ -6,8 +6,6 @@ export default class Buttons extends React.Component {
     super(props)
   }
 
-  componentDidMount() {}
-
   render() {
     return (
       <div className={'buttons ' + this.props.className}>

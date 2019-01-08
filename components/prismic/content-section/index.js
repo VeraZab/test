@@ -3,7 +3,7 @@ import PrismicDOM from 'prismic-dom';
 
 import Graphic from './graphic';
 import Button from 'components/prismic/button';
-import { Browser } from 'components/browser';
+import {Browser} from 'components/browser';
 import Phone from 'components/phone';
 import GithubStarsSlice from 'components/prismic/slices/github_stars';
 import CodeExplorer from 'components/prismic/slices/code-explorer';
@@ -11,7 +11,7 @@ import AdvancedCards from 'components/prismic/slices/advanced-cards';
 import Iframes from 'components/prismic/slices/iframe';
 
 import PricingCards from 'components/prismic/slices/pricing-cards';
-import { constructButtons } from '../../../lib/construct-buttons';
+import {constructButtons} from '../../../lib/construct-buttons';
 
 const shortid = require('shortid');
 
@@ -27,13 +27,11 @@ export default class ContentSection extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
-
   render() {
     /** Destructure props */
     const {
       data,
-      data: { primary, items, slice_type },
+      data: {primary, items, slice_type},
       className,
     } = this.props;
 
@@ -47,8 +45,7 @@ export default class ContentSection extends React.Component {
     /** The classes variable */
     let classes = componentClass;
 
-    const noGraphic =
-      !primary.graphic || (primary.graphic && !primary.graphic.url);
+    const noGraphic = !primary.graphic || (primary.graphic && !primary.graphic.url);
 
     if (noGraphic) {
       classes += ' no-graphic';
@@ -141,9 +138,7 @@ export default class ContentSection extends React.Component {
         primary.body_two[0].text !== ''
       ) {
         return (
-          <div
-            className={'content-section-p-body content-section-p-body-columns'}
-          >
+          <div className={'content-section-p-body content-section-p-body-columns'}>
             <div className="content-section-p-body-wrapper">
               <div
                 className="content-section-p-body-column-one"
@@ -234,11 +229,7 @@ export default class ContentSection extends React.Component {
          */
         if (primary.graphic_style === 'browser') {
           return (
-            <div
-              className={
-                componentClass + '-graphic ' + componentClass + '-area'
-              }
-            >
+            <div className={componentClass + '-graphic ' + componentClass + '-area'}>
               <Browser>
                 <Graphic data={primary} />
               </Browser>
@@ -250,11 +241,7 @@ export default class ContentSection extends React.Component {
          */
         if (primary.graphic_style === 'phone') {
           return (
-            <div
-              className={
-                componentClass + '-graphic ' + componentClass + '-area'
-              }
-            >
+            <div className={componentClass + '-graphic ' + componentClass + '-area'}>
               <Phone>
                 <Graphic data={primary} />
               </Phone>
@@ -282,9 +269,7 @@ export default class ContentSection extends React.Component {
           );
         }
         return (
-          <div
-            className={componentClass + '-graphic ' + componentClass + '-area'}
-          >
+          <div className={componentClass + '-graphic ' + componentClass + '-area'}>
             <Graphic data={primary} />
           </div>
         );
@@ -377,9 +362,7 @@ export default class ContentSection extends React.Component {
      * let's display it!
      */
     const Subtitle =
-      primary.subtitle &&
-      primary.subtitle.length &&
-      primary.subtitle[0].text !== '' ? (
+      primary.subtitle && primary.subtitle.length && primary.subtitle[0].text !== '' ? (
         <div className={'content-section-p-subtitle'}>
           <div
             className="content-section-p-subtitle-wrapper"
@@ -395,11 +378,7 @@ export default class ContentSection extends React.Component {
         <section className={classes}>
           <div className="content-section-p-wrapper">
             {graphic()}
-            <div
-              className={
-                componentClass + '-details ' + componentClass + '-area'
-              }
-            >
+            <div className={componentClass + '-details ' + componentClass + '-area'}>
               {Pretitle}
               {Title}
               {Subtitle}
@@ -434,9 +413,7 @@ export default class ContentSection extends React.Component {
         />
       ) : null;
 
-    const IframesSection = slice_type === 'cs-iframe' && (
-      <Iframes data={items} />
-    );
+    const IframesSection = slice_type === 'cs-iframe' && <Iframes data={items} />;
 
     const PricingCardsSection = slice_type === 'cs-pricing' &&
       items && <PricingCards cards={data.pricing_cards} />;
@@ -444,9 +421,7 @@ export default class ContentSection extends React.Component {
     return (
       <section className={classes}>
         <div className="content-section-p-wrapper">
-          <div
-            className={componentClass + '-details ' + componentClass + '-area'}
-          >
+          <div className={componentClass + '-details ' + componentClass + '-area'}>
             {Pretitle}
             {Title}
             {Subtitle}
