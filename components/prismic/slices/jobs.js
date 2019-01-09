@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { renderPrismic } from 'lib/renderPrismicRichText';
-import { Button } from '../../../styled/button';
+import {renderPrismic} from 'lib/renderPrismicRichText';
+import {Button} from 'components/styled/button';
 
 const StyledJobs = styled.div``;
 const JobListing = styled.div`
@@ -59,52 +59,45 @@ const JobsLocation = styled.h3`
   padding-top: 8px;
   opacity: 0.5;
 `;
-const renderItems = (items) =>
-  items.map(
-    (
-      { description1, requirements, misc_extra_text, location, position, time },
-      i,
-    ) => (
-      <JobListing key={i}>
-        <JobsHeader>
-          <div>
-            <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Temps Plein' : time}</JobsTime>
-            <div className="content-section-p-title">
-              <h2>{position}</h2>
-            </div>
+const renderItems = items =>
+  items.map(({description1, requirements, misc_extra_text, location, position, time}, i) => (
+    <JobListing key={i}>
+      <JobsHeader>
+        <div>
+          <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Temps Plein' : time}</JobsTime>
+          <div className="content-section-p-title">
+            <h2>{position}</h2>
+          </div>
 
-            <JobsLocation>{location}</JobsLocation>
-          </div>
-          <div>
-            <Button
-              primary
-              href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}
-            >
-              {misc_extra_text[0].text == 'fr' ? 'Soumettez votre candidature' : 'Apply for this position'}
-            </Button>
-          </div>
-        </JobsHeader>
-        <Wrapper>
-          <div>
-            <Description>{renderPrismic(description1)}</Description>
-          </div>
-          <Description>{renderPrismic(requirements)}</Description>
-        </Wrapper>
-      </JobListing>
-    ),
-  );
+          <JobsLocation>{location}</JobsLocation>
+        </div>
+        <div>
+          <Button primary href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}>
+            {misc_extra_text[0].text == 'fr'
+              ? 'Soumettez votre candidature'
+              : 'Apply for this position'}
+          </Button>
+        </div>
+      </JobsHeader>
+      <Wrapper>
+        <div>
+          <Description>{renderPrismic(description1)}</Description>
+        </div>
+        <Description>{renderPrismic(requirements)}</Description>
+      </Wrapper>
+    </JobListing>
+  ));
 
-const Jobs = ({ items, ...rest }) => {
+const Jobs = ({items, ...rest}) => {
   return (
     <StyledJobs>
-      <div className="content-section-p" style={{ background: 'white' }}>
+      <div className="content-section-p" style={{background: 'white'}}>
         <div className="content-section-p-wrapper" id="open-positions">
           <div className="content-section-p-details content-section-p-area">
-            <div
-              className="content-section-p-title"
-              style={{ paddingBottom: '80px' }}
-            >
-              <h1>{items[0].misc_extra_text[0].text == 'fr' ? "Offres d'Emploi" : 'Open Positions'}</h1>
+            <div className="content-section-p-title" style={{paddingBottom: '80px'}}>
+              <h1>
+                {items[0].misc_extra_text[0].text === 'fr' ? "Offres d'Emploi" : 'Open Positions'}
+              </h1>
             </div>
             {renderItems(items)}
           </div>
@@ -114,4 +107,4 @@ const Jobs = ({ items, ...rest }) => {
   );
 };
 
-export { Jobs };
+export default Jobs;

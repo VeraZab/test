@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-export class Browser extends React.Component {
+export default class Browser extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -19,12 +19,10 @@ export class Browser extends React.Component {
             </div>
           </div>
           <div className="browser-viewport">
-            <div className="browser-viewport-wrapper">
-              {this.props.children}
-            </div>
+            <div className="browser-viewport-wrapper">{this.props.children}</div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

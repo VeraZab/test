@@ -3,28 +3,25 @@
  *
  * This is our component that will parse through an array of
  * slices and render the corresponding slice if it is accounted for.
- *
- * @class
- *
  */
 
 import React from 'react';
-const shortid = require('shortid');
+import shortid from 'shortid';
 
 /**
  * Our slice options
  */
 
 import ContentSection from 'components/prismic/content-section';
-import LogosSlice from 'components/prismic/slices/logos';
-import ArchitectureSection from 'components/prismic/slices/architecture';
 import PricingCardsSection from 'components/prismic/pricing-cards-section';
-
+import LogosSlice from './logos';
+import ArchitectureSection from './architecture';
 import TabsSlice from './tabs';
-import {Jobs} from './jobs';
+import Jobs from './jobs';
 import Quotes from './quotes';
 
 import {ImageSectionSlice} from './image-section';
+import GraphicTextWithLogos from './graphic-text-logos';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -32,14 +29,14 @@ export default class Slices extends React.Component {
   }
 
   render() {
-    let {data} = this.props;
+    const {data} = this.props;
+
     return (
       <div className="slices">
         <div className="slices-wrapper">
           {data.map((slice, i) => {
             if (
               slice.slice_type === 'graphic_with_text' ||
-              slice.slice_type === 'graphic_with_text_logos' ||
               slice.slice_type === 'graphic_with_text_slides' ||
               slice.slice_type === 'cs-advanced-cards' ||
               slice.slice_type === 'cs-iframe' ||
@@ -47,26 +44,20 @@ export default class Slices extends React.Component {
               slice.slice_type === 'cs-github-stars'
             ) {
               return <ContentSection key={i} data={slice} />;
-            } else if (slice.slice_type === 'cs-tabs') {
-              return <TabsSlice key={shortid.generate()} data={slice} />;
-            } else if (slice.slice_type === 'logos') {
-              return <LogosSlice key={shortid.generate()} data={slice} />;
-            } else if (slice.slice_type === 'jobs') {
-              return <Jobs {...slice} key={i} />;
-            } else if (slice.slice_type === 'image') {
-              return <ImageSectionSlice {...slice} key={i} />;
-            } else if (slice.slice_type === 'cs-architecture') {
-              return <ArchitectureSection key={i} data={slice} />;
-            } else if (slice.slice_type === 'quotes_logos') {
-              return <Quotes key={i} data={slice} />;
-            } else if (slice.slice_type === 'cs-pricing') {
-              return <PricingCardsSection key={i} data={slice} />;
-            } else return;
+            }
+            return {
+              graphic_with_text_logos: <GraphicTextWithLogos key={i} data={slice} />,
+              'cs-tabs': <TabsSlice key={shortid.generate()} data={slice} />,
+              logos: <LogosSlice key={shortid.generate()} data={slice} />,
+              jobs: <Jobs {...slice} key={i} />,
+              image: <ImageSectionSlice {...slice} key={i} />,
+              'cs-architecture': <ArchitectureSection key={i} data={slice} />,
+              quotes_logos: <Quotes key={i} data={slice} />,
+              'cs-pricing': <PricingCardsSection key={i} data={slice} />,
+            }[slice.slice_type];
           })}
         </div>
       </div>
     );
   }
 }
-
-// slice.slice_type === 'cs-code-explorer' ||

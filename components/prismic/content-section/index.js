@@ -3,7 +3,7 @@ import PrismicDOM from 'prismic-dom';
 
 import Graphic from './graphic';
 import Button from 'components/prismic/button';
-import {Browser} from 'components/browser';
+import Browser from 'components/browser';
 import Phone from 'components/phone';
 import GithubStarsSlice from 'components/prismic/slices/github_stars';
 import CodeExplorer from 'components/prismic/slices/code-explorer';
@@ -11,9 +11,9 @@ import AdvancedCards from 'components/prismic/slices/advanced-cards';
 import Iframes from 'components/prismic/slices/iframe';
 
 import PricingCards from 'components/prismic/slices/pricing-cards';
-import {constructButtons} from '../../../lib/construct-buttons';
+import {constructButtons} from 'lib/construct-buttons';
 
-const shortid = require('shortid');
+import shortid from 'shortid';
 
 /**
  * ContentSection component
@@ -52,8 +52,7 @@ export default class ContentSection extends React.Component {
     }
 
     /**
-     * If someone has added classes to this component,
-     * let's append them to the classes variable
+     * If someone has added classes to this component, let's append them to the classes variable
      */
     if (className) {
       classes += ' ' + className;
@@ -122,7 +121,7 @@ export default class ContentSection extends React.Component {
 
     classes += ` ${componentClass}-proportions--${primary.proportions}`;
 
-    /**
+    /*
      * Body
      *
      * This checks to see if there are two columns (two enties for body, body + body_two),
@@ -155,24 +154,23 @@ export default class ContentSection extends React.Component {
             </div>
           </div>
         );
-      } else {
-        return (
-          <div className={'content-section-p-body'}>
-            <div
-              className="content-section-p-body-wrapper"
-              dangerouslySetInnerHTML={{
-                __html: PrismicDOM.RichText.asHtml(primary.body),
-              }}
-            />
-          </div>
-        );
       }
+      return (
+        <div className={'content-section-p-body'}>
+          <div
+            className="content-section-p-body-wrapper"
+            dangerouslySetInnerHTML={{
+              __html: PrismicDOM.RichText.asHtml(primary.body),
+            }}
+          />
+        </div>
+      );
     };
 
-    /**
+    /*
      * Graphic
      */
-    let graphic = () => {
+    const graphic = () => {
       /**
        * If this content section is graphic_with_text_slides,
        * we're going to render the items as graphics, rather than as actions
@@ -190,7 +188,7 @@ export default class ContentSection extends React.Component {
               '-area'
             }
           >
-            {items.map((logo, i) => {
+            {items.map(logo => {
               return <Graphic noBlur key={shortid.generate()} data={logo} />;
             })}
           </div>
@@ -277,11 +275,11 @@ export default class ContentSection extends React.Component {
       return null;
     };
 
-    /**
+    /*
      * Actions
      * These are our buttons
      */
-    let actions = () => {
+    const actions = () => {
       /**
        * slice_type: graphic_with_text
        *
@@ -299,11 +297,10 @@ export default class ContentSection extends React.Component {
               </div>
             </div>
           );
-        } else {
-          return null;
         }
+        return null;
       } else {
-        /**
+        /*
          * slice_type: all others
          *
          * This is the new way of dealing with buttons
@@ -329,22 +326,16 @@ export default class ContentSection extends React.Component {
         }
       }
     };
-    /**
-     * If there's a pretitle,
-     * let's display it!
-     */
+
     const Pretitle =
       primary.pretitle !== null ? (
-        <div className={'content-section-p-pretitle'}>
+        <div className="content-section-p-pretitle">
           <div className="content-section-p-pretitle-wrapper">
             <h3>{primary.pretitle}</h3>
           </div>
         </div>
       ) : null;
-    /**
-     * If there's a title,
-     * let's display it!
-     */
+
     const Title =
       primary.title && primary.title.length && primary.title[0].text !== '' ? (
         <div className={'content-section-p-title'}>
@@ -357,10 +348,6 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null;
 
-    /**
-     * If there's a Subtitle,
-     * let's display it!
-     */
     const Subtitle =
       primary.subtitle && primary.subtitle.length && primary.subtitle[0].text !== '' ? (
         <div className={'content-section-p-subtitle'}>
@@ -397,13 +384,6 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null;
 
-    const CodeExplorerSection =
-      slice_type === 'cs-code-explorer' ? (
-        <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={data} />{' '}
-        </div>
-      ) : null;
-
     const AdvancedCardsSection =
       slice_type === 'cs-advanced-cards' ? (
         <AdvancedCards
@@ -411,6 +391,13 @@ export default class ContentSection extends React.Component {
           variant={primary.card_variant}
           data={items}
         />
+      ) : null;
+
+    const CodeExplorerSection =
+      slice_type === 'cs-code-explorer' ? (
+        <div className="content-section-p-area--code-explorer">
+          <CodeExplorer data={data} />{' '}
+        </div>
       ) : null;
 
     const IframesSection = slice_type === 'cs-iframe' && <Iframes data={items} />;
@@ -425,7 +412,7 @@ export default class ContentSection extends React.Component {
             {Pretitle}
             {Title}
             {Subtitle}
-            {slice_type === 'graphic_with_text_logos' ? graphic() : null}
+            {slice_type === 'graphic_with_text_logos' && graphic()}
 
             {body()}
 
@@ -438,7 +425,7 @@ export default class ContentSection extends React.Component {
             {CodeExplorerSection}
             {IframesSection}
           </div>
-          {slice_type !== 'graphic_with_text_logos' ? graphic() : null}
+          {slice_type !== 'graphic_with_text_logos' && graphic()}
           {AdvancedCardsSection}
           {GithubStarsSection}
         </div>
