@@ -172,52 +172,6 @@ export default class ContentSection extends React.Component {
      */
     const graphic = () => {
       /**
-       * If this content section is graphic_with_text_slides,
-       * we're going to render the items as graphics, rather than as actions
-       * like in the default content section slice type
-       */
-      if (slice_type === 'graphic_with_text_logos') {
-        return (
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-logos ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map(logo => {
-              return <Graphic noBlur key={shortid.generate()} data={logo} />;
-            })}
-          </div>
-        );
-      }
-      /**
-       * If this content section is graphic_with_text_slides,
-       * we're going to render the items as graphics, rather than as actions
-       * like in the default content section slice type
-       */
-      if (slice_type === 'graphic_with_text_slides') {
-        return (
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-slides ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map((slide, i) => {
-              return <Graphic key={shortid.generate()} data={slide} />;
-            })}
-          </div>
-        );
-      }
-      /**
        * graphic_style: browser
        * If the content section has a graphic uploaded, let's show it.
        */
@@ -412,20 +366,12 @@ export default class ContentSection extends React.Component {
             {Pretitle}
             {Title}
             {Subtitle}
-            {slice_type === 'graphic_with_text_logos' && graphic()}
-
             {body()}
-
-            {/**
-             * If there are items, they are buttons
-             * let's display them!
-             */
-
-            actions()}
+            {actions()}
             {CodeExplorerSection}
             {IframesSection}
           </div>
-          {slice_type !== 'graphic_with_text_logos' && graphic()}
+          {graphic()}
           {AdvancedCardsSection}
           {GithubStarsSection}
         </div>

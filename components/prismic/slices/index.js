@@ -22,6 +22,7 @@ import Quotes from './quotes';
 
 import {ImageSectionSlice} from './image-section';
 import GraphicTextWithLogos from './graphic-text-logos';
+import GraphicTextWithSlides from './graphic-text-slides';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -37,7 +38,6 @@ export default class Slices extends React.Component {
           {data.map((slice, i) => {
             if (
               slice.slice_type === 'graphic_with_text' ||
-              slice.slice_type === 'graphic_with_text_slides' ||
               slice.slice_type === 'cs-advanced-cards' ||
               slice.slice_type === 'cs-iframe' ||
               slice.slice_type === 'cs-code-explorer' ||
@@ -47,6 +47,7 @@ export default class Slices extends React.Component {
             }
             return {
               graphic_with_text_logos: <GraphicTextWithLogos key={i} data={slice} />,
+              graphic_with_text_slides: <GraphicTextWithSlides key={i} data={slice} />,
               'cs-tabs': <TabsSlice key={shortid.generate()} data={slice} />,
               logos: <LogosSlice key={shortid.generate()} data={slice} />,
               jobs: <Jobs {...slice} key={i} />,
