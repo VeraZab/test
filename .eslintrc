@@ -250,7 +250,7 @@
       "error",
       "always"
     ],
-    "react/prop-types": "error",
+    // "react/prop-types": "error",
     "valid-jsdoc": [
       "error"
     ],
