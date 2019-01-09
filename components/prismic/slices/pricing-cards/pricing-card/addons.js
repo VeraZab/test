@@ -25,7 +25,6 @@ class PricingCardAddons extends React.Component {
             {renderPrismic(Array(feature.addon_url[0]))}
           </div>
         )}
-        {console.log(feature.addon_price[0].text == 'Contact Us')}
       </div>
     );
   }
