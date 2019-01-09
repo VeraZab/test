@@ -31,7 +31,8 @@
 
     padding-top: 15px;
     .pricing__card__header__and__features__section {
-      width: 75vw;
+      width: 40vw;
+      margin: auto;
       @include tablet {
         width: calc(100% - 5px);
       }
@@ -77,6 +78,9 @@
         font-family: sans-serif;
         font-weight: 400;
         margin: auto;
+        font-size: 0.8rem;
+        width: 80%;
+        line-height: 0.9rem;
         .pricing__card__feature {
           text-align: center !important;
           &:not(:last-child) {
@@ -99,6 +103,7 @@
       position: relative;
       width: calc(100% - 5px);
       z-index: 15;
+      padding-bottom: 40px;
 
       @include tablet {
         flex-direction: column;
@@ -168,14 +173,26 @@
           padding-top: 10px;
           color: #506784;
         }
+
+        .pricing__card__addon__contact__us {
+          font-size: 2rem;
+          font-weight: bold;
+          font-family: 'Dosis';
+          padding-bottom: 10px;
+          padding-top: 10px;
+          color: #506784;
+        }
+
         .pricing__card__addon_price:after {
           content: ' per year';
           font-size: 1rem;
           font-weight: normal;
         }
         .pricing__card__addon_description {
-          font-size: 0.7rem;
+          font-size: 0.9rem;
           padding-top: 10px;
+          line-height: 1rem;
+          width: 80%;
           font-family: sans-serif;
         }
         .pricing__card__addon_url {
