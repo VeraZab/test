@@ -105,6 +105,10 @@
         align-items: center;
         text-align: center !important;
       }
+      @include handheld {
+        flex-direction: none;
+        height: 700px;
+      }
       .pricing__card__addons__section__label {
         color: $color-rhino-core;
         -ms-flex-negative: 0;
