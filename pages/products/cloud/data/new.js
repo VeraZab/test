@@ -87,6 +87,22 @@ const features = [
     ],
   },
   {
+    value: `Multiple built-in themes`,
+    plans: [
+      PLANS.COMMUNITY,
+      PLANS.PERSONAL,
+      PLANS.PROFESSIONAL,
+      PLANS.PRIVATE_CLOUD,
+      PLANS.STUDENT,
+    ],
+  },
+  {
+    value: `Custom, shareable themes`,
+    plans: [
+      PLANS.PROFESSIONAL,
+    ],
+  },
+  {
     value: `500KB datasets`,
     plans: [
       PLANS.COMMUNITY,
