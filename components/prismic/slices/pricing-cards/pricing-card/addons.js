@@ -9,9 +9,12 @@ class PricingCardAddons extends React.Component {
         {Boolean(feature.addon_title[0] && feature.addon_title[0].text.length > 1) && (
           <div className="pricing__card__addon_title">{feature.addon_title[0].text}</div>
         )}
-        {Boolean(feature.addon_price[0] && feature.addon_price[0].text.length > 1) && (
-          <div className="pricing__card__addon_price">{feature.addon_price[0].text}</div>
-        )}
+        {Boolean(feature.addon_price[0] && feature.addon_price[0].text.length > 1) &&
+          (feature.addon_price[0].text == 'Contact Us' ? (
+            <div className="pricing__card__addon__contact__us">{feature.addon_price[0].text}</div>
+          ) : (
+            <div className="pricing__card__addon_price">{feature.addon_price[0].text}</div>
+          ))}
         {Boolean(feature.addon_description[0] && feature.addon_description[0].text.length > 1) && (
           <div className="pricing__card__addon_description">
             {feature.addon_description[0].text}
@@ -22,6 +25,7 @@ class PricingCardAddons extends React.Component {
             {renderPrismic(Array(feature.addon_url[0]))}
           </div>
         )}
+        {console.log(feature.addon_price[0].text == 'Contact Us')}
       </div>
     );
   }
