@@ -1,22 +1,22 @@
-@import "abstract";
+@import 'abstract';
 //----------------------------------------------------------------------------------------------------------------------
 // Elements
 //----------------------------------------------------------------------------------------------------------------------
-@import "buttons";
-@import "cards";
-@import "layout";
-@import "slices";
-@import "layout/devices";
-@import "layout/panes";
-@import "layout/content-sections";
-@import "layout/hero.layout";
-@import "layout/content-section-p.layout";
-@import "layout/header";
-@import "image";
-@import "mdi";
-@import "mailchimp-form";
-@import "browser.styles";
-
+@import 'buttons';
+@import 'cards';
+@import 'layout';
+@import 'slices';
+@import 'layout/devices';
+@import 'layout/panes';
+@import 'layout/content-sections';
+@import 'layout/hero.layout';
+@import 'layout/content-section-p.layout';
+@import 'layout/header';
+@import 'layout/navigation.styles';
+@import 'image';
+@import 'mdi';
+@import 'mailchimp-form';
+@import 'browser.styles';
 
 $animation-delay: 0.25s;
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
@@ -78,7 +78,6 @@ $animation-page-item-timing: 0.5s;
 
   to {
     transform: translateX(0);
-
   }
 }
 
@@ -94,7 +93,6 @@ $animation-page-item-timing: 0.5s;
   }
 }
 
-
 .animate {
   &--fade-in {
     opacity: 0;
@@ -108,7 +106,8 @@ $animation-page-item-timing: 0.5s;
   &--fade-in {
     &-from-bottom {
       opacity: 0;
-      animation: fade-in-from-bottom $animation-page-item-timing forwards cubic-bezier(0.19, 1, 0.22, 1);
+      animation: fade-in-from-bottom $animation-page-item-timing forwards
+        cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 
@@ -125,7 +124,8 @@ $animation-page-item-timing: 0.5s;
     animation: animateBar $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
     &-reverse {
       transform: none;
-      animation: animateBarRev $animation-layout-timing forwards cubic-bezier(0.755, 0.155, 0.215, 0.925);
+      animation: animateBarRev $animation-layout-timing forwards
+        cubic-bezier(0.755, 0.155, 0.215, 0.925);
     }
   }
 }
@@ -135,7 +135,6 @@ a {
   transition: $transition;
 }
 
-
 .slices {
   width: 100%;
   flex-grow: 1;
@@ -143,7 +142,7 @@ a {
 
 .phone {
   $br: 40px;
-  margin: $unit*2 $unit*12;
+  margin: $unit * 2 $unit * 12;
   margin-right: 0;
   max-width: 480px;
   border-radius: $br;
@@ -157,7 +156,6 @@ a {
     margin-right: 0;
   }
   &-wrapper {
-
   }
   &-header {
     //position: absolute;
@@ -183,7 +181,6 @@ a {
       opacity: 0.5;
       background: darken(white, 15%);
       border-radius: 8px;
-
     }
   }
 
@@ -199,7 +196,6 @@ a {
 .page--404 {
   display: flex;
   min-height: calc(100vh - 463px) !important;
-
 }
 
 .not-found {
@@ -227,21 +223,21 @@ a {
     justify-content: center;
     align-items: center;
     //color: white;
-    padding-top: $unit*16;
+    padding-top: $unit * 16;
   }
   #{$c}__messaging {
     max-width: 600px;
     border-radius: 8px;
     box-shadow: $drop-shadow-l-light;
     background: white;
-    padding: $unit*2;
+    padding: $unit * 2;
     //transform: translateY(-30%);
-    margin-bottom: $unit*8;
+    margin-bottom: $unit * 8;
 
     h1 {
       //color: white;
       color: $color-rhino-core;
-      padding-bottom: $unit*3;
+      padding-bottom: $unit * 3;
       //text-align: center;
     }
     p {
@@ -250,8 +246,6 @@ a {
   }
 }
 
-
-.in-percy{
+.in-percy {
   border: 5px solid green;
 }
-

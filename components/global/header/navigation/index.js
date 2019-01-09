@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './navigation.styles.scss';
 import Link from 'next/link';
 
 export default class Navigation extends React.Component {
@@ -112,7 +111,6 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div className="site-header-navigation">
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
         <div className={'site-header-navigation-wrapper'}>
           <div
             className="mobile-menu-button"
