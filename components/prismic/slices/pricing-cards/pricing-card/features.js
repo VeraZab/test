@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {renderPrismic} from 'lib/renderPrismicRichText';
-import shortid from 'shortid';
 
 class PricingCardFeatures extends React.Component {
   render() {
