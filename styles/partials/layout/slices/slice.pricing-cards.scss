@@ -112,11 +112,7 @@
       }
       @include handheld {
         flex-direction: none;
-        height: 600px;
-      }
-      @include media('<=300px') {
-        flex-direction: none;
-        height: 1100px;
+        height: 700px;
       }
       .pricing__card__addons__section__label {
         color: $color-rhino-core;
