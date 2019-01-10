@@ -75,7 +75,7 @@
         }
       }
       .pricing__card__features {
-        font-family: 'Ubuntu';
+        font-family: 'Ubuntu, sans-serif';
         font-weight: 400;
         margin: auto;
         font-size: 15px;
@@ -196,7 +196,7 @@
           padding-top: 10px;
           line-height: 1rem;
           width: 80%;
-          font-family: 'Ubuntu';
+          font-family: 'Ubuntu, sans-serif';
           @include tablet {
             width: 100% !important;
           }
