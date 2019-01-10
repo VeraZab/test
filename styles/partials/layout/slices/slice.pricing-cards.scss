@@ -112,7 +112,11 @@
       }
       @include handheld {
         flex-direction: none;
-        height: 700px;
+        height: 600px;
+      }
+      @include media('<=300px') {
+        flex-direction: none;
+        height: 800px;
       }
       .pricing__card__addons__section__label {
         color: $color-rhino-core;
@@ -154,6 +158,9 @@
         @include tablet {
           width: 100%; /* Change this to whatever width you want. */
         }
+        @include media('<=300px') {
+          padding-top: 20px;
+        }
         .pricing__card__addon_title {
           font-size: 1rem;
           padding-bottom: 10px;
@@ -194,6 +201,9 @@
           line-height: 1rem;
           width: 80%;
           font-family: sans-serif;
+          @include tablet {
+            width: 100% !important;
+          }
         }
         .pricing__card__addon_url {
           color: $color-aqua-shade;
