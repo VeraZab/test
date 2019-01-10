@@ -1,5 +1,4 @@
 import React from 'react';
-import shortid from 'shortid';
 
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
@@ -7,16 +6,18 @@ import Subtitle from './slice-elements/subtitle';
 import {getComponentClass} from './slice-elements/utils';
 import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
-import GraphicDisplay from './slice-elements/graphic-display';
+import Graphic from './slice-elements/graphic';
+import CodeExplorerSlice from 'components/prismic/slices/code-explorer-slice';
 
-export default class GraphicTextWithSlides extends React.Component {
+export default class CodeExplorer extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     const {
-      data: {primary, items, slice_type},
+      data,
+      data: {primary, slice_type},
     } = this.props;
 
     const componentClass = 'content-section-p';
@@ -36,19 +37,9 @@ export default class GraphicTextWithSlides extends React.Component {
             <Body primary={primary} />
             <Actions primary={primary} />
           </div>
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-slides ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map(slide => (
-              <GraphicDisplay key={shortid.generate()} data={slide} />
-            ))}
+          <Graphic primary={primary} />
+          <div className="github-stars">
+            <CodeExplorerSlice data={data} />
           </div>
         </div>
       </section>

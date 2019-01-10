@@ -88,7 +88,8 @@ const renderItems = items =>
     </JobListing>
   ));
 
-const Jobs = ({items, ...rest}) => {
+const Jobs = data => {
+  const items = data.items;
   return (
     <StyledJobs>
       <div className="content-section-p" style={{background: 'white'}}>

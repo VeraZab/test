@@ -1,15 +1,15 @@
 import React from 'react';
-import shortid from 'shortid';
 
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
 import Subtitle from './slice-elements/subtitle';
 import {getComponentClass} from './slice-elements/utils';
 import Body from './slice-elements/body';
-import Actions from './slice-elements/actions';
-import GraphicDisplay from './slice-elements/graphic-display';
+import Graphic from './slice-elements/graphic';
+import Button from 'components/prismic/button';
+import shortid from 'shortid';
 
-export default class GraphicTextWithSlides extends React.Component {
+export default class GraphicText extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -34,22 +34,17 @@ export default class GraphicTextWithSlides extends React.Component {
               primary.subtitle && primary.subtitle.length && primary.subtitle[0].text !== ''
             ) && <Subtitle subtitle={primary.subtitle} />}
             <Body primary={primary} />
-            <Actions primary={primary} />
+            {items && items.length ? (
+              <div className={'content-section-p-actions'}>
+                <div className="content-section-p-actions-wrapper buttons">
+                  {items.map(button => {
+                    return <Button key={shortid.generate()} data={button} />;
+                  })}
+                </div>
+              </div>
+            ) : null}
           </div>
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-slides ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map(slide => (
-              <GraphicDisplay key={shortid.generate()} data={slide} />
-            ))}
-          </div>
+          <Graphic primary={primary} />
         </div>
       </section>
     );

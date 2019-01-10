@@ -9,7 +9,6 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import PricingCard from 'components/prismic/slices/pricing-cards/pricing-card';
 import SwitchComponent from '../../../../components/switch';
 import {SwitchContainer, HeadingContainer, H1, H2} from '../../../../components/styled/on-prem';
@@ -37,7 +36,13 @@ class PricingCardsContainer extends React.Component {
   }
 
   render() {
-    const {cards} = this.props;
+    const {slice} = this.props;
+    const cards =
+      slice.linked_items &&
+      slice.linked_items[0] &&
+      slice.linked_items[0].pricing_cards &&
+      slice.linked_items[0].pricing_cards.data &&
+      slice.linked_items[0].pricing_cards.data.body;
     if (!cards) {
       return null;
     }
@@ -87,9 +92,5 @@ class PricingCardsContainer extends React.Component {
     );
   }
 }
-
-PricingCardsContainer.propTypes = {
-  cards: PropTypes.array.isRequired,
-};
 
 export default PricingCardsContainer;

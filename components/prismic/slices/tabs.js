@@ -1,7 +1,14 @@
 import React from 'react';
-import ContentSection from 'components/prismic/content-section';
+import shortid from 'shortid';
+
 import Image from 'components/prismic/Image';
-const shortid = require('shortid');
+import {getComponentClass} from './slice-elements/utils';
+import Pretitle from './slice-elements/pretitle';
+import Title from './slice-elements/title';
+import Subtitle from './slice-elements/subtitle';
+import Graphic from './slice-elements/graphic';
+import Body from './slice-elements/body';
+import Actions from './slice-elements/actions';
 
 export default class TabsSlice extends React.Component {
   constructor(props) {
@@ -79,6 +86,10 @@ export default class TabsSlice extends React.Component {
         <div className="label">{tab.primary.label}</div>
       </div>
     );
+
+    const componentClass = 'content-section-p';
+    const classes = getComponentClass(tab.primary, tab.slice_type);
+
     return (
       <div className="tabs">
         <div className="tabs__wrapper">
@@ -111,7 +122,26 @@ export default class TabsSlice extends React.Component {
             </div>
           </div>
           <div className="tabs__content">
-            <ContentSection key={tab.primary.uid} data={tab} />
+            <section key={tab.primary.uid} className={classes}>
+              <div className="content-section-p-wrapper">
+                <Graphic primary={tab.primary} />
+                <div className={componentClass + '-details ' + componentClass + '-area'}>
+                  {Boolean(tab.primary.pretitle) && <Pretitle pretitle={tab.primary.pretitle} />}
+                  {Boolean(
+                    tab.primary.title &&
+                      tab.primary.title.length &&
+                      tab.primary.title[0].text !== ''
+                  ) && <Title title={tab.primary.title} />}
+                  {Boolean(
+                    tab.primary.subtitle &&
+                      tab.primary.subtitle.length &&
+                      tab.primary.subtitle[0].text !== ''
+                  ) && <Subtitle subtitle={tab.primary.subtitle} />}
+                  <Body primary={tab.primary} />
+                  <Actions primary={tab.primary} />
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

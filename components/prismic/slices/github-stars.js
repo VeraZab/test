@@ -1,5 +1,4 @@
 import React from 'react';
-import shortid from 'shortid';
 
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
@@ -7,16 +6,18 @@ import Subtitle from './slice-elements/subtitle';
 import {getComponentClass} from './slice-elements/utils';
 import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
-import GraphicDisplay from './slice-elements/graphic-display';
+import Graphic from './slice-elements/graphic';
+import GithubStarsSlice from 'components/prismic/slices/github-stars-slice';
 
-export default class GraphicTextWithSlides extends React.Component {
+export default class GithubStars extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     const {
-      data: {primary, items, slice_type},
+      data,
+      data: {primary, slice_type},
     } = this.props;
 
     const componentClass = 'content-section-p';
@@ -35,21 +36,11 @@ export default class GraphicTextWithSlides extends React.Component {
             ) && <Subtitle subtitle={primary.subtitle} />}
             <Body primary={primary} />
             <Actions primary={primary} />
+            <div className="content-section-p-area--code-explorer">
+              <GithubStarsSlice slice={data} />
+            </div>
           </div>
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-slides ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map(slide => (
-              <GraphicDisplay key={shortid.generate()} data={slide} />
-            ))}
-          </div>
+          <Graphic primary={primary} />
         </div>
       </section>
     );

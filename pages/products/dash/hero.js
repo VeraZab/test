@@ -1,13 +1,7 @@
-import React from 'react'
-import {
-  Hero,
-  HeroTop,
-  HeroMessaging,
-  HeroTitle,
-  HeroActions,
-} from 'components/hero'
-import GithubStarsSlice from 'components/prismic/slices/github_stars'
-import Buttons from 'components/buttons'
+import React from 'react';
+import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroActions} from 'components/hero';
+import GithubStarsSlice from 'components/prismic/slices/github-stars-slice';
+import Buttons from 'components/buttons';
 
 const HeroButtons = [
   [
@@ -35,21 +29,18 @@ const HeroButtons = [
     },
   ],
   [],
-]
+];
 
-const HeroStyles = {}
+const HeroStyles = {};
 
 export default class HeroSection extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     return (
-      <Hero
-        className="no-dots dash-hero align-left split-half"
-        style={HeroStyles}
-      >
+      <Hero className="no-dots dash-hero align-left split-half" style={HeroStyles}>
         <div className="dash-header">
           <div className="dash-header-wrapper">
             <div className="dash-logo">
@@ -61,18 +52,10 @@ export default class HeroSection extends React.Component {
               </div>
             </div>
             <div className="dash-navigation">
-              <a
-                href="/dash/pricing/"
-                target="_blank"
-                className="dash-navigation-item"
-              >
+              <a href="/dash/pricing/" target="_blank" className="dash-navigation-item">
                 Pricing
               </a>
-              <a
-                target="_blank"
-                href="https://plot.ly/dash/"
-                className="dash-navigation-item"
-              >
+              <a target="_blank" href="https://plot.ly/dash/" className="dash-navigation-item">
                 User Guide
               </a>
               <a target="_self" href="/" className="dash-navigation-item">
@@ -83,25 +66,29 @@ export default class HeroSection extends React.Component {
         </div>
         <HeroTop>
           <HeroMessaging>
-            <HeroTitle>
-              Build beautiful web-based interfaces in&nbsp;Python
-            </HeroTitle>
+            <HeroTitle>Build beautiful web-based interfaces in&nbsp;Python</HeroTitle>
             <h3>
-              Dash is a Python framework for building analytical web
-              applications. No JavaScript required.
+              Dash is a Python framework for building analytical web applications. No JavaScript
+              required.
             </h3>
             <p>
-              Built on top of Plotly.js, React, and Flask, Dash ties modern UI
-              elements like dropdowns, sliders, and graphs to your analytical
-              Python code.
+              Built on top of Plotly.js, React, and Flask, Dash ties modern UI elements like
+              dropdowns, sliders, and graphs to your analytical Python code.
             </p>
             <HeroActions>
               <Buttons items={HeroButtons[0]} />
               <Buttons items={HeroButtons[1]} />
-              <GithubStarsSlice start slice={{items:[{
-                  repository_url: {url: 'https://github.com/plotly/dash'},
-                  label: null
-                }]}}/>
+              <GithubStarsSlice
+                start
+                slice={{
+                  items: [
+                    {
+                      repository_url: {url: 'https://github.com/plotly/dash'},
+                      label: null,
+                    },
+                  ],
+                }}
+              />
             </HeroActions>
           </HeroMessaging>
 
@@ -113,6 +100,6 @@ export default class HeroSection extends React.Component {
           </div>
         </HeroTop>
       </Hero>
-    )
+    );
   }
 }

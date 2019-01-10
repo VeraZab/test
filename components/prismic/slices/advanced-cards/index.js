@@ -11,7 +11,7 @@ import Body from '../slice-elements/body';
 import Graphic from '../slice-elements/graphic';
 import Actions from '../slice-elements/actions';
 
-class AdvancedCards extends React.Component {
+export default class AdvancedCards extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -51,5 +51,3 @@ class AdvancedCards extends React.Component {
     );
   }
 }
-
-export default AdvancedCards;

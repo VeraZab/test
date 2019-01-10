@@ -9,7 +9,7 @@ import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
 import GraphicDisplay from './slice-elements/graphic-display';
 
-class GraphicTextWithLogos extends React.Component {
+export default class GraphicTextWithLogos extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -55,5 +55,3 @@ class GraphicTextWithLogos extends React.Component {
     );
   }
 }
-
-export default GraphicTextWithLogos;

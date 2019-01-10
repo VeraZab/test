@@ -1,5 +1,4 @@
 import React from 'react';
-import shortid from 'shortid';
 
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
@@ -7,9 +6,10 @@ import Subtitle from './slice-elements/subtitle';
 import {getComponentClass} from './slice-elements/utils';
 import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
-import GraphicDisplay from './slice-elements/graphic-display';
+import Graphic from './slice-elements/graphic';
+import Iframes from 'components/prismic/slices/iframe';
 
-export default class GraphicTextWithSlides extends React.Component {
+export default class IFrame extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -36,20 +36,8 @@ export default class GraphicTextWithSlides extends React.Component {
             <Body primary={primary} />
             <Actions primary={primary} />
           </div>
-          <div
-            className={
-              componentClass +
-              '-graphic ' +
-              componentClass +
-              '-graphic-slides ' +
-              componentClass +
-              '-area'
-            }
-          >
-            {items.map(slide => (
-              <GraphicDisplay key={shortid.generate()} data={slide} />
-            ))}
-          </div>
+          <Graphic primary={primary} />
+          <Iframes data={items} />
         </div>
       </section>
     );
