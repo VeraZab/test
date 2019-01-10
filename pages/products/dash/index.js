@@ -1,7 +1,7 @@
-import Layout from 'components/global/layout'
-import HeroSection from './hero'
-import DashMain from './main'
-import styles from './dash.styles.scss'
+import Layout from 'components/global/layout';
+import HeroSection from './hero';
+import DashMain from './main';
+import styles from './dash.styles.scss';
 
 const meta = {
   title: 'Dash by Plotly',
@@ -10,12 +10,12 @@ const meta = {
   url: 'https://plot.ly/products/dash/',
   image:
     'https://images-plotly.imgix.net/static/marketing/meta/dash-og@2x.png?auto=compress&auto=format',
-}
+};
 
 export default () => (
   <Layout meta={meta} hideHeader="true">
-    <style dangerouslySetInnerHTML={{ __html: styles }} />
+    <style dangerouslySetInnerHTML={{__html: styles}} />
     <HeroSection />
     <DashMain />
   </Layout>
-)
+);

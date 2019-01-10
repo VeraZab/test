@@ -1,13 +1,10 @@
-import styled, { injectGlobal, css } from 'styled-components';
-import './global'
+import styled, {injectGlobal, css} from 'styled-components';
+import './global';
 
-import Heading from './heading'
-import Body from './body'
+import Heading from './heading';
+import Body from './body';
 
-
-const Typography = styled.div`
-
-`;
+const Typography = styled.div``;
 
 Typography.h1 = Heading.h1;
 Typography.h2 = Heading.h2;

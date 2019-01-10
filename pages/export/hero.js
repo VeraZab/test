@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Hero,
   HeroTop,
@@ -7,8 +7,8 @@ import {
   HeroSubtitle,
   HeroActions,
   HeroBottom,
-} from 'components/hero'
-import Buttons from 'components/buttons'
+} from 'components/hero';
+import Buttons from 'components/buttons';
 
 const HeroButtons = [
   [
@@ -25,12 +25,12 @@ const HeroButtons = [
     },
   ],
   [],
-]
+];
 
 const HeroStyles = {
   minHeight: '0',
   paddingTop: '0px',
-}
+};
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -38,16 +38,16 @@ const HeroWrapperStyle = {
   backgroundSize: '1640px',
   backgroundPosition: '50% 50%',
   backgroundRepeat: 'no-repeat',
-}
+};
 
 const HeroBottomStyles = {
   paddingBottom: '0px',
   paddingTop: '50px',
-}
+};
 
 export default class HeroSection extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -57,10 +57,9 @@ export default class HeroSection extends React.Component {
           <HeroMessaging>
             <HeroTitle>Export to Plotly</HeroTitle>
             <HeroSubtitle>
-              Learn how you can build a data exporter for your site, to easily
-              send data from your web site to graph in Plotly. Plotly offers a
-              clean, simple, and beautiful visualization tool for your data and
-              your users.
+              Learn how you can build a data exporter for your site, to easily send data from your
+              web site to graph in Plotly. Plotly offers a clean, simple, and beautiful
+              visualization tool for your data and your users.
             </HeroSubtitle>
           </HeroMessaging>
           <HeroActions>
@@ -77,10 +76,7 @@ export default class HeroSection extends React.Component {
                 </a>
               </div>
               <div className="logo-item">
-                <a
-                  target="_blank"
-                  href="http://blog.import.io/post/plotly-integration"
-                >
+                <a target="_blank" href="http://blog.import.io/post/plotly-integration">
                   <img src="https://plot.ly/static/img/export/importio_blue.921b16da2c11.png?auto=compress&auto=format" />
                 </a>
               </div>
@@ -109,6 +105,6 @@ export default class HeroSection extends React.Component {
           </div>
         </HeroBottom>
       </Hero>
-    )
+    );
   }
 }

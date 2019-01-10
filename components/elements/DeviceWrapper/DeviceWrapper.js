@@ -3,7 +3,7 @@ import React from 'react';
 import inPercy from '@percy-io/in-percy';
 export class DeviceWrapper extends React.Component {
   render() {
-    const { content } = this.props,
+    const {content} = this.props,
       device = devices[content.device],
       contentFrame = (
         <ContentFrame
@@ -20,11 +20,9 @@ export class DeviceWrapper extends React.Component {
     return (
       <div className={'device-wrapper'} style={device.styles}>
         <div
-          className={`device-svg framecolor-${content.color} backgroundcolor-${
-            content.background
-          }`}
+          className={`device-svg framecolor-${content.color} backgroundcolor-${content.background}`}
           data-device-type={content.device}
-          dangerouslySetInnerHTML={{ __html: device.svg }}
+          dangerouslySetInnerHTML={{__html: device.svg}}
         />
         {contentFrame}
       </div>
@@ -37,12 +35,8 @@ DeviceWrapper.propTypes = {
 };
 
 function checkPercy() {
-  const hasHostname =
-    typeof window === 'object' && window.location && window.location.hostname;
-  return (
-    hasHostname &&
-    /proxyme\.percy\.io|renderer\.percy\.local/.test(window.location.hostname)
-  );
+  const hasHostname = typeof window === 'object' && window.location && window.location.hostname;
+  return hasHostname && /proxyme\.percy\.io|renderer\.percy\.local/.test(window.location.hostname);
 }
 
 class ContentFrame extends React.Component {
@@ -65,8 +59,8 @@ class ContentFrame extends React.Component {
     });
   }
   render() {
-    const { image, videoSources, contentType, color, device } = this.props;
-    const { mounted } = this.state;
+    const {image, videoSources, contentType, color, device} = this.props;
+    const {mounted} = this.state;
 
     const Video =
       videoSources && mounted ? (
@@ -76,7 +70,7 @@ class ContentFrame extends React.Component {
             preload="auto"
             loop="true"
             className={`device-content`}
-            style={{ width: '100%' }}
+            style={{width: '100%'}}
             {...this.state.autoplay}
           >
             <source src={videoSources[0]} type="video/mp4" />
@@ -94,11 +88,7 @@ class ContentFrame extends React.Component {
 
     if (!device) return content;
 
-    return (
-      <div className={`frame-content ${device} frame --${color}`}>
-        {content}
-      </div>
-    );
+    return <div className={`frame-content ${device} frame --${color}`}>{content}</div>;
   }
 }
 

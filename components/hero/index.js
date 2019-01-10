@@ -35,7 +35,7 @@ export class Hero extends React.Component {
 
     return (
       <section className={classes} style={HeroStyle}>
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={{__html: styles}} />
         <div className="hero-wrapper">{this.props.children}</div>
         <div className="hero-background-image" style={HeroWrapperStyle} />
       </section>
@@ -101,11 +101,7 @@ export class HeroActions extends React.Component {
   }
 
   render() {
-    return (
-      <div className="hero-actions hidden hidden-fade">
-        {this.props.children}
-      </div>
-    );
+    return <div className="hero-actions hidden hidden-fade">{this.props.children}</div>;
   }
 }
 
@@ -125,9 +121,7 @@ export class HeroBottom extends React.Component {
     }
     return (
       <div className="hero-bottom" style={HeroBottomStyles}>
-        <div className="hero-bottom-wrapper hidden hidden-fade">
-          {this.props.children}
-        </div>
+        <div className="hero-bottom-wrapper hidden hidden-fade">{this.props.children}</div>
       </div>
     );
   }

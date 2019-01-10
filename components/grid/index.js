@@ -1,75 +1,75 @@
-import React from 'react'
-import styles from './grid.styles.scss'
+import React from 'react';
+import styles from './grid.styles.scss';
 
 export class GridItem extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let classes = 'grid-item'
+    let classes = 'grid-item';
 
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
-    let columnWidth = '33%'
+    let columnWidth = '33%';
 
-    let gridItemStyles = {}
+    let gridItemStyles = {};
 
     if ('columns' in this.props) {
-      columnWidth = 100 / parseInt(this.props.columns)
-      columnWidth = columnWidth + '%'
+      columnWidth = 100 / parseInt(this.props.columns);
+      columnWidth = columnWidth + '%';
 
       // console.log(columnWidth);
 
       if (this.props.style) {
-        gridItemStyles = this.props.style
-        gridItemStyles.maxWidth = columnWidth
+        gridItemStyles = this.props.style;
+        gridItemStyles.maxWidth = columnWidth;
       } else {
         gridItemStyles = {
           maxWidth: columnWidth,
           width: columnWidth,
-        }
+        };
       }
     }
     return (
       <div className={classes} style={gridItemStyles}>
         <div className="grid-item-wrapper">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 
 export class Grid extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let classes = 'grid'
+    let classes = 'grid';
 
     if ('align-end' in this.props) {
-      classes += ' layout-align-end'
+      classes += ' layout-align-end';
     }
     if ('align-start' in this.props) {
-      classes += ' layout-align-start'
+      classes += ' layout-align-start';
     }
     if ('align-center' in this.props) {
-      classes += ' layout-align-center'
+      classes += ' layout-align-center';
     }
 
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
     return (
       <div className={classes}>
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={{__html: styles}} />
         <div className="grid-wrapper">
           {React.Children.map(this.props.children, child =>
             React.cloneElement(child, {
@@ -79,6 +79,6 @@ export class Grid extends React.Component {
           )}
         </div>
       </div>
-    )
+    );
   }
 }

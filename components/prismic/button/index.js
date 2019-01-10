@@ -31,7 +31,7 @@ export default class Button extends React.Component {
   }
 
   render() {
-    let { data } = this.props;
+    let {data} = this.props;
 
     let url = data.link.url;
 
@@ -54,13 +54,7 @@ export default class Button extends React.Component {
     }
 
     return (
-      <a
-        href={url}
-        target={data.link.target}
-        title={data.title}
-        className={classes}
-        {...download}
-      >
+      <a href={url} target={data.link.target} title={data.title} className={classes} {...download}>
         {/* if: MDI icon field has content*/}
         {data.mdi_icon ? (
           <div className="button-icon button-icon-mdi">
@@ -70,10 +64,7 @@ export default class Button extends React.Component {
           </div>
         ) : null}
         {/* end if */}
-        <div
-          className="button-label"
-          dangerouslySetInnerHTML={{ __html: data.label }}
-        />
+        <div className="button-label" dangerouslySetInnerHTML={{__html: data.label}} />
       </a>
     );
   }

@@ -1,4 +1,3 @@
-
 const PLANS = {
   COMMUNITY: 'plans/community',
   PERSONAL: 'plans/personal',
@@ -25,12 +24,7 @@ const features = [
   },
   {
     value: `Private charts & dashboards`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Live update charts with Python, R, or SQL`,
@@ -54,18 +48,11 @@ const features = [
   },
   {
     value: `2500 charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Unlimited charts`,
-    plans: [
-      PLANS.PROFESSIONAL,
-    ],
+    plans: [PLANS.PROFESSIONAL],
   },
   {
     value: <>Export to PNG & JPG</>,
@@ -78,13 +65,18 @@ const features = [
     ],
   },
   {
-    value: <div aria-label="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image." data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">Export to<br /> SVG, EPS, HTML & PDF*</div>,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    value: (
+      <div
+        aria-label="It is important to note that any figures containing WebGL traces that are exported in a vector format like SVG, EPS or PDF will include encapsulated rasters instead of vectors for some parts of the image."
+        data-microtip-position="top-right"
+        data-microtip-size="medium"
+        role="tooltip"
+      >
+        Export to
+        <br /> SVG, EPS, HTML & PDF*
+      </div>
+    ),
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Multiple built-in themes`,
@@ -98,9 +90,7 @@ const features = [
   },
   {
     value: `Custom, shareable themes`,
-    plans: [
-      PLANS.PROFESSIONAL,
-    ],
+    plans: [PLANS.PROFESSIONAL],
   },
   {
     value: `500KB datasets`,
@@ -114,12 +104,7 @@ const features = [
   },
   {
     value: `10MB datasets`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   //{
   //  value: `30MB datasets`,
@@ -129,7 +114,12 @@ const features = [
   //  ],
   //},
   {
-    value:  <>100 chart saves & exports<br/> per 24h period</>,
+    value: (
+      <>
+        100 chart saves & exports
+        <br /> per 24h period
+      </>
+    ),
     plans: [
       PLANS.COMMUNITY,
       PLANS.PERSONAL,
@@ -139,23 +129,30 @@ const features = [
     ],
   },
   {
-    value:  <>1,000 chart saves & exports<br/> per 24h period</>,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    value: (
+      <>
+        1,000 chart saves & exports
+        <br /> per 24h period
+      </>
+    ),
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
-    value: <>10,000 chart saves & exports<br/> per 24h period</>,
-    plans: [
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-    ],
+    value: (
+      <>
+        10,000 chart saves & exports
+        <br /> per 24h period
+      </>
+    ),
+    plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: <>500 embedded views <br />per 24h period</>,
+    value: (
+      <>
+        500 embedded views <br />
+        per 24h period
+      </>
+    ),
     plans: [
       PLANS.COMMUNITY,
       PLANS.PERSONAL,
@@ -166,12 +163,7 @@ const features = [
   },
   {
     value: <>Unlimited embedded views</>,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Community support`,
@@ -184,26 +176,43 @@ const features = [
     ],
   },
   {
-    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">User Interface chat support*</div>,
+    value: (
+      <div
+        aria-label="including Falcon SQL Client"
+        data-microtip-position="top-right"
+        data-microtip-size="medium"
+        role="tooltip"
+      >
+        User Interface chat support*
+      </div>
+    ),
     plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: <div aria-label="including Falcon SQL Client" data-microtip-position="top-right" data-microtip-size="medium" role="tooltip">User Interface phone support*</div>,
+    value: (
+      <div
+        aria-label="including Falcon SQL Client"
+        data-microtip-position="top-right"
+        data-microtip-size="medium"
+        role="tooltip"
+      >
+        User Interface phone support*
+      </div>
+    ),
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
   {
-    value: <>Support for Falcon SQL Client persistent connections
-    or non-SQL databases</>,
+    value: <>Support for Falcon SQL Client persistent connections or non-SQL databases</>,
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
 ];
 
-      // {
-      //   title: 'Private Cloud',
-      //   slug: PLANS.PRIVATE_CLOUD,
-      //   cost: 9960,
-      //   link: 'https://plot.ly/products/on-premise/',
-      //   subtitle: <>per year,<br/>comes with 5 Pro. users</>,
-      // },
+// {
+//   title: 'Private Cloud',
+//   slug: PLANS.PRIVATE_CLOUD,
+//   cost: 9960,
+//   link: 'https://plot.ly/products/on-premise/',
+//   subtitle: <>per year,<br/>comes with 5 Pro. users</>,
+// },
 
-export { PLANS, PLANS_TO_HIDE, features };
+export {PLANS, PLANS_TO_HIDE, features};

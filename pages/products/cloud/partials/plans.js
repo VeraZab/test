@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { lighten } from 'polished';
+import styled, {css} from 'styled-components';
+import {lighten} from 'polished';
 
 export const offset = 240;
 const StyledPricing = styled.div`
@@ -29,7 +29,7 @@ const Item = styled.div`
   position: relative;
   z-index: 99;
 
-  ${({ mobileOnlyIcon }) =>
+  ${({mobileOnlyIcon}) =>
     mobileOnlyIcon &&
     css`
       svg {
@@ -43,7 +43,7 @@ const Item = styled.div`
     width: 100%;
   }
 
-  ${({ showing, label }) =>
+  ${({showing, label}) =>
     !showing &&
     !label &&
     css`
@@ -56,13 +56,13 @@ const Item = styled.div`
   }
   &:not(:last-of-type) {
   }
-  ${({ spacer }) =>
+  ${({spacer}) =>
     spacer &&
     css`
       border-right: 0 !important;
       border-bottom: 0 !important;
     `};
-  ${({ label }) =>
+  ${({label}) =>
     label &&
     css`
       background: white;
@@ -73,7 +73,7 @@ const Item = styled.div`
       text-align: right;
     `};
 
-  ${({ heading }) =>
+  ${({heading}) =>
     heading &&
     css`
       border-right: 0;
@@ -115,10 +115,10 @@ const StyledLine = styled.div`
   @media (min-width: 1000px) {
     width: 100%;
     display: grid;
-    grid-template-columns: ${({ amount }) =>
+    grid-template-columns: ${({amount}) =>
       amount ? `repeat(${amount}, 1fr);` : 'repeat(5, 1fr);'};
   }
-  ${({ row }) =>
+  ${({row}) =>
     row &&
     css`
       &:hover {
@@ -128,7 +128,7 @@ const StyledLine = styled.div`
         }
       }
     `};
-  ${({ header }) =>
+  ${({header}) =>
     header &&
     css`
       h1,
@@ -261,4 +261,4 @@ Plan.Name = PlanName;
 Plan.Content = PlanHeadingContent;
 Plan.Content.Price = Price;
 Plan.Content.Subtitle = Subtitle;
-export { StyledPricing, Plan };
+export {StyledPricing, Plan};

@@ -1,5 +1,5 @@
-import React from 'react'
-import Typography from 'components/styled/typography'
+import React from 'react';
+import Typography from 'components/styled/typography';
 
 /**
  * HeroSubtitle component
@@ -10,10 +10,10 @@ import Typography from 'components/styled/typography'
  */
 export default class HeroSubtitle extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <Typography.h2 pretitle>{this.props.children}</Typography.h2>
+    return <Typography.h2 pretitle>{this.props.children}</Typography.h2>;
   }
 }

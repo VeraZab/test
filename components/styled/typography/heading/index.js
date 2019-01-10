@@ -1,14 +1,12 @@
-import styled, { injectGlobal, css } from 'styled-components';
-import H1 from './h1'
-import H2 from './h2'
-import H3 from './h3'
-import H4 from './h4'
-import H5 from './h5'
-import H6 from './h6'
+import styled, {injectGlobal, css} from 'styled-components';
+import H1 from './h1';
+import H2 from './h2';
+import H3 from './h3';
+import H4 from './h4';
+import H5 from './h5';
+import H6 from './h6';
 
-const Heading = styled.div`
-
-`;
+const Heading = styled.div``;
 
 Heading.h1 = H1;
 Heading.h2 = H2;

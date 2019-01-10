@@ -16,8 +16,7 @@ class Layout extends React.Component {
     ReactGA.initialize('UA-39373211-1');
     ReactGA.pageview(document.location.pathname);
     (function() {
-      let
-        js,
+      let js,
         q,
         d = document,
         gi = d.getElementById,
@@ -50,7 +49,7 @@ class Layout extends React.Component {
     if (this.props.hideHeader === 'true') {
       return (
         <div>
-          <style dangerouslySetInnerHTML={{ __html: styles }} />
+          <style dangerouslySetInnerHTML={{__html: styles}} />
           <Head meta={this.props.meta} />
           <div className="page">{this.props.children}</div>
           <Footer />
@@ -58,12 +57,8 @@ class Layout extends React.Component {
       );
     } else {
       return (
-        <div
-          className={`page-container${
-            this.props.className ? ' ' + this.props.className : ''
-          }`}
-        >
-          <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <div className={`page-container${this.props.className ? ' ' + this.props.className : ''}`}>
+          <style dangerouslySetInnerHTML={{__html: styles}} />
           <Head meta={this.props.meta} />
           <Header pathname={this.props.pathname} />
           <div className="page">{this.props.children}</div>

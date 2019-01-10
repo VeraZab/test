@@ -1,10 +1,4 @@
-import {
-  ContentSection,
-  ContentPane,
-  Title,
-  Body,
-  Graphic,
-} from 'components/content-section';
+import {ContentSection, ContentPane, Title, Body, Graphic} from 'components/content-section';
 import Buttons from 'components/buttons';
 import CodeExplorer from './code-explorer/code-explorer';
 
@@ -59,8 +53,7 @@ class DashMain extends React.Component {
 
   componentDidMount() {
     (function() {
-      let
-        js,
+      let js,
         q,
         d = document,
         gi = d.getElementById,
@@ -86,8 +79,8 @@ class DashMain extends React.Component {
             <Title>Dash is productive</Title>
             <Body>
               <p>
-                Before dash, apps like these would require an entire team of
-                engineers and designers to create.
+                Before dash, apps like these would require an entire team of engineers and designers
+                to create.
               </p>
               <CodeExplorer />
             </Body>
@@ -103,8 +96,8 @@ class DashMain extends React.Component {
             </div>
             <div className="title">Lightweight</div>
             <p>
-              Dash apps require very little boilerplate to get started: An app
-              like this weighs in at just 40 lines of pure Python.
+              Dash apps require very little boilerplate to get started: An app like this weighs in
+              at just 40 lines of pure Python.
             </p>
           </ContentPane>
           <ContentPane thirds center-vertically>
@@ -116,9 +109,8 @@ class DashMain extends React.Component {
             </div>
             <div className="title">Direct Control</div>
             <p>
-              Dash provides a simple interface for tying UI controls, like
-              sliders, dropdowns, and graphs, with your Python data analysis
-              code.
+              Dash provides a simple interface for tying UI controls, like sliders, dropdowns, and
+              graphs, with your Python data analysis code.
             </p>
           </ContentPane>
           <ContentPane thirds center-vertically>
@@ -130,9 +122,8 @@ class DashMain extends React.Component {
             </div>
             <div className="title">Completely Customizable</div>
             <p>
-              Every aesthetic element of a Dash app is customizable. Dash apps
-              are built and published in the Web, so the full power of CSS is
-              available.
+              Every aesthetic element of a Dash app is customizable. Dash apps are built and
+              published in the Web, so the full power of CSS is available.
             </p>
           </ContentPane>
         </ContentSection>
@@ -142,9 +133,8 @@ class DashMain extends React.Component {
             <Title>Applications built with Dash</Title>
             <Body>
               <p>
-                Explore data, tweak your models, monitor your experiments, or
-                roll your own business intelligence platform. Dash is the
-                frontend to your analytical Python backend.
+                Explore data, tweak your models, monitor your experiments, or roll your own business
+                intelligence platform. Dash is the frontend to your analytical Python backend.
               </p>
             </Body>
           </ContentPane>
@@ -156,10 +146,9 @@ class DashMain extends React.Component {
             <Title>Stock Tickers</Title>
             <Body>
               <p>
-                Built in just under 100 lines of code, this app queries remote
-                financial data from Google Finance and renders interactive
-                candlestick charts. Pandas is used to compute upper and lower
-                bollinger bands.
+                Built in just under 100 lines of code, this app queries remote financial data from
+                Google Finance and renders interactive candlestick charts. Pandas is used to compute
+                upper and lower bollinger bands.
               </p>
 
               <Buttons className="gutter-top" items={demoAppStock} />
@@ -185,14 +174,13 @@ class DashMain extends React.Component {
             <Title>Drug Discovery</Title>
             <Body>
               <p>
-                Explore chemical properties with this drug discovery app. As you
-                hover over points, rich meta information about the drug is
-                displayed in real-time. Buttons above the chart allow you to
-                switch between visualizations.
+                Explore chemical properties with this drug discovery app. As you hover over points,
+                rich meta information about the drug is displayed in real-time. Buttons above the
+                chart allow you to switch between visualizations.
               </p>
               <p>
-                Dash enables you to build apps that are tailor-made to your
-                datasets and exploratory process.
+                Dash enables you to build apps that are tailor-made to your datasets and exploratory
+                process.
               </p>
               <Buttons className="gutter-top" items={demoAppDrugs} />
             </Body>
@@ -205,15 +193,13 @@ class DashMain extends React.Component {
             <Title>Oil and Gas Dashboard</Title>
             <Body>
               <p>
-                This Dash App displays oil production in western New York.
-                Filters at the top of the app update the graphs below. Selecting
-                or hovering over data in one plot will update the other plots
-                ("crossfiltering").
+                This Dash App displays oil production in western New York. Filters at the top of the
+                app update the graphs below. Selecting or hovering over data in one plot will update
+                the other plots ("crossfiltering").
               </p>
               <p>
-                Dash apps are powered by Plotly.js, a fully featured charting
-                library including maps like these, financial charts, scientific
-                graphs, and more.
+                Dash apps are powered by Plotly.js, a fully featured charting library including maps
+                like these, financial charts, scientific graphs, and more.
               </p>
               <Buttons className="gutter-top" items={demoAppOil} />
             </Body>
@@ -231,15 +217,14 @@ class DashMain extends React.Component {
             <Title>Open Source with Enterprise Addons</Title>
             <Body>
               <p>
-                We’re strong believers that the future of technical computing
-                and business intelligence is open source. Dash is MIT licensed.
-                Run Dash on your desktop environment for free.
+                We’re strong believers that the future of technical computing and business
+                intelligence is open source. Dash is MIT licensed. Run Dash on your desktop
+                environment for free.
               </p>
               <p>
-                Using Dash inside your enterprise? Plotly offers the Dash
-                Deployment Server for 1-click app deployment and app permissioning
-                with LDAP and Active Directory, all behind your corporate
-                firewall.&nbsp;
+                Using Dash inside your enterprise? Plotly offers the Dash Deployment Server for
+                1-click app deployment and app permissioning with LDAP and Active Directory, all
+                behind your corporate firewall.&nbsp;
               </p>
               <p>
                 <a
@@ -267,26 +252,22 @@ class DashMain extends React.Component {
                           'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-sharing.png?auto=compress&auto=format")',
                       }}
                     >
-                      <div
-                        className="card-image-label"
-                        style={{ width: '100%' }}
-                      >
+                      <div className="card-image-label" style={{width: '100%'}}>
                         Dash Deployment Server
                       </div>
                     </div>
                     <div className="card-body">
                       <p>
-                        Managing apps and servers inside your enterprise is
-                        usually a full time job. Our goal with the Dash Deployment Server
-                        is to make deploying and sharing a Dash app internally
-                        as easy and secure as possible. No dev-ops required.
+                        Managing apps and servers inside your enterprise is usually a full time job.
+                        Our goal with the Dash Deployment Server is to make deploying and sharing a
+                        Dash app internally as easy and secure as possible. No dev-ops required.
                       </p>
 
                       <p>
-                        The Dash Deployment Server handles all of the hard parts about
-                        managing apps for you: deployment, managing updates,
-                        error handling, URL routing, LDAP integration, and more.
-                        Deploy and share an app behind your firewall in minutes.
+                        The Dash Deployment Server handles all of the hard parts about managing apps
+                        for you: deployment, managing updates, error handling, URL routing, LDAP
+                        integration, and more. Deploy and share an app behind your firewall in
+                        minutes.
                       </p>
                     </div>
                     <div className="card-action">
@@ -313,19 +294,17 @@ class DashMain extends React.Component {
                           'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-portal.png?auto=compress&auto=format")',
                       }}
                     >
-                      <div
-                        className="card-image-label"
-                        style={{ width: '100%' }}
-                      >
-                        Dash Deployment Server<br />App Portal
+                      <div className="card-image-label" style={{width: '100%'}}>
+                        Dash Deployment Server
+                        <br />
+                        App Portal
                       </div>
                     </div>
                     <div className="card-body">
                       <p>
-                        The Dash Deployment Server ties into Chart Studio Enterprise, storing
-                        your analytical Dash applications with plotly graphs,
-                        datasets, SQL queries, and dashboards in one
-                        company-wide portal.
+                        The Dash Deployment Server ties into Chart Studio Enterprise, storing your
+                        analytical Dash applications with plotly graphs, datasets, SQL queries, and
+                        dashboards in one company-wide portal.
                       </p>
                     </div>
                     <div className="card-action">

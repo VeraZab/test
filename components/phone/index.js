@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export default class Phone extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -19,6 +19,6 @@ export default class Phone extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

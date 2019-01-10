@@ -1,40 +1,40 @@
-import React from 'react'
-import Link from 'next/link'
-import NProgress from 'nprogress'
-import Router from 'next/router'
-import Navigation from './navigation'
+import React from 'react';
+import Link from 'next/link';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+import Navigation from './navigation';
 
-import shortid from 'shortid'
+import shortid from 'shortid';
 
 Router.onRouteChangeStart = url => {
-  NProgress.start()
-}
+  NProgress.start();
+};
 Router.onRouteChangeComplete = () => {
-  NProgress.done()
-}
-Router.onRouteChangeError = () => NProgress.done()
+  NProgress.done();
+};
+Router.onRouteChangeError = () => NProgress.done();
 
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let { doc } = this.props
+    let {doc} = this.props;
 
-    let classes = 'site-header site-header-style--product'
+    let classes = 'site-header site-header-style--product';
 
     let logo = (
       <img
         src="https://tamarack-prismic.imgix.net/plotly/eb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png?w=300&auto=format"
         alt="Plotly"
       />
-    )
+    );
 
     if (doc) {
-      classes += ' ' + doc.data.hero_background_style
+      classes += ' ' + doc.data.hero_background_style;
       if (doc.data && doc.data.alt_logo && doc.data.alt_logo.url) {
-        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />
+        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />;
       }
     }
 
@@ -62,8 +62,8 @@ class Header extends React.Component {
           </div>
         </div>
       </header>,
-    ]
+    ];
   }
 }
 
-export default Header
+export default Header;

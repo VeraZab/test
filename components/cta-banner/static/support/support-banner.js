@@ -1,12 +1,11 @@
 import React from 'react';
-import { CtaBanner, CtaBannerBody } from '../../index';
+import {CtaBanner, CtaBannerBody} from '../../index';
 import Buttons from '../../../buttons/index';
 
 const columnData = [
   {
     title: 'Support Open Source',
-    message:
-      'These libraries are free forever. Your support helps to keep them top notch.',
+    message: 'These libraries are free forever. Your support helps to keep them top notch.',
     graphic:
       'https://prismic-io.s3.amazonaws.com/plotly%2F3a1e30c4-c4c1-4ce8-af06-962c1912853f_support_open_source%402x.png',
     actions: null,
@@ -32,8 +31,7 @@ const columnData = [
   },
   {
     title: 'Share Online',
-    message:
-      'Share charts, dashboards, Jupyter notebooks, and presentations online.',
+    message: 'Share charts, dashboards, Jupyter notebooks, and presentations online.',
     graphic:
       'https://prismic-io.s3.amazonaws.com/plotly%2F44724c0b-2f05-40c3-8224-8d1705c8db2b_share_online%402x.png',
     actions: null,
@@ -53,10 +51,7 @@ export default class SupportBanner extends React.Component {
             return (
               <div key={i} className="column-actions center">
                 {' '}
-                <Buttons
-                  className="center padding-top"
-                  items={column.actions}
-                />
+                <Buttons className="center padding-top" items={column.actions} />
               </div>
             );
           } else {
