@@ -1,15 +1,13 @@
 import React from 'react';
-import PrismicDOM from 'prismic-dom';
 import shortid from 'shortid';
-
-import Graphic from 'components/prismic/content-section/graphic';
-import Button from 'components/prismic/button';
-import {constructButtons} from 'lib/construct-buttons';
 
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
 import Subtitle from './slice-elements/subtitle';
 import {getComponentClass} from './slice-elements/utils';
+import Body from './slice-elements/body';
+import Actions from './slice-elements/actions';
+import GraphicDisplay from './slice-elements/graphic-display';
 
 class GraphicTextWithLogos extends React.Component {
   constructor(props) {
@@ -18,12 +16,11 @@ class GraphicTextWithLogos extends React.Component {
 
   render() {
     const {
-      data: {primary, items},
+      data: {primary, items, slice_type},
     } = this.props;
 
     const componentClass = 'content-section-p';
-    const classes = getComponentClass(primary, 'graphic_with_text_logos');
-    const buttons = constructButtons(primary);
+    const classes = getComponentClass(primary, slice_type);
 
     return (
       <section className={classes}>
@@ -47,31 +44,11 @@ class GraphicTextWithLogos extends React.Component {
               }
             >
               {items.map(logo => (
-                <Graphic noBlur key={shortid.generate()} data={logo} />
+                <GraphicDisplay noBlur key={shortid.generate()} data={logo} />
               ))}
             </div>
-
-            {primary.body &&
-              primary.body.length && (
-                <div className={'content-section-p-body'}>
-                  <div
-                    className="content-section-p-body-wrapper"
-                    dangerouslySetInnerHTML={{
-                      __html: PrismicDOM.RichText.asHtml(primary.body),
-                    }}
-                  />
-                </div>
-              )}
-
-            {buttons.length > 0 && (
-              <div className={'content-section-p-actions'}>
-                <div className="content-section-p-actions-wrapper buttons">
-                  {buttons.map(button => (
-                    <Button key={shortid.generate()} data={button} />
-                  ))}
-                </div>
-              </div>
-            )}
+            <Body primary={primary} />
+            <Actions primary={primary} />
           </div>
         </div>
       </section>

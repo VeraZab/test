@@ -1,13 +1,12 @@
 import React from 'react';
 import PrismicDOM from 'prismic-dom';
 
-import Graphic from './graphic';
+import GraphicDisplay from '../slices/slice-elements/graphic-display';
 import Button from 'components/prismic/button';
 import Browser from 'components/browser';
 import Phone from 'components/phone';
 import GithubStarsSlice from 'components/prismic/slices/github_stars';
 import CodeExplorer from 'components/prismic/slices/code-explorer';
-import AdvancedCards from 'components/prismic/slices/advanced-cards';
 import Iframes from 'components/prismic/slices/iframe';
 
 import PricingCards from 'components/prismic/slices/pricing-cards';
@@ -137,7 +136,7 @@ export default class ContentSection extends React.Component {
         primary.body_two[0].text !== ''
       ) {
         return (
-          <div className={'content-section-p-body content-section-p-body-columns'}>
+          <div className="content-section-p-body content-section-p-body-columns">
             <div className="content-section-p-body-wrapper">
               <div
                 className="content-section-p-body-column-one"
@@ -156,7 +155,7 @@ export default class ContentSection extends React.Component {
         );
       }
       return (
-        <div className={'content-section-p-body'}>
+        <div className="content-section-p-body">
           <div
             className="content-section-p-body-wrapper"
             dangerouslySetInnerHTML={{
@@ -183,7 +182,7 @@ export default class ContentSection extends React.Component {
           return (
             <div className={componentClass + '-graphic ' + componentClass + '-area'}>
               <Browser>
-                <Graphic data={primary} />
+                <GraphicDisplay data={primary} />
               </Browser>
             </div>
           );
@@ -195,7 +194,7 @@ export default class ContentSection extends React.Component {
           return (
             <div className={componentClass + '-graphic ' + componentClass + '-area'}>
               <Phone>
-                <Graphic data={primary} />
+                <GraphicDisplay data={primary} />
               </Phone>
             </div>
           );
@@ -216,13 +215,13 @@ export default class ContentSection extends React.Component {
                 '-area'
               }
             >
-              <Graphic background={true} data={primary} />
+              <GraphicDisplay background={true} data={primary} />
             </div>
           );
         }
         return (
           <div className={componentClass + '-graphic ' + componentClass + '-area'}>
-            <Graphic data={primary} />
+            <GraphicDisplay data={primary} />
           </div>
         );
       }
@@ -314,37 +313,11 @@ export default class ContentSection extends React.Component {
         </div>
       ) : null;
 
-    if (slice_type === 'cs-tabs') {
-      return (
-        <section className={classes}>
-          <div className="content-section-p-wrapper">
-            {graphic()}
-            <div className={componentClass + '-details ' + componentClass + '-area'}>
-              {Pretitle}
-              {Title}
-              {Subtitle}
-              {body()}
-              {actions()}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
     const GithubStarsSection =
       slice_type === 'cs-github-stars' ? (
         <div className="github-stars">
           <GithubStarsSlice key={shortid.generate()} slice={data} />
         </div>
-      ) : null;
-
-    const AdvancedCardsSection =
-      slice_type === 'cs-advanced-cards' ? (
-        <AdvancedCards
-          columns={primary.card_columns ? primary.card_columns : '2'}
-          variant={primary.card_variant}
-          data={items}
-        />
       ) : null;
 
     const CodeExplorerSection =
@@ -372,7 +345,6 @@ export default class ContentSection extends React.Component {
             {IframesSection}
           </div>
           {graphic()}
-          {AdvancedCardsSection}
           {GithubStarsSection}
         </div>
         {PricingCardsSection}

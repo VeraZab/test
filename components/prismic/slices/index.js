@@ -23,6 +23,7 @@ import Quotes from './quotes';
 import {ImageSectionSlice} from './image-section';
 import GraphicTextWithLogos from './graphic-text-logos';
 import GraphicTextWithSlides from './graphic-text-slides';
+import AdvancedCards from './advanced-cards';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -38,7 +39,6 @@ export default class Slices extends React.Component {
           {data.map((slice, i) => {
             if (
               slice.slice_type === 'graphic_with_text' ||
-              slice.slice_type === 'cs-advanced-cards' ||
               slice.slice_type === 'cs-iframe' ||
               slice.slice_type === 'cs-code-explorer' ||
               slice.slice_type === 'cs-github-stars'
@@ -55,6 +55,7 @@ export default class Slices extends React.Component {
               'cs-architecture': <ArchitectureSection key={i} data={slice} />,
               quotes_logos: <Quotes key={i} data={slice} />,
               'cs-pricing': <PricingCardsSection key={i} data={slice} />,
+              'cs-advanced-cards': <AdvancedCards key={i} data={slice} />,
             }[slice.slice_type];
           })}
         </div>
