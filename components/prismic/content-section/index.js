@@ -323,14 +323,11 @@ export default class ContentSection extends React.Component {
     const CodeExplorerSection =
       slice_type === 'cs-code-explorer' ? (
         <div className="content-section-p-area--code-explorer">
-          <CodeExplorer data={data} />{' '}
+          <CodeExplorer data={data} />
         </div>
       ) : null;
 
     const IframesSection = slice_type === 'cs-iframe' && <Iframes data={items} />;
-
-    const PricingCardsSection = slice_type === 'cs-pricing' &&
-      items && <PricingCards cards={data.pricing_cards} />;
 
     return (
       <section className={classes}>
@@ -347,7 +344,6 @@ export default class ContentSection extends React.Component {
           {graphic()}
           {GithubStarsSection}
         </div>
-        {PricingCardsSection}
       </section>
     );
   }
