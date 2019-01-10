@@ -30,7 +30,6 @@ export default class Navigation extends React.Component {
     if (this.state.mobileMenu === true) {
       return 'Close';
     }
-
     if (this.state.mobileMenu === false) {
       return 'Menu';
     }
@@ -110,7 +109,6 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div className="site-header-navigation">
-        <style dangerouslySetInnerHTML={{__html: styles}} />
         <div className={'site-header-navigation-wrapper'}>
           <div className="mobile-menu-button" onClick={this.toggleMobileMenu.bind(this)}>
             <a className="navigation-product-item">{this.mobileMenuButtonText()}</a>
