@@ -116,7 +116,7 @@
       }
       @include media('<=300px') {
         flex-direction: none;
-        height: 800px;
+        height: 1100px;
       }
       .pricing__card__addons__section__label {
         color: $color-rhino-core;
