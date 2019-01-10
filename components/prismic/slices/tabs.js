@@ -2,7 +2,7 @@ import React from 'react';
 import shortid from 'shortid';
 
 import Image from 'components/prismic/Image';
-import {getComponentClass} from './slice-elements/utils';
+import SliceOuter from './slice-elements/slice-outer';
 import Pretitle from './slice-elements/pretitle';
 import Title from './slice-elements/title';
 import Subtitle from './slice-elements/subtitle';
@@ -88,7 +88,6 @@ export default class TabsSlice extends React.Component {
     );
 
     const componentClass = 'content-section-p';
-    const classes = getComponentClass(tab.primary, tab.slice_type);
 
     return (
       <div className="tabs">
@@ -122,26 +121,22 @@ export default class TabsSlice extends React.Component {
             </div>
           </div>
           <div className="tabs__content">
-            <section key={tab.primary.uid} className={classes}>
-              <div className="content-section-p-wrapper">
-                <Graphic primary={tab.primary} />
-                <div className={componentClass + '-details ' + componentClass + '-area'}>
-                  {Boolean(tab.primary.pretitle) && <Pretitle pretitle={tab.primary.pretitle} />}
-                  {Boolean(
-                    tab.primary.title &&
-                      tab.primary.title.length &&
-                      tab.primary.title[0].text !== ''
-                  ) && <Title title={tab.primary.title} />}
-                  {Boolean(
-                    tab.primary.subtitle &&
-                      tab.primary.subtitle.length &&
-                      tab.primary.subtitle[0].text !== ''
-                  ) && <Subtitle subtitle={tab.primary.subtitle} />}
-                  <Body primary={tab.primary} />
-                  <Actions primary={tab.primary} />
-                </div>
+            <SliceOuter data={tab}>
+              <Graphic primary={tab.primary} />
+              <div className={componentClass + '-details ' + componentClass + '-area'}>
+                {Boolean(tab.primary.pretitle) && <Pretitle pretitle={tab.primary.pretitle} />}
+                {Boolean(
+                  tab.primary.title && tab.primary.title.length && tab.primary.title[0].text !== ''
+                ) && <Title title={tab.primary.title} />}
+                {Boolean(
+                  tab.primary.subtitle &&
+                    tab.primary.subtitle.length &&
+                    tab.primary.subtitle[0].text !== ''
+                ) && <Subtitle subtitle={tab.primary.subtitle} />}
+                <Body primary={tab.primary} />
+                <Actions primary={tab.primary} />
               </div>
-            </section>
+            </SliceOuter>
           </div>
         </div>
       </div>

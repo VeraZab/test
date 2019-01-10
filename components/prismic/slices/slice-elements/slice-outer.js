@@ -1,4 +1,6 @@
-export const getComponentClass = (primary, slice_type, className) => {
+import React from 'react';
+
+const getComponentClass = (primary, slice_type, className) => {
   const componentClass = 'content-section-p';
   let classes = componentClass;
 
@@ -80,3 +82,11 @@ export const getComponentClass = (primary, slice_type, className) => {
 
   return classes;
 };
+
+export default function SliceOuter({data: {primary, slice_type}, children}) {
+  return (
+    <section className={getComponentClass(primary, slice_type)}>
+      <div className="content-section-p-wrapper">{children}</div>
+    </section>
+  );
+}
