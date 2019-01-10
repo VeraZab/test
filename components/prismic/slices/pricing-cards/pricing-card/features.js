@@ -8,7 +8,7 @@ class PricingCardFeatures extends React.Component {
     const features = this.props;
     const Features = (
       <>
-        {[1, 2, 31, 4, 51].map(n => (
+        {[1, 2, 31, 4, 51, 6].map(n => (
           <div className="pricing__card__feature">
             {renderPrismic(features.data.content['feature' + n])}
           </div>
