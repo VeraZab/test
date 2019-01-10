@@ -1,90 +1,75 @@
-import React from 'react'
-import styles from './content-section.scss'
-import Image from 'components/prismic/Image'
+import React from 'react';
+import styles from './content-section.scss';
+import Image from 'components/prismic/Image';
 
 export class Title extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     return (
       <div className={'content-section-title title-l ' + this.props.className}>
-        <div className="content-section-title-wrapper hidden">
-          {this.props.children}
-        </div>
+        <div className="content-section-title-wrapper hidden">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 export class Subtitle extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     return (
-      <div
-        className={
-          'content-section-subtitle  pre-title title-med ' +
-          this.props.className
-        }
-      >
-        <div className="content-section-subtitle-wrapper hidden">
-          {this.props.children}
-        </div>
+      <div className={'content-section-subtitle  pre-title title-med ' + this.props.className}>
+        <div className="content-section-subtitle-wrapper hidden">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 export class Body extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     return (
       <div className={'content-section-body ' + this.props.className}>
-        <div className="content-section-body-wrapper hidden">
-          {this.props.children}
-        </div>
+        <div className="content-section-body-wrapper hidden">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 export class Graphic extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let classes = ''
+    let classes = '';
 
     let graphic,
-      label = () => ''
+      label = () => '';
 
     if (this.props.prismic) {
       if (this.props.link) {
         graphic = graphic = () => (
-          <a
-            href={this.props.link}
-            className="content-section-graphic-image-link"
-            target="_blank"
-          >
+          <a href={this.props.link} className="content-section-graphic-image-link" target="_blank">
             <div>
               <Image data={this.props.image} />
             </div>
           </a>
-        )
-        classes += ' content-section-graphic-image'
+        );
+        classes += ' content-section-graphic-image';
       }
       if (this.props.image && !this.props.link) {
         graphic = graphic = () => (
           <div>
             <Image data={this.props.image} />
           </div>
-        )
-        classes += ' content-section-graphic-image'
+        );
+        classes += ' content-section-graphic-image';
       }
       if (this.props.video) {
         graphic = graphic = () => (
@@ -97,11 +82,11 @@ export class Graphic extends React.Component {
             <source src={this.props.video} type="video/mp4" />
             <img src={this.props.videoPlaceholder} />
           </video>
-        )
-        classes += ' content-section-graphic-video'
+        );
+        classes += ' content-section-graphic-video';
       }
       if (this.props.shadow === 'false') {
-        classes += ' content-section-graphic-image-noshadow'
+        classes += ' content-section-graphic-image-noshadow';
       }
 
       if (this.props.label) {
@@ -110,18 +95,16 @@ export class Graphic extends React.Component {
             <div className="content-section-graphic-label">
               <a href={this.props.link}>{this.props.label}</a>
             </div>
-          )
+          );
         } else {
           label = label = () => (
-            <div className="content-section-graphic-label">
-              {this.props.label}
-            </div>
-          )
+            <div className="content-section-graphic-label">{this.props.label}</div>
+          );
         }
       }
 
       if (this.props.className) {
-        classes += ' ' + this.props.className
+        classes += ' ' + this.props.className;
       }
       return (
         <div className={'content-section-graphic ' + classes}>
@@ -130,25 +113,21 @@ export class Graphic extends React.Component {
             {label()}
           </div>
         </div>
-      )
+      );
     }
 
     if (!this.props.prismic) {
       if (this.props.link) {
         graphic = graphic = () => (
-          <a
-            href={this.props.link}
-            className="content-section-graphic-image-link"
-            target="_blank"
-          >
+          <a href={this.props.link} className="content-section-graphic-image-link" target="_blank">
             <img src={this.props.image} />
           </a>
-        )
-        classes += ' content-section-graphic-image'
+        );
+        classes += ' content-section-graphic-image';
       }
       if (this.props.image && !this.props.link) {
-        graphic = graphic = () => <img src={this.props.image} />
-        classes += ' content-section-graphic-image'
+        graphic = graphic = () => <img src={this.props.image} />;
+        classes += ' content-section-graphic-image';
       }
       if (this.props.video) {
         graphic = graphic = () => (
@@ -161,11 +140,11 @@ export class Graphic extends React.Component {
             <source src={this.props.video} type="video/mp4" />
             <img src={this.props.videoPlaceholder} />
           </video>
-        )
-        classes += ' content-section-graphic-video'
+        );
+        classes += ' content-section-graphic-video';
       }
       if (this.props.shadow === 'false') {
-        classes += ' content-section-graphic-image-noshadow'
+        classes += ' content-section-graphic-image-noshadow';
       }
 
       if (this.props.label) {
@@ -174,18 +153,16 @@ export class Graphic extends React.Component {
             <div className="content-section-graphic-label">
               <a href={this.props.link}>{this.props.label}</a>
             </div>
-          )
+          );
         } else {
           label = label = () => (
-            <div className="content-section-graphic-label">
-              {this.props.label}
-            </div>
-          )
+            <div className="content-section-graphic-label">{this.props.label}</div>
+          );
         }
       }
 
       if (this.props.className) {
-        classes += ' ' + this.props.className
+        classes += ' ' + this.props.className;
       }
       return (
         <div className={'content-section-graphic ' + classes}>
@@ -194,98 +171,93 @@ export class Graphic extends React.Component {
             {label()}
           </div>
         </div>
-      )
+      );
     }
   }
 }
 
 export class ContentPane extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let classes = '',
-      { style } = this.props
+    let classes = '';
+    const {style} = this.props;
 
     if ('text' in this.props) {
-      classes += ' content-section-pane-text'
+      classes += ' content-section-pane-text';
     }
     if ('graphic' in this.props) {
-      classes += ' content-section-pane-graphic'
+      classes += ' content-section-pane-graphic';
     }
     if ('flex' in this.props) {
-      classes += ' content-section-pane-flex'
+      classes += ' content-section-pane-flex';
     }
     if ('half' in this.props) {
-      classes += ' content-section-pane-half'
+      classes += ' content-section-pane-half';
     }
     if ('thirds' in this.props) {
-      classes += ' content-section-pane-third'
+      classes += ' content-section-pane-third';
     }
     if ('left' in this.props) {
-      classes += ' content-section-pane-align-left'
+      classes += ' content-section-pane-align-left';
     }
     if ('center' in this.props) {
-      classes += ' content-section-pane-align-center'
+      classes += ' content-section-pane-align-center';
     }
     if ('center-vertically' in this.props) {
-      classes += ' content-section-pane-align-center-vertically'
+      classes += ' content-section-pane-align-center-vertically';
     }
     if ('align-end' in this.props) {
-      classes += ' layout-align-end'
+      classes += ' layout-align-end';
     }
     if ('align-start' in this.props) {
-      classes += ' layout-align-center'
+      classes += ' layout-align-center';
     }
     if ('align-center' in this.props) {
-      classes += ' layout-align-center'
+      classes += ' layout-align-center';
     }
     if ('right' in this.props) {
-      classes += ' content-section-pane-align-right'
+      classes += ' content-section-pane-align-right';
     }
     if ('full' in this.props) {
-      classes += ' content-section-pane-full'
+      classes += ' content-section-pane-full';
     }
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
     return (
       <div className={'content-section-pane' + classes} style={style}>
-        <div className="content-section-pane-wrapper hidden">
-          {this.props.children}
-        </div>
+        <div className="content-section-pane-wrapper hidden">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 
 export class ContentSection extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let classes = ''
-    let contentSectionStyles = null
+    let classes = '';
+    let contentSectionStyles = null;
 
     if (this.props.style) {
-      contentSectionStyles = this.props.style
+      contentSectionStyles = this.props.style;
     }
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
     return (
       <section className={'content-section ' + classes}>
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
-        <div
-          className="content-section-wrapper hidden"
-          style={contentSectionStyles}
-        >
+        <style dangerouslySetInnerHTML={{__html: styles}} />
+        <div className="content-section-wrapper hidden" style={contentSectionStyles}>
           {this.props.children}
         </div>
       </section>
-    )
+    );
   }
 }

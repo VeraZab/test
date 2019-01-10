@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import {constructButtons} from 'lib/construct-buttons';
 import {numberWithCommas} from 'lib/format-currency';
 import Button from 'components/prismic/button';
-import SwitchComponent from 'components/switch';
-import {renderPrismic} from 'lib/renderPrismicRichText';
 
-const shortid = require('shortid');
+import shortid from 'shortid';
 
 class PricingCardHeader extends React.Component {
   constructor(props) {
@@ -30,7 +28,10 @@ class PricingCardHeader extends React.Component {
         <h2 className="price">
           <span className="price__symbol">$</span>
           {numberWithCommas(
-            parseInt(this.props.pricingMode === 'Private Cloud' ? price : toggle_state_second_price)
+            parseInt(
+              this.props.pricingMode === 'Private Cloud' ? price : toggle_state_second_price,
+              10
+            )
           )}
         </h2>
       </div>

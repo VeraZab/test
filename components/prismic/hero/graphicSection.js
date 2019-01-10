@@ -1,6 +1,4 @@
 import React from 'react';
-import PrismicDOM from 'prismic-dom';
-import Button from 'components/prismic/button';
 import Browser from 'components/browser';
 import Image from 'components/prismic/Image';
 
@@ -17,7 +15,7 @@ export default class HeroGraphicSection extends React.Component {
   }
 
   render() {
-    let {data} = this.props;
+    const {data} = this.props;
 
     let styles = {};
 
@@ -28,7 +26,9 @@ export default class HeroGraphicSection extends React.Component {
     let graphic = null;
 
     if (data.hero_slices.find(slice => slice.slice_type === 'multiple_graphics')) {
-      let hero_graphics = data.hero_slices.find(slice => slice.slice_type === 'multiple_graphics');
+      const hero_graphics = data.hero_slices.find(
+        slice => slice.slice_type === 'multiple_graphics'
+      );
       return (
         <div className="hero-prismic-graphic-section" style={styles}>
           <div className="hero-prismic-graphic-section-wrapper">
@@ -53,7 +53,7 @@ export default class HeroGraphicSection extends React.Component {
     }
 
     if (data.hero_slices.find(slice => slice.slice_type === 'two_graphics')) {
-      let hero_graphics = data.hero_slices.find(slice => slice.slice_type === 'two_graphics');
+      const hero_graphics = data.hero_slices.find(slice => slice.slice_type === 'two_graphics');
       return (
         <div className="hero-prismic-graphic-section" style={styles}>
           <div className="hero-prismic-graphic-section-wrapper">
@@ -81,7 +81,7 @@ export default class HeroGraphicSection extends React.Component {
       return null;
     }
 
-    let hero_animation = (
+    const hero_animation = (
       <video
         id="sampleMovie"
         style={{width: '80%', float: 'right', marginRight: '50px'}}

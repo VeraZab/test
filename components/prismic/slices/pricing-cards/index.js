@@ -10,8 +10,8 @@
 
 import React from 'react';
 import PricingCard from 'components/prismic/slices/pricing-cards/pricing-card';
-import SwitchComponent from '../../../../components/switch';
-import {SwitchContainer, HeadingContainer, H1, H2} from '../../../../components/styled/on-prem';
+import SwitchComponent from 'components/switch';
+import {SwitchContainer, HeadingContainer, H1, H2} from 'components/styled/on-prem';
 import shortid from 'shortid';
 
 class PricingCardsContainer extends React.Component {
@@ -36,13 +36,14 @@ class PricingCardsContainer extends React.Component {
   }
 
   render() {
-    const {slice} = this.props;
+    const {data} = this.props;
     const cards =
-      slice.linked_items &&
-      slice.linked_items[0] &&
-      slice.linked_items[0].pricing_cards &&
-      slice.linked_items[0].pricing_cards.data &&
-      slice.linked_items[0].pricing_cards.data.body;
+      data &&
+      data.linked_items &&
+      data.linked_items[0] &&
+      data.linked_items[0].pricing_cards &&
+      data.linked_items[0].pricing_cards.data &&
+      data.linked_items[0].pricing_cards.data.body;
     if (!cards) {
       return null;
     }

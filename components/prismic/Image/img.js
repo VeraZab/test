@@ -1,6 +1,5 @@
 import React from 'react';
-
-const shortid = require('shortid');
+import shortid from 'shortid';
 
 export default class Img extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ export default class Img extends React.Component {
     const lozad = require('lozad');
 
     if (lozad) {
-      let observer = lozad('.lozad', {
+      const observer = lozad('.lozad', {
         threshold: 0.05,
         load: function(el) {
           if (el.dataset.src) {
@@ -20,7 +19,7 @@ export default class Img extends React.Component {
               el.classList.add('image-loaded');
             };
           } else if (el.dataset.backgroundImage) {
-            let img = new Image();
+            const img = new Image();
             img.src = el.dataset.backgroundImage;
             img.onload = function() {
               el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`;
@@ -35,16 +34,16 @@ export default class Img extends React.Component {
 
   render() {
     const key = shortid.generate();
-    let { data } = this.props;
-    let { imageParams } = this.props;
+    const {data} = this.props;
+    const {imageParams} = this.props;
     if (this.props.background) {
-      let previewStyle = {
+      const previewStyle = {
         backgroundImage: 'url(' + data.url + imageParams.preview + ')',
         backgroundSize: 'cover',
         backgroundPosition: this.props.position,
         backgroundAttachment: this.props.attachment,
       };
-      let hqStyle = {
+      const hqStyle = {
         backgroundSize: 'cover',
         backgroundPosition: this.props.position,
         backgroundAttachment: this.props.attachment,
@@ -73,11 +72,7 @@ export default class Img extends React.Component {
       <div className={classes} style={this.props.styles} key={key}>
         <div className="image-wrapper">
           <div className="image-hq">
-            <img
-              className={'lozad'}
-              data-src={data.url + imageParams.hq}
-              alt=""
-            />
+            <img className="lozad" data-src={data.url + imageParams.hq} alt="" />
           </div>
           <div className="image-preview">
             <img src={data.url + imageParams.preview} alt="" />

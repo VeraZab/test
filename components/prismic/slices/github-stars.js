@@ -36,11 +36,11 @@ export default class GithubStars extends React.Component {
             ) && <Subtitle subtitle={primary.subtitle} />}
             <Body primary={primary} />
             <Actions primary={primary} />
-            <div className="content-section-p-area--code-explorer">
-              <GithubStarsSlice slice={data} />
-            </div>
           </div>
           <Graphic primary={primary} />
+          <div className="github-stars">
+            <GithubStarsSlice slice={data} />
+          </div>
         </div>
       </section>
     );

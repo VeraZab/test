@@ -60,11 +60,13 @@ const JobsLocation = styled.h3`
   opacity: 0.5;
 `;
 const renderItems = items =>
+  items &&
+  items.length &&
   items.map(({description1, requirements, misc_extra_text, location, position, time}, i) => (
     <JobListing key={i}>
       <JobsHeader>
         <div>
-          <JobsTime>{misc_extra_text[0].text == 'fr' ? 'Temps Plein' : time}</JobsTime>
+          <JobsTime>{misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}</JobsTime>
           <div className="content-section-p-title">
             <h2>{position}</h2>
           </div>
@@ -73,7 +75,7 @@ const renderItems = items =>
         </div>
         <div>
           <Button primary href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}>
-            {misc_extra_text[0].text == 'fr'
+            {misc_extra_text[0].text === 'fr'
               ? 'Soumettez votre candidature'
               : 'Apply for this position'}
           </Button>
@@ -88,7 +90,7 @@ const renderItems = items =>
     </JobListing>
   ));
 
-const Jobs = data => {
+const Jobs = ({data}) => {
   const items = data.items;
   return (
     <StyledJobs>
@@ -97,7 +99,9 @@ const Jobs = data => {
           <div className="content-section-p-details content-section-p-area">
             <div className="content-section-p-title" style={{paddingBottom: '80px'}}>
               <h1>
-                {items[0].misc_extra_text[0].text === 'fr' ? "Offres d'Emploi" : 'Open Positions'}
+                {items && items[0] && items[0].misc_extra_text[0].text === 'fr'
+                  ? "Offres d'Emploi"
+                  : 'Open Positions'}
               </h1>
             </div>
             {renderItems(items)}

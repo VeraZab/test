@@ -38,7 +38,7 @@ export default class CodeExplorer extends React.Component {
             <Actions primary={primary} />
           </div>
           <Graphic primary={primary} />
-          <div className="github-stars">
+          <div className="content-section-p-area--code-explorer">
             <CodeExplorerSlice data={data} />
           </div>
         </div>
