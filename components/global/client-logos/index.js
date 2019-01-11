@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export class ClientLogos extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -29,6 +29,6 @@ export class ClientLogos extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

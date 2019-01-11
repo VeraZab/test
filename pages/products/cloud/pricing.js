@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './pricing.styles.scss'
-import Buttons from 'components/buttons'
+import React from 'react';
+import styles from './pricing.styles.scss';
+import Buttons from 'components/buttons';
 
 const pricingLevels = [
   {
@@ -17,8 +17,7 @@ const pricingLevels = [
     actions: [
       {
         label: 'Sign Up',
-        link:
-          'https://plot.ly/settings/subscription?modal=subscription&plan=student',
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=student',
         button: {
           classes: 'button button-primary',
         },
@@ -63,8 +62,7 @@ const pricingLevels = [
     actions: [
       {
         label: 'Sign Up',
-        link:
-          'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=personal',
         button: {
           classes: 'button button-primary',
         },
@@ -109,8 +107,7 @@ const pricingLevels = [
     actions: [
       {
         label: 'Sign Up',
-        link:
-          'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
+        link: 'https://plot.ly/settings/subscription?modal=subscription&plan=professional',
         button: {
           classes: 'button button-emerald',
         },
@@ -142,33 +139,32 @@ const pricingLevels = [
       },
     ],
   },
-]
+];
 
 export default class PricingDetails extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       student: false,
-    }
+    };
 
-    this.toggleStudentState = this.toggleStudentState.bind(this)
+    this.toggleStudentState = this.toggleStudentState.bind(this);
   }
 
   toggleStudentState() {
     this.setState({
       student: !this.state.student,
-    })
+    });
   }
 
   render() {
-
     let pricingCardBodyPrice = item => {
       if (item.price.monthly === '0') {
         return (
           <div className="price">
             <div className="price-text">Free</div>
           </div>
-        )
+        );
       } else {
         return (
           <div className="price">
@@ -177,9 +173,9 @@ export default class PricingDetails extends React.Component {
               {item.price.annually}
             </div>
           </div>
-        )
+        );
       }
-    }
+    };
 
     let pricingCardBodyNotes = item => {
       if (item.price.monthly === '0') {
@@ -189,7 +185,7 @@ export default class PricingDetails extends React.Component {
               {item.price.frequency}, <strong>{item.price.users}</strong>
             </div>
           </div>
-        )
+        );
       } else {
         return (
           <div className="notes">
@@ -197,9 +193,9 @@ export default class PricingDetails extends React.Component {
               {item.price.frequency}, <strong>{item.price.users}</strong>
             </div>
           </div>
-        )
+        );
       }
-    }
+    };
 
     let pricingCardHeaderMessage = item => {
       if (item.message && item.messageHover === true) {
@@ -210,36 +206,34 @@ export default class PricingDetails extends React.Component {
           >
             <div
               className="pricing-cards-headers-item-message-text message-action"
-              dangerouslySetInnerHTML={{ __html: item.message }}
+              dangerouslySetInnerHTML={{__html: item.message}}
             />
           </div>
-        )
+        );
       } else if (item.message) {
         return (
           <div className="pricing-cards-headers-item-message hidden hidden-fade">
             <div
               className="pricing-cards-headers-item-message-text"
-              dangerouslySetInnerHTML={{ __html: item.message }}
+              dangerouslySetInnerHTML={{__html: item.message}}
             />
           </div>
-        )
+        );
       } else {
-        return ''
+        return '';
       }
-    }
+    };
 
     let pricingCardHeader = items => {
       return items.map((item, i) => {
         return (
           <div className="pricing-cards-headers-item" key={i}>
             {pricingCardHeaderMessage(item)}
-            <div className="pricing-cards-headers-item-text hidden hidden-fade">
-              {item.label}
-            </div>
+            <div className="pricing-cards-headers-item-text hidden hidden-fade">{item.label}</div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
 
     let pricingCardBody = items => {
       return items.map((item, i) => {
@@ -250,29 +244,23 @@ export default class PricingDetails extends React.Component {
                 {pricingCardBodyPrice(item)}
                 {pricingCardBodyNotes(item)}
               </div>
-              <Buttons
-                items={item.actions}
-                className="pricing-cards-bodies-item-actions"
-              />
+              <Buttons items={item.actions} className="pricing-cards-bodies-item-actions" />
             </div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
 
     let pricingCardFeatures = items => {
       let pricingCardFeature = items => {
         return items.map((item, i) => {
           return (
             <div className="pricing-cards-feature-lists-item-value " key={i}>
-              <div
-                dangerouslySetInnerHTML={{ __html: item.value }}
-                className="hidden delay-med"
-              />
+              <div dangerouslySetInnerHTML={{__html: item.value}} className="hidden delay-med" />
             </div>
-          )
-        })
-      }
+          );
+        });
+      };
       return items.map((item, i) => {
         return (
           <div className="pricing-cards-feature-lists-item" key={i}>
@@ -280,9 +268,9 @@ export default class PricingDetails extends React.Component {
               {pricingCardFeature(item.features)}
             </div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
 
     let mobilePricingCard = items => {
       return items.map((item, i) => {
@@ -290,9 +278,7 @@ export default class PricingDetails extends React.Component {
           <div className="pricing-card-single" key={i}>
             <div className="pricing-cards-headers-item">
               {pricingCardHeaderMessage(item)}
-              <div className="pricing-cards-headers-item-text hidden hidden-fade">
-                {item.label}
-              </div>
+              <div className="pricing-cards-headers-item-text hidden hidden-fade">{item.label}</div>
             </div>
             <div className="pricing-cards-bodies-item" key={i}>
               <div className="pricing-cards-bodies-item-wrapper hidden hidden-fade">
@@ -300,20 +286,17 @@ export default class PricingDetails extends React.Component {
                   {pricingCardBodyPrice(item)}
                   {pricingCardBodyNotes(item)}
                 </div>
-                <Buttons
-                  items={item.actions}
-                  className="pricing-cards-bodies-item-actions"
-                />
+                <Buttons items={item.actions} className="pricing-cards-bodies-item-actions" />
               </div>
             </div>
           </div>
-        )
-      })
-    }
+        );
+      });
+    };
 
     return (
       <div className="pricing-cards">
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={{__html: styles}} />
 
         <div className="pricing-cards-wrapper pricing-cards-mobile mobile-only">
           {mobilePricingCard(pricingLevels)}
@@ -321,14 +304,10 @@ export default class PricingDetails extends React.Component {
 
         <div className="pricing-cards-wrapper desktop-only">
           <div className="pricing-cards-headers">
-            <div className="pricing-cards-headers-wrapper">
-              {pricingCardHeader(pricingLevels)}
-            </div>
+            <div className="pricing-cards-headers-wrapper">{pricingCardHeader(pricingLevels)}</div>
           </div>
           <div className="pricing-cards-bodies">
-            <div className="pricing-cards-bodies-wrapper ">
-              {pricingCardBody(pricingLevels)}
-            </div>
+            <div className="pricing-cards-bodies-wrapper ">{pricingCardBody(pricingLevels)}</div>
           </div>
           <div className="pricing-cards-feature-lists">
             <div className="pricing-cards-feature-lists-wrapper">
@@ -337,6 +316,6 @@ export default class PricingDetails extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

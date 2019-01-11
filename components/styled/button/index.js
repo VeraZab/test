@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledButton, Buttons } from './styled';
+import {StyledButton, Buttons} from './styled';
 
-const Button = ({ label, children, labelProps, ...rest }) => (
+const Button = ({label, children, labelProps, ...rest}) => (
   <StyledButton {...rest}>
     <StyledButton.Label {...labelProps}>{label || children}</StyledButton.Label>
   </StyledButton>
@@ -15,4 +15,4 @@ Button.propTypes = {
   primary: PropTypes.bool,
 };
 
-export { Button, Buttons };
+export {Button, Buttons};

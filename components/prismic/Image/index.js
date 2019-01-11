@@ -1,9 +1,8 @@
 import React from 'react';
-import { images } from 'config/constants';
-import { imgix } from 'config/functions';
+import {images} from 'config/constants';
+import {imgix} from 'config/functions';
 import Img from './img';
-
-const shortid = require('shortid');
+import shortid from 'shortid';
 
 export default class Image extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ export default class Image extends React.Component {
   }
 
   render() {
-    let { data } = this.props;
+    const {data} = this.props;
 
     data.url = imgix(data.url);
 
@@ -26,7 +25,7 @@ export default class Image extends React.Component {
     }
 
     if (this.props.size) {
-      let aspectRatio = this.props.size.h / this.props.size.w * 100;
+      const aspectRatio = (this.props.size.h / this.props.size.w) * 100;
       imageParams = {
         ar: aspectRatio + '%',
         preview:
@@ -67,7 +66,7 @@ export default class Image extends React.Component {
         />
       );
     } else {
-      aspectRatio = data.dimensions.height / data.dimensions.width * 100;
+      aspectRatio = (data.dimensions.height / data.dimensions.width) * 100;
       imageParams = {
         preview:
           '?w=' +

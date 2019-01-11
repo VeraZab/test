@@ -24,21 +24,11 @@ const features = [
   },
   {
     value: `Unlimited public charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `800 private charts`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Unlimited private charts`,
@@ -82,12 +72,7 @@ const features = [
   },
   {
     value: `1,000 chart and image saves / day`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `10,000 chart and image saves / day`,
@@ -95,12 +80,7 @@ const features = [
   },
   {
     value: `25 secret link chart views / day`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Unlimited secret link chart views / day`,
@@ -108,12 +88,7 @@ const features = [
   },
   {
     value: `2 collaborators per chart`,
-    plans: [
-      PLANS.PERSONAL,
-      PLANS.PROFESSIONAL,
-      PLANS.PRIVATE_CLOUD,
-      PLANS.STUDENT,
-    ],
+    plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
   {
     value: `Unlimited collaborators per chart`,
@@ -141,4 +116,4 @@ const features = [
   },
 ];
 
-export { PLANS, PLANS_TO_HIDE, features };
+export {PLANS, PLANS_TO_HIDE, features};

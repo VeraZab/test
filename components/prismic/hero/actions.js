@@ -1,6 +1,6 @@
-import React from 'react'
-import PrismicDOM from 'prismic-dom'
-import Button from 'components/prismic/button'
+import React from 'react';
+import PrismicDOM from 'prismic-dom';
+import Button from 'components/prismic/button';
 
 /**
  * HeroActions component
@@ -11,10 +11,10 @@ import Button from 'components/prismic/button'
  */
 export default class HeroActions extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    return <div className="hero-prismic-actions">{this.props.children}</div>
+    return <div className="hero-prismic-actions">{this.props.children}</div>;
   }
 }

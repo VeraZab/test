@@ -1,8 +1,6 @@
-import React from 'react'
-import PrismicDOM from 'prismic-dom'
-import Button from 'components/prismic/button'
-import { Browser } from 'components/browser'
-import Image from 'components/prismic/Image'
+import React from 'react';
+import Browser from 'components/browser';
+import Image from 'components/prismic/Image';
 
 /**
  * HeroGraphicSection component
@@ -13,24 +11,24 @@ import Image from 'components/prismic/Image'
 
 export default class HeroGraphicSection extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let { data } = this.props
+    const {data} = this.props;
 
-    let styles = {}
+    let styles = {};
 
     if (this.props.style) {
-      styles = this.props.style
+      styles = this.props.style;
     }
 
-    let graphic = null
+    let graphic = null;
 
     if (data.hero_slices.find(slice => slice.slice_type === 'multiple_graphics')) {
-      let hero_graphics = data.hero_slices.find(
+      const hero_graphics = data.hero_slices.find(
         slice => slice.slice_type === 'multiple_graphics'
-      )
+      );
       return (
         <div className="hero-prismic-graphic-section" style={styles}>
           <div className="hero-prismic-graphic-section-wrapper">
@@ -46,18 +44,16 @@ export default class HeroGraphicSection extends React.Component {
                   <div key={i} className="hero-prismic-graphic-item">
                     <Image data={item.graphic} />
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
-      )
+      );
     }
 
     if (data.hero_slices.find(slice => slice.slice_type === 'two_graphics')) {
-      let hero_graphics = data.hero_slices.find(
-        slice => slice.slice_type === 'two_graphics'
-      )
+      const hero_graphics = data.hero_slices.find(slice => slice.slice_type === 'two_graphics');
       return (
         <div className="hero-prismic-graphic-section" style={styles}>
           <div className="hero-prismic-graphic-section-wrapper">
@@ -73,39 +69,46 @@ export default class HeroGraphicSection extends React.Component {
                   <div key={i} className="hero-prismic-graphic-item">
                     <Image data={item.graphic} />
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
-      )
+      );
     }
 
     if (!data.hero_graphic.url) {
-      return null
+      return null;
     }
 
-    let hero_animation = <video id="sampleMovie" style={{width: "80%", float: "right", marginRight: "50px"}}
-      src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4"
-        loop={true} autoPlay="autoplay" muted={true}></video>;
+    const hero_animation = (
+      <video
+        id="sampleMovie"
+        style={{width: '80%', float: 'right', marginRight: '50px'}}
+        src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/hero-floating-ui%402x.mp4"
+        loop={true}
+        autoPlay="autoplay"
+        muted={true}
+      />
+    );
 
     if (data.hero_graphic_style === 'browser') {
       graphic = (
         <Browser>
           <Image data={data.hero_graphic} />
         </Browser>
-      )
+      );
     } else if (data.hero_graphic_style === 'no-blur') {
-      graphic = <Image noBlur data={data.hero_graphic} />
-    } else if (data.title === 'Modern Analytics Apps for the Enterprise'){
+      graphic = <Image noBlur data={data.hero_graphic} />;
+    } else if (data.title === 'Modern Analytics Apps for the Enterprise') {
       graphic = hero_animation;
     } else {
-      graphic = <Image data={data.hero_graphic} />
+      graphic = <Image data={data.hero_graphic} />;
     }
     return (
       <div className="hero-prismic-graphic-section" style={styles}>
         <div className="hero-prismic-graphic-section-wrapper">{graphic}</div>
       </div>
-    )
+    );
   }
 }

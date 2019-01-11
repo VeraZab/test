@@ -1,37 +1,39 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import AdvancedCard from './card/index'
+import React from 'react';
+import shortid from 'shortid';
 
-const shortid = require('shortid')
+import SliceOuter from '../slice-elements/slice-outer';
+import SliceInner from '../slice-elements/slice-inner';
+import Body from '../slice-elements/body';
+import Graphic from '../slice-elements/graphic';
+import Actions from '../slice-elements/actions';
+import AdvancedCard from './card/index';
 
-
-/**
- * Tabs slice
- *
- */
-class AdvancedCards extends React.Component {
+export default class AdvancedCards extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const {data, variant} = this.props;
+    const {
+      data,
+      data: {primary, items},
+    } = this.props;
 
-
-    const Cards = data.map((card) => <AdvancedCard variant={ variant } key={ shortid.generate() }
-                                                              card={ card }/>)
     return (
-      <div className="advanced-cards">
-        <div className="advanced-cards__wrapper">{ Cards }</div>
-      </div>
-    )
+      <SliceOuter data={data}>
+        <SliceInner data={data}>
+          <Body primary={primary} />
+          <Actions primary={primary} />
+        </SliceInner>
+        <Graphic primary={primary} />
+        <div className="advanced-cards">
+          <div className="advanced-cards__wrapper">
+            {items.map(card => (
+              <AdvancedCard variant={primary.card_variant} key={shortid.generate()} card={card} />
+            ))}
+          </div>
+        </div>
+      </SliceOuter>
+    );
   }
 }
-
-AdvancedCards.propTypes = {
-  data: PropTypes.array.isRequired,
-  variant: PropTypes.string
-}
-
-
-export default AdvancedCards

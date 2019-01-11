@@ -1,44 +1,40 @@
 import '@babel/polyfill';
-import App, { Container } from 'next/app';
+import App, {Container} from 'next/app';
 import React from 'react';
 import withReduxStore from 'lib/withReduxStore';
-import { Provider } from 'react-redux';
-import { fetchData } from 'lib/fetchData';
-import { saveStoreData } from 'store/global';
-import { connect } from 'react-redux';
+import {Provider} from 'react-redux';
+import {fetchData} from 'lib/fetchData';
+import {saveStoreData} from 'store/global';
+import {connect} from 'react-redux';
 import getCookies from 'next-cookies';
-
 
 function inlineLinkedItems(data) {
   const pages = data.filter(doc => doc.type === 'page');
   pages.forEach(page => {
     page.data.slices.forEach(slice => {
-        slice.linked_items = slice.items.map(item => {
-          const linked_items = {}
-          for (let [key, value] of Object.entries(item)) {
-            if(value.link_type && value.link_type == "Document" && value.id) {
-              linked_items[key] = data.find(d => d.id === value.id);
-            }
+      slice.linked_items = slice.items.map(item => {
+        const linked_items = {};
+        for (let [key, value] of Object.entries(item)) {
+          if (value.link_type && value.link_type == 'Document' && value.id) {
+            linked_items[key] = data.find(d => d.id === value.id);
+          }
           return linked_items;
         }
       });
     });
   });
   return {pages};
-};
+}
 
 class MyApp extends App {
-
-
-
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({Component, router, ctx}) {
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    const { reduxStore, query = { slug: 'home' } } = ctx;
-    const { slug = 'home' } = query;
+    const {reduxStore, query = {slug: 'home'}} = ctx;
+    const {slug = 'home'} = query;
     /**
      * Get all our data on the server
      * (or statically exported)
@@ -57,7 +53,7 @@ class MyApp extends App {
           content,
           currentDoc,
           req: false,
-        }),
+        })
       );
 
       return {
@@ -75,7 +71,7 @@ class MyApp extends App {
           content,
           currentDoc,
           req: true,
-        }),
+        })
       );
       return {
         slug: slug,
@@ -86,7 +82,7 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps, reduxStore } = this.props;
+    const {Component, pageProps, reduxStore} = this.props;
 
     const PageComponent = ConnectedComponent(Component);
     return (

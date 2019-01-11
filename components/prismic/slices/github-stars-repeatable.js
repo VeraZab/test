@@ -1,8 +1,8 @@
 import React from 'react';
 const gh = require('parse-github-url');
-const shortid = require('shortid');
+import shortid from 'shortid';
 
-export default function GithubStarsSlice({ slice, start }) {
+export default function GithubStarsRepeatable({slice, start}) {
   let classes = 'slice github_stars';
 
   if (start) {
@@ -18,23 +18,14 @@ export default function GithubStarsSlice({ slice, start }) {
       '&type=star&count=true&size=large';
 
     const Label = item.label ? (
-      <div
-        className="github_stars__item__label content-section-p-body"
-        key={shortid.generate()}
-      >
+      <div className="github_stars__item__label content-section-p-body" key={shortid.generate()}>
         <p className="">{item.label}</p>
       </div>
     ) : null;
     return (
       <div className="github_stars__item" key={shortid.generate()}>
         {Label}
-        <iframe
-          src={src}
-          frameBorder="0"
-          scrolling="0"
-          width="160px"
-          height="30px"
-        />
+        <iframe src={src} frameBorder="0" scrolling="0" width="160px" height="30px" />
       </div>
     );
   });

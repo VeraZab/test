@@ -1,6 +1,6 @@
-import styles from './code-explorer.scss'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark } from 'react-syntax-highlighter/dist/styles'
+import styles from './code-explorer.scss';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {atomOneDark} from 'react-syntax-highlighter/dist/styles';
 
 const jsCode = `import dash
 from dash.dependencies import Input, Output
@@ -38,7 +38,7 @@ def update_graph(selected_dropdown_value):
     }
 
 if __name__ == '__main__':
-    app.run_server()`
+    app.run_server()`;
 
 const languages = [
   {
@@ -47,27 +47,25 @@ const languages = [
     slug: 'javascript',
     language: 'javascript',
     code: jsCode,
-    graphic_src:
-      'https://images-plotly.imgix.net/static/marketing/dash/hello-world.gif',
-    example_url:
-      'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
+    graphic_src: 'https://images-plotly.imgix.net/static/marketing/dash/hello-world.gif',
+    example_url: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
     button_text: 'Plotly Javascript API',
     button_link: 'https://plot.ly/javascript',
   },
-]
+];
 
 export default class CodeExplorer extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       language: languages[0],
-    }
+    };
   }
 
   setLanguage(language) {
     this.setState({
       language: language,
-    })
+    });
   }
 
   render() {
@@ -75,34 +73,33 @@ export default class CodeExplorer extends React.Component {
       return (
         <div
           key={language.id}
-          className={`code-explorer-editor-tab ${this.state.language.id ==
-          language.id
-            ? 'active'
-            : ''}`}
+          className={`code-explorer-editor-tab ${
+            this.state.language.id == language.id ? 'active' : ''
+          }`}
         >
           <div
             className="code-explorer-editor-tab-label"
             onClick={() => {
-              this.setLanguage(language)
+              this.setLanguage(language);
             }}
           >
             {language.title}
           </div>
         </div>
-      )
-    })
+      );
+    });
 
     let graphicStyles = {
       backgroundImage: 'url(' + this.state.language.graphic_src + ')',
-    }
+    };
 
     let lineNumberStyles = {
       opacity: '0.25',
-    }
+    };
 
     return (
       <div className="code-explorer gutter-top">
-        <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <style dangerouslySetInnerHTML={{__html: styles}} />
         <div className="code-explorer-wrapper">
           <div className="code-explorer-graphic">
             <div className="code-explorer-graphic-wrapper desktop-graphic">
@@ -124,8 +121,8 @@ export default class CodeExplorer extends React.Component {
                   wrapLines={true}
                   lineNumberStyle={lineNumberStyles}
                   lineStyle={lineNumber => {
-                    let style = { display: 'block' }
-                    return style
+                    let style = {display: 'block'};
+                    return style;
                   }}
                 >
                   {this.state.language.code}
@@ -135,6 +132,6 @@ export default class CodeExplorer extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

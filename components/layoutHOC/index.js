@@ -35,8 +35,7 @@ function Layout(Child) {
       ReactGA.initialize('UA-39373211-1');
       ReactGA.pageview(document.location.pathname);
       (function() {
-        let
-          js,
+        let js,
           q,
           d = document,
           gi = d.getElementById,
@@ -74,7 +73,7 @@ function Layout(Child) {
           <div className="page-layout-wrapper">
             <Metahead />
             <Head doc={this.props.doc}>
-              <style dangerouslySetInnerHTML={{ __html: styles }} />
+              <style dangerouslySetInnerHTML={{__html: styles}} />
             </Head>
             <Header {...this.props} />
             <Child {...this.props} />

@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'components/prismic/Image'
+import React from 'react';
+import Image from 'components/prismic/Image';
 
-import PrismicDOM from 'prismic-dom'
+import PrismicDOM from 'prismic-dom';
 /**
  * Logos Slice component
  * for displaying a row of logos
@@ -17,25 +17,25 @@ import PrismicDOM from 'prismic-dom'
  */
 export default class LogosSlice extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    let { data } = this.props
-    let classes = 'logos-slice'
+    const {data} = this.props;
+    let classes = 'logos-slice';
 
     if (this.props.className) {
-      classes += ' ' + this.props.className
+      classes += ' ' + this.props.className;
     }
 
     /**
-         * Layout
-         * This will default to the value of 'column'
-         * These values will adjust the layout of the hero overall
-         * column || row
-         */
+     * Layout
+     * This will default to the value of 'column'
+     * These values will adjust the layout of the hero overall
+     * column || row
+     */
     if (data.primary.alignment !== null || data.primary.alignment !== '') {
-      classes += ' logos-slice-align--' + data.primary.alignment
+      classes += ' logos-slice-align--' + data.primary.alignment;
     }
 
     const LogoItems = data.items.map((logo, i) => {
@@ -43,8 +43,8 @@ export default class LogosSlice extends React.Component {
         <div className="logos-slice-logo" key={i}>
           <Image data={logo.image} />
         </div>
-      )
-    })
+      );
+    });
     return (
       <div className={classes}>
         <div className="logos-slice-wrapper">
@@ -61,6 +61,6 @@ export default class LogosSlice extends React.Component {
           <div className="logos">{LogoItems}</div>
         </div>
       </div>
-    )
+    );
   }
 }

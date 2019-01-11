@@ -5,19 +5,19 @@ import {
   Subtitle,
   Body,
   Graphic,
-} from 'components/content-section'
-import React from 'react'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { github } from 'react-syntax-highlighter/dist/styles'
+} from 'components/content-section';
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {github} from 'react-syntax-highlighter/dist/styles';
 
 const iframeStyle = {
   width: '100%',
   overflow: 'hidden',
   border: 'none',
-}
+};
 let lineNumberStyles = {
   opacity: '0.25',
-}
+};
 
 const codeSections = [
   {
@@ -46,8 +46,7 @@ const codeSections = [
   },
   {
     id: 'c',
-    text:
-      'Copy and paste the code below and insert it below the body tag of your page.',
+    text: 'Copy and paste the code below and insert it below the body tag of your page.',
     code: `<script>
         $('#plotly-data-export').click(function(){
             var hiddenform = $('<div id="hiddenform" '+
@@ -65,7 +64,7 @@ const codeSections = [
     </script>`,
     lang: 'javascript',
   },
-]
+];
 
 const lastSection = [
   {
@@ -88,8 +87,7 @@ const lastSection = [
   },
   {
     id: 'c',
-    text:
-      'Copy and paste the code below and insert it below the body tag of your page.',
+    text: 'Copy and paste the code below and insert it below the body tag of your page.',
     code: `<script>
         function getPlotlyGridData(){
             return {'cols':{
@@ -115,7 +113,7 @@ const lastSection = [
         </script>`,
     lang: 'javascript',
   },
-]
+];
 
 export default () => (
   <div className="export-page-main">
@@ -124,11 +122,12 @@ export default () => (
         <div className="quote-item">
           <div className="quote-item-wrapper">
             <div className="quote-item-quote">
-              <span>"</span>Plotly makes it easy to share and edit your work
-              privately, with your co-workers, or the world. There is so much to
-              learn from open government data and we are happy to feature tools
-              like Plotly and CartoDB that make it easier for everyone to become
-              a data scientist.<span>"</span>
+              <span>"</span>
+              Plotly makes it easy to share and edit your work privately, with your co-workers, or
+              the world. There is so much to learn from open government data and we are happy to
+              feature tools like Plotly and CartoDB that make it easier for everyone to become a
+              data scientist.
+              <span>"</span>
             </div>
             <div className="quote-item-quotee">
               <div className="quote-item-quotee-img-wrapper">
@@ -143,9 +142,10 @@ export default () => (
         <div className="quote-item">
           <div className="quote-item-wrapper">
             <div className="quote-item-quote">
-              <span>"</span>Why did we choose Plot.ly for our first integration?
-              Because we’re a great match! Both our platforms are designed to
-              make the power of data more accessible.<span>"</span>
+              <span>"</span>
+              Why did we choose Plot.ly for our first integration? Because we’re a great match! Both
+              our platforms are designed to make the power of data more accessible.
+              <span>"</span>
             </div>
             <div className="quote-item-quotee">
               <div className="quote-item-quotee-img-wrapper">
@@ -164,10 +164,10 @@ export default () => (
         <Title>See it in Action</Title>
         <Body>
           <p>
-            View a showcase of how our partners are using the export option and
-            how it is benefiting their users.
+            View a showcase of how our partners are using the export option and how it is benefiting
+            their users.
           </p>
-          <div style={{ maxWidth: '680px', margin: '20px auto' }}>
+          <div style={{maxWidth: '680px', margin: '20px auto'}}>
             <Graphic
               shadow="false"
               image="https://images-plotly.imgix.net/static/marketing/export-graphic.png?auto=compress&auto=format"
@@ -216,16 +216,14 @@ export default () => (
               <div className="export-step-text">
                 <p>
                   <strong>
-                    You can also sync Plotly graphs with arbitrary externally
-                    sourced data.
+                    You can also sync Plotly graphs with arbitrary externally sourced data.
                   </strong>{' '}
-                  These graphs can be shared by a URL and embedded in a webpage,
-                  and whenever a user views the graph, Plotly fetches the latest
-                  data from your web service.
+                  These graphs can be shared by a URL and embedded in a webpage, and whenever a user
+                  views the graph, Plotly fetches the latest data from your web service.
                 </p>
                 <p>
-                  Use the external source plotter when you don’t want to send
-                  your user to Plotly’s web-app.
+                  Use the external source plotter when you don’t want to send your user to Plotly’s
+                  web-app.
                 </p>
                 <p>
                   We have examples documented for{' '}
@@ -234,25 +232,29 @@ export default () => (
                     target="_blank"
                   >
                     SQLite
-                  </a>,{' '}
+                  </a>
+                  ,{' '}
                   <a
                     href="http://chriddyp.github.io/external-source-plotter/tickers/"
                     target="_blank"
                   >
                     Flask
-                  </a>,{' '}
+                  </a>
+                  ,{' '}
                   <a
                     href="http://chriddyp.github.io/external-source-plotter/quandl/"
                     target="_blank"
                   >
                     Quandl
-                  </a>,{' '}
+                  </a>
+                  ,{' '}
                   <a
                     href="http://chriddyp.github.io/external-source-plotter/google-drive/"
                     target="_blank"
                   >
                     Google Drive
-                  </a>,{' '}
+                  </a>
+                  ,{' '}
                   <a
                     href="http://chriddyp.github.io/external-source-plotter/github-gist/"
                     target="_blank"
@@ -265,11 +267,9 @@ export default () => (
                     target="_blank"
                   >
                     Dropbox
-                  </a>.{' '}
-                  <a
-                    href="http://chriddyp.github.io/external-source-plotter/"
-                    target="_blank"
-                  >
+                  </a>
+                  .{' '}
+                  <a href="http://chriddyp.github.io/external-source-plotter/" target="_blank">
                     See it in action or read more about it
                   </a>
                 </p>
@@ -313,15 +313,15 @@ export default () => (
                     wrapLines={true}
                     lineNumberStyle={lineNumberStyles}
                     lineStyle={lineNumber => {
-                      let style = { display: 'block' }
-                      return style
+                      let style = {display: 'block'};
+                      return style;
                     }}
                   >
                     {section.code}
                   </SyntaxHighlighter>
                 </div>
               </article>
-            )
+            );
           })}
         </Body>
       </ContentPane>
@@ -359,18 +359,18 @@ export default () => (
                     wrapLines={true}
                     lineNumberStyle={lineNumberStyles}
                     lineStyle={lineNumber => {
-                      let style = { display: 'block' }
-                      return style
+                      let style = {display: 'block'};
+                      return style;
                     }}
                   >
                     {section.code}
                   </SyntaxHighlighter>
                 </div>
               </article>
-            )
+            );
           })}
         </Body>
       </ContentPane>
     </ContentSection>
   </div>
-)
+);

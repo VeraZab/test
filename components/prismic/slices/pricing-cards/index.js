@@ -9,13 +9,12 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import PricingCard from 'components/prismic/slices/pricing-cards/pricing-card';
-import SwitchComponent from '../../../../components/switch';
-import {SwitchContainer, HeadingContainer, H1, H2} from '../../../../components/styled/on-prem';
+import SwitchComponent from 'components/switch';
+import {SwitchContainer, HeadingContainer, H1, H2} from 'components/styled/on-prem';
 import shortid from 'shortid';
 
-class PricingCardsContainer extends React.Component {
+export default class PricingCardsContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,7 +36,14 @@ class PricingCardsContainer extends React.Component {
   }
 
   render() {
-    const {cards} = this.props;
+    const {data} = this.props;
+    const cards =
+      data &&
+      data.linked_items &&
+      data.linked_items[0] &&
+      data.linked_items[0].pricing_cards &&
+      data.linked_items[0].pricing_cards.data &&
+      data.linked_items[0].pricing_cards.data.body;
     if (!cards) {
       return null;
     }
@@ -64,32 +70,24 @@ class PricingCardsContainer extends React.Component {
       ],
     };
     return (
-      <>
-        <SwitchContainer>
-          <SwitchComponent active={this.state.pricingMode} data={toggle_content} />
-          <HeadingContainer>
-            <H1 key={shortid.generate()} className="animate--fade-in-from-top">
-              {this.state.pricingMode === 'Private Cloud'
-                ? `Private Cloud`
-                : `On-Premises Installation`}
-            </H1>
-            <H2 key={shortid.generate()} className="animate--fade-in-from-bottom">
-              {this.state.pricingMode === 'Private Cloud'
-                ? cards[0].primary.private_cloud_copy[0].text
-                : cards[0].primary.on_premise_copy[0].text}
-            </H2>
-          </HeadingContainer>
-          <div className="content-section-wrapper hidden pricing__cards__content-section">
-            {Cards}
-          </div>
-        </SwitchContainer>
-      </>
+      <SwitchContainer>
+        <SwitchComponent active={this.state.pricingMode} data={toggle_content} />
+        <HeadingContainer>
+          <H1 key={shortid.generate()} className="animate--fade-in-from-top">
+            {this.state.pricingMode === 'Private Cloud'
+              ? `Private Cloud`
+              : `On-Premises Installation`}
+          </H1>
+          <H2 key={shortid.generate()} className="animate--fade-in-from-bottom">
+            {this.state.pricingMode === 'Private Cloud'
+              ? cards[0].primary.private_cloud_copy[0].text
+              : cards[0].primary.on_premise_copy[0].text}
+          </H2>
+        </HeadingContainer>
+        <div className="content-section-wrapper hidden pricing__cards__content-section">
+          {Cards}
+        </div>
+      </SwitchContainer>
     );
   }
 }
-
-PricingCardsContainer.propTypes = {
-  cards: PropTypes.array.isRequired,
-};
-
-export default PricingCardsContainer;

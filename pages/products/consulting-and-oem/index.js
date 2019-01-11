@@ -1,13 +1,8 @@
 import Layout from 'components/global/layout';
 import Hero from './hero';
-import {
-  ContentSection,
-  ContentPane,
-  Title,
-  Body,
-} from 'components/content-section';
+import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
 import Buttons from 'components/buttons';
-import { Grid, GridItem } from 'components/grid';
+import {Grid, GridItem} from 'components/grid';
 
 const meta = {
   title: 'Advanced Development',
@@ -110,8 +105,8 @@ export default class Consulting extends React.Component {
     super(props);
   }
 
-  static async getInitialProps({ req, pathname }) {
-    return { pathname: (req && req.url) || pathname };
+  static async getInitialProps({req, pathname}) {
+    return {pathname: (req && req.url) || pathname};
   }
 
   render() {
@@ -130,22 +125,18 @@ export default class Consulting extends React.Component {
       <Layout meta={meta} pathname={this.props.pathname} className="consulting--layout">
         <Hero />
 
-        <ContentSection
-          style={contentSectionStyles}
-          className="bottom-light-bg"
-        >
+        <ContentSection style={contentSectionStyles} className="bottom-light-bg">
           <ContentPane full center>
             <Title>
-              Plotly's engineering team has deep expertise in technical
-              computing, open technologies and complex visualization.
+              Plotly's engineering team has deep expertise in technical computing, open technologies
+              and complex visualization.
             </Title>
             <Body>
               <p>
-                Whether you are interested in the development of a new chart
-                type, or need help with a commercial application, our
-                experienced engineering staff can provide the guidance and
-                perspective to ensure that your project is a success. Contact us
-                directly to learn more.
+                Whether you are interested in the development of a new chart type, or need help with
+                a commercial application, our experienced engineering staff can provide the guidance
+                and perspective to ensure that your project is a success. Contact us directly to
+                learn more.
               </p>
               <div className="cards" style={cardsStyles}>
                 <div className="cards-wrapper center">
@@ -154,11 +145,7 @@ export default class Consulting extends React.Component {
                       <div className="card-simple-body">
                         <div className="title-med">Introductory Engagement</div>
                         <div className="title-med padding-top">$15,000</div>
-                        <Buttons
-                          items={buttons}
-                          align-center
-                          className="padding-top"
-                        />
+                        <Buttons items={buttons} align-center className="padding-top" />
                       </div>
                     </div>
                   </div>
@@ -168,7 +155,8 @@ export default class Consulting extends React.Component {
           </ContentPane>
         </ContentSection>
 
-        <ContentSection className="light-grey-bg"
+        <ContentSection
+          className="light-grey-bg"
           style={{
             ...contentSectionStyles,
             backgroundColor: '#f2f4f5',
@@ -184,19 +172,17 @@ export default class Consulting extends React.Component {
           <ContentPane half center-vertically text className="sixy-five">
             <Title>Use our platform, or build your own!</Title>
             <h2 className="content-section-h2">
-              Plotly is the leading data visualization technology provider. With
-              our open-source software, we help companies launch cutting edge,
-              data visualization UIs in their products and internal analytics
-              platforms.
+              Plotly is the leading data visualization technology provider. With our open-source
+              software, we help companies launch cutting edge, data visualization UIs in their
+              products and internal analytics platforms.
             </h2>
             <Body>
               <p>
-                Does your product have an ancient charting tool that needs to be
-                replaced? Are your customers asking for more advanced data
-                visualization? We’re here to help. Through Plotly.js, Dash, and
-                years of launching successful data visualization products, we’re
-                on a mission to make every analytics product have first-class
-                data visualization frontends.
+                Does your product have an ancient charting tool that needs to be replaced? Are your
+                customers asking for more advanced data visualization? We’re here to help. Through
+                Plotly.js, Dash, and years of launching successful data visualization products,
+                we’re on a mission to make every analytics product have first-class data
+                visualization frontends.
               </p>
 
               <Buttons items={oemButton} className="padding-top" />

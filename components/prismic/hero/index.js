@@ -2,12 +2,11 @@ import React from 'react';
 import HeroDetailsSection from './details';
 import HeroGraphicSection from './graphicSection';
 
-import { imgix } from 'config/functions';
+import {imgix} from 'config/functions';
 import LogosSlice from 'components/prismic/slices/logos';
+import shortid from 'shortid';
 
-const shortid = require('shortid');
-
-/**
+/*
  * Hero component
  * Main wrapper component
  * @class
@@ -21,7 +20,7 @@ export default class Hero extends React.Component {
   componentDidMount() {
     const lozad = require('lozad');
     if (lozad) {
-      let observer = lozad('.hero-prismic-background-image', {
+      const observer = lozad('.hero-prismic-background-image', {
         threshold: 0,
         load: function(el) {
           if (el.dataset.src) {
@@ -30,7 +29,7 @@ export default class Hero extends React.Component {
               el.classList.add('image-loaded');
             };
           } else if (el.dataset.backgroundImage) {
-            let img = new Image();
+            const img = new Image();
             img.src = el.dataset.backgroundImage;
             img.onload = function() {
               el.style.backgroundImage = `url('${el.dataset.backgroundImage}')`;
@@ -44,14 +43,13 @@ export default class Hero extends React.Component {
   }
 
   findSlice = (slices, type) =>
-    slices.find((slice) => slice.slice_type === type)
-      ? slices.find((slice) => slice.slice_type === type)
+    slices.find(slice => slice.slice_type === type)
+      ? slices.find(slice => slice.slice_type === type)
       : false;
 
   render() {
     let classes = '';
-
-    let { data } = this.props;
+    const {data} = this.props;
 
     if (this.props.className) {
       classes += ' ' + this.props.className;
@@ -72,15 +70,11 @@ export default class Hero extends React.Component {
      * These values will adjust the color of the background
      * An image can still be applied regardless of style chosen
      */
-    if (
-      data.hero_background_style !== null ||
-      data.hero_background_style !== ''
-    ) {
+    if (data.hero_background_style !== null || data.hero_background_style !== '') {
       classes += ' hero-prismic-style--' + data.hero_background_style;
     }
 
     let HeroStyle = {};
-    let HeroWrapperStyle = {};
 
     if (this.props.style) {
       HeroStyle = this.props.style;
@@ -91,18 +85,12 @@ export default class Hero extends React.Component {
     }
     const HeroWrapperBg = data.hero_background_image.url
       ? {
-          backgroundImage: `url(${
-            data.hero_background_image.url
-          }?w=2200&auto=format)`,
+          backgroundImage: `url(${data.hero_background_image.url}?w=2200&auto=format)`,
           backgroundSize: data.hero_background_size,
           backgroundPosition: data.hero_background_position,
           backgroundRepeat: 'no-repeat',
         }
       : {};
-
-    if (this.props.heroWrapperStyle) {
-      HeroWrapperStyle = this.props.heroWrapperStyle;
-    }
 
     /**
      * Logos Slice
@@ -125,11 +113,7 @@ export default class Hero extends React.Component {
     }
 
     return (
-      <section
-        className={'hero-prismic' + classes}
-        style={HeroStyle}
-        key={shortid.generate()}
-      >
+      <section className={'hero-prismic' + classes} style={HeroStyle} key={shortid.generate()}>
         <div className="hero-prismic-wrapper">
           <HeroDetailsSection data={data} />
           <HeroGraphicSection data={data} />

@@ -7,7 +7,7 @@ export default class CodeVisual extends React.Component {
   constructor(props) {
     super(props);
 
-    const { data, layout } = props;
+    const {data, layout} = props;
 
     this.state = {
       data: [],
@@ -23,7 +23,7 @@ export default class CodeVisual extends React.Component {
   }
 
   async fetchData() {
-    const { data, layout } = this.props;
+    const {data, layout} = this.props;
 
     if ((data || layout) && !this.state.loading) {
       this.setState({
@@ -81,9 +81,12 @@ export default class CodeVisual extends React.Component {
   }
 
   render() {
-    const { data, layout, loading } = this.state;
+    const {data, layout, loading} = this.state;
 
-    const { key, size: { width, height } } = this.props;
+    const {
+      key,
+      size: {width, height},
+    } = this.props;
 
     if (loading) {
       return (

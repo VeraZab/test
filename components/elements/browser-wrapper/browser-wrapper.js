@@ -1,9 +1,9 @@
-import React from 'react'
-import styles from './browser-wrapper.scss'
+import React from 'react';
+import styles from './browser-wrapper.scss';
 
-export default ({ children }) => (
+export default ({children}) => (
   <div className="browser">
-    <style dangerouslySetInnerHTML={{ __html: styles }} />
+    <style dangerouslySetInnerHTML={{__html: styles}} />
     <div>
       <div className="browser-wrapper">
         <div className="browser-header">
@@ -17,4 +17,4 @@ export default ({ children }) => (
       </div>
     </div>
   </div>
-)
+);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Header extends React.Component {
   render() {
-    const { title, subtitle } = this.context;
+    const {title, subtitle} = this.context;
     const Fragment = React.Fragment;
 
     const Title = title && (

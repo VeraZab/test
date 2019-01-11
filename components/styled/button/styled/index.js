@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { rgba } from 'polished';
+import styled, {css} from 'styled-components';
+import {rgba} from 'polished';
 
 const Label = styled.div`
   color: currentColor;
@@ -18,7 +18,7 @@ const StyledButton = styled.a`
   justify-content: center;
   display: flex;
   text-decoration: none !important;
-  ${({ primary }) =>
+  ${({primary}) =>
     primary &&
     css`
       background: #119dff;
@@ -48,4 +48,4 @@ const Buttons = styled.div`
   align-items: center;
 `;
 
-export { StyledButton, Buttons };
+export {StyledButton, Buttons};

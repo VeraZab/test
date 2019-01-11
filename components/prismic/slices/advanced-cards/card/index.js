@@ -1,46 +1,52 @@
-import React from 'react'
-import Logo from './logo'
-import Actions from './actions'
-import PropTypes from 'prop-types'
-import Header from './header'
+import React from 'react';
+import Logo from './logo';
+import Actions from './actions';
+import PropTypes from 'prop-types';
+import Header from './header';
 
-import Body from './body'
+import Body from './body';
 
-const shortid = require('shortid')
+const shortid = require('shortid');
 
 class AdvancedCard extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   getChildContext() {
-    const {card, card: {title, subtitle, logo, body}} = this.props
+    const {
+      card,
+      card: {title, subtitle, logo, body},
+    } = this.props;
     return {
       card,
       title,
       subtitle,
       logo,
-      body
-    }
+      body,
+    };
   }
 
   render() {
-    const {variant, card: {display}} = this.props
+    const {
+      variant,
+      card: {display},
+    } = this.props;
     if (display === 'true') {
       if (variant === 'basic') {
         return (
           <div className="card">
             <div className="card__wrapper">
               <div className="card__section">
-                <Header/>
-                <Logo/>
+                <Header />
+                <Logo />
               </div>
               <div className="card__section">
-                <Body actions={ <Actions/> }/>
+                <Body actions={<Actions />} />
               </div>
             </div>
           </div>
-        )
+        );
       } else {
         return (
           <div className="card card--with-blur">
@@ -48,33 +54,32 @@ class AdvancedCard extends React.Component {
               <div className="card__image">
                 <div className="card__details">
                   <div className="card__details__meta">
-                    <Header/>
+                    <Header />
                   </div>
-                  <Logo/>
+                  <Logo />
                 </div>
               </div>
-              <Body actions={ <Actions/> }/>
+              <Body actions={<Actions />} />
             </div>
           </div>
-        )
+        );
       }
     } else {
-      return null
+      return null;
     }
   }
 }
 
 AdvancedCard.propTypes = {
   card: PropTypes.object.isRequired,
-  variant: PropTypes.string
-}
+  variant: PropTypes.string,
+};
 AdvancedCard.childContextTypes = {
   card: PropTypes.object,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   logo: PropTypes.object,
-  body: PropTypes.array
-}
+  body: PropTypes.array,
+};
 
-
-export default AdvancedCard
+export default AdvancedCard;

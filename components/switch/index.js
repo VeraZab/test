@@ -17,7 +17,9 @@ class SwitchComponent extends React.PureComponent {
     });
   }
   render() {
-    const { data: { tabs } } = this.props;
+    const {
+      data: {tabs},
+    } = this.props;
     return (
       <div className="toggle-switch">
         <div className="toggle-switch__switch">{this.renderItems(tabs)}</div>

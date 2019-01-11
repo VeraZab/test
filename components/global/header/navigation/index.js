@@ -30,7 +30,6 @@ export default class Navigation extends React.Component {
     if (this.state.mobileMenu === true) {
       return 'Close';
     }
-
     if (this.state.mobileMenu === false) {
       return 'Menu';
     }
@@ -59,7 +58,7 @@ export default class Navigation extends React.Component {
       this.setState({
         productSubmenuActive: true,
         pricingSubmenuActive: false,
-        signUpSubMenuActive: false
+        signUpSubMenuActive: false,
       });
     }
   }
@@ -81,7 +80,6 @@ export default class Navigation extends React.Component {
   }
 
   togglePricingSubmenu(event) {
-
     event.preventDefault();
     if (this.state.pricingSubmenuActive) {
       this.setState({
@@ -112,16 +110,10 @@ export default class Navigation extends React.Component {
     return (
       <div className="site-header-navigation">
         <div className={'site-header-navigation-wrapper'}>
-          <div
-            className="mobile-menu-button"
-            onClick={this.toggleMobileMenu.bind(this)}
-          >
-            <a className="navigation-product-item">
-              {this.mobileMenuButtonText()}
-            </a>
+          <div className="mobile-menu-button" onClick={this.toggleMobileMenu.bind(this)}>
+            <a className="navigation-product-item">{this.mobileMenuButtonText()}</a>
           </div>
           <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-
             {/** Products Drop Down Menu */}
             <div className="navigation-product-item-with-submenu">
               <div
@@ -141,35 +133,28 @@ export default class Navigation extends React.Component {
               >
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Dash
-                  </div>
+                  <div className="navigation-product-submenu-section-title">Dash</div>
                   {/** Products Submenu Items */}
                   <Link href="/products/dash/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    #1 Python tool <br/> for analytic apps
+                      #1 Python tool <br /> for analytic apps
                     </a>
                   </Link>
                   <Link href="/products/dash/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                    &#10145; Learn More
-                    </a>
+                    <a className="navigation-product-submenu-item">&#10145; Learn More</a>
                   </Link>
                 </div>
                 {/** Products Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                <div className="navigation-product-submenu-section-title">
-                Chart Studio
-                  </div>
+                  <div className="navigation-product-submenu-section-title">Chart Studio</div>
                   {/** Products Submenu Items */}
                   <Link href="/online-chart-maker/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    Collaboratively create <br/> and publish charts                    </a>
+                      Collaboratively create <br /> and publish charts{' '}
+                    </a>
                   </Link>
                   <Link href="/online-chart-maker/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                    &#10145; Learn More
-                    </a>
+                    <a className="navigation-product-submenu-item">&#10145; Learn More</a>
                   </Link>
                 </div>
               </div>
@@ -194,40 +179,31 @@ export default class Navigation extends React.Component {
               >
                 {/** Pricing Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    Dash
-                  </div>
+                  <div className="navigation-product-submenu-section-title">Dash</div>
                   {/** Pricing Submenu Items */}
                   <Link href="/dash/pricing/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    #1 Python tool <br/> for analytic apps
+                      #1 Python tool <br /> for analytic apps
                     </a>
                   </Link>
                   <Link href="/dash/pricing/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      &#10145; Deployment Server
-                    </a>
+                    <a className="navigation-product-submenu-item">&#10145; Deployment Server</a>
                   </Link>
                 </div>
                 {/** Pricing Submenu Section */}
                 <div className="navigation-product-submenu-section">
-                <div className="navigation-product-submenu-section-title">
-                Chart Studio
-                  </div>
+                  <div className="navigation-product-submenu-section-title">Chart Studio</div>
                   {/** Pricing Submenu Items */}
                   <Link href="/products/on-premise/" prefetch>
                     <a className="navigation-product-submenu-item">
-                    Collaboratively create <br/> and publish charts</a>
+                      Collaboratively create <br /> and publish charts
+                    </a>
                   </Link>
                   <Link href="/products/on-premise/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                    &#10145; Enterprise
-                    </a>
+                    <a className="navigation-product-submenu-item">&#10145; Enterprise</a>
                   </Link>
                   <Link href="/products/cloud/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                    &#10145; Cloud
-                    </a>
+                    <a className="navigation-product-submenu-item">&#10145; Cloud</a>
                   </Link>
                 </div>
               </div>
@@ -248,21 +224,17 @@ export default class Navigation extends React.Component {
                     : 'navigation-product-submenu'
                 }
               >
-              {/** Pricing Submenu Section */}
-              <div className="navigation-product-submenu-section">
+                {/** Pricing Submenu Section */}
+                <div className="navigation-product-submenu-section">
                   {/** Pricing Submenu Items */}
                   <Link href="https://community.plot.ly" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Community Forum
-                    </a>
+                    <a className="navigation-product-submenu-item">Community Forum</a>
                   </Link>
                   <Link href="/Auth/login/?action=signup#/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Chart Studio Cloud
-                    </a>
+                    <a className="navigation-product-submenu-item">Chart Studio Cloud</a>
                   </Link>
                 </div>
-            </div>
+              </div>
             </div>
           </nav>
         </div>

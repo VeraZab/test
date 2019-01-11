@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Hero,
-  HeroTop,
-  HeroMessaging,
-  HeroSubtitle,
-  HeroTitle,
-  HeroBottom,
-} from 'components/hero';
-import { ClientLogos } from 'components/global/client-logos';
+import {Hero, HeroTop, HeroMessaging, HeroSubtitle, HeroTitle, HeroBottom} from 'components/hero';
+import {ClientLogos} from 'components/global/client-logos';
 
 const HeroWrapperStyle = {
   backgroundImage:
@@ -18,7 +11,7 @@ const HeroWrapperStyle = {
 };
 
 const HeroBottomStyles = {
-  paddingBottom: '270px'
+  paddingBottom: '270px',
 };
 
 export default () => (
@@ -30,7 +23,7 @@ export default () => (
       <HeroMessaging>
         <HeroTitle>Chart Studio Cloud</HeroTitle>
         <HeroSubtitle className="wider-subtitle">
-        Modern visualization for the data era.
+          Modern visualization for the data era.
         </HeroSubtitle>
       </HeroMessaging>
     </HeroTop>
