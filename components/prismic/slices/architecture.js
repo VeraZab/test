@@ -1,7 +1,7 @@
 import React from 'react';
 import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
 
-class ArchitectureSection extends React.Component {
+class Architecture extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -24,42 +24,40 @@ class ArchitectureSection extends React.Component {
     };
 
     return (
-      <>
-        <ContentSection className="architecture-section">
-          <ContentPane full center center-vertically text>
-            <div className="pre-title">{this.props.data.items[0].section_pretitle}</div>
-            <Title>{this.props.data.items[0].section_title}</Title>
-            <Body>
-              <div className="image-with-complex-text-overlay architecture">
-                <div className="image-with-complex-text-overlay-wrapper">
-                  <div className="image">
-                    <img
-                      src="https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format"
-                      alt=""
-                    />
-                  </div>
-                  <div className="text-overlay">
-                    {[
-                      {x: 'left', y: 'top', title: false},
-                      {x: 'left', y: 'second', title: false},
-                      {x: 'right', y: 'top', title: false},
-                      {x: 'right', y: 'bottom', title: true},
-                      {x: 'center', y: 'bottom', title: true},
-                    ].map(n => {
-                      return renderTextItem(n);
-                    })}
-                  </div>
-                  <div className="image">
-                    <img src="" alt="" />
-                  </div>
+      <ContentSection className="architecture-section">
+        <ContentPane full center center-vertically text>
+          <div className="pre-title">{this.props.data.items[0].section_pretitle}</div>
+          <Title>{this.props.data.items[0].section_title}</Title>
+          <Body>
+            <div className="image-with-complex-text-overlay architecture">
+              <div className="image-with-complex-text-overlay-wrapper">
+                <div className="image">
+                  <img
+                    src="https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format"
+                    alt=""
+                  />
+                </div>
+                <div className="text-overlay">
+                  {[
+                    {x: 'left', y: 'top', title: false},
+                    {x: 'left', y: 'second', title: false},
+                    {x: 'right', y: 'top', title: false},
+                    {x: 'right', y: 'bottom', title: true},
+                    {x: 'center', y: 'bottom', title: true},
+                  ].map(n => {
+                    return renderTextItem(n);
+                  })}
+                </div>
+                <div className="image">
+                  <img src="" alt="" />
                 </div>
               </div>
-            </Body>
-          </ContentPane>
-        </ContentSection>
-      </>
+            </div>
+          </Body>
+        </ContentPane>
+      </ContentSection>
     );
   }
 }
 
-export default ArchitectureSection;
+export default Architecture;

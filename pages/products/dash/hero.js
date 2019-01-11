@@ -1,6 +1,6 @@
 import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroActions} from 'components/hero';
-import GithubStarsSlice from 'components/prismic/slices/github-stars-slice';
+import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import Buttons from 'components/buttons';
 
 const HeroButtons = [
@@ -78,7 +78,7 @@ export default class HeroSection extends React.Component {
             <HeroActions>
               <Buttons items={HeroButtons[0]} />
               <Buttons items={HeroButtons[1]} />
-              <GithubStarsSlice
+              <GithubStarsRepeatable
                 start
                 slice={{
                   items: [

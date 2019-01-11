@@ -9,7 +9,7 @@ import React from 'react';
 
 import PricingCardContainer from 'components/prismic/slices/pricing-cards';
 import LogosSlice from './logos';
-import ArchitectureSection from './architecture';
+import Architecture from './architecture';
 import TabsSlice from './tabs';
 import Jobs from './jobs';
 import Quotes from './quotes';
@@ -36,7 +36,7 @@ export default class Slices extends React.Component {
       logos: LogosSlice,
       jobs: Jobs,
       image: ImageSlice,
-      'cs-architecture': ArchitectureSection,
+      'cs-architecture': Architecture,
       quotes_logos: Quotes,
       'cs-pricing': PricingCardContainer,
       'cs-advanced-cards': AdvancedCards,

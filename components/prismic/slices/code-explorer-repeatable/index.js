@@ -18,7 +18,7 @@ if (typeof navigator !== 'undefined') {
   require('codemirror/mode/jsx/jsx');
 }
 
-export default class CodeExplorerSlice extends React.Component {
+export default class CodeExplorerRepeatable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

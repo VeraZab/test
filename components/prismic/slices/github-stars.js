@@ -5,7 +5,7 @@ import SliceInner from './slice-elements/slice-inner';
 import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
 import Graphic from './slice-elements/graphic';
-import GithubStarsSlice from 'components/prismic/slices/github-stars-slice';
+import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 
 export default class GithubStars extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ export default class GithubStars extends React.Component {
         </SliceInner>
         <Graphic primary={primary} />
         <div className="github-stars">
-          <GithubStarsSlice slice={data} />
+          <GithubStarsRepeatable slice={data} />
         </div>
       </SliceOuter>
     );

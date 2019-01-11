@@ -5,7 +5,7 @@ import SliceInner from './slice-elements/slice-inner';
 import Body from './slice-elements/body';
 import Actions from './slice-elements/actions';
 import Graphic from './slice-elements/graphic';
-import CodeExplorerSlice from 'components/prismic/slices/code-explorer-slice';
+import CodeExplorerRepepatable from 'components/prismic/slices/code-explorer-repeatable';
 
 export default class CodeExplorer extends React.Component {
   constructor(props) {
@@ -23,11 +23,11 @@ export default class CodeExplorer extends React.Component {
         <SliceInner data={data}>
           <Body primary={primary} />
           <Actions primary={primary} />
+          <div className="content-section-p-area--code-explorer">
+            <CodeExplorerRepepatable data={data} />
+          </div>
         </SliceInner>
         <Graphic primary={primary} />
-        <div className="content-section-p-area--code-explorer">
-          <CodeExplorerSlice data={data} />
-        </div>
       </SliceOuter>
     );
   }

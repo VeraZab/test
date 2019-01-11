@@ -2,7 +2,7 @@ import React from 'react';
 const gh = require('parse-github-url');
 import shortid from 'shortid';
 
-export default function GithubStarsSlice({slice, start}) {
+export default function GithubStarsRepeatable({slice, start}) {
   let classes = 'slice github_stars';
 
   if (start) {

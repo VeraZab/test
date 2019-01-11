@@ -3,7 +3,7 @@ import Button from 'components/prismic/button';
 import HeroTitle from './title';
 import HeroSubtitle from './subtitle';
 import HeroActions from './actions';
-import GithubStarsSlice from 'components/prismic/slices/github-stars-slice';
+import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 /**
@@ -64,7 +64,9 @@ export default class HeroDetailsSection extends React.Component {
      * slice with the type 'github_stars' and then display it :)
      */
     const slice_GithubStars = this.findSlice(data.hero_slices, 'github_stars');
-    const GithubStars = slice_GithubStars ? <GithubStarsSlice slice={slice_GithubStars} /> : null;
+    const GithubStars = slice_GithubStars ? (
+      <GithubStarsRepeatable slice={slice_GithubStars} />
+    ) : null;
 
     return (
       <div className="hero-prismic-details-section">
