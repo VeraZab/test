@@ -1,9 +1,9 @@
 import React from 'react';
 import {Controlled as CodeMirror} from 'react-codemirror2';
-require('codemirror/mode/javascript/javascript');
-require('codemirror/mode/python/python');
-require('codemirror/mode/r/r');
-require('codemirror/mode/jsx/jsx');
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/python/python';
+import 'codemirror/mode/r/r';
+import 'codemirror/mode/jsx/jsx';
 
 export default class CodeBlock extends React.Component {
   constructor(props) {

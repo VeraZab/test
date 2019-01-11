@@ -11,13 +11,6 @@ const CodeVisual = dynamic(import('./visual'), {
   ssr: false,
 });
 
-if (typeof navigator !== 'undefined') {
-  require('codemirror/mode/javascript/javascript');
-  require('codemirror/mode/python/python');
-  require('codemirror/mode/r/r');
-  require('codemirror/mode/jsx/jsx');
-}
-
 export default class CodeExplorerRepeatable extends React.Component {
   constructor(props) {
     super(props);
