@@ -2,6 +2,7 @@ import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroActions} from 'components/hero';
 import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import Buttons from 'components/buttons';
+import Link from 'next/link';
 
 const HeroButtons = [
   [
@@ -45,10 +46,23 @@ export default class HeroSection extends React.Component {
           <div className="dash-header-wrapper">
             <div className="dash-logo">
               <div className="dash-logo-wrapper">
-                <img
-                  src="https://images-plotly.imgix.net/static/marketing/dash/dash-logo.png?auto=compress&auto=format"
-                  alt="Dash by Plotly"
-                />
+                <Link
+                  prefetch
+                  href={{
+                    pathname: '/prismic-generator',
+                    query: {
+                      slug: 'home',
+                    },
+                  }}
+                  as="/"
+                >
+                  <a>
+                    <img
+                      src="https://images-plotly.imgix.net/static/marketing/dash/dash-logo.png?auto=compress&auto=format"
+                      alt="Dash by Plotly"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="dash-navigation">

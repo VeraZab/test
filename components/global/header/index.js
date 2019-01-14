@@ -20,8 +20,6 @@ class Header extends React.Component {
   }
 
   render() {
-    let {doc} = this.props;
-
     let classes = 'site-header site-header-style--product';
 
     let logo = (
@@ -31,11 +29,9 @@ class Header extends React.Component {
       />
     );
 
-    if (doc) {
-      classes += ' ' + doc.data.hero_background_style;
-      if (doc.data && doc.data.alt_logo && doc.data.alt_logo.url) {
-        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />;
-      }
+    if (this.props.document && this.props.document.data.alt_logo) {
+      classes += ' ' + this.props.document.data.hero_background_style;
+      logo = <img src={this.props.document.data.alt_logo.url} alt="Plotly" />;
     }
 
     return [

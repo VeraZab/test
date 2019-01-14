@@ -1,7 +1,7 @@
 import Head from '../head';
 import Header from '../header';
 import Footer from '../footer';
-import styles from './layout.scss';
+import styles from '/styles/partials/layout.scss';
 import React from 'react';
 import ReactGA from 'react-ga';
 
@@ -57,10 +57,10 @@ class Layout extends React.Component {
       );
     } else {
       return (
-        <div className={`page-container${this.props.className ? ' ' + this.props.className : ''}`}>
+        <div className="page-container">
           <style dangerouslySetInnerHTML={{__html: styles}} />
           <Head meta={this.props.meta} />
-          <Header pathname={this.props.pathname} />
+          <Header pathname={this.props.pathname} document={this.props.document}/>
           <div className="page">{this.props.children}</div>
           <Footer />
         </div>
