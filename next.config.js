@@ -111,9 +111,24 @@ module.exports = {
     '/chart-studio/cloud': {page: '/products/cloud'},
 
     // Newsroom
-    '/newsroom': {page: '/newsroom'},
-    '/newsroom/mitacs': {page: '/newsroom/mitacs'},
-    '/newsroom/plotcon': {page: '/newsroom/plotcon'},
+    '/newsroom': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'newsroom',
+      },
+    },
+    '/newsroom/mitacs': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'mitacs',
+      },
+    },
+    '/newsroom/plotcon': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'plotcon',
+      },
+    },
     '/newsroom/sight-machine': {
       page: '/prismic-generator',
       query: {

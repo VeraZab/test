@@ -1,0 +1,129 @@
+.content-section-title {
+  width: 100%;
+}
+
+.webinar {
+  padding-bottom: $unit * 2;
+
+  @include media('>700px') {
+    padding: $unit * 2 0;
+  }
+  text-align: left;
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: '';
+    height: 100%;
+    width: calc(100% - 120px);
+    left: 120px;
+    top: 0;
+    position: absolute;
+    border-bottom: 1px solid rgba($color-rhino-medium-2, 0.5);
+    z-index: -1;
+    @include media('<=700px') {
+      width: 100%;
+      left: 0;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    @include media('<=900px') {
+      flex-direction: column;
+      align-items: flex-start;
+      .webinar-section {
+        &:last-of-type {
+          @include media('>700px') {
+            padding-top: $unit;
+          }
+        }
+      }
+    }
+  }
+  &-section {
+    display: flex;
+    align-items: center;
+  }
+  &-img {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: $drop-shadow-l-light;
+    border: 1px solid $color-rhino-medium-2;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include media('<=700px') {
+      display: none;
+    }
+    &-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-details {
+    padding: $unit 0;
+    @include media('>700px') {
+      padding-left: $unit * 2;
+    }
+    &-row {
+      display: flex;
+      padding-top: $unit/2;
+      @include media('<=700px') {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        & > * {
+          display: flex;
+          flex-direction: column;
+          span {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 4px;
+            font-style: normal;
+            font-size: 12px;
+          }
+        }
+      }
+      & > * {
+        span {
+          opacity: 0.5;
+        }
+        &:not(:first-of-type) {
+          @include media('>700px') {
+            margin-left: $unit;
+          }
+        }
+      }
+    }
+    &-title {
+      @include ff-dosis;
+      text-align: left;
+      font-size: 30px;
+      line-height: 42px;
+      font-weight: 300;
+      color: $color-rhino-core;
+      @include media('<=700px') {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+      }
+    }
+    &-date {
+      font-style: italic;
+    }
+  }
+}

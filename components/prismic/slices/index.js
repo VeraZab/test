@@ -21,6 +21,7 @@ import GithubStars from './github-stars';
 import CodeExplorer from './code-explorer';
 import IFrame from './iframe';
 import GraphicText from './graphic-text';
+import Newsroom from './newsroom';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Slices extends React.Component {
   }
 
   render() {
-    const sliceComponent = {
+    const allSlices = {
       graphic_with_text: GraphicText,
       graphic_with_text_logos: GraphicTextWithLogos,
       graphic_with_text_slides: GraphicTextWithSlides,
@@ -43,14 +44,15 @@ export default class Slices extends React.Component {
       'cs-github-stars': GithubStars,
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
+      newsroom: Newsroom,
     };
 
     return (
       <div className="slices">
         <div className="slices-wrapper">
           {this.props.data.map((slice, i) => {
-            const SliceComponent = sliceComponent[slice.slice_type];
-            return <SliceComponent key={i} data={slice} />;
+            const IndividualSlice = allSlices[slice.slice_type];
+            return <IndividualSlice key={i} data={slice} />;
           })}
         </div>
       </div>

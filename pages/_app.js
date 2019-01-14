@@ -15,7 +15,7 @@ function inlineLinkedItems(data) {
       slice.linked_items = slice.items.map(item => {
         const linked_items = {};
         for (let [key, value] of Object.entries(item)) {
-          if (value.link_type && value.link_type == 'Document' && value.id) {
+          if (value && value.link_type && value.link_type == 'Document' && value.id) {
             linked_items[key] = data.find(d => d.id === value.id);
           }
           return linked_items;
