@@ -273,7 +273,7 @@ class DashMain extends React.Component {
                     <div className="card-action">
                       <a
                         className="typeform-share link card-action-link"
-                        href="https://plotly.typeform.com/to/seG7Vb"
+                        href="https://plotly.typeform.com/to/mOAiug"
                         data-mode="drawer_right"
                         data-hide-headers="true"
                         data-hide-footer="true"
@@ -310,7 +310,7 @@ class DashMain extends React.Component {
                     <div className="card-action">
                       <a
                         className="typeform-share link card-action-link"
-                        href="https://plotly.typeform.com/to/seG7Vb"
+                        href="https://plotly.typeform.com/to/mOAiug"
                         data-mode="drawer_right"
                         data-hide-headers="true"
                         data-hide-footer="true"
