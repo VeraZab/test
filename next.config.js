@@ -102,6 +102,13 @@ module.exports = {
       },
     },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
+    '/chart-studio/on-premise': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'on-premise-pricing',
+      },
+    },
+    '/chart-studio/cloud': {page: '/products/cloud'},
 
     // Newsroom
     '/newsroom': {page: '/newsroom'},
