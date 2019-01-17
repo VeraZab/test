@@ -143,12 +143,11 @@ class DashMain extends React.Component {
         <ContentSection>
           <ContentPane half center-vertically text>
             <div className="pre-title">Example App #1</div>
-            <Title>Stock Tickers</Title>
+            <Title>Finance Explorer </Title>
             <Body>
               <p>
-                Built in just under 100 lines of code, this app queries remote financial data from
-                Google Finance and renders interactive candlestick charts. Pandas is used to compute
-                upper and lower bollinger bands.
+                Built in just over 100 lines of code, this web app uses data stored in a .CSV file
+                to render fully interactive charts of financial information.
               </p>
 
               <Buttons className="gutter-top" items={demoAppStock} />
@@ -157,7 +156,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppStock[0].link}
-              image="https://images-plotly.imgix.net/static/marketing/dash/stock-tickers.png?auto=compress&auto=format"
+              image="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/finance-explorer.png"
             />
           </ContentPane>
         </ContentSection>
