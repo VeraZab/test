@@ -9,7 +9,7 @@ const demoAppStock = [
     title: 'EXAMPLE APP #1 -- Stock Tickers',
     icon: null,
     target: '_blank',
-    link: 'https://plot.ly/dash/gallery/stock-tickers/',
+    link: 'https://dash-hello-world.herokuapp.com/',
     button: {
       classes: 'button button-primary',
     },
@@ -146,9 +146,7 @@ class DashMain extends React.Component {
             <Title>Stock Tickers</Title>
             <Body>
               <p>
-                Built in just under 100 lines of code, this app queries remote financial data from
-                Google Finance and renders interactive candlestick charts. Pandas is used to compute
-                upper and lower bollinger bands.
+                Built in just 60 lines of code, this app renders interactive financial charts.
               </p>
 
               <Buttons className="gutter-top" items={demoAppStock} />
@@ -157,7 +155,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppStock[0].link}
-              image="https://images-plotly.imgix.net/static/marketing/dash/stock-tickers.png?auto=compress&auto=format"
+              image="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/stock-ticker.png"
             />
           </ContentPane>
         </ContentSection>
