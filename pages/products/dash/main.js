@@ -9,7 +9,7 @@ const demoAppStock = [
     title: 'EXAMPLE APP #1 -- Stock Tickers',
     icon: null,
     target: '_blank',
-    link: 'https://plot.ly/dash/gallery/stock-tickers/',
+    link: 'https://dash-hello-world.herokuapp.com/',
     button: {
       classes: 'button button-primary',
     },
@@ -143,11 +143,10 @@ class DashMain extends React.Component {
         <ContentSection>
           <ContentPane half center-vertically text>
             <div className="pre-title">Example App #1</div>
-            <Title>Finance Explorer </Title>
+            <Title>Stock Tickers</Title>
             <Body>
               <p>
-                Built in just over 100 lines of code, this web app uses data stored in a .CSV file
-                to render fully interactive charts of financial information.
+                Built in just 60 lines of code, this app renders interactive financial charts.
               </p>
 
               <Buttons className="gutter-top" items={demoAppStock} />
@@ -156,7 +155,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppStock[0].link}
-              image="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/finance-explorer.png"
+              image="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/stock-ticker.png"
             />
           </ContentPane>
         </ContentSection>
