@@ -424,3 +424,10 @@
     //font-weight: bold;
   }
 }
+
+@media (min-width: 801px) {
+  .navigation-product-submenu-section {
+    flex: 1 0 auto;
+    min-width: 160px;
+  }
+}
