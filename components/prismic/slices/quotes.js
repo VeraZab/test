@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './quotes.scss';
 
 class Quotes extends React.Component {
   constructor(props) {
@@ -9,7 +8,6 @@ class Quotes extends React.Component {
   render() {
     return (
       <div className="quotes">
-        <style dangerouslySetInnerHTML={{__html: styles}} />
         <h1 className="title">{this.props.data.primary.title1[0].text}</h1>
 
         <div className="quotesContainer">
