@@ -87,11 +87,9 @@
         align-items: flex-start;
         justify-content: flex-start;
         & > * {
-          display: flex;
           flex-direction: column;
           span {
             text-transform: uppercase;
-            font-weight: bold;
             letter-spacing: 4px;
             font-style: normal;
             font-size: 12px;
@@ -119,11 +117,11 @@
       @include media('<=700px') {
         font-size: 24px;
         line-height: 30px;
-        font-weight: bold;
       }
     }
     &-date {
       font-style: italic;
+      width: auto;
     }
   }
 }
