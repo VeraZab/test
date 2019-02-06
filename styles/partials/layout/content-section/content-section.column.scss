@@ -4,17 +4,24 @@
   /*
  * Account for any column specific styles
  */
-  &[class*="--column"] {
+  &[class*='--column'] {
     /*
      * Alignment Styles
      * only really apply to column layout
      */
-    &[class*="-align"] {
+    &[class*='-align'] {
+      &[class*='--newsroom-center'] {
+        .content-section-p-body-wrapper {
+          padding-left: 500px;
+          @include media('<=1000px') {
+            padding-left: 0px;
+          }
+        }
+      }
       /*
        * If center
        */
-      &[class*="--center"] {
-
+      &[class*='--center'] {
         &.content-section-p-style--bleed-wrapper {
           //display: flex;
           //align-items: center;
@@ -26,8 +33,8 @@
 
             @include media('<=800px') {
               .content-section-p-details {
-                padding-left: $unit*2 !important;
-                padding-right: $unit*2 !important;
+                padding-left: $unit * 2 !important;
+                padding-right: $unit * 2 !important;
               }
             }
           }
@@ -51,10 +58,10 @@
             align-items: center;
           }
           #{$c}-details {
-            padding-bottom: $unit*2;
-            width:100%;
+            padding-bottom: $unit * 2;
+            width: 100%;
             display: flex;
-            flex-direction:column;
+            flex-direction: column;
             justify-content: center;
           }
           #{$c}-graphic {
@@ -62,7 +69,7 @@
             max-width: 800px;
             width: 100%;
             padding-top: 0;
-            flex-grow:0;
+            flex-grow: 0;
             &.content-section-p-graphic--style-bleed-parent {
               width: 100%;
               max-width: 100%;
@@ -88,17 +95,17 @@
             }
           }
 
-          #{$c}-body{
+          #{$c}-body {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right:auto;
-            margin-left:auto;
+            margin-right: auto;
+            margin-left: auto;
           }
 
           #{$c}-actions {
             /* Let's prevent the graphic from getting too big */
-            padding-bottom: $unit*4;
+            padding-bottom: $unit * 4;
             .buttons {
               justify-content: center;
               align-items: center;
@@ -109,6 +116,7 @@
     }
     #{$c}-wrapper {
       flex-direction: column;
+      color: red;
     }
   }
 }
