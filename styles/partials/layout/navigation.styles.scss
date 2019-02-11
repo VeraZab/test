@@ -6,7 +6,7 @@
       display: flex;
       position: relative;
       flex-wrap: wrap;
-      @include media(">800px") {
+      @include media('>800px') {
         &:hover {
           cursor: default;
           #{$c}-item {
@@ -25,14 +25,27 @@
   }
   &-submenu {
     @include trans;
-    @include media(">800px") {
+    @include media('>800px') {
+      &-left {
+        border-right: 1px solid grey;
+      }
+      &-right {
+        margin-left: 30px;
+        padding-top: 15px;
+        img {
+          padding-bottom: 25px;
+        }
+        .navigation-product-submenu-item {
+          padding-bottom: 15px;
+        }
+      }
       box-shadow: 3px 3px 14px #000a;
       border-radius: 0px;
       position: absolute;
-      top: calc(100% - 20px);
+      top: calc(100% - 5px);
       right: 0px;
-      background: #283752;
-      padding: $unit $unit*2;
+      background: #061d44;
+      padding: $unit $unit * 2;
       pointer-events: none;
       opacity: 0;
       transform: translateY(20px);
@@ -48,20 +61,19 @@
 
       &:not(.navigation-product-submenu--large) {
         right: -8px;
-
       }
       &--large {
         min-width: 430px;
         left: -109px;
-
       }
       &-section {
         flex: 1;
         &:not(:last-of-type) {
           padding-right: 25px;
+          padding-bottom: 40px;
         }
         &--span-all {
-          padding-top: $unit*2;
+          padding-top: $unit * 2;
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -73,30 +85,34 @@
           text-transform: uppercase;
           @include ff-dosis;
           font-weight: bold;
-          letter-spacing: 1px;
+          letter-spacing: 3px;
           font-size: 14px;
           line-height: 20px;
-          padding-bottom: $unit/2;
           opacity: 0.5;
           width: 100%;
-          color: #A2B1C6;
+          color: #119dff;
         }
       }
       &-item {
-        color: white!important;
+        color: white !important;
         display: block;
         width: 100%;
         white-space: nowrap;
         text-decoration: none !important;
         background-image: none !important;
-        font-weight: 400 !important;
+        font-weight: bold;
         font-size: 12px;
         padding-top: 5px;
         &:not(:last-of-type) {
-          padding-bottom: $unit/2;
+          padding-bottom: $unit/4;
+        }
+
+        button {
+          background-color: #061d44;
+          color: #119dff;
+          border-color: #119dff;
         }
       }
     }
   }
 }
-

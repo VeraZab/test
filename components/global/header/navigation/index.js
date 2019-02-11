@@ -132,30 +132,58 @@ export default class Navigation extends React.Component {
                 }
               >
                 {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">Dash</div>
-                  {/** Products Submenu Items */}
-                  <Link href="/products/dash/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      #1 Python tool <br /> for analytic apps
-                    </a>
-                  </Link>
-                  <Link href="/products/dash/" prefetch>
-                    <a className="navigation-product-submenu-item">&#10145; Learn More</a>
-                  </Link>
+                <div className="navigation-product-submenu-left">
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">Dash</div>
+                    {/** Products Submenu Items */}
+                    <Link href="/products/dash/" prefetch>
+                      <a className="navigation-product-submenu-item">
+                        Build beautiful, analytical web applications. <br />
+                        No JavaScript required.
+                      </a>
+                    </Link>
+                    <Link href="/products/dash/" prefetch>
+                      <a className="navigation-product-submenu-item">
+                        <button type="button">Learn More</button>
+                      </a>
+                    </Link>
+                  </div>
+                  {/** Products Submenu Section */}
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">Chart Studio</div>
+                    {/** Products Submenu Items */}
+                    <Link href="/online-chart-maker/" prefetch>
+                      <a className="navigation-product-submenu-item">
+                        Collaboratively create and publish charts
+                      </a>
+                    </Link>
+                    <Link href="/online-chart-maker/" prefetch>
+                      <a className="navigation-product-submenu-item">
+                        {' '}
+                        <button type="button">Learn More</button>
+                      </a>
+                    </Link>
+                  </div>
                 </div>
-                {/** Products Submenu Section */}
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">Chart Studio</div>
-                  {/** Products Submenu Items */}
-                  <Link href="/online-chart-maker/" prefetch>
-                    <a className="navigation-product-submenu-item">
-                      Collaboratively create <br /> and publish charts{' '}
-                    </a>
-                  </Link>
-                  <Link href="/online-chart-maker/" prefetch>
-                    <a className="navigation-product-submenu-item">&#10145; Learn More</a>
-                  </Link>
+                <div className="navigation-product-submenu-right">
+                  {/** Products Submenu Section */}
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-item">
+                      Want to see Dash in action?
+                    </div>
+                    {/** Products Submenu Items */}
+                    <Link href="/online-chart-maker/" prefetch>
+                      <div className="navigation-product-submenu-item-header_image">
+                        <img src="https://prismic-io.s3.amazonaws.com/plotly%2F478dbc54-98c2-4044-a0db-1999770472f3_header.png" />
+                      </div>
+                    </Link>
+                    <Link href="/online-chart-maker/" prefetch>
+                      <a className="navigation-product-submenu-item">
+                        {' '}
+                        <button type="button">Request a Demo</button>
+                      </a>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
