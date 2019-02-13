@@ -22,7 +22,9 @@ const contentSectionStyles = {
 
 const cardBoxStyles = {
   marginTop: '40px',
-  width: '480px',
+  minWidth: '280px',
+  maxWidth: '480px',
+
   marginRight: 'auto',
   marginLeft: 'auto',
 };
