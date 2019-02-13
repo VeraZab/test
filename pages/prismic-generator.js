@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Layout from 'components/layoutHOC';
+import Layout from 'components/global/layout';
 import Hero from 'components/prismic/hero';
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
@@ -29,13 +29,15 @@ class PrismicGenerator extends Component {
     const slices = <Slices data={doc.data.slices} />;
 
     return (
-      <div className={'page' + ` page--${doc.uid}`}>
-        <Head meta={meta} />
-        {hero}
-        {slices}
-      </div>
+      <Layout meta={meta} pathname={this.props.pathname} document={doc}>
+        <div className={'page' + ` page--${doc.uid}`}>
+          <Head meta={meta} />
+          {hero}
+          {slices}
+        </div>
+      </Layout>
     );
   }
 }
 
-export default Layout(PrismicGenerator);
+export default PrismicGenerator;

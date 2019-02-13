@@ -2,6 +2,7 @@ import React from 'react';
 import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroActions} from 'components/hero';
 import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import Buttons from 'components/buttons';
+import Link from 'next/link';
 
 const HeroButtons = [
   [
@@ -41,29 +42,6 @@ export default class HeroSection extends React.Component {
   render() {
     return (
       <Hero className="no-dots dash-hero align-left split-half" style={HeroStyles}>
-        <div className="dash-header">
-          <div className="dash-header-wrapper">
-            <div className="dash-logo">
-              <div className="dash-logo-wrapper">
-                <img
-                  src="https://images-plotly.imgix.net/static/marketing/dash/dash-logo.png?auto=compress&auto=format"
-                  alt="Dash by Plotly"
-                />
-              </div>
-            </div>
-            <div className="dash-navigation">
-              <a href="/dash/pricing/" target="_blank" className="dash-navigation-item">
-                Pricing
-              </a>
-              <a target="_blank" href="https://plot.ly/dash/" className="dash-navigation-item">
-                User Guide
-              </a>
-              <a target="_self" href="/" className="dash-navigation-item">
-                Plotly
-              </a>
-            </div>
-          </div>
-        </div>
         <HeroTop>
           <HeroMessaging>
             <HeroTitle>Build beautiful web-based interfaces in&nbsp;Python</HeroTitle>
@@ -91,7 +69,6 @@ export default class HeroSection extends React.Component {
               />
             </HeroActions>
           </HeroMessaging>
-
           <div className="hero-graphic dash dash-graphic">
             <img
               src="https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format"

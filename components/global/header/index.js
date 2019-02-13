@@ -20,22 +20,15 @@ class Header extends React.Component {
   }
 
   render() {
-    let {doc} = this.props;
-
     let classes = 'site-header site-header-style--product';
 
     let logo = (
-      <img
-        src="https://tamarack-prismic.imgix.net/plotly/eb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png?w=300&auto=format"
-        alt="Plotly"
-      />
+      <img src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/logo.png" alt="Plotly" />
     );
 
-    if (doc) {
-      classes += ' ' + doc.data.hero_background_style;
-      if (doc.data && doc.data.alt_logo && doc.data.alt_logo.url) {
-        logo = <img src={doc.data.alt_logo.url} alt={doc.data.title} />;
-      }
+    if (this.props.document && this.props.document.data.alt_logo.url) {
+      classes += ' ' + this.props.document.data.hero_background_style;
+      logo = <img src={this.props.document.data.alt_logo.url} alt="Plotly" />;
     }
 
     return [
