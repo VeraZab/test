@@ -13,7 +13,7 @@ const meta = {
 };
 
 export default () => (
-  <Layout meta={meta} hideHeader="true">
+  <Layout meta={meta}>
     <style dangerouslySetInnerHTML={{__html: styles}} />
     <HeroSection />
     <DashMain />
