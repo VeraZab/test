@@ -49,16 +49,16 @@ export default class PricingCardsContainer extends React.PureComponent {
         <SwitchComponent active={this.state.pricing_mode} data={switch_component_toggle_content} />
         <HeadingContainer>
           <H1 key={shortid.generate()} className="animate--fade-in-from-top">
-            {this.state.pricing_mode == 'On-Premises: Internet-Connected Install'
+            {this.state.pricing_mode === 'On-Premises: Internet-Connected Install'
               ? 'On-Premises: Internet-Connected Install'
-              : this.state.pricing_mode == 'On-Premises: Air-Gapped Install'
+              : this.state.pricing_mode === 'On-Premises: Air-Gapped Install'
               ? 'On-Premises: Air-Gapped Install'
               : 'Public Cloud Image (AMI)'}
           </H1>
           <H2 key={shortid.generate()} className="animate--fade-in-from-bottom">
-            {this.state.pricing_mode == 'On-Premises: Internet-Connected Install'
+            {this.state.pricing_mode === 'On-Premises: Internet-Connected Install'
               ? renderPrismic(pricing_card_data[0].primary.on_premise_copy)
-              : this.state.pricing_mode == 'On-Premises: Air-Gapped Install'
+              : this.state.pricing_mode === 'On-Premises: Air-Gapped Install'
               ? renderPrismic(pricing_card_data[0].primary.airgap_copy)
               : renderPrismic(pricing_card_data[0].primary.public_cloud_copy)}
           </H2>
