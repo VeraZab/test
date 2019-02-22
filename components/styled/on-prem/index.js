@@ -17,25 +17,21 @@ const SwitchContainer = styled.div`
 `;
 
 const HeadingContainer = styled.div`
-  display: flex;
   flex-direction: column;
 `;
- 
+
 const H1 = styled.h1`
   font-size: 48px;
   line-height: 58px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
   padding-top: 20px;
   will-change: opacity, transform;
 `;
 
 const H2 = styled.h2`
-  margin: 70px;
+  width: 60%;
+  margin: auto;
   font-size: 18px;
   line-height: 36px;
   text-align: center;

@@ -7,7 +7,7 @@ class SwitchComponent extends React.PureComponent {
 
       return (
         <div
-          className={`toggle-switch__switch__item${active ? ` active` : ''}`}
+          className={`toggle-switch-item${active ? ` active` : ''}`}
           key={i}
           onClick={() => item.action()}
         >
@@ -21,8 +21,8 @@ class SwitchComponent extends React.PureComponent {
       data: {tabs},
     } = this.props;
     return (
-      <div className="toggle-switch">
-        <div className="toggle-switch__switch">{this.renderItems(tabs)}</div>
+      <div className="toggle-switch-container">
+        <div className="toggle-switch">{this.renderItems(tabs)}</div>
       </div>
     );
   }

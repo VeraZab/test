@@ -5,7 +5,7 @@ function PricingCardFeatures(props) {
   const Features = (
     <>
       {/*Features are stored in prismic as feature1, feature2, feature31, feature4, feature51, feature6 */}
-      {[1, 2, 31, 4, 51, 6].map(n => (
+      {[1, 2, 31, 4, 51].map(n => (
         <div key={n} className="pricing__card__feature">
           {props.data['feature' + n].length == 1 ? (
             <>
