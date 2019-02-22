@@ -36,6 +36,7 @@
       @include media('<=800px') {
         border-bottom: 2px solid $color-rhino-light-1;
         height: 60px;
+        width: auto;
       }
       @include trans;
       &.active {
