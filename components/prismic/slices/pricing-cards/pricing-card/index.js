@@ -17,7 +17,14 @@ function PricingCard(props) {
         </div>
       </div>
       <div className="pricing__card__header__and__features__cta">
-        <Link href="/products/dash/" prefetch>
+        <Link
+          href={
+            card.primary.title == 'Dash Deployment Server'
+              ? '/products/dash/'
+              : '/online-chart-maker'
+          }
+          prefetch
+        >
           <button type="button">Learn More</button>
         </Link>
       </div>
