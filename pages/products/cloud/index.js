@@ -13,7 +13,6 @@ import {
 } from 'mdi-react';
 import {Button} from 'components/styled/button';
 import numeral from 'numeral';
-import Tooltip from '@atlaskit/tooltip';
 import {features, PLANS, PLANS_TO_HIDE} from './data/new';
 
 const meta = {

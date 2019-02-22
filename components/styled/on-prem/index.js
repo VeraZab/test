@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from 'styled-components';
 
 const SwitchContainer = styled.div`
@@ -20,14 +18,9 @@ const SwitchContainer = styled.div`
 
 const HeadingContainer = styled.div`
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 40px;
 `;
-
+ 
 const H1 = styled.h1`
   font-size: 48px;
   line-height: 58px;
@@ -38,16 +31,13 @@ const H1 = styled.h1`
   align-items: center;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 40px;
   will-change: opacity, transform;
 `;
 
 const H2 = styled.h2`
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 70px;
   font-size: 18px;
   line-height: 36px;
-  max-width: 900px;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
   color: rgba(81, 103, 131, 1);

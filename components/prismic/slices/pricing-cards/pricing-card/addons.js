@@ -1,52 +1,55 @@
-import React, {Fragment} from 'react';
-import PropTypes from 'prop-types';
-import {renderPrismic} from 'lib/renderPrismicRichText';
+import React from 'react';
+import Link from 'next/link';
 
-class PricingCardAddons extends React.Component {
-  renderAddons(feature, index) {
+function PricingCardAddons(props) {
+  function renderAddons(feature, index) {
     return (
       <div className="pricing__card__addon" key={index}>
+        {Boolean(feature.addon_image && feature.addon_image.url) && (
+          <div className="pricing__card__addon__image">
+            <img src={feature.addon_image.url} />
+          </div>
+        )}
         {Boolean(feature.addon_title[0] && feature.addon_title[0].text.length > 1) && (
-          <div className="pricing__card__addon_title">{feature.addon_title[0].text}</div>
+          <div className="pricing__card__addon__title">{feature.addon_title[0].text}</div>
         )}
         {Boolean(feature.addon_price[0] && feature.addon_price[0].text.length > 1) &&
           (feature.addon_price[0].text == 'Contact Us' ? (
             <div className="pricing__card__addon__contact__us">{feature.addon_price[0].text}</div>
           ) : (
-            <div className="pricing__card__addon_price">{feature.addon_price[0].text}</div>
+            <div className="pricing__card__addon__price">{feature.addon_price[0].text}</div>
           ))}
         {Boolean(feature.addon_description[0] && feature.addon_description[0].text.length > 1) && (
-          <div className="pricing__card__addon_description">
+          <div className="pricing__card__addon__description">
             {feature.addon_description[0].text}
           </div>
         )}
         {Boolean(feature.addon_url[0] && feature.addon_url[0].text.length > 1) && (
-          <div className="pricing__card__addon_url">
-            {renderPrismic(Array(feature.addon_url[0]))}
+          <div className="pricing__card__addon__cta">
+            <Link href="/products/dash/" prefetch>
+              <a className="pricing__card__addon_url" href={feature.addon_url[0].text}>
+                <button className="pricing__card__addon__cta__text" type="button">
+                  {feature.addon_cta_text[0].text}
+                </button>
+              </a>
+            </Link>
           </div>
         )}
       </div>
     );
   }
-
-  render() {
-    const {features} = this.context;
-
-    return (
-      <div className="pricing__card__addons__section">
-        {Boolean(features[0].addons_label[0] && features[0].addons_label[0].text !== '') && (
-          <div className="pricing__card__addons__section__label">
-            {features[0].addons_label[0].text}
-          </div>
-        )}
-        {features.map((feature, index) => this.renderAddons(feature, index))}
+  return (
+    <>
+      {Boolean(props.data[0].addons_label[0] && props.data[0].addons_label[0].text !== '') && (
+        <div className="pricing__card__addons__section__label">
+          {props.data[0].addons_label[0].text}
+        </div>
+      )}
+      <div className="pricing__card__addons__section__addons_wrapper">
+        {props.data.map((feature, index) => renderAddons(feature, index))}
       </div>
-    );
-  }
+    </>
+  );
 }
-
-PricingCardAddons.contextTypes = {
-  features: PropTypes.array.isRequired,
-};
 
 export default PricingCardAddons;

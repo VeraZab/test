@@ -1,5 +1,6 @@
 import React from 'react';
 import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
+import shortid from 'shortid';
 
 class Architecture extends React.Component {
   constructor(props) {
@@ -9,7 +10,10 @@ class Architecture extends React.Component {
   render() {
     const renderTextItem = position => {
       return (
-        <div className={`text-item text-item--${position.x}-${position.y}`}>
+        <div
+          key={shortid.generate()}
+          className={`text-item text-item--${position.x}-${position.y}`}
+        >
           <div className="text-item-wrapper">
             <div className="text-item-lines" />
             {position.title && (
