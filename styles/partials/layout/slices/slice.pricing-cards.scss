@@ -3,6 +3,10 @@
   .pricing__card__wrapper {
     margin: auto;
     width: 80%;
+    @include media('<800px') {
+      width: 100%;
+    }
+
     .pricing__card__header__and__features__section {
       display: flex;
       box-shadow: 0px 2px 14px rgba($color-rhino-dark, 0.2);
@@ -48,6 +52,10 @@
         .pricing__card__header__frequency {
           font-size: 0.8rem;
           padding-bottom: 10px;
+          @include media('<800px') {
+            width: 200px;
+            margin: auto;
+          }
           h2 {
             color: $color-rhino-dark;
           }
@@ -101,6 +109,7 @@
             padding-left: 15px;
             @include media('<800px') {
               justify-content: flex-start;
+              padding-left: 0px;
             }
           }
           .pricing__card__feature__image {
@@ -119,7 +128,7 @@
       padding-bottom: 100px;
       margin: auto;
       button {
-        border: 1px solid $color-dodger;
+        border: 2px solid $color-dodger;
         color: $color-dodger;
         text-transform: uppercase;
         font-weight: 450;

@@ -1,7 +1,5 @@
-.toggle-switch {
-  $c: &;
-
-  max-width: 80%;
+.toggle-switch-container {
+  max-width: 100%;
   padding-top: 5px;
   display: flex;
   align-items: center;
@@ -10,8 +8,7 @@
     width: 40%;
     height: 200px;
   }
-
-  #{$c}__switch {
+  .toggle-switch {
     font-size: 0.8rem;
     flex-grow: 1;
     display: flex;
@@ -21,26 +18,25 @@
     border: 1px solid $color-rhino-light-4;
     box-shadow: rgba(80, 103, 132, 0.2) 0 2px 8px 0;
     margin: 10px;
-
     @include media('<=800px') {
       display: block;
-      min-width: 350px;
+      min-width: 300px;
     }
-
-    &__item {
+    .toggle-switch-item {
       display: flex;
       align-items: center;
+      width: 280px;
       justify-content: center;
-      padding: 5px;
+      padding: 5px 15px;
       cursor: default;
       color: rgba(81, 103, 131, 0.75);
       font-weight: normal;
       border-right: 1px solid $color-rhino-light-1;
       height: 60px;
-
       @include media('<=800px') {
         border-bottom: 2px solid $color-rhino-light-1;
         height: 60px;
+        width: auto;
       }
       @include trans;
       &.active {
