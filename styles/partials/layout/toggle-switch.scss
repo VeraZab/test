@@ -20,7 +20,7 @@
     margin: 10px;
     @include media('<=800px') {
       display: block;
-      min-width: 350px;
+      min-width: 300px;
     }
     .toggle-switch-item {
       display: flex;
