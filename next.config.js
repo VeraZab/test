@@ -1,11 +1,10 @@
 const path = require('path');
 const glob = require('glob');
-const isProd = process.env.NODE_ENV === 'production';
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   exportPathMap: () => ({
-    //Home
+    // Home
     '/': {
       page: '/prismic-generator',
       query: {
