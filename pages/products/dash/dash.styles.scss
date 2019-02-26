@@ -61,7 +61,6 @@
   }
 
   &-hero {
-<<<<<<< HEAD
     background: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
     @include media('<=1230px') {
       padding-top: 80px;
@@ -74,15 +73,6 @@
       }
       padding-top: 40px;
       &-wrapper{
-=======
-    background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
-    .hero-top {
-      @include media('<=900px') {
-        padding-top: 100px;
-      }
-      padding-top: 40px;
-      &-wrapper {
->>>>>>> f3dcf2f... updating products dropdown
         display: flex !important;
       }
     }
