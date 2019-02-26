@@ -1,24 +1,22 @@
 // @import "partials/abstract";
 
 .dash {
-
-  &-content{
-    .content-section{
-
-      .content-section-graphic-image-link{
+  &-content {
+    .content-section {
+      .content-section-graphic-image-link {
         @include trans;
         display: block;
-        &:hover{
+        &:hover {
           transform: translateY(-4px);
         }
       }
-      &-title-wrapper{
+      &-title-wrapper {
         /* Dash is productive: */
         font-size: 38px !important;
         color: #506784;
         line-height: 46px !important;
       }
-      p{
+      p {
         font-size: 22px !important;
         line-height: 36px !important;
       }
@@ -31,18 +29,16 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-
     }
   }
   &-navigation {
     display: flex;
 
-    padding-top:$gutter;
+    padding-top: $gutter;
 
-
-    @include media('<=600px'){
+    @include media('<=600px') {
       flex-direction: column;
-      padding-top:0;
+      padding-top: 0;
       text-align: right;
     }
     &-item {
@@ -50,13 +46,13 @@
       text-decoration: none !important;
       background-image: none !important;
       text-transform: uppercase;
-      letter-spacing:2px;
-      padding-left:$gutter;
-      white-space:nowrap;
+      letter-spacing: 2px;
+      padding-left: $gutter;
+      white-space: nowrap;
       @include trans;
       text-shadow: $text-shadow-default;
-      &:hover{
-        @include media('>600px'){
+      &:hover {
+        @include media('>600px') {
           transform: translateY(-4px);
           cursor: pointer;
         }
@@ -66,32 +62,40 @@
 
   &-hero {
     background: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+    @include media('<=1230px') {
+      padding-top: 80px;
+
+    }
     .hero-top {
-      padding-top: 0;
+      @include media('<=1230px') {
+        padding-top: 50px;
+
+      }
+      padding-top: 40px;
       &-wrapper{
         display: flex !important;
       }
     }
 
-    .buttons{
+    .buttons {
       width: 100%;
     }
 
     @include media('<=900px') {
-     .buttons{
-       flex-direction: column;
-       .button{
-         width: 100%;
-         margin-left:0;
+      .buttons {
+        flex-direction: column;
+        .button {
+          width: 100%;
+          margin-left: 0;
 
-         & + .button{
-           margin-top:$gutter;
-         }
-       }
-     }
+          & + .button {
+            margin-top: $gutter;
+          }
+        }
+      }
     }
     @include media('<=800px') {
-      .hero-actions{
+      .hero-actions {
         justify-content: center;
       }
       .hero-top-wrapper {
@@ -99,7 +103,7 @@
 
         .dash-graphic {
           transform: none !important;
-          padding-bottom: $gutter*4;
+          padding-bottom: $gutter * 4;
           padding-top: 0;
         }
       }
@@ -107,7 +111,7 @@
   }
 
   &-graphic {
-    padding-top: $gutter*4;
+    padding-top: $gutter * 4;
   }
 
   &-graphics {
@@ -119,7 +123,7 @@
   &-logo {
     width: 100%;
     &-wrapper {
-      padding-bottom: $gutter*3;
+      padding-bottom: $gutter * 3;
     }
     img {
       max-width: 177px;
@@ -127,7 +131,6 @@
   }
 
   &-section {
-
     p {
       font-size: 22px;
       color: #516783;
@@ -143,17 +146,17 @@
     }
 
     &-features-thirds {
-      background-image: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+      background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
 
-      padding-top: $gutter*2;
+      padding-top: $gutter * 2;
       transform: translateY(-120px);
 
-      @include media('<=900px'){
+      @include media('<=900px') {
         transform: none;
       }
 
       @include tablet {
-        padding-bottom: $gutter*4;
+        padding-bottom: $gutter * 4;
       }
 
       .content-section-wrapper {
@@ -169,11 +172,12 @@
           img {
           }
         }
-        .title { /* Lightweight: */
-          font-family: "Dosis", sans-serif;
-          font-weight:300;
+        .title {
+          /* Lightweight: */
+          font-family: 'Dosis', sans-serif;
+          font-weight: 300;
           font-size: 28px;
-          color: #FFFFFF;
+          color: #ffffff;
           letter-spacing: 0;
           line-height: 21px;
           margin-top: $unit;
@@ -181,16 +185,16 @@
         p {
           /* Dash provides a dire: */
           font-size: 16px !important;
-          color: #FFFFFF;
-          max-width:100%;
+          color: #ffffff;
+          max-width: 100%;
           line-height: 26px !important;
         }
       }
-
     }
 
     &-dash-apps {
-      background: url("https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format") center top !important;
+      background: url('https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format')
+        center top !important;
       transform: translateY(-120px);
       padding-top: 0px;
       background-size: cover !important;
@@ -201,16 +205,15 @@
       }
     }
 
-
-    &-more-details{
-      .cards.stories{
+    &-more-details {
+      .cards.stories {
         align-items: flex-start;
-
       }
     }
 
     &-open-source {
-      background: url("https://images-plotly.imgix.net/static/marketing/dash/section-open-source-bg.png?auto=compress&auto=format") center top !important;
+      background: url('https://images-plotly.imgix.net/static/marketing/dash/section-open-source-bg.png?auto=compress&auto=format')
+        center top !important;
       background-size: cover !important;
       .content-section-title-wrapper {
         color: white;
@@ -228,7 +231,7 @@
 pre {
   text-align: left;
   font-family: monospace;
-  color: #7FDBFF;
+  color: #7fdbff;
   background-color: #444;
   padding: 15px;
   overflow-y: scroll;

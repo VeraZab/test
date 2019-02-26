@@ -1,34 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
-import NProgress from 'nprogress';
-import Router from 'next/router';
 import Navigation from './navigation';
-
 import shortid from 'shortid';
-
-Router.onRouteChangeStart = url => {
-  NProgress.start();
-};
-Router.onRouteChangeComplete = () => {
-  NProgress.done();
-};
-Router.onRouteChangeError = () => NProgress.done();
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
   }
 
   render() {
     let classes = 'site-header site-header-style--product';
 
     let logo = (
-      <img src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/logo.png" alt="Plotly" />
+      <img
+        style={{maxWidth: '180px'}}
+        src="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/logo.png"
+        alt="Plotly"
+      />
     );
 
     if (this.props.document && this.props.document.data.alt_logo.url) {
       classes += ' ' + this.props.document.data.hero_background_style;
-      logo = <img src={this.props.document.data.alt_logo.url} alt="Plotly" />;
+      logo = (
+        <img style={{maxWidth: '180px'}} src={this.props.document.data.alt_logo.url} alt="Plotly" />
+      );
+    }
+
+    if (this.props.logo) {
+      logo = <img style={{paddingTop: '20px'}} src={this.props.logo} alt="Plotly" />;
     }
 
     return [

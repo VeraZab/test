@@ -60,7 +60,11 @@ class Layout extends React.Component {
         <div className="page-container">
           <style dangerouslySetInnerHTML={{__html: styles}} />
           <Head meta={this.props.meta} />
-          <Header pathname={this.props.pathname} document={this.props.document}/>
+          <Header
+            pathname={this.props.pathname}
+            document={this.props.document}
+            logo={this.props.meta.image}
+          />
           <div className="page">{this.props.children}</div>
           <Footer />
         </div>

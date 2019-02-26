@@ -32,8 +32,6 @@ const HeroButtons = [
   [],
 ];
 
-const HeroStyles = {};
-
 export default class HeroSection extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +39,7 @@ export default class HeroSection extends React.Component {
 
   render() {
     return (
-      <Hero className="no-dots dash-hero align-left split-half" style={HeroStyles}>
+      <Hero className="no-dots dash-hero align-left split-half">
         <HeroTop>
           <HeroMessaging>
             <HeroTitle>Build beautiful web-based interfaces in&nbsp;Python</HeroTitle>
