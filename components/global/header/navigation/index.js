@@ -215,20 +215,20 @@ export default class Navigation extends React.Component {
               {/** Begin Chart Studio Pricing Nav Menu */}
               <div className="navigation-product-submenu-left">
                 <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title ">
+                  <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Chart Studio</span>
                     <Link href="/online-chart-maker/" prefetch>
                       <a className="hide-on-desktop">Chart Studio Cloud</a>
                     </Link>
                   </div>
                   <br className="hide-on-desktop" />
-                  <div className="navigation-product-submenu-section-title ">
+                  <div className="navigation-product-submenu-section-title">
                     <Link href="/products/on-premise" prefetch>
                       <a className="hide-on-desktop">Chart Studio Enterprise</a>
                     </Link>
                   </div>
                   <br className="hide-on-desktop" />
-                  <div className="navigation-product-submenu-section-title ">
+                  <div className="navigation-product-submenu-section-title">
                     <Link href="/dash/pricing/" prefetch>
                       <a className="hide-on-desktop">Dash Deployment Server</a>
                     </Link>

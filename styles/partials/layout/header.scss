@@ -250,12 +250,10 @@
 
           #community-forum {
             padding-bottom: 20px;
+            border-bottom: 1px solid #072e68;
+
           }
 
-          .navigation-product-submenu-section-title:not(:last-of-type) {
-            border-bottom: 1px solid #072e68;
-            justify-content: flex-end;
-          }
         }
 
         .navigation-product-submenu-section:not(:last-of-type) {
