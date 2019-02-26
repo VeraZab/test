@@ -107,10 +107,6 @@ export default class Navigation extends React.Component {
   }
 
   render() {
-    console.log(this.state.productSubmenuActive);
-    console.log(this.state.pricingSubmenuActive);
-    console.log(this.state.signUpSubmenuActive);
-
     return (
       <>
         {/** Begin Mobile Nav Menu */}

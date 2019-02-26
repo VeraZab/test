@@ -1,4 +1,5 @@
 .site-header {
+  cursor: pointer;
   min-height: 100px;
   width: 100%;
   position: absolute;
@@ -37,14 +38,15 @@
           flex-grow: 1;
           display: flex;
           text-align: right;
+          font-weight: 500;
           justify-content: flex-start;
           margin-left: 24px;
+          color: white;
           opacity: 0.75;
-          cursor: auto;
         }
 
         .navigation-product-item:hover {
-          color: white;
+          color: #09ffff;
           opacity: 1;
         }
       }
@@ -58,14 +60,14 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
-          font-family: 'Dosis', sans-serif;
+          font-family: 'Open Sans', sans-serif;
 
           .hide-on-mobile {
             display: none;
           }
 
           .navigation-product-item {
-            color: #119dff;
+            color: white;
             font-size: 12px;
 
             button {
@@ -156,17 +158,15 @@
         .navigation-product-item-with-submenu {
           display: flex;
           position: relative;
-          cursor: auto;
-
           .navigation-product-submenu {
-            transition: 0.88s all cubic-bezier(0.24, 0.8, 0, 0.97);
+            transition: 0.28s all cubic-bezier(0.24, 0.8, 0, 0.97);
           }
         }
 
         .navigation-product-item-with-submenu:hover .navigation-product-item {
           opacity: 1;
           transform: translateY(-4px);
-          color: white;
+          color: #09ffff;
         }
 
         .navigation-product-item-with-submenu:hover .navigation-product-submenu {
@@ -177,13 +177,15 @@
 
         .navigation-product-item {
           button {
-            background-color: #061d44;
-            color: #119dff;
+            background-color: #119dff;
+            color: white;
             border: 1px solid rgba(17, 157, 255, 0.5);
             font-size: 14px;
+            padding: 9px;
           }
           button:hover {
-            color: rgba(9, 255, 255, 0.8);
+            color: white;
+            background-color: #09ffff;
           }
         }
 
@@ -201,8 +203,8 @@
           justify-content: flex-start;
           align-items: flex-start;
           line-height: 1.6;
-          font-family: 'Dosis', sans-serif;
-          margin-top: 15px;
+          font-family: 'Open Sans', sans-serif;
+          margin-top: 30px;
         }
 
         .navigation-product-submenu-left {
@@ -233,11 +235,12 @@
           flex-direction: column;
           .navigation-product-submenu-section-title {
             text-transform: uppercase;
-            font-family: 'Dosis', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             display: flex;
             letter-spacing: 3px;
             font-size: 14px;
             line-height: 20px;
+            font-weight: bold;
             opacity: 1;
             color: #119dff;
             text-align: center;
@@ -251,9 +254,7 @@
           #community-forum {
             padding-bottom: 20px;
             border-bottom: 1px solid #072e68;
-
           }
-
         }
 
         .navigation-product-submenu-section:not(:last-of-type) {
@@ -263,7 +264,7 @@
 
         .navigation-product-submenu-section-title {
           text-transform: uppercase;
-          font-family: 'Dosis', sans-serif;
+          font-family: 'Open Sans', sans-serif;
           letter-spacing: 3px;
           font-size: 14px;
           line-height: 20px;
@@ -281,6 +282,7 @@
           font-size: 12px;
           padding-top: 5px;
           padding-bottom: 5px;
+          cursor: auto;
         }
 
         .navigation-product-submenu-item button {

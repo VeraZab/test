@@ -29,8 +29,6 @@ export default class Button extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
-
     let icon = item => {
       if (item.icon.type === 'image') {
         return (
