@@ -306,7 +306,7 @@ export default class Navigation extends React.Component {
             </div>
           </div>
           {/** End SIGN UP Section */}
-          <a href="https://plotly.typeform.com/to/mOAiug" className="navigation-product-item">
+          <a href="https://plotly.typeform.com/to/ECUfbT" className="navigation-product-item">
             <button type="button">Request a Demo</button>
           </a>
         </nav>
