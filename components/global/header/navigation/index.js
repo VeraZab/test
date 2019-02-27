@@ -135,19 +135,20 @@ export default class Navigation extends React.Component {
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Dash</span>
-                    <Link href="/products/dash/" prefetch>
-                      <a className="hide-on-desktop">Dash</a>
-                    </Link>
+                    <a href="/products/dash/" className="hide-on-desktop">
+                      Dash
+                    </a>
                   </div>
                   <span className="navigation-product-submenu-item hide-on-mobile">
                     Build beautiful, analytical web applications. <br />
                     No JavaScript required.
                   </span>
-                  <Link href="/products/dash/" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button">Learn More</button>
-                    </a>
-                  </Link>
+                  <a
+                    href="/products/dash/"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button">Learn More</button>
+                  </a>
                 </div>
                 {/** End Dash Products Nav Menu */}
 
@@ -155,19 +156,20 @@ export default class Navigation extends React.Component {
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Chart Studio</span>
-                    <Link href="/online-chart-maker/" prefetch>
-                      <a className="hide-on-desktop">Chart Studio Cloud</a>
-                    </Link>
+                    <a href="/online-chart-maker/" className="hide-on-desktop">
+                      Chart Studio Cloud
+                    </a>
                   </div>
                   {/** Products Submenu Items */}
                   <span className="navigation-product-submenu-item hide-on-mobile">
                     Collaboratively create and publish charts.
                   </span>
-                  <Link href="/online-chart-maker/" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button">Learn More</button>
-                    </a>
-                  </Link>
+                  <a
+                    href="/online-chart-maker/"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button">Learn More</button>
+                  </a>
                 </div>
               </div>
               {/** End Chart Studio Products Nav Menu */}
@@ -178,16 +180,15 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-item hide-on-mobile">
                     Want to see Dash in action?
                   </div>
-                  <Link href="#" prefetch>
-                    <div className="navigation-product-submenu-item-header_image hide-on-mobile">
-                      <img src="https://prismic-io.s3.amazonaws.com/plotly%2F478dbc54-98c2-4044-a0db-1999770472f3_header.png" />
-                    </div>
-                  </Link>
-                  <Link href="https://plotly.typeform.com/to/mOAiug" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button hide-on-mobile">Request a Demo</button>
-                    </a>
-                  </Link>
+                  <div className="navigation-product-submenu-item-header_image hide-on-mobile">
+                    <img src="https://prismic-io.s3.amazonaws.com/plotly%2F478dbc54-98c2-4044-a0db-1999770472f3_header.png" />
+                  </div>
+                  <a
+                    href="https://plotly.typeform.com/to/mOAiug"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button hide-on-mobile">Request a Demo</button>
+                  </a>
                 </div>
               </div>
               {/** End Dash Demo Nav Menu */}
@@ -213,35 +214,37 @@ export default class Navigation extends React.Component {
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Chart Studio</span>
-                    <Link href="/online-chart-maker/" prefetch>
-                      <a className="hide-on-desktop">Chart Studio Cloud</a>
-                    </Link>
+                    <a href="/online-chart-maker/" className="hide-on-desktop">
+                      Chart Studio Cloud
+                    </a>
                   </div>
                   <br className="hide-on-desktop" />
                   <div className="navigation-product-submenu-section-title">
-                    <Link href="/products/on-premise" prefetch>
-                      <a className="hide-on-desktop">Chart Studio Enterprise</a>
-                    </Link>
+                    <a href="/products/on-premise" className="hide-on-desktop">
+                      Chart Studio Enterprise
+                    </a>
                   </div>
                   <br className="hide-on-desktop" />
                   <div className="navigation-product-submenu-section-title">
-                    <Link href="/dash/pricing/" prefetch>
-                      <a className="hide-on-desktop">Dash Deployment Server</a>
-                    </Link>
+                    <a href="/dash/pricing/" className="hide-on-desktop">
+                      Dash Deployment Server
+                    </a>
                   </div>
                   <span className="navigation-product-submenu-item hide-on-mobile">
                     Cloud and Enterprise solutions to meet <br /> your needs.
                   </span>
-                  <Link href="/products/cloud/" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button">Chart Studio Cloud</button>
-                    </a>
-                  </Link>
-                  <Link href="/products/on-premise/" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button">Chart Studio Enterprise</button>
-                    </a>
-                  </Link>
+                  <a
+                    href="/products/cloud/"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button">Chart Studio Cloud</button>
+                  </a>
+                  <a
+                    href="/products/on-premise/"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button">Chart Studio Enterprise</button>
+                  </a>
                 </div>
               </div>
               {/** End Chart Studio Pricing Nav Menu */}
@@ -257,11 +260,12 @@ export default class Navigation extends React.Component {
                     for easy app deployment in commercial <br />
                     applications.
                   </span>
-                  <Link href="/dash/pricing/" prefetch>
-                    <a className="navigation-product-submenu-item hide-on-mobile">
-                      <button type="button">Dash Deployment Server </button>
-                    </a>
-                  </Link>
+                  <a
+                    href="/dash/pricing/"
+                    className="navigation-product-submenu-item hide-on-mobile"
+                  >
+                    <button type="button">Dash Deployment Server </button>
+                  </a>
                 </div>
               </div>
               {/** End Dash Pricing Nav Menu */}
@@ -283,26 +287,28 @@ export default class Navigation extends React.Component {
               }
             >
               <div className="navigation-product-submenu-section">
-                <Link href="https://community.plot.ly" prefetch>
-                  <a id="community-forum" className="navigation-product-submenu-section-title">
-                    Community Forum
-                  </a>
-                </Link>
+                <a
+                  href="https://community.plot.ly"
+                  id="community-forum"
+                  className="navigation-product-submenu-section-title"
+                >
+                  Community Forum
+                </a>
                 <br className="hide-on-desktop" />
-                <Link href="/Auth/login/?action=signup#/" prefetch>
-                  <a id="chart-studio" className="navigation-product-submenu-section-title">
-                    Chart Studio Cloud
-                  </a>
-                </Link>
+                <a
+                  href="/Auth/login/?action=signup#/"
+                  id="chart-studio"
+                  className="navigation-product-submenu-section-title"
+                >
+                  Chart Studio Cloud
+                </a>
               </div>
             </div>
           </div>
           {/** End SIGN UP Section */}
-          <Link href="https://plotly.typeform.com/to/mOAiug" prefetch>
-            <a className="navigation-product-item">
-              <button type="button">Request a Demo</button>
-            </a>
-          </Link>
+          <a href="https://plotly.typeform.com/to/mOAiug" className="navigation-product-item">
+            <button type="button">Request a Demo</button>
+          </a>
         </nav>
         {/** End Desktop Nav Menu */}
       </>
