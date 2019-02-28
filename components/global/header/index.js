@@ -11,6 +11,7 @@ const chartStudioLogo =
   'https://plotly.cdn.prismic.io/plotly/3258f4ec3a8868ea78956d0a0e6f4d4343768766_chart-studio-logo.png';
 const plotlyLogo =
   'https://plotly.cdn.prismic.io/plotly/9963abe714d6794fa6189806ff82cbe442378600_plotly-logo-white.png';
+const falconLogo = 'https://plotly.cdn.prismic.io/plotly%2Fc83c305c-b2b3-47c0-a2a5-28a4c969af41_download.svg';
 
 class Header extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Header extends React.Component {
     let logo = '';
 
     if (this.props.document && this.props.document.data.alt_logo.url) {
+      console.log(this.props.document.data.alt_logo.url);
       classes += ' ' + this.props.document.data.hero_background_style;
       if (
         this.props.document.data.alt_logo.url == dashLogo ||
@@ -37,13 +39,19 @@ class Header extends React.Component {
         );
       }
 
+      if (this.props.document.data.alt_logo.url == falconLogo) {
+        logo = (
+          <img id="chart-studio-logo" src={this.props.document.data.alt_logo.url} alt="Plotly" />
+        );
+      }
+
       if (this.props.document.data.alt_logo.url == plotlyLogo) {
         logo = <img id="plotly-logo" src={this.props.document.data.alt_logo.url} alt="Plotly" />;
       }
     }
 
     if (this.props.logo) {
-      logo = <img src={this.props.logo} alt="Plotly" />;
+      logo = <img id="plotly-logo" src={this.props.logo} alt="Plotly" />;
     }
 
     return [
