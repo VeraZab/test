@@ -187,7 +187,7 @@ export default class Navigation extends React.Component {
                     href="https://plotly.typeform.com/to/ECUfbT"
                     className="navigation-product-submenu-item hide-on-mobile"
                   >
-                    <button type="button hide-on-mobile">Request a Demo</button>
+                    <button type="button hide-on-mobile">Schedule a Demo</button>
                   </a>
                 </div>
               </div>
@@ -218,13 +218,11 @@ export default class Navigation extends React.Component {
                       Chart Studio Cloud
                     </a>
                   </div>
-                  <br className="hide-on-desktop" />
                   <div className="navigation-product-submenu-section-title">
                     <a href="/products/on-premise" className="hide-on-desktop">
                       Chart Studio Enterprise
                     </a>
                   </div>
-                  <br className="hide-on-desktop" />
                   <div className="navigation-product-submenu-section-title">
                     <a href="/dash/pricing/" className="hide-on-desktop">
                       Dash Deployment Server
@@ -295,6 +293,7 @@ export default class Navigation extends React.Component {
                   Community Forum
                 </a>
                 <br className="hide-on-desktop" />
+                <br className="hide-on-desktop" />
                 <a
                   href="/Auth/login/?action=signup#/"
                   id="chart-studio"
@@ -307,7 +306,7 @@ export default class Navigation extends React.Component {
           </div>
           {/** End SIGN UP Section */}
           <a href="https://plotly.typeform.com/to/ECUfbT" className="navigation-product-item">
-            <button type="button">Request a Demo</button>
+            <button type="button">Schedule a Demo</button>
           </a>
         </nav>
         {/** End Desktop Nav Menu */}

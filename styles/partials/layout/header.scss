@@ -14,12 +14,21 @@
     margin: 0 auto;
 
     .site-header--section-left {
-      .site-header-logo {
-        max-width: 180px;
+      width: 300px;
+      #plotly-logo {
+        width: 150px;
       }
+
+      #dash-logo {
+      }
+
+      #chart-studio-logo {
+        width: 100%;
+      }
+
       @media (max-width: 800px) {
         .site-header-logo {
-          max-width: 100px;
+          max-width: 200px;
         }
       }
     }
@@ -61,6 +70,7 @@
           align-items: flex-start;
           justify-content: flex-start;
           font-family: 'Open Sans', sans-serif;
+          overflow-y: scroll;
 
           .hide-on-mobile {
             display: none;
@@ -71,14 +81,15 @@
             font-size: 12px;
 
             button {
-              background-color: #061d44;
-              color: #119dff;
+              background-color: #119dff;
+              color: white;
               border: 1px solid rgba(17, 157, 255, 0.5);
-              align-self: flex-start;
+              font-size: 14px;
+              padding: 9px;
             }
-
             button:hover {
-              color: rgba(9, 255, 255, 0.8);
+              color: white;
+              background-color: #09ffff;
             }
           }
 
@@ -249,10 +260,11 @@
 
           #chart-studio {
             padding-top: 20px;
+            padding-bottom: 8px;
           }
 
           #community-forum {
-            padding-bottom: 20px;
+            padding-bottom: 32px;
             padding-top: 20px;
 
             border-bottom: 1px solid #072e68;
