@@ -24,6 +24,7 @@ const meta = {
     label1: 'Most Popular Plan',
     data1: 'Plotly Professional @ $840/year',
   },
+  image: 'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png'
 };
 
 const filteredAmount = items =>
