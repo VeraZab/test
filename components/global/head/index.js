@@ -19,7 +19,7 @@ const defaultMeta = {
   },
 };
 
-export default ({children, meta = defaultMeta}) => {
+export default ({meta = defaultMeta}) => {
   const title = meta.title ? meta.title : defaultMeta.title;
   const OgTitle = title;
 
