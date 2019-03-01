@@ -49,14 +49,14 @@ $ yarn run dev
 5. Rebuild [production branch in CircleCI](https://circleci.com/gh/plotly/plotly-next/tree/production ) (manually if necessary).
 
 ##. Prismic Workflow
-2. Create a new page or find the page whose content you want to edit.
+1. Create a new page or find the page whose content you want to edit.
 ### NOTE: To create new ways to display content in Prismic, edit the `page` custom type to add a new slice type. *DO NOT CREATE NEW CUSTOM TYPES IN PRISMIC.*
-3. Make your changes in the GUI, then `Save`.
-4. `Publish` your changes to a new release.
-5. Preview the new release in your local dev environment.
-6. Iterate steps 3-5.
-7. When satisfied with your changes, request a code review.
-8. After you recieve a ::dancer::, `Publish` your new release and rebuild the latest successful build of the `production` branch of this GitHub repository in CircleCI => https://circleci.com/gh/plotly/plotly-next/tree/production *This will cause the website to rebuild itself with the latest version of the content published in Prismic.*
+2. Make your changes in the GUI, then `Save`.
+3. `Publish` your changes to a new release.
+4. Preview the new release in your local dev environment.
+5. Iterate steps 3-5.
+6. When satisfied with your changes, request a code review.
+7. After you recieve a ::dancer::, `Publish` your new release and rebuild the latest successful build of the `production` branch of this GitHub repository in CircleCI => https://circleci.com/gh/plotly/plotly-next/tree/production *This will cause the website to rebuild itself with the latest version of the content published in Prismic.*
 
 To create new ways to display content in Prismic, edit the `page` custom type to add a new slice type.
 
