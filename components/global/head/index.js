@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-const globalMeta = {};
 const defaultMeta = {
   type: 'article',
   sitename: 'Plotly',
@@ -32,7 +31,7 @@ export default ({meta = defaultMeta}) => {
       <title>{siteTitle}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta property="og:site_name" content={globalMeta.sitename} />
+      <meta property="og:site_name" content={defaultMeta.sitename} />
       <meta property="og:type" content={defaultMeta.type} />
       <meta property="og:title" content={OgTitle} />
       <meta property="og:description" content={Description} />

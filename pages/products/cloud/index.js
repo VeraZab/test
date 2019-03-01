@@ -9,7 +9,6 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   CloseIcon,
-  QuestionMarkCircleIcon,
 } from 'mdi-react';
 import {Button} from 'components/styled/button';
 import numeral from 'numeral';
@@ -24,7 +23,8 @@ const meta = {
     label1: 'Most Popular Plan',
     data1: 'Plotly Professional @ $840/year',
   },
-  image: 'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png'
+  image:
+    'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png',
 };
 
 const filteredAmount = items =>
@@ -42,7 +42,6 @@ const Plans = ({items, showing, navigation, ...rest}) =>
               <StyledPricing.Line.Item key={i} heading showing={i === showing}>
                 <Plan.Name onClick={tooltip && tooltip.onClick ? () => tooltip.onClick() : null}>
                   <Type.h4 color="currentColor">{title}</Type.h4>
-                  {tooltip && <ToolTip {...tooltip} />}
                 </Plan.Name>
                 <Plan.Content>
                   <Plan.Content.Price>
@@ -76,22 +75,10 @@ const NoMarkItem = props => (
   </StyledPricing.Line.Item>
 );
 
-const ToolTip = ({value, icon, onClick, ...rest}) => {
-  const Icon = icon ? icon : QuestionMarkCircleIcon;
-  const handleClick = () => (onClick ? () => onClick : () => null);
-  return (
-    <Plan.Content.Subtitle onClick={() => handleClick()} {...rest}>
-      <Tooltip content={value}>
-        <Icon color="white" />
-      </Tooltip>
-    </Plan.Content.Subtitle>
-  );
-};
-
 const renderPlanCheckMarks = (plans, feature, showing) =>
   plans.map((plan, i) => {
     if (PLANS_TO_HIDE.find(hide => hide !== plan.slug)) {
-      if (!!feature.plans.find(featurePlan => featurePlan === plan.slug)) {
+      if (feature.plans.find(featurePlan => featurePlan === plan.slug)) {
         return <CheckMarkItem showing={i === showing} />;
       } else {
         return <NoMarkItem showing={i === showing} />;
@@ -117,7 +104,6 @@ const Features = ({items, plans, showing, ...rest}) =>
 
 export default class CloudPricing extends React.Component {
   togglePersonalPlan = () => {
-    console.log('toggle');
     if (this.state.plan === PLANS.PERSONAL) {
       this.setState({
         plan: PLANS.STUDENT,

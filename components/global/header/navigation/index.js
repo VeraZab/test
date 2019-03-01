@@ -214,7 +214,7 @@ export default class Navigation extends React.Component {
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Chart Studio</span>
-                    <a href="/online-chart-maker/" className="hide-on-desktop">
+                    <a href="/products/cloud/" className="hide-on-desktop">
                       Chart Studio Cloud
                     </a>
                   </div>
