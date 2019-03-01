@@ -4,7 +4,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   exportPathMap: () => ({
-    // Home
+    //Home
     '/': {
       page: '/prismic-generator',
       query: {

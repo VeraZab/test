@@ -61,6 +61,7 @@ export default ({meta = defaultMeta}) => {
 
       <meta name="twitter:site" content={defaultMeta.twitter.site} />
       <link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     </Head>
   );
 };
