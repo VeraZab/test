@@ -4,78 +4,66 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   exportPathMap: () => ({
-    //Home
     '/': {
       page: '/prismic-generator',
       query: {
         slug: 'home',
       },
     },
-
-    // Preview needed for Prismic preview flow
     '/preview': {
       page: '/prismic-generator',
       query: {
         slug: 'home',
       },
     },
-    // Dashboards
     '/dashboards-and-reports': {
       page: '/prismic-generator',
       query: {
         slug: 'dashboards-and-reporting',
       },
     },
-    // Falcon
     '/free-sql-client-download': {
       page: '/prismic-generator',
       query: {
         slug: 'falcon-sql-editor',
       },
     },
-    // Chart Studio
     '/online-chart-maker': {
       page: '/prismic-generator',
       query: {
         slug: 'chart-studio',
       },
     },
-    // Slide Decks
     '/online-presentation-tool': {
       page: '/prismic-generator',
       query: {
         slug: 'slide-decks',
       },
     },
-    // Plotly.js
     '/plotly-js-scientific-d3-charting-library': {
       page: '/prismic-generator',
       query: {
         slug: 'plotly-js',
       },
     },
-    // Plotly.R
     '/d3-js-for-r-and-shiny-charts': {
       page: '/prismic-generator',
       query: {
         slug: 'plotly-r',
       },
     },
-    // Plotly.py
     '/d3-js-for-python-and-pandas-charts': {
       page: '/prismic-generator',
       query: {
         slug: 'plotly-py',
       },
     },
-    // Dash Pricing
     '/dash/pricing': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-services',
       },
     },
-    //Careers
     '/company/careers': {
       page: '/prismic-generator',
       query: {
@@ -88,10 +76,6 @@ module.exports = {
         slug: 'company-fr',
       },
     },
-
-    // non-prismic
-
-    // Products
     '/products/dash': {page: '/products/dash'},
     '/products/cloud': {page: '/products/cloud'},
     '/products/on-premise': {
@@ -108,8 +92,6 @@ module.exports = {
       },
     },
     '/chart-studio/cloud': {page: '/products/cloud'},
-
-    // Newsroom
     '/newsroom': {
       page: '/prismic-generator',
       query: {
@@ -146,10 +128,9 @@ module.exports = {
         slug: 'indelphi-dash-app',
       },
     },
-
     '/export': {page: '/export'},
   }),
-  webpack: (config, {dev}) => {
+  webpack: (config) => {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
         minify: true,

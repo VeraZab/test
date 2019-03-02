@@ -1,14 +1,13 @@
 import React from 'react';
+import shortid from 'shortid';
+import getCookies from 'next-cookies';
 
 import Layout from 'components/global/layout';
 import Hero from 'components/prismic/hero';
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
-
-import shortid from 'shortid';
 import NotFound from 'components/404';
 
-import getCookies from 'next-cookies';
 import {fetchData} from 'lib/fetchData';
 
 function inlineLinkedItems(data) {
