@@ -7,7 +7,7 @@ import Link from 'next/link';
 const HeroButtons = [
   [
     {
-      label: 'Get Started',
+      label: 'Request Enterprise Trial',
       subtitle: null,
       title: '',
       icon: null,
@@ -18,7 +18,7 @@ const HeroButtons = [
       },
     },
     {
-      label: 'Read the Announcement',
+      label: 'Start With Open-Source',
       subtitle: null,
       title: '',
       icon: null,
