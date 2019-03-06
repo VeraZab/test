@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 function PricingCardAddons(props) {
   function renderAddons(feature, index) {
@@ -14,7 +13,7 @@ function PricingCardAddons(props) {
           <div className="pricing__card__addon__title">{feature.addon_title[0].text}</div>
         )}
         {Boolean(feature.addon_price[0] && feature.addon_price[0].text.length > 1) &&
-          (feature.addon_price[0].text == 'Contact Us' ? (
+          (feature.addon_price[0].text === 'Contact Us' ? (
             <div className="pricing__card__addon__contact__us">{feature.addon_price[0].text}</div>
           ) : (
             <div className="pricing__card__addon__price">{feature.addon_price[0].text}</div>
