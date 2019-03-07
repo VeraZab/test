@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 function PricingCard(props) {
   const {card} = props;
-  console.log(props.card.items);
   return (
     <div className="pricing__card__wrapper">
       <div className="pricing__card__header__and__features__section">
