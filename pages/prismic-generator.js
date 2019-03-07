@@ -3,7 +3,8 @@ import shortid from 'shortid';
 import getCookies from 'next-cookies';
 
 import Layout from 'components/global/layout';
-import Hero from 'components/prismic/hero';
+import Hero from 'components/prismic/slices/Hero';
+
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 import NotFound from 'components/404';
@@ -44,7 +45,7 @@ const PrismicGenerator = props => {
     <Layout meta={meta} pathname={props.pathname} document={doc}>
       <div className={`page page--${doc.uid}`}>
         <Head meta={meta} />
-        <Hero key={shortid.generate()} data={doc.data} />
+        <Hero data={doc} />
         <Slices data={doc.data.slices} />
       </div>
     </Layout>

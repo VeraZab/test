@@ -336,18 +336,73 @@
   }
 }
 
-.hero-prismic {
-  $c: &;
+.newHero {
+  padding-top: 90px;
+  display: flex;
+  background: #0a1d49;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  @include media('<=1200px') {
+    padding-top: 150px;
+    flex-direction: column;
+    height: auto;
+  }
 
-  #{$c}__messaging__body,
-  #{$c}-actions {
-    //will-change: opacity, transition;
-    //@include animationFadeAndSlideInFromBottom-sm;
-    //animation-duration: 2s;
+  .newHero-left {
+    display: flex;
+    margin: 30px;
+    font-family: 'Open Sans', sans-serif !important;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+
+    h1 {
+      color: $color-dodger;
+      padding-bottom: $gutter;
+      font-family: 'Open Sans', sans-serif !important;
+      @include media('<=1200px') {
+        margin: auto;
+        text-align: center;
+      }
+    }
+    h2 {
+      color: #fff;
+      padding-bottom: $gutter;
+      width: 80%;
+      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif !important;
+      @include media('<=1200px') {
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    a {
+      min-width: 5vw;
+      height: 60px;
+      color: #09ffff;
+      margin-bottom: 20px;
+      @include media('<=1200px') {
+        margin: auto;
+        width: 60vw;
+        margin-bottom: 20px;
+        height: 60px;
+      }
+    }
   }
-  .browser {
-    //will-change: opacity, transition;
-    //@include animationFadeAndSlideInFromBottom-sm;
-    //animation-duration: 2s;
+
+  .newHero-right {
+    margin: 15px;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-height: auto;
+      min-width: 100%;
+    }
   }
+}
+
+#cs-hero {
+  background: #00004f;
 }

@@ -14,7 +14,6 @@ const meta = {
 
 export default () => (
   <Layout meta={meta}>
-    <style dangerouslySetInnerHTML={{__html: styles}} />
     <HeroSection />
     <DashMain />
   </Layout>
