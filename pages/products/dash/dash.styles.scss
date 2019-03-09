@@ -61,18 +61,16 @@
   }
 
   &-hero {
-    background: linear-gradient(0deg, #3B9ACA 0%, #2D6CA5 39%, #222654 100%) !important;
+    background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
     @include media('<=1230px') {
       padding-top: 80px;
-
     }
     .hero-top {
       @include media('<=1230px') {
         padding-top: 50px;
-
       }
       padding-top: 40px;
-      &-wrapper{
+      &-wrapper {
         display: flex !important;
       }
     }
@@ -146,10 +144,13 @@
     }
 
     &-features-thirds {
-      background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
-
+      background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
       padding-top: $gutter * 2;
       transform: translateY(-120px);
+
+      .background {
+        background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
+      }
 
       @include media('<=900px') {
         transform: none;

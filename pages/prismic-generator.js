@@ -45,7 +45,7 @@ const PrismicGenerator = props => {
     <Layout meta={meta} pathname={props.pathname} document={doc}>
       <div className={`page page--${doc.uid}`}>
         <Head meta={meta} />
-        <Hero data={doc} />
+        <Hero content={doc} />
         <Slices data={doc.data.slices} />
       </div>
     </Layout>

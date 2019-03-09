@@ -337,7 +337,7 @@
 }
 
 .newHero {
-  padding-top: 90px;
+  padding-top: 120px;
   display: flex;
   background: #0a1d49;
   flex-direction: row;
@@ -352,17 +352,24 @@
   .newHero-left {
     display: flex;
     margin: 30px;
+    padding-left: $gutter * 10;
     font-family: 'Open Sans', sans-serif !important;
     flex-direction: column;
     justify-content: center;
     margin-right: 30px;
+    @include media('<=1200px') {
+      padding-left: 0;
+    }
 
     h1 {
       color: $color-dodger;
       padding-bottom: $gutter;
+      width: 75%;
+      line-height: 1.2;
       font-family: 'Open Sans', sans-serif !important;
       @include media('<=1200px') {
         margin: auto;
+        width: 100%;
         text-align: center;
       }
     }
@@ -370,7 +377,7 @@
       color: #fff;
       padding-bottom: $gutter;
       width: 80%;
-      line-height: 1.6;
+      line-height: 1.4;
       font-family: 'Open Sans', sans-serif !important;
       @include media('<=1200px') {
         margin: auto;
@@ -385,20 +392,20 @@
       margin-bottom: 20px;
       @include media('<=1200px') {
         margin: auto;
-        width: 60vw;
         margin-bottom: 20px;
-        height: 60px;
       }
     }
   }
 
   .newHero-right {
-    margin: 15px;
+    margin: auto;
     align-items: center;
+    padding-bottom: $gutter;
+    padding-right: $gutter * 10;
     justify-content: center;
-    img {
-      max-height: auto;
-      min-width: 100%;
+    @include media('<=1200px') {
+      padding-bottom: 0;
+      padding-right: 0;
     }
   }
 }

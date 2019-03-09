@@ -25,15 +25,14 @@ export default class HeroSection extends React.Component {
         ],
         hero_buttons: buttons,
         hero_graphic: {
-          url:
-            'https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png?auto=compress&auto=format',
+          url: 'https://images-plotly.imgix.net/static/marketing/dash/dash-hero-visual@2x.png',
         },
       },
     };
 
     return (
       <>
-        <Hero data={data} />
+        <Hero content={data} />
       </>
     );
   }
