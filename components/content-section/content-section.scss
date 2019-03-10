@@ -29,6 +29,7 @@
   }
 
   &:nth-of-type(odd) {
+    //background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
     background-color: chromatic-color-luminance($color-rhino-core, 0.9);
   }
 
@@ -376,6 +377,8 @@
       font-weight: 400;
       padding-right: $unit*2;
       border: 1px solid chromatic-color-luminance($color-rhino-core, 0.75);
+
+      background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
       color: chromatic-color-luminance($color-rhino-core, 0.1);
 
       li + li {
