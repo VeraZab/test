@@ -5,9 +5,7 @@
 
 
 
-  &.patterned-grey{
-    background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
-  }
+
   &-wrapper{
     padding:$gutter 0 $gutter*2;
     @include global-wrapper;

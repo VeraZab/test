@@ -121,8 +121,6 @@
         top: 0;
         position: absolute;
         opacity: 0.75;
-        background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png')
-          center center repeat;
       }
       &::after {
         content: '';
@@ -132,8 +130,6 @@
         top: 0;
         position: absolute;
         opacity: 0;
-        background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png')
-          center center repeat;
       }
 
       li {

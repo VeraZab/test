@@ -1,4 +1,24 @@
-# Plotly Marketing Pages (next.js)
+## ***NOTE: If you are looking for the repo which hosts https://plot.ly/graphing-libraries or https://plotly.github.io, YOU ARE IN THE WRONG PLACE***.
+
+### See https://github.com/plotly/documentation or https://github.com/plotly/plotly.github.io.
+
+### This repository hosts https://plot.ly.
+
+## 1. Application Structure
+
+The code in this repository:
+
+1. fetches page data from Prismic's REST API using [promises and async/await](https://javascript.info/async-await) syntax (see [`/lib/fetchData.js`](https://github.com/plotly/plotly-next/blob/master/lib/fetchData.js) and [How to Query the Prismic API from React](https://prismic.io/docs/reactjs/query-the-api/how-to-query-the-api))
+
+2. uses [JSX](https://reactjs.org/docs/jsx-in-depth.html) and [SCSS](https://sass-lang.com/guide) to markup, style, and render pages (see [`/components/prismic/slices/index.js`](https://github.com/plotly/plotly-next/blob/master/components/prismic/slices/index.js), [`/pages/prismic-generator.js`](https://github.com/plotly/plotly-next/blob/master/pages/prismic-generator.js) and the [`styles`](https://github.com/plotly/plotly-next/tree/master/styles) folder)
+
+3. exports a static HTML app ([`next export`](https://nextjs.org/learn/excel/static-html-export))
+
+4. runs tests in [CircleCI](https://circleci.com/) & [Percy](https://percy.io/) (see [`.circleci/config.yml`](https://github.com/plotly/plotly-next/blob/master/.circleci/config.yml))
+
+5. deploys pages to [GitHub Pages](https://pages.github.com/) (see [`/scripts/deploy-ghpages.sh`](https://github.com/plotly/plotly-next/blob/master/scripts/deploy-ghpages.sh))
+
+[Webpack](https://webpack.js.org/) is used for bundling (see [`next.config.js`](https://github.com/plotly/plotly-next/blob/master/next.config.js)) and [Babel](https://babeljs.io/) is used for JavaScript transpilation (see [`.babelrc`](https://github.com/plotly/plotly-next/blob/master/.babelrc)).
 
 ## Setting Up a Development Environment
 
@@ -11,25 +31,62 @@ $ cd plotly-next
 $ git fetch origin
 ```
 
-2. Install the site's dependencies on your local machine.
+2. Install the site's dependencies on your local machine. We prefer [yarn](https://yarnpkg.com/) to [npm](https://www.npmjs.com/).
 ```
 $ yarn install
 ```
 
-3. Launch a test server with hot module reloading and live reloading of styles.
+3. Launch a test server.
 ```
 $ yarn run dev
 ```
+
+## 1. Development Workflow
+1. Submit an issue.
+2. Edit Prismic and/or create a feature branch.
+3. Preview in Prismic and/or get a code review.
+4. Publish in Prismic and/or merge your feature branch.
+5. Rebuild [production branch in CircleCI](https://circleci.com/gh/plotly/plotly-next/tree/production ) (manually if necessary).
+
+##. Prismic Workflow
+1. Create a new page or find the page whose content you want to edit.
+### NOTE: To create new ways to display content in Prismic, edit the `page` custom type to add a new slice type. *DO NOT CREATE NEW CUSTOM TYPES IN PRISMIC.*
+2. Make your changes in the GUI, then `Save`.
+3. `Publish` your changes to a new release.
+4. Preview the new release in your local dev environment.
+5. Iterate steps 3-5.
+6. When satisfied with your changes, request a code review.
+7. After you recieve a ::dancer::, `Publish` your new release and rebuild the latest successful build of the `production` branch of this GitHub repository in CircleCI => https://circleci.com/gh/plotly/plotly-next/tree/production *This will cause the website to rebuild itself with the latest version of the content published in Prismic.*
+
+To create new ways to display content in Prismic, edit the `page` custom type to add a new slice type.
+
+*DO NOT CREATE NEW CUSTOM TYPES IN PRISMIC.*
+
+## 2. Next.js Routing
+0. New URLS need to be added to the `streambed` nginx configuration and this repository's `next.config.js`.
+
+1. Add a new route to `next.config.js`:
+```
+// New Route
+    '/new-route-url': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'new-route-slug',
+      },
+    },
+```
+2. Add proxy passes/301/302 redirects as necessary to [the streambed ngnix configuration](https://github.com/plotly/streambed/blob/master/deployment/roles/streambed/templates/nginx-streambed.conf).
+
 
 ## Git Tips
 
 1. Always make sure your feature branch is up to date with the `master` branch of the repo in order to avoid having to tediously resolve conflicts in your PR. For the same reason, don't create feature branches off of feature branches- always branch off of the latest version of `master`.
 
-3. Use `git rebase master -i` to squash commits for readability during PR review or to drop commits as needed during feature development. FYI: `rebase` enters you into VIM. Hit `i` to insert a cursor into the document. Rebase, then hit `esc`, then `:wq`, then `enter`. Use `git push -f` to force push a rebased commit history to your feature branch.
+2. Use `git rebase master -i` to squash commits for readability during PR review or to drop commits as needed during feature development. FYI: By default, `rebase` enters you into VIM. Hit `i` to insert a cursor into the document. Rebase, then hit `esc`, then `:wq`, then `enter`. Use `git push -f` to force push a rebased commit history to your feature branch.
 
 ## Using Prismic.io
 
-If the page you want to edit has a `page:` key whose value is `/prismic-generator` in `/next.config.js`, then you must edit its copy and structure in Prismic.io.
+With the exception of `/products/cloud`, `/products/consulting-and-oem`, and `products/dash`, the content for the pages in this repository live in the Prismic headless content management system.
 
 ```
 @username: prismic@plot.ly
@@ -37,10 +94,8 @@ If the page you want to edit has a `page:` key whose value is `/prismic-generato
 ```
 [Log into Prismic.io Dashboard](https://plotly.prismic.io/documents/working/).
 
-For more information on working with Prismic slices, see `/docs/slices.md`.
-
-After making changes to the content on Prismic.io, then you'll need to:
-1. Save & publish your changes -  at this point your changes will be visible in your local dev environment.
+After making changes to content in Prismic.io, you'll need to:
+1. Save & publish your changes -  at this point your changes will be visible to your local dev environment but will not be live in production.
 2. Rebuild the `production` branch on CircleCI (https://circleci.com/gh/plotly/plotly-next/tree/production). Rebuilding forces a fresh API call to Prismic, integrating changes made into the the production version of the site.
 
 ## Adding New Pages with the PrismicGenerator component
@@ -58,17 +113,7 @@ After making changes to the content on Prismic.io, then you'll need to:
 ```
 2. Add a proxy to [the streambed ngnix configuration](https://github.com/plotly/streambed/blob/master/deployment/roles/streambed/templates/nginx-streambed.conf).
 
-## Updating the Newsroom
-
-To add a new article/press release to `/newsroom`:
-
-1. Create a copy of the `/pages/newsroom/template.js` file in the same directory and rename it. The name of the file will be the URL of the page.
-
-2. In the new `.js` file, change the title and fill in the post HTML.
-
-4. Add the post's information to the articles object in `pages/newsroom/main.js`.
-
-## Deployment
+## Deploying changes
 
 1. Make a pull request against the `master` branch of plotly/plotly-next.
 
