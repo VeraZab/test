@@ -7,6 +7,7 @@
         "debug": false,
         "useBuiltIns": "entry",
         "targets": {
+          "chrome": "41",
           "browsers": [
             "Explorer 11",
             "Explorer 10",
@@ -34,9 +35,7 @@
     [
       "module-resolver",
       {
-        "root": [
-          "./"
-        ],
+        "root": ["./"],
         "alias": {
           "components": "./components",
           "static": "./static",
@@ -50,10 +49,7 @@
     [
       "wrap-in-js",
       {
-        "extensions": [
-          "css$",
-          "scss$"
-        ]
+        "extensions": ["css$", "scss$"]
       }
     ]
   ],
