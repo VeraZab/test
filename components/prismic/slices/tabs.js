@@ -1,5 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
+import 'lib/find.polyfill';
 
 import Image from 'components/prismic/Image';
 import SliceOuter from './slice-elements/slice-outer';
