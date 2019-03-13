@@ -3,24 +3,25 @@
     [
       "next/babel",
       {
-        "modules": false,
-        "debug": false,
-        "useBuiltIns": "entry",
-        "targets": {
-          "chrome": "41",
-          "browsers": [
-            "Explorer 11",
-            "Explorer 10",
-            "Chrome 41",
-            "last 2 Chrome versions",
-            "last 2 ChromeAndroid versions",
-            "last 2 Edge versions",
-            "last 2 Firefox versions",
-            "last 2 FirefoxAndroid versions",
-            "last 2 iOS versions",
-            "last 2 Opera versions",
-            "last 2 Safari versions"
-          ]
+        "preset-env": {
+          "modules": false,
+          "debug": false,
+          "useBuiltIns": "usage",
+          "targets": {
+            "browsers": [
+              "Explorer 11",
+              "Explorer 10",
+              "Chrome 41",
+              "last 2 Chrome versions",
+              "last 2 ChromeAndroid versions",
+              "last 2 Edge versions",
+              "last 2 Firefox versions",
+              "last 2 FirefoxAndroid versions",
+              "last 2 iOS versions",
+              "last 2 Opera versions",
+              "last 2 Safari versions"
+            ]
+          }
         }
       }
     ]
