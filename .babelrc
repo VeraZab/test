@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "@babel/preset-env",
+      "next/babel",
       {
         "modules": false,
         "debug": false,
@@ -23,8 +23,7 @@
           ]
         }
       }
-    ],
-    "next/babel"
+    ]
   ],
   "plugins": [
     [
