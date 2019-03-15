@@ -8,10 +8,10 @@ export default class HeroSection extends React.Component {
 
   render() {
     const buttons = [
-      {label: 'Request Enterprise Trial', link: {url: 'https://plot.ly/dash'}},
+      {label: 'Request Enterprise Trial', link: {url: 'https://plotly.typeform.com/to/rkO85m'}},
       {
         label: 'Start With Open Source',
-        link: {url: 'https://medium.com/@plotlygraphs/introducing-dash-5ecf7191b503'},
+        link: {url: 'https://dash.plot.ly/installation'},
       },
     ];
     const data = {

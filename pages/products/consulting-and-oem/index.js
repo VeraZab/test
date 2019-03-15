@@ -15,7 +15,7 @@ const meta = {
       'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.',
   },
   image:
-    'https://prismic-io.s3.amazonaws.com/plotly%2Feb464d43-4ab4-427e-b617-482b62ba6c69_plotly-logo-white.png',
+    'https://plotly.cdn.prismic.io/plotly/9963abe714d6794fa6189806ff82cbe442378600_plotly-logo-white.png',
 };
 
 const contentSectionStyles = {
