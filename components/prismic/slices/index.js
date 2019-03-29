@@ -52,6 +52,7 @@ export default class Slices extends React.Component {
       an_open_source_company: BlankSlice,
       globalcta: BlankSlice,
       combocta: BlankSlice,
+      dash_cta: BlankSlice,
     };
 
     return (
