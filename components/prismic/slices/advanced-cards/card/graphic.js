@@ -1,8 +1,6 @@
 import {images} from '../../../../../config/constants';
-import {imgix} from '../../../../../config/functions';
 
 if (card.graphic && card.graphic.url) {
-  card.graphic.url = imgix(card.graphic.url);
   const imageParams = {
     preview:
       '?w=' +

@@ -1,6 +1,5 @@
 import React from 'react';
 import {images} from 'config/constants';
-import {imgix} from 'config/functions';
 import Img from './img';
 import shortid from 'shortid';
 
@@ -11,8 +10,6 @@ export default class Image extends React.Component {
 
   render() {
     const {data} = this.props;
-
-    data.url = imgix(data.url);
 
     let aspectRatio, imageParams, image, style;
 
