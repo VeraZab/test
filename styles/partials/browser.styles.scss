@@ -1,5 +1,3 @@
-// @import "partials/abstract";
-
 .browser {
   @include center-content;
   border-bottom-right-radius: 8px;
@@ -10,36 +8,25 @@
       width: 100%;
     }
   }
-
   box-shadow: $drop-shadow-l-light;
-
-  &-viewport{
+  &-viewport {
     background: $color-rhino-light-1;
-
-
     &::-webkit-scrollbar-track {
-      //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      //border-radius: 10px;
       background-color: $color-rhino-light-1;
     }
-
     &::-webkit-scrollbar {
       width: 8px;
       background-color: $color-rhino-light-1;
     }
-
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       width: 4px;
-      //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
       background-color: rgba($color-dodger, 1);
-      &:hover{
+      &:hover {
         background-color: rgba($color-dodger, 0.75);
-
       }
     }
   }
-
   &-header {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
@@ -49,11 +36,9 @@
       padding: 8px $unit;
       display: flex;
     }
-
     &-buttons {
       display: flex;
     }
-
     &-button {
       $size: 14px;
       width: $size;
@@ -61,21 +46,9 @@
       border: 1px solid $color-rhino-medium-1;
       border-radius: 50%;
       background: $color-rhino-medium-2;
-
       &:hover {
         background: $color-dodger;
         border-color: $color-dodger;
-      }
-
-      &:nth-of-type(1) {
-        //border: 1px solid $color-lavender;
-      }
-      &:nth-of-type(2) {
-        //border: 1px solid $color-dodger;
-      }
-      &:nth-of-type(3) {
-        //border: 1px solid $color-emerald;
-
       }
       & + & {
         margin-left: $unit/2;

@@ -1,34 +1,31 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroSubtitle, HeroTitle, HeroBottom} from 'components/hero';
-import {ClientLogos} from 'components/global/client-logos';
+import Hero from 'components/prismic/slices/Hero';
 
-const HeroWrapperStyle = {
-  backgroundImage:
-    'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
-  backgroundSize: '1640px',
-  backgroundPosition: '50% 80%',
-  backgroundRepeat: 'no-repeat',
-};
-
-const HeroBottomStyles = {
-  paddingBottom: '270px',
+const buttons = [
+  {label: 'Request Enterprise Trial', link: {url: 'https://plotly.typeform.com/to/seG7Vb'}},
+  {
+    label: 'Try Online Demo',
+    link: {url: 'https://plot.ly/create'},
+  },
+];
+const data = {
+  slug: 'dash-product',
+  hero_title: 'Chart Studio Cloud',
+  hero_messaging: [
+    {
+      type: 'paragraph',
+      text: `Modern visualization for the data era.`,
+    },
+  ],
+  hero_buttons: buttons,
+  hero_graphic: {
+    url:
+      'https://plotly.cdn.prismic.io/plotly/2b5e954984847d1addd810ba0c48e084b7a504cc_cs-ent-hero.png',
+  },
 };
 
 export default () => (
-  <Hero
-    heroWrapperStyle={HeroWrapperStyle}
-    className="hero-prismic hero-prismic-style--gradient_dark-blue"
-  >
-    <HeroTop>
-      <HeroMessaging>
-        <HeroTitle>Chart Studio Cloud</HeroTitle>
-        <HeroSubtitle className="wider-subtitle">
-          Modern visualization for the data era.
-        </HeroSubtitle>
-      </HeroMessaging>
-    </HeroTop>
-    <HeroBottom style={HeroBottomStyles}>
-      <ClientLogos />
-    </HeroBottom>
-  </Hero>
+  <div className="cs-product-hero">
+    <Hero content={data} />
+  </div>
 );

@@ -1,49 +1,31 @@
-///////////-------------------------------------------------------------------------------------------------------------
-///---
-/// Buttons
-/// buttons.scss
-///---
-///////////-------------------------------------------------------------------------------------------------------------
-
 .buttons {
-  @include handheld-up {
+  @include phone-up {
     display: flex;
     align-items: center;
-
-    // --
-    // When there are multiple buttons in a row
-    // --
     .button + .button {
       margin-left: $unit;
     }
   }
-  @include handheld {
+  @include phone {
     .button + .button {
       margin-top: $unit;
     }
   }
-
   &.center {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   & + & {
     margin-top: $gutter;
   }
-
   &.layout-align {
-
     &-center {
       justify-content: center;
       align-items: center;
     }
   }
 }
-
-
-
 .button {
   padding: $unit/1.5 $gutter;
   text-transform: uppercase;
@@ -53,55 +35,40 @@
   border-radius: 5px;
   transition: $transition;
   user-select: none;
-  //display: block;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
   @extend %font-smoothing;
-
   &-icon {
     $size: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     &-mdi {
       transform: translateY(3px);
     }
-
     &-wrapper {
-
       .mdi {
         font-size: 32px;
       }
     }
   }
-
   &-small {
     padding: $unit/2 $unit;
     font-size: 12px;
   }
-
-  &-link {
-
-  }
-  // --
-  // Primary Button Styles
-  // --
-
-  &-disabled{
+  &-disabled {
     background: $color-rhino-medium-2;
-    &:hover{
-      //pointer-events: none !important;
+    &:hover {
       cursor: not-allowed !important;
     }
   }
-
   &-primary {
     background: $color-button-default;
     box-shadow: $drop-shadow;
-    .button-label, .button-icon{
+    .button-label,
+    .button-icon {
       color: white !important;
       text-shadow: $text-shadow-default;
     }
@@ -122,7 +89,8 @@
     box-shadow: $drop-shadow;
     color: white !important;
     text-shadow: $text-shadow-default;
-    .button-label, .button-icon{
+    .button-label,
+    .button-icon {
       color: white !important;
     }
     &:hover {
@@ -134,10 +102,6 @@
       box-shadow: $drop-shadow-pressed;
     }
   }
-
-  // --
-  // Secondary Button Styles
-  // --
   &-secondary {
     border: 1px solid $color-dodger;
     color: $color-dodger !important;
@@ -147,13 +111,6 @@
       color: $color-button-hover !important;
     }
   }
-
-  // --
-  // Default hover + active states
-  // --
-  &:hover {
-    //cursor: pointer;
-  }
   &:active {
     @include active-state-transform;
   }
@@ -162,14 +119,12 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Hero buttons
 //----------------------------------------------------------------------------------------------------------------------
-.hero, .hero-prismic {
+
+.hero-prismic {
   .button {
     padding: $unit;
     font-size: 1rem;
     letter-spacing: 2px;
-    &-icon {
-
-    }
     &-small {
       padding: $unit/2 $unit;
       font-size: 12px;
@@ -180,12 +135,13 @@
     &-primary {
       background: $color-emerald;
       &:hover {
-        background: #04BA9E;
+        background: #04ba9e;
       }
       &:active {
-        background: #07ACA3;
+        background: #07aca3;
       }
-      .button-label, .button-icon{
+      .button-label,
+      .button-icon {
         color: white !important;
         text-shadow: $text-shadow-default;
       }
@@ -226,7 +182,6 @@
         color: $color-lavender !important;
       }
     }
-
   }
 }
 
@@ -236,7 +191,8 @@
   color: white !important;
   background-image: none !important;
   padding: 0 4px;
-  &:active, &:visited {
+  &:active,
+  &:visited {
     color: white !important;
   }
   &:hover {

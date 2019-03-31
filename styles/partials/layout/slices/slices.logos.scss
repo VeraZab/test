@@ -1,13 +1,9 @@
 .logos-slice {
   $c: &;
-
   @include media('<=800px') {
     overflow-x: auto;
     margin-bottom: $unit;
     padding-left: $unit * 2;
-    .logos {
-      //transform: translateX(-$unit*2);
-    }
     &::-webkit-scrollbar-track {
       border-radius: 10px;
       background-color: rgba($color-rhino-core, 0.15);
@@ -17,7 +13,6 @@
       height: 6px;
       background-color: rgba($color-rhino-core, 0.15);
     }
-
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: rgba($color-dodger, 0.75);
@@ -25,8 +20,6 @@
         background-color: rgba($color-dodger, 1);
       }
     }
-  }
-  &-wrapper {
   }
   &-header {
     padding-bottom: $unit * 2;
@@ -47,7 +40,6 @@
     align-items: center;
     justify-content: center;
     @include media('<=800px') {
-      //flex-wrap: wrap;
       align-items: flex-start !important;
       justify-content: flex-start !important;
       flex-wrap: nowrap !important;
@@ -55,15 +47,10 @@
   }
   &-logo {
     @include media('<=800px') {
-      //width: 50%;
       margin-bottom: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      &:last-of-type {
-        //padding-right:$unit*2;
-      }
       .image {
         max-width: 100px;
       }
@@ -86,26 +73,19 @@
   &-align {
     &--left {
       $cc: &;
-
-      //padding: $unit*4 0;
       width: 100%;
       max-width: 100%;
       margin-left: 0;
       margin-right: 0;
-
       .logos {
-        // justify-content: flex-start;
         justify-content: space-evenly;
         flex-wrap: wrap;
       }
-
       @include media('<=900px') {
-        //padding-bottom: $unit*4;
         .logos {
           justify-content: center;
         }
       }
-
       @at-root .page--home {
         #{$cc} {
           @include media('>900px') {
@@ -120,13 +100,8 @@
 
 .logos {
   $c: &;
-
-  #{$c}__wrapper {
-  }
-
   .logos-slice-logo {
     $cc: &;
-
     @include media('>900px') {
       &:first-of-type {
         padding-left: 0;
@@ -135,7 +110,6 @@
       max-width: $width;
       min-width: $width;
       width: $width;
-
       @at-root .page--home #{$cc} {
         $width: 160px;
         max-width: $width;
@@ -154,11 +128,9 @@
     @include media('<=900px') {
       flex-shrink: 0;
       $width: 160px;
-      //max-width: $width;
       min-width: $width;
       width: $width;
     }
-    //width: 110px;
 
     @include media('<=500px') {
       $width: 33.33%;
@@ -167,11 +139,6 @@
       min-width: $width;
       padding-left: 0;
       padding-right: 0;
-    }
-
-    @at-root .page--home {
-      #{$cc} {
-      }
     }
   }
 }

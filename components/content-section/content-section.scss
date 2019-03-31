@@ -7,8 +7,8 @@
         padding-right: 0;
       }
       .content-section-header {
-        padding-left: $gutter*2;
-        padding-right: $gutter*2;
+        padding-left: $gutter * 2;
+        padding-right: $gutter * 2;
         min-width: 100% !important;
         max-width: 100% !important;
       }
@@ -16,43 +16,35 @@
   }
   &-wrapper {
     opacity: 0;
-    padding-top: $gutter*2;
-    padding-bottom: $gutter*2;
+    padding-top: $gutter * 2;
+    padding-bottom: $gutter * 2;
     @include desktop {
-      padding-top: $gutter*4.5;
-      padding-bottom: $gutter*4.5;
+      padding-top: $gutter * 4.5;
+      padding-bottom: $gutter * 4.5;
     }
     @include global-wrapper;
-
     flex-wrap: wrap;
     display: flex;
   }
-
   &:nth-of-type(odd) {
-    //background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat;
     background-color: chromatic-color-luminance($color-rhino-core, 0.9);
   }
-
   &-h2 {
     color: #516783;
-    font-family: "Ubuntu";
     font-size: 22px;
     line-height: 36px;
   }
-
   &-header {
-    margin-bottom: $gutter*1.5;
-
-    @include handheld {
+    margin-bottom: $gutter * 1.5;
+    @include phone {
       text-align: center;
       @include center-content;
       padding-right: $gutter;
       padding-left: $gutter;
     }
   }
-
   &-body {
-    @include handheld {
+    @include phone {
       text-align: center;
     }
   }
@@ -62,41 +54,35 @@
       padding: 0;
     }
   }
-
   // Alignements
-
   &.center {
     .content-section-body > p {
-
       max-width: 680px;
       @include center-content;
-
     }
     &.white {
-      [class*="title-"] {
+      [class*='title-'] {
         color: white;
       }
     }
-
   }
   p {
     font-size: 22px;
     line-height: 36px;
     font-weight: 400;
   }
-
   // --
   // Colors / Themes
   // --
   &.dark-blue {
     @include linear-gradient(-90deg, #1d8ee8 0%, #1e427d 100%);
     color: white;
-    [class*="title-"] {
+    [class*='title-'] {
       color: white;
       padding-bottom: 0;
     }
     p {
-      color: $color-rhino-medium-2
+      color: $color-rhino-medium-2;
     }
     a {
       color: white !important;
@@ -105,7 +91,11 @@
       }
       &:hover {
         color: rgba($color-aqua, 1) !important;
-        background-image: linear-gradient(to bottom, rgba($color-aqua, 0.3) 50%, rgba(0, 0, 0, 0) 50%);
+        background-image: linear-gradient(
+          to bottom,
+          rgba($color-aqua, 0.3) 50%,
+          rgba(0, 0, 0, 0) 50%
+        );
       }
       &:visited {
         background-image: linear-gradient(to bottom, currentColor 50%, rgba(0, 0, 0, 0) 50%);
@@ -118,67 +108,60 @@
     }
   }
   &.background--tunnels {
-    background: url("https://now.plot.ly/static/images/background_lines.png") center center no-repeat;
+    background: url('https://now.plot.ly/static/images/background_lines.png') center center
+      no-repeat;
     background-size: cover;
   }
   &.background--dotted-lines {
-    background: url("https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg") center center no-repeat fixed;
+    background: url('https://images.plot.ly/plotly-marketing-pages/images/new-branding/backgrounds/bg-graph.svg')
+      center center no-repeat fixed;
     background-size: cover;
   }
   &.background--oem {
     position: relative;
-    &::before{
+    &::before {
       position: absolute;
-      height:100%;
-      width:120%;
-      left:0;
-      top:0;
+      height: 100%;
+      width: 120%;
+      left: 0;
+      top: 0;
       content: '';
-      background-image: url("https://images.plot.ly/static/marketing/illustrations/oem@2x.png");
+      background-image: url('https://images.plot.ly/static/marketing/illustrations/oem@2x.png');
       background-size: 1100px;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       background-position: 70% 35%;
-      @include media("<=1450px") {
-        transform:translateX(0px);
+      @include media('<=1450px') {
+        transform: translateX(0px);
         background-position: 70% 35%;
       }
-      @include media("<=1250px") {
-        transform:translateX(140px);
+      @include media('<=1250px') {
+        transform: translateX(140px);
       }
-      @include media("<=950px") {
-        //transform:translateX(270px);
+      @include media('<=950px') {
         background-position: 80% 36%;
       }
-      @include media("<=900px") {
-        transform:translateX(170px);
+      @include media('<=900px') {
+        transform: translateX(170px);
         background-position: 0% 6%;
       }
-      @include media("<=800px") {
+      @include media('<=800px') {
         display: none;
       }
-
     }
-
-    @include media("<=1060px") {
-      .content-section-pane-wrapper{
-        padding-right:35% !important;
+    @include media('<=1060px') {
+      .content-section-pane-wrapper {
+        padding-right: 35% !important;
       }
     }
-
-    @include media("<=800px") {
-      .content-section-pane-wrapper{
-        padding-right:0px !important;
+    @include media('<=800px') {
+      .content-section-pane-wrapper {
+        padding-right: 0px !important;
       }
     }
-
-    .content-section-wrapper{
+    .content-section-wrapper {
       position: relative;
       z-index: 3;
     }
-
-
-
-
   }
   &.background-color-light-4 {
     background-color: $color-rhino-light-4;
@@ -192,7 +175,6 @@
   &.background-color-light-1 {
     background-color: $color-rhino-light-1;
   }
-
   &-pane {
     display: flex;
     width: 100%;
@@ -203,17 +185,15 @@
       max-width: 100%;
       width: 100%;
     }
-
     &-half {
       width: 50%;
-      @include handheld {
+      @include phone {
         width: 100%;
       }
       @at-root & .content-section-pane-wrapper {
         padding: $unit;
       }
     }
-
     &.sixy-five {
       @include desktop {
         width: 65%;
@@ -221,9 +201,8 @@
       @include tablet {
         width: 100%;
       }
-
       .buttons {
-        @include handheld {
+        @include phone {
           display: block;
         }
       }
@@ -237,21 +216,19 @@
         padding: 0 $gutter;
         padding-right: 20%;
       }
-      @include handheld {
+      @include phone {
         padding: 0 $gutter;
       }
     }
-
     &-full {
       width: 100% !important;
     }
-
     &-third {
       width: 33.3333%;
       @include media('<=800px') {
         width: 100%;
       }
-      @include handheld {
+      @include phone {
         width: 100%;
       }
       @at-root & .content-section-pane-wrapper {
@@ -261,23 +238,16 @@
     &-flex {
       flex-grow: 1;
     }
-
     &-text {
       @include tablet {
         width: 65%;
       }
-      @include handheld {
+      @include phone {
         width: 100%;
       }
     }
-
     &-graphic {
       display: block !important;
-      img {
-        width: 100%;
-        max-width: 100%;
-      }
-
       & + .content-section-pane-text {
         @include desktop {
           padding-left: $gutter;
@@ -286,16 +256,11 @@
       @include tablet {
         width: 35%;
       }
-      @include handheld {
+      @include phone {
         width: 100%;
       }
     }
-
     &-align {
-      &-left {
-        @at-root & .content-section-pane-wrapper {
-        }
-      }
       &-center {
         @at-root & .content-section-pane-wrapper {
           justify-content: center;
@@ -304,11 +269,10 @@
           display: flex;
           width: 100%;
           max-width: 100%;
-
         }
         .content-section-title {
           max-width: 700px !important;
-          @include handheld {
+          @include phone {
             text-align: center;
           }
         }
@@ -332,29 +296,22 @@
       }
     }
   }
-
   &-title {
-
     &-wrapper {
       padding-bottom: $unit;
       color: $color-rhino-core;
-      font-family: 'Dosis', sans-serif;
-      @include handheld {
+      @include phone {
         text-align: left;
-        //text-align: center;
       }
     }
-
-  }
-  &-subtitle {
-
   }
   &-body {
     width: 100%;
     &-wrapper {
       padding-top: $unit;
     }
-    p, ul {
+    p,
+    ul {
       margin: 0;
       font-size: 18px;
       line-height: 30px;
@@ -362,31 +319,27 @@
       @include desktop {
         max-width: 75%;
       }
-      @include handheld {
+      @include phone {
         text-align: left;
       }
       color: chromatic-color-luminance($color-rhino-core, 0.2);
-      //@include center-content;
     }
-
     ul {
-      margin: $unit*2 0;
-      padding-top: $unit*2;
-      padding-bottom: $unit*2;
+      margin: $unit * 2 0;
+      padding-top: $unit * 2;
+      padding-bottom: $unit * 2;
       border-radius: 8px;
       font-weight: 400;
-      padding-right: $unit*2;
+      padding-right: $unit * 2;
       border: 1px solid chromatic-color-luminance($color-rhino-core, 0.75);
-
-      background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
+      background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center
+        center repeat chromatic-color-luminance($color-rhino-core, 0.9);
       color: chromatic-color-luminance($color-rhino-core, 0.1);
-
       li + li {
         padding-top: $unit;
       }
     }
   }
-
   &-graphic {
     padding: 0;
     @include center-content;
@@ -395,36 +348,16 @@
       text-align: center;
       padding-top: $unit;
     }
-    &-image {
-      //background: white;
-      //border-radius: 6px;
-      //overflow: hidden;
-
-      &-noshadow {
-        img {
-          box-shadow: none !important;
-        }
-      }
-    }
-
     &-video {
-
       video {
         max-width: 100%;
         display: block;
       }
     }
-    img {
-      max-width: 100%;
-      display: block;
-      box-shadow: $drop-shadow-l-light;
-    }
-
     & + & {
       margin-top: $gutter;
     }
   }
-
   blockquote {
     font-size: 16px;
     line-height: 30px;
@@ -432,11 +365,8 @@
     color: #6e7d92;
     margin-left: 0;
     border-left: 15px solid rgba($color-dodger, 0.1);
-    //padding-left:$unit;
     border: 1px solid $color-rhino-light-1;
-    //box-shadow:$drop-shadow-l-light;
     padding: $unit;
-    //border-radius:8px;
     background: rgba(whitesmoke, 0.8);
     .quotee {
       padding-top: $unit;
@@ -448,58 +378,50 @@
       }
     }
   }
-
 }
-
 .cards {
   .card-simple {
     position: relative;
-    margin-top: $unit*2;
+    margin-top: $unit * 2;
     min-width: 280px;
     &-wrapper {
-      padding: $unit*2;
-
+      padding: $unit * 2;
     }
     &-body {
-      font-family: 'Dosis', sans-serif;
       text-align: center;
     }
-
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       width: 100%;
       left: 0;
       height: 100%;
       border-radius: 40px;
-      box-shadow: 0 8px 15px rgba(80, 103, 132, .15);
+      box-shadow: 0 8px 15px rgba(80, 103, 132, 0.15);
     }
   }
 }
-
-.content-section{
-  &.quote-section{
+.content-section {
+  &.quote-section {
     background: $color-dodger;
-
-    & + &{
+    & + & {
       background: $color-dodger-shade;
     }
-    .quote{
+    .quote {
       color: white;
-      font-size:24px;
-      line-height:36px;
-      max-width:680px;
-      margin-left:auto;
-      margin-right:auto;
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .quotee{
-      font-family:'Dosis';
+    .quotee {
       color: white;
-      opacity:0.5;
-      font-size:24px;
+      opacity: 0.5;
+      font-size: 24px;
       text-transform: uppercase;
-      margin-top:$gutter;
+      margin-top: $gutter;
     }
   }
 }

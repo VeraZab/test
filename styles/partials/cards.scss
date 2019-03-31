@@ -7,10 +7,10 @@
     &.constrain-med {
       max-width: 75%;
 
-      @include handheld {
+      @include phone {
         max-width: 100%;
       }
-      margin-top: $unit*4;
+      margin-top: $unit * 4;
     }
     &::before {
       content: '';
@@ -24,14 +24,15 @@
     }
     .cardContent {
       padding: $gutter;
-      .title-sm, .title-l {
+      .title-sm,
+      .title-l {
         color: $color-rhino-dark;
       }
     }
   }
   &-image {
     position: relative;
-    &.dark-fade{
+    &.dark-fade {
       &::after {
         position: absolute;
         content: '';
@@ -39,7 +40,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(-180deg, rgba(9,30,65,0.00) 40%, #081D3F 100%);
+        background: linear-gradient(-180deg, rgba(9, 30, 65, 0) 40%, #081d3f 100%);
       }
     }
   }
@@ -49,7 +50,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @include handheld {
+  @include phone {
     flex-direction: column;
     justify-content: space-between;
   }
@@ -71,7 +72,7 @@
     justify-content: flex-end;
     padding: $gutter;
     font-size: 5rem;
-    font-family: "Dosis", sans-serif;
+    font-family: 'Dosis', sans-serif;
     opacity: 0.15;
   }
   &-wrapper {
@@ -113,9 +114,8 @@
     color: $color-rhino-dark;
     @include tablet {
       flex: 1 1 calc(40% - 20px);
-      margin-bottom: $unit*2;
+      margin-bottom: $unit * 2;
     }
-    //min-width: 135px;
     &:not(:last-of-type) {
       @include desktop {
         margin-right: $gutter;
@@ -128,7 +128,7 @@
       @include tablet {
         margin-left: $gutter;
       }
-      @include handheld {
+      @include phone {
         margin-left: 0;
       }
     }
@@ -144,7 +144,7 @@
         align-items: center;
         justify-content: center;
       }
-      [class*="title-"] {
+      [class*='title-'] {
         color: $color-aqua;
         font-size: 1.25rem;
         letter-spacing: 2px;
@@ -165,39 +165,35 @@
     @include desktop {
       width: calc(50% - #{$gutter});
     }
-    @include tablet{
-      & + .card-with-image{
-        margin-top:$gutter;
+    @include tablet {
+      & + .card-with-image {
+        margin-top: $gutter;
       }
     }
     transition: $transition;
     .card {
-
       &-wrapper {
         flex-direction: column;
         padding: 0;
         flex-wrap: wrap;
         flex-grow: 1;
         align-items: stretch;
-        max-width:100%;
+        max-width: 100%;
         width: 100%;
-        //display: block;
-
       }
       &-image {
-
         @include desktop {
           max-height: 400px;
           height: 80vw;
         }
-        @include tablet{
-          max-height:250px;
+        @include tablet {
+          max-height: 250px;
         }
-        @include handheld{
-          min-height: 180px
+        @include phone {
+          min-height: 180px;
         }
-        border-top-right-radius:5px;
-        border-top-left-radius:5px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
         width: 100%;
         background-size: cover !important;
         background-position: center center;
@@ -215,15 +211,15 @@
         }
       }
       &-body {
-        padding: $gutter*1.5;
+        padding: $gutter * 1.5;
         text-align: left;
-        max-width:100%;
+        max-width: 100%;
         flex-grow: 1;
-        p{
+        p {
           padding: 0 !important;
           margin: 0 !important;
           width: 100%;
-          max-width:100%;
+          max-width: 100%;
         }
       }
       &-action {
@@ -234,14 +230,12 @@
 
         transition: $transition;
 
-        @include desktop{
+        @include desktop {
           transform: translateY(30px);
           &:hover {
             background: $color-dodger-shade;
           }
         }
-
-
 
         &-link {
           transition: $transition;
@@ -258,7 +252,7 @@
           letter-spacing: 2px;
           color: white !important;
 
-          @include desktop{
+          @include desktop {
             transform: translateY(8px);
             opacity: 0;
           }
@@ -282,15 +276,13 @@
       }
     }
   }
-
 }
 
 .bottom-blue {
   position: relative;
-  .content-section-wrapper{
+  .content-section-wrapper {
     position: relative;
-    z-index:2;
-
+    z-index: 2;
   }
   &::before {
     z-index: 1;
@@ -307,7 +299,7 @@
 
 .cards.stories {
   justify-content: space-between;
-  @include media('<=1060px'){
+  @include media('<=1060px') {
     justify-content: center;
   }
 }

@@ -23,9 +23,6 @@
        */
       &[class*='--center'] {
         &.content-section-p-style--bleed-wrapper {
-          //display: flex;
-          //align-items: center;
-          //justify-content: center;
           #{$c}-wrapper {
             max-width: 100%;
             padding-left: 0;
@@ -74,24 +71,6 @@
               width: 100%;
               max-width: 100%;
               padding-bottom: 0;
-              .image {
-                //min-height:600px;
-              }
-              //  padding-top:0 !important;
-              //  padding-bottom:0 !important;
-              //  width: 100vw !important;
-              //  max-width:100vw;
-              //  position: absolute !important;
-              //  height:100% !important;
-              //  .content-section-p-graphic-item{
-              //    position: absolute;
-              //    height:100%;
-              //    width:100%;
-              //    .image{
-              //      height:100% !important;
-              //      padding-bottom:0 !important;
-              //    }
-              //  }
             }
           }
 

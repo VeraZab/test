@@ -1,115 +1,113 @@
 import React from 'react';
 import Browser from 'components/browser';
 import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
+import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
   return (
     <>
-      {props.content.data.hero_title ? (
+      {props.content.hero_title ? (
         <div
-          className="newHero"
+          className="hero"
           id={
-            props.content.data.hero_title && props.content.data.hero_title.includes('Chart Studio')
+            props.content.hero_title && props.content.hero_title.includes('Chart Studio')
               ? 'cs-hero'
               : null
           }
         >
           <div
-            className="newHero-left"
+            className="hero-left"
             id={
-              props.content.data.hero_title && props.content.data.hero_title === 'Dash Licensing'
+              props.content.hero_title && props.content.hero_title === 'Dash Licensing'
                 ? 'dash-pricing'
                 : 'null'
             }
           >
-            <h1 className="title-m">{props.content.data.hero_title}</h1>
-            <h2>{props.content.data.hero_messaging[0] && props.content.data.hero_messaging[0].text}</h2>
-            <div className="buttons">
-              {props.content.data.hero_buttons[0] && props.content.data.hero_buttons[0] ? (
-                <a
-                  className=" button button-primary"
-                  href={props.content.data.hero_buttons[0].link.url}
-                >
-                  <div className="button-label">{props.content.data.hero_buttons[0].label}</div>
+            <h1 className="hero-title">{props.content.hero_title}</h1>
+            <h2 className="hero-subtitle">
+              {props.content.hero_messaging[0] && renderPrismic(props.content.hero_messaging)}
+            </h2>
+            <div className="cta-buttons">
+              {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
+                <a className="button button-primary" href={props.content.hero_buttons[0].link.url}>
+                  <div className="button-label">{props.content.hero_buttons[0].label}</div>
                 </a>
               ) : null}
-              {props.content.data.hero_buttons[1] ? (
+              {props.content.hero_buttons[1] ? (
                 <a
-                  className=" button button-secondary"
-                  href={props.content.data.hero_buttons[1].link.url}
+                  className="button button-secondary"
+                  href={props.content.hero_buttons[1].link.url}
                 >
-                  <div className="button-label">{props.content.data.hero_buttons[1].label}</div>
+                  <div className="button-label">{props.content.hero_buttons[1].label}</div>
                 </a>
               ) : null}
             </div>
-            {props.content.data.hero_messaging[0] &&
-            props.content.data.hero_messaging[0].text.includes('Dash') ? (
-              <GithubStarsRepeatable
-                start
-                slice={{
-                  items: [
-                    {
-                      repository_url: {url: 'https://github.com/plotly/dash'},
-                      label: null,
-                    },
-                  ],
-                }}
-              />
-            ) : null}
-            {props.content.data.hero_messaging[0] &&
-            props.content.data.hero_messaging[0].text.includes('D3 and WebGL charts in Python') ? (
-              <GithubStarsRepeatable
-                start
-                slice={{
-                  items: [
-                    {
-                      repository_url: {url: 'https://github.com/plotly/plotly.py'},
-                      label: null,
-                    },
-                  ],
-                }}
-              />
-            ) : null}
-            {props.content.data.hero_messaging[0] &&
-            props.content.data.hero_messaging[0].text.includes('D3 and WebGL charts in R') ? (
-              <GithubStarsRepeatable
-                start
-                slice={{
-                  items: [
-                    {
-                      repository_url: {url: 'https://github.com/ropensci/plotly'},
-                      label: null,
-                    },
-                  ],
-                }}
-              />
-            ) : null}
-            {props.content.data.hero_messaging[0] &&
-            props.content.data.hero_messaging[0].text.includes(
-              'sophisticated, interactive charts in JavaScript'
-            ) ? (
-              <GithubStarsRepeatable
-                start
-                slice={{
-                  items: [
-                    {
-                      repository_url: {url: 'https://github.com/plotly/plotly.js'},
-                      label: null,
-                    },
-                  ],
-                }}
-              />
-            ) : null}
+            <div className="github-stars">
+              {props.content.keywords === 'home' ||
+              props.content.keywords === 'dash-services' ||
+              props.content.slug === 'dash-product' ? (
+                <GithubStarsRepeatable
+                  start
+                  slice={{
+                    items: [
+                      {
+                        repository_url: {url: 'https://github.com/plotly/dash'},
+                        label: null,
+                      },
+                    ],
+                  }}
+                />
+              ) : null}
+              {props.content.keywords === 'plotly-py' ? (
+                <GithubStarsRepeatable
+                  start
+                  slice={{
+                    items: [
+                      {
+                        repository_url: {url: 'https://github.com/plotly/plotly.py'},
+                        label: null,
+                      },
+                    ],
+                  }}
+                />
+              ) : null}
+              {props.content.keywords === 'plotly-r' ? (
+                <GithubStarsRepeatable
+                  start
+                  slice={{
+                    items: [
+                      {
+                        repository_url: {url: 'https://github.com/ropensci/plotly'},
+                        label: null,
+                      },
+                    ],
+                  }}
+                />
+              ) : null}
+              {props.content.keywords === 'plotly-js' ? (
+                <GithubStarsRepeatable
+                  start
+                  slice={{
+                    items: [
+                      {
+                        repository_url: {url: 'https://github.com/plotly/plotly.js'},
+                        label: null,
+                      },
+                    ],
+                  }}
+                />
+              ) : null}
+            </div>
           </div>
-          {props.content.data.hero_graphic.url ? (
-            <div className="newHero-right">
-              {props.content.data.hero_graphic_style &&
-              props.content.data.hero_graphic_style === 'browser' ? (
+          {props.content.hero_graphic.url ? (
+            <div className="hero-right">
+              {props.content.hero_graphic_style &&
+              props.content.hero_graphic_style === 'browser' ? (
                 <Browser>
-                  <img src={props.content.data.hero_graphic.url} />
+                  <img src={props.content.hero_graphic.url} />
                 </Browser>
               ) : (
-                <img src={props.content.data.hero_graphic.url} />
+                <img src={props.content.hero_graphic.url} />
               )}
             </div>
           ) : null}

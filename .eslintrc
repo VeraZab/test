@@ -250,7 +250,6 @@
       "error",
       "always"
     ],
-    // "react/prop-types": "error",
     "valid-jsdoc": [
       "error"
     ],
@@ -262,7 +261,7 @@
       "always",
       {
         "block": {
-        exceptions: [
+          "exceptions": [
             "*"
           ]
         }
