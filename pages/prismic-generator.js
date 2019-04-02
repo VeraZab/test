@@ -1,10 +1,8 @@
 import React from 'react';
-import shortid from 'shortid';
 import getCookies from 'next-cookies';
 
 import Layout from 'components/global/layout';
 import Hero from 'components/prismic/slices/Hero';
-
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 import NotFound from 'components/404';
@@ -55,13 +53,9 @@ const PrismicGenerator = props => {
 
 PrismicGenerator.getInitialProps = async context => {
   const slug = context && context.query && context.query.slug ? context.query.slug : 'home';
-
   const response = await fetchData(getCookies(context)['io.prismic.preview']);
-
   const content = inlineLinkedItems(response);
-
   const nav = response.find(doc => doc.type === 'nav');
-
   const currentDoc = content.pages.find(doc => doc.uid === slug);
 
   return {
