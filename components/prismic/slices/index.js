@@ -23,6 +23,8 @@ import IFrame from './iframe';
 import GraphicText from './graphic-text';
 import Newsroom from './newsroom';
 import ComboCTA from './ComboCTA';
+import GlobalCTA from './GlobalCTA';
+
 
 const BlankSlice = props => {
   return null;
@@ -51,7 +53,7 @@ export default class Slices extends React.Component {
       'cs-iframe': IFrame,
       newsroom: Newsroom,
       an_open_source_company: BlankSlice,
-      globalcta: BlankSlice,
+      globalcta: GlobalCTA,
       dash_cta: BlankSlice,
       combocta: ComboCTA,
     };

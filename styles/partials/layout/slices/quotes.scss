@@ -1,67 +1,69 @@
-.quotes{
+.quotes {
+  background: $color-rhino-light-4;
 
-    .title{
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: center;
+  @include phone {
+    margin-top: -350px;
+  }
+
+  .title {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .quotesContainer {
+    max-width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 30px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $desktop) {
+      max-width: 100%;
     }
 
-    .quotesContainer{
-        max-width: 66%;
-        margin-left: auto;
-        margin-right: auto;
-        border-spacing: 30px;
-        padding-bottom: 70px;
-        display: flex;
+    .quotesItem {
+      display: flex;
+      padding-bottom: 40px;
+
+      @media screen and (max-width: $desktop) {
         flex-direction: column;
+      }
+
+      .logo {
+        border-right: 10px solid lightgrey;
+        flex: 0 1 10%;
+        display: flex;
+
+        .logoImage {
+          margin: auto;
+          display: block;
+        }
 
         @media screen and (max-width: $desktop) {
-            max-width: 100%;
+          border-right: none;
+          padding-bottom: 20px;
+        }
+      }
+
+      .cell {
+        padding-left: 24px;
+        padding-right: 24px;
+
+        flex: 0 2 90%;
+
+        .author {
+          padding-top: 6px;
+          text-align: right;
+          font-style: italic;
         }
 
-        .quotesItem {
-            display: flex;
-            padding-bottom: 40px;
-
-            @media screen and (max-width: $desktop) {
-                flex-direction: column;
-            }
-
-            .logo {
-                border-right: 10px solid lightgrey;
-                flex: 0 1 10%;
-                display: flex;
-
-
-                .logoImage{
-                    margin: auto;
-                    display: block;
-
-                }
-
-                @media screen and (max-width: $desktop) {
-                    border-right: none;
-                    padding-bottom: 20px;
-
-                }
-            }
-
-            .cell {
-                padding-left: 24px;
-                padding-right: 24px;
-
-                flex: 0 2 90%;
-
-                .author {
-                    padding-top: 6px;
-                    text-align: right;
-                    font-style: italic;
-                }
-
-                .author::before {
-                    content: "— ";
-                }
-            }
+        .author::before {
+          content: '— ';
         }
+      }
     }
+  }
 }
