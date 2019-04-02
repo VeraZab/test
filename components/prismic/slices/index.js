@@ -1,10 +1,3 @@
-/**
- * Slices component
- *
- * This is our component that will parse through an array of
- * slices and render the corresponding slice if it is accounted for.
- */
-
 import React from 'react';
 
 import PricingCardContainer from 'components/prismic/slices/pricing-cards';

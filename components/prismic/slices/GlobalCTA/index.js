@@ -1,5 +1,3 @@
-import React from 'react';
-
 const GlobalCTA = props => {
   return (
     <div className="globalCTA">

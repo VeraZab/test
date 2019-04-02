@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {this.props.styleTags}
-          {/* Google Tag Manager Tags */}
           <script
             dangerouslySetInnerHTML={{
               __html: `(
@@ -61,7 +60,6 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          {/* Google Tag Manager Tags */}
           <noscript
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6T2RXG"

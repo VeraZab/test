@@ -1,4 +1,3 @@
-import React from 'react';
 import PrismicDOM from 'prismic-dom';
 
 export default function Title({title}) {

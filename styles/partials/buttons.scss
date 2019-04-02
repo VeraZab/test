@@ -115,11 +115,6 @@
     @include active-state-transform;
   }
 }
-
-//----------------------------------------------------------------------------------------------------------------------
-// Hero buttons
-//----------------------------------------------------------------------------------------------------------------------
-
 .hero-prismic {
   .button {
     padding: $unit;
@@ -129,9 +124,6 @@
       padding: $unit/2 $unit;
       font-size: 12px;
     }
-    // --
-    // Primary Hero Button
-    // --
     &-primary {
       background: $color-emerald;
       &:hover {
@@ -162,9 +154,6 @@
         }
       }
     }
-    // --
-    // Secondary Hero Button
-    // --
     &-secondary {
       padding: calc(#{$unit} - 1px);
       border-color: white;

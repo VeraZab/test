@@ -6,9 +6,6 @@ const PLANS = {
   STUDENT: 'plans/student',
 };
 
-/**
- * To hide a plan, add its slug here
- */
 const PLANS_TO_HIDE = [PLANS.PRIVATE_CLOUD];
 
 const features = [

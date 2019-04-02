@@ -4,7 +4,6 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
 const { join } = require('path');
-
 const Cookies = require('cookies');
 const Prismic = require('prismic-javascript');
 
@@ -35,21 +34,13 @@ app.prepare().then(() => {
     });
   });
 
-  /**
-   * Home
-   */
   server.get('/', (req, res) => {
     const queryParams = { slug: 'home' };
     return app.render(req, res, '/prismic-generator', queryParams);
   });
-
-  /**
-   * Catch all
-   */
   server.get('*', (req, res) => {
     return handle(req, res);
   });
-
   server.listen(8080, err => {
     if (err) throw err;
     console.log('> Ready on http://localhost:8080');

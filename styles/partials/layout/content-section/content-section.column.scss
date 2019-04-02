@@ -1,14 +1,6 @@
 .content-section-p {
-  $c: &; // sets this classname to a variable omg
-
-  /*
- * Account for any column specific styles
- */
+  $c: &;
   &[class*='--column'] {
-    /*
-     * Alignment Styles
-     * only really apply to column layout
-     */
     &[class*='-align'] {
       &[class*='--newsroom-center'] {
         .content-section-p-body-wrapper {
@@ -18,9 +10,6 @@
           }
         }
       }
-      /*
-       * If center
-       */
       &[class*='--center'] {
         &.content-section-p-style--bleed-wrapper {
           #{$c}-wrapper {
@@ -37,9 +26,6 @@
           }
         }
         #{$c}-title {
-          /* let's center the title,
-          this is here because there is a max-width on the title
-          */
           justify-content: center;
           align-items: center;
           display: flex;
@@ -62,7 +48,6 @@
             justify-content: center;
           }
           #{$c}-graphic {
-            /* Let's prevent the graphic from getting too big */
             max-width: 800px;
             width: 100%;
             padding-top: 0;
@@ -73,7 +58,6 @@
               padding-bottom: 0;
             }
           }
-
           #{$c}-body {
             display: flex;
             align-items: center;
@@ -81,9 +65,7 @@
             margin-right: auto;
             margin-left: auto;
           }
-
           #{$c}-actions {
-            /* Let's prevent the graphic from getting too big */
             padding-bottom: $unit * 4;
             .buttons {
               justify-content: center;

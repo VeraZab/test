@@ -8,9 +8,6 @@ export default class GraphicDisplay extends React.Component {
   }
 
   render() {
-    /**
-     * Set the data as a easier thing to type
-     */
     const {data} = this.props;
 
     let graphic,
@@ -18,20 +15,12 @@ export default class GraphicDisplay extends React.Component {
 
     let classes = 'content-section-p-graphic-item';
 
-    /**
-     * If someone has added classes to this component,
-     * let's append them to the classes variable
-     */
     if (this.props.className) {
       classes += ' ' + this.props.className;
     }
     if (data.graphic_blend_mode !== 'none') {
       classes += ' content-section-p-graphic-blend-mode--' + data.graphic_blend_mode;
     }
-
-    /**
-     * Let's add the graphic style to the classes
-     */
     classes += ' content-section-p-graphic-style--' + data.graphic_style;
 
     let img = <Image data={data.graphic} />;
@@ -57,11 +46,6 @@ export default class GraphicDisplay extends React.Component {
         );
       }
     }
-
-    /**
-     * Let's check if there's a link, and if so
-     * wrap the image in a link
-     */
     if (data.graphic_link && data.graphic_link.url) {
       graphic = (
         <a key={shortid.generate()} href={data.graphic_link.url} target="_blank">
@@ -71,13 +55,6 @@ export default class GraphicDisplay extends React.Component {
     } else {
       graphic = img;
     }
-
-    /**
-     * Let's check if there's a caption,
-     * and then check if there is a link,
-     * if there is a link, wrap the caption
-     * in a link otherwise return the caption
-     */
     if (data.graphic_link_caption !== '') {
       if (data.graphic_link && data.graphic_link.url) {
         caption = (

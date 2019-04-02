@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './hero.styles.scss';
 
-// Main wrapper
 export class Hero extends React.Component {
   constructor(props) {
     super(props);
@@ -43,9 +42,6 @@ export class Hero extends React.Component {
   }
 }
 
-// --
-// Hero Top
-// --
 export class HeroTop extends React.Component {
   constructor(props) {
     super(props);
@@ -64,9 +60,6 @@ export class HeroTop extends React.Component {
     );
   }
 }
-// --
-// Hero Top sub components
-// --
 
 export class HeroMessaging extends React.Component {
   constructor(props) {
@@ -77,6 +70,7 @@ export class HeroMessaging extends React.Component {
     return <div className="hero-messaging">{this.props.children}</div>;
   }
 }
+
 export class HeroTitle extends React.Component {
   constructor(props) {
     super(props);
@@ -86,6 +80,7 @@ export class HeroTitle extends React.Component {
     return <h1 className="title-xl hidden">{this.props.children}</h1>;
   }
 }
+
 export class HeroSubtitle extends React.Component {
   constructor(props) {
     super(props);
@@ -95,6 +90,7 @@ export class HeroSubtitle extends React.Component {
     return <h2 className="title-sm hidden hidden-up">{this.props.children}</h2>;
   }
 }
+
 export class HeroActions extends React.Component {
   constructor(props) {
     super(props);
@@ -105,9 +101,6 @@ export class HeroActions extends React.Component {
   }
 }
 
-// --
-// Hero Bottom
-// --
 export class HeroBottom extends React.Component {
   constructor(props) {
     super(props);

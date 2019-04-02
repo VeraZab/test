@@ -1,17 +1,15 @@
 .content-section-p {
-  $c: &; // sets this classname to a variable omg
-
+  $c: &;
   #{$c}-details {
-    & ~  #{$c}-graphic{
-      @include media('<=800px'){
-        padding-top:$unit*4;
+    & ~ #{$c}-graphic {
+      @include media('<=800px') {
+        padding-top: $unit * 4;
       }
     }
   }
   #{$c}-graphic {
-
-    &-blend-mode{
-      &--multiply{
+    &-blend-mode {
+      &--multiply {
         mix-blend-mode: multiply;
       }
     }
@@ -19,9 +17,9 @@
       padding-top: 0;
     }
     &-style {
-      &--no-blur{
-        .image-preview{
-          opacity:0 !important;
+      &--no-blur {
+        .image-preview {
+          opacity: 0 !important;
         }
       }
       &--shadow {
@@ -31,27 +29,25 @@
       }
     }
     &-logos {
-      padding-bottom:0;
-      padding-top:$unit*2 !important;
+      padding-bottom: 0;
+      padding-top: $unit * 2 !important;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       .content-section-p-graphic-item {
         $size: 20%;
         flex-grow: 1;
-        width:$size;
-        max-width:$size;
-        padding: 0 $unit*2;
-        .image-preview{
-          opacity:0 !important;
+        width: $size;
+        max-width: $size;
+        padding: 0 $unit * 2;
+        .image-preview {
+          opacity: 0 !important;
         }
-
         @include media('<=800px') {
           width: 50%;
-          max-width:50%;
-          padding:$unit*2;
+          max-width: 50%;
+          padding: $unit * 2;
         }
-
       }
     }
     &-slides {
@@ -59,23 +55,20 @@
       flex-wrap: wrap;
       .content-section-p-graphic-item {
         flex-grow: 1;
-        width: calc(50% - #{$unit*2});
+        width: calc(50% - #{$unit * 2});
         @include media('<=800px') {
           width: 100%;
-          margin-bottom: $unit*2;
+          margin-bottom: $unit * 2;
         }
-        @include media('>800px') {
+        @include tablet {
           &:not(:first-of-type):not(:nth-of-type(2)) {
-            margin-top: $unit*2;
+            margin-top: $unit * 2;
           }
           &:nth-of-type(odd) {
-            margin-right: $unit*2;
+            margin-right: $unit * 2;
           }
         }
-
       }
     }
   }
 }
-
-

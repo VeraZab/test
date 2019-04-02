@@ -1,4 +1,3 @@
-import React from 'react';
 import shortid from 'shortid';
 import Button from 'components/prismic/button';
 import {constructButtons} from 'lib/construct-buttons';

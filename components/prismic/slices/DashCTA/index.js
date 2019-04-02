@@ -12,7 +12,7 @@ const DashCTA = props => {
       </div>
       <div className="dash-messaging-rectangle">
         <div className="box-shadows">
-          <span className="pretitle">{primary.pretitle}</span>
+          <div className="dash-pretitle">{primary.pretitle}</div>
           <h1 className="hero-title">{primary.title1}</h1>
           <h2 className="subtitle">{primary.messaging[0].text}</h2>
           <div className="cta-buttons">

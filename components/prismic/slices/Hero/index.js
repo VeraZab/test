@@ -1,4 +1,3 @@
-import React from 'react';
 import Browser from 'components/browser';
 import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import {renderPrismic} from 'lib/renderPrismicRichText';

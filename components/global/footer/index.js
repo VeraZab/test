@@ -51,23 +51,19 @@ const Footer = props => {
         links: [
           {
             label: footer[0].item1,
-            icon: null,
             url: footer[0].item_url1,
           },
           {
             label: footer[0].item2,
-            icon: null,
             url: footer[0].item_url2,
           },
           {
             label: footer[0].item3,
-            icon: null,
             url: footer[0].item3_url,
           },
 
           {
             label: footer[0].item4,
-            icon: null,
             url: footer[0].item4_url,
           },
         ],
@@ -78,17 +74,14 @@ const Footer = props => {
         links: [
           {
             label: footer[1].item1,
-            icon: null,
             url: footer[1].item_url1,
           },
           {
             label: footer[1].item2,
-            icon: null,
             url: footer[1].item_url2,
           },
           {
             label: footer[1].item3,
-            icon: null,
             url: footer[1].item3_url,
           },
         ],
@@ -99,12 +92,10 @@ const Footer = props => {
         links: [
           {
             label: footer[2].item1,
-            icon: null,
             url: footer[2].item_url1,
           },
           {
             label: footer[2].item2,
-            icon: null,
             url: footer[2].item_url2,
           },
         ],
@@ -115,17 +106,14 @@ const Footer = props => {
         links: [
           {
             label: footer[3].item1,
-            icon: null,
             url: footer[3].item_url1,
           },
           {
             label: footer[3].item2,
-            icon: null,
             url: footer[3].item_url2,
           },
           {
             label: footer[3].item3,
-            icon: null,
             url: footer[3].item3_url,
           },
         ],
@@ -139,23 +127,19 @@ const Footer = props => {
         links: [
           {
             label: 'Dash',
-            icon: null,
             url: '/products/dash/',
           },
           {
             label: 'Chart Studio',
-            icon: null,
             url: '/online-chart-maker',
           },
           {
             label: 'plotly.js',
-            icon: null,
             url: '/plotly-js-scientific-d3-charting-library/',
           },
 
           {
             label: 'plotly.py',
-            icon: null,
             url: '/d3-js-for-python-and-pandas-charts/',
           },
         ],
@@ -166,17 +150,14 @@ const Footer = props => {
         links: [
           {
             label: 'Chart Studio Cloud',
-            icon: null,
             url: '/products/cloud/',
           },
           {
             label: 'Chart Studio Enterprise',
-            icon: null,
             url: '/products/on-premise',
           },
           {
             label: 'Dash Deployment Server',
-            icon: null,
             url: '/dash/pricing',
           },
         ],
@@ -187,12 +168,10 @@ const Footer = props => {
         links: [
           {
             label: 'Careers',
-            icon: null,
             url: '/company/careers',
           },
           {
             label: 'Newsroom',
-            icon: null,
             url: '/newsroom',
           },
         ],
@@ -203,17 +182,14 @@ const Footer = props => {
         links: [
           {
             label: 'Developer Support',
-            icon: null,
             url: 'https://support.plot.ly/',
           },
           {
             label: 'Community Support',
-            icon: null,
             url: 'https://community.plot.ly',
           },
           {
             label: 'Documentation',
-            icon: null,
             url: 'https://plot.ly/graphing-libraries',
           },
         ],

@@ -1,6 +1,4 @@
-import styled, {injectGlobal, css} from 'styled-components';
-import './global';
-
+import styled from 'styled-components';
 import Heading from './heading';
 import Body from './body';
 

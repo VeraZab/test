@@ -19,7 +19,6 @@
     @include desktop {
       max-width: 500px;
     }
-
     @include media('<=1100px') {
       max-width: 400px;
     }
@@ -37,13 +36,11 @@
       background-position: center center;
       background-repeat: no-repeat;
       display: flex;
-
       &.desktop-graphic {
         @include media('<=960px') {
           display: none !important;
         }
       }
-
       &.mobile-graphic {
         @include media('>960px') {
           display: none !important;
@@ -61,7 +58,6 @@
       }
     }
   }
-
   &-editor {
     pre {
       float: none !important;
@@ -83,9 +79,6 @@
       flex-direction: column;
       flex: 1;
     }
-    // --
-    // Header
-    // --
     &-header {
       background-color: #1e304e;
       border: 5px solid #1e304e;
@@ -97,9 +90,6 @@
         flex-wrap: wrap;
       }
     }
-    // --
-    // Tabs
-    // --
     &-tab {
       border-radius: 3px;
       font-weight: 600;
@@ -113,19 +103,16 @@
       &:not(:last-of-type) {
         margin-right: $unit;
       }
-
       @include phone {
         &:nth-of-type(1),
         &:nth-of-type(2) {
           margin-bottom: $unit;
         }
-
         &:nth-of-type(2) {
           margin-right: 0;
         }
         min-width: 40%;
       }
-
       &:not(.active) {
         .code-explorer-editor-tab-label {
           &::after {
@@ -142,7 +129,6 @@
           }
         }
       }
-
       &-label {
         transition: $timing transform $easing;
         user-select: none;
@@ -153,7 +139,6 @@
         justify-content: center;
         padding: $unit/2 $unit;
       }
-
       &:hover {
         color: white;
         cursor: pointer;
@@ -181,9 +166,6 @@
         }
       }
     }
-    // --
-    // Content
-    // --
     &-content {
       position: relative;
       max-width: 100%;
@@ -205,7 +187,6 @@
           background: $color-dodger;
         }
       }
-
       &::-webkit-scrollbar-corner {
         background: #1e304e !important;
       }
@@ -214,9 +195,6 @@
         background: transparent !important;
       }
     }
-    // --
-    // Actions
-    // --
     &-actions {
       padding-top: $gutter;
       .buttons {

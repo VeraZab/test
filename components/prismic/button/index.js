@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import Link from 'next/link';
 
 /**
  * Button component
@@ -55,7 +54,6 @@ export default class Button extends React.Component {
 
     return (
       <a href={url} target={data.link.target} title={data.title} className={classes} {...download}>
-        {/* if: MDI icon field has content*/}
         {data.mdi_icon ? (
           <div className="button-icon button-icon-mdi">
             <div className="button-icon-wrapper">
@@ -63,7 +61,6 @@ export default class Button extends React.Component {
             </div>
           </div>
         ) : null}
-        {/* end if */}
         <div className="button-label" dangerouslySetInnerHTML={{__html: data.label}} />
       </a>
     );

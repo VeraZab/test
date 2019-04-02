@@ -1,4 +1,3 @@
-import React from 'react';
 import Pretitle from './pretitle';
 import Title from './title';
 import Subtitle from './subtitle';

@@ -1,15 +1,12 @@
 .dash-cta-container-active {
   display: flex;
   flex-direction: row;
-  height: 700px;
   @include tablet {
     flex-direction: column;
-    margin-bottom: 700px;
   }
 
   .dash-cta-graphic {
-    background: linear-gradient(90deg, #000075 75%, #fff 25%);
-    padding-left: 15%;
+    background: linear-gradient(90deg, #000075 55%, #fff 25%);
     @include tablet {
       background: #000075;
     }
@@ -104,18 +101,14 @@
   flex-direction: row;
   height: 700px;
 
-  @include phone {
-    margin-bottom: 30px;
-  }
-
   @include tablet {
     flex-direction: column;
-    margin-bottom: 700px;
+    height: auto;
   }
 
   .cs-cta-graphic {
-    background: linear-gradient(90deg, #000075 75%, #fff 25%);
-    padding-top: 50px;
+    background: linear-gradient(90deg, #000075 70%, #fff 25%);
+    padding-top: 150px;
     @include tablet {
       background: #000075;
     }

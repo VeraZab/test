@@ -102,9 +102,6 @@
     justify-content: center;
     align-items: center;
   }
-  //----------------------------------------------------------------------------------------------------------------------
-  // Card Types
-  //----------------------------------------------------------------------------------------------------------------------
   &-simple {
     border-radius: 5px;
     flex-grow: 1;
@@ -132,9 +129,6 @@
         margin-left: 0;
       }
     }
-    // --
-    // Colors / Themes
-    // --
     &.dark-blue {
       @include linear-gradient(-135deg, #1d8ee8 0%, #1e427d 100%);
       text-shadow: $text-shadow-default;

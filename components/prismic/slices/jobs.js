@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 import {Button} from 'components/styled/button';

@@ -5,12 +5,7 @@ const PLANS = {
   PRIVATE_CLOUD: 'plans/private_cloud',
   STUDENT: 'plans/student',
 };
-
-/**
- * To hide a plan, add its slug here
- */
 const PLANS_TO_HIDE = [PLANS.PRIVATE_CLOUD];
-
 const features = [
   {
     value: `Public charts & dashboards`,
@@ -106,13 +101,6 @@ const features = [
     value: `10MB datasets`,
     plans: [PLANS.PERSONAL, PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD, PLANS.STUDENT],
   },
-  //{
-  //  value: `30MB datasets`,
-  //  plans: [
-  //    PLANS.PROFESSIONAL,
-  //    PLANS.PRIVATE_CLOUD,
-  //  ],
-  //},
   {
     value: (
       <>
@@ -206,13 +194,5 @@ const features = [
     plans: [PLANS.PROFESSIONAL, PLANS.PRIVATE_CLOUD],
   },
 ];
-
-// {
-//   title: 'Private Cloud',
-//   slug: PLANS.PRIVATE_CLOUD,
-//   cost: 9960,
-//   link: 'https://plot.ly/products/on-premise/',
-//   subtitle: <>per year,<br/>comes with 5 Pro. users</>,
-// },
 
 export {PLANS, PLANS_TO_HIDE, features};

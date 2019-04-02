@@ -1,9 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import Shevy from 'shevyjs';
 const shevy = new Shevy();
 const {
-  baseSpacing: bs,
   h4: {fontSize, lineHeight, marginBottom},
 } = shevy;
 

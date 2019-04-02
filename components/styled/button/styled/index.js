@@ -1,10 +1,9 @@
-import React from 'react';
 import styled, {css} from 'styled-components';
-import {rgba} from 'polished';
 
 const Label = styled.div`
   color: currentColor;
 `;
+
 const StyledButton = styled.a`
   padding: 8px 24px;
   text-transform: uppercase;

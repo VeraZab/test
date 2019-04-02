@@ -9,7 +9,6 @@
         }
       }
       &-title-wrapper {
-        /* Dash is productive: */
         font-size: 38px !important;
         color: #506784;
         line-height: 46px !important;
@@ -54,7 +53,6 @@
       }
     }
   }
-
   &-hero {
     background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
     @include media('<=1230px') {
@@ -69,11 +67,9 @@
         display: flex !important;
       }
     }
-
     .buttons {
       width: 100%;
     }
-
     @include media('<=900px') {
       .buttons {
         flex-direction: column;
@@ -102,17 +98,14 @@
       }
     }
   }
-
   &-graphic {
     padding-top: $gutter * 4;
   }
-
   &-graphics {
     padding-top: $gutter;
     display: flex;
     transform: translateY(60px);
   }
-
   &-logo {
     width: 100%;
     &-wrapper {
@@ -122,14 +115,12 @@
       max-width: 177px;
     }
   }
-
   &-section {
     p {
       font-size: 22px;
       color: #516783;
       line-height: 36px;
     }
-
     &-productive {
       .content-section-wrapper {
         transform: translateY(60px);
@@ -137,20 +128,16 @@
         position: relative;
       }
     }
-
     &-features-thirds {
       background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
       padding-top: $gutter * 2;
       transform: translateY(-120px);
-
       .background {
         background: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
       }
-
       @include media('<=900px') {
         transform: none;
       }
-
       @include tablet {
         padding-bottom: $gutter * 4;
       }
@@ -159,12 +146,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-
         .icon {
           max-width: 72px;
         }
         .title {
-          /* Lightweight: */
           font-weight: 300;
           font-size: 28px;
           color: #ffffff;
@@ -173,7 +158,6 @@
           margin-top: $unit;
         }
         p {
-          /* Dash provides a dire: */
           font-size: 16px !important;
           color: #ffffff;
           max-width: 100%;
