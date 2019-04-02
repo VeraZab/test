@@ -1,8 +1,6 @@
 .github_stars {
   $c: &;
 
-  order: 100 !important;
-
   &.align-start {
     #{$c}__wrapper {
       align-items: flex-start;

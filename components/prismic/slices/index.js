@@ -22,6 +22,7 @@ import CodeExplorer from './code-explorer';
 import IFrame from './iframe';
 import GraphicText from './graphic-text';
 import Newsroom from './newsroom';
+import ComboCTA from './ComboCTA';
 
 const BlankSlice = props => {
   return null;
@@ -52,7 +53,7 @@ export default class Slices extends React.Component {
       an_open_source_company: BlankSlice,
       globalcta: BlankSlice,
       dash_cta: BlankSlice,
-      combocta: BlankSlice,
+      combocta: ComboCTA,
     };
 
     return (
