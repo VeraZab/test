@@ -1,11 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import Shevy from 'shevyjs';
 
 const shevy = new Shevy();
 const {
-  baseSpacing: bs,
-  h2: {fontSize, lineHeight, marginBottom},
+  h2: {fontSize, lineHeight},
 } = shevy;
 
 const pretitleStyles = `

@@ -145,9 +145,7 @@ class DashMain extends React.Component {
             <div className="pre-title">Example App #1</div>
             <Title>Stock Tickers</Title>
             <Body>
-              <p>
-                Built in just 60 lines of code, this app renders interactive financial charts.
-              </p>
+              <p>Built in just 60 lines of code, this app renders interactive financial charts.</p>
 
               <Buttons className="gutter-top" items={demoAppStock} />
             </Body>
@@ -155,7 +153,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppStock[0].link}
-              image="https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/stock-ticker.png"
+              image="https://prismic-io.s3.amazonaws.com/plotly%2F439318bc-cf96-4007-9558-c8a31a254298_stock-ticker.png"
             />
           </ContentPane>
         </ContentSection>

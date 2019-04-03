@@ -1,20 +1,7 @@
 import React from 'react';
 import Image from 'components/prismic/Image';
-
 import PrismicDOM from 'prismic-dom';
-/**
- * Logos Slice component
- * for displaying a row of logos
- *
- * You can display a title
- * and a some content for the body
- *
- * Logos can have:
- * a label
- * a link
- * @class
- *
- */
+
 export default class LogosSlice extends React.Component {
   constructor(props) {
     super(props);
@@ -27,13 +14,6 @@ export default class LogosSlice extends React.Component {
     if (this.props.className) {
       classes += ' ' + this.props.className;
     }
-
-    /**
-     * Layout
-     * This will default to the value of 'column'
-     * These values will adjust the layout of the hero overall
-     * column || row
-     */
     if (data.primary.alignment !== null || data.primary.alignment !== '') {
       classes += ' logos-slice-align--' + data.primary.alignment;
     }

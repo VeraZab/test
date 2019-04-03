@@ -35,29 +35,11 @@ export default class Img extends React.Component {
   render() {
     const key = shortid.generate();
     const {data} = this.props;
-    const {imageParams} = this.props;
     if (this.props.background) {
-      const previewStyle = {
-        backgroundImage: 'url(' + data.url + imageParams.preview + ')',
-        backgroundSize: 'cover',
-        backgroundPosition: this.props.position,
-        backgroundAttachment: this.props.attachment,
-      };
-      const hqStyle = {
-        backgroundSize: 'cover',
-        backgroundPosition: this.props.position,
-        backgroundAttachment: this.props.attachment,
-      };
       return (
-        <div className="image" style={this.props.styles} key={key}>
-          <div className="image-wrapper">
-            <div
-              className="image-hq lozad"
-              data-background-image={data.url + imageParams.hq}
-              style={hqStyle}
-              key={shortid.generate()}
-            />
-            <div className="image-preview" style={previewStyle} />
+        <div key={key}>
+          <div>
+            <img src={data.url} />
           </div>
           {data.copyright ? <copyright>&copy; {data.copyright}</copyright> : ''}
         </div>
@@ -69,13 +51,10 @@ export default class Img extends React.Component {
       classes += ' no-blur';
     }
     return (
-      <div className={classes} style={this.props.styles} key={key}>
-        <div className="image-wrapper">
-          <div className="image-hq">
-            <img className="lozad" data-src={data.url + imageParams.hq} alt="" />
-          </div>
-          <div className="image-preview">
-            <img src={data.url + imageParams.preview} alt="" />
+      <div className={classes} key={key}>
+        <div>
+          <div>
+            <img src={data.url} />
           </div>
         </div>
         {data.copyright ? <copyright>&copy; {data.copyright}</copyright> : ''}

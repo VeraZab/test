@@ -1,16 +1,10 @@
-// @import "partials/abstract";
-
-
-.grid{
+.grid {
   width: 100%;
-
-  &.layout{
-
-    &-align{
-
-      &-center{
-        @at-root .grid{
-          &-wrapper{
+  &.layout {
+    &-align {
+      &-center {
+        @at-root .grid {
+          &-wrapper {
             justify-content: center;
             align-items: center;
           }
@@ -19,48 +13,37 @@
     }
   }
 
-  &-wrapper{
+  &-wrapper {
     width: 100%;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     overflow: hidden;
-
   }
 
-  &-item{
-    //flex: 1;
-
-    @include tablet{
-      min-width:200px;
+  &-item {
+    @include tablet {
+      min-width: 200px;
     }
-    &-wrapper{
+    &-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
     }
-    &-graphic{
-      width:90px;
+    &-graphic {
+      width: 90px;
     }
-    &-label{
-      padding-top:$unit;
-      font-size:1rem;
+    &-label {
+      padding-top: $unit;
+      font-size: 1rem;
       text-align: center;
     }
   }
 }
 
-
-.small-logos{
-  .grid-item-avatar{
+.small-logos {
+  .grid-item-avatar {
     min-width: 120px;
     max-width: 140px;
   }
-  img{
-    //max-width:180px;
-  }
-}
-
-img{
-  //max-width:100% !important;
 }

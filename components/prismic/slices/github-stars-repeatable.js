@@ -1,4 +1,3 @@
-import React from 'react';
 const gh = require('parse-github-url');
 import shortid from 'shortid';
 
@@ -8,7 +7,7 @@ export default function GithubStarsRepeatable({slice, start}) {
   if (start) {
     classes += ' align-start';
   }
-  const Stars = slice.items.map((item, i) => {
+  const Stars = slice.items.map(item => {
     const github_repo = gh(item.repository_url.url);
     const src =
       'https://ghbtns.com/github-btn.html?user=' +

@@ -1,0 +1,200 @@
+.dash-cta-container-active {
+  display: flex;
+  flex-direction: row;
+  @include tablet {
+    flex-direction: column;
+  }
+
+  .dash-cta-graphic {
+    background: linear-gradient(90deg, #000075 55%, #fff 25%);
+    @include tablet {
+      background: #000075;
+    }
+  }
+
+  .dash-cta-copy {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    margin: $gutter * 2;
+    padding-top: 175px;
+
+    @include tablet {
+      padding-top: 0;
+    }
+
+    .dash-cta-pretitle {
+      text-transform: uppercase;
+      color: #96a6b5;
+      letter-spacing: 2px;
+      padding-bottom: $gutter/2;
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    p {
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .dash-cta-title {
+      line-height: 1.2;
+      padding-bottom: $gutter;
+      @include tablet {
+        text-align: center;
+      }
+    }
+    .dash-cta-messaging {
+      padding-bottom: $gutter;
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .dash-cta-buttons {
+      display: flex;
+      flex-direction: row;
+      @include tablet {
+        flex-direction: column;
+      }
+      a {
+        margin-right: $gutter;
+        margin-bottom: $gutter;
+        @include tablet {
+          margin: auto;
+          margin-bottom: $gutter;
+          min-width: 250px;
+        }
+      }
+    }
+
+    .dash-cta-anchor {
+      @include tablet {
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        margin-top: $gutter;
+      }
+
+      cursor: pointer;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 1;
+      align-self: flex-end;
+      .anchor-link {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.dash-cta-container {
+  display: none;
+}
+
+.cs-cta-container-active {
+  display: flex;
+  flex-direction: row;
+  height: 700px;
+
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cs-cta-graphic {
+    background: linear-gradient(90deg, #000075 70%, #fff 25%);
+    padding-top: 150px;
+    @include tablet {
+      background: #000075;
+    }
+  }
+
+  .cs-cta-copy {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    margin: $gutter * 2;
+    padding-top: 175px;
+
+    @include tablet {
+      padding-top: 0;
+    }
+
+    .cs-cta-pretitle {
+      text-transform: uppercase;
+      color: #96a6b5;
+      letter-spacing: 2px;
+      padding-bottom: $gutter/2;
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    p {
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .cs-cta-title {
+      line-height: 1.2;
+      padding-bottom: $gutter;
+      @include tablet {
+        text-align: center;
+      }
+    }
+    .cs-cta-messaging {
+      padding-bottom: $gutter;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+
+    .cs-cta-buttons {
+      display: flex;
+      flex-direction: row;
+      @include tablet {
+        flex-direction: column;
+      }
+      a {
+        margin-right: $gutter;
+        margin-bottom: $gutter;
+        @include tablet {
+          margin: auto;
+          margin-bottom: $gutter;
+          min-width: 250px;
+        }
+      }
+    }
+
+    .cs-cta-anchor {
+      @include tablet {
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        margin-top: $gutter;
+      }
+
+      cursor: pointer;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 1;
+      align-self: flex-end;
+      .anchor-link {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.cs-cta-container {
+  display: none;
+}

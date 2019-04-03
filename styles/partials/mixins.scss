@@ -10,7 +10,23 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 @function is-direction($value) {
-  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-keyword: index(
+    (
+      to top,
+      to top right,
+      to right top,
+      to right,
+      to bottom right,
+      to right bottom,
+      to bottom,
+      to bottom left,
+      to left bottom,
+      to left,
+      to left top,
+      to top left
+    ),
+    $value
+  );
   $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
   @return $is-keyword or $is-angle;
 }
@@ -20,18 +36,18 @@
     @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
   }
   $conversion-map: (
-          to top : bottom,
-          to top right : bottom left,
-          to right top : left bottom,
-          to right : left,
-          to bottom right : top left,
-          to right bottom : left top,
-          to bottom : top,
-          to bottom left : top right,
-          to left bottom : right top,
-          to left : right,
-          to left top : right bottom,
-          to top left : bottom right
+    to top: bottom,
+    to top right: bottom left,
+    to right top: left bottom,
+    to right: left,
+    to bottom right: top left,
+    to right bottom: left top,
+    to bottom: top,
+    to bottom left: top right,
+    to left bottom: right top,
+    to left: right,
+    to left top: right bottom,
+    to top left: bottom right
   );
   @if map-has-key($conversion-map, $value) {
     @return map-get($conversion-map, $value);
@@ -57,7 +73,6 @@
 @mixin backgroundWithDots {
   position: relative;
   &::before {
-    //@include linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
     content: '';
     height: 100%;
     top: 0;
@@ -65,8 +80,10 @@
     width: 100%;
     z-index: -2;
     position: absolute;
-    background: url(https://images-hoshi.nationalmachine.co/ineffable/uploads/8e24bc29d4dcbda1aa6f2a1dcdd4c0e6/background-dots.png) repeat center center, linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
-    background-size: 14.5px,  cover;
+    background: url(https://images-hoshi.nationalmachine.co/ineffable/uploads/8e24bc29d4dcbda1aa6f2a1dcdd4c0e6/background-dots.png)
+        repeat center center,
+      linear-gradient(135deg, #1d8ee8 0%, #1e427d 100%);
+    background-size: 14.5px, cover;
   }
   &::after {
     content: '';
@@ -76,11 +93,8 @@
     z-index: -1;
     top: 0;
     left: 0;
-    //background: ;
-
   }
 }
-
 @mixin colorBar($height, $color, $distance) {
   &::before {
     content: '';
@@ -92,8 +106,7 @@
     top: 0;
   }
 }
-
-@import "./mixins.mobile.scss";
+@import './mixins.mobile.scss';
 
 @mixin center-content {
   margin-right: auto;
@@ -139,7 +152,6 @@
 @mixin active-state-transform {
   transform: translateY(2px);
 }
-
 @keyframes fadein {
   from {
     opacity: 0;
@@ -148,7 +160,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeout {
   from {
     opacity: 1;
@@ -157,7 +168,6 @@
     opacity: 0;
   }
 }
-
 @keyframes fade-and-slide-in-from-bottom {
   from {
     opacity: 0;
@@ -169,7 +179,6 @@
     transform: none;
   }
 }
-
 @keyframes fade-and-slide-in-from-bottom-sm {
   from {
     opacity: 0;
@@ -181,11 +190,10 @@
     transform: none;
   }
 }
-
 @keyframes fade-and-slide-in-from-top {
   from {
     opacity: 0;
-    transform: translate3d(0, -$gutter*4, 0);
+    transform: translate3d(0, -$gutter * 4, 0);
   }
 
   to {
@@ -193,7 +201,6 @@
     transform: none;
   }
 }
-
 @keyframes fade-and-slide-in-from-top-sm {
   from {
     opacity: 0;
@@ -205,21 +212,18 @@
     transform: none;
   }
 }
-
 @keyframes staggermenu {
   from {
     transform: translate3d(0, 60px, 0);
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     transform: translate3d(0, 0, 0);
-    opacity: 1
+    opacity: 1;
   }
 }
-
-$timing-animation: $timing*2.5;
-
+$timing-animation: $timing * 2.5;
 .animation {
   &-fadein {
     opacity: 0;
@@ -249,7 +253,6 @@ $timing-animation: $timing*2.5;
     opacity: 0;
     animation: fade-and-slide-in-from-top-sm $timing-animation forwards $global-easing;
   }
-
   &-stagger-menu {
     opacity: 0;
     animation: staggermenu $timing-animation forwards $global-easing;
@@ -269,63 +272,49 @@ $timing-animation: $timing*2.5;
     }
   }
 }
-
 //----------------------------------------------------------------------------------------------------------------------
 // Fadein
 //----------------------------------------------------------------------------------------------------------------------
-
 @mixin animationFadein-xl {
   @extend .animation-fadein;
   @extend .animation-delay-xl;
 }
-
 @mixin animationFadein-l {
   @extend .animation-fadein;
   @extend .animation-delay-l;
 }
-
 @mixin animationFadein-med {
   @extend .animation-fadein;
   @extend .animation-delay-med;
 }
-
 @mixin animationFadein-sm {
   @extend .animation-fadein;
   @extend .animation-delay-sm;
 }
-
 @mixin animationFadein {
   @extend .animation-fadein;
 }
-
 //----------------------------------------------------------------------------------------------------------------------
 // Fade and slide in from bottom
 //----------------------------------------------------------------------------------------------------------------------
-
 @mixin animationFadeAndSlideInFromBottom {
   @extend .animation-fade-and-slide-in-from-bottom;
 }
-
 @mixin animationFadeAndSlideInFromBottom-sm {
   @extend .animation-fade-and-slide-in-from-bottom-sm;
 }
-
 @mixin animationFadeAndSlideInFromBottom-sm-fast {
   @extend .animation-fade-and-slide-in-from-bottom-sm-fast;
 }
-
 @mixin animationFadeAndSlideInFromTop {
   @extend .animation-fade-and-slide-in-from-top;
 }
-
 @mixin animationFadeAndSlideInFromTop-sm {
   @extend .animation-fade-and-slide-in-from-top-sm;
 }
-
 @mixin animation-stagger-menu {
   @extend .animation-stagger-menu;
 }
-
 @mixin fullSizePosAbsolute {
   position: absolute;
   top: 0;
@@ -333,37 +322,31 @@ $timing-animation: $timing*2.5;
   width: 100%;
   height: 100%;
 }
-
 @mixin typography-title-xl {
   font-size: 58px;
   line-height: 60px;
-  @include handheld {
+  @include phone {
     font-size: 50px;
     line-height: 58px;
   }
 }
-
 @mixin typography-title-l {
   font-size: 38px;
   line-height: 46px;
 }
-
 @mixin typography-title-med {
   font-size: 34px;
   line-height: 44px;
   font-weight: 500;
 }
-
 @mixin typography-title-sm {
   font-size: 28px;
   line-height: 34px;
 }
-
 @mixin align-content-center {
   margin-right: auto;
   margin-left: auto;
 }
-
 @mixin fullPseudoElement {
   content: '';
   position: absolute;
@@ -372,7 +355,6 @@ $timing-animation: $timing*2.5;
   height: 100%;
   width: 100%;
 }
-
 // ----
 // This accounts for when someone loads the page that has the light theme, rather than making the html background
 // transparent by !important, we are adding a pseudo element to overlay it.
@@ -387,15 +369,12 @@ $timing-animation: $timing*2.5;
     @include animationFadein;
   }
 }
-
-@mixin trans{
+@mixin trans {
   transition: $transition;
 }
-
 @mixin ff-dosis {
   font-family: 'Dosis', sans-serif;
 }
-
 @mixin ff-ubuntu {
   font-family: 'Ubuntu', sans-serif;
 }

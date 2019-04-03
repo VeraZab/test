@@ -1,41 +1,30 @@
-// @import "partials/abstract";
-
-.cta-banner{
-
-
-
-
-  &.patterned-grey{
-    background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center center repeat chromatic-color-luminance($color-rhino-core, 0.9);
+.cta-banner {
+  &.patterned-grey {
+    background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png') center
+      center repeat chromatic-color-luminance($color-rhino-core, 0.9);
   }
-  &-wrapper{
-    padding:$gutter 0 $gutter*2;
+  &-wrapper {
+    padding: $gutter 0 $gutter * 2;
     @include global-wrapper;
-    border-top:1px solid $color-rhino-light-1;
+    border-top: 1px solid $color-rhino-light-1;
   }
 }
-
 .columns {
   &-wrapper {
-    //@include global-wrapper;
     display: flex;
-
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    @include tablet{
-      .column{
+    @include tablet {
+      .column {
         min-width: 40%;
       }
     }
-
-    @include handheld{
-      .column{
+    @include phone {
+      .column {
         min-width: 80%;
       }
     }
-
     .column {
       flex: 1;
       display: flex;
@@ -43,17 +32,13 @@
       justify-content: flex-end;
       align-items: center;
       text-align: center;
-
       &-graphic {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        padding:$gutter;
-        &-wrapper{
-          max-width:200px;
-        }
-        img{
-
+        padding: $gutter;
+        &-wrapper {
+          max-width: 200px;
         }
       }
       &-title {
@@ -68,5 +53,4 @@
       }
     }
   }
-
 }

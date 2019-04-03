@@ -1,4 +1,3 @@
-import React from 'react';
 import {numberWithCommas} from 'lib/format-currency';
 
 function PricingCardHeader(props) {
@@ -20,9 +19,9 @@ function PricingCardHeader(props) {
         <span className="price__symbol">$</span>
         {numberWithCommas(
           parseInt(
-            props.pricing_mode == 'On-Premises: Internet-Connected Install'
+            props.pricing_mode === 'On-Premises: Internet-Connected Install'
               ? props.data.toggle_state_second_price
-              : props.pricing_mode == 'On-Premises: Air-Gapped Install'
+              : props.pricing_mode === 'On-Premises: Air-Gapped Install'
               ? props.data.toggle_state_third_price
               : props.data.price,
             10
@@ -39,11 +38,11 @@ function PricingCardHeader(props) {
     props.data.button_three_link &&
     props.data.button_three_label && (
       <div className="pricing__card__header__actions">
-        {props.pricing_mode == 'On-Premises: Internet-Connected Install' ? (
+        {props.pricing_mode === 'On-Premises: Internet-Connected Install' ? (
           <a href={props.data.button_one_link.url}>
             <button type="button">{props.data.button_one_label}</button>
           </a>
-        ) : props.pricing_mode == 'On-Premises: Air-Gapped Install' ? (
+        ) : props.pricing_mode === 'On-Premises: Air-Gapped Install' ? (
           <a href={props.data.button_two_link.url}>
             <button type="button">{props.data.button_two_label}</button>
           </a>

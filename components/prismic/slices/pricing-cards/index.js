@@ -1,9 +1,5 @@
 import React from 'react';
-import shortid from 'shortid';
 import PricingCard from 'components/prismic/slices/pricing-cards/pricing-card';
-import SwitchComponent from 'components/switch';
-import {SwitchContainer, HeadingContainer, H1, H2} from 'components/styled/on-prem';
-import {renderPrismic} from 'lib/renderPrismicRichText';
 
 export default class PricingCardsContainer extends React.PureComponent {
   constructor(props) {

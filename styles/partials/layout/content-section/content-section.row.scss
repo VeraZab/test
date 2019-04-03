@@ -1,10 +1,7 @@
 .content-section-p {
-  $c: &; // sets this classname to a variable omg
-  /*
-   * Account for any row specific styles
-   */
-  &[class*="--row"] {
-    $gutter: $unit*6;
+  $c: &;
+  &[class*='--row'] {
+    $gutter: $unit * 6;
     #{$c}-wrapper {
       align-items: center;
 
@@ -12,9 +9,6 @@
         flex-direction: column;
       }
     }
-    /*
-     * Set some sizes for the two main sections (details, graphic)
-     */
     #{$c}-graphic,
     #{$c}-details {
       &-wrapper {
@@ -25,40 +19,29 @@
         width: 100%;
       }
     }
-    /*
-     * row-auto
-     * If the row contains '-auto' let's style it
-     * this will alternate the order of the details
-     * vs graphic
-     */
-    &[class*="-auto"] {
+    &[class*='-auto'] {
       --details-width: 50%;
       --graphic-width: 50vw;
       --graphic-width--offset: 50%;
-
       &.content-section-p-proportions--25-75 {
         --details-width: 25% !important;
         --graphic-width: 75vw !important;
         --graphic-width--offset: 75% !important;
       }
-
       &:nth-of-type(even) {
         &.content-section-p-style--bleed-wrapper {
-
           #{$c}-details {
             position: relative;
             z-index: 99;
-            @include media('>800px') {
+            @include tablet {
               max-width: var(--details-width);
               margin-left: calc(100% - var(--details-width));
             }
           }
-
         }
         .content-section-p-graphic--style-bleed-parent {
           left: auto !important;
           right: calc(100% - var(--graphic-width--offset)) !important;
-
           .content-section-p-graphic-item {
             position: absolute;
             height: 100%;
@@ -73,15 +56,14 @@
           }
         }
         #{$c}-graphic {
-
-          @include media('>800px') {
+          @include tablet {
             order: 1;
             padding-right: $gutter/2;
             padding-left: 0;
           }
         }
         #{$c}-details {
-          @include media('>800px') {
+          @include tablet {
             order: 2;
             padding-left: $gutter/2;
           }
@@ -105,7 +87,6 @@
           }
         }
       }
-
       &:nth-of-type(odd) {
         &.content-section-p-style--bleed-wrapper {
           #{$c}-graphic {
@@ -117,7 +98,7 @@
             }
           }
           #{$c}-details {
-            @include media('>800px') {
+            @include tablet {
               max-width: var(--details-width);
               margin-left: 0;
             }
@@ -133,12 +114,12 @@
           top: 0;
         }
         #{$c}-graphic {
-          @include media('>800px') {
+          @include tablet {
             padding-left: $gutter/2;
           }
         }
         #{$c}-details {
-          @include media('>800px') {
+          @include tablet {
             padding-right: $gutter/2;
           }
           @include media('<=800px') {
@@ -147,22 +128,14 @@
         }
       }
     }
-
-    /*
-     * row-graphic-left
-     * If the row contains '-left' let's style it
-     * this only makes sure the padding is correct,
-     * there is no need to change the order as this
-     * is the default
-     */
-    &[class*="-left"] {
+    &[class*='-left'] {
       #{$c}-graphic {
-        @include media('>800px') {
+        @include tablet {
           padding-left: $gutter/2;
         }
       }
       #{$c}-details {
-        @include media('>800px') {
+        @include tablet {
           padding-right: $gutter/2;
         }
         @include media('<=800px') {
@@ -170,21 +143,15 @@
         }
       }
     }
-
-    /*
-    * row-graphic-right
-    * If the row contains '-right' let's style it
-    * this will place the graphic on the left
-    */
-    &[class*="-right"] {
+    &[class*='-right'] {
       #{$c}-graphic {
-        @include media('>800px') {
+        @include tablet {
           order: 1;
           padding-right: $gutter/2;
         }
       }
       #{$c}-details {
-        @include media('>800px') {
+        @include tablet {
           order: 2;
           padding-left: $gutter/2;
         }
@@ -193,7 +160,6 @@
         }
       }
     }
-
     .content-section-p-graphic--style-bleed-parent {
       padding-top: 0 !important;
       padding-bottom: 0 !important;
@@ -210,7 +176,5 @@
         }
       }
     }
-
   }
-
 }

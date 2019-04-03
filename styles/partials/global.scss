@@ -116,7 +116,6 @@ $animation-page-item-timing: 0.5s;
     opacity: 1;
     animation: fade-out $animate--time-base forwards cubic-bezier(0.19, 1, 0.22, 1);
   }
-
   &--bar {
     transform: translateX(100%);
     @include media('<=800px') {
@@ -130,17 +129,14 @@ $animation-page-item-timing: 0.5s;
     }
   }
 }
-
 a {
   color: currentColor;
   transition: $transition;
 }
-
 .slices {
   width: 100%;
   flex-grow: 1;
 }
-
 .phone {
   $br: 40px;
   margin: $unit * 2 $unit * 12;
@@ -156,10 +152,7 @@ a {
     margin-left: 0;
     margin-right: 0;
   }
-  &-wrapper {
-  }
   &-header {
-    //position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -175,8 +168,6 @@ a {
       padding-bottom: $unit;
     }
     &-notch {
-      //position: absolute;
-      //top:0;
       width: 30%;
       height: 8px;
       opacity: 0.5;
@@ -184,21 +175,17 @@ a {
       border-radius: 8px;
     }
   }
-
   &-viewport {
     border-radius: $br/1.2;
     overflow: hidden;
     background: white;
     border: 1px solid darken($color-rhino-light-4, 5%);
-    //padding-top:$unit*4;
   }
 }
-
 .page--404 {
   display: flex;
   min-height: calc(100vh - 463px) !important;
 }
-
 .not-found {
   $c: &;
   display: flex;
@@ -214,16 +201,13 @@ a {
     position: absolute;
     background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
   }
-
   #{$c}__wrapper {
     display: flex;
-    //flex-direction: column;
     @include global-wrapper;
     position: relative;
     z-index: 2;
     justify-content: center;
     align-items: center;
-    //color: white;
     padding-top: $unit * 16;
   }
   #{$c}__messaging {
@@ -232,21 +216,16 @@ a {
     box-shadow: $drop-shadow-l-light;
     background: white;
     padding: $unit * 2;
-    //transform: translateY(-30%);
     margin-bottom: $unit * 8;
-
     h1 {
-      //color: white;
       color: $color-rhino-core;
       padding-bottom: $unit * 3;
-      //text-align: center;
     }
     p {
       font-weight: 300;
     }
   }
 }
-
 .in-percy {
   border: 5px solid green;
 }

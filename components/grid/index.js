@@ -14,15 +14,11 @@ export class GridItem extends React.Component {
     }
 
     let columnWidth = '33%';
-
     let gridItemStyles = {};
 
     if ('columns' in this.props) {
       columnWidth = 100 / parseInt(this.props.columns);
       columnWidth = columnWidth + '%';
-
-      // console.log(columnWidth);
-
       if (this.props.style) {
         gridItemStyles = this.props.style;
         gridItemStyles.maxWidth = columnWidth;
@@ -48,7 +44,6 @@ export class Grid extends React.Component {
 
   render() {
     let classes = 'grid';
-
     if ('align-end' in this.props) {
       classes += ' layout-align-end';
     }
@@ -58,15 +53,12 @@ export class Grid extends React.Component {
     if ('align-center' in this.props) {
       classes += ' layout-align-center';
     }
-
     if (this.props.className) {
       classes += ' ' + this.props.className;
     }
-
     if (this.props.className) {
       classes += ' ' + this.props.className;
     }
-
     return (
       <div className={classes}>
         <style dangerouslySetInnerHTML={{__html: styles}} />

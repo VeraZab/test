@@ -3,7 +3,6 @@
 //----------------------------------------------------------------------------------------------------------------------
 .panes {
   display: flex;
-  //flex-grow: 1;
   max-width: 100%;
   @include tablet {
     display: block;
@@ -17,7 +16,6 @@
     }
   }
   .pane {
-    //display: flex;
     align-items: center;
     color: $color-rhino-dark;
 
@@ -25,10 +23,10 @@
       margin-bottom: $gutter;
     }
     p ~ .buttons {
-      margin-top: $gutter*1.5;
+      margin-top: $gutter * 1.5;
     }
 
-    @include handheld {
+    @include phone {
       padding-right: 0;
       padding-left: 0;
     }
@@ -51,7 +49,6 @@
       .content-section-header {
         max-width: 460px;
       }
-
     }
     &.column {
       flex-direction: column;
@@ -64,18 +61,6 @@
       flex: 1 1 75%;
     }
 
-    &-5 {
-
-    }
-    &-10 {
-
-    }
-    &-15 {
-
-    }
-    &-20 {
-
-    }
     &-25 {
       flex: 1 1 25%;
     }
@@ -86,21 +71,9 @@
     &-40 {
       flex: 1 1 40%;
     }
-    &-45 {
-
-    }
-    &-50 {
-
-    }
-    &-55 {
-
-    }
 
     &-60 {
       flex: 1 1 60%;
-    }
-    &-65 {
-
     }
     &-70 {
       flex: 1 1 60%;
@@ -117,7 +90,6 @@
       }
     }
   }
-
 }
 
 .grids {
@@ -135,24 +107,20 @@
   }
 
   &-3x3 {
-
     .grid-item {
       flex-shrink: 1;
       flex-grow: 1;
       @include tablet {
         $size: calc(320px);
-        //flex: 1 1 $size;
         min-width: $size;
         width: $size;
         max-width: $size;
       }
       @include desktop {
         $size: calc(33.333%);
-        //flex: 1 1 $size;
         min-width: $size;
         width: $size;
         max-width: $size;
-        //margin-left:$unit/2;
         .card {
           max-width: 100%;
           min-width: 100%;
@@ -162,13 +130,10 @@
         }
         &:nth-of-type(4) {
           margin-left: 0;
-
         }
         &:nth-of-type(7) {
           margin-left: 0;
-
         }
-
       }
       @include tablet {
         width: 80vw;
@@ -211,7 +176,6 @@
       &:active {
         transform: none;
         box-shadow: $drop-shadow-pressed;
-        //background: lighten(whitesmoke, 2%);
       }
       .card-label {
         color: $color-rhino-dark;
@@ -223,4 +187,3 @@
     }
   }
 }
-

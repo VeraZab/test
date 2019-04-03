@@ -3,6 +3,7 @@ import Hero from './hero';
 import {ContentSection, ContentPane, Title, Body} from 'components/content-section';
 import Buttons from 'components/buttons';
 import {Grid, GridItem} from 'components/grid';
+import React from 'react';
 
 const meta = {
   title: 'Advanced Development',
@@ -15,7 +16,7 @@ const meta = {
       'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.',
   },
   image:
-    'https://plotly.cdn.prismic.io/plotly/9963abe714d6794fa6189806ff82cbe442378600_plotly-logo-white.png',
+    'https://plotly.cdn.prismic.io/plotly/d2d3df15f876ab585878dfb64733e55feab9ddb7_plotly-logo.png',
 };
 
 const contentSectionStyles = {

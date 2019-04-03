@@ -1,5 +1,3 @@
-import React from 'react';
-
 function PricingCardAddons(props) {
   function renderAddons(feature, index) {
     return (

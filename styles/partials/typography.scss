@@ -1,41 +1,21 @@
-///////////-------------------------------------------------------------------------------------------------------------
-///---
-/// Plotly Typography
-/// typography.scss
-///---
-///////////-------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------
-// Imports
-//----------------------------------------------------------------------------------------------------------------------
-
-//----------------------------------------------------------------------------------------------------------------------
-// Overall Styles
-//----------------------------------------------------------------------------------------------------------------------
-
 body {
-  @include ff-ubuntu;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 300;
   color: $color-rhino-dark;
   @extend %font-smoothing;
 }
-
 strong {
   font-weight: 500;
 }
-
-//----------------------------------------------------------------------------------------------------------------------
-// Headings
-//----------------------------------------------------------------------------------------------------------------------
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Asap', sans-serif;
   font-weight: 500;
   margin: 0;
   color: $color-rhino-core;
@@ -45,111 +25,144 @@ h6 {
     margin-top: 0;
   }
 }
-
-.title-xl {
+.hero-title {
   @extend %font-smoothing;
-}
-
-.title-xl {
-  font-size: 50px;
-  line-height: 50px;
-  @include handheld {
-    font-size: 35px;
-    line-height: 58px;
+  font-family: 'Asap', sans-serif;
+  color: $color-dodger;
+  text-align: center;
+  padding-bottom: $gutter;
+  @include phone {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  @include tablet {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: $gutter/2;
+  }
+  @include desktop {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+  @include mid-sized {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+  @include large-display {
+    font-size: 2.5rem;
+    text-align: left;
   }
 }
+.hero-subtitle {
+  @extend %font-smoothing;
+  font-family: 'Asap', sans-serif;
+  color: white;
+  text-align: center;
+  padding-bottom: $gutter;
 
+  @include phone {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  @include tablet {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: $gutter/2;
+  }
+  @include desktop {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+  @include mid-sized {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  @include large-display {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+}
+.pale-blue {
+  color: #506784;
+}
+.dark {
+  color: $color-rhino-core;
+}
 .title-l {
   font-size: 38px;
   line-height: 46px;
 }
-
 .title-med {
   font-size: 34px;
   line-height: 44px;
 }
-
 .title-sm {
   font-size: 28px;
   line-height: 34px;
 }
 .pre-title {
-  font-family: 'Dosis', sans-serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 26px;
   letter-spacing: 2px;
   color: #a2b1c6;
   text-transform: uppercase;
-  @include handheld {
+  @include phone {
     text-align: left !important;
     width: 100%;
   }
 }
-//----------------------------------------------------------------------------------------------------------------------
-// Body Styles
-//----------------------------------------------------------------------------------------------------------------------
-
 .body-l {
   font-size: 22px;
   line-height: 36px;
 }
-
 .body-sm {
   font-size: 14px;
   line-height: 24px;
 }
-
 .white {
   color: white;
 }
-
 p + p {
   padding-top: $unit;
 }
-
-//----------------------------------------------------------------------------------------------------------------------
-// Modifiers
-//----------------------------------------------------------------------------------------------------------------------
-
 .center {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-
 .width-med {
   max-width: 780px;
 }
-
 article.body {
   padding: $gutter;
 }
-
 @mixin title-xl {
   font-size: 58px;
   line-height: 60px;
-  @include handheld {
+  @include phone {
     font-size: 50px;
     line-height: 58px;
   }
 }
-
 @mixin title-l {
   font-size: 38px;
   line-height: 46px;
 }
-
 @mixin title-med {
   font-size: 34px;
   line-height: 44px;
 }
-
 @mixin title-sm {
   font-size: 28px;
   line-height: 34px;
 }
-
 %font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

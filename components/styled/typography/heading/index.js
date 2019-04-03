@@ -1,4 +1,4 @@
-import styled, {injectGlobal, css} from 'styled-components';
+import styled from 'styled-components';
 import H1 from './h1';
 import H2 from './h2';
 import H3 from './h3';

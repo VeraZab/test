@@ -1,13 +1,16 @@
-@import './layout/slices/slices.cs-tabs';
-@import './layout/slices/slices.cs-code-explorer';
 @import './layout/slices/slices.cs-advanced-cards';
 @import './layout/slices/slice.cs-github-stars';
-@import './layout/slices/slices.logos';
 @import './layout/slices/slice.pricing-cards';
 @import './layout/slices/slice.cs-iframe';
 @import './layout/slices/pricing.styles';
 @import './layout/slices/newsroom.styles';
 @import './layout/slices/quotes';
+@import './layout/slices/footer';
+@import './layout/slices/comboCTA';
+@import './layout/slices/globalCTA';
+@import './layout/slices/dashCTA';
+@import './layout/slices/opensource';
+@import './layout/slices/cs-code-explorer/index';
 
 .slices {
   &-wrapper {

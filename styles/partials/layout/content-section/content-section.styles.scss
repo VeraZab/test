@@ -64,15 +64,16 @@
           center top no-repeat !important;
         background-size: 1290px !important;
         @include media('<=800px') {
-          padding-top: $unit*6;
+          padding-top: $unit * 6;
         }
       }
       &_react {
-        background: #ffffff url(https://tamarack-prismic.imgix.net/plotly%2Fd16f43ac-de73-4e78-aad4-2146dbe0da4b_plotly-react-banner-visual%402x.png?auto=format)
+        background: #ffffff
+          url(https://tamarack-prismic.imgix.net/plotly%2Fd16f43ac-de73-4e78-aad4-2146dbe0da4b_plotly-react-banner-visual%402x.png?auto=format)
           center top no-repeat !important;
         background-size: 1290px !important;
         @include media('<=800px') {
-          padding-top: $unit*6;
+          padding-top: $unit * 6;
         }
       }
 
@@ -136,18 +137,7 @@
     }
 
     &--black {
-      & + #{$c} {
-        //background: $color-rhino-light-4;
-      }
-      & ~ #{$c}:nth-of-type(even) {
-        //background-color: $color-rhino-light-4;
-      }
-      & ~ #{$c}:nth-of-type(odd) {
-        //background-color: white;
-      }
-
       background: #000000 !important;
-
       a {
         &:link,
         &:visited {
@@ -157,7 +147,6 @@
           color: $color-aqua-shade !important;
         }
       }
-
       #{$c}-actions {
         .button {
           &-primary {
@@ -178,16 +167,8 @@
       }
     }
     &--gradient {
-      /*
-       * Purple Gradient
-       */
       &_purple {
-        background: linear-gradient(
-          135deg,
-          #7e6fdc 15%,
-          #6b5dca 100%
-        ) !important;
-
+        background: linear-gradient(135deg, #7e6fdc 15%, #6b5dca 100%) !important;
         p {
           a {
             &:link,
@@ -201,15 +182,12 @@
             }
           }
         }
-
         h1,
         h2,
         h3,
         p {
           color: white !important;
         }
-
-        // Style the buttons a different way for this one
         #{$c}-actions {
           .button {
             &-primary {
@@ -229,18 +207,8 @@
           }
         }
       }
-
-      /*
-       * Dark blue gradient
-       */
       &_dark-blue {
-        background-image: linear-gradient(
-          0deg,
-          #3b9aca 0%,
-          #2d6ca5 39%,
-          #222654 100%
-        ) !important;
-
+        background-image: linear-gradient(0deg, #3b9aca 0%, #2d6ca5 39%, #222654 100%) !important;
         a {
           &:link,
           &:visited {
@@ -252,8 +220,6 @@
             }
           }
         }
-
-        // Style the buttons a different way for this one
         #{$c}-actions {
           .button {
             &-primary {
@@ -273,16 +239,8 @@
           }
         }
       }
-
-      /*
-       * Blue gradient
-       */
       &_blue {
-        background-image: linear-gradient(
-          135deg,
-          #1d8ee8 40%,
-          #1e427d 150%
-        ) !important;
+        background-image: linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
 
         a {
           &:link,
@@ -294,8 +252,6 @@
             color: $color-aqua-shade !important;
           }
         }
-
-        // Style the buttons a different way for this one
         #{$c}-actions {
           .button {
             &-primary {
