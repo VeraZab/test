@@ -27,7 +27,6 @@ const cardBoxStyles = {
   marginTop: '40px',
   minWidth: '280px',
   maxWidth: '480px',
-
   marginRight: 'auto',
   marginLeft: 'auto',
 };
@@ -129,7 +128,6 @@ export default class Consulting extends React.Component {
     return (
       <Layout meta={meta} pathname={this.props.pathname} className="consulting--layout">
         <Hero />
-
         <ContentSection style={contentSectionStyles} className="bottom-light-bg">
           <ContentPane full center>
             <Title>
