@@ -84,22 +84,22 @@ const gridItemsData = [
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_consulting.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Ff98f0765-741b-4646-ad60-f9aec49bbfca_ic_expertise_consulting.svg',
     label: 'Open Source Consulting',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dash_dev.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Fa71a4d89-98ac-4e18-a324-7df0d1c87a71_ic_expertise_dash_dev.svg',
     label: 'Shiny (R) and Dash (Python) App Development',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_whitelabel.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Ffd53528a-a735-4906-8db4-088d72bdf76f_ic_expertise_whitelabel.svg',
     label: 'White Labeling Plotly Products',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_integrated.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F37f3a75d-02f5-4966-b1e6-8d071c180ad6_ic_expertise_integrated.svg',
     label: 'Advanced Integrations',
   },
 ];

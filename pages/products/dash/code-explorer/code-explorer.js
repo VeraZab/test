@@ -70,8 +70,10 @@ const languages = [
     slug: 'javascript',
     language: 'javascript',
     code: jsCode,
-    graphic_src: 'https://images-plotly.imgix.net/static/marketing/dash/hello-world.gif',
-    example_url: 'https://images-plotly.imgix.net/static/marketing/javascript_graphic.gif',
+    graphic_src:
+      'https://prismic-io.s3.amazonaws.com/plotly%2F2d088b7c-e8d0-466b-94c9-cb4a3baad3e1_hello-world.gif',
+    example_url:
+      'https://prismic-io.s3.amazonaws.com/plotly%2Fa52394ef-22b5-4053-a7a9-2eea1f15afb9_javascript_graphic.gif',
     button_text: 'Plotly Javascript API',
     button_link: 'https://plot.ly/javascript',
   },
