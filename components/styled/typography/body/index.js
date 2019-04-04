@@ -1,6 +1,7 @@
-import styled, {injectGlobal, css} from 'styled-components';
+import styled from 'styled-components';
 
 const Body = styled.div``;
+
 const P = styled.p`
   max-width: 100%;
   width: 100%;
@@ -13,9 +14,11 @@ const Strong = styled.strong`
 const Em = styled.em`
   font-style: italic;
 `;
+
 const Ul = styled.ul`
   margin-top: 20px;
 `;
+
 const Ol = styled.ol`
   margin-top: 20px;
 `;

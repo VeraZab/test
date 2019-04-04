@@ -1,0 +1,55 @@
+.dash-content-section-container {
+  display: flex;
+  flex-direction: row;
+  @include tablet {
+    flex-direction: column;
+  }
+  .dash-content-section-graphic {
+    img {
+      width: 100vw;
+    }
+  }
+  .dash-messaging-rectangle {
+    transform: translateX(-30%) translateY(15%);
+    margin-bottom: 65px;
+    @include tablet {
+      transform: none;
+    }
+    .box-shadows {
+      box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
+      opacity: 0.95;
+      background: white;
+      padding: $gutter * 2;
+      .dash-pretitle {
+        text-transform: uppercase;
+        color: #96a6b5;
+        letter-spacing: 2px;
+        padding-bottom: $gutter/2;
+        @include tablet {
+          text-align: center;
+        }
+      }
+      .subtitle {
+        color: #506784;
+        @include tablet {
+          text-align: center;
+        }
+      }
+      .cta-buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: $gutter;
+        @include tablet {
+          flex-direction: column;
+        }
+        a {
+          margin-right: $gutter;
+          @include tablet {
+            margin: auto;
+            margin-bottom: $gutter;
+          }
+        }
+      }
+    }
+  }
+}

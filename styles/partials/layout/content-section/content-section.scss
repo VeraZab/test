@@ -3,7 +3,6 @@
   overflow: hidden;
   &.no-graphic {
     #{$c}-area {
-      //padding-top: 0;
       padding-bottom: 0;
     }
   }
@@ -13,14 +12,12 @@
     position: relative;
     flex-wrap: wrap;
     $tb-spacing: $unit * 4;
-
     #{$c}-area {
       padding-top: 0.5 * $tb-spacing;
       padding-bottom: $tb-spacing;
     }
     min-height: 60vh;
-
-    @include media('>800px') {
+    @include tablet {
       padding-left: $unit * 4;
       padding-right: $unit * 4;
       min-height: 740px;
@@ -31,27 +28,20 @@
       }
     }
   }
-
   #{$c}-details {
     position: relative;
     z-index: 99;
   }
-
   &:nth-of-type(odd) {
     background-color: $color-rhino-light-4;
   }
-
   &-area {
     flex-grow: 1;
   }
-
   #{$c}-actions {
     padding-top: $unit * 2;
   }
 }
-
-
-
 @import 'content-section.column';
 @import 'content-section.row';
 @import 'content-section.graphic';

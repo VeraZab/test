@@ -9,56 +9,53 @@ const propsWithUniqueKey = props => {
   return Object.assign(props || {}, {key: shortid.generate()});
 };
 
-// -- HTML Serializer
 export default (element, content, children) => {
   let props = {};
 
   switch (element.type) {
-    // Heading 1
     case Elements.heading1:
       return <Typography.h1 {...propsWithUniqueKey(props)}>{children}</Typography.h1>;
 
-    case Elements.heading2: // Heading 2
+    case Elements.heading2:
       return <Typography.h2 {...propsWithUniqueKey(props)}>{children}</Typography.h2>;
 
-    case Elements.heading3: // Heading 3
+    case Elements.heading3:
       return <Typography.h3 {...propsWithUniqueKey(props)}>{children}</Typography.h3>;
 
-    case Elements.heading4: // Heading 4
+    case Elements.heading4:
       return <Typography.h4 {...propsWithUniqueKey(props)}>{children}</Typography.h4>;
 
-    case Elements.heading5: // Heading 5
+    case Elements.heading5:
       return <Typography.h5 {...propsWithUniqueKey(props)}>{children}</Typography.h5>;
 
-    case Elements.heading6: // Heading 6
+    case Elements.heading6:
       return <Typography.h6 {...propsWithUniqueKey(props)}>{children}</Typography.h6>;
 
-    case Elements.paragraph: // Paragraph
+    case Elements.paragraph:
       return <Typography.p {...propsWithUniqueKey(props)}>{children}</Typography.p>;
 
-    case Elements.preformatted: // Preformatted
+    case Elements.preformatted:
       return <Typography.pre {...propsWithUniqueKey(props)}>{children}</Typography.pre>;
 
-    case Elements.strong: // Strong
+    case Elements.strong:
       return <Typography.strong {...propsWithUniqueKey(props)}>{children}</Typography.strong>;
 
-    case Elements.em: // Emphasis
+    case Elements.em:
       return <Typography.em {...propsWithUniqueKey(props)}>{children}</Typography.em>;
 
-    case Elements.listItem: // Unordered List Item
+    case Elements.listItem:
       return <Typography.li {...propsWithUniqueKey(props)}>{children}</Typography.li>;
 
-    case Elements.oListItem: // Ordered List Item
+    case Elements.oListItem:
       return <Typography.oli {...propsWithUniqueKey(props)}>{children}</Typography.oli>;
 
-    case Elements.list: // Unordered List
+    case Elements.list:
       return <Typography.ul {...propsWithUniqueKey(props)}>{children}</Typography.ul>;
 
-    case Elements.oList: // Ordered List
+    case Elements.oList:
       return <Typography.ol {...propsWithUniqueKey(props)}>{children}</Typography.ol>;
 
-    case Elements.image: // Image
-      console.log('image', element);
+    case Elements.image:
       const linkUrl = element.linkTo ? element.linkTo.url || linkResolver(element.linkTo) : null;
       const linkTarget =
         element.linkTo && element.linkTo.target ? {target: element.linkTo.target} : {};
@@ -72,7 +69,7 @@ export default (element, content, children) => {
           : img
       );
 
-    case Elements.embed: // Embed
+    case Elements.embed:
       props = Object.assign(
         {
           'data-oembed': element.oembed.embed_url,
@@ -86,7 +83,7 @@ export default (element, content, children) => {
       });
       return React.createElement('div', propsWithUniqueKey(props), embedHtml);
 
-    case Elements.hyperlink: // Image
+    case Elements.hyperlink:
       const targetAttr = element.data.target ? {target: element.data.target} : {};
       const relAttr = element.data.target ? {rel: 'noopener'} : {};
       props = Object.assign(
@@ -98,11 +95,11 @@ export default (element, content, children) => {
       );
       return React.createElement('a', propsWithUniqueKey(props), children);
 
-    case Elements.label: // Label
+    case Elements.label:
       props = element.data ? Object.assign({}, {className: element.data.label}) : {};
       return React.createElement('span', propsWithUniqueKey(props), children);
 
-    case Elements.span: // Span
+    case Elements.span:
       if (content) {
         return content.split('\n').reduce((acc, p) => {
           if (acc.length === 0) {
@@ -117,7 +114,6 @@ export default (element, content, children) => {
       }
 
     default:
-      // Always include a default that returns null
       return null;
   }
 };

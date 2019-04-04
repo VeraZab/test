@@ -21,9 +21,7 @@ const defaultMeta = {
 export default ({meta = defaultMeta}) => {
   const title = meta.title ? meta.title : defaultMeta.title;
   const OgTitle = title;
-
   const siteTitle = `${title} - Plotly`;
-
   const Description = meta.description ? meta.description : defaultMeta.description;
 
   return (
@@ -44,7 +42,6 @@ export default ({meta = defaultMeta}) => {
       <meta name="twitter:description" content={Description} />
       <meta name="twitter:url" content={meta.url ? meta.url : defaultMeta.url} />
       <meta name="twitter:image" content={meta.image ? meta.image : defaultMeta.image} />
-
       {meta.twitter && meta.twitter.label1 ? (
         <meta name="twitter:label1" content={meta.twitter.label1} />
       ) : null}
@@ -57,10 +54,10 @@ export default ({meta = defaultMeta}) => {
       {meta.twitter && meta.twitter.data2 ? (
         <meta name="twitter:data2" content={meta.twitter.data2} />
       ) : null}
-
       <meta name="twitter:site" content={defaultMeta.twitter.site} />
       <link href="https://plot.ly/favicon.ico?v=2" rel="shortcut icon" />
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet" />
     </Head>
   );
 };

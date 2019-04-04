@@ -1,0 +1,98 @@
+.os {
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
+  .os-left-container {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    .os-left {
+      display: flex;
+      flex-direction: column;
+      margin: $gutter * 5;
+      @include tablet {
+        margin: $gutter;
+      }
+      .os-gh-stars {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include tablet {
+          flex-direction: column;
+        }
+      }
+      .os-title {
+        @include tablet {
+          text-align: center;
+          line-height: 1;
+        }
+      }
+      .os-messaging {
+        @include tablet {
+          text-align: center;
+        }
+      }
+      a {
+        margin-bottom: $gutter * 2;
+        margin-top: $gutter;
+        width: 300px;
+        @include tablet {
+          margin: auto;
+          margin-bottom: $gutter;
+          width: 250px;
+        }
+      }
+    }
+  }
+  .os-right-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    background: #f2f5fa;
+    .os-right {
+      margin: $gutter * 2;
+      .os-logo-title {
+        text-align: center;
+        line-height: 1;
+      }
+      .os-messaging,
+      .os-subtitle {
+        padding-bottom: $gutter/2;
+        text-align: center;
+      }
+      .logo-container {
+        .container-left {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: auto;
+          @include tablet {
+            flex-direction: column;
+            justify-content: center;
+          }
+          .left-logo {
+            max-width: 100px;
+            justify-content: center;
+            margin: auto;
+            margin-right: $gutter * 4;
+            padding-top: 100px;
+            @include tablet {
+              margin: auto;
+              padding-top: 50px;
+            }
+          }
+        }
+        .container-right {
+          display: none;
+          margin: $gutter;
+          padding-bottom: $gutter * 8;
+        }
+      }
+    }
+  }
+}

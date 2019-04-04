@@ -1,8 +1,5 @@
 .content-section-p {
-  $c: &; // sets this classname to a variable omg
-  /*
-    * Typographic styles
-    */
+  $c: &;
   #{$c}-title {
     h1,
     h2,
@@ -12,7 +9,6 @@
       max-width: 510px;
     }
   }
-
   #{$c}-pretitle {
     h3 {
       color: $color-rhino-medium-1;
@@ -35,7 +31,6 @@
   }
   #{$c}-body {
     padding-top: $unit * 2;
-
     &-columns {
       #{$c}-body-wrapper {
         display: flex;
@@ -60,7 +55,6 @@
         }
       }
     }
-
     h1,
     h2,
     h3,
@@ -69,7 +63,6 @@
     h6 {
       color: #6e7d92;
     }
-
     h3 {
       font-size: 24px;
       line-height: 36px;
@@ -135,7 +128,6 @@
         background: url('https://now.plot.ly/static/images/patterns/plot-pattern-grey@2x.png')
           center center repeat;
       }
-
       li {
         position: relative;
         z-index: 2;
@@ -178,7 +170,6 @@
         margin-top: $unit * 1.5;
       }
     }
-
     h5 {
       font-size: 18px;
       @include ff-ubuntu;
@@ -196,7 +187,6 @@
         opacity: 0.25;
         z-index: -1;
       }
-
       & + h6 {
         font-size: 18px;
         @include ff-ubuntu;
@@ -216,7 +206,6 @@
         }
       }
     }
-
     a {
       color: $color-rhino-dark;
     }

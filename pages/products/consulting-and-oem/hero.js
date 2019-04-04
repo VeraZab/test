@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hero, HeroTop, HeroMessaging, HeroTitle, HeroActions, HeroBottom} from 'components/hero';
+import {Hero, HeroTop, HeroMessaging, HeroActions, HeroBottom} from 'components/hero';
 
 const HeroStyles = {
   minHeight: '600px',
@@ -26,7 +26,7 @@ export default () => (
   <Hero heroWrapperStyle={HeroWrapperStyle} style={HeroStyles} className="no-fade">
     <HeroTop style={HeroTopStyles}>
       <HeroMessaging>
-        <HeroTitle>Advanced Development</HeroTitle>
+        <h1 className="hero-title">Advanced Development</h1>
       </HeroMessaging>
       <HeroActions />
     </HeroTop>

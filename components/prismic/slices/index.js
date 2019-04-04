@@ -1,10 +1,3 @@
-/**
- * Slices component
- *
- * This is our component that will parse through an array of
- * slices and render the corresponding slice if it is accounted for.
- */
-
 import React from 'react';
 
 import PricingCardContainer from 'components/prismic/slices/pricing-cards';
@@ -22,10 +15,10 @@ import CodeExplorer from './code-explorer';
 import IFrame from './iframe';
 import GraphicText from './graphic-text';
 import Newsroom from './newsroom';
-
-const BlankSlice = props => {
-  return null;
-};
+import ComboCTA from './ComboCTA';
+import GlobalCTA from './GlobalCTA';
+import DashCTA from './DashCTA';
+import OpenSourceCTA from './OpenSourceCTA';
 
 export default class Slices extends React.Component {
   constructor(props) {
@@ -49,10 +42,10 @@ export default class Slices extends React.Component {
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
       newsroom: Newsroom,
-      an_open_source_company: BlankSlice,
-      globalcta: BlankSlice,
-      combocta: BlankSlice,
-      dash_cta: BlankSlice,
+      an_open_source_company: OpenSourceCTA,
+      globalcta: GlobalCTA,
+      dash_cta: DashCTA,
+      combocta: ComboCTA,
     };
 
     return (

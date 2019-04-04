@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import {renderPrismic} from 'lib/renderPrismicRichText';
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -107,17 +107,207 @@ export default class Navigation extends React.Component {
   }
 
   render() {
+    if (this.props.nav.items) {
+      const products = this.props.nav.items[0];
+      const pricing = this.props.nav.items[1];
+      const signUp = this.props.nav.items[2];
+      return (
+        <>
+          <div onClick={this.toggleMobileMenu.bind(this)}>
+            <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
+          </div>
+          <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.toggleProductSubmenu.bind(this)}
+              >
+                {products.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
+              </div>
+              <div
+                id="productsDropdown"
+                className={
+                  this.state.productSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                <div className="navigation-product-submenu-left">
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">
+                      <span className="hide-on-mobile">{products.submenu_label}</span>
+                      <a href="/products/dash/" className="hide-on-desktop">
+                        {products.submenu_label}
+                      </a>
+                    </div>
+                    <span className="navigation-product-submenu-item hide-on-mobile">
+                      Build beautiful, analytical web applications. <br />
+                      No JavaScript required.
+                    </span>
+                    <a
+                      href={products.submenu_url_link}
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button"> {products.submenu_url_label}</button>
+                    </a>
+                  </div>
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">
+                      <span className="hide-on-mobile">{products.submenu_label2}</span>
+                      <a href="/online-chart-maker/" className="hide-on-desktop">
+                        {pricing.submenu_label2}
+                      </a>
+                    </div>
+                    <span className="navigation-product-submenu-item hide-on-mobile">
+                      {renderPrismic(products.submenu_messaging2)}
+                    </span>
+                    <a
+                      href={products.submenu_url_link2}
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button">{products.submenu_url_label2}</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="navigation-product-submenu-right">
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-item hide-on-mobile">
+                      {renderPrismic(products.submenu_messaging31)}
+                    </div>
+                    <div className="navigation-product-submenu-item-header_image hide-on-mobile">
+                      <img src={products.dropdown_graphic.url} />
+                    </div>
+                    <a
+                      href={products.submenu_url_link3}
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button hide-on-mobile">{products.submenu_url_label3}</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.togglePricingSubmenu.bind(this)}
+              >
+                {pricing.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
+              </div>
+              <div
+                id="pricingDropdown"
+                className={
+                  this.state.pricingSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                <div className="navigation-product-submenu-left">
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">
+                      <span className="hide-on-mobile">{pricing.submenu_label2}</span>
+                      <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                        {pricing.submenu_url_label2}
+                      </a>
+                    </div>
+                    <div className="navigation-product-submenu-section-title">
+                      <a href={pricing.submenu_url_link3} className="hide-on-desktop">
+                        {pricing.submenu_label3}
+                      </a>
+                    </div>
+                    <div className="navigation-product-submenu-section-title">
+                      <a href={pricing.submenu_url_link} className="hide-on-desktop">
+                        {pricing.submenu_label}
+                      </a>
+                    </div>
+                    <span className="navigation-product-submenu-item hide-on-mobile">
+                      Cloud and Enterprise solutions to meet <br /> your needs.
+                    </span>
+                    <a
+                      href={pricing.submenu_url_link2}
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button">{pricing.submenu_url_label2}</button>
+                    </a>
+                    <a
+                      href={pricing.submenu_url_link3}
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button">{pricing.submenu_url_label3}</button>
+                    </a>
+                  </div>
+                </div>
+                <div className="navigation-product-submenu-right">
+                  <div className="navigation-product-submenu-section">
+                    <div className="navigation-product-submenu-section-title">
+                      <span className="hide-on-mobile">Dash</span>
+                    </div>
+                    <span
+                      id="dds-button"
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      License Dash Deployment Server <br />
+                      for easy app deployment in commercial <br />
+                      applications.
+                    </span>
+                    <a
+                      href="/dash/pricing/"
+                      className="navigation-product-submenu-item hide-on-mobile"
+                    >
+                      <button type="button">Dash Deployment Server </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="navigation-product-item-with-submenu">
+              <div
+                className="navigation-product-item"
+                onClick={this.toggleSignUpSubmenu.bind(this)}
+              >
+                {signUp.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
+              </div>
+              <div
+                id="signUpDropdown"
+                className={
+                  this.state.signUpSubmenuActive
+                    ? 'navigation-product-submenu submenu-active'
+                    : 'navigation-product-submenu'
+                }
+              >
+                <div className="navigation-product-submenu-section">
+                  <a
+                    href={signUp.submenu_url_link}
+                    id="community-forum"
+                    className="navigation-product-submenu-section-title"
+                  >
+                    {signUp.submenu_label}
+                  </a>
+                  <br className="hide-on-desktop" />
+                  <br className="hide-on-desktop" />
+                  <a
+                    href={signUp.submenu_url_link2}
+                    id="chart-studio"
+                    className="navigation-product-submenu-section-title"
+                  >
+                    {signUp.submenu_label2}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href={products.submenu_url_link3} className="navigation-product-item">
+              <button type="button">{products.submenu_url_label3}</button>
+            </a>
+          </nav>
+        </>
+      );
+    }
     return (
       <>
-        {/** Begin Mobile Nav Menu */}
         <div onClick={this.toggleMobileMenu.bind(this)}>
           <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
         </div>
-        {/** End Mobile Nav Menu */}
-
-        {/** Begin Desktop Nav Menu */}
         <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-          {/** Begin Products Nav Menu */}
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.toggleProductSubmenu.bind(this)}>
               Products <i className="mdi mdi-chevron-down hide-on-mobile" />
@@ -130,7 +320,6 @@ export default class Navigation extends React.Component {
                   : 'navigation-product-submenu'
               }
             >
-              {/** Begin Dash Products Nav Menu */}
               <div className="navigation-product-submenu-left">
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
@@ -150,9 +339,6 @@ export default class Navigation extends React.Component {
                     <button type="button">Learn More</button>
                   </a>
                 </div>
-                {/** End Dash Products Nav Menu */}
-
-                {/** Begin Chart Studio Products Nav Menu */}
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
                     <span className="hide-on-mobile">Chart Studio</span>
@@ -160,7 +346,6 @@ export default class Navigation extends React.Component {
                       Chart Studio Cloud
                     </a>
                   </div>
-                  {/** Products Submenu Items */}
                   <span className="navigation-product-submenu-item hide-on-mobile">
                     Collaboratively create and publish charts.
                   </span>
@@ -172,9 +357,6 @@ export default class Navigation extends React.Component {
                   </a>
                 </div>
               </div>
-              {/** End Chart Studio Products Nav Menu */}
-
-              {/** Begin Dash Demo Nav Menu */}
               <div className="navigation-product-submenu-right">
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-item hide-on-mobile">
@@ -191,12 +373,8 @@ export default class Navigation extends React.Component {
                   </a>
                 </div>
               </div>
-              {/** End Dash Demo Nav Menu */}
             </div>
           </div>
-          {/** End Products Nav Menu */}
-
-          {/** Begin Pricing Nav Menu */}
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.togglePricingSubmenu.bind(this)}>
               Pricing <i className="mdi mdi-chevron-down hide-on-mobile" />
@@ -209,7 +387,6 @@ export default class Navigation extends React.Component {
                   : 'navigation-product-submenu'
               }
             >
-              {/** Begin Chart Studio Pricing Nav Menu */}
               <div className="navigation-product-submenu-left">
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
@@ -245,9 +422,6 @@ export default class Navigation extends React.Component {
                   </a>
                 </div>
               </div>
-              {/** End Chart Studio Pricing Nav Menu */}
-
-              {/** Begin Dash Pricing Nav Menu */}
               <div className="navigation-product-submenu-right">
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
@@ -266,14 +440,14 @@ export default class Navigation extends React.Component {
                   </a>
                 </div>
               </div>
-              {/** End Dash Pricing Nav Menu */}
             </div>
           </div>
-          {/** End Pricing Nav Menu */}
-
-          {/** Begin SIGN UP Section */}
           <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+            <div
+              id="signUpLabel"
+              className="navigation-product-item"
+              onClick={this.toggleSignUpSubmenu.bind(this)}
+            >
               Sign Up <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
             <div
@@ -304,12 +478,10 @@ export default class Navigation extends React.Component {
               </div>
             </div>
           </div>
-          {/** End SIGN UP Section */}
           <a href="https://plotly.typeform.com/to/ECUfbT" className="navigation-product-item">
             <button type="button">Schedule a Demo</button>
           </a>
         </nav>
-        {/** End Desktop Nav Menu */}
       </>
     );
   }

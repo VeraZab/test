@@ -1,9 +1,5 @@
 .code-explorer-slice {
   $c: &;
-
-  #{$c}__wrapper {
-  }
-
   #{$c}__content {
     &__image {
       display: flex;
@@ -11,12 +7,10 @@
       min-height: var(--code-visual--height);
       max-height: 648px;
       flex-grow: 1;
-
       @include animationFadein-sm;
       @include media('<=900px') {
         max-width: 100%;
       }
-
       .iframe {
         flex-grow: 1;
         width: 100%;
@@ -36,24 +30,18 @@
           }
           border: 0;
           display: block;
-
         }
       }
-
       .js-plotly-plot {
         display: block;
       }
-      //min-width: 40%;
       background: white;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center right;
-
       @include media('<=900px') {
         width: 100%;
-
         background-position: center center;
-
       }
     }
   }

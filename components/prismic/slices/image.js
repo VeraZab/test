@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'components/prismic/Image';
 
 export default function ImageSlice({data}) {

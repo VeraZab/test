@@ -6,7 +6,7 @@
     display: flex;
     border-radius: $unit/2;
     overflow: hidden;
-    @include handheld {
+    @include phone {
       flex-direction: column;
     }
     @include media('<=960px') {
@@ -19,7 +19,6 @@
     @include desktop {
       max-width: 500px;
     }
-
     @include media('<=1100px') {
       max-width: 400px;
     }
@@ -37,13 +36,11 @@
       background-position: center center;
       background-repeat: no-repeat;
       display: flex;
-
       &.desktop-graphic {
         @include media('<=960px') {
           display: none !important;
         }
       }
-
       &.mobile-graphic {
         @include media('>960px') {
           display: none !important;
@@ -60,11 +57,7 @@
         }
       }
     }
-    img {
-      min-width: 100%;
-    }
   }
-
   &-editor {
     pre {
       float: none !important;
@@ -78,20 +71,14 @@
     @include media('<=960px') {
       width: 100%;
     }
-    //display: flex;
-    //flex-direction: column;
     text-align: left;
-    @include handheld {
+    @include phone {
       width: 100%;
     }
     &-wrapper {
-      //display: flex;
       flex-direction: column;
       flex: 1;
     }
-    // --
-    // Header
-    // --
     &-header {
       background-color: #1e304e;
       border: 5px solid #1e304e;
@@ -99,13 +86,10 @@
       display: flex;
       width: 100%;
 
-      @include handheld {
+      @include phone {
         flex-wrap: wrap;
       }
     }
-    // --
-    // Tabs
-    // --
     &-tab {
       border-radius: 3px;
       font-weight: 600;
@@ -119,19 +103,16 @@
       &:not(:last-of-type) {
         margin-right: $unit;
       }
-
-      @include handheld {
+      @include phone {
         &:nth-of-type(1),
         &:nth-of-type(2) {
           margin-bottom: $unit;
         }
-
         &:nth-of-type(2) {
           margin-right: 0;
         }
         min-width: 40%;
       }
-
       &:not(.active) {
         .code-explorer-editor-tab-label {
           &::after {
@@ -148,7 +129,6 @@
           }
         }
       }
-
       &-label {
         transition: $timing transform $easing;
         user-select: none;
@@ -159,7 +139,6 @@
         justify-content: center;
         padding: $unit/2 $unit;
       }
-
       &:hover {
         color: white;
         cursor: pointer;
@@ -187,25 +166,18 @@
         }
       }
     }
-    // --
-    // Content
-    // --
     &-content {
       position: relative;
       max-width: 100%;
-      //min-height: 600px;
       height: 600px;
-      //max-height: 600px;
       overflow: auto;
       flex: 1;
-
       &::-webkit-scrollbar {
         width: 8px;
         height: 8px;
         border: 0;
         background: #1e304e;
       }
-
       &::-webkit-scrollbar-thumb {
         background: rgba($color-dodger, 0.5);
         border-radius: 0;
@@ -215,20 +187,14 @@
           background: $color-dodger;
         }
       }
-
       &::-webkit-scrollbar-corner {
         background: #1e304e !important;
       }
       pre {
-        //max-width: 300px;
         overflow: visible !important;
         background: transparent !important;
-        //overflow-x: auto;
       }
     }
-    // --
-    // Actions
-    // --
     &-actions {
       padding-top: $gutter;
       .buttons {

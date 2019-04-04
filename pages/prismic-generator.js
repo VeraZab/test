@@ -1,10 +1,8 @@
 import React from 'react';
-import shortid from 'shortid';
 import getCookies from 'next-cookies';
 
 import Layout from 'components/global/layout';
 import Hero from 'components/prismic/slices/Hero';
-
 import Slices from 'components/prismic/slices';
 import Head from 'components/global/head';
 import NotFound from 'components/404';
@@ -31,6 +29,7 @@ function inlineLinkedItems(data) {
 
 const PrismicGenerator = props => {
   const {doc} = props;
+  const {nav} = props;
 
   if (!doc) {
     return <NotFound />;
@@ -42,10 +41,10 @@ const PrismicGenerator = props => {
   };
 
   return (
-    <Layout meta={meta} pathname={props.pathname} document={doc}>
+    <Layout meta={meta} nav={nav} logo={doc.data.alt_logo.url}>
       <div className={`page page--${doc.uid}`}>
         <Head meta={meta} />
-        <Hero content={doc} />
+        <Hero content={doc.data} />
         <Slices data={doc.data.slices} />
       </div>
     </Layout>
@@ -56,11 +55,13 @@ PrismicGenerator.getInitialProps = async context => {
   const slug = context && context.query && context.query.slug ? context.query.slug : 'home';
   const response = await fetchData(getCookies(context)['io.prismic.preview']);
   const content = inlineLinkedItems(response);
+  const nav = response.find(doc => doc.type === 'nav');
   const currentDoc = content.pages.find(doc => doc.uid === slug);
 
   return {
     doc: currentDoc,
     content,
+    nav,
   };
 };
 

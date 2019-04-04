@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Pretitle({pretitle}) {
   return (
     <div id="advanced-cards" className="content-section-p-pretitle">

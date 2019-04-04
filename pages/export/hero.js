@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Hero,
-  HeroTop,
-  HeroMessaging,
-  HeroTitle,
-  HeroSubtitle,
-  HeroActions,
-  HeroBottom,
-} from 'components/hero';
+import {Hero, HeroTop, HeroMessaging, HeroSubtitle, HeroActions, HeroBottom} from 'components/hero';
 import Buttons from 'components/buttons';
 
 const HeroButtons = [
@@ -55,7 +47,7 @@ export default class HeroSection extends React.Component {
       <Hero heroWrapperStyle={HeroWrapperStyle} style={HeroStyles}>
         <HeroTop>
           <HeroMessaging>
-            <HeroTitle>Export to Plotly</HeroTitle>
+            <h1 className="hero-title">Export to Plotly</h1>
             <HeroSubtitle>
               Learn how you can build a data exporter for your site, to easily send data from your
               web site to graph in Plotly. Plotly offers a clean, simple, and beautiful

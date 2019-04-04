@@ -4,36 +4,32 @@
   width: 100%;
   position: absolute;
   z-index: 99999999;
-
   .site-header-wrapper {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
     max-width: 95vw;
-    padding: 24px 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     margin: 0 auto;
-
     .site-header--section-left {
       height: 40px;
+      width: 99%;
       #logo {
         height: 40px;
       }
-
       #dash-logo {
         height: 40px;
       }
-
       #chart-studio-logo {
         height: 40px;
       }
-
       @media (max-width: 800px) {
         .site-header-logo {
           max-width: 200px;
         }
       }
     }
-
     .site-header--section-right {
       .site-header-nav {
         flex-grow: 1;
@@ -44,22 +40,20 @@
           letter-spacing: 2px;
           display: flex;
           align-items: center;
-          padding-left: 24px;
           flex-grow: 1;
+          padding-left: 24px;
           display: flex;
           text-align: right;
-          font-weight: 500;
+          font-weight: 1000;
           justify-content: flex-start;
           margin-left: 24px;
           color: white;
         }
-
         .navigation-product-item:hover {
           color: #09ffff;
           opacity: 1;
         }
       }
-
       @media (max-width: 800px) {
         .site-header-nav {
           width: 100%;
@@ -71,15 +65,12 @@
           justify-content: flex-start;
           font-family: 'Open Sans', sans-serif;
           overflow-y: scroll;
-
           .hide-on-mobile {
             display: none;
           }
-
           .navigation-product-item {
             color: white;
             font-size: 12px;
-
             button {
               background-color: #119dff;
               color: white;
@@ -92,35 +83,28 @@
               background-color: #09ffff;
             }
           }
-
           .navigation-product-item:first-child {
             padding-top: 40px;
           }
-
           .navigation-product-item:nth-last-child(1) {
             padding-top: 40px;
           }
-
           .navigation-product-item-with-submenu {
             padding-top: 12px;
           }
-
           .navigation-product-item-with-submenu,
           .navigation-product-submenu-section {
             flex-direction: column;
           }
-
           .navigation-product-submenu {
             padding-bottom: 12px;
             flex-direction: column;
             overflow: hidden;
           }
-
           .navigation-product-submenu:not(.submenu-active) {
             max-height: 0;
             padding: 0;
           }
-
           .navigation-product-submenu-section {
             flex-grow: 1;
             min-width: 50%;
@@ -128,44 +112,35 @@
             text-transform: uppercase;
             color: white;
           }
-
           .navigation-product-submenu-section-title {
             letter-spacing: 2px;
             font-size: 14px;
             padding-bottom: 20px;
           }
-
           .navigation-product-submenu a {
             color: white;
           }
         }
-
         .site-header-nav:not(.mobile-menu-active) {
           display: none;
         }
       }
-
       @media (min-width: 801px) {
         #dds-button {
           padding-bottom: 20px;
         }
-
         #productsDropdown {
           right: -180px;
         }
-
         #pricingDropdown {
           right: -140px;
         }
-
         #signUpDropdown {
           left: -35px;
         }
-
         .hide-on-desktop {
           display: none;
         }
-
         .navigation-product-item-with-submenu {
           display: flex;
           position: relative;
@@ -173,21 +148,20 @@
             transition: 0.28s all cubic-bezier(0.24, 0.8, 0, 0.97);
           }
         }
-
         .navigation-product-item-with-submenu:hover .navigation-product-item {
           opacity: 1;
           transform: translateY(-4px);
           color: #09ffff;
         }
-
         .navigation-product-item-with-submenu:hover .navigation-product-submenu {
           transform: none;
           opacity: 1;
           pointer-events: auto;
         }
-
         .navigation-product-item {
+          min-width: 120px;
           button {
+            width: 140px;
             background-color: #119dff;
             color: white;
             border: 1px solid rgba(17, 157, 255, 0.5);
@@ -199,7 +173,6 @@
             background-color: #09ffff;
           }
         }
-
         .navigation-product-submenu {
           box-shadow: 3px 3px 14px #000;
           border-radius: 0px;
@@ -217,30 +190,24 @@
           font-family: 'Open Sans', sans-serif;
           margin-top: 30px;
         }
-
         .navigation-product-submenu-left {
           border-right: 1px solid #072e68;
           margin-right: 30px;
         }
-
         .navigation-product-submenu-left .navigation-product-submenu-item {
           padding-right: 15px;
         }
-
         .navigation-product-submenu-right img {
           padding-bottom: 20px;
           padding-top: 10px;
         }
-
         .navigation-product-submenu-right .navigation-product-submenu-item {
           padding-bottom: 15px;
         }
-
         .navigation-product-submenu a {
           font-size: 12px;
           max-width: 370px;
         }
-
         .navigation-product-submenu-section {
           display: flex;
           flex-direction: column;
@@ -257,25 +224,20 @@
             text-align: center;
             margin: 0;
           }
-
           #community-forum {
             padding-top: 20px;
             padding-bottom: 32px;
-
             border-bottom: 1px solid #072e68;
           }
-
           #chart-studio {
             padding-top: 32px;
             padding-bottom: 20px;
           }
         }
-
         .navigation-product-submenu-section:not(:last-of-type) {
           padding-right: 25px;
           padding-bottom: 30px;
         }
-
         .navigation-product-submenu-section-title {
           text-transform: uppercase;
           font-family: 'Open Sans', sans-serif;
@@ -286,7 +248,6 @@
           width: 100%;
           color: #119dff;
         }
-
         .navigation-product-submenu-item {
           color: white;
           width: 100%;
@@ -297,13 +258,11 @@
           padding-top: 5px;
           padding-bottom: 5px;
         }
-
         .navigation-product-submenu-item button {
           background-color: #061d44;
           color: #119dff;
           border: 1px solid rgba(17, 157, 255, 0.5);
         }
-
         .navigation-product-submenu-item button:hover {
           color: rgba(9, 255, 255, 0.8);
         }
@@ -311,7 +270,6 @@
     }
   }
 }
-
 @media (max-width: 800px) {
   .site-header.mobile-menu-active {
     background-color: #061d44;
@@ -319,7 +277,6 @@
     align-items: flex-start;
   }
 }
-
 #close-menu {
   font-size: 3rem;
 }

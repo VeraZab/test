@@ -1,6 +1,5 @@
 import React from 'react';
 import {ContentSection, ContentPane, Body} from 'components/content-section';
-import Button from 'components/button';
 
 class Newsroom extends React.Component {
   constructor(props) {

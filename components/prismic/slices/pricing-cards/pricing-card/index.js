@@ -1,4 +1,3 @@
-import React from 'react';
 import PricingCardHeader from 'components/prismic/slices/pricing-cards/pricing-card/header';
 import PricingCardFeatures from 'components/prismic/slices/pricing-cards/pricing-card/features';
 import PricingCardAddons from 'components/prismic/slices/pricing-cards/pricing-card/addons';
