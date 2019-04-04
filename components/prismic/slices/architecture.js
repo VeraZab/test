@@ -37,7 +37,7 @@ class Architecture extends React.Component {
               <div className="image-with-complex-text-overlay-wrapper">
                 <div className="image">
                   <img
-                    src="https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format"
+                    src="https://prismic-io.s3.amazonaws.com/plotly%2F6a08d893-a587-4cdc-b720-c87529274138_architecture.png"
                     alt=""
                   />
                 </div>

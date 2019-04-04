@@ -32,14 +32,14 @@ const codeSections = [
     text:
       'Create a global JavaScript function called getPlotlyGridData(). This function should return the data you want to be available to graph. See the code below for the correct syntax. In this example, "Data", "Amount", and "Source" will be column headers in the Plotly spreadsheet.',
     code: `<script>
-        function getPlotlyGridData(){ 
+        function getPlotlyGridData(){
             return {"cols":{
                 "Date":{"data":[1, 2, 4, 2, 6, 3]},
                 "Amount":{"data":[3, 4, 6, 1, 9, 2]},
                 "Source":["data.gov","2013-11-11"]},
                 "meta":{}
                 }
-            } 
+            }
         }
         </script>`,
     lang: 'javascript',
@@ -56,7 +56,7 @@ const codeSections = [
                 '<input type="text" '+
                 'name="data" /></form></div>')
                 .appendTo('body');
-            hiddenform.find('input').val( 
+            hiddenform.find('input').val(
                 JSON.stringify( getPlotlyGridData() ) );
             hiddenform.find('form').submit();
             hiddenform.remove();
@@ -79,8 +79,8 @@ const lastSection = [
     text:
       'Create a global JavaScript called getPlotlyGraphData(). This function should return the data you want to graph. See the code below for the correct syntax.',
     code: `<script>
-        function getPlotlyGraphData(){ 
-            return [{"x":[1,2,3],"y":[2,4,3]},{"x":[1,2,3],"y":[9,7,8]}]; 
+        function getPlotlyGraphData(){
+            return [{"x":[1,2,3],"y":[2,4,3]},{"x":[1,2,3],"y":[9,7,8]}];
         }
         </script>`,
     lang: 'javascript',
@@ -170,7 +170,7 @@ export default () => (
           <div style={{maxWidth: '680px', margin: '20px auto'}}>
             <Graphic
               shadow="false"
-              image="https://images-plotly.imgix.net/static/marketing/export-graphic.png?auto=compress&auto=format"
+              image="https://prismic-io.s3.amazonaws.com/plotly%2F5ff76829-3236-4f37-9b60-361a456e817e_export-graphic.png"
             />
           </div>
         </Body>

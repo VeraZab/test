@@ -7,7 +7,7 @@ const HeroStyles = {
 
 const HeroWrapperStyle = {
   backgroundImage:
-    'url(https://images-plotly.imgix.net/static/marketing/consulting-header-bg.png?auto=compress&auto=format)',
+    'url(https://prismic-io.s3.amazonaws.com/plotly%2F6e4c70aa-48ca-4785-b59e-816616c2f83e_consulting-header-bg.png)',
   backgroundSize: '1640px',
   backgroundPosition: 'center bottom',
   backgroundRepeat: 'no-repeat',
