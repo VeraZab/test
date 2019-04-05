@@ -20,6 +20,10 @@ import GlobalCTA from './GlobalCTA';
 import DashCTA from './DashCTA';
 import OpenSourceCTA from './OpenSourceCTA';
 
+const BlankSlice = () => {
+  return null;
+};
+
 export default class Slices extends React.Component {
   constructor(props) {
     super(props);
@@ -46,6 +50,7 @@ export default class Slices extends React.Component {
       globalcta: GlobalCTA,
       dash_cta: DashCTA,
       combocta: ComboCTA,
+      dash_solutions: BlankSlice,
     };
 
     return (
@@ -53,6 +58,7 @@ export default class Slices extends React.Component {
         <div className="slices-wrapper">
           {this.props.data.map((slice, i) => {
             const IndividualSlice = allSlices[slice.slice_type];
+            console.log(slice.slice_type);
             return <IndividualSlice key={i} data={slice} />;
           })}
         </div>
