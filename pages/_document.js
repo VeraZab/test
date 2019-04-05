@@ -15,12 +15,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {this.props.styleTags}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `<!-- Alerta Text -->
-`,
-            }}
-          />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `(
@@ -73,6 +68,12 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6T2RXG"
           height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe>`,
+            }}
+          />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<!-- Alertra Text -->
+`,
             }}
           />
           <Main />
