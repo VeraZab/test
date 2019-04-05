@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {renderPrismic} from 'lib/renderPrismicRichText';
-import {Button} from 'components/styled/button';
 
 const StyledJobs = styled.div``;
 const JobListing = styled.div`
@@ -73,11 +72,11 @@ const renderItems = items =>
           <JobsLocation>{location}</JobsLocation>
         </div>
         <div>
-          <Button primary href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}>
+          <a href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}>
             {misc_extra_text[0].text === 'fr'
               ? 'Soumettez votre candidature'
               : 'Apply for this position'}
-          </Button>
+          </a>
         </div>
       </JobsHeader>
       <Wrapper>

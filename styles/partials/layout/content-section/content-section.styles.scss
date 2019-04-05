@@ -60,7 +60,7 @@
     &--graphic {
       &_dash_controls {
         background: #ffffff
-          url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format)
+          url(https://prismic-io.s3.amazonaws.com/plotly%2F28313a8f-0803-4100-8a7d-666c2da9c909_section-bg-demos%402x.jpeg)
           center top no-repeat !important;
         background-size: 1290px !important;
         @include media('<=800px') {
@@ -69,7 +69,7 @@
       }
       &_react {
         background: #ffffff
-          url(https://tamarack-prismic.imgix.net/plotly%2Fd16f43ac-de73-4e78-aad4-2146dbe0da4b_plotly-react-banner-visual%402x.png?auto=format)
+          url(https://prismic-io.s3.amazonaws.com/plotly%2F8963b92f-cd9b-4f34-95d1-92989b2b1797_plotly_d16f43ac-de73-4e78-aad4-2146dbe0da4b_plotly-react-banner-visual%402x.png)
           center top no-repeat !important;
         background-size: 1290px !important;
         @include media('<=800px') {
@@ -79,7 +79,7 @@
 
       &_whitelabel {
         background-color: white !important;
-        background-image: url(https://tamarack-prismic.imgix.net/plotly%2F69dfc2a2-587a-45bf-ba32-d9e077bb0224_embed_on_prem.svg?auto=format) !important;
+        background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2Fedfd4f7d-905a-4ce5-9080-3676ad7c6046_plotly_69dfc2a2-587a-45bf-ba32-d9e077bb0224_embed_on_prem.svg) !important;
         background-position: 60% top;
         background-size: 1330px !important;
         background-repeat: no-repeat;
@@ -96,7 +96,7 @@
         }
       }
       &_white_dotted-lines {
-        background: url(https://tamarack-prismic.imgix.net/plotly/f79d5a70-1490-4c90-9eef-cc44cd8e3bff_bg-graph.svg?auto=format)
+        background: url(https://prismic-io.s3.amazonaws.com/plotly%2Fd5da3072-2eab-4147-8fc5-900945417e07_f79d5a70-1490-4c90-9eef-cc44cd8e3bff_bg-graph.svg)
           center center no-repeat !important;
         background-size: cover !important;
       }
@@ -111,7 +111,7 @@
           }
         }
         background-position: bottom center !important;
-        background-image: url(https://tamarack-prismic.imgix.net/plotly/f37440b0-c340-40a3-835c-dcbd43a5f6dd_pipes.png?auto=format),
+        background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F76ae8df7-d30a-4e9d-8e37-6e8a814b45c9_f37440b0-c340-40a3-835c-dcbd43a5f6dd_pipes.png),
           linear-gradient(135deg, #1d8ee8 40%, #1e427d 150%) !important;
         background-size: cover !important;
         // Style the buttons a different way for this one

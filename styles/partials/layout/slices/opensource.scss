@@ -76,11 +76,12 @@
             justify-content: center;
           }
           .left-logo {
-            max-width: 100px;
+            max-width: 150px;
             justify-content: center;
             margin: auto;
             margin-right: $gutter * 4;
             padding-top: 100px;
+            padding-left: 50px;
             @include tablet {
               margin: auto;
               padding-top: 50px;

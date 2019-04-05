@@ -15,7 +15,7 @@ const iframeStyle = {
   overflow: 'hidden',
   border: 'none',
 };
-let lineNumberStyles = {
+const lineNumberStyles = {
   opacity: '0.25',
 };
 
@@ -32,14 +32,14 @@ const codeSections = [
     text:
       'Create a global JavaScript function called getPlotlyGridData(). This function should return the data you want to be available to graph. See the code below for the correct syntax. In this example, "Data", "Amount", and "Source" will be column headers in the Plotly spreadsheet.',
     code: `<script>
-        function getPlotlyGridData(){ 
+        function getPlotlyGridData(){
             return {"cols":{
                 "Date":{"data":[1, 2, 4, 2, 6, 3]},
                 "Amount":{"data":[3, 4, 6, 1, 9, 2]},
                 "Source":["data.gov","2013-11-11"]},
                 "meta":{}
                 }
-            } 
+            }
         }
         </script>`,
     lang: 'javascript',
@@ -56,7 +56,7 @@ const codeSections = [
                 '<input type="text" '+
                 'name="data" /></form></div>')
                 .appendTo('body');
-            hiddenform.find('input').val( 
+            hiddenform.find('input').val(
                 JSON.stringify( getPlotlyGridData() ) );
             hiddenform.find('form').submit();
             hiddenform.remove();
@@ -79,8 +79,8 @@ const lastSection = [
     text:
       'Create a global JavaScript called getPlotlyGraphData(). This function should return the data you want to graph. See the code below for the correct syntax.',
     code: `<script>
-        function getPlotlyGraphData(){ 
-            return [{"x":[1,2,3],"y":[2,4,3]},{"x":[1,2,3],"y":[9,7,8]}]; 
+        function getPlotlyGraphData(){
+            return [{"x":[1,2,3],"y":[2,4,3]},{"x":[1,2,3],"y":[9,7,8]}];
         }
         </script>`,
     lang: 'javascript',
@@ -132,7 +132,7 @@ export default () => (
             <div className="quote-item-quotee">
               <div className="quote-item-quotee-img-wrapper">
                 <img
-                  src="https://plot.ly/static/img/export/datagov_white.74fa245099ee.png?auto=compress&auto=format"
+                  src="https://prismic-io.s3.amazonaws.com/plotly%2Fa0aaeaa6-2520-4cc9-9095-31446e9d870e_datagov_white.74fa245099ee.png"
                   alt="Data.Gov"
                 />
               </div>
@@ -150,7 +150,7 @@ export default () => (
             <div className="quote-item-quotee">
               <div className="quote-item-quotee-img-wrapper">
                 <img
-                  src="https://plot.ly/static/img/export/importio_white.9464af89bfd4.png?auto=compress&auto=format"
+                  src="https://prismic-io.s3.amazonaws.com/plotly%2Fc19ff922-aa1f-431d-803a-88d5c91b1f6b_importio_white.9464af89bfd4.png"
                   alt="import.io"
                 />
               </div>
@@ -170,7 +170,7 @@ export default () => (
           <div style={{maxWidth: '680px', margin: '20px auto'}}>
             <Graphic
               shadow="false"
-              image="https://images-plotly.imgix.net/static/marketing/export-graphic.png?auto=compress&auto=format"
+              image="https://prismic-io.s3.amazonaws.com/plotly%2F5ff76829-3236-4f37-9b60-361a456e817e_export-graphic.png"
             />
           </div>
         </Body>
@@ -288,7 +288,7 @@ export default () => (
         <Body>
           <iframe
             id="cp_embed_MwYQqY"
-            src="//codepen.io/plotly/embed/MwYQqY?height=268&amp;theme-id=15263&amp;slug-hash=MwYQqY&amp;default-tab=result&amp;user=plotly"
+            src="https://codepen.io/plotly/embed/MwYQqY?height=268&amp;theme-id=15263&amp;slug-hash=MwYQqY&amp;default-tab=result&amp;user=plotly"
             scrolling="no"
             frameBorder="0"
             height="268"
@@ -312,9 +312,8 @@ export default () => (
                     showLineNumbers={true}
                     wrapLines={true}
                     lineNumberStyle={lineNumberStyles}
-                    lineStyle={lineNumber => {
-                      let style = {display: 'block'};
-                      return style;
+                    lineStyle={() => {
+                      return {display: 'block'};
                     }}
                   >
                     {section.code}
@@ -358,9 +357,8 @@ export default () => (
                     showLineNumbers={true}
                     wrapLines={true}
                     lineNumberStyle={lineNumberStyles}
-                    lineStyle={lineNumber => {
-                      let style = {display: 'block'};
-                      return style;
+                    lineStyle={() => {
+                      return {display: 'block'};
                     }}
                   >
                     {section.code}

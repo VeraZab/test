@@ -344,7 +344,7 @@
     font-size: 18px !important;
   }
   background: #fff
-    url(https://images-plotly.imgix.net/static/marketing/dash/section-bg-demos@2x.png?auto=compress&auto=format)
+    url(https://prismic-io.s3.amazonaws.com/plotly%2F28313a8f-0803-4100-8a7d-666c2da9c909_section-bg-demos%402x.jpeg)
     center top no-repeat !important;
   background-size: 1290px !important;
   .content-section-wrapper {
@@ -390,7 +390,7 @@
 .image-with-complex-text-overlay {
   &.architecture {
     @include media('>=1050px') {
-      background: url('https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format')
+      background: url('https://prismic-io.s3.amazonaws.com/plotly%2F6a08d893-a587-4cdc-b720-c87529274138_architecture.png')
         no-repeat;
       background-position: 80% 25%;
       background-size: 920px;
@@ -676,7 +676,7 @@
     }
   }
   &.plotlyjs {
-    background: url('https://images-plotly.imgix.net/static/marketing/product/on-premises/plotlyjs-onpremises.png?auto=compress&auto=format')
+    background: url('https://prismic-io.s3.amazonaws.com/plotly%2Fdb258ef1-6208-49d3-892f-c4b0bdc661ca_plotlyjs-onpremises.png')
       no-repeat;
     background-position: right bottom;
     background-size: contain;

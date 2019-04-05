@@ -20,6 +20,10 @@ import GlobalCTA from './GlobalCTA';
 import DashCTA from './DashCTA';
 import OpenSourceCTA from './OpenSourceCTA';
 
+const BlankSlice = () => {
+  return null;
+};
+
 export default class Slices extends React.Component {
   constructor(props) {
     super(props);
@@ -46,6 +50,7 @@ export default class Slices extends React.Component {
       globalcta: GlobalCTA,
       dash_cta: DashCTA,
       combocta: ComboCTA,
+      dash_solutions: BlankSlice,
     };
 
     return (

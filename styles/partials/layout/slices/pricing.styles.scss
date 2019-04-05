@@ -20,7 +20,7 @@
 .image-with-complex-text-overlay {
   &.architecture {
     @include media('>=1050px') {
-      background: url('https://images-plotly.imgix.net/static/marketing/product/on-premises/architecture.png?auto=compress&auto=format')
+      background: url('https://prismic-io.s3.amazonaws.com/plotly%2F6a08d893-a587-4cdc-b720-c87529274138_architecture.png')
         no-repeat;
       background-position: 80% 25%;
       background-size: 920px;

@@ -26,7 +26,7 @@ const HeroStyles = {
 
 const HeroWrapperStyle = {
   backgroundImage:
-    'url(https://images-plotly.imgix.net/static/marketing/hero-pricing@2x.png?auto=compress&auto=format)',
+    'url(https://prismic-io.s3.amazonaws.com/plotly%2F304097d0-9588-4b4a-a761-9436a8e0ffd8_hero-pricing%402x.png)',
   backgroundSize: '1640px',
   backgroundPosition: '50% 50%',
   backgroundRepeat: 'no-repeat',
@@ -64,17 +64,17 @@ export default class HeroSection extends React.Component {
             <div className="logos-display-wrapper">
               <div className="logo-item">
                 <a target="_blank" href="https://www.data.gov/meta/open-apps/">
-                  <img src="https://plot.ly/static/img/export/datagov_blue.b196bb1cdcf1.png?auto=compress&auto=format" />
+                  <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fc09e3635-f45c-4c8d-a7cc-f2bf5bcfc2a6_datagov_blue.b196bb1cdcf1.png" />
                 </a>
               </div>
               <div className="logo-item">
                 <a target="_blank" href="http://blog.import.io/post/plotly-integration">
-                  <img src="https://plot.ly/static/img/export/importio_blue.921b16da2c11.png?auto=compress&auto=format" />
+                  <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fc4058d09-7c95-4e9f-81d0-b0b94dc0df8b_importio_blue.921b16da2c11.png" />
                 </a>
               </div>
               <div className="logo-item">
                 <a target="_blank" href="https://www.quandl.com/help/plotly">
-                  <img src="https://plot.ly/static/img/export/quandl_blue.88e7b8823a5c.png?auto=compress&auto=format" />
+                  <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fe3815180-5fc5-45c4-9fcc-305d4130c8d8_quandl_blue.88e7b8823a5c.png" />
                 </a>
               </div>
               <div className="logo-item">
@@ -82,7 +82,7 @@ export default class HeroSection extends React.Component {
                   target="_blank"
                   href="http://www.vernier.com/news/2014/04/03/vernier-data-share-and-plot-ly/"
                 >
-                  <img src="https://plot.ly/static/img/export/vernier_blue.4d3c32d41335.png?auto=compress&auto=format" />
+                  <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fb920c3b3-909b-4953-943b-d8cf0594fd6b_vernier_blue.4d3c32d41335.png" />
                 </a>
               </div>
               <div className="logo-item">
@@ -90,7 +90,7 @@ export default class HeroSection extends React.Component {
                   target="_blank"
                   href="http://blog.plot.ly/post/70293893434/automatically-grab-data-from-an-image-with"
                 >
-                  <img src="https://plot.ly/static/img/export/webplotdigitizer_blue.043cf6f2b8f1.png?auto=compress&auto=format" />
+                  <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fb2781aa6-5f69-4f55-9216-1df097c6af79_webplotdigitizer_blue.043cf6f2b8f1.png" />
                 </a>
               </div>
             </div>

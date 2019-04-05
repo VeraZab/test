@@ -27,7 +27,6 @@ const cardBoxStyles = {
   marginTop: '40px',
   minWidth: '280px',
   maxWidth: '480px',
-
   marginRight: 'auto',
   marginLeft: 'auto',
 };
@@ -65,42 +64,42 @@ const oemButton = [
 const gridItemsData = [
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_custom_charts.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F9a55d917-7d6c-43b4-a21e-f0c5fc18de49_ic_expertise_custom_charts.svg',
     label: 'Custom Chart Types',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_features.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F02bd242d-8285-4abb-b77c-4a5a89afce15_ic_expertise_features.svg',
     label: 'Feature Development',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dev.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F999ac323-634a-42ed-8a78-4039df212a87_ic_expertise_dev.svg',
     label: 'Plotly.js / Python / R / MATLAB Development',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_db.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Ffb24351f-c15a-4813-9002-a815387f87d9_ic_expertise_db.svg',
     label: 'Database Integrations',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_consulting.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Ff98f0765-741b-4646-ad60-f9aec49bbfca_ic_expertise_consulting.svg',
     label: 'Open Source Consulting',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_dash_dev.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Fa71a4d89-98ac-4e18-a324-7df0d1c87a71_ic_expertise_dash_dev.svg',
     label: 'Shiny (R) and Dash (Python) App Development',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_whitelabel.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2Ffd53528a-a735-4906-8db4-088d72bdf76f_ic_expertise_whitelabel.svg',
     label: 'White Labeling Plotly Products',
   },
   {
     graphic:
-      'https://images-plotly.imgix.net/plotly-marketing-pages/images/new-branding/advanced-development/expertise-icons/ic_expertise_integrated.svg',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F37f3a75d-02f5-4966-b1e6-8d071c180ad6_ic_expertise_integrated.svg',
     label: 'Advanced Integrations',
   },
 ];
@@ -129,7 +128,6 @@ export default class Consulting extends React.Component {
     return (
       <Layout meta={meta} pathname={this.props.pathname} className="consulting--layout">
         <Hero />
-
         <ContentSection style={contentSectionStyles} className="bottom-light-bg">
           <ContentPane full center>
             <Title>

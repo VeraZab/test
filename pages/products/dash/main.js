@@ -90,7 +90,7 @@ class DashMain extends React.Component {
           <ContentPane thirds center-vertically>
             <div className="icon">
               <img
-                src="https://images-plotly.imgix.net/static/marketing/dash/lightweight-icon.png?auto=compress&auto=format"
+                src="https://prismic-io.s3.amazonaws.com/plotly%2Fb63b0f5c-bbcd-4bfb-b179-42687f614c73_lightweight-icon.png"
                 alt="Dash is Lightweight"
               />
             </div>
@@ -103,7 +103,7 @@ class DashMain extends React.Component {
           <ContentPane thirds center-vertically>
             <div className="icon">
               <img
-                src="https://images-plotly.imgix.net/static/marketing/dash/direct-control-icon.png?auto=compress&auto=format"
+                src="https://prismic-io.s3.amazonaws.com/plotly%2F6d6a5517-6543-4ee3-919c-4e76b8841ab0_direct-control-icon.png"
                 alt="Dash provides direct control"
               />
             </div>
@@ -116,7 +116,7 @@ class DashMain extends React.Component {
           <ContentPane thirds center-vertically>
             <div className="icon">
               <img
-                src="https://images-plotly.imgix.net/static/marketing/dash/composable-icon.png?auto=compress&auto=format"
+                src="https://prismic-io.s3.amazonaws.com/plotly%2F54f901a6-dc95-48da-bb2d-184c41a1735f_composable-icon.png"
                 alt="Dash is Composable and Modular"
               />
             </div>
@@ -162,7 +162,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppDrugs[0].link}
-              image="https://images-plotly.imgix.net/static/marketing/dash/drug-discovery.gif"
+              image="https://prismic-io.s3.amazonaws.com/plotly%2Fe5cbdc96-2ff0-493a-98a4-ddeba7a40b58_optimize-drug-discovery.gif"
             />
           </ContentPane>
           <ContentPane half center-vertically text>
@@ -203,7 +203,7 @@ class DashMain extends React.Component {
           <ContentPane half graphic center-vertically>
             <Graphic
               link={demoAppOil[0].link}
-              image="https://tamarack-prismic.imgix.net/plotly%2Fa47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png?auto=compress&auto=format"
+              image="https://prismic-io.s3.amazonaws.com/plotly%2F6cf7c1c3-e3c0-4028-b579-901f8428e242_plotly_a47b2fa1-0928-46cd-8bd7-d54d2bbceb96_oil-and-gas.png"
             />
           </ContentPane>
         </ContentSection>
@@ -245,7 +245,7 @@ class DashMain extends React.Component {
                       className="card-image dark-fade"
                       style={{
                         backgroundImage:
-                          'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-sharing.png?auto=compress&auto=format")',
+                          'url("https://prismic-io.s3.amazonaws.com/plotly%2Fcaabb8af-85c7-4b2b-8e2e-cc2593c54294_dash-enterprise-sharing.jpeg")',
                       }}
                     >
                       <div className="card-image-label" style={{width: '100%'}}>
@@ -287,7 +287,7 @@ class DashMain extends React.Component {
                       className="card-image dark-fade"
                       style={{
                         backgroundImage:
-                          'url("https://images-plotly.imgix.net/static/marketing/dash/dash-enterprise-portal.png?auto=compress&auto=format")',
+                          'url("https://prismic-io.s3.amazonaws.com/plotly%2Fe5cae283-98ee-45f4-9640-db07adffd797_dash-enterprise-portal.jpeg")',
                       }}
                     >
                       <div className="card-image-label" style={{width: '100%'}}>
