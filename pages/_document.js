@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           {this.props.styleTags}
+
           <script
             dangerouslySetInnerHTML={{
               __html: `(
@@ -35,8 +36,10 @@ export default class MyDocument extends Document {
           {dev && (
             <script async type="text/javascript" src="//static.cdn.prismic.io/prismic.min.js" />
           )}
-          <script id="drift"
-          dangerouslySetInnerHTML={{__html: `!function() {var t = window.driftt = window.drift = window.driftt || [];
+          <script
+            id="drift"
+            dangerouslySetInnerHTML={{
+              __html: `!function() {var t = window.driftt = window.drift = window.driftt || [];
                                                           if (!t.init) {
                                                             if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
                                                             t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
@@ -56,7 +59,8 @@ export default class MyDocument extends Document {
                                                           }
                                                         }();
                                                         drift.SNIPPET_VERSION = '0.3.1';
-                                                        drift.load('4t5t45cv8ey2');`}}
+                                                        drift.load('4t5t45cv8ey2');`,
+            }}
           />
         </Head>
         <body>
@@ -64,6 +68,12 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6T2RXG"
           height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe>`,
+            }}
+          />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<!-- Alertra Text -->
+`,
             }}
           />
           <Main />
