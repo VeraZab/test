@@ -17,6 +17,12 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
           <script
             dangerouslySetInnerHTML={{
+              __html: `<!-- Alerta Text -->
+`,
+            }}
+          />
+          <script
+            dangerouslySetInnerHTML={{
               __html: `(
               function(w,d,s,l,i){
                 w[l]=w[l]||[];
@@ -35,8 +41,10 @@ export default class MyDocument extends Document {
           {dev && (
             <script async type="text/javascript" src="//static.cdn.prismic.io/prismic.min.js" />
           )}
-          <script id="drift"
-          dangerouslySetInnerHTML={{__html: `!function() {var t = window.driftt = window.drift = window.driftt || [];
+          <script
+            id="drift"
+            dangerouslySetInnerHTML={{
+              __html: `!function() {var t = window.driftt = window.drift = window.driftt || [];
                                                           if (!t.init) {
                                                             if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
                                                             t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
@@ -56,7 +64,8 @@ export default class MyDocument extends Document {
                                                           }
                                                         }();
                                                         drift.SNIPPET_VERSION = '0.3.1';
-                                                        drift.load('4t5t45cv8ey2');`}}
+                                                        drift.load('4t5t45cv8ey2');`,
+            }}
           />
         </Head>
         <body>
