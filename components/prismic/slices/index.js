@@ -58,7 +58,6 @@ export default class Slices extends React.Component {
         <div className="slices-wrapper">
           {this.props.data.map((slice, i) => {
             const IndividualSlice = allSlices[slice.slice_type];
-            console.log(slice.slice_type);
             return <IndividualSlice key={i} data={slice} />;
           })}
         </div>
