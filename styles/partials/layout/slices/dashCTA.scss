@@ -1,16 +1,16 @@
 .dash-content-section-container {
   display: flex;
   flex-direction: row;
+  padding-top: $gutter * 4;
+  padding-bottom: $gutter * 4;
   @include tablet {
     flex-direction: column;
   }
   .dash-content-section-graphic {
-    img {
-      width: 100vw;
-    }
+    width: 95%;
   }
   .dash-messaging-rectangle {
-    transform: translateX(-30%) translateY(15%);
+    transform: translateX(-24%) translateY(15%);
     margin-bottom: 65px;
     @include tablet {
       transform: none;
@@ -20,6 +20,8 @@
       opacity: 0.95;
       background: white;
       padding: $gutter * 2;
+      padding-right: 0;
+
       .dash-pretitle {
         text-transform: uppercase;
         color: #96a6b5;
