@@ -1,16 +1,14 @@
 .dash-solutions-container {
   display: flex;
   flex-direction: row;
-  padding-top: $gutter * 4;
-  margin: $gutter * 2;
   padding-bottom: $gutter * 4;
   @include tablet {
     flex-direction: column;
     margin: $gutter * 3;
+    margin-top: $gutter;
     padding-top: 0;
   }
   .solutions-messaging {
-    margin-bottom: $gutter;
     margin-bottom: $gutter;
     @include tablet {
       text-align: center;
@@ -27,6 +25,13 @@
     padding-bottom: $gutter/2;
     @include tablet {
       text-align: center;
+    }
+  }
+
+  .solutions-title {
+    line-height: 0.1;
+    @include tablet {
+      line-height: 1;
     }
   }
   .cta-buttons {
