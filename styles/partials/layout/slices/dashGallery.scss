@@ -1,0 +1,23 @@
+.gallery-container {
+  margin: $gutter * 3;
+
+  .oil-and-gas {
+    display: flex;
+    flex-direction: row;
+
+    .gallery-graphic {
+      width: 50%;
+      margin-bottom: $gutter;
+    }
+
+    .gallery-messaging {
+      width: 50%;
+
+      .cta-buttons {
+        a {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
