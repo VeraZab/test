@@ -20,7 +20,7 @@ const data = {
   hero_buttons: buttons,
   hero_graphic: {
     url:
-      'https://plotly.cdn.prismic.io/plotly/2b5e954984847d1addd810ba0c48e084b7a504cc_cs-ent-hero.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F8a1b3536-b263-4688-91ad-641997b9f1c8_chart_studio_asset-01.png',
   },
 };
 

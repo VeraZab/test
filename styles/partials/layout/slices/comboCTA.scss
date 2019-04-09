@@ -7,6 +7,7 @@
 
   .dash-cta-graphic {
     background: linear-gradient(90deg, #000075 55%, #fff 25%);
+    padding-top: 30px;
     @include tablet {
       background: #000075;
     }

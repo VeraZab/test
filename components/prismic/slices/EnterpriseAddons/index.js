@@ -2,7 +2,6 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const EnterpriseAddons = props => {
   const primary = props.data.primary;
-  console.log(primary);
 
   return (
     <div className="addons-container">
