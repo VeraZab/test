@@ -34,16 +34,6 @@
           text-align: center;
         }
       }
-      a {
-        margin-bottom: $gutter * 2;
-        margin-top: $gutter;
-        width: 300px;
-        @include tablet {
-          margin: auto;
-          margin-bottom: $gutter;
-          width: 250px;
-        }
-      }
     }
   }
   .os-right-container {

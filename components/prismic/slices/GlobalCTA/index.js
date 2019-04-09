@@ -14,9 +14,11 @@ const GlobalCTA = props => {
           <p className="hero-subtitle pale-blue">{props.data.primary.cta_messaging}</p>
         )}
         {props.data.primary.cta_url && props.data.primary.cta_label && (
-          <a className=" button button-primary" href={props.data.primary.cta_url.url}>
-            <div className="button-label">{props.data.primary.cta_label}</div>
-          </a>
+          <div className="cta-buttons">
+            <a className="button button-primary" href={props.data.primary.cta_url.url}>
+              <div className="button-label">{props.data.primary.cta_label}</div>
+            </a>
+          </div>
         )}
       </div>
     </div>

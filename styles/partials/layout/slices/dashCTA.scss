@@ -21,7 +21,6 @@
       background: white;
       padding: $gutter * 2;
       padding-right: 0;
-
       .dash-pretitle {
         text-transform: uppercase;
         color: #96a6b5;
@@ -35,21 +34,6 @@
         color: #506784;
         @include tablet {
           text-align: center;
-        }
-      }
-      .cta-buttons {
-        display: flex;
-        flex-direction: row;
-        margin-top: $gutter;
-        @include tablet {
-          flex-direction: column;
-        }
-        a {
-          margin-right: $gutter;
-          @include tablet {
-            margin: auto;
-            margin-bottom: $gutter;
-          }
         }
       }
     }

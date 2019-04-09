@@ -44,7 +44,8 @@ const Hero = props => {
             <div className="github-stars">
               {props.content.keywords === 'home' ||
               props.content.keywords === 'dash-services' ||
-              props.content.slug === 'dash-product' ? (
+              props.content.slug === 'dash-product' ||
+              props.content.keywords === 'dash-product' ? (
                 <GithubStarsRepeatable
                   start
                   slice={{

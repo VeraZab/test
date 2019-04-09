@@ -23,29 +23,7 @@
         margin: auto;
       }
     }
-    .cta-buttons {
-      display: flex;
-      @include tablet {
-        flex-direction: column;
-      }
-      a {
-        height: 55px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        width: 250px;
-        margin-right: $gutter;
-        @include tablet {
-          margin: auto;
-          width: 250px;
-          margin-bottom: 20px;
-        }
-        @include phone {
-          margin: auto;
-          width: 200px;
-          margin-bottom: 20px;
-        }
-      }
-    }
+    
   }
   .hero-right {
     margin: $gutter * 4;

@@ -211,3 +211,31 @@
     @include trans;
   }
 }
+.cta-buttons {
+  display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
+  a {
+    height: 40px;
+    min-width: 250px;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    color: white;
+
+    @include tablet {
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    @include phone {
+      width: 250px;
+      margin: auto;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  #enterprise-addons {
+    margin: auto;
+  }
+}

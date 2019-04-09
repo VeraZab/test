@@ -4,7 +4,7 @@
   padding-bottom: $gutter * 4;
   @include tablet {
     flex-direction: column;
-    margin: $gutter * 3;
+    margin: $gutter;
     margin-top: $gutter;
     padding-top: 0;
   }
@@ -31,23 +31,7 @@
   .solutions-title {
     line-height: 0.1;
     @include tablet {
-      line-height: 1;
-    }
-  }
-  .cta-buttons {
-    display: flex;
-    flex-direction: row;
-    margin-top: $gutter;
-    @include tablet {
-      flex-direction: column;
-    }
-    a {
-      margin-right: $gutter;
-      color: white;
-      @include tablet {
-        margin: auto;
-        margin-bottom: $gutter;
-      }
+      line-height: 0.2;
     }
   }
   .left-container-wrapper {

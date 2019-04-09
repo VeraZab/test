@@ -39,7 +39,7 @@ class ComboCTA extends React.Component {
             <h1 className="dash-cta-title">{items[0].title1}</h1>
             <h2 className="dash-cta-messaging">{items[0].messaging[0].text}</h2>
             <p>{items[0].messaging[1].text}</p>
-            <div className="dash-cta-buttons">
+            <div className="cta-buttons">
               <a className="button button-primary" href={items[0].url_link2}>
                 <div className="button-label">{items[0].url_label2}</div>
               </a>
@@ -78,7 +78,7 @@ class ComboCTA extends React.Component {
             <h3 className="cs-cta-pretitle">{items[1].pretitle}</h3>
             <h1 className="cs-cta-title">{items[1].title1}</h1>
             <h2 className="cs-cta-messaging">{items[1].messaging[0].text}</h2>
-            <div className="cs-cta-buttons">
+            <div className="cta-buttons">
               <a className="button button-primary" href={items[1].url_link2}>
                 <div className="button-label">{items[1].url_label2}</div>
               </a>

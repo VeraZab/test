@@ -14,9 +14,11 @@ const OpenSource = props => {
           )}
           {props.data.primary.os_url && props.data.primary.os_label && (
             <>
-              <a className=" button button-primary" href={props.data.primary.os_url.url}>
-                <div className="button-label">{props.data.primary.os_label}</div>
-              </a>
+              <div className="cta-buttons">
+                <a className="button button-primary" href={props.data.primary.os_url.url}>
+                  <div className="button-label">{props.data.primary.os_label}</div>
+                </a>
+              </div>
               <div className="os-gh-stars">
                 <div className="dash-stars">
                   <GithubStarsRepeatable

@@ -16,10 +16,10 @@ const DashCTA = props => {
           <h1 className="hero-title">{primary.title1}</h1>
           <p className="subtitle">{primary.messaging[0].text}</p>
           <div className="cta-buttons">
-            <a className=" button button-primary" href={buttons[0].link.url}>
+            <a className="button button-primary" href={buttons[0].link.url}>
               <div className="button-label">{buttons[0].label}</div>
             </a>
-            <a className=" button button-secondary" href={buttons[1].link.url}>
+            <a className="button button-secondary" href={buttons[1].link.url}>
               <div className="button-label">{buttons[1].label}</div>
             </a>
           </div>

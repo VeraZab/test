@@ -6,7 +6,6 @@
     flex-direction: column;
     margin: auto;
     margin-bottom: $gutter;
-
     .pretitle {
       margin: auto;
       text-transform: uppercase;
@@ -38,7 +37,6 @@
           display: none;
         }
       }
-
       .copy-container {
         align-self: center;
         .heading {
@@ -51,19 +49,16 @@
         background: #010077;
         padding: $gutter * 3;
         width: 50%;
-
         @include tablet {
           width: 100%;
           background: #ecf9ff;
         }
-
         .heading {
           color: $color-dodger;
           @include phone {
             text-align: center;
           }
         }
-
         .messaging {
           color: white;
           @include tablet {
@@ -74,7 +69,6 @@
           }
         }
       }
-
       .customizable {
         display: flex;
         background: #ecf9ff;
@@ -97,7 +91,6 @@
           }
         }
       }
-
       .lightweight {
         display: flex;
         background: #ecf9ff;
@@ -106,20 +99,17 @@
         @include tablet {
           width: 100%;
         }
-
         .heading {
           @include phone {
             text-align: center;
           }
         }
-
         .messaging {
           @include phone {
             text-align: center;
           }
         }
       }
-
       .control {
         display: flex;
         background: #010077;
@@ -128,7 +118,6 @@
         @include tablet {
           width: 100%;
         }
-
         .heading {
           color: $color-dodger;
           @include phone {
