@@ -1,4 +1,4 @@
-.dash-product-family-container {
+.dash-deployment-server-container {
   display: flex;
   flex-direction: row;
   padding-top: $gutter * 4;
@@ -8,7 +8,7 @@
     width: 90%;
     padding-top: $gutter;
   }
-  .dash-product-family-graphic {
+  .dash-deployment-server-graphic {
     width: 50%;
     margin: $gutter * 3;
     padding-top: 110px;
@@ -18,10 +18,9 @@
       padding-top: 0;
     }
   }
-  .dash-product-family-messaging-rectangle {
+  .dash-deployment-server-messaging-rectangle {
     width: 50%;
     margin: $gutter * 3;
-
     @include tablet {
       width: 90%;
       margin: $gutter * 2;

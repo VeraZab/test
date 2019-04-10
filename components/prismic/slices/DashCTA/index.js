@@ -14,7 +14,7 @@ const DashCTA = props => {
         <div className="box-shadows">
           <div className="dash-pretitle">{primary.pretitle}</div>
           <h1 className="hero-title">{primary.title1}</h1>
-          <p className="subtitle">{primary.messaging[0].text}</p>
+          <div className="subtitle">{primary.messaging[0].text}</div>
           <div className="cta-buttons">
             <a className="button button-primary" href={buttons[0].link.url}>
               <div className="button-label">{buttons[0].label}</div>

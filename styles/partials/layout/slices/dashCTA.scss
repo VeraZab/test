@@ -2,12 +2,17 @@
   display: flex;
   flex-direction: row;
   padding-top: $gutter * 4;
-  padding-bottom: $gutter * 4;
+  padding-bottom: $gutter * 2;
   @include tablet {
     flex-direction: column;
+    padding-top: 0;
+    padding-bottom: $gutter;
   }
   .dash-content-section-graphic {
     width: 95%;
+    @include tablet {
+      width: 100%;
+    }
   }
   .dash-messaging-rectangle {
     transform: translateX(-24%) translateY(15%);
@@ -21,6 +26,9 @@
       background: white;
       padding: $gutter * 2;
       padding-right: 0;
+      @include tablet {
+        padding: 0;
+      }
       .dash-pretitle {
         text-transform: uppercase;
         color: #96a6b5;
@@ -28,10 +36,12 @@
         padding-bottom: $gutter/2;
         @include tablet {
           text-align: center;
+          padding-top: $gutter;
         }
       }
       .subtitle {
         color: #506784;
+        padding-bottom: $gutter;
         @include tablet {
           text-align: center;
         }

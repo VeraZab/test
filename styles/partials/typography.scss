@@ -26,6 +26,7 @@ h6 {
   }
 }
 .hero-title {
+  width: 100%;
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
@@ -43,12 +44,12 @@ h6 {
     padding-bottom: $gutter/2;
   }
   @include desktop {
-    font-size: 2.2rem;
+    font-size: 2srem;
     line-height: 1.2;
     text-align: left;
   }
   @include mid-sized {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
   }
   @include large-display {

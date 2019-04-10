@@ -17,7 +17,7 @@ const DashSolutions = props => {
         <div className="middle-container">
           <div className="solutions-pretitle">{items[0].subtitle}</div>
           <img src={items[0].graphic.url} />
-          <div className="hero-title">{items[0].messaging1[0].text}</div>
+          <h2 className="messaging-title">{items[0].messaging1[0].text}</h2>
           <div className="solutions-messaging">{items[0].messaging1[1].text}</div>
           <div className="solutions-messaging">{items[0].messaging1[2].text}</div>
           <div className="cta-buttons">
@@ -32,8 +32,8 @@ const DashSolutions = props => {
         <div className="right-container">
           <div className="solutions-pretitle">{items[1].subtitle}</div>
           <img src={items[1].graphic.url} />
-          <div className="hero-title">{items[1].messaging1[0].text}</div>
-          <div className="solutions-messaging">{items[1].messaging1[1].text}</div>{' '}
+          <h2 className="messaging-title">{items[1].messaging1[0].text}</h2>
+          <div className="solutions-messaging">{items[1].messaging1[1].text}</div>
           <div className="cta-buttons">
             <a className="button button-primary" href={items[1].cta_url}>
               {items[1].cta_label}

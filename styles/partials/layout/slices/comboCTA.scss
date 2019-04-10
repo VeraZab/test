@@ -47,6 +47,11 @@
         text-align: center;
       }
     }
+    .github_stars {
+      @include tablet {
+        margin: auto;
+      }
+    }
     .dash-cta-anchor {
       @include tablet {
         text-align: center;
@@ -120,6 +125,7 @@
 
       @include tablet {
         text-align: center;
+        line-height: 1.25;
       }
     }
     .cs-cta-anchor {

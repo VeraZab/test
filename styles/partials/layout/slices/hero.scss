@@ -11,28 +11,39 @@
   }
   .hero-left {
     display: flex;
-    max-width: 50%;
-    margin: $gutter * 2;
+    width: 50%;
+    margin: 60px;
+    padding-top: 50px;
     flex-direction: column;
-    .github-stars {
-      justify-content: flex-start;
-      padding-left: 0;
+    @include tablet {
+      margin: auto;
+      width: 100%;
+    }
+
+    .cta-buttons {
       @include tablet {
-        justify-content: center;
-        padding-left: $gutter * 2;
         margin: auto;
       }
     }
-    
+
+    .github-stars {
+      @include tablet {
+        margin: auto;
+      }
+    }
   }
   .hero-right {
     margin: $gutter * 4;
     margin-top: 150px;
-
+    width: 50%;
     align-items: center;
     justify-content: center;
+    @include tablet {
+      margin: $gutter;
+    }
     @include phone {
       width: 90vw;
+      margin: $gutter;
     }
     img {
       @include large-display {
