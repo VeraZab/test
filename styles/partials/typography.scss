@@ -31,13 +31,14 @@ h6 {
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
   text-align: center;
-  padding-bottom: $gutter;
   @include phone {
     font-size: 2rem;
     line-height: 1.2;
     text-align: center;
   }
   @include tablet {
+    width: 90%;
+    margin: auto;
     font-size: 2rem;
     line-height: 1.2;
     text-align: center;
@@ -62,19 +63,18 @@ h6 {
   font-family: 'Asap', sans-serif;
   color: white;
   text-align: center;
-  padding-bottom: $gutter;
-
   @include phone {
     font-size: 1rem;
     line-height: 1.2;
   }
   @include tablet {
+    width: 90%;
+    margin: auto;
     font-size: 1.2rem;
     line-height: 1.2;
     text-align: center;
     padding-bottom: $gutter/2;
   }
-
   @include desktop {
     font-size: 1rem;
     line-height: 1.2;
@@ -84,7 +84,6 @@ h6 {
     font-size: 1.2rem;
     text-align: left;
   }
-
   @include large-display {
     font-size: 1.3rem;
     text-align: left;

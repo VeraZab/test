@@ -35,7 +35,10 @@
   .hero-right {
     margin: $gutter * 4;
     margin-top: 150px;
+
     width: 50%;
+    max-width: 700px;
+
     align-items: center;
     justify-content: center;
     @include tablet {
@@ -46,9 +49,6 @@
       margin: $gutter;
     }
     img {
-      @include large-display {
-        max-width: 800px;
-      }
     }
   }
 }

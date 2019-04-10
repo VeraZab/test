@@ -27,17 +27,18 @@
       text-align: center;
     }
   }
-
   .solutions-title {
     line-height: 0.1;
     @include tablet {
       line-height: 0.2;
     }
   }
-
   .messaging-title {
     color: $color-dodger;
     margin-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
   }
   .left-container-wrapper {
     display: flex;

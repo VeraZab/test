@@ -1,33 +1,47 @@
 .dash-content-section-container {
   display: flex;
   flex-direction: row;
-  padding-top: $gutter * 4;
-  padding-bottom: $gutter * 2;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
   @include tablet {
     flex-direction: column;
     padding-top: 0;
     padding-bottom: $gutter;
   }
   .dash-content-section-graphic {
-    width: 95%;
+    width: 50%;
     @include tablet {
       width: 100%;
     }
+    img {
+      max-width: 150% !important;
+      @include tablet {
+        max-width: 100% !important;
+      }
+
+      @include large-display {
+        min-width: 100% !important;
+      }
+    }
   }
   .dash-messaging-rectangle {
-    transform: translateX(-24%) translateY(15%);
-    margin-bottom: 65px;
+    width: 50%;
     @include tablet {
-      transform: none;
+      width: 100%;
     }
     .box-shadows {
       box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
       opacity: 0.95;
       background: white;
-      padding: $gutter * 2;
-      padding-right: 0;
+      margin-top: 20%;
+      margin-right: 10%;
+      padding: $gutter;
       @include tablet {
         padding: 0;
+        margin: 0;
+      }
+      @include large-display {
+        margin-top: 10%;
       }
       .dash-pretitle {
         text-transform: uppercase;
@@ -44,6 +58,17 @@
         padding-bottom: $gutter;
         @include tablet {
           text-align: center;
+        }
+        ul li {
+          list-style: none;
+        }
+        ul li::before {
+          color: $color-dodger;
+          content: '\2022';
+          font-size: 2em;
+          position: relative;
+          top: 0.2em;
+          padding-right: 0.3em;
         }
       }
     }

@@ -5,16 +5,15 @@
   padding-bottom: $gutter * 4;
   @include tablet {
     flex-direction: column;
-    width: 90%;
     padding-top: $gutter;
+    margin: auto;
   }
   .dash-deployment-server-graphic {
     width: 50%;
     margin: $gutter * 3;
     padding-top: 110px;
     @include tablet {
-      width: 90%;
-      margin: $gutter * 2;
+      margin: auto;
       padding-top: 0;
     }
   }

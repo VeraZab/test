@@ -53,6 +53,7 @@
       .os-logo-title {
         text-align: center;
         line-height: 1;
+        font-size: 26px;
       }
       .os-messaging,
       .os-subtitle {
@@ -70,7 +71,7 @@
             justify-content: center;
           }
           .left-logo {
-            max-width: 150px;
+            max-width: 100px;
             justify-content: center;
             margin: auto;
             margin-right: $gutter * 4;

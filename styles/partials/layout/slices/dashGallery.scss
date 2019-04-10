@@ -20,6 +20,9 @@
     .gallery-messaging {
       padding-top: $gutter * 1.5;
       width: 50%;
+      .gallery-copy {
+        margin-bottom: $gutter * 2;
+      }
       @include tablet {
         width: 100%;
         text-align: center;

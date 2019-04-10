@@ -28,13 +28,7 @@
         align-self: center;
         margin: $gutter;
         img {
-          width: 150px;
-        }
-        @include phone {
-          display: none;
-        }
-        @include tablet {
-          display: none;
+          width: 100px;
         }
       }
       .copy-container {
@@ -52,6 +46,9 @@
         @include tablet {
           width: 100%;
           background: #ecf9ff;
+        }
+        @include phone {
+          flex-direction: column;
         }
         .heading {
           color: $color-dodger;
@@ -90,6 +87,9 @@
             }
           }
         }
+        @include phone {
+          flex-direction: column;
+        }
       }
       .lightweight {
         display: flex;
@@ -98,6 +98,9 @@
         width: 50%;
         @include tablet {
           width: 100%;
+        }
+        @include phone {
+          flex-direction: column;
         }
         .heading {
           @include phone {
@@ -115,6 +118,10 @@
         background: #010077;
         padding: $gutter * 3;
         width: 50%;
+
+        @include phone {
+          flex-direction: column;
+        }
         @include tablet {
           width: 100%;
         }
