@@ -45,17 +45,19 @@ class ComboCTA extends React.Component {
                 <div className="button-label">{items[0].url_label}</div>
               </a>
             </div>
-            <GithubStarsRepeatable
-              start
-              slice={{
-                items: [
-                  {
-                    repository_url: {url: 'https://github.com/plotly/dash'},
-                    label: null,
-                  },
-                ],
-              }}
-            />
+            <div className="hide-in-percy">
+              <GithubStarsRepeatable
+                start
+                slice={{
+                  items: [
+                    {
+                      repository_url: {url: 'https://github.com/plotly/dash'},
+                      label: null,
+                    },
+                  ],
+                }}
+              />
+            </div>
             <div className="dash-cta-anchor">
               <div className="anchor-link">
                 <a onClick={this.handleClick}>{items[1].pretitle}</a>

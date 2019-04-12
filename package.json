@@ -77,9 +77,6 @@
     "prettier": "^1.7.4",
     "react-scripts": "1.1.5"
   },
-  "engines": {
-    "node": "9.x.x"
-  },
   "homepage": "https://plot.ly/",
   "license": "UNLICENSED",
   "repository": "plotly/plotly-next",

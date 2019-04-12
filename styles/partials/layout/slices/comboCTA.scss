@@ -7,8 +7,24 @@
   .dash-cta-graphic {
     background: linear-gradient(90deg, #000075 55%, #fff 25%);
     padding-top: 30px;
+
     @include tablet {
       background: #000075;
+      height: 300px;
+      margin-bottom: 200px;
+      img {
+        margin: auto;
+        width: 70%;
+      }
+    }
+    @include phone {
+      background: #000075;
+      height: 150px;
+      margin-bottom: 25%;
+
+      img {
+        margin: auto;
+      }
     }
   }
   p {

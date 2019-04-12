@@ -18,6 +18,7 @@
     @include tablet {
       margin: auto;
       width: 100%;
+      padding-top: 200px;
     }
     .cta-buttons {
       @include tablet {
@@ -35,8 +36,9 @@
     .hero-right {
       margin: $gutter * 2;
       img {
-        @include large-display {
-          max-width: 1000px;
+        @include mid-sized {
+          padding-top: 20px;
+          max-width: 500px;
         }
       }
     }

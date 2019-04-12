@@ -4,7 +4,7 @@ const DashDeploymentServer = props => {
   const primary = props.data.primary;
 
   return (
-    <div className="dash-deployment-server-container">
+    <div className={primary.title1 === 'Dash Deployment Server' ? 'dash-deployment-server-container' : 'dash-snapshot-engine-container'}>
       <div className="dash-deployment-server-messaging-rectangle">
         <div className="dash-pretitle">{primary.pretitle}</div>
         <h1 className="hero-title">{primary.title1}</h1>

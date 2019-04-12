@@ -41,7 +41,7 @@ const Hero = props => {
                 </a>
               ) : null}
             </div>
-            <div className="github-stars">
+            <div className="github-stars hide-in-percy">
               {props.content.keywords === 'home' ||
               props.content.keywords === 'dash-services' ||
               props.content.slug === 'dash-product' ||
