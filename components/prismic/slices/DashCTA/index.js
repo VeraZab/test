@@ -14,8 +14,8 @@ const DashCTA = props => {
       </div>
       <div className="dash-messaging-rectangle">
         <div className="box-shadows">
-          <div className="dash-pretitle">{primary.pretitle}</div>
-          <h1 className="hero-title">{primary.title1}</h1>
+          <div className="pretitle">{primary.pretitle}</div>
+          <h1 className="title">{primary.title1}</h1>
           <div className="subtitle">{renderPrismic(primary.messaging)}</div>
           <div className="cta-buttons">
             <a className="button button-primary" href={buttons[0].link.url}>

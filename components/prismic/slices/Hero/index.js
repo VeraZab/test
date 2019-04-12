@@ -23,9 +23,9 @@ const Hero = props => {
             }
           >
             <h1 className="hero-title">{props.content.hero_title}</h1>
-            <h2 className="hero-subtitle">
+            <div className="hero-subtitle">
               {props.content.hero_messaging[0] && renderPrismic(props.content.hero_messaging)}
-            </h2>
+            </div>
             <div className="cta-buttons">
               {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
                 <a className="button button-primary" href={props.content.hero_buttons[0].link.url}>
@@ -99,18 +99,20 @@ const Hero = props => {
               ) : null}
             </div>
           </div>
-          {props.content.hero_graphic.url ? (
-            <div className="hero-right">
-              {props.content.hero_graphic_style &&
-              props.content.hero_graphic_style === 'browser' ? (
-                <Browser>
+          <div className="hero-graphic-container">
+            {props.content.hero_graphic.url ? (
+              <div className="hero-right">
+                {props.content.hero_graphic_style &&
+                props.content.hero_graphic_style === 'browser' ? (
+                  <Browser>
+                    <img src={props.content.hero_graphic.url} />
+                  </Browser>
+                ) : (
                   <img src={props.content.hero_graphic.url} />
-                </Browser>
-              ) : (
-                <img src={props.content.hero_graphic.url} />
-              )}
-            </div>
-          ) : null}
+                )}
+              </div>
+            ) : null}
+          </div>
         </div>
       ) : null}
     </>

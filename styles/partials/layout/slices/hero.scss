@@ -19,36 +19,21 @@
       margin: auto;
       width: 100%;
     }
-
     .cta-buttons {
       @include tablet {
         margin: auto;
       }
     }
-
     .github-stars {
       @include tablet {
         margin: auto;
       }
     }
   }
-  .hero-right {
-    margin: $gutter * 4;
-    margin-top: 150px;
-
-    width: 50%;
-    max-width: 700px;
-
-    align-items: center;
-    justify-content: center;
-    @include tablet {
-      margin: $gutter;
-    }
-    @include phone {
-      width: 90vw;
-      margin: $gutter;
-    }
-    img {
+  .hero-graphic-container {
+    margin: auto;
+    .hero-right {
+      margin: $gutter * 2;
     }
   }
 }

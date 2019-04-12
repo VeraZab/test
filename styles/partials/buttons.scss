@@ -84,7 +84,6 @@
       box-shadow: $drop-shadow-pressed;
     }
   }
-
   &-secondary {
     border: 1px solid $color-dodger;
     color: $color-dodger !important;
@@ -98,13 +97,11 @@
     @include active-state-transform;
   }
 }
-
 .cta-buttons {
   display: flex;
   @include tablet {
     margin: auto;
   }
-
   @include phone {
     margin: auto;
   }

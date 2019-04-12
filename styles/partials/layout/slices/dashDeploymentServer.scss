@@ -6,23 +6,31 @@
   @include tablet {
     flex-direction: column;
     padding-top: $gutter;
-    margin: auto;
+    margin: $gutter;
   }
   .dash-deployment-server-graphic {
     width: 50%;
     margin: $gutter * 3;
     padding-top: 110px;
     @include tablet {
+      width: 100%;
       margin: auto;
-      padding-top: 0;
+      padding-top: $gutter;
     }
   }
   .dash-deployment-server-messaging-rectangle {
     width: 50%;
     margin: $gutter * 3;
+    ul{
+      padding: 0;
+    }
     @include tablet {
-      width: 90%;
-      margin: $gutter * 2;
+      width: 100%;
+      margin: 0;
+    }
+    p {
+      width: 100%;
+      margin: 0;
     }
     .dash-pretitle {
       text-transform: uppercase;

@@ -18,7 +18,6 @@
       @include tablet {
         max-width: 100% !important;
       }
-
       @include large-display {
         min-width: 100% !important;
       }
@@ -28,6 +27,8 @@
     width: 50%;
     @include tablet {
       width: 100%;
+      margin: auto;
+      padding-top: $gutter;
     }
     .box-shadows {
       box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
@@ -43,32 +44,15 @@
       @include large-display {
         margin-top: 10%;
       }
-      .dash-pretitle {
-        text-transform: uppercase;
-        color: #96a6b5;
-        letter-spacing: 2px;
-        padding-bottom: $gutter/2;
-        @include tablet {
-          text-align: center;
-          padding-top: $gutter;
-        }
-      }
       .subtitle {
         color: #506784;
         padding-bottom: $gutter;
         @include tablet {
           text-align: center;
+          margin: $gutter;
         }
-        ul li {
-          list-style: none;
-        }
-        ul li::before {
-          color: $color-dodger;
-          content: '\2022';
-          font-size: 2em;
-          position: relative;
-          top: 0.2em;
-          padding-right: 0.3em;
+        ul {
+          padding: 0;
         }
       }
     }

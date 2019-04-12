@@ -27,6 +27,7 @@ h6 {
 }
 .hero-title {
   width: 100%;
+  margin-bottom: $gutter;
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
@@ -63,6 +64,9 @@ h6 {
   font-family: 'Asap', sans-serif;
   color: white;
   text-align: center;
+  p {
+    margin-top: 0;
+  }
   @include phone {
     font-size: 1rem;
     line-height: 1.2;
@@ -167,4 +171,61 @@ article.body {
 %font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+ul li {
+  list-style: none;
+}
+ul li::before {
+  color: $color-dodger;
+  content: '\2022';
+  font-size: 2em;
+  position: relative;
+  top: 0.2em;
+  padding-right: 0.3em;
+}
+
+.pretitle {
+  text-transform: uppercase;
+  color: #96a6b5;
+  letter-spacing: 2px;
+  padding-bottom: $gutter/2;
+  @include tablet {
+    text-align: center;
+  }
+}
+
+.copy-container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  margin: $gutter * 2;
+  padding-top: 175px;
+  @include tablet {
+    padding-top: 0;
+  }
+  .title {
+    line-height: 1.2;
+    padding-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  .messaging {
+    padding-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
+  }
+}
+.github_stars {
+  @include tablet {
+    margin: auto;
+  }
+}
+.title {
+  line-height: 1.2;
+  padding-bottom: $gutter;
+  @include tablet {
+    text-align: center;
+  }
 }

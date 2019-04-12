@@ -27,11 +27,10 @@
       .graphic-container {
         align-self: center;
         margin: $gutter;
-        img {
-          width: 100px;
-        }
+        width: 50%;
+
       }
-      .copy-container {
+      .productive-copy-container {
         align-self: center;
         .heading {
           font-size: 1.6rem;
