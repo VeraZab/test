@@ -34,6 +34,11 @@
     margin: auto;
     .hero-right {
       margin: $gutter * 2;
+      img {
+        @include large-display {
+          max-width: 1000px;
+        }
+      }
     }
   }
 }

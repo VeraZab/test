@@ -37,18 +37,18 @@ function PricingCardHeader(props) {
     props.data.button_two_label &&
     props.data.button_three_link &&
     props.data.button_three_label && (
-      <div className="pricing__card__header__actions">
+      <div className="cta-buttons">
         {props.pricing_mode === 'On-Premises: Internet-Connected Install' ? (
-          <a href={props.data.button_one_link.url}>
-            <button type="button">{props.data.button_one_label}</button>
+          <a className="button button-primary" href={props.data.button_one_link.url}>
+            <div className="button-label">{props.data.button_one_label}</div>
           </a>
         ) : props.pricing_mode === 'On-Premises: Air-Gapped Install' ? (
-          <a href={props.data.button_two_link.url}>
+          <a className="button button-primary" href={props.data.button_two_link.url}>
             <button type="button">{props.data.button_two_label}</button>
           </a>
         ) : (
-          <a href={props.data.button_three_link.url}>
-            <button type="button">{props.data.button_three_label}</button>
+          <a className="button button-primary addon-button" href={props.data.button_three_link.url}>
+            <div className="button-label">{props.data.button_three_label}</div>
           </a>
         )}
       </div>

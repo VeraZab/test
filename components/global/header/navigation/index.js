@@ -295,9 +295,11 @@ export default class Navigation extends React.Component {
                 </div>
               </div>
             </div>
-            <a href={products.submenu_url_link3} className="navigation-product-item">
-              <button type="button">{products.submenu_url_label3}</button>
-            </a>
+            <div className="cta-buttons">
+              <a href={products.submenu_url_link3} className="button button-primary header-button">
+                <div className="button-label">{products.submenu_url_label3}</div>
+              </a>
+            </div>
           </nav>
         </>
       );

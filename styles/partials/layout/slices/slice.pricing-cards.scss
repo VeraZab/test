@@ -10,6 +10,7 @@
     .pricing__card__header__and__features__section {
       display: flex;
       box-shadow: 0px 2px 14px rgba($color-rhino-dark, 0.2);
+      margin-bottom: $gutter * 2;
       @include media('<800px') {
         flex-direction: column;
       }
@@ -61,21 +62,6 @@
             color: $color-rhino-dark;
           }
         }
-        .pricing__card__header__actions {
-          font-size: 0.5rem !important;
-          button {
-            color: white;
-            background-color: $color-dodger;
-            text-transform: uppercase;
-            font-weight: 450;
-            font-size: 12px;
-            padding: 5px 15px;
-          }
-          button:hover {
-            border: 1px solid $color-aqua;
-            color: $color-aqua;
-          }
-        }
       }
       .pricing__card__features {
         display: flex;
@@ -123,29 +109,11 @@
         }
       }
     }
-    .pricing__card__header__and__features__cta {
-      display: flex;
-      padding-top: 40px;
-      padding-bottom: 100px;
-      margin: auto;
-      button {
-        border: 2px solid $color-dodger;
-        color: $color-dodger;
-        text-transform: uppercase;
-        font-weight: 450;
-        font-size: 12px;
-        margin: auto;
-      }
-      button:hover {
-        border: 2px solid $color-aqua;
-        color: $color-aqua;
-      }
-    }
-
     .pricing__card__addons__section {
       display: flex;
       z-index: 15;
       flex-direction: column;
+      margin-top: $gutter * 2;
       @include media('<800px') {
         flex-direction: column;
       }

@@ -105,18 +105,20 @@
   @include phone {
     margin: auto;
   }
+  .header-button {
+    width: 200px;
+  }
+  .addon-button {
+    margin: auto;
+    margin-bottom: $gutter;
+  }
   a {
     margin-right: $gutter;
     margin-bottom: $gutter;
     width: 300px;
     color: white;
     @include tablet {
-      width: 250px;
-      margin: auto;
-      margin-bottom: $gutter;
-    }
-    @include phone {
-      width: 250px;
+      max-width: 90%;
       margin: auto;
       margin-bottom: $gutter;
     }

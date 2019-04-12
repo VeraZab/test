@@ -11,7 +11,7 @@ const EnterpriseAddons = props => {
       <div className="addons-messaging">
         <h1 className="addons-title">{primary.title1}</h1>
         <div className="addons-copy">{renderPrismic(primary.messaging)}</div>
-        <div className="cta-buttons">
+        <div className="cta-buttons" id="button-narrow">
           <a id="enterprise-addons" className="button button-primary" href={primary.cta_url}>
             {primary.cta_label}
           </a>

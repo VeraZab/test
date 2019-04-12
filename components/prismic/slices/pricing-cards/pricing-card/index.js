@@ -15,13 +15,17 @@ function PricingCard(props) {
           <PricingCardFeatures data={card.primary} />
         </div>
       </div>
-      <div className="pricing__card__header__and__features__cta">
-        <Link
-          href={card.primary.title.includes('Dash') ? '/dash/pricing#advanced-cards' : '/online-chart-maker'}
-          prefetch
+      <div className="cta-buttons">
+        <a
+          className="button button-primary addon-button"
+          href={
+            card.primary.title.includes('Dash')
+              ? '/dash/pricing#advanced-cards'
+              : '/online-chart-maker'
+          }
         >
-          <button type="button">Learn More</button>
-        </Link>
+          <div className="button-label">Learn More</div>
+        </a>
       </div>
       <div className="pricing__card__addons__section">
         <PricingCardAddons data={card.items} />
