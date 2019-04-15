@@ -21,27 +21,9 @@ import DashCTA from './DashCTA';
 import OpenSourceCTA from './OpenSourceCTA';
 import DashSolutions from './DashSolutions';
 import DashProductive from './DashProductive';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import DashGallery from './DashGallery';
 import EnterpriseAddons from './EnterpriseAddons';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import DashDeploymentServer from './DashDeploymentServer';
-=======
->>>>>>> a3c62bd... styling dash is productive content section
-=======
-import DashGallery from './DashGallery';
->>>>>>> ac38e72... styling dash gallery content section
-=======
->>>>>>> 3b4e24b... styling enterprise addons content section
-=======
-import DashProductFamily from './DashProductFamily';
->>>>>>> 9939a8f... styling dash product family content section
-=======
-import DashDeploymentServer from './DashDeploymentServer';
->>>>>>> 2d99a94... refactoring github stars scss
 
 const BlankSlice = () => {
   return null;
@@ -75,28 +57,9 @@ export default class Slices extends React.Component {
       combocta: ComboCTA,
       dash_solutions: DashSolutions,
       dash_is_production: DashProductive,
-<<<<<<< HEAD
-<<<<<<< HEAD
       dash_app_gallery: DashGallery,
       enterprise_addons: EnterpriseAddons,
       dash_product_family: DashDeploymentServer,
-=======
->>>>>>> a3c62bd... styling dash is productive content section
-=======
-      dash_app_gallery: DashGallery,
-<<<<<<< HEAD
->>>>>>> ac38e72... styling dash gallery content section
-=======
-      enterprise_addons: EnterpriseAddons,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 3b4e24b... styling enterprise addons content section
-=======
-      dash_product_family: DashProductFamily,
->>>>>>> 9939a8f... styling dash product family content section
-=======
-      dash_product_family: DashDeploymentServer,
->>>>>>> 2d99a94... refactoring github stars scss
     };
 
     return (

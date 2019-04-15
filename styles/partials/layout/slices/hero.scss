@@ -4,6 +4,15 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
+
+  @include mid-sized {
+  }
+  @include desktop {
+    height: 50vh;
+  }
+  @include large-display {
+    height: 70vh;
+  }
   @include tablet {
     flex-direction: column;
     height: auto;
@@ -15,6 +24,9 @@
     margin: 60px;
     padding-top: 50px;
     flex-direction: column;
+    @include large-display {
+      margin-left: 20%;
+    }
     @include tablet {
       margin: auto;
       width: 100%;
@@ -32,13 +44,30 @@
     }
   }
   .hero-graphic-container {
-    margin: auto;
+    width: 50%;
+    padding-right: 60px;
+
+    @include tablet {
+      padding-top: $gutter;
+      padding-right: 0;
+    }
+
+    @include mid-sized {
+      padding-right: 50px;
+    }
+    @include large-display {
+      padding-right: 300px;
+    }
+
     .hero-right {
-      margin: $gutter * 2;
       img {
         @include mid-sized {
-          padding-top: 20px;
           max-width: 500px;
+          padding-top: 50px;
+        }
+        @include large-display {
+          max-width: 700px;
+          padding-top: 50px;
         }
       }
     }

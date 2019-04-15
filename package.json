@@ -91,6 +91,7 @@
     "heroku-postinstall": "yarn run build",
     "postexport": "cp .next/service-worker.js out/_next",
     "preexport": "yarn run build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "now-build": "next build && next export -o dist"
   }
 }
