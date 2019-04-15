@@ -51,6 +51,11 @@ export default class Slices extends React.Component {
       dash_cta: DashCTA,
       combocta: ComboCTA,
       dash_solutions: BlankSlice,
+      dash_is_production: BlankSlice,
+      dash_app_gallery: BlankSlice,
+      enterprise_addons: BlankSlice,
+      dash_product_family: BlankSlice,
+
     };
 
     return (
