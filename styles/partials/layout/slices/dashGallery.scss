@@ -4,18 +4,36 @@
   .oil-and-gas {
     display: flex;
     flex-direction: row;
+    margin: $gutter;
+
+    @include tablet {
+      flex-direction: column;
+    }
 
     .gallery-graphic {
       width: 50%;
       margin-bottom: $gutter;
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
     }
 
     .gallery-messaging {
+      padding-top: $gutter * 1.5;
+
       width: 50%;
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
 
       .cta-buttons {
         a {
           width: 200px;
+          @include tablet {
+            margin: auto;
+          }
         }
       }
     }

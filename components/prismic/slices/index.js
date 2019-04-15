@@ -25,12 +25,15 @@ import DashProductive from './DashProductive';
 <<<<<<< HEAD
 import DashGallery from './DashGallery';
 import EnterpriseAddons from './EnterpriseAddons';
+<<<<<<< HEAD
 import DashDeploymentServer from './DashDeploymentServer';
 =======
 >>>>>>> a3c62bd... styling dash is productive content section
 =======
 import DashGallery from './DashGallery';
 >>>>>>> ac38e72... styling dash gallery content section
+=======
+>>>>>>> 3b4e24b... styling enterprise addons content section
 
 const BlankSlice = () => {
   return null;
@@ -73,7 +76,11 @@ export default class Slices extends React.Component {
 >>>>>>> a3c62bd... styling dash is productive content section
 =======
       dash_app_gallery: DashGallery,
+<<<<<<< HEAD
 >>>>>>> ac38e72... styling dash gallery content section
+=======
+      enterprise_addons: EnterpriseAddons,
+>>>>>>> 3b4e24b... styling enterprise addons content section
     };
 
     return (

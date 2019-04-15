@@ -2,7 +2,6 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const DashGallery = props => {
   const items = props.data.items;
-  console.log(items);
 
   return (
     <div className="gallery-container">
