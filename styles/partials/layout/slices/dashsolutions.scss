@@ -1,0 +1,89 @@
+.dash-solutions-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: $gutter * 4;
+  margin: $gutter * 2;
+  padding-bottom: $gutter * 4;
+  @include tablet {
+    flex-direction: column;
+    margin: $gutter * 3;
+    padding-top: 0;
+  }
+  .solutions-messaging {
+    margin-bottom: $gutter;
+    margin-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  img {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+  }
+  .solutions-pretitle {
+    text-transform: uppercase;
+    color: #96a6b5;
+    letter-spacing: 2px;
+    padding-bottom: $gutter/2;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  .cta-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: $gutter;
+    @include tablet {
+      flex-direction: column;
+    }
+    a {
+      margin-right: $gutter;
+      color: white;
+      @include tablet {
+        margin: auto;
+        margin-bottom: $gutter;
+      }
+    }
+  }
+  .left-container-wrapper {
+    display: flex;
+    width: 33vw;
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+    .left-container {
+      margin: auto;
+    }
+  }
+  .middle-container-wrapper {
+    width: 34vw;
+    @include tablet {
+      width: 100%;
+    }
+    border: 2px solid#f2f5fa;
+    img {
+      margin: auto;
+    }
+    .middle-container {
+      margin: $gutter * 2;
+    }
+  }
+  .right-container-wrapper {
+    width: 33vw;
+    @include tablet {
+      width: 100%;
+    }
+    border: 1px solid#f2f5fa;
+    img {
+      margin: auto;
+      padding-top: 0;
+    }
+    a {
+      margin-top: $gutter;
+    }
+    .right-container {
+      margin: $gutter * 2;
+    }
+  }
+}

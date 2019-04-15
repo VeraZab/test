@@ -76,7 +76,12 @@ module.exports = {
         slug: 'company-fr',
       },
     },
-    '/products/dash': {page: '/products/dash'},
+    '/products/dash': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-product',
+      },
+    },
     '/products/cloud': {page: '/products/cloud'},
     '/products/on-premise': {
       page: '/prismic-generator',
@@ -130,7 +135,7 @@ module.exports = {
     },
     '/export': {page: '/export'},
   }),
-  webpack: (config) => {
+  webpack: config => {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
         minify: true,
