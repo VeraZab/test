@@ -4,19 +4,18 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
-
+  @include tablet {
+    flex-direction: column;
+    height: auto;
+    padding-top: 100px;
+  }
   @include mid-sized {
   }
   @include desktop {
     height: 50vh;
   }
   @include large-display {
-    height: 70vh;
-  }
-  @include tablet {
-    flex-direction: column;
-    height: auto;
-    padding-top: 100px;
+    height: 80vh;
   }
   .hero-left {
     display: flex;
