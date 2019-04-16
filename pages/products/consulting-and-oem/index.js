@@ -4,20 +4,8 @@ import {ContentSection, ContentPane, Title, Body} from 'components/content-secti
 import Buttons from 'components/buttons';
 import {Grid, GridItem} from 'components/grid';
 import React from 'react';
-
-const meta = {
-  title: 'Advanced Development',
-  description:
-    "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",
-  url: 'https://plot.ly/consulting-and-oem/',
-  twitter: {
-    label1: 'Services Offered',
-    data1:
-      'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.',
-  },
-  image:
-    'https://plotly.cdn.prismic.io/plotly/d2d3df15f876ab585878dfb64733e55feab9ddb7_plotly-logo.png',
-};
+import {fetchData} from 'lib/fetchData';
+import getCookies from 'next-cookies';
 
 const contentSectionStyles = {
   paddingTop: '0px',
@@ -126,7 +114,12 @@ export default class Consulting extends React.Component {
     });
 
     return (
-      <Layout meta={meta} pathname={this.props.pathname} className="consulting--layout">
+      <Layout
+        meta={this.props.meta}
+        nav={this.props.nav}
+        pathname={this.props.pathname}
+        className="consulting--layout"
+      >
         <Hero />
         <ContentSection style={contentSectionStyles} className="bottom-light-bg">
           <ContentPane full center>
@@ -197,3 +190,26 @@ export default class Consulting extends React.Component {
     );
   }
 }
+
+Consulting.getInitialProps = async context => {
+  const meta = {
+    title: 'Advanced Development',
+    description:
+      "Plotly's engineering team has deep expertise in technical computing, open technologies and complex visualization.",
+    url: 'https://plot.ly/consulting-and-oem/',
+    twitter: {
+      label1: 'Services Offered',
+      data1:
+        'Custom Chart Types, Feature Development, Database Integrations, Open Source Consulting, and more.',
+    },
+    image:
+      'https://plotly.cdn.prismic.io/plotly/d2d3df15f876ab585878dfb64733e55feab9ddb7_plotly-logo.png',
+  };
+  const response = await fetchData(getCookies(context)['io.prismic.preview']);
+  const nav = response.find(doc => doc.type === 'nav');
+
+  return {
+    nav,
+    meta,
+  };
+};
