@@ -99,6 +99,10 @@
 }
 .cta-buttons {
   display: flex;
+  #header-button {
+    margin: 0;
+    margin-left: $gutter;
+  }
   @include tablet {
     margin: auto;
   }
