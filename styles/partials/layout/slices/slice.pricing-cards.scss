@@ -55,7 +55,6 @@
           padding-bottom: 10px;
           text-align: center;
           @include media('<800px') {
-            width: 200px;
             margin: auto;
           }
           h2 {
@@ -124,23 +123,11 @@
         }
       }
     }
-    .pricing__card__header__and__features__cta {
-      display: flex;
-      padding-top: 40px;
-      padding-bottom: 100px;
+    .cta-buttons {
+      padding-top: $gutter * 3;
+      padding-bottom: $gutter * 3;
       margin: auto;
-      button {
-        border: 2px solid $color-dodger;
-        color: $color-dodger;
-        text-transform: uppercase;
-        font-weight: 450;
-        font-size: 12px;
-        margin: auto;
-      }
-      button:hover {
-        border: 2px solid $color-aqua;
-        color: $color-aqua;
-      }
+      width: 200px;
     }
 
     .pricing__card__addons__section {
