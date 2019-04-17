@@ -1,0 +1,86 @@
+.dash-solutions-container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: $gutter * 4;
+  @include tablet {
+    flex-direction: column;
+    margin: $gutter;
+    margin-top: $gutter;
+    padding-top: 0;
+  }
+  .solutions-messaging {
+    margin-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  img {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+  }
+  .solutions-pretitle {
+    text-transform: uppercase;
+    color: #96a6b5;
+    letter-spacing: 2px;
+    padding-bottom: $gutter/2;
+    text-align: center;
+  }
+  .solutions-title {
+    line-height: 0.1;
+    @include tablet {
+      line-height: 0.2;
+    }
+  }
+  .messaging-title {
+    color: $color-dodger;
+    margin-bottom: $gutter;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  .left-container-wrapper {
+    display: flex;
+    width: 33vw;
+    @include tablet {
+      width: 100%;
+      text-align: center;
+    }
+    .left-container {
+      margin: auto;
+      @include tablet {
+        padding-top: $gutter;
+        padding-bottom: $gutter;
+      }
+    }
+  }
+  .middle-container-wrapper {
+    width: 34vw;
+    @include tablet {
+      width: 100%;
+    }
+    border: 2px solid#f2f5fa;
+    img {
+      margin: auto;
+    }
+    .middle-container {
+      margin: $gutter * 2;
+    }
+  }
+  .right-container-wrapper {
+    width: 33vw;
+    @include tablet {
+      width: 100%;
+    }
+    border: 1px solid#f2f5fa;
+    img {
+      margin: auto;
+      padding-top: 0;
+    }
+    a {
+      margin-top: $gutter;
+    }
+    .right-container {
+      margin: $gutter * 2;
+    }
+  }
+}

@@ -21,6 +21,10 @@
         flex-wrap: wrap;
         @include tablet {
           flex-direction: column;
+          margin: auto;
+          .github_stars__item__label {
+            text-align: center;
+          }
         }
       }
       .os-title {
@@ -32,16 +36,6 @@
       .os-messaging {
         @include tablet {
           text-align: center;
-        }
-      }
-      a {
-        margin-bottom: $gutter * 2;
-        margin-top: $gutter;
-        width: 300px;
-        @include tablet {
-          margin: auto;
-          margin-bottom: $gutter;
-          width: 250px;
         }
       }
     }
@@ -59,6 +53,7 @@
       .os-logo-title {
         text-align: center;
         line-height: 1;
+        font-size: 26px;
       }
       .os-messaging,
       .os-subtitle {
@@ -71,20 +66,25 @@
           flex-direction: row;
           flex-wrap: wrap;
           margin: auto;
+          padding-top: 30px;
           @include tablet {
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
           }
           .left-logo {
-            max-width: 150px;
+            max-width: 180px;
             justify-content: center;
             margin: auto;
-            margin-right: $gutter * 4;
-            padding-top: 100px;
-            padding-left: 50px;
-            @include tablet {
+            padding-bottom: 60px;
+            margin-right: 10%;
+            @include phone {
+              margin-right: 0;
               margin: auto;
-              padding-top: 50px;
+            }
+            @include tablet {
+              max-width: 130px;
+              margin: auto;
+              padding: 0;
             }
           }
         }

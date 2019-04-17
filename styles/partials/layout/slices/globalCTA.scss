@@ -63,13 +63,5 @@
         text-align: left;
       }
     }
-    a {
-      width: 170px;
-      height: 50px;
-      color: #09ffff;
-      @include tablet {
-        margin: auto;
-      }
-    }
   }
 }

@@ -19,6 +19,11 @@ import ComboCTA from './ComboCTA';
 import GlobalCTA from './GlobalCTA';
 import DashCTA from './DashCTA';
 import OpenSourceCTA from './OpenSourceCTA';
+import DashSolutions from './DashSolutions';
+import DashProductive from './DashProductive';
+import DashGallery from './DashGallery';
+import EnterpriseAddons from './EnterpriseAddons';
+import DashDeploymentServer from './DashDeploymentServer';
 
 const BlankSlice = () => {
   return null;
@@ -50,12 +55,11 @@ export default class Slices extends React.Component {
       globalcta: GlobalCTA,
       dash_cta: DashCTA,
       combocta: ComboCTA,
-      dash_solutions: BlankSlice,
-      dash_is_production: BlankSlice,
-      dash_app_gallery: BlankSlice,
-      enterprise_addons: BlankSlice,
-      dash_product_family: BlankSlice,
-
+      dash_solutions: DashSolutions,
+      dash_is_production: DashProductive,
+      dash_app_gallery: DashGallery,
+      enterprise_addons: EnterpriseAddons,
+      dash_product_family: DashDeploymentServer,
     };
 
     return (

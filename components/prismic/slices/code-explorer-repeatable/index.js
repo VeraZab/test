@@ -113,7 +113,7 @@ export default class CodeExplorerRepeatable extends React.Component {
 
       if (buttons.length) {
         return (
-          <div className=" buttons">
+          <div className="buttons">
             {buttons.map((button, i) => {
               return <Button key={shortid.generate()} data={button} />;
             })}

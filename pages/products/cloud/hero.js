@@ -11,7 +11,7 @@ const buttons = [
 const data = {
   slug: 'dash-product',
   hero_title: 'Chart Studio Cloud',
-  hero_messaging: [
+  hero_rich_message: [
     {
       type: 'paragraph',
       text: `Modern visualization for the data era.`,
@@ -20,7 +20,7 @@ const data = {
   hero_buttons: buttons,
   hero_graphic: {
     url:
-      'https://plotly.cdn.prismic.io/plotly/2b5e954984847d1addd810ba0c48e084b7a504cc_cs-ent-hero.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F9b1795ba-d52d-4547-abef-528a5019e821_chart_studio_asset-01.png',
   },
 };
 

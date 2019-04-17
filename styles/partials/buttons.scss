@@ -84,24 +84,6 @@
       box-shadow: $drop-shadow-pressed;
     }
   }
-  &-emerald {
-    background: $color-emerald;
-    box-shadow: $drop-shadow;
-    color: white !important;
-    text-shadow: $text-shadow-default;
-    .button-label,
-    .button-icon {
-      color: white !important;
-    }
-    &:hover {
-      background: lighten($color-emerald, 8%);
-      cursor: pointer;
-    }
-    &:active {
-      background: #07aca3;
-      box-shadow: $drop-shadow-pressed;
-    }
-  }
   &-secondary {
     border: 1px solid $color-dodger;
     color: $color-dodger !important;
@@ -115,99 +97,44 @@
     @include active-state-transform;
   }
 }
-.hero-prismic {
-  .button {
-    padding: $unit;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    &-small {
-      padding: $unit/2 $unit;
-      font-size: 12px;
-    }
-    &-primary {
-      background: $color-emerald;
-      &:hover {
-        background: #04ba9e;
-      }
-      &:active {
-        background: #07aca3;
-      }
-      .button-label,
-      .button-icon {
-        color: white !important;
-        text-shadow: $text-shadow-default;
-      }
-    }
-    &-white {
-      background: white;
-      .button-label {
-        text-shadow: none;
-        color: $color-dodger !important;
-      }
-
-      &:hover {
-        background: white;
-        transform: translateY(-5px);
-        .button-label {
-          text-shadow: none;
-          color: $color-dodger;
-        }
-      }
-    }
-    &-secondary {
-      padding: calc(#{$unit} - 1px);
-      border-color: white;
-      color: white !important;
-      border-width: 2px;
-      box-shadow: $drop-shadow;
-      text-shadow: $text-shadow-default;
-      &:hover {
-        background: white;
-        color: $color-rhino-dark !important;
-        text-shadow: none;
-        border-color: white !important;
-      }
-      &:active {
-        color: $color-lavender !important;
-      }
+.cta-buttons {
+  display: flex;
+  #header-button {
+    margin: 0;
+    margin-left: $gutter;
+  }
+  @include tablet {
+    margin: auto;
+  }
+  @include phone {
+    margin: auto;
+  }
+  .header-button {
+    width: 200px;
+  }
+  .addon-button {
+    margin: auto;
+    margin-bottom: $gutter;
+  }
+  a {
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    width: 300px;
+    color: white;
+    @include tablet {
+      max-width: 90%;
+      margin: auto;
+      margin-top: $gutter;
+      margin-bottom: $gutter;
     }
   }
-}
-
-.special-link {
-  position: relative;
-  text-decoration: none !important;
-  color: white !important;
-  background-image: none !important;
-  padding: 0 4px;
-  &:active,
-  &:visited {
-    color: white !important;
-  }
-  &:hover {
-    color: white !important;
-
-    &::after {
-      height: 100%;
+  a:nth-of-type(2) {
+    @include tablet {
+      margin-top: 0;
     }
   }
-
-  &-label {
-    position: relative;
-    z-index: 2;
-    color: white !important;
-    text-shadow: $text-shadow-default;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: $color-aqua;
-    z-index: 1;
-    @include trans;
+  @include tablet {
+    flex-direction: column;
+    margin: auto;
   }
 }

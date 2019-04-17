@@ -10,6 +10,7 @@
     .pricing__card__header__and__features__section {
       display: flex;
       box-shadow: 0px 2px 14px rgba($color-rhino-dark, 0.2);
+      margin-bottom: $gutter * 2;
       @include media('<800px') {
         flex-direction: column;
       }
@@ -33,6 +34,7 @@
             line-height: 1.1;
             text-align: center;
             padding-bottom: 20px;
+            padding-top: 40px;
             @include media('<800px') {
               padding-top: 40px;
             }
@@ -59,21 +61,6 @@
           }
           h2 {
             color: $color-rhino-dark;
-          }
-        }
-        .pricing__card__header__actions {
-          font-size: 0.5rem !important;
-          button {
-            color: white;
-            background-color: $color-dodger;
-            text-transform: uppercase;
-            font-weight: 450;
-            font-size: 12px;
-            padding: 5px 15px;
-          }
-          button:hover {
-            border: 1px solid $color-aqua;
-            color: $color-aqua;
           }
         }
       }
@@ -124,8 +111,6 @@
       }
     }
     .cta-buttons {
-      padding-top: $gutter * 3;
-      padding-bottom: $gutter * 3;
       margin: auto;
       width: 200px;
     }
@@ -134,6 +119,7 @@
       display: flex;
       z-index: 15;
       flex-direction: column;
+      margin-top: $gutter * 2;
       @include media('<800px') {
         flex-direction: column;
       }

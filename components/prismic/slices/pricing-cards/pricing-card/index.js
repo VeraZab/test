@@ -15,18 +15,16 @@ function PricingCard(props) {
         </div>
       </div>
       <div className="cta-buttons">
-        <div className="buttons-container">
-          <a
-            className="button button-primary"
-            href={
-              card.primary.title.includes('Dash')
-                ? '/dash/pricing#advanced-cards'
-                : '/online-chart-maker'
-            }
-          >
-            <div className="button-label">Learn More</div>
-          </a>
-        </div>
+        <a
+          className="button button-primary addon-button"
+          href={
+            card.primary.title.includes('Dash')
+              ? '/dash/pricing#advanced-cards'
+              : '/online-chart-maker'
+          }
+        >
+          <div className="button-label">Learn More</div>
+        </a>
       </div>
       <div className="pricing__card__addons__section">
         <PricingCardAddons data={card.items} />

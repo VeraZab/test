@@ -9,7 +9,7 @@ const meta = {
     'Learn how you can build a data exporter for your site, to easily send data from your web site to graph in Plotly. Plotly offers a clean, simple, and beautiful visualization tool for your data and your users.',
   url: 'https://plot.ly/database-connectors/',
   image:
-    'https://plotly.cdn.prismic.io/plotly/9963abe714d6794fa6189806ff82cbe442378600_plotly-logo-white.png',
+    'https://prismic-io.s3.amazonaws.com/plotly%2F4359caa7-42dd-4a63-95d2-e37a35a154f8_plotly+logo.png',
 };
 
 export default () => (

@@ -1,5 +1,4 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
-import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 
 const OpenSource = props => {
   return (
@@ -14,62 +13,10 @@ const OpenSource = props => {
           )}
           {props.data.primary.os_url && props.data.primary.os_label && (
             <>
-              <a className=" button button-primary" href={props.data.primary.os_url.url}>
-                <div className="button-label">{props.data.primary.os_label}</div>
-              </a>
-              <div className="os-gh-stars">
-                <div className="dash-stars">
-                  <GithubStarsRepeatable
-                    start
-                    slice={{
-                      items: [
-                        {
-                          repository_url: {url: 'https://github.com/plotly/dash'},
-                          label: 'DASH',
-                        },
-                      ],
-                    }}
-                  />
-                </div>
-                <div className="ploltyjs-stars">
-                  <GithubStarsRepeatable
-                    start
-                    slice={{
-                      items: [
-                        {
-                          repository_url: {url: 'https://github.com/plotly/plotly.js'},
-                          label: 'PLOTLY.JS',
-                        },
-                      ],
-                    }}
-                  />
-                </div>
-                <div className="ploltypy-stars">
-                  <GithubStarsRepeatable
-                    start
-                    slice={{
-                      items: [
-                        {
-                          repository_url: {url: 'https://github.com/plotly/plotly.py'},
-                          label: 'PLOTLY.PY',
-                        },
-                      ],
-                    }}
-                  />
-                </div>
-                <div className="ploltyjs-stars">
-                  <GithubStarsRepeatable
-                    start
-                    slice={{
-                      items: [
-                        {
-                          repository_url: {url: 'https://github.com/ropensci/plotly/'},
-                          label: 'PLOTLY.R',
-                        },
-                      ],
-                    }}
-                  />
-                </div>
+              <div className="cta-buttons">
+                <a className="button button-primary" href={props.data.primary.os_url.url}>
+                  <div className="button-label">{props.data.primary.os_label}</div>
+                </a>
               </div>
             </>
           )}
