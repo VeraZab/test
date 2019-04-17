@@ -12,7 +12,7 @@
   @include mid-sized {
   }
   @include desktop {
-    height: 60vh;
+    height: 75vh;
   }
   @include large-display {
     height: 80vh;
@@ -52,6 +52,7 @@
   .hero-graphic-container {
     width: 50%;
     padding-right: 60px;
+    padding-top: $header-height;
 
     @include tablet {
       padding-top: $gutter;
@@ -69,11 +70,9 @@
       img {
         @include mid-sized {
           max-width: 500px;
-          padding-top: 50px;
         }
         @include large-display {
           max-width: 700px;
-          padding-top: 50px;
         }
       }
     }
