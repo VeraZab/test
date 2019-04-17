@@ -4,28 +4,12 @@ import Hero from './hero';
 import Type from 'components/styled/typography';
 import SupportBanner from 'components/cta-banner/static/support/support-banner';
 import {offset, Plan, StyledPricing} from './partials/plans';
-import {
-  CheckIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  CloseIcon,
-} from 'mdi-react';
+import {CheckIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon} from 'mdi-react';
 import {Button} from 'components/styled/button';
 import numeral from 'numeral';
 import {features, PLANS, PLANS_TO_HIDE} from './data/new';
-
-const meta = {
-  title: 'Pricing and Plans',
-  description:
-    'Plotly is free to use for public charts and dashboards. Collaborate on unlimited private charts and dashboards with a paid plan.',
-  url: 'https://plot.ly/products/cloud/',
-  twitter: {
-    label1: 'Most Popular Plan',
-    data1: 'Plotly Professional @ $840/year',
-  },
-  image:
-    'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png',
-};
+import {fetchData} from 'lib/fetchData';
+import getCookies from 'next-cookies';
 
 const filteredAmount = items =>
   items.filter(item => PLANS_TO_HIDE.find(hide => hide !== item.slug)).length + 1;
@@ -184,7 +168,7 @@ export default class CloudPricing extends React.Component {
     ];
 
     return (
-      <Layout meta={meta} pathname={this.props.pathname}>
+      <Layout meta={this.props.meta} pathname={this.props.pathname} nav={this.props.nav}>
         <Hero />
         <StyledPricing>
           <Plans
@@ -216,3 +200,25 @@ export default class CloudPricing extends React.Component {
     );
   }
 }
+
+CloudPricing.getInitialProps = async context => {
+  const meta = {
+    title: 'Pricing and Plans',
+    description:
+      'Plotly is free to use for public charts and dashboards. Collaborate on unlimited private charts and dashboards with a paid plan.',
+    url: 'https://plot.ly/products/cloud/',
+    twitter: {
+      label1: 'Most Popular Plan',
+      data1: 'Plotly Professional @ $840/year',
+    },
+    image:
+      'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png',
+  };
+  const response = await fetchData(getCookies(context)['io.prismic.preview']);
+  const nav = response.find(doc => doc.type === 'nav');
+
+  return {
+    nav,
+    meta,
+  };
+};

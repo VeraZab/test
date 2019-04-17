@@ -1,7 +1,6 @@
 import PricingCardHeader from 'components/prismic/slices/pricing-cards/pricing-card/header';
 import PricingCardFeatures from 'components/prismic/slices/pricing-cards/pricing-card/features';
 import PricingCardAddons from 'components/prismic/slices/pricing-cards/pricing-card/addons';
-import Link from 'next/link';
 
 function PricingCard(props) {
   const {card} = props;

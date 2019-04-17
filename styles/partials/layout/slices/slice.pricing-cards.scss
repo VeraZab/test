@@ -54,8 +54,8 @@
         .pricing__card__header__frequency {
           font-size: 0.8rem;
           padding-bottom: 10px;
+          text-align: center;
           @include media('<800px') {
-            width: 200px;
             margin: auto;
           }
           h2 {
@@ -109,6 +109,13 @@
         }
       }
     }
+    .cta-buttons {
+      padding-top: $gutter * 3;
+      padding-bottom: $gutter * 3;
+      margin: auto;
+      width: 200px;
+    }
+
     .pricing__card__addons__section {
       display: flex;
       z-index: 15;
