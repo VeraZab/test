@@ -58,6 +58,7 @@
     .gallery-graphic {
       width: 50%;
       margin-bottom: $gutter;
+      margin-right: $gutter * 2;
       @include tablet {
         width: 100%;
         text-align: center;
@@ -99,6 +100,7 @@
     .gallery-graphic {
       width: 50%;
       margin-bottom: $gutter;
+      margin-right: $gutter * 2;
       @include tablet {
         width: 100%;
         text-align: center;
