@@ -34,6 +34,7 @@
             line-height: 1.1;
             text-align: center;
             padding-bottom: 20px;
+            padding-top: 40px;
             @include media('<800px') {
               padding-top: 40px;
             }
@@ -110,8 +111,6 @@
       }
     }
     .cta-buttons {
-      padding-top: $gutter * 3;
-      padding-bottom: $gutter * 3;
       margin: auto;
       width: 200px;
     }

@@ -1,5 +1,4 @@
 import Browser from 'components/browser';
-import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
@@ -25,7 +24,7 @@ const Hero = props => {
           >
             <h1 className="hero-title">{props.content.hero_title}</h1>
             <div className="hero-subtitle">
-              {props.content.hero_messaging[0] && renderPrismic(props.content.hero_messaging)}
+              {props.content.hero_rich_message && renderPrismic(props.content.hero_rich_message)}
             </div>
             <div className="cta-buttons">
               {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
