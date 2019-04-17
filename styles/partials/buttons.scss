@@ -120,14 +120,12 @@
     @include tablet {
       max-width: 90%;
       margin: auto;
+      margin-top: $gutter;
       margin-bottom: $gutter;
     }
   }
   @include tablet {
     flex-direction: column;
-    margin: auto;
-  }
-  #enterprise-addons {
     margin: auto;
   }
 }

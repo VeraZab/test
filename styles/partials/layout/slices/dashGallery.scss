@@ -2,9 +2,8 @@
   margin: $gutter * 3;
   @include tablet {
     margin: $gutter;
+    margin-top: 48px;
   }
-  padding-top: $gutter * 2;
-  padding-bottom: $gutter * 3;
   .oil-and-gas-active {
     display: flex;
     flex-direction: row;
@@ -15,9 +14,12 @@
     .gallery-graphic {
       width: 50%;
       margin-bottom: $gutter;
+      margin-right: $gutter * 2;
       @include tablet {
-        width: 100%;
         text-align: center;
+        margin: auto;
+        padding-bottom: $gutter;
+        min-width: 80%;
       }
     }
     .gallery-messaging {
@@ -130,11 +132,12 @@
   }
   .slider-container {
     display: flex;
+    height: 70px;
     .sliders {
       display: flex;
       flex-direction: row;
       margin: auto;
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
       .oil-slider,

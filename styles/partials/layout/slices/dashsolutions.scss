@@ -23,9 +23,7 @@
     color: #96a6b5;
     letter-spacing: 2px;
     padding-bottom: $gutter/2;
-    @include tablet {
-      text-align: center;
-    }
+    text-align: center;
   }
   .solutions-title {
     line-height: 0.1;
@@ -49,6 +47,10 @@
     }
     .left-container {
       margin: auto;
+      @include tablet {
+        padding-top: $gutter;
+        padding-bottom: $gutter;
+      }
     }
   }
   .middle-container-wrapper {

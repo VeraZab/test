@@ -10,7 +10,7 @@ const DashProductive = props => {
       </div>
       <div className="features-container">
         <div className="features-row">
-          <div className="productive">
+          <div className="productive features-row-item">
             <div className="graphic-container">
               <img src={items[0].graphic.url} />
             </div>
@@ -19,7 +19,7 @@ const DashProductive = props => {
               <div className="messaging">{items[0].messaging1}</div>
             </div>
           </div>
-          <div className="customizable">
+          <div className="customizable features-row-item">
             <div className="graphic-container">
               <img src={items[1].graphic.url} />
             </div>
@@ -30,7 +30,7 @@ const DashProductive = props => {
           </div>
         </div>
         <div className="features-row">
-          <div className="lightweight">
+          <div className="lightweight features-row-item">
             <div className="graphic-container">
               <img src={items[2].graphic.url} />
             </div>
@@ -39,7 +39,7 @@ const DashProductive = props => {
               <div className="messaging">{items[2].messaging1}</div>
             </div>
           </div>
-          <div className="control">
+          <div className="control features-row-item">
             <div className="graphic-container">
               <img src={items[3].graphic.url} />
             </div>

@@ -26,9 +26,12 @@
       }
       .graphic-container {
         align-self: center;
-        margin: $gutter;
-        width: 50%;
+        min-width: 60px;
+        padding-right: $gutter;
 
+        @include phone {
+          padding-bottom: 10px;
+        }
       }
       .productive-copy-container {
         align-self: center;
@@ -37,10 +40,12 @@
           margin-bottom: $gutter/2;
         }
       }
+      .features-row-item {
+        padding: 50px;
+      }
       .productive {
         display: flex;
         background: #010077;
-        padding: $gutter * 3;
         width: 50%;
         @include tablet {
           width: 100%;
@@ -68,7 +73,6 @@
       .customizable {
         display: flex;
         background: #ecf9ff;
-        padding: $gutter * 3;
         width: 50%;
         @include tablet {
           width: 100%;
@@ -93,7 +97,6 @@
       .lightweight {
         display: flex;
         background: #ecf9ff;
-        padding: $gutter * 3;
         width: 50%;
         @include tablet {
           width: 100%;
@@ -115,7 +118,6 @@
       .control {
         display: flex;
         background: #010077;
-        padding: $gutter * 3;
         width: 50%;
 
         @include phone {

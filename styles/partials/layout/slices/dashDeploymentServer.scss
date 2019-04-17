@@ -32,6 +32,7 @@
     @include tablet {
       width: 100%;
       margin: 0;
+      margin-bottom: $gutter;
     }
     p {
       width: 100%;
@@ -89,6 +90,9 @@
     @include tablet {
       width: 100%;
       margin: 0;
+    }
+    @include phone {
+      margin-bottom: $gutter;
     }
     p {
       width: 100%;
