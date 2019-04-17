@@ -53,6 +53,7 @@
         .pricing__card__header__frequency {
           font-size: 0.8rem;
           padding-bottom: 10px;
+          text-align: center;
           @include media('<800px') {
             width: 200px;
             margin: auto;
