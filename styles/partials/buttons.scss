@@ -128,6 +128,11 @@
       margin-bottom: $gutter;
     }
   }
+  a:nth-of-type(2) {
+    @include tablet {
+      margin-top: 0;
+    }
+  }
   @include tablet {
     flex-direction: column;
     margin: auto;

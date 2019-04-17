@@ -41,63 +41,6 @@ const Hero = props => {
                 </a>
               ) : null}
             </div>
-            <div className="github-stars hide-in-percy">
-              {props.content.keywords === 'home' ||
-              props.content.keywords === 'dash-services' ||
-              props.content.slug === 'dash-product' ||
-              props.content.keywords === 'dash-product' ? (
-                <GithubStarsRepeatable
-                  start
-                  slice={{
-                    items: [
-                      {
-                        repository_url: {url: 'https://github.com/plotly/dash'},
-                        label: null,
-                      },
-                    ],
-                  }}
-                />
-              ) : null}
-              {props.content.keywords === 'plotly-py' ? (
-                <GithubStarsRepeatable
-                  start
-                  slice={{
-                    items: [
-                      {
-                        repository_url: {url: 'https://github.com/plotly/plotly.py'},
-                        label: null,
-                      },
-                    ],
-                  }}
-                />
-              ) : null}
-              {props.content.keywords === 'plotly-r' ? (
-                <GithubStarsRepeatable
-                  start
-                  slice={{
-                    items: [
-                      {
-                        repository_url: {url: 'https://github.com/ropensci/plotly'},
-                        label: null,
-                      },
-                    ],
-                  }}
-                />
-              ) : null}
-              {props.content.keywords === 'plotly-js' ? (
-                <GithubStarsRepeatable
-                  start
-                  slice={{
-                    items: [
-                      {
-                        repository_url: {url: 'https://github.com/plotly/plotly.js'},
-                        label: null,
-                      },
-                    ],
-                  }}
-                />
-              ) : null}
-            </div>
           </div>
           <div className="hero-graphic-container">
             {props.content.hero_graphic.url ? (

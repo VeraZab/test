@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 90vh;
+  max-height: 850px;
   @include tablet {
     flex-direction: column;
     height: auto;
@@ -16,6 +17,10 @@
   }
   @include large-display {
     height: 80vh;
+  }
+
+  @include phone {
+    height: 100vh;
   }
   .hero-left {
     display: flex;
@@ -30,6 +35,10 @@
       margin: auto;
       width: 100%;
       padding-top: 200px;
+    }
+    @include phone {
+      padding-bottom: $gutter;
+      padding-top: 0;
     }
     .cta-buttons {
       @include tablet {
@@ -53,6 +62,9 @@
     width: 50%;
     padding-right: 60px;
     padding-top: $header-height;
+    @include phone {
+      display: none;
+    }
 
     @include tablet {
       padding-top: $gutter;

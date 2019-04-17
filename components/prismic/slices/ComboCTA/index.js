@@ -1,5 +1,4 @@
 import React from 'react';
-import GithubStarsRepeatable from 'components/prismic/slices/github-stars-repeatable';
 
 class ComboCTA extends React.Component {
   constructor(props) {
@@ -44,19 +43,6 @@ class ComboCTA extends React.Component {
               <a className="button button-secondary" href={items[0].url_link}>
                 <div className="button-label">{items[0].url_label}</div>
               </a>
-            </div>
-            <div className="hide-in-percy">
-              <GithubStarsRepeatable
-                start
-                slice={{
-                  items: [
-                    {
-                      repository_url: {url: 'https://github.com/plotly/dash'},
-                      label: null,
-                    },
-                  ],
-                }}
-              />
             </div>
             <div className="dash-cta-anchor">
               <div className="anchor-link">
