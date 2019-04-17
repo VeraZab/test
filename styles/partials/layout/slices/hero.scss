@@ -3,7 +3,6 @@
   background: #00004f;
   justify-content: center;
   align-items: center;
-  height: 90vh;
   max-height: 850px;
   @include tablet {
     flex-direction: column;
@@ -13,10 +12,8 @@
   @include mid-sized {
   }
   @include desktop {
-    height: 75vh;
   }
   @include large-display {
-    height: 80vh;
   }
 
   @include phone {
