@@ -11,7 +11,7 @@ const buttons = [
 const data = {
   slug: 'dash-product',
   hero_title: 'Chart Studio Cloud',
-  hero_messaging: [
+  hero_rich_message: [
     {
       type: 'paragraph',
       text: `Modern visualization for the data era.`,
