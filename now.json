@@ -1,4 +1,10 @@
 {
-  "name": "plotly-www",
-  "type": "npm"
+  "name": "plotly-next-staging",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
 }

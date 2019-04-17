@@ -44,11 +44,11 @@ function PricingCardHeader(props) {
           </a>
         ) : props.pricing_mode === 'On-Premises: Air-Gapped Install' ? (
           <a href={props.data.button_two_link.url}>
-            <button type="button">{props.data.button_two_label}</button>
+            <div className="button-label">{props.data.button_two_label}</div>
           </a>
         ) : (
-          <a href={props.data.button_three_link.url}>
-            <button type="button">{props.data.button_three_label}</button>
+          <a className="button button-primary" href={props.data.button_three_link.url}>
+            <div className="button-label">{props.data.button_three_label}</div>
           </a>
         )}
       </div>

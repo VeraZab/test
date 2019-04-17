@@ -1,7 +1,6 @@
 import PricingCardHeader from 'components/prismic/slices/pricing-cards/pricing-card/header';
 import PricingCardFeatures from 'components/prismic/slices/pricing-cards/pricing-card/features';
 import PricingCardAddons from 'components/prismic/slices/pricing-cards/pricing-card/addons';
-import Link from 'next/link';
 
 function PricingCard(props) {
   const {card} = props;
@@ -15,13 +14,19 @@ function PricingCard(props) {
           <PricingCardFeatures data={card.primary} />
         </div>
       </div>
-      <div className="pricing__card__header__and__features__cta">
-        <Link
-          href={card.primary.title.includes('Dash') ? '/dash/pricing#advanced-cards' : '/online-chart-maker'}
-          prefetch
-        >
-          <button type="button">Learn More</button>
-        </Link>
+      <div className="cta-buttons">
+        <div className="buttons-container">
+          <a
+            className="button button-primary"
+            href={
+              card.primary.title.includes('Dash')
+                ? '/dash/pricing#advanced-cards'
+                : '/online-chart-maker'
+            }
+          >
+            <div className="button-label">Learn More</div>
+          </a>
+        </div>
       </div>
       <div className="pricing__card__addons__section">
         <PricingCardAddons data={card.items} />

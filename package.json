@@ -77,9 +77,6 @@
     "prettier": "^1.7.4",
     "react-scripts": "1.1.5"
   },
-  "engines": {
-    "node": "9.x.x"
-  },
   "homepage": "https://plot.ly/",
   "license": "UNLICENSED",
   "repository": "plotly/plotly-next",
@@ -94,6 +91,7 @@
     "heroku-postinstall": "yarn run build",
     "postexport": "cp .next/service-worker.js out/_next",
     "preexport": "yarn run build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "now-build": "next build && next export -o dist"
   }
 }
