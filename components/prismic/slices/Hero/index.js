@@ -21,6 +21,7 @@ const Hero = props => {
                 ? 'dash-pricing'
                 : 'null'
             }
+            style={props.content.hero_graphic.url ? {} : {paddingLeft: '36px'}}
           >
             <h1 className="hero-title">{props.content.hero_title}</h1>
             <div className="hero-subtitle">
