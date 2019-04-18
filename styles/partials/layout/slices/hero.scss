@@ -76,13 +76,11 @@ $hero-content-space: 60px;
     }
 
     img {
+      max-width: 500px;
+      margin: auto;
+
       @include large-display {
         max-width: 700px;
-        margin: auto;
-      }
-
-      @include mid-sized {
-        max-width: 500px;
         margin: auto;
       }
     }
