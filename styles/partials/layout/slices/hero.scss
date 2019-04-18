@@ -66,6 +66,7 @@ $hero-content-space: 60px;
 
   .hero-right {
     width: 50%;
+    padding: 0 $hero-content-space;
 
     @include tablet {
       display: none;
