@@ -4,39 +4,48 @@
   justify-content: center;
   align-items: center;
   max-height: 850px;
+
+  @include large-display {
+  }
+
+  @include desktop {
+  }
+
+  @include mid-sized {
+  }
+
   @include tablet {
     flex-direction: column;
     height: auto;
     padding-top: 100px;
   }
-  @include mid-sized {
-  }
-  @include desktop {
-  }
-  @include large-display {
-  }
 
   @include phone {
     height: 100vh;
   }
+
   .hero-left {
     display: flex;
     width: 50%;
     margin: 60px;
     padding-top: 50px;
     flex-direction: column;
+
     @include large-display {
       margin-left: 20%;
     }
+
     @include tablet {
       margin: auto;
       width: 100%;
       padding-top: 200px;
     }
+
     @include phone {
       padding-bottom: $gutter;
       padding-top: 0;
     }
+
     .cta-buttons {
       @include tablet {
         margin: auto;
@@ -59,28 +68,31 @@
     width: 50%;
     padding-right: 60px;
     padding-top: $header-height;
-    @include phone {
-      display: none;
+
+    @include large-display {
+      padding-right: 300px;
+    }
+
+    @include mid-sized {
+      padding-right: 50px;
     }
 
     @include tablet {
       display: none;
     }
 
-    @include mid-sized {
-      padding-right: 50px;
-    }
-    @include large-display {
-      padding-right: 300px;
+    @include phone {
+      display: none;
     }
 
     .hero-right {
       img {
-        @include mid-sized {
-          max-width: 500px;
-        }
         @include large-display {
           max-width: 700px;
+        }
+
+        @include mid-sized {
+          max-width: 500px;
         }
       }
     }
