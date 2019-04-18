@@ -71,10 +71,6 @@ $hero-content-space: 60px;
       display: none;
     }
 
-    @include phone {
-      display: none;
-    }
-
     img {
       max-width: 500px;
       margin: auto;
