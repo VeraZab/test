@@ -68,14 +68,6 @@ $hero-content-space: 60px;
     width: 50%;
     padding: $hero-content-space;
 
-    @include large-display {
-      padding-right: 300px;
-    }
-
-    @include mid-sized {
-      padding-right: 50px;
-    }
-
     @include tablet {
       display: none;
     }
@@ -87,10 +79,12 @@ $hero-content-space: 60px;
     img {
       @include large-display {
         max-width: 700px;
+        margin: auto;
       }
 
       @include mid-sized {
         max-width: 500px;
+        margin: auto;
       }
     }
   }
