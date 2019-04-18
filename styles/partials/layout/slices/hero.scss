@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   max-height: 850px;
+  padding: $header-height 0;
 
   @include large-display {
   }
@@ -17,7 +18,6 @@
   @include tablet {
     flex-direction: column;
     height: auto;
-    padding-top: 100px;
   }
 
   @include phone {
@@ -27,8 +27,7 @@
   .hero-left {
     display: flex;
     width: 50%;
-    margin: 60px;
-    padding-top: 50px;
+    padding: 60px;
     flex-direction: column;
 
     @include large-display {
@@ -38,12 +37,9 @@
     @include tablet {
       margin: auto;
       width: 100%;
-      padding-top: 200px;
     }
 
     @include phone {
-      padding-bottom: $gutter;
-      padding-top: 0;
     }
 
     .cta-buttons {
@@ -64,10 +60,10 @@
       }
     }
   }
+
   .hero-graphic-container {
     width: 50%;
-    padding-right: 60px;
-    padding-top: $header-height;
+    padding: 60px;
 
     @include large-display {
       padding-right: 300px;
@@ -98,9 +94,11 @@
     }
   }
 }
+
 #cs-hero {
   background: #00004f;
 }
+
 .cs-product-hero {
   margin-bottom: 240px;
 }
