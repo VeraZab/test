@@ -42,9 +42,9 @@ const Hero = props => {
               ) : null}
             </div>
           </div>
-          <div className="hero-graphic-container">
+          <div className="hero-right">
             {props.content.hero_graphic.url ? (
-              <div className="hero-right">
+              <>
                 {props.content.hero_graphic_style &&
                 props.content.hero_graphic_style === 'browser' ? (
                   <Browser>
@@ -53,7 +53,7 @@ const Hero = props => {
                 ) : (
                   <img src={props.content.hero_graphic.url} />
                 )}
-              </div>
+              </>
             ) : null}
           </div>
         </div>
