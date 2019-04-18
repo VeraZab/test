@@ -25,42 +25,36 @@ h6 {
     margin-top: 0;
   }
 }
+
 .hero-title {
   width: 100%;
   margin-bottom: $gutter;
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
-  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
 
   @include large-display {
     font-size: 2.5rem;
+    line-height: 2.5rem;
     text-align: left;
   }
 
   @include mid-sized {
-    font-size: 2rem;
     text-align: left;
   }
 
-  @include desktop {
-    font-size: 2rem;
-    line-height: 1.2;
-    text-align: left;
-  }
-
-  @include tablet {
+  @media (max-width: $shrink-hero-breakpoint) {
+    text-align: center;
     width: 90%;
     margin: auto;
-    font-size: 2rem;
     line-height: 1.2;
-    text-align: center;
     padding-bottom: $gutter/2;
   }
 
   @include phone {
     font-size: 1.7rem;
-    line-height: 1.2;
     text-align: center;
   }
 }
@@ -69,7 +63,7 @@ h6 {
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: white;
-  text-align: center;
+
   p {
     margin-top: 0;
   }
@@ -84,13 +78,7 @@ h6 {
     text-align: left;
   }
 
-  @include desktop {
-    font-size: 1rem;
-    line-height: 1.2;
-    text-align: left;
-  }
-
-  @include tablet {
+  @media (max-width: $shrink-hero-breakpoint) {
     width: 90%;
     margin: auto;
     font-size: 1.2rem;
@@ -104,6 +92,7 @@ h6 {
     line-height: 1.2;
   }
 }
+
 .pale-blue {
   color: #506784;
 }
