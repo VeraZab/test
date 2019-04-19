@@ -61,7 +61,7 @@ class ComboCTA extends React.Component {
           <div className="copy-container">
             <h3 className="pretitle">{items[1].pretitle}</h3>
             <h1 className="title">{items[1].title1}</h1>
-            <h2 className="messaging">{items[1].messaging[0].text}</h2>
+            <div className="messaging">{items[1].messaging[0].text}</div>
             <div className="cta-buttons">
               <a className="button button-primary" href={items[1].url_link2}>
                 <div className="button-label">{items[1].url_label2}</div>

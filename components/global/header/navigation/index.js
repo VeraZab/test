@@ -146,7 +146,7 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={products.submenu_url_link}
-                      className="button button-primary nav-button"
+                      className="button button-secondary nav-button"
                     >
                       <div className="button-label"> {products.submenu_url_label}</div>
                     </a>
@@ -163,7 +163,7 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={products.submenu_url_link2}
-                      className="button button-primary nav-button"
+                      className="button button-secondary nav-button"
                     >
                       <div className="button-label">{products.submenu_url_label2}</div>
                     </a>
@@ -179,7 +179,7 @@ export default class Navigation extends React.Component {
                     </div>
                     <a
                       href={products.submenu_url_link3}
-                      className="button button-primary nav-button"
+                      className="button button-secondary nav-button"
                     >
                       <div className="button-label">{products.submenu_url_label3}</div>
                     </a>
@@ -225,13 +225,13 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={pricing.submenu_url_link2}
-                      className="button button-primary nav-button"
+                      className="button button-secondary nav-button"
                     >
                       <div className="button-label">{pricing.submenu_url_label2}</div>
                     </a>
                     <a
                       href={pricing.submenu_url_link3}
-                      className="button button-primary nav-button"
+                      className="button button-secondary nav-button"
                     >
                       <div className="button-label">{pricing.submenu_url_label3}</div>
                     </a>
@@ -250,7 +250,7 @@ export default class Navigation extends React.Component {
                       for easy app deployment in commercial <br />
                       applications.
                     </span>
-                    <a href="/dash/pricing/" className="button button-primary nav-button">
+                    <a href="/dash/pricing/" className="button button-secondary nav-button">
                       <div className="button-label">Dash Deployment Server </div>
                     </a>
                   </div>
@@ -296,7 +296,7 @@ export default class Navigation extends React.Component {
               <a
                 id="header-button"
                 href={products.submenu_url_link3}
-                className="button button-primary header-button"
+                className="button button-secondary header-button"
               >
                 <div className="button-label">{products.submenu_url_label3}</div>
               </a>
