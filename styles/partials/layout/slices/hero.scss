@@ -1,95 +1,105 @@
+$hero-content-space: 60px;
+
 .hero {
   display: flex;
   background: #00004f;
   justify-content: center;
   align-items: center;
   max-height: 850px;
+  padding: $header-height 0 $header-height/2 0;
+
+  @include large-display {
+  }
+
+  @include desktop {
+  }
+
+  @include mid-sized {
+  }
+
   @include tablet {
     flex-direction: column;
     height: auto;
-    padding-top: 100px;
-  }
-  @include mid-sized {
-  }
-  @include desktop {
-  }
-  @include large-display {
   }
 
   @include phone {
     height: 100vh;
   }
+
   .hero-left {
     display: flex;
     width: 50%;
-    margin: 60px;
-    padding-top: 50px;
+    padding: $hero-content-space;
     flex-direction: column;
+
     @include large-display {
-      margin-left: 20%;
+      margin-left: 10%;
+      margin-top: $gutter * 4;
     }
-    @include tablet {
-      margin: auto;
+
+    @media (max-width: $shrink-hero-breakpoint) {
       width: 100%;
-      padding-top: 200px;
+      margin: auto;
     }
+
     @include phone {
-      padding-bottom: $gutter;
-      padding-top: 0;
+      padding: calc(#{$hero-content-space} * 0.05);
     }
+
     .cta-buttons {
-      @include tablet {
-        margin: auto;
-        a:first-of-type {
-          margin-top: $gutter;
-          margin-bottom: $gutter;
-        }
-        a:nth-of-type(2) {
-          margin-top: 0;
-        }
+      padding: $gutter/2 0;
+
+      @media (max-width: 1265px) {
+        flex-direction: column;
+      }
+
+      @media (max-width: $shrink-hero-breakpoint) {
+        align-items: center;
       }
     }
+
     .github-stars {
       @include tablet {
         margin: auto;
       }
     }
   }
-  .hero-graphic-container {
+
+  .hero-right {
     width: 50%;
-    padding-right: 60px;
-    padding-top: $header-height;
-    @include phone {
+    padding: 0 $hero-content-space;
+
+    @media (max-width: $shrink-hero-breakpoint) {
       display: none;
     }
 
-    @include tablet {
-      padding-top: $gutter;
-      padding-right: 0;
-    }
-
-    @include mid-sized {
-      padding-right: 50px;
-    }
     @include large-display {
-      padding-right: 300px;
+      margin-top: $gutter * 4;
     }
 
-    .hero-right {
-      img {
-        @include mid-sized {
-          max-width: 500px;
-        }
-        @include large-display {
-          max-width: 700px;
-        }
+    img {
+      max-width: 500px;
+      margin: auto;
+
+      @include large-display {
+        max-width: 700px;
+      }
+
+      @media (max-width: 1265px) {
+        max-width: 470px;
+      }
+
+      @media (max-width: $shrink-hero-breakpoint) {
+        display: none;
       }
     }
   }
 }
+
 #cs-hero {
   background: #00004f;
 }
+
 .cs-product-hero {
   margin-bottom: 240px;
 }

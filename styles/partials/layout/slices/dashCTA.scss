@@ -36,7 +36,7 @@
       background: white;
       margin-top: 20%;
       margin-right: 10%;
-      padding: $gutter;
+      padding: $gutter * 3;
 
       @include tablet {
         padding: 0;
