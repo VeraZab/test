@@ -146,9 +146,9 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={products.submenu_url_link}
-                      className="navigation-product-submenu-item hide-on-mobile"
+                      className="button button-primary nav-button"
                     >
-                      <button type="button"> {products.submenu_url_label}</button>
+                      <div className="button-label"> {products.submenu_url_label}</div>
                     </a>
                   </div>
                   <div className="navigation-product-submenu-section">
@@ -163,9 +163,9 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={products.submenu_url_link2}
-                      className="navigation-product-submenu-item hide-on-mobile"
+                      className="button button-primary nav-button"
                     >
-                      <button type="button">{products.submenu_url_label2}</button>
+                      <div className="button-label">{products.submenu_url_label2}</div>
                     </a>
                   </div>
                 </div>
@@ -179,9 +179,9 @@ export default class Navigation extends React.Component {
                     </div>
                     <a
                       href={products.submenu_url_link3}
-                      className="navigation-product-submenu-item hide-on-mobile"
+                      className="button button-primary nav-button"
                     >
-                      <button type="button hide-on-mobile">{products.submenu_url_label3}</button>
+                      <div className="button-label">{products.submenu_url_label3}</div>
                     </a>
                   </div>
                 </div>
@@ -225,15 +225,15 @@ export default class Navigation extends React.Component {
                     </span>
                     <a
                       href={pricing.submenu_url_link2}
-                      className="navigation-product-submenu-item hide-on-mobile"
+                      className="button button-primary nav-button"
                     >
-                      <button type="button">{pricing.submenu_url_label2}</button>
+                      <div className="button-label">{pricing.submenu_url_label2}</div>
                     </a>
                     <a
                       href={pricing.submenu_url_link3}
-                      className="navigation-product-submenu-item hide-on-mobile"
+                      className="button button-primary nav-button"
                     >
-                      <button type="button">{pricing.submenu_url_label3}</button>
+                      <div className="button-label">{pricing.submenu_url_label3}</div>
                     </a>
                   </div>
                 </div>
@@ -250,11 +250,8 @@ export default class Navigation extends React.Component {
                       for easy app deployment in commercial <br />
                       applications.
                     </span>
-                    <a
-                      href="/dash/pricing/"
-                      className="navigation-product-submenu-item hide-on-mobile"
-                    >
-                      <button type="button">Dash Deployment Server </button>
+                    <a href="/dash/pricing/" className="button button-primary nav-button">
+                      <div className="button-label">Dash Deployment Server </div>
                     </a>
                   </div>
                 </div>
@@ -338,11 +335,8 @@ export default class Navigation extends React.Component {
                     Build beautiful, analytical web applications. <br />
                     No JavaScript required.
                   </span>
-                  <a
-                    href="/products/dash/"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button">Learn More</button>
+                  <a href="/products/dash/" className="button button-primary">
+                    <div className="button-label">Learn More</div>
                   </a>
                 </div>
                 <div className="navigation-product-submenu-section">
