@@ -196,29 +196,7 @@ ul li::before {
   }
 }
 
-.copy-container {
-  display: flex;
-  flex-direction: column;
-  height: inherit;
-  margin: $gutter * 2;
-  padding-top: 175px;
-  @include tablet {
-    padding-top: 0;
-  }
-  .title {
-    line-height: 1.2;
-    padding-bottom: $gutter;
-    @include tablet {
-      text-align: center;
-    }
-  }
-  .messaging {
-    padding-bottom: $gutter;
-    @include tablet {
-      text-align: center;
-    }
-  }
-}
+
 .github_stars {
   @include tablet {
     margin: auto;
