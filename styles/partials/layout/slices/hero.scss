@@ -34,6 +34,7 @@ $hero-content-space: 60px;
 
     @include large-display {
       margin-left: 10%;
+      margin-top: $gutter * 4;
     }
 
     @media (max-width: $shrink-hero-breakpoint) {
@@ -70,6 +71,10 @@ $hero-content-space: 60px;
 
     @media (max-width: $shrink-hero-breakpoint) {
       display: none;
+    }
+
+    @include large-display {
+      margin-top: $gutter * 4;
     }
 
     img {
