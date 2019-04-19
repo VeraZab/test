@@ -478,8 +478,8 @@ export default class Navigation extends React.Component {
               </div>
             </div>
           </div>
-          <a href="https://plotly.typeform.com/to/ECUfbT" className="navigation-product-item">
-            <button type="button">Schedule a Demo</button>
+          <a href="https://plotly.typeform.com/to/ECUfbT" className="button button-primary">
+            <div className="button-label">Schedule a Demo</div>
           </a>
         </nav>
       </>
