@@ -21,14 +21,11 @@
           height: 35px;
         }
       }
-      #dash-logo {
-        height: 40px;
-      }
-      #chart-studio-logo {
-        height: 40px;
-      }
-      @media (max-width: 800px) {
+      @media (min-width: 800px) {
         .site-header-logo {
+          img {
+            height: 35px;
+          }
         }
       }
     }

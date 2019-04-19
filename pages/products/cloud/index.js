@@ -212,7 +212,7 @@ CloudPricing.getInitialProps = async context => {
       data1: 'Plotly Professional @ $840/year',
     },
     image:
-      'https://prismic-io.s3.amazonaws.com/plotly%2F76309846-4c30-4767-b894-3b975f231757_chart-studio-logo.png',
+      'https://prismic-io.s3.amazonaws.com/plotly%2F965c3266-e1b3-4935-9ea1-f2c05f00e6b3_chart-studio-logo.png',
   };
   const response = await fetchData(getCookies(context)['io.prismic.preview']);
   const nav = response.find(doc => doc.type === 'nav');
