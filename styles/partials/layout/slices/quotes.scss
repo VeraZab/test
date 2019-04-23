@@ -1,8 +1,12 @@
 .quotes {
-  background: $color-rhino-light-4;
-  padding-top: $gutter * 4;
+  background: white;
+  padding-top: 150px;
+  margin-top: 100px;
+  height: 400px;
   padding-bottom: $gutter;
-
+  background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F797ce34d-268c-4daf-9583-f2656b6cd5cd_quote.png);
+  background-repeat: no-repeat;
+  background-position: 25% -5%;
   .title {
     padding-bottom: 40px;
     text-align: center;
@@ -17,14 +21,16 @@
     @media screen and (max-width: $desktop) {
       max-width: 100%;
     }
-    .quotesItem {
+    .whiteops-active,
+    .goji-active,
+    .invesco-active,
+    .jupyter-active {
       display: flex;
       padding-bottom: 40px;
       @media screen and (max-width: $desktop) {
         flex-direction: column;
       }
       .logo {
-        border-right: 10px solid lightgrey;
         flex: 0 1 10%;
         display: flex;
         .logoImage {
@@ -37,18 +43,42 @@
         }
       }
       .cell {
-        padding-left: 24px;
         padding-right: 24px;
         flex: 0 2 90%;
+        @include tablet {
+          text-align: center;
+          padding: 0;
+          padding-bottom: $gutter;
+          margin-bottom: 100px;
+        }
         .author {
           padding-top: 6px;
-          text-align: right;
+          text-align: left;
           font-style: italic;
-        }
-        .author::before {
-          content: '— ';
+          color: $color-dodger;
+          @include tablet {
+            text-align: center;
+          }
         }
       }
     }
+    .whiteops,
+    .goji,
+    .invesco,
+    .jupyter {
+      display: none;
+    }
+  }
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  @include tablet {
+    margin-bottom: 100px;
+  }
+  .sliders {
+    flex-direction: row;
+    padding-right: $gutter;
   }
 }
