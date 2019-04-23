@@ -64,7 +64,7 @@ const renderItems = items =>
     <JobListing key={i}>
       <JobsHeader>
         <div>
-          <JobsTime>{misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}</JobsTime>
+          <JobsTime id={i + 1}>{misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}</JobsTime>
           <div className="content-section-p-title">
             <h2>{position}</h2>
           </div>
