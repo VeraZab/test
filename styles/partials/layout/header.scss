@@ -9,8 +9,7 @@
     flex-grow: 1;
     justify-content: space-between;
     max-width: 95vw;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     margin: 0 auto;
     .site-header--section-left {
       height: 40px;
@@ -157,7 +156,6 @@
           position: absolute;
           top: 12px;
           background: #07073d;
-          padding: 24px 24px;
           pointer-events: none;
           opacity: 0;
           display: flex;
@@ -168,53 +166,45 @@
         }
         .navigation-product-submenu-left {
           border-right: 1px solid #072e68;
-          margin-right: 30px;
+          padding: calc(#{$gutter} * 0.75);
         }
-        .navigation-product-submenu-left .navigation-product-submenu-item {
-          padding-right: 15px;
+        .navigation-product-submenu-right {
+          padding: calc(#{$gutter} * 0.75);
         }
         .navigation-product-submenu-right img {
           padding-bottom: 20px;
           padding-top: 10px;
+          margin: auto;
         }
         .navigation-product-submenu-right .navigation-product-submenu-item {
           padding-bottom: 15px;
         }
         .navigation-product-submenu a {
           font-size: 12px;
-          max-width: 250px;
+          width: 250px;
           margin-top: 5px;
           margin-bottom: 15px;
-          margin-right: 15px;
         }
         .navigation-product-submenu-section {
+          font-family: 'Open Sans', sans-serif;
           display: flex;
           flex-direction: column;
+          padding: calc(#{$gutter} * 0.75);
           .navigation-product-submenu-section-title {
             text-transform: uppercase;
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
             letter-spacing: 3px;
             font-size: 14px;
-            line-height: 20px;
             font-weight: bold;
             opacity: 1;
             color: #119dff;
-            text-align: center;
-            margin: 0;
           }
           #community-forum {
-            padding-top: 20px;
-            padding-bottom: 32px;
             border-bottom: 1px solid #072e68;
           }
           #chart-studio {
-            padding-top: 32px;
-            padding-bottom: 20px;
           }
         }
         .navigation-product-submenu-section:not(:last-of-type) {
-          padding-right: 25px;
           padding-bottom: 30px;
         }
         .navigation-product-submenu-section-title {
