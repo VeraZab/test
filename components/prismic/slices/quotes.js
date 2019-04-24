@@ -7,42 +7,43 @@ class Quotes extends React.Component {
     this.state = {mode: 'whiteops'};
 
     this.handleWhiteOpsRightClick = this.handleWhiteOpsRightClick.bind(this);
+
     this.handleGojiRightClick = this.handleGojiRightClick.bind(this);
     this.handleGojiLeftClick = this.handleGojiLeftClick.bind(this);
+
     this.handleInvescoRightClick = this.handleInvescoRightClick.bind(this);
     this.handleInvescoLeftClick = this.handleInvescoLeftClick.bind(this);
+    
     this.handleJupyterLeftClick = this.handleJupyterLeftClick.bind(this);
   }
 
   handleWhiteOpsClick() {
-    if (this.state.mode != 'whiteops') {
+    if (this.state.mode !== 'whiteops') {
       this.setState({mode: 'whiteops'});
       return;
     }
   }
 
   handleGojiClick() {
-    if (this.state.mode != 'goji') {
+    if (this.state.mode !== 'goji') {
       this.setState({mode: 'goji'});
       return;
     }
   }
 
   handleInvescoClick() {
-    if (this.state.mode != 'invesco') {
+    if (this.state.mode !== 'invesco') {
       this.setState({mode: 'invesco'});
       return;
     }
   }
 
   handleJupyterClick() {
-    if (this.state.mode != 'jupyter') {
+    if (this.state.mode !== 'jupyter') {
       this.setState({mode: 'jupyter'});
       return;
     }
   }
-
-  handleLeftClick() {}
 
   handleWhiteOpsRightClick() {
     this.setState({mode: 'goji'});
@@ -76,7 +77,6 @@ class Quotes extends React.Component {
 
   render() {
     const items = this.props.data.items;
-    console.log(this.state.count);
     return (
       <>
         <div className="quotes">
