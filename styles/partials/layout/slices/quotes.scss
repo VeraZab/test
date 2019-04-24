@@ -1,12 +1,12 @@
 .quotes {
   background: white;
   padding-top: 150px;
-  margin-top: 150px;
   height: 400px;
   padding-bottom: $gutter;
+  border-top: 3px solid #dce4ea;
   background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F797ce34d-268c-4daf-9583-f2656b6cd5cd_quote.png);
   background-repeat: no-repeat;
-  background-position: 25% -45%;
+  background-position: 25% 5%;
   .title {
     padding-bottom: 40px;
     text-align: center;
@@ -21,6 +21,9 @@
     flex-direction: column;
     @media screen and (max-width: $desktop) {
       max-width: 100%;
+    }
+    .anchor-graphic-left {
+      padding-right: 40px;
     }
     .whiteops-active,
     .goji-active,

@@ -6,10 +6,12 @@ class Quotes extends React.Component {
 
     this.state = {mode: 'whiteops'};
 
-    this.handleWhiteOpsClick = this.handleWhiteOpsClick.bind(this);
-    this.handleGojiClick = this.handleGojiClick.bind(this);
-    this.handleInvescoClick = this.handleInvescoClick.bind(this);
-    this.handleJupyterClick = this.handleJupyterClick.bind(this);
+    this.handleWhiteOpsRightClick = this.handleWhiteOpsRightClick.bind(this);
+    this.handleGojiRightClick = this.handleGojiRightClick.bind(this);
+    this.handleGojiLeftClick = this.handleGojiLeftClick.bind(this);
+    this.handleInvescoRightClick = this.handleInvescoRightClick.bind(this);
+    this.handleInvescoLeftClick = this.handleInvescoLeftClick.bind(this);
+    this.handleJupyterLeftClick = this.handleJupyterLeftClick.bind(this);
   }
 
   handleWhiteOpsClick() {
@@ -40,8 +42,41 @@ class Quotes extends React.Component {
     }
   }
 
+  handleLeftClick() {}
+
+  handleWhiteOpsRightClick() {
+    this.setState({mode: 'goji'});
+    return;
+  }
+
+  handleGojiRightClick() {
+    this.setState({mode: 'invesco'});
+    return;
+  }
+
+  handleGojiLeftClick() {
+    this.setState({mode: 'whiteops'});
+    return;
+  }
+
+  handleInvescoRightClick() {
+    this.setState({mode: 'jupyter'});
+    return;
+  }
+
+  handleInvescoLeftClick() {
+    this.setState({mode: 'goji'});
+    return;
+  }
+
+  handleJupyterLeftClick() {
+    this.setState({mode: 'invesco'});
+    return;
+  }
+
   render() {
     const items = this.props.data.items;
+    console.log(this.state.count);
     return (
       <>
         <div className="quotes">
@@ -55,8 +90,14 @@ class Quotes extends React.Component {
                 <div className="author">{items[0].author1[0].text}</div>
                 <div>{items[0].quote1[0].text}</div>
               </div>
+              <div onClick={this.handleWhiteOpsRightClick} className="anchor-graphic">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
+              </div>
             </div>
             <div className={this.state.mode === 'goji' ? 'goji-active' : 'goji'}>
+              <div onClick={this.handleGojiLeftClick} className="anchor-graphic-left">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
+              </div>
               <div className="logo">
                 <img className="logoImage" alt="client logo" src={items[1].logo.url} />
               </div>
@@ -64,8 +105,14 @@ class Quotes extends React.Component {
                 <div className="author">{items[1].author1[0].text}</div>
                 <div>{items[1].quote1[0].text}</div>
               </div>
+              <div onClick={this.handleGojiRightClick} className="anchor-graphic">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
+              </div>
             </div>
             <div className={this.state.mode === 'invesco' ? 'invesco-active' : 'invesco'}>
+              <div onClick={this.handleInvescoLeftClick} className="anchor-graphic-left">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
+              </div>
               <div className="logo">
                 <img className="logoImage" alt="client logo" src={items[2].logo.url} />
               </div>
@@ -73,8 +120,14 @@ class Quotes extends React.Component {
                 <div className="author">{items[2].author1[0].text}</div>
                 <div>{items[2].quote1[0].text}</div>
               </div>
+              <div onClick={this.handleInvescoRightClick} className="anchor-graphic">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
+              </div>
             </div>
             <div className={this.state.mode === 'jupyter' ? 'jupyter-active' : 'jupyter'}>
+              <div onClick={this.handleJupyterLeftClick} className="anchor-graphic-left">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
+              </div>
               <div className="logo">
                 <img className="logoImage" alt="client logo" src={items[3].logo.url} />
               </div>
