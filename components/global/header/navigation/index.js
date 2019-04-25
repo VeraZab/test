@@ -207,17 +207,7 @@ export default class Navigation extends React.Component {
                     <div className="navigation-product-submenu-section-title">
                       <span className="hide-on-mobile">{pricing.submenu_label2}</span>
                       <a href={pricing.submenu_url_link2} className="hide-on-desktop">
-                        {pricing.submenu_url_label2}
-                      </a>
-                    </div>
-                    <div className="navigation-product-submenu-section-title">
-                      <a href={pricing.submenu_url_link3} className="hide-on-desktop">
-                        {pricing.submenu_label3}
-                      </a>
-                    </div>
-                    <div className="navigation-product-submenu-section-title">
-                      <a href={pricing.submenu_url_link} className="hide-on-desktop">
-                        {pricing.submenu_label}
+                        Chart Studio
                       </a>
                     </div>
                     <span className="navigation-product-submenu-item hide-on-mobile">
@@ -241,6 +231,9 @@ export default class Navigation extends React.Component {
                   <div className="navigation-product-submenu-section">
                     <div className="navigation-product-submenu-section-title">
                       <span className="hide-on-mobile">Dash</span>
+                      <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                        Dash
+                      </a>
                     </div>
                     <span
                       id="dds-button"
@@ -272,19 +265,17 @@ export default class Navigation extends React.Component {
                     : 'navigation-product-submenu'
                 }
               >
-                <div className="navigation-product-submenu-section">
+                <div className="navigation-product-submenu-section" id="community-forum">
                   <a
                     href={signUp.submenu_url_link}
-                    id="community-forum"
                     className="navigation-product-submenu-section-title"
                   >
                     {signUp.submenu_label}
                   </a>
-                  <br className="hide-on-desktop" />
-                  <br className="hide-on-desktop" />
+                </div>
+                <div className="navigation-product-submenu-section" id="chart-studio">
                   <a
                     href={signUp.submenu_url_link2}
-                    id="chart-studio"
                     className="navigation-product-submenu-section-title"
                   >
                     {signUp.submenu_label2}
@@ -466,8 +457,8 @@ export default class Navigation extends React.Component {
                 >
                   Community Forum
                 </a>
-                <br className="hide-on-desktop" />
-                <br className="hide-on-desktop" />
+              </div>
+              <div className="navigation-product-submenu-section">
                 <a
                   href="/Auth/login/?action=signup#/"
                   id="chart-studio"
