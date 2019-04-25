@@ -15,16 +15,10 @@
       height: 40px;
       padding-top: 2px;
       width: 99%;
-      #logo {
-        @include tablet {
+
+      .site-header-logo {
+        img {
           height: 35px;
-        }
-      }
-      @media (min-width: 800px) {
-        .site-header-logo {
-          img {
-            height: 35px;
-          }
         }
       }
     }
