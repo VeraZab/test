@@ -28,6 +28,10 @@
     }
 
     .site-header--section-right {
+      a {
+        text-decoration: none !important;
+      }
+
       .site-header-nav {
         flex-grow: 1;
         display: flex;
@@ -162,13 +166,14 @@
             .navigation-product-submenu-right {
               padding: calc(#{$gutter} * 0.25);
               img {
-                padding: 10px 0;
+                padding-bottom: 22px;
                 margin: auto;
               }
             }
 
             .navigation-product-submenu-section {
               padding: calc(#{$gutter} * 0.75);
+              min-width: 250px;
 
               .navigation-product-submenu-section-title {
                 text-transform: uppercase;
@@ -178,6 +183,14 @@
                 opacity: 1;
                 color: #119dff;
                 line-height: 20px;
+              }
+
+              .navigation-product-submenu-section-title#dash-in-action {
+                text-align: center;
+              }
+
+              .navigation-product-submenu-section-title:hover {
+                color: rgba(9, 255, 255, 0.8);
               }
 
               .navigation-product-submenu-item {

@@ -134,54 +134,42 @@ export default class Navigation extends React.Component {
               >
                 <div className="navigation-product-submenu-left">
                   <div className="navigation-product-submenu-section">
-                    <div className="navigation-product-submenu-section-title">
-                      <span className="hide-on-mobile">{products.submenu_label}</span>
-                      <a href="/products/dash/" className="hide-on-desktop">
-                        {products.submenu_label}
-                      </a>
-                    </div>
-                    <span className="navigation-product-submenu-item hide-on-mobile">
-                      Build beautiful, analytical web applications. <br />
-                      No JavaScript required.
-                    </span>
-                    <a
-                      href={products.submenu_url_link}
-                      className="button button-secondary nav-button"
-                    >
-                      <div className="button-label"> {products.submenu_url_label}</div>
+                    <a href={products.submenu_url_link}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{products.submenu_label}</span>
+                        <a href="/products/dash/" className="hide-on-desktop">
+                          {products.submenu_label}
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        Build beautiful, analytical web applications. <br />
+                        No JavaScript required.
+                      </span>
                     </a>
                   </div>
                   <div className="navigation-product-submenu-section">
-                    <div className="navigation-product-submenu-section-title">
-                      <span className="hide-on-mobile">{products.submenu_label2}</span>
-                      <a href="/online-chart-maker/" className="hide-on-desktop">
-                        {pricing.submenu_label2}
-                      </a>
-                    </div>
-                    <span className="navigation-product-submenu-item hide-on-mobile">
-                      {renderPrismic(products.submenu_messaging2)}
-                    </span>
-                    <a
-                      href={products.submenu_url_link2}
-                      className="button button-secondary nav-button"
-                    >
-                      <div className="button-label">{products.submenu_url_label2}</div>
+                    <a href={products.submenu_url_link2}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{products.submenu_label2}</span>
+                        <a href="/online-chart-maker/" className="hide-on-desktop">
+                          {pricing.submenu_label2}
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        {renderPrismic(products.submenu_messaging2)}
+                      </span>
                     </a>
                   </div>
                 </div>
                 <div className="navigation-product-submenu-right">
                   <div className="navigation-product-submenu-section">
-                    <div className="navigation-product-submenu-item hide-on-mobile">
-                      {renderPrismic(products.submenu_messaging31)}
-                    </div>
-                    <div className="navigation-product-submenu-item-header_image hide-on-mobile">
-                      <img src={products.dropdown_graphic.url} />
-                    </div>
-                    <a
-                      href={products.submenu_url_link3}
-                      className="button button-secondary nav-button"
-                    >
-                      <div className="button-label">{products.submenu_url_label3}</div>
+                    <a href={products.submenu_url_link3}>
+                      <div className="navigation-product-submenu-item-header_image hide-on-mobile">
+                        <img src={products.dropdown_graphic.url} />
+                      </div>
+                      <div className="navigation-product-submenu-section-title" id="dash-in-action">
+                        See Dash in Action
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -204,47 +192,49 @@ export default class Navigation extends React.Component {
               >
                 <div className="navigation-product-submenu-left">
                   <div className="navigation-product-submenu-section">
-                    <div className="navigation-product-submenu-section-title">
-                      <span className="hide-on-mobile">{pricing.submenu_label2}</span>
-                      <a href={pricing.submenu_url_link2} className="hide-on-desktop">
-                        Chart Studio
-                      </a>
-                    </div>
-                    <span className="navigation-product-submenu-item hide-on-mobile">
-                      Cloud and Enterprise solutions to meet <br /> your needs.
-                    </span>
-                    <a
-                      href={pricing.submenu_url_link2}
-                      className="button button-secondary nav-button"
-                    >
-                      <div className="button-label">{pricing.submenu_url_label2}</div>
+                    <a href={pricing.submenu_url_link2}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">Chart Studio Cloud</span>
+                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                          Chart Studio Cloud
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        Cloud solutions to meet your needs.
+                      </span>
                     </a>
-                    <a
-                      href={pricing.submenu_url_link3}
-                      className="button button-secondary nav-button"
-                    >
-                      <div className="button-label">{pricing.submenu_url_label3}</div>
+                  </div>
+                  <div className="navigation-product-submenu-section">
+                    <a href={pricing.submenu_url_link3}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">Chart Studio Enterprise</span>
+                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                          Chart Studio Enterprise
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        Enterprise solutions to meet your needs.
+                      </span>
                     </a>
                   </div>
                 </div>
                 <div className="navigation-product-submenu-right">
                   <div className="navigation-product-submenu-section">
-                    <div className="navigation-product-submenu-section-title">
-                      <span className="hide-on-mobile">Dash</span>
-                      <a href={pricing.submenu_url_link2} className="hide-on-desktop">
-                        Dash
-                      </a>
-                    </div>
-                    <span
-                      id="dds-button"
-                      className="navigation-product-submenu-item hide-on-mobile"
-                    >
-                      License Dash Deployment Server <br />
-                      for easy app deployment in commercial <br />
-                      applications.
-                    </span>
-                    <a href="/dash/pricing/" className="button button-secondary nav-button">
-                      <div className="button-label">Dash Deployment Server </div>
+                    <a href="/dash/pricing/">
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">Dash</span>
+                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                          Dash
+                        </a>
+                      </div>
+                      <span
+                        id="dds-button"
+                        className="navigation-product-submenu-item hide-on-mobile"
+                      >
+                        License Dash Deployment Server <br />
+                        for easy app deployment in commercial <br />
+                        applications.
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -326,9 +316,6 @@ export default class Navigation extends React.Component {
                     Build beautiful, analytical web applications. <br />
                     No JavaScript required.
                   </span>
-                  <a href="/products/dash/" className="button button-primary">
-                    <div className="button-label">Learn More</div>
-                  </a>
                 </div>
                 <div className="navigation-product-submenu-section">
                   <div className="navigation-product-submenu-section-title">
