@@ -13,7 +13,7 @@ class Quotes extends React.Component {
 
     this.handleInvescoRightClick = this.handleInvescoRightClick.bind(this);
     this.handleInvescoLeftClick = this.handleInvescoLeftClick.bind(this);
-    
+
     this.handleJupyterLeftClick = this.handleJupyterLeftClick.bind(this);
   }
 
@@ -88,7 +88,7 @@ class Quotes extends React.Component {
               </div>
               <div className="cell">
                 <div className="author">{items[0].author1[0].text}</div>
-                <div>{items[0].quote1[0].text}</div>
+                <div className="quote-text">{items[0].quote1[0].text}</div>
               </div>
               <div onClick={this.handleWhiteOpsRightClick} className="anchor-graphic">
                 <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
@@ -103,7 +103,7 @@ class Quotes extends React.Component {
               </div>
               <div className="cell">
                 <div className="author">{items[1].author1[0].text}</div>
-                <div>{items[1].quote1[0].text}</div>
+                <div className="quote-text">{items[1].quote1[0].text}</div>
               </div>
               <div onClick={this.handleGojiRightClick} className="anchor-graphic">
                 <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
@@ -118,7 +118,7 @@ class Quotes extends React.Component {
               </div>
               <div className="cell">
                 <div className="author">{items[2].author1[0].text}</div>
-                <div>{items[2].quote1[0].text}</div>
+                <div className="quote-text">{items[2].quote1[0].text}</div>
               </div>
               <div onClick={this.handleInvescoRightClick} className="anchor-graphic">
                 <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
@@ -133,23 +133,9 @@ class Quotes extends React.Component {
               </div>
               <div className="cell">
                 <div className="author">{items[3].author1[0].text}</div>
-                <div>{items[3].quote1[0].text}</div>
+                <div className="quote-text">{items[3].quote1[0].text}</div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="slider-container">
-          <div onClick={this.handleWhiteOpsClick} className="sliders">
-            <img src="https://prismic-io.s3.amazonaws.com/plotly%2F5b06ec70-30aa-4a0e-babf-ecab7e594507_path.png" />
-          </div>
-          <div onClick={this.handleGojiClick} className="sliders">
-            <img src="https://prismic-io.s3.amazonaws.com/plotly%2F5b06ec70-30aa-4a0e-babf-ecab7e594507_path.png" />
-          </div>
-          <div onClick={this.handleInvescoClick} className="sliders">
-            <img src="https://prismic-io.s3.amazonaws.com/plotly%2F5b06ec70-30aa-4a0e-babf-ecab7e594507_path.png" />
-          </div>
-          <div onClick={this.handleJupyterClick} className="sliders">
-            <img src="https://prismic-io.s3.amazonaws.com/plotly%2F5b06ec70-30aa-4a0e-babf-ecab7e594507_path.png" />
           </div>
         </div>
       </>

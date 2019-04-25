@@ -7,6 +7,13 @@
   background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F797ce34d-268c-4daf-9583-f2656b6cd5cd_quote.png);
   background-repeat: no-repeat;
   background-position: 25% 5%;
+  @include tablet {
+    padding-top: 50px;
+    height: 450px;
+  }
+  @include phone {
+    height: 530px;
+  }
   .title {
     padding-bottom: 40px;
     text-align: center;
@@ -24,6 +31,16 @@
     }
     .anchor-graphic-left {
       padding-right: 40px;
+      @include tablet {
+        margin: auto;
+        padding: 0;
+        padding-bottom: 40px;
+      }
+    }
+    .anchor-graphic {
+      @include tablet {
+        margin: auto;
+      }
     }
     .whiteops-active,
     .goji-active,
@@ -53,7 +70,6 @@
           text-align: center;
           padding: 0;
           padding-bottom: $gutter;
-          margin-bottom: 100px;
         }
         .author {
           padding-top: 6px;
@@ -62,6 +78,12 @@
           color: $color-dodger;
           @include tablet {
             text-align: center;
+          }
+        }
+        .quote-text {
+          @include tablet {
+            width: 80%;
+            margin: auto;
           }
         }
       }
