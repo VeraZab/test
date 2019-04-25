@@ -200,7 +200,7 @@ export default class Navigation extends React.Component {
                         </a>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
-                        Cloud solutions to meet your needs.
+                        Host and share charts in Plotly's cloud.
                       </span>
                     </a>
                   </div>
@@ -213,7 +213,7 @@ export default class Navigation extends React.Component {
                         </a>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
-                        Enterprise solutions to meet your needs.
+                        Data visualization behind your firewall.
                       </span>
                     </a>
                   </div>
@@ -231,9 +231,7 @@ export default class Navigation extends React.Component {
                         id="dds-button"
                         className="navigation-product-submenu-item hide-on-mobile"
                       >
-                        License Dash Deployment Server <br />
-                        for easy app deployment in commercial <br />
-                        applications.
+                        Build, test and deploy Dash Apps at any scale.
                       </span>
                     </a>
                   </div>

@@ -173,12 +173,12 @@
 
             .navigation-product-submenu-section {
               padding: calc(#{$gutter} * 0.75);
-              min-width: 250px;
+              min-width: 275px;
 
               .navigation-product-submenu-section-title {
                 text-transform: uppercase;
                 letter-spacing: 3px;
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: bold;
                 opacity: 1;
                 color: #119dff;
@@ -208,6 +208,7 @@
             display: block;
             padding: 12px;
             min-width: 250px;
+            text-align: center;
 
             #community-forum {
               border-bottom: 1px solid #072e68;
