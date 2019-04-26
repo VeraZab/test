@@ -60,6 +60,14 @@ class Quotes extends React.Component {
                 </div>
               );
             })}
+            <div className="mobile-anchor-container">
+              <div onClick={this.handleLeftClick} className="mobile-anchor">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />
+              </div>
+              <div onClick={this.handleRightClick} className="mobile-anchor">
+                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
+              </div>
+            </div>
           </div>
         </div>
       </>

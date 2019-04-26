@@ -12,8 +12,8 @@
     height: 450px;
   }
   @include phone {
-    height: 530px;
     margin-bottom: $gutter * 0.5;
+    height: 600px;
   }
   .title {
     padding-bottom: 40px;
@@ -29,28 +29,48 @@
     @media screen and (max-width: $desktop) {
       max-width: 100%;
     }
+
+    .mobile-anchor-container {
+      .mobile-anchor {
+        display: inline-block;
+        padding: 10px;
+        @include desktop {
+          display: none;
+        }
+      }
+    }
     .anchor-graphic {
       padding: 10px;
       min-width: 70px;
       display: flex;
       align-items: center;
       @include tablet {
-        margin: auto;
+        display: none;
       }
     }
     .customer-quote-active {
       display: flex;
       padding-bottom: 40px;
-
       @media screen and (max-width: $desktop) {
         flex-direction: column;
       }
+
       .quotes-copy-container {
         display: flex;
         flex-direction: row;
         width: 700px;
         margin: auto;
-        height: 115px;
+        height: 115px; // giving a height so that the anchors are center aligned
+        @include tablet {
+          padding: 15px;
+          width: 100%;
+          height: 150px;
+        }
+        @include phone {
+          flex-direction: column;
+          text-align: center;
+          height: 300px;
+        }
         .logo {
           width: 10%;
           margin: 10px;
@@ -64,29 +84,22 @@
             border-right: none;
             padding-bottom: 20px;
           }
+          @include phone {
+            margin: auto;
+            width: 50%;
+          }
         }
         .cell {
           margin: 10px;
           width: 90%;
           @include tablet {
-            text-align: center;
             padding: 0;
             padding-bottom: $gutter;
           }
           .author {
             padding-top: 6px;
-            text-align: left;
             font-style: italic;
             color: $color-dodger;
-            @include tablet {
-              text-align: center;
-            }
-          }
-          .quote-text {
-            @include tablet {
-              width: 80%;
-              margin: auto;
-            }
           }
         }
       }
