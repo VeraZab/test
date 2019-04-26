@@ -3,9 +3,7 @@ import React from 'react';
 class Quotes extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {customerQuoteIndex: 0};
-
     this.handleRightClick = this.handleRightClick.bind(this);
     this.handleLeftClick = this.handleLeftClick.bind(this);
   }
@@ -28,7 +26,6 @@ class Quotes extends React.Component {
 
   render() {
     const items = this.props.data.items;
-
     return (
       <>
         <div className="quotes">

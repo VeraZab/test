@@ -26,10 +26,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none;
     @media screen and (max-width: $desktop) {
       max-width: 100%;
     }
-
     .mobile-anchor-container {
       .mobile-anchor {
         display: inline-block;
@@ -54,7 +54,6 @@
       @media screen and (max-width: $desktop) {
         flex-direction: column;
       }
-
       .quotes-copy-container {
         display: flex;
         flex-direction: row;
@@ -107,17 +106,5 @@
     .customer-quote {
       display: none;
     }
-  }
-}
-.slider-container {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 50px;
-  @include tablet {
-    margin-bottom: 100px;
-  }
-  .sliders {
-    flex-direction: row;
-    padding-right: $gutter;
   }
 }
