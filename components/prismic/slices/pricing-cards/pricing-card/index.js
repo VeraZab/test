@@ -14,18 +14,6 @@ function PricingCard(props) {
           <PricingCardFeatures data={card.primary} />
         </div>
       </div>
-      <div className="cta-buttons">
-        <a
-          className="button button-primary addon-button"
-          href={
-            card.primary.title.includes('Dash')
-              ? '/dash/pricing#advanced-cards'
-              : '/online-chart-maker'
-          }
-        >
-          <div className="button-label">Learn More</div>
-        </a>
-      </div>
       <div className="pricing__card__addons__section">
         <PricingCardAddons data={card.items} />
       </div>
