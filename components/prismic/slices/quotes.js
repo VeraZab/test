@@ -4,138 +4,62 @@ class Quotes extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {mode: 'whiteops'};
+    this.state = {customerQuoteIndex: 0};
 
-    this.handleWhiteOpsRightClick = this.handleWhiteOpsRightClick.bind(this);
-
-    this.handleGojiRightClick = this.handleGojiRightClick.bind(this);
-    this.handleGojiLeftClick = this.handleGojiLeftClick.bind(this);
-
-    this.handleInvescoRightClick = this.handleInvescoRightClick.bind(this);
-    this.handleInvescoLeftClick = this.handleInvescoLeftClick.bind(this);
-
-    this.handleJupyterLeftClick = this.handleJupyterLeftClick.bind(this);
+    this.handleRightClick = this.handleRightClick.bind(this);
+    this.handleLeftClick = this.handleLeftClick.bind(this);
   }
 
-  handleWhiteOpsClick() {
-    if (this.state.mode !== 'whiteops') {
-      this.setState({mode: 'whiteops'});
-      return;
+  handleLeftClick() {
+    if (this.state.customerQuoteIndex === 0) {
+      this.setState({customerQuoteIndex: this.props.data.items.length - 1});
+    } else {
+      this.setState({customerQuoteIndex: this.state.customerQuoteIndex - 1});
     }
   }
 
-  handleGojiClick() {
-    if (this.state.mode !== 'goji') {
-      this.setState({mode: 'goji'});
-      return;
+  handleRightClick() {
+    if (this.state.customerQuoteIndex === this.props.data.items.length - 1) {
+      this.setState({customerQuoteIndex: 0});
+    } else {
+      this.setState({customerQuoteIndex: this.state.customerQuoteIndex + 1});
     }
-  }
-
-  handleInvescoClick() {
-    if (this.state.mode !== 'invesco') {
-      this.setState({mode: 'invesco'});
-      return;
-    }
-  }
-
-  handleJupyterClick() {
-    if (this.state.mode !== 'jupyter') {
-      this.setState({mode: 'jupyter'});
-      return;
-    }
-  }
-
-  handleWhiteOpsRightClick() {
-    this.setState({mode: 'goji'});
-    return;
-  }
-
-  handleGojiRightClick() {
-    this.setState({mode: 'invesco'});
-    return;
-  }
-
-  handleGojiLeftClick() {
-    this.setState({mode: 'whiteops'});
-    return;
-  }
-
-  handleInvescoRightClick() {
-    this.setState({mode: 'jupyter'});
-    return;
-  }
-
-  handleInvescoLeftClick() {
-    this.setState({mode: 'goji'});
-    return;
-  }
-
-  handleJupyterLeftClick() {
-    this.setState({mode: 'invesco'});
-    return;
   }
 
   render() {
     const items = this.props.data.items;
+
     return (
       <>
         <div className="quotes">
           <h1 className="title">{this.props.data.primary.title1[0].text}</h1>
           <div className="quotesContainer">
-            <div className={this.state.mode === 'whiteops' ? 'whiteops-active' : 'whiteops'}>
-              <div className="logo">
-                <img className="logoImage" alt="client logo" src={items[0].logo.url} />
-              </div>
-              <div className="cell">
-                <div className="author">{items[0].author1[0].text}</div>
-                <div className="quote-text">{items[0].quote1[0].text}</div>
-              </div>
-              <div onClick={this.handleWhiteOpsRightClick} className="anchor-graphic">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
-              </div>
-            </div>
-            <div className={this.state.mode === 'goji' ? 'goji-active' : 'goji'}>
-              <div onClick={this.handleGojiLeftClick} className="anchor-graphic-left">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
-              </div>
-              <div className="logo">
-                <img className="logoImage" alt="client logo" src={items[1].logo.url} />
-              </div>
-              <div className="cell">
-                <div className="author">{items[1].author1[0].text}</div>
-                <div className="quote-text">{items[1].quote1[0].text}</div>
-              </div>
-              <div onClick={this.handleGojiRightClick} className="anchor-graphic">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
-              </div>
-            </div>
-            <div className={this.state.mode === 'invesco' ? 'invesco-active' : 'invesco'}>
-              <div onClick={this.handleInvescoLeftClick} className="anchor-graphic-left">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
-              </div>
-              <div className="logo">
-                <img className="logoImage" alt="client logo" src={items[2].logo.url} />
-              </div>
-              <div className="cell">
-                <div className="author">{items[2].author1[0].text}</div>
-                <div className="quote-text">{items[2].quote1[0].text}</div>
-              </div>
-              <div onClick={this.handleInvescoRightClick} className="anchor-graphic">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
-              </div>
-            </div>
-            <div className={this.state.mode === 'jupyter' ? 'jupyter-active' : 'jupyter'}>
-              <div onClick={this.handleJupyterLeftClick} className="anchor-graphic-left">
-                <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
-              </div>
-              <div className="logo">
-                <img className="logoImage" alt="client logo" src={items[3].logo.url} />
-              </div>
-              <div className="cell">
-                <div className="author">{items[3].author1[0].text}</div>
-                <div className="quote-text">{items[3].quote1[0].text}</div>
-              </div>
-            </div>
+            {items.map((item, i) => {
+              return (
+                <div
+                  key={i}
+                  className={
+                    this.state.customerQuoteIndex === i ? 'customer-quote-active' : 'customer-quote'
+                  }
+                >
+                  <div onClick={this.handleLeftClick} className="anchor-graphic">
+                    <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
+                  </div>
+                  <div className="quotes-copy-container">
+                    <div className="logo">
+                      <img className="logoImage" alt="client logo" src={item.logo.url} />
+                    </div>
+                    <div className="cell">
+                      <div className="author">{item.author1[0].text}</div>
+                      <div className="quote-text">{item.quote1[0].text}</div>
+                    </div>
+                  </div>
+                  <div onClick={this.handleRightClick} className="anchor-graphic">
+                    <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </>
