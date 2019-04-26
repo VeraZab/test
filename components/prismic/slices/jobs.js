@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {renderPrismic} from 'lib/renderPrismicRichText';
+import {slugify} from 'lib/slugify';
 
 const StyledJobs = styled.div``;
 const JobListing = styled.div`
@@ -64,11 +65,14 @@ const renderItems = items =>
     <JobListing key={i}>
       <JobsHeader>
         <div>
-          <JobsTime>{misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}</JobsTime>
-          <div className="content-section-p-title">
-            <h2>{position}</h2>
-          </div>
-
+          <JobsTime id={slugify(position)}>
+            {misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}
+          </JobsTime>
+          <a href={`/company/careers#${slugify(position)}`}>
+            <div className="content-section-p-title">
+              <h2>{position}</h2>
+            </div>
+          </a>
           <JobsLocation>{location}</JobsLocation>
         </div>
         <div>
