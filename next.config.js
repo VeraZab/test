@@ -89,6 +89,12 @@ module.exports = {
         slug: 'on-premise-pricing',
       },
     },
+    '/products/oem': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'plotly-oem',
+      },
+    },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
     '/chart-studio/on-premise': {
       page: '/prismic-generator',
