@@ -1,9 +1,8 @@
-.quotes {
-  background: white;
-  padding-top: 150px;
-  margin-top: 100px;
+.customer-quotes-container {
   height: 500px;
-  padding-bottom: $gutter;
+  background: white;
+  padding: 150px 0 $gutter 0;
+  margin-top: 100px;
   background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F797ce34d-268c-4daf-9583-f2656b6cd5cd_quote.png);
   background-repeat: no-repeat;
   background-position: 25% 5%;
@@ -15,14 +14,12 @@
     margin-bottom: $gutter * 0.5;
     height: 600px;
   }
-  .title {
-    padding-bottom: 40px;
+  .customer-quotes-title {
     text-align: center;
-    font-size: 30px;
+    padding-bottom: $gutter;
   }
-  .quotesContainer {
+  .customer-quotes {
     margin: auto;
-    border-spacing: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +27,12 @@
     @media screen and (max-width: $desktop) {
       max-width: 100%;
     }
-    .mobile-anchor-container {
-      .mobile-anchor {
+    @include tablet {
+      width: 80%;
+      margin: auto;
+    }
+    .customer-quotes-arrow-container-mobile {
+      .customer-quotes-arrow-mobile {
         display: inline-block;
         padding: 10px;
         @include desktop {
@@ -39,7 +40,7 @@
         }
       }
     }
-    .anchor-graphic {
+    .customer-quotes-arrow {
       padding: 10px;
       min-width: 70px;
       display: flex;
@@ -59,7 +60,7 @@
         flex-direction: row;
         width: 700px;
         margin: auto;
-        height: 115px; // giving a height so that the anchors are center aligned
+        height: 115px;
         @include tablet {
           padding: 15px;
           width: 100%;
@@ -70,12 +71,12 @@
           text-align: center;
           height: 300px;
         }
-        .logo {
+        .customer-logo-container {
           width: 10%;
           margin: 10px;
           display: flex;
           padding-right: 10px;
-          .logoImage {
+          img {
             margin: auto;
             display: block;
           }
@@ -88,14 +89,14 @@
             width: 50%;
           }
         }
-        .cell {
+        .customer-testimonial {
           margin: 10px;
           width: 90%;
           @include tablet {
             padding: 0;
             padding-bottom: $gutter;
           }
-          .author {
+          .customer {
             padding-top: 6px;
             font-style: italic;
             color: $color-dodger;
