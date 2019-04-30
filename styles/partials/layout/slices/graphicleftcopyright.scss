@@ -6,7 +6,6 @@
   padding-bottom: $gutter * 2;
   margin: $gutter * 2;
   margin-bottom: 0;
-
   @include tablet {
     flex-direction: column;
     height: auto;
@@ -14,6 +13,17 @@
   .graphic-left-copy-right {
     display: flex;
     flex-direction: row;
+    margin: auto;
+    @include tablet {
+      flex-direction: column;
+      height: auto;
+      margin-bottom: 100px;
+      .graphic-container {
+        img {
+          margin: auto;
+        }
+      }
+    }
     .copy-wrapper {
       margin: auto;
       padding: $gutter;

@@ -4,6 +4,10 @@
   margin-bottom: 0;
   padding-bottom: $gutter;
   flex-direction: column;
+  @include phone {
+    width: 90%;
+    margin: auto;
+  }
   .title-container {
     margin: auto;
     text-align: center;
@@ -21,10 +25,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto;
-    align-content: center;
-    width: 90vw;
-    @include tablet{
+    @include tablet {
       flex-direction: column;
     }
     .repeatable-columns {
@@ -35,6 +36,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
+        width: 350px;
+
         .intro-copy-container {
           display: flex;
           flex-direction: column;
@@ -72,9 +75,13 @@
       }
       .repeatable-column-wrapper {
         border: 1px solid #f2f5fa;
+        margin: auto;
+        align-content: stretch;
         .repeatable-column {
-          width: 30vw;
           margin: $gutter;
+          width: 300px;
+          height: 500px;
+          flex-grow: 1;
           .pretitle {
             text-align: center;
           }
