@@ -1,7 +1,6 @@
 const DashProductive = props => {
   const items = props.data.items;
   const primary = props.data.primary;
-
   return (
     <div className="dashProductive-container">
       <div className="title-container">

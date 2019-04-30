@@ -1,29 +1,14 @@
-.globalCTA {
+.graphic-left-copy-right-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: $gutter * 2;
-  padding-bottom: $gutter * 2;
+  padding: $gutter;
   @include tablet {
     flex-direction: column;
     height: auto;
   }
-  .cta-graphic {
-    @include mid-sized {
-      width: 60vw;
-    }
-    @include large-display {
-      width: 45vw;
-    }
-  }
-  .cta-body {
-    margin: $gutter;
-    @include large-display {
-      padding-left: $gutter * 6;
-    }
-    @include tablet {
-      padding-bottom: $gutter * 10;
-    }
+  .copy-wrapper {
+    margin: $gutter * 3;
     .cta-title {
       padding-bottom: $gutter/2;
       padding-left: $gutter * 2;

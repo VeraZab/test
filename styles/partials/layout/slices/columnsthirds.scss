@@ -4,7 +4,6 @@
   margin-bottom: 0;
   padding-bottom: $gutter;
   flex-direction: column;
-
   .title-container {
     margin: auto;
     text-align: center;
@@ -25,7 +24,9 @@
     margin: auto;
     align-content: center;
     width: 90vw;
-
+    @include tablet{
+      flex-direction: column;
+    }
     .repeatable-columns {
       display: flex;
       flex-direction: row;
@@ -69,7 +70,6 @@
           }
         }
       }
-
       .repeatable-column-wrapper {
         border: 1px solid #f2f5fa;
         .repeatable-column {

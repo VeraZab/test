@@ -1,0 +1,21 @@
+.columnar-container {
+  display: flex;
+  background: #000075;
+  flex-direction: column;
+  .columnar-copy-container {
+    margin: auto;
+    padding: $gutter;
+    color: white;
+    text-align: center;
+    .columnar-copy {
+      padding-bottom: $gutter;
+    }
+    a {
+      width: 150px;
+      margin: auto;
+    }
+    img {
+      margin: auto;
+    }
+  }
+}

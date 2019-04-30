@@ -6,7 +6,7 @@
 @import './layout/slices/quotes';
 @import './layout/slices/footer';
 @import './layout/slices/comboCTA';
-@import './layout/slices/globalCTA';
+@import './layout/slices/graphicleftcopyright';
 @import './layout/slices/dashCTA';
 @import './layout/slices/opensource';
 @import './layout/slices/dashsolutions';
@@ -17,6 +17,8 @@
 @import './layout/slices/dashDeploymentServer';
 @import './layout/slices/hero';
 @import './layout/slices/columnsthirds';
+@import './layout/slices/copylgraphr';
+@import './layout/slices/columnarcontainer';
 
 .slices {
   &-wrapper {

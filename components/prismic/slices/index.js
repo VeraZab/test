@@ -16,7 +16,7 @@ import IFrame from './iframe';
 import GraphicText from './graphic-text';
 import Newsroom from './newsroom';
 import ComboCTA from './ComboCTA';
-import GlobalCTA from './GlobalCTA';
+import GraphicLeftCopyRight from './GraphicLeftCopyRight';
 import DashCTA from './DashCTA';
 import OpenSourceCTA from './OpenSourceCTA';
 import DashSolutions from './DashSolutions';
@@ -25,7 +25,10 @@ import DashGallery from './DashGallery';
 import EnterpriseAddons from './EnterpriseAddons';
 import DashDeploymentServer from './DashDeploymentServer';
 import ColumnsThirds from './ColumnsThirds';
+import CopyLeftGraphicRight from './CopyLeftGraphicRight';
+import ColumnarCallToAction from './ColumnarCallToAction';
 
+ColumnarCallToAction;
 const BlankSlice = () => {
   return null;
 };
@@ -53,7 +56,7 @@ export default class Slices extends React.Component {
       'cs-iframe': IFrame,
       newsroom: Newsroom,
       an_open_source_company: OpenSourceCTA,
-      globalcta: GlobalCTA,
+      globalcta: GraphicLeftCopyRight,
       dash_cta: DashCTA,
       combocta: ComboCTA,
       dash_solutions: DashSolutions,
@@ -62,6 +65,8 @@ export default class Slices extends React.Component {
       enterprise_addons: EnterpriseAddons,
       dash_product_family: DashDeploymentServer,
       columns_thirds: ColumnsThirds,
+      copy_l_graph_r: CopyLeftGraphicRight,
+      columnar_call_to_action: ColumnarCallToAction,
     };
 
     return (

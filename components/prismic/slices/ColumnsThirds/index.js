@@ -3,8 +3,6 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 const ColumnsThirds = props => {
   const primary = props.data.primary;
   const items = props.data.items;
-  console.log(items);
-
   return (
     <>
       <div className="columns-thirds-container">
@@ -14,7 +12,6 @@ const ColumnsThirds = props => {
             <div className="subtitle">{renderPrismic(primary.section_subtitle)}</div>
           </div>
         )}
-
         <div className="columns-container">
           {Boolean(items) && (
             <div className="repeatable-columns-wrapper">

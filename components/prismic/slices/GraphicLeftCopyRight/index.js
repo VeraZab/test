@@ -1,14 +1,12 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
-const GlobalCTA = props => {
+const GraphicLeftCopyRight = props => {
   return (
-    <div className="globalCTA">
+    <div className="graphic-left-copy-right-container ">
       <div className="graphic-container">
-        <div className="cta-graphic">
-          {props.data.primary.cta_graphic && <img src={props.data.primary.cta_graphic.url} />}
-        </div>
+        {props.data.primary.cta_graphic && <img src={props.data.primary.cta_graphic.url} />}
       </div>
-      <div className="cta-body">
+      <div className="copy-wrapper">
         {props.data.primary.cta_title && (
           <h1 className="hero-title">{props.data.primary.cta_title}</h1>
         )}
@@ -29,4 +27,4 @@ const GlobalCTA = props => {
   );
 };
 
-export default GlobalCTA;
+export default GraphicLeftCopyRight;

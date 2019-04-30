@@ -3,9 +3,6 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 const DashSolutions = props => {
   const primary = props.data.primary;
   const items = props.data.items;
-
-  console.log(props);
-
   return (
     <div className="dash-solutions-container">
       <div className="left-container-wrapper">
