@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Navigation from './navigation';
 import shortid from 'shortid';
 
@@ -22,9 +21,13 @@ const Header = props => {
       <div className="site-header-wrapper">
         <div className="site-header--section-left">
           <div className="site-header-logo">
+<<<<<<< HEAD
             <Link prefetch href="/">
               <a>{logo}</a>
             </Link>
+=======
+            <a href="/">{logo}</a>
+>>>>>>> changing logo hyperlink from Link component to anchor element
           </div>
         </div>
         <div className="site-header--section-right">

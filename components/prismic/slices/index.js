@@ -64,9 +64,15 @@ export default class Slices extends React.Component {
       dash_app_gallery: DashGallery,
       enterprise_addons: EnterpriseAddons,
       dash_product_family: DashDeploymentServer,
+<<<<<<< HEAD
       columns_thirds: ColumnsThirds,
       copy_l_graph_r: CopyLeftGraphicRight,
       columnar_call_to_action: ColumnarCallToAction,
+=======
+      columns_thirds: BlankSlice,
+      copy_l_graph_r: BlankSlice,
+      columnar_call_to_action: BlankSlice,
+>>>>>>> changing logo hyperlink from Link component to anchor element
     };
 
     return (
