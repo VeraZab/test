@@ -22,16 +22,7 @@ const Header = props => {
       <div className="site-header-wrapper">
         <div className="site-header--section-left">
           <div className="site-header-logo">
-            <Link
-              prefetch
-              href={{
-                pathname: '/prismic-generator',
-                query: {
-                  slug: 'home',
-                },
-              }}
-              as="/"
-            >
+            <Link prefetch href="/">
               <a>{logo}</a>
             </Link>
           </div>
