@@ -45,9 +45,10 @@
           display: flex;
           flex-direction: column;
           width: 100%;
+          justify-content: center;
           .pretitle {
-            margin: auto;
             margin-bottom: 0;
+            text-align: center;
           }
           .subtitle-white {
             padding: $gutter;
@@ -62,10 +63,14 @@
           .subtitle-dark {
             padding: $gutter;
             color: #2a3f5e;
-            margin: auto;
+            text-align: center;
+            p {
+              margin: 0;
+              padding: 0;
+            }
+
             @include tablet {
               width: 100%;
-              text-align: center;
             }
           }
           .cta-buttons {

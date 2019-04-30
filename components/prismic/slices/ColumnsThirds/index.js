@@ -27,9 +27,9 @@ const ColumnsThirds = props => {
                       {Boolean(primary.section_pretitle) && (
                         <h2 className="pretitle">{primary.section_pretitle}</h2>
                       )}
-                      <h1 className={primary.bg_graphic.url ? 'subtitle-white' : 'subtitle-dark'}>
+                      <h2 className={primary.bg_graphic.url ? 'subtitle-white' : 'subtitle-dark'}>
                         {renderPrismic(primary.section_subtitle2)}
-                      </h1>
+                      </h2>
                       {Boolean(primary.cta_url) && (
                         <div className="cta-buttons">
                           <a
