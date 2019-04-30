@@ -1,3 +1,5 @@
+import {renderPrismic} from 'lib/renderPrismicRichText';
+
 const GlobalCTA = props => {
   return (
     <div className="globalCTA">
@@ -11,7 +13,9 @@ const GlobalCTA = props => {
           <h1 className="hero-title">{props.data.primary.cta_title}</h1>
         )}
         {props.data.primary.cta_messaging && (
-          <p className="hero-subtitle pale-blue">{props.data.primary.cta_messaging}</p>
+          <p className="hero-subtitle pale-blue">
+            {renderPrismic(props.data.primary.cta_messaging)}
+          </p>
         )}
         {props.data.primary.cta_url && props.data.primary.cta_label && (
           <div className="cta-buttons">
