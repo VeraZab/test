@@ -1,0 +1,93 @@
+.columns-thirds-container {
+  display: flex;
+  margin: $gutter * 4;
+  margin-bottom: 0;
+  padding-bottom: $gutter;
+  flex-direction: column;
+
+  .title-container {
+    margin: auto;
+    text-align: center;
+    .title {
+      padding: $gutter * 2 0 $gutter 0;
+    }
+    .subtitle {
+      margin: auto;
+      width: 70%;
+      padding-bottom: $gutter * 2;
+      color: #2a3f5e;
+    }
+  }
+  .columns-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    align-content: center;
+    width: 90vw;
+
+    .repeatable-columns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .intro-column {
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        .intro-copy-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .pretitle {
+            margin: auto;
+            margin-bottom: 0;
+          }
+          .subtitle-white {
+            padding: $gutter;
+            color: white;
+            margin: auto;
+            margin-bottom: 0;
+            @include tablet {
+              width: 100%;
+              text-align: center;
+            }
+          }
+          .subtitle-dark {
+            padding: $gutter;
+            color: #2a3f5e;
+            margin: auto;
+            @include tablet {
+              width: 100%;
+              text-align: center;
+            }
+          }
+          .cta-buttons {
+            a {
+              margin-right: 0;
+            }
+            margin: auto;
+          }
+        }
+      }
+
+      .repeatable-column-wrapper {
+        border: 1px solid #f2f5fa;
+        .repeatable-column {
+          width: 30vw;
+          margin: $gutter;
+          .pretitle {
+            text-align: center;
+          }
+          img {
+            margin: auto;
+            padding-bottom: $gutter;
+            width: 150px;
+          }
+          .title {
+            color: #119dff;
+          }
+        }
+      }
+    }
+  }
+}

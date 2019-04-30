@@ -103,6 +103,10 @@
     margin: 0;
     margin-left: $gutter;
   }
+  #columns-thirds-button {
+    width: 150px;
+    margin: auto;
+  }
   @include tablet {
     margin: auto;
   }
