@@ -7,8 +7,13 @@
     padding: $gutter;
     color: white;
     text-align: center;
+    .title {
+      color: white;
+    }
     .columnar-copy {
       padding-bottom: $gutter;
+      width: 50%;
+      margin: auto;
     }
     a {
       width: 150px;

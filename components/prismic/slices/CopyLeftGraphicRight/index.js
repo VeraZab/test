@@ -3,8 +3,10 @@ const CopyLeftGraphicRight = props => {
   return (
     <div className="copy-l-graph-r-container">
       <div className="copy-l-container">
-        <div className="title">{primary.title1}</div>
-        <div className="copy">{primary.copy}</div>
+        <div className="copy-l">
+          <h1 className="title">{primary.title1}</h1>
+          <div className="copy">{primary.copy}</div>
+        </div>
       </div>
       <div className="graphic-r-container">
         <img src={primary.graphic.url} className="graphic-r" />

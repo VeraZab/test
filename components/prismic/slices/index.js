@@ -23,12 +23,11 @@ import DashSolutions from './DashSolutions';
 import DashProductive from './DashProductive';
 import DashGallery from './DashGallery';
 import EnterpriseAddons from './EnterpriseAddons';
-import DashDeploymentServer from './DashDeploymentServer';
+import CopyLeftGraphicRightTwo from './CopyLeftGraphicRightTwo';
 import ColumnsThirds from './ColumnsThirds';
 import CopyLeftGraphicRight from './CopyLeftGraphicRight';
 import ColumnarCallToAction from './ColumnarCallToAction';
 
-ColumnarCallToAction;
 const BlankSlice = () => {
   return null;
 };
@@ -63,16 +62,10 @@ export default class Slices extends React.Component {
       dash_is_production: DashProductive,
       dash_app_gallery: DashGallery,
       enterprise_addons: EnterpriseAddons,
-      dash_product_family: DashDeploymentServer,
-<<<<<<< HEAD
+      dash_product_family: CopyLeftGraphicRightTwo,
       columns_thirds: ColumnsThirds,
       copy_l_graph_r: CopyLeftGraphicRight,
       columnar_call_to_action: ColumnarCallToAction,
-=======
-      columns_thirds: BlankSlice,
-      copy_l_graph_r: BlankSlice,
-      columnar_call_to_action: BlankSlice,
->>>>>>> changing logo hyperlink from Link component to anchor element
     };
 
     return (
