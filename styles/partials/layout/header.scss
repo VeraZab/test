@@ -162,6 +162,7 @@
 
             .navigation-product-submenu-section {
               padding: calc(#{$gutter} * 0.75);
+              padding-top: 30px;
               width: 300px;
 
               .navigation-product-submenu-section-title {
@@ -221,6 +222,7 @@
             .button {
               width: 170px;
               margin: 20px auto;
+              margin-bottom: 0;
               color: white !important;
               border-color: white;
               font-size: 12px;
