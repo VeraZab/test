@@ -9,6 +9,7 @@
   @include tablet {
     flex-direction: column;
     height: auto;
+    margin: 0;
   }
   .graphic-left-copy-right {
     display: flex;
@@ -17,7 +18,6 @@
     @include tablet {
       flex-direction: column;
       height: auto;
-      margin-bottom: 100px;
       .graphic-container {
         img {
           margin: auto;

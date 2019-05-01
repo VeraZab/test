@@ -1,13 +1,6 @@
 .columns-thirds-container {
   display: flex;
-  margin: $gutter * 4;
-  margin-bottom: 0;
-  padding-bottom: $gutter;
   flex-direction: column;
-  @include phone {
-    width: 90%;
-    margin: auto;
-  }
   .title-container {
     margin: auto;
     text-align: center;
@@ -25,80 +18,98 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 950px;
-    margin: auto;
-
+    margin: $gutter * 3;
+    margin-top: 0;
+    margin-bottom: 0;
     @include tablet {
-      flex-direction: column;
+      margin: auto;
     }
-    .repeatable-columns {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      .intro-column {
-        background-size: cover;
-        background-repeat: no-repeat;
+    .repeatable-columns-wrapper {
+      margin: $gutter * 3;
+      margin-top: 0;
+      margin-bottom: 0;
+      @include tablet {
+        margin: 0;
+      }
+      .repeatable-columns {
         display: flex;
-        width: 300px;
-
-        .intro-copy-container {
-          display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: $gutter * 3;
+        margin-top: 0;
+        @include tablet {
           flex-direction: column;
-          width: 100%;
-          justify-content: center;
-          .pretitle {
-            margin-bottom: 0;
-            text-align: center;
-          }
-          .subtitle-white {
-            padding: $gutter;
-            color: white;
-            margin: auto;
-            margin-bottom: 0;
-            @include tablet {
-              width: 100%;
+          width: auto;
+          margin: 0;
+        }
+        .intro-column {
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          width: 300px;
+          .intro-copy-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            .pretitle {
+              margin-bottom: 0;
               text-align: center;
             }
-          }
-          .subtitle-dark {
-            padding: $gutter;
-            color: #2a3f5e;
-            text-align: center;
-            p {
-              margin: 0;
-              padding: 0;
+            .subtitle-white {
+              padding: $gutter;
+              color: white;
+              margin: auto;
+              margin-bottom: 0;
+              @include tablet {
+                width: 100%;
+                text-align: center;
+              }
             }
-
-            @include tablet {
-              width: 100%;
+            .subtitle-dark {
+              padding: $gutter;
+              color: #2a3f5e;
+              text-align: center;
+              p {
+                margin: 0;
+                padding: 0;
+              }
+              @include tablet {
+                width: 100%;
+              }
             }
-          }
-          .cta-buttons {
-            a {
-              margin-right: 0;
+            .cta-buttons {
+              a {
+                margin-right: 0;
+              }
+              margin: auto;
             }
-            margin: auto;
           }
         }
-      }
-      .repeatable-column-wrapper {
-        border: 1px solid #f2f5fa;
-        box-sizing: border-box;
-        .repeatable-column {
-          width: 300px;
-          height: 500px;
-          flex-grow: 1;
-          padding: $gutter;
-          .pretitle {
-            text-align: center;
-          }
-          img {
-            margin: auto;
-            padding-bottom: $gutter;
-            width: 150px;
-          }
-          .title {
-            color: #119dff;
+        .repeatable-column-wrapper {
+          border: 1px solid #f2f5fa;
+          box-sizing: border-box;
+          .repeatable-column {
+            width: 300px;
+            height: 500px;
+            flex-grow: 1;
+            padding: $gutter;
+            .pretitle {
+              text-align: center;
+            }
+            img {
+              margin: auto;
+              padding-bottom: $gutter;
+              width: 150px;
+            }
+            .title {
+              color: #119dff;
+            }
+            .copy {
+              @include tablet {
+                text-align: center;
+              }
+            }
           }
         }
       }
