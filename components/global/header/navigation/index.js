@@ -6,7 +6,13 @@ const MENU = {
     LEFT: [
       {
         title: 'Dash',
-        text: 'Build beautiful, analytical applications. No Javascript required.',
+        text: (
+          <>
+            Build beautiful, analytical applications
+            <br />
+            No Javascript required.
+          </>
+        ),
         link: '/products/dash',
       },
       {
@@ -21,8 +27,6 @@ const MENU = {
       },
     ],
     RIGHT: {
-      image:
-        'https://prismic-io.s3.amazonaws.com/plotly%2Fc62639f7-daf5-4bbd-a111-2495b779dd24_asset+1.png',
       items: [
         {
           title: 'See Dash In Action',
@@ -44,14 +48,13 @@ const MENU = {
         text: 'Data visualization behind your firewall.',
         link: '/products/on-premise',
       },
-    ],
-    RIGHT: [
       {
         title: 'Dash',
         text: 'Build, test and deploy Dash Apps at any scale.',
         link: '/dash/pricing',
       },
     ],
+    RIGHT: [],
   },
   SIGNUP: [
     {
@@ -214,11 +217,8 @@ export default class Navigation extends React.Component {
                 ))}
               </div>
               <div className="navigation-product-submenu-right">
-                <div
-                  className="navigation-product-submenu-section"
-                  style={{backgroundImage: `url(${MENU.PRODUCTS.RIGHT.image})`}}
-                >
-                  {MENU.PRODUCTS.RIGHT.items.map(p => (
+                {MENU.PRODUCTS.RIGHT.items.map(p => (
+                  <div className="navigation-product-submenu-section">
                     <a href={p.link}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">{p.title}</span>
@@ -227,11 +227,11 @@ export default class Navigation extends React.Component {
                         </a>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
-                        {p.text}
+                        <div className="button button-secondary">{p.text}</div>
                       </span>
                     </a>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -276,10 +276,7 @@ export default class Navigation extends React.Component {
                           {p.title}
                         </a>
                       </div>
-                      <span
-                        id="dds-button"
-                        className="navigation-product-submenu-item hide-on-mobile"
-                      >
+                      <span className="navigation-product-submenu-item hide-on-mobile button button-secondary">
                         {p.text}
                       </span>
                     </a>
@@ -303,7 +300,7 @@ export default class Navigation extends React.Component {
               }
             >
               {MENU.SIGNUP.map(i => (
-                <div className="navigation-product-submenu-section" id="community-forum">
+                <div className="navigation-product-submenu-section">
                   <a href={i.link} className="navigation-product-submenu-section-title">
                     {i.title}
                   </a>
