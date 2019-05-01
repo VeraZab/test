@@ -208,7 +208,7 @@ export default class Navigation extends React.Component {
                     <a href={pricing.submenu_url_link3}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">Chart Studio Enterprise</span>
-                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                        <a href={pricing.submenu_url_link3} className="hide-on-desktop">
                           Chart Studio Enterprise
                         </a>
                       </div>
@@ -223,7 +223,7 @@ export default class Navigation extends React.Component {
                     <a href="/dash/pricing/">
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">Dash</span>
-                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
+                        <a href="/dash/pricing/" className="hide-on-desktop">
                           Dash
                         </a>
                       </div>
