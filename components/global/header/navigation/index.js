@@ -1,5 +1,73 @@
 import React from 'react';
-import {renderPrismic} from 'lib/renderPrismicRichText';
+
+const DEMO_FORM_URL = 'https://plotly.typeform.com/to/ECUfbT';
+const MENU = {
+  PRODUCTS: {
+    LEFT: [
+      {
+        title: 'Dash',
+        text: 'Build beautiful, analytical applications. No Javascript required.',
+        link: '/products/dash',
+      },
+      {
+        title: 'Chart Studio',
+        text: 'Collaboratively create and publish charts.',
+        link: '/online-chart-maker',
+      },
+      {
+        title: 'Plotly OEM',
+        text: 'Power commercial offerings with Plotly.',
+        link: '/products/oem',
+      },
+    ],
+    RIGHT: {
+      image:
+        'https://prismic-io.s3.amazonaws.com/plotly%2Fc62639f7-daf5-4bbd-a111-2495b779dd24_asset+1.png',
+      items: [
+        {
+          title: 'See Dash In Action',
+          text: 'Request A Demo',
+          link: DEMO_FORM_URL,
+        },
+      ],
+    },
+  },
+  PRICING: {
+    LEFT: [
+      {
+        title: 'Chart Studio Cloud',
+        text: "Host and share charts in Plotly's cloud.",
+        link: '/products/cloud',
+      },
+      {
+        title: 'Chart Studio Enterprise',
+        text: 'Data visualization behind your firewall.',
+        link: '/products/on-premise',
+      },
+    ],
+    RIGHT: [
+      {
+        title: 'Dash',
+        text: 'Build, test and deploy Dash Apps at any scale.',
+        link: '/dash/pricing',
+      },
+    ],
+  },
+  SIGNUP: [
+    {
+      title: 'Community Forum',
+      link: 'https://community.plot.ly',
+    },
+    {
+      title: 'Chart Studio Cloud',
+      link: 'https://plot.ly/Auth/login/?action=signup#/',
+    },
+  ],
+  CTA: {
+    link: DEMO_FORM_URL,
+    title: 'Schedule A Demo',
+  },
+};
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -107,193 +175,19 @@ export default class Navigation extends React.Component {
   }
 
   render() {
-    if (this.props.nav.items) {
-      const products = this.props.nav.items[0];
-      const pricing = this.props.nav.items[1];
-      const signUp = this.props.nav.items[2];
-      return (
-        <>
-          <div onClick={this.toggleMobileMenu.bind(this)}>
-            <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
-          </div>
-          <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
-            <div className="navigation-product-item-with-submenu">
-              <div
-                className="navigation-product-item"
-                onClick={this.toggleProductSubmenu.bind(this)}
-              >
-                {products.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
-              </div>
-              <div
-                id="productsDropdown"
-                className={
-                  this.state.productSubmenuActive
-                    ? 'navigation-product-submenu submenu-active'
-                    : 'navigation-product-submenu'
-                }
-              >
-                <div className="navigation-product-submenu-left">
-                  <div className="navigation-product-submenu-section">
-                    <a href={products.submenu_url_link}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">{products.submenu_label}</span>
-                        <a href="/products/dash/" className="hide-on-desktop">
-                          {products.submenu_label}
-                        </a>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile">
-                        Build beautiful, analytical web applications. <br />
-                        No JavaScript required.
-                      </span>
-                    </a>
-                  </div>
-                  <div className="navigation-product-submenu-section">
-                    <a href={products.submenu_url_link2}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">{products.submenu_label2}</span>
-                        <a href="/online-chart-maker/" className="hide-on-desktop">
-                          {pricing.submenu_label2}
-                        </a>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile">
-                        {renderPrismic(products.submenu_messaging2)}
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <div className="navigation-product-submenu-right">
-                  <div className="navigation-product-submenu-section">
-                    <a href={products.submenu_url_link3}>
-                      <div className="navigation-product-submenu-item-header_image hide-on-mobile">
-                        <img src={products.dropdown_graphic.url} />
-                      </div>
-                      <div className="navigation-product-submenu-section-title" id="dash-in-action">
-                        See Dash in Action
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="navigation-product-item-with-submenu">
-              <div
-                className="navigation-product-item"
-                onClick={this.togglePricingSubmenu.bind(this)}
-              >
-                {pricing.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
-              </div>
-              <div
-                id="pricingDropdown"
-                className={
-                  this.state.pricingSubmenuActive
-                    ? 'navigation-product-submenu submenu-active'
-                    : 'navigation-product-submenu'
-                }
-              >
-                <div className="navigation-product-submenu-left">
-                  <div className="navigation-product-submenu-section">
-                    <a href={pricing.submenu_url_link2}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">Chart Studio Cloud</span>
-                        <a href={pricing.submenu_url_link2} className="hide-on-desktop">
-                          Chart Studio Cloud
-                        </a>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile">
-                        Host and share charts in Plotly's cloud.
-                      </span>
-                    </a>
-                  </div>
-                  <div className="navigation-product-submenu-section">
-                    <a href={pricing.submenu_url_link3}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">Chart Studio Enterprise</span>
-                        <a href={pricing.submenu_url_link3} className="hide-on-desktop">
-                          Chart Studio Enterprise
-                        </a>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile">
-                        Data visualization behind your firewall.
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <div className="navigation-product-submenu-right">
-                  <div className="navigation-product-submenu-section">
-                    <a href="/dash/pricing/">
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">Dash</span>
-                        <a href="/dash/pricing/" className="hide-on-desktop">
-                          Dash
-                        </a>
-                      </div>
-                      <span
-                        id="dds-button"
-                        className="navigation-product-submenu-item hide-on-mobile"
-                      >
-                        Build, test and deploy Dash Apps at any scale.
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="navigation-product-item-with-submenu">
-              <div
-                className="navigation-product-item"
-                onClick={this.toggleSignUpSubmenu.bind(this)}
-              >
-                {signUp.dropdown_label} <i className="mdi mdi-chevron-down hide-on-mobile" />
-              </div>
-              <div
-                id="signUpDropdown"
-                className={
-                  this.state.signUpSubmenuActive
-                    ? 'navigation-product-submenu submenu-active'
-                    : 'navigation-product-submenu'
-                }
-              >
-                <div className="navigation-product-submenu-section" id="community-forum">
-                  <a
-                    href={signUp.submenu_url_link}
-                    className="navigation-product-submenu-section-title"
-                  >
-                    {signUp.submenu_label}
-                  </a>
-                </div>
-                <div className="navigation-product-submenu-section" id="chart-studio">
-                  <a
-                    href={signUp.submenu_url_link2}
-                    className="navigation-product-submenu-section-title"
-                  >
-                    {signUp.submenu_label2}
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="cta-buttons">
-              <a
-                id="header-button"
-                href={products.submenu_url_link3}
-                className="button button-primary header-button"
-              >
-                <div className="button-label">{products.submenu_url_label3}</div>
-              </a>
-            </div>
-          </nav>
-        </>
-      );
-    }
     return (
       <>
         <div onClick={this.toggleMobileMenu.bind(this)}>
           <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
         </div>
+
         <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.toggleProductSubmenu.bind(this)}>
-              Products <i className="mdi mdi-chevron-down hide-on-mobile" />
+              Products
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="productsDropdown"
               className={
@@ -303,58 +197,50 @@ export default class Navigation extends React.Component {
               }
             >
               <div className="navigation-product-submenu-left">
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    <span className="hide-on-mobile">Dash</span>
-                    <a href="/products/dash/" className="hide-on-desktop">
-                      Dash
+                {MENU.PRODUCTS.LEFT.map(p => (
+                  <div className="navigation-product-submenu-section">
+                    <a href={p.link}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{p.title}</span>
+                        <a href={p.link} className="hide-on-desktop">
+                          {p.title}
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        {p.text}
+                      </span>
                     </a>
                   </div>
-                  <span className="navigation-product-submenu-item hide-on-mobile">
-                    Build beautiful, analytical web applications. <br />
-                    No JavaScript required.
-                  </span>
-                </div>
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    <span className="hide-on-mobile">Chart Studio</span>
-                    <a href="/online-chart-maker/" className="hide-on-desktop">
-                      Chart Studio Cloud
-                    </a>
-                  </div>
-                  <span className="navigation-product-submenu-item hide-on-mobile">
-                    Collaboratively create and publish charts.
-                  </span>
-                  <a
-                    href="/online-chart-maker/"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button">Learn More</button>
-                  </a>
-                </div>
+                ))}
               </div>
               <div className="navigation-product-submenu-right">
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-item hide-on-mobile">
-                    Want to see Dash in action?
-                  </div>
-                  <div className="navigation-product-submenu-item-header_image hide-on-mobile">
-                    <img src="https://prismic-io.s3.amazonaws.com/plotly%2F478dbc54-98c2-4044-a0db-1999770472f3_header.png" />
-                  </div>
-                  <a
-                    href="https://plotly.typeform.com/to/ECUfbT"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button hide-on-mobile">Schedule a Demo</button>
-                  </a>
+                <div
+                  className="navigation-product-submenu-section"
+                  style={{backgroundImage: `url(${MENU.PRODUCTS.RIGHT.image})`}}
+                >
+                  {MENU.PRODUCTS.RIGHT.items.map(p => (
+                    <a href={p.link}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{p.title}</span>
+                        <a href={p.link} className="hide-on-desktop">
+                          {p.title}
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        {p.text}
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.togglePricingSubmenu.bind(this)}>
-              Pricing <i className="mdi mdi-chevron-down hide-on-mobile" />
+              Pricing
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="pricingDropdown"
               className={
@@ -364,68 +250,50 @@ export default class Navigation extends React.Component {
               }
             >
               <div className="navigation-product-submenu-left">
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    <span className="hide-on-mobile">Chart Studio</span>
-                    <a href="/products/cloud/" className="hide-on-desktop">
-                      Chart Studio Cloud
+                {MENU.PRICING.LEFT.map(p => (
+                  <div className="navigation-product-submenu-section">
+                    <a href={p.link}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{p.title}</span>
+                        <a href={p.link} className="hide-on-desktop">
+                          {p.title}
+                        </a>
+                      </div>
+                      <span className="navigation-product-submenu-item hide-on-mobile">
+                        {p.text}
+                      </span>
                     </a>
                   </div>
-                  <div className="navigation-product-submenu-section-title">
-                    <a href="/products/on-premise" className="hide-on-desktop">
-                      Chart Studio Enterprise
-                    </a>
-                  </div>
-                  <div className="navigation-product-submenu-section-title">
-                    <a href="/dash/pricing/" className="hide-on-desktop">
-                      Dash Deployment Server
-                    </a>
-                  </div>
-                  <span className="navigation-product-submenu-item hide-on-mobile">
-                    Cloud and Enterprise solutions to meet <br /> your needs.
-                  </span>
-                  <a
-                    href="/products/cloud/"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button">Chart Studio Cloud</button>
-                  </a>
-                  <a
-                    href="/products/on-premise/"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button">Chart Studio Enterprise</button>
-                  </a>
-                </div>
+                ))}
               </div>
               <div className="navigation-product-submenu-right">
-                <div className="navigation-product-submenu-section">
-                  <div className="navigation-product-submenu-section-title">
-                    <span className="hide-on-mobile">Dash</span>
+                {MENU.PRICING.RIGHT.map(p => (
+                  <div className="navigation-product-submenu-section">
+                    <a href={p.link}>
+                      <div className="navigation-product-submenu-section-title">
+                        <span className="hide-on-mobile">{p.title}</span>
+                        <a href={p.link} className="hide-on-desktop">
+                          {p.title}
+                        </a>
+                      </div>
+                      <span
+                        id="dds-button"
+                        className="navigation-product-submenu-item hide-on-mobile"
+                      >
+                        {p.text}
+                      </span>
+                    </a>
                   </div>
-                  <span id="dds-button" className="navigation-product-submenu-item hide-on-mobile">
-                    License Dash Deployment Server <br />
-                    for easy app deployment in commercial <br />
-                    applications.
-                  </span>
-                  <a
-                    href="/dash/pricing/"
-                    className="navigation-product-submenu-item hide-on-mobile"
-                  >
-                    <button type="button">Dash Deployment Server </button>
-                  </a>
-                </div>
+                ))}
               </div>
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
-            <div
-              id="signUpLabel"
-              className="navigation-product-item"
-              onClick={this.toggleSignUpSubmenu.bind(this)}
-            >
-              Sign Up <i className="mdi mdi-chevron-down hide-on-mobile" />
+            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+              Sign Up
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="signUpDropdown"
               className={
@@ -434,29 +302,24 @@ export default class Navigation extends React.Component {
                   : 'navigation-product-submenu'
               }
             >
-              <div className="navigation-product-submenu-section">
-                <a
-                  href="https://community.plot.ly"
-                  id="community-forum"
-                  className="navigation-product-submenu-section-title"
-                >
-                  Community Forum
-                </a>
-              </div>
-              <div className="navigation-product-submenu-section">
-                <a
-                  href="/Auth/login/?action=signup#/"
-                  id="chart-studio"
-                  className="navigation-product-submenu-section-title"
-                >
-                  Chart Studio Cloud
-                </a>
-              </div>
+              {MENU.SIGNUP.map(i => (
+                <div className="navigation-product-submenu-section" id="community-forum">
+                  <a href={i.link} className="navigation-product-submenu-section-title">
+                    {i.title}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
-          <a href="https://plotly.typeform.com/to/ECUfbT" className="button button-primary">
-            <div className="button-label">Schedule a Demo</div>
-          </a>
+          <div className="cta-buttons">
+            <a
+              id="header-button"
+              href={MENU.CTA.link}
+              className="button button-primary header-button"
+            >
+              <div className="button-label">{MENU.CTA.title}</div>
+            </a>
+          </div>
         </nav>
       </>
     );
