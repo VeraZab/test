@@ -6,7 +6,7 @@ const CopyLeftGraphicRightTwo = props => {
   return (
     <div className="copy-left-graphic-right-two-container">
       <div className="content-container">
-        <div className="copy-container">
+        <div className="copy-left-copy-container">
           {Boolean(primary.pretitle) && <div className="dash-pretitle">{primary.pretitle}</div>}
           <h1 className="hero-title">{primary.title1}</h1>
           <div className="subtitle">{renderPrismic(primary.messaging)}</div>

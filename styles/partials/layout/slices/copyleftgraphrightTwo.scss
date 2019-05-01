@@ -1,41 +1,54 @@
 .copy-left-graphic-right-two-container {
   display: flex;
-  padding-bottom: $gutter;
+  padding-top: $gutter * 4;
+  padding-bottom: $gutter * 2;
+  margin: $gutter * 2;
+  margin-bottom: 0;
+  @include tablet {
+    padding-top: 0;
+  }
   .content-container {
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin-left: 350px;
+    margin-right: 350px;
+    @include media('<=1440px') {
+      margin: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
     @include tablet {
       flex-direction: column;
-      margin: $gutter;
+      margin: auto;
+      margin-left: 0;
+      margin-right: 0;
     }
     .graphic-container {
       width: 50%;
-      margin: $gutter * 3;
       @include tablet {
         width: 100%;
-        margin: auto;
-        padding-top: $gutter * 2;
-
         img {
           margin: auto;
         }
       }
     }
-    .copy-container {
+    .copy-left-copy-container {
       width: 50%;
-      margin: $gutter * 3;
+      .hero-title {
+        font-size: 2rem;
+      }
+      @include desktop {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
       ul {
         padding: 0;
       }
       @include tablet {
         width: 100%;
-        margin: 0;
-        margin-bottom: $gutter;
       }
       p {
         width: 100%;
-        margin: 0;
       }
       .dash-pretitle {
         text-transform: uppercase;
@@ -48,8 +61,11 @@
       }
       .subtitle {
         color: #506784;
+        width: 80%;
+        font-size: 1.2rem;
         @include tablet {
           text-align: center;
+          margin: auto;
         }
       }
     }

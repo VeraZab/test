@@ -5,7 +5,7 @@
     margin: auto;
     text-align: center;
     .title {
-      padding: $gutter * 2 0 $gutter 0;
+      padding: $gutter * 4 0 $gutter/4 0;
     }
     .subtitle {
       margin: auto;
@@ -53,17 +53,17 @@
             width: 100%;
             justify-content: center;
             .pretitle {
-              margin-bottom: 0;
               text-align: center;
             }
             .subtitle-white {
               padding: $gutter;
               color: white;
               margin: auto;
-              margin-bottom: 0;
+              margin-bottom: -180px;
               @include tablet {
                 width: 100%;
                 text-align: center;
+                margin-bottom: 0;
               }
             }
             .subtitle-dark {
@@ -91,7 +91,7 @@
           box-sizing: border-box;
           .repeatable-column {
             width: 300px;
-            height: 500px;
+            height: 420px;
             flex-grow: 1;
             padding: $gutter;
             .pretitle {
@@ -100,12 +100,14 @@
             img {
               margin: auto;
               padding-bottom: $gutter;
-              width: 150px;
+              width: 100px;
             }
             .title {
               color: #119dff;
+              font-size: 1.4em;
             }
             .copy {
+              font-size: 14px;
               @include tablet {
                 text-align: center;
               }
