@@ -132,7 +132,7 @@
             border-radius: 0px;
             position: absolute;
             top: 12px;
-            margin-top: 22px;
+            margin-top: $header-height - $gutter;
             background: #07073d;
             pointer-events: none;
             opacity: 0;
