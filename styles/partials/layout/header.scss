@@ -194,12 +194,20 @@
             text-align: center;
           }
 
-          #signUpDropdown div:first-child {
-            border-bottom: 1px solid #072e68;
-          }
-
           #signUpDropdown .navigation-product-submenu-section {
             width: 280px;
+            padding: $gutter;
+          }
+
+          #signUpDropdown div:first-child {
+            border-bottom: 1px solid #072e68;
+            padding: 12px;
+            padding-bottom: $gutter;
+          }
+
+          #signUpDropdown div:nth-child(2) {
+            padding: 12px;
+            padding-top: $gutter;
           }
 
           #productsDropdown .navigation-product-submenu-right {
