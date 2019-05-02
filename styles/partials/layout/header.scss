@@ -133,6 +133,7 @@
             position: absolute;
             top: 12px;
             margin-top: $header-height - $gutter;
+            margin-left: -$gutter * 2;
             background: #07073d;
             pointer-events: none;
             opacity: 0;
