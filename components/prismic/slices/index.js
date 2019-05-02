@@ -16,14 +16,17 @@ import IFrame from './iframe';
 import GraphicText from './graphic-text';
 import Newsroom from './newsroom';
 import ComboCTA from './ComboCTA';
-import GlobalCTA from './GlobalCTA';
-import DashCTA from './DashCTA';
+import GraphicLeftCopyRight from './GraphicLeftCopyRight';
+import OverlapGraphic from './OverlapGraphic';
 import OpenSourceCTA from './OpenSourceCTA';
 import DashSolutions from './DashSolutions';
 import DashProductive from './DashProductive';
 import DashGallery from './DashGallery';
 import EnterpriseAddons from './EnterpriseAddons';
-import DashDeploymentServer from './DashDeploymentServer';
+import CopyLeftGraphicRightTwo from './CopyLeftGraphicRightTwo';
+import ColumnsThirds from './ColumnsThirds';
+import CopyLeftGraphicRight from './CopyLeftGraphicRight';
+import ColumnarCallToAction from './ColumnarCallToAction';
 
 const BlankSlice = () => {
   return null;
@@ -52,14 +55,17 @@ export default class Slices extends React.Component {
       'cs-iframe': IFrame,
       newsroom: Newsroom,
       an_open_source_company: OpenSourceCTA,
-      globalcta: GlobalCTA,
-      dash_cta: DashCTA,
+      globalcta: GraphicLeftCopyRight,
+      dash_cta: OverlapGraphic,
       combocta: ComboCTA,
       dash_solutions: DashSolutions,
       dash_is_production: DashProductive,
       dash_app_gallery: DashGallery,
       enterprise_addons: EnterpriseAddons,
-      dash_product_family: DashDeploymentServer,
+      dash_product_family: CopyLeftGraphicRightTwo,
+      columns_thirds: ColumnsThirds,
+      copy_l_graph_r: CopyLeftGraphicRight,
+      columnar_call_to_action: ColumnarCallToAction,
     };
 
     return (

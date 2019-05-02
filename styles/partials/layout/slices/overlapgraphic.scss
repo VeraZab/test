@@ -1,0 +1,42 @@
+.overlap-graphic-section-container {
+  margin: $gutter;
+  .overlap-graphic-section {
+    display: flex;
+    flex-direction: row;
+    @include media('<1300px') {
+      flex-direction: column;
+    }
+    margin: $gutter;
+    .overlap-graphic-container {
+    }
+    .overlap-copy-container {
+      display: flex;
+      align-items: center;
+      .overlap-copy {
+        width: 100%;
+        box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
+        background: white;
+        opacity: 0.95;
+        padding: $gutter * 2;
+        transform: translateX(-15%);
+        @include media('<1300px') {
+          margin: auto;
+          padding: $gutter;
+          transform: translateX(0%);
+        }
+        @include phone {
+          padding: 0;
+          transform: none;
+        }
+        .pretitle {
+          padding-top: $gutter;
+        }
+        .subtitle {
+          @include tablet {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

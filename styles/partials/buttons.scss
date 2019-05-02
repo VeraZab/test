@@ -101,7 +101,12 @@
   display: flex;
   #header-button {
     margin: 0;
-    margin-left: $gutter;
+  }
+  #columns-thirds-button {
+    width: 170px;
+    margin: auto;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
   }
   @include tablet {
     margin: auto;

@@ -5,28 +5,27 @@ class DashGallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {mode: 'oil'};
-
     this.handleOilClick = this.handleOilClick.bind(this);
     this.handleMLClick = this.handleMLClick.bind(this);
     this.handlePharmaClick = this.handlePharmaClick.bind(this);
   }
 
   handleOilClick() {
-    if (this.state.mode != 'oil') {
+    if (this.state.mode !== 'oil') {
       this.setState({mode: 'oil'});
       return;
     }
   }
 
   handleMLClick() {
-    if (this.state.mode != 'ml') {
+    if (this.state.mode !== 'ml') {
       this.setState({mode: 'ml'});
       return;
     }
   }
 
   handlePharmaClick() {
-    if (this.state.mode != 'pharma') {
+    if (this.state.mode !== 'pharma') {
       this.setState({mode: 'pharma'});
       return;
     }
@@ -34,10 +33,9 @@ class DashGallery extends React.Component {
 
   render() {
     const items = this.props.data.items;
-
     return (
       <div className="gallery-container">
-        <div className={this.state.mode == 'oil' ? 'oil-and-gas-active' : 'oil-and-gas'}>
+        <div className={this.state.mode === 'oil' ? 'oil-and-gas-active' : 'oil-and-gas'}>
           <div className="gallery-graphic">
             <img src={items[0].graphic.url} />
           </div>
@@ -52,7 +50,7 @@ class DashGallery extends React.Component {
             </div>
           </div>
         </div>
-        <div className={this.state.mode == 'ml' ? 'ml-active' : 'ml'}>
+        <div className={this.state.mode === 'ml' ? 'ml-active' : 'ml'}>
           <div className="gallery-graphic">
             <img src={items[1].graphic.url} />
           </div>
@@ -67,7 +65,7 @@ class DashGallery extends React.Component {
             </div>
           </div>
         </div>
-        <div className={this.state.mode == 'pharma' ? 'pharma-active' : 'pharma'}>
+        <div className={this.state.mode === 'pharma' ? 'pharma-active' : 'pharma'}>
           <div className="gallery-graphic">
             <img src={items[2].graphic.url} />
           </div>

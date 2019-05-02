@@ -1,0 +1,76 @@
+.copy-left-graphic-right-two-container {
+  display: flex;
+  padding-top: $gutter * 4;
+  padding-bottom: $gutter * 2;
+  margin: $gutter * 2;
+  margin-bottom: 0;
+  @include tablet {
+    padding-top: 0;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 350px;
+    margin-right: 350px;
+    align-items: center;
+
+    @include media('<=1440px') {
+      margin: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include tablet {
+      flex-direction: column;
+      margin: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .graphic-container {
+      width: 50%;
+      @include tablet {
+        width: 100%;
+        img {
+          padding-top: $gutter;
+          margin: auto;
+        }
+      }
+    }
+    .copy-left-copy-container {
+      width: 50%;
+      .hero-title {
+        font-size: 2rem;
+      }
+      @include desktop {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      ul {
+        padding: 0;
+      }
+      @include tablet {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+      .dash-pretitle {
+        text-transform: uppercase;
+        color: #96a6b5;
+        letter-spacing: 2px;
+        padding-bottom: $gutter/2;
+        @include tablet {
+          text-align: center;
+        }
+      }
+      .subtitle {
+        color: #506784;
+        width: 80%;
+        font-size: 1.2rem;
+        @include tablet {
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

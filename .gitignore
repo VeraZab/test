@@ -3,6 +3,7 @@ node_modules
 .next
 .idea
 npm-debug.log.*
+out
 
 # Compiled source #
 

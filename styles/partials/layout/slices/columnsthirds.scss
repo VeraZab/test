@@ -1,0 +1,115 @@
+.columns-thirds-container {
+  display: flex;
+  flex-direction: column;
+  .title-container {
+    margin: auto;
+    text-align: center;
+    .title {
+      padding: $gutter * 4 0 $gutter/4 0;
+    }
+    .subtitle {
+      margin: auto;
+      width: 70%;
+      padding-bottom: $gutter * 2;
+      color: #2a3f5e;
+    }
+  }
+  .columns-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    @include tablet {
+      margin: auto;
+    }
+    .repeatable-columns-wrapper {
+      @include tablet {
+        margin: 0;
+      }
+      .repeatable-columns {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 915px;
+        @include tablet {
+          flex-direction: column;
+          width: auto;
+          margin: 0;
+        }
+        .intro-column {
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          width: 300px;
+          height: 450px;
+
+          .intro-copy-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            .pretitle {
+              text-align: center;
+            }
+            .subtitle-white {
+              padding: $gutter;
+              color: white;
+              margin: auto;
+              margin-bottom: -180px;
+              @include tablet {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0;
+              }
+            }
+            .subtitle-dark {
+              padding: $gutter;
+              color: #2a3f5e;
+              text-align: center;
+              p {
+                margin: 0;
+                padding: 0;
+              }
+              @include tablet {
+                width: 100%;
+              }
+            }
+            .cta-buttons {
+              a {
+                margin-right: 0;
+              }
+              margin: auto;
+            }
+          }
+        }
+        .repeatable-column-wrapper {
+          border: 1px solid #f2f5fa;
+          box-sizing: border-box;
+          .repeatable-column {
+            width: 300px;
+            height: 450px;
+            padding: $gutter;
+            .pretitle {
+              text-align: center;
+            }
+            img {
+              margin: auto;
+              padding-bottom: $gutter;
+              width: 100px;
+            }
+            .title {
+              color: #119dff;
+              font-size: 1.4em;
+            }
+            .copy {
+              font-size: 14px;
+              @include tablet {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
