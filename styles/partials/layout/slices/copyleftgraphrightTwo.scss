@@ -12,6 +12,8 @@
     flex-direction: row;
     margin-left: 350px;
     margin-right: 350px;
+    align-items: center;
+
     @include media('<=1440px') {
       margin: auto;
       margin-left: 0;
@@ -28,6 +30,7 @@
       @include tablet {
         width: 100%;
         img {
+          padding-top: $gutter;
           margin: auto;
         }
       }
