@@ -9,15 +9,12 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    max-width: 95vw;
-    padding: 24px 0;
-    margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
 
     .site-header--section-left {
       // allows logo to stay about the same size regardless of page
       height: 40px;
-      padding-top: 2px;
+      padding: $gutter;
       width: 99%;
 
       .site-header-logo {
@@ -40,17 +37,13 @@
           transition: 0.38s all cubic-bezier(0.24, 0.8, 0, 0.97);
           text-transform: uppercase;
           letter-spacing: 2px;
-          padding-top: 7px;
-          display: flex;
-          flex-grow: 1;
           font-size: 14px;
-          padding-left: 24px;
-          text-align: right;
           font-weight: 1000;
-          justify-content: flex-start;
-          margin-left: 24px;
           color: white;
-          min-width: 120px;
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+          white-space: nowrap;
         }
 
         .navigation-product-item:hover {
@@ -132,6 +125,7 @@
         .navigation-product-item-with-submenu {
           display: flex;
           position: relative;
+          padding: $gutter;
 
           .navigation-product-submenu {
             box-shadow: 3px 3px 14px #000;
