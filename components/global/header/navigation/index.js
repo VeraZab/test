@@ -180,7 +180,7 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <>
-        <div onClick={this.toggleMobileMenu.bind(this)}>
+        <div onClick={this.toggleMobileMenu.bind(this)} className="mobile-navigation-anchor">
           <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
         </div>
 
