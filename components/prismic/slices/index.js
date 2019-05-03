@@ -18,7 +18,7 @@ import Newsroom from './newsroom';
 import ComboCTA from './ComboCTA';
 import GraphicLeftCopyRight from './GraphicLeftCopyRight';
 import OverlapGraphic from './OverlapGraphic';
-import OpenSourceCTA from './OpenSourceCTA';
+import TwoColumn from './TwoColumn';
 import DashSolutions from './DashSolutions';
 import DashProductive from './DashProductive';
 import DashGallery from './DashGallery';
@@ -54,7 +54,7 @@ export default class Slices extends React.Component {
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
       newsroom: Newsroom,
-      an_open_source_company: OpenSourceCTA,
+      an_open_source_company: TwoColumn,
       globalcta: GraphicLeftCopyRight,
       dash_cta: OverlapGraphic,
       combocta: ComboCTA,

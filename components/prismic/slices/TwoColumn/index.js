@@ -1,6 +1,6 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
-const OpenSource = props => {
+const TwoColumn = props => {
   return (
     <div className="os">
       <div className="os-left-container">
@@ -46,4 +46,4 @@ const OpenSource = props => {
   );
 };
 
-export default OpenSource;
+export default TwoColumn;

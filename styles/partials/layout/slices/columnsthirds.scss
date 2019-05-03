@@ -1,6 +1,7 @@
 .columns-thirds-container {
   display: flex;
   flex-direction: column;
+  padding-bottom: $gutter * 2;
   .title-container {
     margin: auto;
     text-align: center;
@@ -87,8 +88,12 @@
           box-sizing: border-box;
           .repeatable-column {
             width: 300px;
-            height: 450px;
+            height: 360px;
             padding: $gutter;
+            margin-bottom: 20px;
+            @include tablet {
+              height: 400px;
+            }
             .pretitle {
               text-align: center;
             }
