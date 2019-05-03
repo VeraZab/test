@@ -10,23 +10,19 @@
   .content-container {
     display: flex;
     flex-direction: row;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin: auto;
     align-items: center;
-
-    @include media('<=1440px') {
-      margin: auto;
-      margin-left: 0;
-      margin-right: 0;
-    }
+    max-width: 1300px;
     @include tablet {
       flex-direction: column;
-      margin: auto;
-      margin-left: 0;
-      margin-right: 0;
+      height: auto;
+      .graphic-container {
+        img {
+          margin: auto;
+        }
+      }
     }
     .graphic-container {
-      width: 50%;
       @include tablet {
         width: 100%;
         img {
@@ -35,8 +31,7 @@
         }
       }
     }
-    .copy-left-copy-container {
-      width: 50%;
+    .copy-left-copy {
       .hero-title {
         font-size: 2rem;
       }

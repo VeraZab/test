@@ -9,10 +9,11 @@
     flex-direction: column;
     height: auto;
   }
-  .graphic-left-copy-right {
+  .content-container {
     display: flex;
     flex-direction: row;
     margin: auto;
+    max-width: 1300px;
     @include tablet {
       flex-direction: column;
       height: auto;
