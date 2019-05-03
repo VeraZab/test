@@ -31,8 +31,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 915px;
-        @include tablet {
+        width: 1250px;
+        @include media('<1250px') {
           flex-direction: column;
           width: auto;
           margin: 0;
@@ -41,8 +41,11 @@
           background-size: cover;
           background-repeat: no-repeat;
           display: flex;
-          width: 300px;
+          width: 400px;
           height: 450px;
+          @include tablet {
+            width: 300px;
+          }
 
           .intro-copy-container {
             display: flex;
@@ -87,19 +90,20 @@
           border: 1px solid #f2f5fa;
           box-sizing: border-box;
           .repeatable-column {
-            width: 300px;
+            width: 400px;
             height: 360px;
             padding: $gutter;
             margin-bottom: 20px;
             @include tablet {
               height: 400px;
+              width: 300px;
             }
             .pretitle {
               text-align: center;
             }
             img {
               margin: auto;
-              padding-bottom: $gutter;
+              padding-bottom: $gutter * 2;
               width: 100px;
             }
             .title {
