@@ -1,4 +1,4 @@
-const DashProductive = props => {
+const FourCellTable = props => {
   const items = props.data.items;
   const primary = props.data.primary;
   return (
@@ -53,4 +53,4 @@ const DashProductive = props => {
   );
 };
 
-export default DashProductive;
+export default FourCellTable;

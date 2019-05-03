@@ -1,6 +1,6 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
-const EnterpriseAddons = props => {
+const HugeBackgroundImage = props => {
   const primary = props.data.primary;
 
   return (
@@ -21,4 +21,4 @@ const EnterpriseAddons = props => {
   );
 };
 
-export default EnterpriseAddons;
+export default HugeBackgroundImage;

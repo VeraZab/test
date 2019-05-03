@@ -1,7 +1,7 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 import React from 'react';
 
-class DashGallery extends React.Component {
+class Gallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {mode: 'oil'};
@@ -98,4 +98,4 @@ class DashGallery extends React.Component {
   }
 }
 
-export default DashGallery;
+export default Gallery;
