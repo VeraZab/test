@@ -38,6 +38,7 @@ const TwoColumn = props => {
               <img className="left-logo" src={props.data.items[5].os_logo.url} />
               <img className="left-logo" src={props.data.items[6].os_logo.url} />
               <img className="left-logo" src={props.data.items[7].os_logo.url} />
+              <img className="left-logo" src={props.data.items[8].os_logo.url} />
             </div>
           </div>
         </div>
