@@ -25,11 +25,11 @@ const ColumnsThirds = props => {
                   >
                     <div className="intro-copy-container">
                       {Boolean(primary.section_pretitle) && (
-                        <h2 className="pretitle">{primary.section_pretitle}</h2>
+                        <div className="pretitle">{primary.section_pretitle}</div>
                       )}
-                      <h2 className={primary.bg_graphic.url ? 'subtitle-white' : 'subtitle-dark'}>
+                      <h1 className={primary.bg_graphic.url ? 'subtitle-white' : 'title'}>
                         {renderPrismic(primary.section_subtitle2)}
-                      </h2>
+                      </h1>
                       {Boolean(primary.cta_url) && (
                         <div className="cta-buttons">
                           <a

@@ -9,7 +9,7 @@
     flex-direction: column;
     height: auto;
   }
-  .graphic-left-copy-right {
+  .content-container {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -17,6 +17,9 @@
       flex-direction: column;
       height: auto;
       .graphic-container {
+        @include phone {
+          max-width: 350px;
+        }
         img {
           margin: auto;
         }
@@ -24,16 +27,17 @@
     }
     .copy-wrapper {
       display: flex;
-      .cta-buttons {
-        margin: auto;
-        a {
-          width: 250px;
-        }
-      }
+      justify-content: center;
+      align-items: center;
       .graphic-left-copy {
-        margin: auto;
-        padding-left: $gutter * 2;
-
+        .cta-buttons {
+          a {
+            @include tablet {
+              margin: auto;
+            }
+          }
+        }
+        margin: $gutter;
         @include tablet {
           padding-left: 0;
         }

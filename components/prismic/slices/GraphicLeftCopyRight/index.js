@@ -3,7 +3,7 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 const GraphicLeftCopyRight = props => {
   return (
     <div className="graphic-left-copy-right-container ">
-      <div className="graphic-left-copy-right">
+      <div className="content-container">
         <div className="graphic-container">
           {props.data.primary.cta_graphic && <img src={props.data.primary.cta_graphic.url} />}
         </div>
