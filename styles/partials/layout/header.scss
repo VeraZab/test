@@ -1,3 +1,5 @@
+$nav-padding: $gutter * 0.5;
+
 .site-header {
   cursor: default !important;
   height: $header-height;
@@ -14,14 +16,14 @@
     flex-grow: 1;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
 
     .site-header--section-left {
-      // allows logo to stay about the same size regardless of page
-      height: 40px;
-      padding: $gutter;
-      width: 99%;
-
       .site-header-logo {
+        padding: 15px;
+
         img {
           height: 35px;
         }
@@ -62,7 +64,7 @@
         }
 
         .mobile-navigation-anchor {
-          padding: $gutter;
+          padding: 18px;
         }
 
         .site-header-nav {
@@ -133,13 +135,13 @@
         .navigation-product-item-with-submenu {
           display: flex;
           position: relative;
-          padding: $gutter;
+          padding: $nav-padding;
 
           .navigation-product-submenu {
             border-radius: 0px;
             position: absolute;
             top: $header-height;
-            margin-left: -$gutter * 2;
+            margin-left: -$gutter * 3.5;
             background: #07073d;
             pointer-events: none;
             opacity: 0;
