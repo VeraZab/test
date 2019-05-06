@@ -1,7 +1,7 @@
 const CopyLeftGraphicRight = props => {
   const primary = props.data.primary;
   return (
-    <div className="copy-l-graph-r-container">
+    <div className="copy-left-graphic-right">
       <div className="copy-l-container">
         <div className="copy-l">
           <h1 className="title">{primary.title1}</h1>

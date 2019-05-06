@@ -2,7 +2,7 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const TwoColumn = props => {
   return (
-    <div className="os">
+    <div className="two-column">
       <div className="os-left-container">
         <div className="os-left">
           {props.data.primary.os_title && (

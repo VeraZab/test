@@ -1,4 +1,4 @@
-.overlap-graphic-section-container {
+.overlap-graphic {
   margin: $gutter;
   .overlap-graphic-section {
     display: flex;
@@ -7,8 +7,6 @@
       flex-direction: column;
     }
     margin: $gutter;
-    .overlap-graphic-container {
-    }
     .overlap-copy-container {
       display: flex;
       align-items: center;

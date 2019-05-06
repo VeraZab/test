@@ -4,7 +4,7 @@ const CopyLeftGraphicRightTwo = props => {
   const primary = props.data.primary;
 
   return (
-    <div className="copy-left-graphic-right-two-container">
+    <div className="copy-left-graphic-right-two">
       <div className="content-container">
         <div className="copy-left-copy-container">
           {Boolean(primary.pretitle) && <div className="dash-pretitle">{primary.pretitle}</div>}

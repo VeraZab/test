@@ -1,4 +1,4 @@
-.copy-left-graphic-right-two-container {
+.copy-left-graphic-right-two {
   display: flex;
   padding-top: $gutter * 4;
   margin: $gutter * 3;
@@ -68,7 +68,7 @@
       .subtitle {
         color: #506784;
         width: 80%;
-        font-size: 1.0rem;
+        font-size: 1rem;
         @include tablet {
           text-align: center;
           margin: auto;

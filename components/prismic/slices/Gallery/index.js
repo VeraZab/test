@@ -34,7 +34,7 @@ class Gallery extends React.Component {
   render() {
     const items = this.props.data.items;
     return (
-      <div className="gallery-container">
+      <div className="gallery">
         <div className={this.state.mode === 'oil' ? 'oil-and-gas-active' : 'oil-and-gas'}>
           <div className="gallery-graphic">
             <img src={items[0].graphic.url} />

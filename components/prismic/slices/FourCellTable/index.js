@@ -2,7 +2,7 @@ const FourCellTable = props => {
   const items = props.data.items;
   const primary = props.data.primary;
   return (
-    <div className="dashProductive-container">
+    <div className="four-cell-table">
       <div className="title-container">
         <div className="pretitle">{primary.pretitle}</div>
         <h1 className="title">{primary.title1}</h1>
