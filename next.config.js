@@ -13,7 +13,7 @@ module.exports = {
     '/preview': {
       page: '/prismic-generator',
       query: {
-        slug: 'dash-product',
+        slug: 'home',
       },
     },
     '/dashboards-and-reports': {
