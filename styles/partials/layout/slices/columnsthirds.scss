@@ -69,6 +69,7 @@
               }
               @include tablet {
                 width: 100%;
+                text-align: center;
               }
             }
             .cta-buttons {
@@ -87,19 +88,31 @@
             height: 450px;
             padding: $gutter;
             .pretitle {
-              text-align: center;
+              text-align: left;
+              @include tablet {
+                text-align: center;
+              }
             }
             img {
               margin: auto;
               padding-bottom: $gutter;
+              padding-top: $gutter;
               width: 100px;
             }
-            .title {
+            .title-first {
               color: #119dff;
               font-size: 1.4em;
+              padding-top: 35px;
+              padding-bottom: $gutter;
+            }
+            .title-second {
+              color: #119dff;
+              font-size: 1.4em;
+              padding-bottom: 50px;
             }
             .copy {
               font-size: 14px;
+              padding-bottom: $gutter;
               @include tablet {
                 text-align: center;
               }

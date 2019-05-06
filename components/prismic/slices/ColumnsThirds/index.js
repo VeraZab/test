@@ -50,7 +50,7 @@ const ColumnsThirds = props => {
                       <div className="repeatable-column" key={i}>
                         {Boolean(item.pretitle) && <div className="pretitle">{item.pretitle}</div>}
                         <img src={item.graphic.url} />
-                        <h2 className="title">{item.title1}</h2>
+                        <h2 className={i === 0 ? 'title-first' : 'title-second'}>{item.title1}</h2>
                         <div className="copy">{item.messaging}</div>
                       </div>
                       {Boolean(item.cta_label) && (
