@@ -17,7 +17,7 @@
         box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
         background: white;
         opacity: 0.95;
-        padding: $gutter * 2;
+        padding: $gutter;
         transform: translateX(-15%);
         @include media('<1300px') {
           margin: auto;
@@ -28,12 +28,21 @@
           padding: 0;
           transform: none;
         }
+        .subtitle,
+        .title,
         .pretitle {
-          padding-top: $gutter;
-        }
-        .subtitle {
-          @include tablet {
+          @include media('<1300px') {
             text-align: center;
+          }
+        }
+        .cta-buttons {
+          a {
+            @include media('<1300px') {
+              margin: auto;
+            }
+            @include tablet {
+              margin-top: $gutter;
+            }
           }
         }
       }

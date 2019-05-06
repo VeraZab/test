@@ -1,20 +1,14 @@
 .dashProductive-container {
   display: flex;
   flex-direction: column;
+  padding-top: $gutter * 2;
   .title-container {
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-bottom: $gutter;
     .pretitle {
-      margin: auto;
-      text-transform: uppercase;
-      color: #96a6b5;
-      letter-spacing: 2px;
-      padding-bottom: $gutter/2;
-      @include tablet {
-        text-align: center;
-      }
+      text-align: center;
     }
   }
   .features-container {

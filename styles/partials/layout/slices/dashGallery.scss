@@ -31,7 +31,7 @@
       }
       .gallery-heading {
         text-transform: uppercase;
-        color: #96a6b5;
+        color: $color-heading;
         letter-spacing: 2px;
         padding-bottom: $gutter/2;
         @include tablet {
@@ -73,7 +73,7 @@
       }
       .gallery-heading {
         text-transform: uppercase;
-        color: #96a6b5;
+        color: $color-heading;
         letter-spacing: 2px;
         padding-bottom: $gutter/2;
         @include tablet {
@@ -115,7 +115,7 @@
       }
       .gallery-heading {
         text-transform: uppercase;
-        color: #96a6b5;
+        color: $color-heading;
         letter-spacing: 2px;
         padding-bottom: $gutter/2;
         @include tablet {
