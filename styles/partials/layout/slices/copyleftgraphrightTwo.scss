@@ -10,17 +10,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    @include media('<=1440px') {
-      margin: auto;
-      margin-left: 0;
-      margin-right: 0;
-    }
+    max-width: 1300px;
     @include tablet {
       flex-direction: column;
-      margin: auto;
-      margin-left: 0;
-      margin-right: 0;
+      height: auto;
+      .graphic-container {
+        img {
+          margin: auto;
+        }
+      }
     }
     .graphic-container {
       padding-top: $gutter * 2;
@@ -58,7 +56,7 @@
       }
       .dash-pretitle {
         text-transform: uppercase;
-        color: #96a6b5;
+        color: $color-heading;
         letter-spacing: 2px;
         padding-bottom: $gutter/2;
         @include tablet {

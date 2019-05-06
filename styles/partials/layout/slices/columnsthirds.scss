@@ -52,9 +52,7 @@
             flex-direction: column;
             width: 100%;
             justify-content: center;
-            .pretitle {
-              text-align: center;
-            }
+
             .subtitle-white {
               padding: $gutter;
               color: white;
@@ -66,10 +64,9 @@
                 margin-bottom: 0;
               }
             }
-            .subtitle-dark {
-              padding: $gutter;
-              color: #2a3f5e;
-              text-align: center;
+            .title {
+              color: $color-rhino-core;
+              text-align: left;
               p {
                 margin: 0;
                 padding: 0;
