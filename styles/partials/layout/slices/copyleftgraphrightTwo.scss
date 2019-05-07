@@ -11,6 +11,7 @@
     flex-direction: row;
     align-items: center;
     max-width: 1300px;
+    margin: auto;
     @include tablet {
       flex-direction: column;
       height: auto;
