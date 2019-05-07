@@ -20,6 +20,7 @@
         }
       }
     }
+
     .graphic-container {
       padding-top: $gutter * 2;
       img {
@@ -37,7 +38,8 @@
         }
       }
     }
-    .copy-left-copy-container {
+
+    .copy-left-copy {
       .hero-title {
         font-size: 2rem;
       }
@@ -56,12 +58,9 @@
       }
       .dash-pretitle {
         text-transform: uppercase;
-        color: $color-heading;
+        color: #96a6b5;
         letter-spacing: 2px;
-        padding-bottom: $gutter/2;
-        @include tablet {
-          text-align: center;
-        }
+        padding-bottom: 12px;
       }
       .subtitle {
         color: #506784;
