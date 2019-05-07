@@ -41,23 +41,35 @@
           background-size: cover;
           background-repeat: no-repeat;
           display: flex;
-          width: 400px;
-          height: 450px;
-          @include tablet {
-            width: 300px;
-          }
+          width: 300px;
+          height: 500px;
 
           .intro-copy-container {
             display: flex;
             flex-direction: column;
             width: 100%;
             justify-content: center;
-
+            .pretitle {
+              font-size: 16px;
+              @include tablet {
+                text-align: center;
+              }
+            }
             .subtitle-white {
               padding: $gutter;
               color: white;
               margin: auto;
               margin-bottom: -180px;
+              @include tablet {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0;
+              }
+            }
+            .subtitle-dark {
+              color: $color-rhino-core;
+              margin-bottom: -180px;
+              text-align: left;
               @include tablet {
                 width: 100%;
                 text-align: center;
@@ -73,6 +85,7 @@
               }
               @include tablet {
                 width: 100%;
+                text-align: center;
               }
             }
             .cta-buttons {
@@ -87,8 +100,8 @@
           border: 1px solid #f2f5fa;
           box-sizing: border-box;
           .repeatable-column {
-            width: 400px;
-            height: 360px;
+            width: 300px;
+            height: 500px;
             padding: $gutter;
             margin-bottom: 20px;
             @include tablet {
@@ -96,16 +109,23 @@
               width: 300px;
             }
             .pretitle {
-              text-align: center;
+              text-align: left;
+              @include tablet {
+                text-align: center;
+              }
             }
             img {
               margin: auto;
-              padding-bottom: $gutter * 2;
-              width: 100px;
+              height: 150px;
+              padding-bottom: $gutter;
             }
             .title {
               color: #119dff;
               font-size: 1.4em;
+              height: 120px;
+              @include tablet {
+                text-align: center;
+              }
             }
             .copy {
               font-size: 14px;
