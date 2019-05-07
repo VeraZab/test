@@ -1,7 +1,6 @@
 .columns-thirds {
   display: flex;
   flex-direction: column;
-  padding-bottom: $gutter * 2;
   .title-container {
     margin: auto;
     text-align: center;
@@ -31,8 +30,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 1250px;
-        @include media('<1250px') {
+        width: 915px;
+        @include tablet {
           flex-direction: column;
           width: auto;
           margin: 0;
@@ -49,27 +48,12 @@
             flex-direction: column;
             width: 100%;
             justify-content: center;
-            .pretitle {
-              font-size: 16px;
-              @include tablet {
-                text-align: center;
-              }
-            }
+
             .subtitle-white {
               padding: $gutter;
               color: white;
               margin: auto;
               margin-bottom: -180px;
-              @include tablet {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 0;
-              }
-            }
-            .subtitle-dark {
-              color: $color-rhino-core;
-              margin-bottom: -180px;
-              text-align: left;
               @include tablet {
                 width: 100%;
                 text-align: center;
@@ -103,11 +87,6 @@
             width: 300px;
             height: 500px;
             padding: $gutter;
-            margin-bottom: 20px;
-            @include tablet {
-              height: 400px;
-              width: 300px;
-            }
             .pretitle {
               text-align: left;
               @include tablet {
