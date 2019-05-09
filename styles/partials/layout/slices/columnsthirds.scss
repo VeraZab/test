@@ -87,6 +87,8 @@
             width: 300px;
             height: 500px;
             padding: $gutter;
+            display: flex;
+            flex-direction: column;
             .pretitle {
               text-align: left;
               @include tablet {
@@ -95,13 +97,13 @@
             }
             img {
               margin: auto;
-              height: 150px;
-              padding-bottom: $gutter;
+              margin-top: 0;
+              margin-bottom: 20px;
+              height: 90px;
             }
             .title {
               color: #119dff;
               font-size: 1.4em;
-              height: 120px;
               @include tablet {
                 text-align: center;
               }
