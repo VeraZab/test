@@ -1,8 +1,8 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
-const OpenSource = props => {
+const TwoColumn = props => {
   return (
-    <div className="os">
+    <div className="two-column">
       <div className="os-left-container">
         <div className="os-left">
           {props.data.primary.os_title && (
@@ -38,6 +38,7 @@ const OpenSource = props => {
               <img className="left-logo" src={props.data.items[5].os_logo.url} />
               <img className="left-logo" src={props.data.items[6].os_logo.url} />
               <img className="left-logo" src={props.data.items[7].os_logo.url} />
+              <img className="left-logo" src={props.data.items[8].os_logo.url} />
             </div>
           </div>
         </div>
@@ -46,4 +47,4 @@ const OpenSource = props => {
   );
 };
 
-export default OpenSource;
+export default TwoColumn;

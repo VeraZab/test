@@ -1,7 +1,7 @@
 const ColumnarCallToAction = props => {
   const primary = props.data.primary;
   return (
-    <div className="columnar-container">
+    <div className="columnar-call-to-action">
       <div className="columnar-copy-container">
         <h1 className="title">{primary.title1}</h1>
         <div className="columnar-copy">{primary.copy}</div>

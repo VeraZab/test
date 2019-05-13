@@ -22,7 +22,7 @@ class ComboCTA extends React.Component {
   render() {
     const items = this.props.data.items;
     return (
-      <>
+      <div className="combo-cta">
         <div
           className={
             this.state.mode === 'dash' ? 'dash-cta-container-active' : 'dash-cta-container'
@@ -80,7 +80,7 @@ class ComboCTA extends React.Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

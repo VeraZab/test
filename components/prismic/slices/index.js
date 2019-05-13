@@ -18,11 +18,10 @@ import Newsroom from './newsroom';
 import ComboCTA from './ComboCTA';
 import GraphicLeftCopyRight from './GraphicLeftCopyRight';
 import OverlapGraphic from './OverlapGraphic';
-import OpenSourceCTA from './OpenSourceCTA';
-import DashSolutions from './DashSolutions';
-import DashProductive from './DashProductive';
-import DashGallery from './DashGallery';
-import EnterpriseAddons from './EnterpriseAddons';
+import TwoColumn from './TwoColumn';
+import FourCellTable from './FourCellTable';
+import Gallery from './Gallery';
+import HugeBackgroundImage from './HugeBackgroundImage';
 import CopyLeftGraphicRightTwo from './CopyLeftGraphicRightTwo';
 import ColumnsThirds from './ColumnsThirds';
 import CopyLeftGraphicRight from './CopyLeftGraphicRight';
@@ -54,14 +53,13 @@ export default class Slices extends React.Component {
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
       newsroom: Newsroom,
-      an_open_source_company: OpenSourceCTA,
+      an_open_source_company: TwoColumn,
       globalcta: GraphicLeftCopyRight,
       dash_cta: OverlapGraphic,
       combocta: ComboCTA,
-      dash_solutions: DashSolutions,
-      dash_is_production: DashProductive,
-      dash_app_gallery: DashGallery,
-      enterprise_addons: EnterpriseAddons,
+      dash_is_production: FourCellTable,
+      dash_app_gallery: Gallery,
+      enterprise_addons: HugeBackgroundImage,
       dash_product_family: CopyLeftGraphicRightTwo,
       columns_thirds: ColumnsThirds,
       copy_l_graph_r: CopyLeftGraphicRight,
