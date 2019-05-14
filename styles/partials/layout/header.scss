@@ -19,11 +19,12 @@ $nav-padding: $gutter * 0.5;
     height: 100%;
     padding-left: $gutter / 2;
     padding-right: $gutter / 2;
+    max-width: 1200px;
+    margin: auto;
 
     .site-header--section-left {
       .site-header-logo {
         padding: 15px;
-
         img {
           height: 35px;
         }
@@ -34,7 +35,6 @@ $nav-padding: $gutter * 0.5;
       a {
         text-decoration: none !important;
       }
-
       .site-header-nav {
         flex-grow: 1;
         display: flex;

@@ -1,97 +1,88 @@
-.two-column {
-  display: flex;
+.two-column-container {
+  padding-top: $space-between * 2;
+  padding-bottom: $space-between;
+  background: right/45% no-repeat
+    url(https://prismic-io.s3.amazonaws.com/plotly%2F361234a1-3a63-4f39-8306-641d67af78a4_circle+background.png);
   @include tablet {
-    flex-direction: column;
+    background: bottom/85% no-repeat
+      url(https://prismic-io.s3.amazonaws.com/plotly%2F361234a1-3a63-4f39-8306-641d67af78a4_circle+background.png);
   }
-  .os-left-container {
-    width: 50%;
+  @include phone {
+    background: bottom/85% no-repeat
+      url(https://prismic-io.s3.amazonaws.com/plotly%2F361234a1-3a63-4f39-8306-641d67af78a4_circle+background.png);
+    background-position: right 25px bottom 80px;
+  }
+  .two-column {
+    display: flex;
+
     @include tablet {
-      width: 100%;
-    }
-    .os-left {
-      display: flex;
       flex-direction: column;
-      margin: $gutter * 5;
+    }
+    max-width: $global-width;
+    margin: auto;
+    .os-left-container {
+      width: 50%;
       @include tablet {
-        margin: $gutter;
+        width: 100%;
       }
-      .os-gh-stars {
+      .os-left {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        @include tablet {
-          flex-direction: column;
-          margin: auto;
-          .github_stars__item__label {
+        flex-direction: column;
+        margin: $gutter;
+        margin-top: 0;
+        .hero-title {
+          text-align: left;
+          margin: 0;
+          @include tablet {
             text-align: center;
+            margin: auto;
+          }
+        }
+
+        .os-messaging {
+          width: 70%;
+          @include tablet {
+            text-align: center;
+            width: 70%;
+            margin: auto;
           }
         }
       }
-      .os-title {
-        @include tablet {
+    }
+    .os-right-container {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+      }
+      .os-right {
+        margin: $gutter * 2;
+        margin-top: 0;
+        margin-bottom: 0;
+        .os-logo-title {
           text-align: center;
           line-height: 1;
+          font-size: 26px;
         }
-      }
-      .os-messaging {
-        @include tablet {
+        .os-messaging,
+        .os-subtitle {
+          padding-bottom: $gutter/2;
           text-align: center;
         }
-      }
-    }
-  }
-  .os-right-container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    @include tablet {
-      width: 100%;
-    }
-    background: #f2f5fa;
-    .os-right {
-      margin: $gutter * 2;
-      .os-logo-title {
-        text-align: center;
-        line-height: 1;
-        font-size: 26px;
-      }
-      .os-messaging,
-      .os-subtitle {
-        padding-bottom: $gutter/2;
-        text-align: center;
-      }
-      .logo-container {
-        .container-left {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin: auto;
-          padding-top: 30px;
-          @include tablet {
-            flex-direction: row;
-            justify-content: center;
-          }
-          .left-logo {
-            max-width: 130px;
-            justify-content: center;
-            margin: auto;
-            padding-bottom: 60px;
-            margin-right: 10%;
-            @include phone {
-              margin-right: 0;
+        .logo-container {
+          .container-left {
+            .left-logo {
+              justify-content: center;
               margin: auto;
             }
-            @include tablet {
-              max-width: 130px;
-              margin: auto;
-              padding: 0;
-            }
           }
-        }
-        .container-right {
-          display: none;
-          margin: $gutter;
-          padding-bottom: $gutter * 8;
+          .container-right {
+            display: none;
+            margin: $gutter;
+            padding-bottom: $gutter * 8;
+          }
         }
       }
     }

@@ -26,37 +26,13 @@ class Architecture extends React.Component {
         </div>
       );
     };
-
     return (
       <ContentSection className="architecture-section">
         <ContentPane full center center-vertically text>
           <div className="pre-title">{this.props.data.items[0].section_pretitle}</div>
           <Title>{this.props.data.items[0].section_title}</Title>
           <Body>
-            <div className="image-with-complex-text-overlay architecture">
-              <div className="image-with-complex-text-overlay-wrapper">
-                <div className="image">
-                  <img
-                    src="https://prismic-io.s3.amazonaws.com/plotly%2F6a08d893-a587-4cdc-b720-c87529274138_architecture.png"
-                    alt=""
-                  />
-                </div>
-                <div className="text-overlay">
-                  {[
-                    {x: 'left', y: 'top', title: false},
-                    {x: 'left', y: 'second', title: false},
-                    {x: 'right', y: 'top', title: false},
-                    {x: 'right', y: 'bottom', title: true},
-                    {x: 'center', y: 'bottom', title: true},
-                  ].map(n => {
-                    return renderTextItem(n);
-                  })}
-                </div>
-                <div className="image">
-                  <img src="" alt="" />
-                </div>
-              </div>
-            </div>
+            <img src={this.props.data.primary.image1.url} alt="An image to describe the enterprise architecture of Chart Studio Enterprise." />
           </Body>
         </ContentPane>
       </ContentSection>

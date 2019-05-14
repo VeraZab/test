@@ -1,133 +1,135 @@
-.footer-main {
-  background: #131323;
-  color: $color-rhino-core;
-  &-top,
-  &-bottom {
-    &-wrapper {
-      @include global-wrapper;
-      display: flex;
-      flex-wrap: wrap;
-      @include phone {
-        justify-content: space-between;
-      }
-    }
-  }
-  &-top {
-    padding: $gutter * 2 0;
-  }
-  &-bottom {
+.footer-container {
+  .footer-main {
     background: #131323;
-    padding: $gutter;
-    border-top: $color-rhino-dark 0.5px solid;
-    .copyright {
-      color: white;
-      @include phone {
+    color: $color-rhino-core;
+    &-top,
+    &-bottom {
+      &-wrapper {
+        @include global-wrapper;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: $unit;
-        flex-direction: column;
-      }
-    }
-    &-wrapper {
-      justify-content: space-between;
-      @include phone {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-    &-links {
-      a {
-        display: inline-block;
-        &:not(:first-of-type) {
-          margin-left: $gutter;
+        flex-wrap: wrap;
+        @include phone {
+          justify-content: space-between;
         }
       }
     }
-  }
-  &-section {
-    flex: 1;
-    padding-left: 50px;
-    @include tablet {
-      padding-left: 0;
+    &-top {
+      padding: $gutter * 2 0;
     }
-    min-width: 200px;
-    padding-bottom: $gutter;
-    @include phone {
-      min-width: 50%;
-      max-width: 100%;
-      &:nth-of-type(odd) {
-        padding-right: $gutter;
-      }
-    }
-    &-header {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 600;
-      color: $color-aqua;
-      padding-bottom: $unit;
-      @extend %font-smoothing;
-    }
-    &-link {
-      text-decoration: none;
-      background: transparent !important;
-      display: block;
-      padding-bottom: $unit/2;
-      color: white;
-      &:hover {
-        cursor: pointer;
-        .footer-main-section-link {
-          &-label {
-            transform: translateX(5px);
-            color: $color-dodger;
-          }
-          &-icon {
-            transform: translateX(5px);
-            background: $color-dodger;
-          }
+    &-bottom {
+      background: #131323;
+      padding: $gutter;
+      border-top: $color-rhino-dark 0.5px solid;
+      .copyright {
+        color: white;
+        @include phone {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin-bottom: $unit;
+          flex-direction: column;
         }
       }
       &-wrapper {
-        display: flex;
-      }
-      &-icon {
-        color: white;
-        border-radius: 50%;
-        background: $color-rhino-dark;
-        $size: 28px;
-        height: $size;
-        min-height: $size;
-        max-height: $size;
-        width: $size;
-        min-width: $size;
-        max-width: $size;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: $unit/2;
-        margin-bottom: $unit;
-        @include trans;
-        text-shadow: $text-shadow-default;
+        justify-content: space-between;
         @include phone {
-          $size: 22px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      &-links {
+        a {
+          display: inline-block;
+          &:not(:first-of-type) {
+            margin-left: $gutter;
+          }
+        }
+      }
+    }
+    &-section {
+      flex: 1;
+      padding-left: 50px;
+      @include tablet {
+        padding-left: 0;
+      }
+      min-width: 200px;
+      padding-bottom: $gutter;
+      @include phone {
+        min-width: 50%;
+        max-width: 100%;
+        &:nth-of-type(odd) {
+          padding-right: $gutter;
+        }
+      }
+      &-header {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: $color-aqua;
+        padding-bottom: $unit;
+        @extend %font-smoothing;
+      }
+      &-link {
+        text-decoration: none;
+        background: transparent !important;
+        display: block;
+        padding-bottom: $unit/2;
+        color: white;
+        &:hover {
+          cursor: pointer;
+          .footer-main-section-link {
+            &-label {
+              transform: translateX(5px);
+              color: $color-dodger;
+            }
+            &-icon {
+              transform: translateX(5px);
+              background: $color-dodger;
+            }
+          }
+        }
+        &-wrapper {
+          display: flex;
+        }
+        &-icon {
+          color: white;
+          border-radius: 50%;
+          background: $color-rhino-dark;
+          $size: 28px;
           height: $size;
           min-height: $size;
           max-height: $size;
           width: $size;
           min-width: $size;
           max-width: $size;
-          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: $unit/2;
+          margin-bottom: $unit;
+          @include trans;
+          text-shadow: $text-shadow-default;
+          @include phone {
+            $size: 22px;
+            height: $size;
+            min-height: $size;
+            max-height: $size;
+            width: $size;
+            min-width: $size;
+            max-width: $size;
+            font-size: 12px;
+          }
         }
-      }
-      &-label {
-        @include trans;
-        will-change: color, transform;
-        color: #c8d4e3;
-        @include phone {
-          font-size: 0.85rem;
+        &-label {
+          @include trans;
+          will-change: color, transform;
+          color: #c8d4e3;
+          @include phone {
+            font-size: 0.85rem;
+          }
         }
       }
     }

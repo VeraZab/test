@@ -56,6 +56,7 @@
           font-size: 0.8rem;
           padding-bottom: 10px;
           text-align: center;
+          margin: $gutter/2;
           @include media('<800px') {
             margin: auto;
           }
@@ -110,11 +111,6 @@
         }
       }
     }
-    .cta-buttons {
-      margin: auto;
-      width: 200px;
-    }
-
     .pricing__card__addons__section {
       display: flex;
       z-index: 15;
@@ -166,9 +162,10 @@
             margin: auto;
             font-size: 1.2rem;
             line-height: 1.333;
+            text-align: center;
+
             color: $color-rhino-core;
             @include media('<1200px') {
-              text-align: center;
             }
           }
           .pricing__card__addon__price {
@@ -208,18 +205,11 @@
             color: $color-aqua-shade;
             text-decoration: underline !important;
           }
-          .pricing__card__addon__cta {
+
+          .addon-button {
+            max-width: 250px;
             margin: auto;
-            padding-bottom: 50px;
-            font-size: 0.8rem;
-            font-weight: 900;
-            a {
-              button {
-                background-color: $color-dodger;
-                color: white;
-                padding: 5px 10px;
-              }
-            }
+            padding-bottom: $gutter;
           }
         }
       }

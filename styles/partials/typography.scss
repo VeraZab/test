@@ -32,27 +32,14 @@ h6 {
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
-  font-size: 2rem;
-  line-height: 2rem;
-
-  @include large-display {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    text-align: left;
-  }
-
-  @include mid-sized {
-    text-align: left;
-  }
-
+  font-size: 2.0rem;
+  line-height: 2.5rem;
   @media (max-width: $shrink-hero-breakpoint) {
     text-align: center;
-    width: 90%;
-    margin: auto;
+    margin-bottom: $gutter;
     line-height: 1.2;
     padding-bottom: $gutter/2;
   }
-
   @include phone {
     font-size: 1.7rem;
     text-align: center;
@@ -179,7 +166,10 @@ article.body {
 ul li {
   list-style: none;
   text-align: left;
-  padding-left: 5px;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 ul li::before {
   color: $color-dodger;

@@ -198,37 +198,39 @@ const Footer = props => {
   }
 
   return (
-    <footer className="footer-main">
-      <div className="footer-main-wrapper">
-        <div className="footer-main-top">
-          <div className="footer-main-top-wrapper">
-            {assembleFooterNavigation(footerData)}
-            <MailChimpForm />
-          </div>
-        </div>
-        <div className="footer-main-bottom">
-          <div className="footer-main-bottom-wrapper">
-            <div className="footer-main-bottom-section">
-              <div className="copyright">
-                <span>Copyright &copy; {new Date().getFullYear()} Plotly.</span>{' '}
-                <span>All rights reserved.</span>
-              </div>
-            </div>
-            <div className="footer-main-bottom-section">
-              <div className="footer-main-bottom-links">
-                <a href="/terms-of-service/" target="_blank">
-                  Terms of Service
-                </a>
-                <a href="/privacy/" target="_blank">
-                  Privacy Policy
-                </a>
-                <a href="/fr/">Français</a>
-              </div>
+    <div className="footer-container">
+      <footer className="footer-main">
+        <div className="footer-main-wrapper">
+          <div className="footer-main-top">
+            <div className="footer-main-top-wrapper">
+              {assembleFooterNavigation(footerData)}
+              <MailChimpForm />
             </div>
           </div>
+          <div className="footer-main-bottom">
+            <div className="footer-main-bottom-wrapper">
+              <div className="footer-main-bottom-section">
+                <div className="copyright">
+                  <span>Copyright &copy; {new Date().getFullYear()} Plotly.</span>{' '}
+                  <span>All rights reserved.</span>
+                </div>
+              </div>
+              <div className="footer-main-bottom-section">
+                <div className="footer-main-bottom-links">
+                  <a href="/terms-of-service/" target="_blank">
+                    Terms of Service
+                  </a>
+                  <a href="/privacy/" target="_blank">
+                    Privacy Policy
+                  </a>
+                  <a href="/fr/">Français</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 };
 

@@ -1,19 +1,23 @@
-.graphic-left-copy-right-container {
-  padding-bottom: $space-between/2;
-  .graphic-left-copy-right {
+.footercta-copy-right-container {
+  margin-bottom: $space-between/2;
+  border-top: 1px solid #f5f8fa;
+  .footercta-graphic-left-copy-right {
     display: flex;
     flex-direction: row;
     max-width: $global-width;
     margin: auto;
+    margin-top: $space-between/2;
 
     @include tablet {
       flex-direction: column;
       height: auto;
     }
-    .content-container {
+    .footercta-content-container {
       display: flex;
       flex-direction: row;
       img {
+        max-width: 100%;
+        margin: $gutter;
         @include tablet {
           width: 90%;
           margin: auto;
@@ -26,7 +30,6 @@
         display: flex;
         justify-content: center;
         padding-left: $gutter * 2;
-        min-width: 50%;
         @include tablet {
           padding-left: 0;
         }
@@ -43,13 +46,19 @@
           margin: $gutter/2;
           margin-top: 0;
           justify-content: center;
+          .hero-title {
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+            @include tablet {
+              text-align: center;
+            }
+          }
+          a {
+            margin-top: $gutter;
+          }
           @include tablet {
             text-align: center;
-            ul {
-              padding-bottom: $gutter;
-              padding-left: $gutter * 5;
-            }
-            margin-top: $gutter;
           }
         }
       }

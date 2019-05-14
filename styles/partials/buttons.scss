@@ -103,10 +103,9 @@
     margin: 0;
   }
   #columns-thirds-button {
-    width: 170px;
     margin: auto;
-    margin-top: $gutter;
     margin-bottom: $gutter;
+    margin-top: -$gutter;
   }
   @include tablet {
     margin: auto;
@@ -117,17 +116,12 @@
   .header-button {
     width: 200px;
   }
-  .addon-button {
-    margin: auto;
-    margin-bottom: $gutter;
-  }
   a {
     margin-right: $gutter;
     margin-bottom: $gutter;
-    width: 300px;
     color: white;
+    white-space: nowrap;
     @include tablet {
-      max-width: 90%;
       margin: auto;
       margin-top: $gutter;
       margin-bottom: $gutter;

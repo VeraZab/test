@@ -5,33 +5,32 @@
 // ---
 // Text and Backgrounds
 // ---
-$color-rhino-core:                    #2a3f5f; // Active state text, emphasized text
-$color-rhino-dark:                    #506784; // Default text color
-$color-rhino-dark-1:                  #516783; // Default text color
-$color-rhino-medium-1:                #a2b1c6;
-$color-rhino-medium-2:                #c8d4e3; // Border Default
-$color-rhino-light-1:                 #dfe8f3; // Border Secondary
-$color-rhino-light-2:                 #ebf0f8; // Button Secondary
-$color-rhino-light-3:                 #f3f6fa; // Page Background
-$color-rhino-light-4:                 #f2f5fa; // Modal Tabbed Content Background
+$color-rhino-core: #2a3f5f; // Active state text, emphasized text
+$color-rhino-dark: #506784; // Default text color
+$color-rhino-dark-1: #516783; // Default text color
+$color-rhino-medium-1: #a2b1c6;
+$color-rhino-medium-2: #c8d4e3; // Border Default
+$color-rhino-light-1: #dfe8f3; // Border Secondary
+$color-rhino-light-2: #ebf0f8; // Button Secondary
+$color-rhino-light-3: #f3f6fa; // Page Background
+$color-rhino-light-4: #f2f5fa; // Modal Tabbed Content Background
 
 $color-heading: #96a6b5;
 // ---
 // Primary
 // --
-$color-dodger:                        #119DFF; // Accent
-$color-dodger-shade:                  #0D76BF; // Link Hover
+$color-dodger: #119dff; // Accent
+$color-dodger-shade: #0d76bf; // Link Hover
 
 // ---
 // Accent
 // ---
-$color-aqua:                          #09ffff;
-$color-aqua-shade:                    #19d3f3; // Body Text
-$color-lavender:                      #e763fa;
-$color-lavender-shade:                #ab63fa;
-$color-cornflower:                    #636efa;
-$color-emerald:                       #00cc96; // CTA's on blue backgrounds
-
+$color-aqua: #09ffff;
+$color-aqua-shade: #19d3f3; // Body Text
+$color-lavender: #e763fa;
+$color-lavender-shade: #ab63fa;
+$color-cornflower: #636efa;
+$color-emerald: #00cc96; // CTA's on blue backgrounds
 
 //----------------------------------------------------------------------------------------------------------------------
 // Buttons
@@ -40,3 +39,5 @@ $color-emerald:                       #00cc96; // CTA's on blue backgrounds
 $color-button-default: #119dff;
 $color-button-hover: #0f89df;
 $color-button-active: #0d76bf;
+
+$color-border-bottom: #f3f6fa;

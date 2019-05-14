@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.1.10-node
+      - image: circleci/ruby:2.4-node
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -29,7 +29,7 @@ jobs:
       # run export
       - run: yarn export
       # run visual diff testing
-      - run: percy snapshot --widths "430, 600, 900, 1200 ,1500, 1800, 2000" out/ --enable_javascript
+      - run: percy snapshot --widths "430, 600, 900, 1200, 1800" out/ --enable_javascript
       - deploy:
           name: Deploy GitHub Pages (Production)
           command: |

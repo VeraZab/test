@@ -1,49 +1,79 @@
-.overlap-graphic {
-  margin: $gutter;
-  .overlap-graphic-section {
-    display: flex;
-    flex-direction: row;
-    @include media('<1300px') {
-      flex-direction: column;
+.overlap-graphic-container {
+  margin-top: $space-between/2;
+  .overlap-graphic {
+    max-width: $global-width;
+    margin: auto;
+    .overlap-graphic-img-container {
+      img {
+        width: 80%;
+      }
+      @include tablet {
+        img {
+          width: 100%;
+        }
+      }
     }
-    margin: $gutter;
     .overlap-copy-container {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       .overlap-copy {
-        width: 100%;
         box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
         background: white;
         opacity: 0.95;
         padding: $gutter;
-        transform: translateX(-15%);
-        @include media('<1300px') {
+        width: 55%;
+        transform: translateY(-155%);
+        margin-bottom: -300px;
+        @include media('<1200px') {
+          transform: translateY(-150%);
+          width: 60%;
+        }
+        @include tablet {
+          transform: translateY(-80%);
+          width: 80%;
           margin: auto;
-          padding: $gutter;
-          transform: translateX(0%);
+          margin-bottom: -340px;
         }
         @include phone {
-          padding: 0;
           transform: none;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        .title {
+          padding-bottom: 0;
+        }
+        .pretitle {
+          padding-top: 20px;
         }
         .subtitle,
         .title,
         .pretitle {
           @include media('<1300px') {
+            text-align: left;
+          }
+          @include tablet {
             text-align: center;
           }
-        }
-        .cta-buttons {
-          a {
-            @include media('<1300px') {
-              margin: auto;
-            }
+          .subtitle {
             @include tablet {
-              margin-top: $gutter;
+              width: 80%;
             }
           }
         }
       }
     }
+  }
+}
+
+#dash-design-kit {
+  transform: translateY(110%);
+  margin-bottom: -200px;
+  @include tablet {
+    margin-bottom: 200px;
+  }
+  @include phone {
+    transform: none;
+    margin-bottom: 100px;
   }
 }
