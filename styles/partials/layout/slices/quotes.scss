@@ -35,10 +35,14 @@
         .customer-quotes-arrow-mobile {
           display: inline-block;
           padding: 10px;
-          margin-top: $gutter;
+          margin-top: $gutter * 2;
 
           @include desktop {
             display: none;
+          }
+
+          @include phone {
+            margin-top: $gutter * 3.5;
           }
         }
       }
