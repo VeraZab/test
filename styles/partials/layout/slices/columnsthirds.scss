@@ -1,8 +1,4 @@
 .columns-thirds {
-  display: flex;
-  flex-direction: column;
-  max-width: $global-width;
-  margin: auto;
   .title-container {
     margin: auto;
     text-align: center;
@@ -19,6 +15,10 @@
   .columns-container {
     display: flex;
     flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    max-width: $global-width;
+    margin: auto;
 
     flex-wrap: wrap;
     @include tablet {
@@ -35,19 +35,17 @@
         padding-left: 60px;
         @include tablet {
           flex-direction: column;
-          width: auto;
-          margin: 0;
           padding-left: 0;
         }
         .intro-column {
           background-size: cover;
           background-repeat: no-repeat;
           display: flex;
-          width: 362px;
-          height: 450px;
-          @include phone {
-            width: 300px;
-            height: 400px;
+          width: 30%;
+          height: 500px;
+          @include tablet {
+            width: 70%;
+            margin: auto;
           }
           .intro-copy-container {
             display: flex;
@@ -68,6 +66,7 @@
                 width: 100%;
                 text-align: center;
                 margin-bottom: 0;
+                line-height: 1.2;
               }
             }
             .subtitle-dark {
@@ -102,14 +101,18 @@
         .repeatable-column-wrapper {
           border: 1px solid #f2f5fa;
           box-sizing: border-box;
+          max-width: 30%;
+          height: 500px;
+          padding: $gutter;
+          padding-bottom: 0;
+          @include tablet {
+            max-width: 70%;
+            margin: auto;
+          }
+          @include phone {
+            height: 600px;
+          }
           .repeatable-column {
-            width: 360px;
-            @include phone {
-              width: 300px;
-            }
-            height: 450px;
-            padding: $gutter;
-            padding-bottom: 0;
             display: flex;
             flex-direction: column;
             padding-top: $gutter * 4;
