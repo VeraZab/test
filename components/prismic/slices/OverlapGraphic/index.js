@@ -8,12 +8,15 @@ const OverlapGraphic = props => {
   const primary = props.data.primary;
 
   return (
-    <div className="overlap-graphic">
-      <div className="overlap-graphic-section">
-        <div className="overlap-graphic-container">
+    <div className="overlap-graphic-container">
+      <div className="overlap-graphic">
+        <div className="overlap-graphic-img-container">
           <img src={primary.graphic.url} />
         </div>
-        <div className="overlap-copy-container">
+        <div
+          className="overlap-copy-container"
+          id={primary.title1 === 'Dash Design Kit' ? 'dash-design-kit' : ''}
+        >
           <div className="overlap-copy">
             <div className="pretitle">{primary.pretitle}</div>
             <h1 className="title">{primary.title1}</h1>

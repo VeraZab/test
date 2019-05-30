@@ -22,8 +22,8 @@ function PricingCardAddons(props) {
           </div>
         )}
         {Boolean(feature.addon_url[0] && feature.addon_url[0].text.length > 1) && (
-          <div className="cta-buttons">
-            <a className="button button-primary addon-button" href={feature.addon_url[0].text}>
+          <div className="addon-button" id="addon-button">
+            <a className="button button-primary" href={feature.addon_url[0].text}>
               <div className="button-label">{feature.addon_cta_text[0].text}</div>
             </a>
           </div>

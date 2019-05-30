@@ -1,96 +1,60 @@
 $hero-content-space: 60px;
 
-.hero {
-  display: flex;
+.cs-product-hero {
+  margin-bottom: 240px;
+}
+
+.hero-container {
   background: #00004f;
-  justify-content: center;
-  align-items: center;
-  max-height: 850px;
-  padding: $header-height 0 $header-height/2 0;
-
-  @include large-display {
-  }
-
-  @include desktop {
-  }
-
-  @include mid-sized {
-  }
-
-  @include tablet {
-    flex-direction: column;
-    height: auto;
-  }
-
-  @include phone {
-    height: 100vh;
-  }
-
-  .hero-left {
+  .hero {
     display: flex;
-    width: 50%;
-    padding: $hero-content-space;
-    flex-direction: column;
-
-    @include large-display {
-      margin-left: 10%;
-      margin-top: $gutter * 4;
+    max-width: $global-width;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    max-height: 850px;
+    padding-top: $gutter * 3.5;
+    @include tablet {
+      flex-direction: column;
+      height: auto;
     }
-
-    @media (max-width: $shrink-hero-breakpoint) {
-      width: 100%;
-      margin: auto;
-    }
-
     @include phone {
-      padding: calc(#{$hero-content-space} * 0.05);
+      height: 100vh;
     }
-
-    .cta-buttons {
-      padding: $gutter/2 0;
-
-      @media (max-width: 1265px) {
-        flex-direction: column;
+    .hero-left {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      padding: $gutter;
+      
+      .cta-buttons {
+        @media (max-width: $shrink-hero-breakpoint) {
+          flex-direction: column;
+          a {
+            margin: auto;
+            margin-top: $gutter;
+          }
+        }
       }
-
-      @media (max-width: $shrink-hero-breakpoint) {
-        align-items: center;
-      }
-    }
-
-    .github-stars {
       @include tablet {
-        margin: auto;
+        width: 100%;
+        margin-right: 0;
+      }
+      @include phone {
+        padding: calc(#{$hero-content-space} * 0.05);
       }
     }
-  }
-
-  .hero-right {
-    width: 50%;
-    padding: 0 $hero-content-space;
-
-    @media (max-width: $shrink-hero-breakpoint) {
-      display: none;
-    }
-
-    @include large-display {
-      margin-top: $gutter * 4;
-    }
-
-    img {
-      max-width: 500px;
-      margin: auto;
-
-      @include large-display {
-        max-width: 700px;
-      }
-
-      @media (max-width: 1265px) {
-        max-width: 470px;
-      }
-
+    .hero-right {
+      width: 50%;
+      padding: 0 $hero-content-space;
       @media (max-width: $shrink-hero-breakpoint) {
         display: none;
+      }
+      img {
+        margin: auto;
+        @media (max-width: $shrink-hero-breakpoint) {
+          display: none;
+        }
       }
     }
   }
@@ -98,8 +62,4 @@ $hero-content-space: 60px;
 
 #cs-hero {
   background: #00004f;
-}
-
-.cs-product-hero {
-  margin-bottom: 240px;
 }

@@ -3,10 +3,10 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
   return (
-    <>
+    <div className="hero-container">
       {props.content.hero_title ? (
         <div
-          className="hero"
+          className="hero "
           id={
             props.content.hero_title && props.content.hero_title.includes('Chart Studio')
               ? 'cs-hero'
@@ -58,7 +58,7 @@ const Hero = props => {
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 

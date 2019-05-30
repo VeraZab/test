@@ -1,77 +1,129 @@
-.four-cell-table {
-  display: flex;
-  flex-direction: column;
-  padding-top: $gutter * 5;
-  .title-container {
+.four-cell-table-container {
+  .four-cell-table {
     display: flex;
     flex-direction: column;
+    max-width: $global-width;
     margin: auto;
-    .pretitle {
-      text-align: center;
-    }
-  }
-  .features-container {
-    margin: $gutter * 2;
-    margin-top: 0;
-    .features-row {
+    padding-top: $gutter * 5;
+    .title-container {
       display: flex;
-      @include tablet {
-        flex-direction: column;
+      flex-direction: column;
+      margin: auto;
+      .pretitle {
+        text-align: center;
       }
-      .graphic-container {
-        align-self: center;
-        min-width: 60px;
-        padding-right: $gutter;
-
-        @include phone {
-          padding-bottom: 10px;
-          padding-right: 0;
-        }
-      }
-      .productive-copy-container {
-        align-self: center;
-        .heading {
-          font-size: 1.6rem;
-          margin-bottom: $gutter/2;
-        }
-      }
-      .features-row-item {
-        padding: 50px;
-      }
-      .productive {
+    }
+    .features-container {
+      margin: $gutter * 2;
+      margin-top: 0;
+      .features-row {
         display: flex;
-        background: #010077;
-        width: 50%;
         @include tablet {
-          width: 100%;
-          background: #ecf9ff;
-        }
-        @include phone {
           flex-direction: column;
         }
-        .heading {
-          color: $color-dodger;
+        .graphic-container {
+          align-self: center;
+          min-width: 60px;
+          padding-right: $gutter;
+
           @include phone {
-            text-align: center;
+            padding-bottom: 10px;
+            padding-right: 0;
           }
         }
-        .messaging {
-          color: white;
-          @include tablet {
-            color: #506784;
-          }
-          @include phone {
-            text-align: center;
+        .productive-copy-container {
+          align-self: center;
+          .heading {
+            font-size: 1.6rem;
+            margin-bottom: $gutter/2;
           }
         }
-      }
-      .customizable {
-        display: flex;
-        background: #ecf9ff;
-        width: 50%;
-        @include tablet {
-          width: 100%;
+        .features-row-item {
+          padding: 50px;
+        }
+        .productive {
+          display: flex;
           background: #010077;
+          width: 50%;
+          @include tablet {
+            width: 100%;
+            background: #ecf9ff;
+          }
+          @include phone {
+            flex-direction: column;
+          }
+          .heading {
+            color: $color-dodger;
+            @include phone {
+              text-align: center;
+            }
+          }
+          .messaging {
+            color: white;
+            @include tablet {
+              color: #506784;
+            }
+            @include phone {
+              text-align: center;
+            }
+          }
+        }
+        .customizable {
+          display: flex;
+          background: #ecf9ff;
+          width: 50%;
+          @include tablet {
+            width: 100%;
+            background: #010077;
+            .heading {
+              color: $color-dodger;
+              @include phone {
+                text-align: center;
+              }
+            }
+            .messaging {
+              color: white;
+              @include phone {
+                text-align: center;
+              }
+            }
+          }
+          @include phone {
+            flex-direction: column;
+          }
+        }
+        .lightweight {
+          display: flex;
+          background: #ecf9ff;
+          width: 50%;
+          @include tablet {
+            width: 100%;
+          }
+          @include phone {
+            flex-direction: column;
+          }
+          .heading {
+            @include phone {
+              text-align: center;
+            }
+          }
+          .messaging {
+            @include phone {
+              text-align: center;
+            }
+          }
+        }
+        .control {
+          display: flex;
+          background: #010077;
+          width: 50%;
+
+          @include phone {
+            flex-direction: column;
+          }
+          @include tablet {
+            width: 100%;
+          }
           .heading {
             color: $color-dodger;
             @include phone {
@@ -83,54 +135,6 @@
             @include phone {
               text-align: center;
             }
-          }
-        }
-        @include phone {
-          flex-direction: column;
-        }
-      }
-      .lightweight {
-        display: flex;
-        background: #ecf9ff;
-        width: 50%;
-        @include tablet {
-          width: 100%;
-        }
-        @include phone {
-          flex-direction: column;
-        }
-        .heading {
-          @include phone {
-            text-align: center;
-          }
-        }
-        .messaging {
-          @include phone {
-            text-align: center;
-          }
-        }
-      }
-      .control {
-        display: flex;
-        background: #010077;
-        width: 50%;
-
-        @include phone {
-          flex-direction: column;
-        }
-        @include tablet {
-          width: 100%;
-        }
-        .heading {
-          color: $color-dodger;
-          @include phone {
-            text-align: center;
-          }
-        }
-        .messaging {
-          color: white;
-          @include phone {
-            text-align: center;
           }
         }
       }
