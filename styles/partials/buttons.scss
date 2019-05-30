@@ -104,8 +104,8 @@
   }
   #columns-thirds-button {
     margin: auto;
+    margin-top: $gutter;
     margin-bottom: $gutter;
-    margin-top: -$gutter;
   }
   @include tablet {
     margin: auto;
