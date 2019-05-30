@@ -42,7 +42,6 @@
           background-repeat: no-repeat;
           display: flex;
           width: 30%;
-          height: 500px;
           @include tablet {
             width: 70%;
             margin: auto;
@@ -101,7 +100,6 @@
           border: 1px solid #f2f5fa;
           box-sizing: border-box;
           max-width: 30%;
-          height: 500px;
           padding: $gutter;
           padding-bottom: 0;
           @include tablet {
