@@ -12,6 +12,7 @@
     padding-top: 100px;
     @include tablet {
       background-position: 10% 10%;
+      padding: $gutter;
     }
     .customer-quotes-title {
       text-align: center;
@@ -34,7 +35,8 @@
         .customer-quotes-arrow-mobile {
           display: inline-block;
           padding: 10px;
-          margin-top: $gutter * 5;
+          margin-top: $gutter;
+
           @include desktop {
             display: none;
           }
