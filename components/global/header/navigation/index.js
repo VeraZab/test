@@ -67,7 +67,7 @@ const MENU = {
   ],
   CTA: {
     link: DEMO_FORM_URL,
-    title: 'Schedule A Demo',
+    title: 'Demo Dash',
   },
 };
 
