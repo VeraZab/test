@@ -1,6 +1,5 @@
 import React from 'react';
-
-const DEMO_FORM_URL = 'https://go.plot.ly/l/719653/2019-05-30/2f6sb';
+const DEMO_FORM_URL = 'https://plotly.typeform.com/to/ECUfbT';
 const MENU = {
   PRODUCTS: {
     LEFT: [
@@ -312,7 +311,7 @@ export default class Navigation extends React.Component {
             <div className="cta-buttons">
               <a
                 id="header-button"
-                href={MENU.CTA.link}
+                href="https://go.plot.ly/l/719653/2019-05-30/2f6sb"
                 className="button button-primary header-button"
               >
                 <div className="button-label">{MENU.CTA.title}</div>
