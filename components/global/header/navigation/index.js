@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DEMO_FORM_URL = 'https://plotly.typeform.com/to/ECUfbT';
+const DEMO_FORM_URL = 'https://go.plot.ly/l/719653/2019-05-30/2f6sb';
 const MENU = {
   PRODUCTS: {
     LEFT: [
