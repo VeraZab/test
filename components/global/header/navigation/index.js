@@ -311,7 +311,7 @@ export default class Navigation extends React.Component {
             <div className="cta-buttons">
               <a
                 id="header-button"
-                href="https://go.plot.ly/l/719653/2019-05-30/2f6sb"
+                href="https://go.plot.ly/demodash"
                 className="button button-primary header-button"
               >
                 <div className="button-label">{MENU.CTA.title}</div>
