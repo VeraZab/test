@@ -1,5 +1,4 @@
 import React from 'react';
-
 const DEMO_FORM_URL = 'https://plotly.typeform.com/to/ECUfbT';
 const MENU = {
   PRODUCTS: {
@@ -30,7 +29,7 @@ const MENU = {
       items: [
         {
           title: 'See Dash In Action',
-          text: 'Request A Demo',
+          text: 'Demo Dash',
           link: DEMO_FORM_URL,
         },
       ],
@@ -68,7 +67,7 @@ const MENU = {
   ],
   CTA: {
     link: DEMO_FORM_URL,
-    title: 'Schedule A Demo',
+    title: 'Demo Dash',
   },
 };
 
@@ -312,7 +311,7 @@ export default class Navigation extends React.Component {
             <div className="cta-buttons">
               <a
                 id="header-button"
-                href={MENU.CTA.link}
+                href="https://go.plot.ly/demodash"
                 className="button button-primary header-button"
               >
                 <div className="button-label">{MENU.CTA.title}</div>
