@@ -29,7 +29,7 @@ const MENU = {
       items: [
         {
           title: 'See Dash In Action',
-          text: 'Request A Demo',
+          text: 'Demo Dash',
           link: DEMO_FORM_URL,
         },
       ],
