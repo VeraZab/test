@@ -1,4 +1,6 @@
 .columns-thirds {
+  max-width: $global-width;
+  margin: auto;
   .title-container {
     margin: auto;
     text-align: center;
@@ -15,134 +17,109 @@
   .columns-container {
     display: flex;
     flex-direction: row;
-    display: flex;
-    flex-direction: column;
-    max-width: $global-width;
-    margin: auto;
+    justify-content: center;
 
     flex-wrap: wrap;
     @include tablet {
-      margin: auto;
+      flex-direction: column;
     }
-    .repeatable-columns-wrapper {
+
+    .intro-column {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
       @include tablet {
-        margin: 0;
+        width: 90%;
+        margin: auto;
       }
-      .repeatable-columns {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-left: 60px;
-        @include tablet {
-          flex-direction: column;
-          padding-left: 0;
-        }
-        .intro-column {
-          background-size: cover;
-          background-repeat: no-repeat;
-          display: flex;
-          width: 30%;
+      .intro-copy-container {
+        margin: auto;
+        .pretitle {
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: 300;
           @include tablet {
-            width: 70%;
-            margin: auto;
-          }
-          .intro-copy-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            .pretitle {
-              font-size: 16px;
-              line-height: 26px;
-              font-weight: 300;
-              @include tablet {
-                padding-top: $gutter * 2;
-              }
-            }
-            .subtitle-white {
-              padding: $gutter;
-              color: white;
-              margin: auto;
-              @include tablet {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 0;
-                line-height: 1.2;
-              }
-            }
-            .subtitle-dark {
-              p {
-                margin: 0;
-                margin-bottom: $gutter/2;
-              }
-              @include tablet {
-                text-align: center;
-                margin-bottom: $gutter;
-              }
-            }
-            .title {
-              color: $color-rhino-core;
-              text-align: left;
-              p {
-                margin: 0;
-                padding: 0;
-              }
-              @include tablet {
-                width: 100%;
-                text-align: center;
-              }
-            }
-            .cta-buttons {
-              a {
-                margin-right: 0;
-              }
-              margin: auto;
-            }
+            padding-top: $gutter * 2;
           }
         }
-        .repeatable-column-wrapper {
-          border: 1px solid #f2f5fa;
-          box-sizing: border-box;
-          max-width: 30%;
+        .subtitle-white {
           padding: $gutter;
-          padding-bottom: 0;
+          color: white;
+          margin: auto;
+          margin-top: $gutter * 2;
+
           @include tablet {
-            max-width: 70%;
-            margin: auto;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1.2;
           }
-          @include phone {
-            height: 600px;
+        }
+        .subtitle-dark {
+          p {
+            margin: 0;
+            margin-bottom: $gutter/2;
           }
-          .repeatable-column {
-            display: flex;
-            flex-direction: column;
-            padding-top: $gutter * 4;
-            .pretitle {
-              text-align: left;
-              margin-top: -80px;
-              @include tablet {
-                text-align: center;
-              }
-            }
-            img {
-              margin: auto;
-              margin-top: 0;
-              margin-bottom: 20px;
-              height: 90px;
-            }
-            .title {
-              color: #119dff;
-              font-size: 1.4em;
-              @include tablet {
-                text-align: center;
-              }
-            }
-            .copy {
-              font-size: 14px;
-              @include tablet {
-                text-align: center;
-              }
-            }
+          @include tablet {
+            text-align: center;
+            margin-bottom: $gutter;
+          }
+        }
+        .title {
+          color: $color-rhino-core;
+          text-align: left;
+          p {
+            margin: 0;
+            padding: 0;
+          }
+          @include tablet {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        .cta-buttons {
+          a {
+            margin-right: 0;
+          }
+          margin: auto;
+        }
+      }
+    }
+    .repeatable-column-wrapper {
+      border: 1px solid #f2f5fa;
+      box-sizing: border-box;
+      padding: $gutter;
+      width: 30%;
+      @include tablet {
+        width: 90%;
+        margin: auto;
+      }
+      .repeatable-column {
+        .pretitle {
+          text-align: left;
+          @include tablet {
+            text-align: center;
+          }
+        }
+        img {
+          margin: auto;
+          margin-top: 0;
+          margin-bottom: 20px;
+          height: 90px;
+        }
+        .title {
+          color: #119dff;
+          font-size: 1.4em;
+          @include tablet {
+            text-align: center;
+          }
+        }
+        .copy {
+          font-size: 14px;
+          @include tablet {
+            text-align: center;
           }
         }
       }
