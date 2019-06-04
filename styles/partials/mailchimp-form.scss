@@ -20,3 +20,19 @@
   color: #fff;
   border: none;
 }
+
+.social-icons-wrapper {
+  padding-left: 50px;
+  .social-icons {
+    a {
+      color: white !important;
+    }
+    .social-icon {
+      padding: 5px;
+    }
+  }
+  @include tablet {
+    padding: 0;
+    padding-bottom: $gutter;
+  }
+}
