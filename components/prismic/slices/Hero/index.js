@@ -41,6 +41,17 @@ const Hero = props => {
                 </a>
               ) : null}
             </div>
+            <div className="dash-stars-wrapper">
+              {props.content.keywords === 'dash-product' ? (
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=plotly&repo=dash&type=star&count=true&size=large"
+                  frameborder="0"
+                  scrolling="0"
+                  width="160px"
+                  height="auto"
+                />
+              ) : null}
+            </div>
           </div>
           <div className="hero-right">
             {props.content.hero_graphic.url ? (

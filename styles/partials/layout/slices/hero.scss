@@ -26,6 +26,20 @@ $hero-content-space: 60px;
       width: 50%;
       flex-direction: column;
       padding: $gutter;
+      height: 375px;
+
+      .dash-stars-wrapper {
+        padding-top: $gutter/2;
+        width: 140px;
+
+        @include tablet {
+          margin: auto;
+        }
+
+        iframe {
+          margin: auto;
+        }
+      }
 
       .cta-buttons {
         @media (max-width: $shrink-hero-breakpoint) {
@@ -36,9 +50,13 @@ $hero-content-space: 60px;
           }
         }
       }
+      @include media('<1100px') {
+        height: auto;
+      }
       @include tablet {
         width: 100%;
         margin-right: 0;
+        padding-top: $gutter * 3.5;
       }
       @include phone {
         padding: calc(#{$hero-content-space} * 0.05);
