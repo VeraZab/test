@@ -51,8 +51,6 @@
           padding: $gutter;
           color: white;
           margin: auto;
-          margin-top: $gutter * 2;
-
           @include tablet {
             width: 100%;
             text-align: center;
@@ -96,18 +94,31 @@
       padding: $gutter;
       width: 30%;
       height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        justify-content: flex-end;
+      }
+
       @include tablet {
         width: 90%;
         margin: auto;
       }
       .repeatable-column {
         margin-top: $gutter * 3;
-
+        @include tablet {
+          margin-top: 0;
+        }
         .pretitle {
-          margin-top: -$gutter * 3;
           text-align: left;
+          align-self: flex-start;
+          margin-top: -$gutter * 3;
           @include tablet {
             text-align: center;
+            margin-top: -$gutter * 3;
+            margin-top: 0;
           }
         }
         img {
