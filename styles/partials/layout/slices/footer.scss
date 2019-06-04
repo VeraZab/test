@@ -7,14 +7,19 @@
       &-wrapper {
         @include global-wrapper;
         display: flex;
-        flex-wrap: wrap;
-        @include phone {
+        flex-wrap: nowrap;
+        padding-top: $gutter;
+        @include tablet {
           justify-content: space-between;
+          flex-wrap: wrap;
         }
       }
     }
     &-top {
       padding: $gutter * 2 0;
+      @include tablet {
+        padding: 0;
+      }
     }
     &-bottom {
       background: #131323;
@@ -60,9 +65,6 @@
       @include phone {
         min-width: 50%;
         max-width: 100%;
-        &:nth-of-type(odd) {
-          padding-right: $gutter;
-        }
       }
       &-header {
         text-transform: uppercase;
