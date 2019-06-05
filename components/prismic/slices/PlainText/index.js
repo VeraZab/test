@@ -1,8 +1,6 @@
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const PlainText = props => {
-  console.log(props);
-
   const primary = props.data.primary;
 
   return (
