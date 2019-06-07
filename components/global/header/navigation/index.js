@@ -199,14 +199,12 @@ export default class Navigation extends React.Component {
               }
             >
               <div className="navigation-product-submenu-left">
-                {MENU.PRODUCTS.LEFT.map(p => (
-                  <div className="navigation-product-submenu-section">
+                {MENU.PRODUCTS.LEFT.map((p, i) => (
+                  <div key={i} className="navigation-product-submenu-section">
                     <a href={p.link}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">{p.title}</span>
-                        <a href={p.link} className="hide-on-desktop">
-                          {p.title}
-                        </a>
+                        <span className="hide-on-desktop">{p.title}</span>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
                         {p.text}
@@ -216,14 +214,12 @@ export default class Navigation extends React.Component {
                 ))}
               </div>
               <div className="navigation-product-submenu-right">
-                {MENU.PRODUCTS.RIGHT.items.map(p => (
-                  <div className="navigation-product-submenu-section">
+                {MENU.PRODUCTS.RIGHT.items.map((p, i) => (
+                  <div key={i} className="navigation-product-submenu-section">
                     <a href={p.link}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">{p.title}</span>
-                        <a href={p.link} className="hide-on-desktop">
-                          {p.title}
-                        </a>
+                        <span className="hide-on-desktop">{p.title}</span>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
                         <div className="button button-secondary">{p.text}</div>
@@ -249,14 +245,12 @@ export default class Navigation extends React.Component {
               }
             >
               <div className="navigation-product-submenu-left">
-                {MENU.PRICING.LEFT.map(p => (
-                  <div className="navigation-product-submenu-section">
+                {MENU.PRICING.LEFT.map((p, i) => (
+                  <div key={i} className="navigation-product-submenu-section">
                     <a href={p.link}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">{p.title}</span>
-                        <a href={p.link} className="hide-on-desktop">
-                          {p.title}
-                        </a>
+                        <span className="hide-on-desktop">{p.title}</span>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile">
                         {p.text}
@@ -266,14 +260,12 @@ export default class Navigation extends React.Component {
                 ))}
               </div>
               <div className="navigation-product-submenu-right">
-                {MENU.PRICING.RIGHT.map(p => (
-                  <div className="navigation-product-submenu-section">
+                {MENU.PRICING.RIGHT.map((p, i) => (
+                  <div key={i} className="navigation-product-submenu-section">
                     <a href={p.link}>
                       <div className="navigation-product-submenu-section-title">
                         <span className="hide-on-mobile">{p.title}</span>
-                        <a href={p.link} className="hide-on-desktop">
-                          {p.title}
-                        </a>
+                        <span className="hide-on-desktop">{p.title}</span>
                       </div>
                       <span className="navigation-product-submenu-item hide-on-mobile button button-secondary">
                         {p.text}
@@ -298,10 +290,10 @@ export default class Navigation extends React.Component {
                   : 'navigation-product-submenu'
               }
             >
-              {MENU.SIGNUP.map(i => (
-                <div className="navigation-product-submenu-section">
-                  <a href={i.link} className="navigation-product-submenu-section-title">
-                    {i.title}
+              {MENU.SIGNUP.map((p, i) => (
+                <div key={i} className="navigation-product-submenu-section">
+                  <a href={p.link} className="navigation-product-submenu-section-title">
+                    {p.title}
                   </a>
                 </div>
               ))}

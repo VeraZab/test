@@ -21,11 +21,27 @@ $hero-content-space: 60px;
     padding-top: 0;
     margin: 0;
   }
+  h1 {
+    padding-top: $gutter * 4;
+    @include tablet {
+      padding-top: $gutter * 3;
+    }
+    @include phone {
+      padding-top: $gutter * 2;
+    }
+  }
 }
 #privacy-policy-bg {
   background: none;
-  background-image: url('https://prismic-io.s3.amazonaws.com/plotly%2Fc1590b16-785a-45bc-b655-ce36553c9b96_mobile+privacy+policy-01.png');
-  background-size: 100%;
+  background-image: url('https://prismic-io.s3.amazonaws.com/plotly%2F9473103a-1178-411d-9d01-28962779c360_privacy-policy-large.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include tablet {
+    background-size: auto;
+  }
+  @include phone {
+    background-size: inherit;
+  }
 }
 .hero-container {
   background: #00004f;
