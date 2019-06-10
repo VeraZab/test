@@ -1,9 +1,43 @@
 $hero-content-space: 60px;
-
 .cs-product-hero {
   margin-bottom: 240px;
 }
+#privacy-policy-subtitle {
+  color: $color-rhino-dark;
+  text-align: center;
+}
 
+#privacy-policy-title {
+  color: $color-rhino-dark;
+  text-align: center;
+  padding-top: 130px;
+  @include tablet {
+    padding-top: 100px;
+  }
+}
+#privacy-policy-hero {
+  width: 100%;
+  margin: auto;
+  @include media('<1100px') {
+    padding-top: $gutter * 5;
+  }
+  @include phone {
+    padding-top: 0;
+    margin: 0;
+  }
+}
+#privacy-policy-bg {
+  background: none;
+  background-image: url('https://prismic-io.s3.amazonaws.com/plotly%2F9473103a-1178-411d-9d01-28962779c360_privacy-policy-large.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include tablet {
+    background-size: auto;
+  }
+  @include phone {
+    background-size: inherit;
+  }
+}
 .hero-container {
   background: #00004f;
   .hero {
@@ -27,20 +61,16 @@ $hero-content-space: 60px;
       flex-direction: column;
       padding: $gutter;
       height: 375px;
-
       .dash-stars-wrapper {
         padding-top: $gutter/2;
         width: 140px;
-
         @include tablet {
           margin: auto;
         }
-
         iframe {
           margin: auto;
         }
       }
-
       .cta-buttons {
         @media (max-width: $shrink-hero-breakpoint) {
           flex-direction: column;
@@ -78,7 +108,6 @@ $hero-content-space: 60px;
     }
   }
 }
-
 #cs-hero {
   background: #00004f;
 }

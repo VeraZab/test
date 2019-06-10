@@ -27,6 +27,7 @@ import ColumnsThirds from './ColumnsThirds';
 import CopyLeftGraphicRight from './CopyLeftGraphicRight';
 import ColumnarCallToAction from './ColumnarCallToAction';
 import FooterCTA from './FooterCTA';
+import PlainText from './PlainText';
 
 const BlankSlice = () => {
   return null;
@@ -66,6 +67,7 @@ export default class Slices extends React.Component {
       copy_l_graph_r: CopyLeftGraphicRight,
       columnar_call_to_action: ColumnarCallToAction,
       footercta: FooterCTA,
+      plaintext: PlainText,
     };
 
     return (

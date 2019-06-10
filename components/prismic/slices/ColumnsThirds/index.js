@@ -42,8 +42,8 @@ const ColumnsThirds = props => {
             )}
             {items.map((item, i) => {
               return (
-                <div className="repeatable-column-wrapper">
-                  <div className="repeatable-column" key={i}>
+                <div className="repeatable-column-wrapper" key={i}>
+                  <div className="repeatable-column">
                     {Boolean(item.pretitle) && <div className="pretitle">{item.pretitle}</div>}
                     <img src={item.graphic.url} />
                     <h2 className="title">{item.title1}</h2>

@@ -55,12 +55,12 @@
       }
     }
     &-section {
+      max-width: 300px;
       flex: 1;
       padding-left: 50px;
       @include tablet {
         padding-left: 0;
       }
-      min-width: 200px;
       padding-bottom: $gutter;
       @include phone {
         min-width: 50%;

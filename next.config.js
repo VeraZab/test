@@ -16,6 +16,12 @@ module.exports = {
         slug: 'home',
       },
     },
+    '/privacy-policy': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'privacy-policy',
+      },
+    },
     '/dashboards-and-reports': {
       page: '/prismic-generator',
       query: {

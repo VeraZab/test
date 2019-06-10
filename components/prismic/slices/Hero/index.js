@@ -3,14 +3,22 @@ import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
   return (
-    <div className="hero-container">
+    <div
+      className="hero-container"
+      id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-bg' : ''}
+    >
       {props.content.hero_title ? (
         <div
-          className="hero "
+          className="hero"
           id={
             props.content.hero_title && props.content.hero_title.includes('Chart Studio')
               ? 'cs-hero'
               : null
+          }
+          style={
+            props.content.keywords === 'privacy-policy'
+              ? {width: '100%', margin: 'auto', paddingTop: '0'}
+              : {}
           }
         >
           <div
@@ -18,14 +26,26 @@ const Hero = props => {
             id={
               props.content.hero_title && props.content.hero_title === 'Dash Licensing'
                 ? 'dash-pricing'
-                : 'null'
+                : props.content.keywords === 'privacy-policy'
+                ? 'privacy-policy-hero'
+                : ''
             }
-            style={props.content.hero_graphic.url ? {} : {paddingLeft: '36px'}}
           >
-            <h1 className="hero-title">{props.content.hero_title}</h1>
-            <div className="hero-subtitle">
-              {props.content.hero_rich_message && renderPrismic(props.content.hero_rich_message)}
+            <div className="hero-copy-container">
+              <h1
+                className="hero-title"
+                id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
+              >
+                {props.content.hero_title}
+              </h1>
+              <div
+                className="hero-subtitle"
+                id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-subtitle' : ''}
+              >
+                {props.content.hero_rich_message && renderPrismic(props.content.hero_rich_message)}
+              </div>
             </div>
+
             <div className="cta-buttons">
               {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
                 <a className="button button-primary" href={props.content.hero_buttons[0].link.url}>
@@ -45,7 +65,7 @@ const Hero = props => {
               {props.content.keywords === 'dash-product' ? (
                 <iframe
                   src="https://ghbtns.com/github-btn.html?user=plotly&repo=dash&type=star&count=true&size=large"
-                  frameborder="0"
+                  frameBorder="0"
                   scrolling="0"
                   width="160px"
                   height="auto"
@@ -53,7 +73,10 @@ const Hero = props => {
               ) : null}
             </div>
           </div>
-          <div className="hero-right">
+          <div
+            className="hero-right"
+            style={props.content.keywords === 'privacy-policy' ? {display: 'none'} : {}}
+          >
             {props.content.hero_graphic.url ? (
               <>
                 {props.content.hero_graphic_style &&
