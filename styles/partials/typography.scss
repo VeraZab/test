@@ -32,7 +32,7 @@ h6 {
   @extend %font-smoothing;
   font-family: 'Asap', sans-serif;
   color: $color-dodger;
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   @media (max-width: $shrink-hero-breakpoint) {
     text-align: center;
