@@ -10,6 +10,10 @@ $hero-content-space: 60px;
 #privacy-policy-title {
   color: $color-rhino-dark;
   text-align: center;
+  padding-top: 130px;
+  @include tablet {
+    padding-top: 100px;
+  }
 }
 #privacy-policy-hero {
   width: 100%;
@@ -20,15 +24,6 @@ $hero-content-space: 60px;
   @include phone {
     padding-top: 0;
     margin: 0;
-  }
-  h1 {
-    padding-top: $gutter * 4;
-    @include tablet {
-      padding-top: $gutter * 3;
-    }
-    @include phone {
-      padding-top: $gutter * 2;
-    }
   }
 }
 #privacy-policy-bg {
@@ -66,9 +61,6 @@ $hero-content-space: 60px;
       flex-direction: column;
       padding: $gutter;
       height: 375px;
-      .hero-copy-container {
-        margin: auto;
-      }
       .dash-stars-wrapper {
         padding-top: $gutter/2;
         width: 140px;
