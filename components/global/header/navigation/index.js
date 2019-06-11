@@ -1,5 +1,5 @@
 import React from 'react';
-const DEMO_FORM_URL = 'https://go.plot.ly/demodash';
+const DEMO_FORM_URL = 'https://go.plot.ly/demo-dash';
 const MENU = {
   PRODUCTS: {
     LEFT: [
@@ -303,7 +303,7 @@ export default class Navigation extends React.Component {
             <div className="cta-buttons">
               <a
                 id="header-button"
-                href="https://go.plot.ly/demodash"
+                href="https://go.plot.ly/demo-dash"
                 className="button button-primary header-button"
               >
                 <div className="button-label">{MENU.CTA.title}</div>
