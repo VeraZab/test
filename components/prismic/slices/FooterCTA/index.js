@@ -14,7 +14,7 @@ const FooterCTA = props => {
               {props.data.primary.cta_messaging && (
                 <p className="subtitle">{props.data.primary.cta_messaging}</p>
               )}
-              <a className="button button-primary" href={props.data.primary.cta_url.url}>
+              <a className="button button-primary" href={props.data.primary.cta_url}>
                 <div className="button-label">{props.data.primary.cta_label}</div>
               </a>
             </div>
