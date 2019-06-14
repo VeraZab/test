@@ -29,23 +29,6 @@ Layout.componentDidMount = () => {
   document.body.classList.remove('no-scroll');
   ReactGA.initialize('UA-39373211-1');
   ReactGA.pageview(document.location.pathname);
-  (function() {
-    let js,
-      q,
-      d = document,
-      gi = d.getElementById,
-      ce = d.createElement,
-      gt = d.getElementsByTagName,
-      id = 'typef_orm_share',
-      b = 'https://embed.typeform.com/';
-    if (!gi.call(d, id)) {
-      js = ce.call(d, 'script');
-      js.id = id;
-      js.src = b + 'embed.js';
-      q = gt.call(d, 'script')[0];
-      q.parentNode.insertBefore(js, q);
-    }
-  })();
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker

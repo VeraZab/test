@@ -25,11 +25,11 @@ const cardsStyles = {
 
 const buttons = [
   {
-    label: 'Contact Us',
+    label: 'Contact Sales',
     title: 'Find out how we can work together.',
     icon: null,
     target: '_blank',
-    link: 'https://plotly.typeform.com/to/mH1Cpb',
+    link: 'https://go.plot.ly/contact-sales',
     button: {
       classes: 'button button-primary',
     },
@@ -38,11 +38,11 @@ const buttons = [
 
 const oemButton = [
   {
-    label: 'Inquire about an Oem',
+    label: 'Contact Sales',
     title: 'Find out how we can work together.',
     icon: null,
     target: '_blank',
-    link: 'https://plotly.typeform.com/to/mH1Cpb',
+    link: 'https://go.plot.ly/contact-sales',
     button: {
       classes: 'button button-primary',
     },
