@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from 'components/prismic/slices/Hero';
 
 const buttons = [
-  {label: 'Request Enterprise Trial', link: {url: 'https://plotly.typeform.com/to/seG7Vb'}},
+  {label: 'Schedule A Demo', link: {url: 'https://go.plot.ly/chart-studio-demo'}},
   {
     label: 'Try Online Demo',
     link: {url: 'https://plot.ly/create'},

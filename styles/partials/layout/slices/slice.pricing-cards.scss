@@ -141,7 +141,8 @@
         }
         .pricing__card__addon {
           box-shadow: 0px 2px 14px rgba($color-rhino-dark, 0.2);
-          margin: 20px;
+          margin: 10px;
+          margin-top: $gutter;
           display: flex;
           width: 35vw;
           flex-direction: column;
