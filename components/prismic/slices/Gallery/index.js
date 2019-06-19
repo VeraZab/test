@@ -26,13 +26,20 @@ class Gallery extends React.Component {
             <img src={item.graphic.url} />
           </div>
           <div className="gallery-messaging">
-            <div className="gallery-heading">{this.props.data.primary.title1}</div>
-            <h1 className="title">{item.pretitle}</h1>
-            <div className="gallery-copy">{renderPrismic(item.messaging)}</div>
-            <div className="cta-buttons">
-              <a className="button button-primary" href={item.cta_url}>
-                <div className="button-label">{item.cta_label}</div>
-              </a>
+            <div className="gallery-text">
+              <div className="gallery-heading">{this.props.data.primary.title1}</div>
+              <h2 className="gallery-title">{item.pretitle}</h2>
+              <div className="gallery-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea colkj lkjsdf kdjf lksjdflkj slkd
+                lkdk
+              </div>
+              <div className="cta-buttons">
+                <a className="button button-primary" href={item.cta_url}>
+                  <div className="button-label">{item.cta_label}</div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -42,18 +49,16 @@ class Gallery extends React.Component {
       <div className="gallery-container">
         <div className="gallery">
           {slides}
-          <div style={{display: 'flex'}}>
-            <div className="point-container">
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className={
-                    index === this.state.currentSliceIndex ? 'active-point' : 'inactive-point'
-                  }
-                  onClick={() => this.moveTo(index)}
-                />
-              ))}
-            </div>
+          <div className="point-container">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className={
+                  index === this.state.currentSliceIndex ? 'active-point' : 'inactive-point'
+                }
+                onClick={() => this.moveTo(index)}
+              />
+            ))}
           </div>
         </div>
       </div>
