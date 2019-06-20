@@ -1,162 +1,142 @@
+$point-color: #bcbcbc;
+
 .gallery-container {
+  margin-bottom: $gutter * 3;
+
   .gallery {
     max-width: $global-width;
     margin: auto;
-    padding-top: $gutter * 2;
-    padding-bottom: $gutter * 2;
+    padding: $gutter * 2 0;
+    position: relative;
+    height: 470px;
+
+    // this playing with height is required to keep the point-container
+    // always at the bottom at the same spot, regardless of lenght of
+    // content
+
     @include tablet {
       margin: $gutter;
-      margin-top: 48px;
+      height: 750px;
     }
-    .oil-and-gas-active {
+
+    @media (max-width: 600px) {
+      height: 670px;
+    }
+
+    @media (max-width: 420px) {
+      height: 710px;
+    }
+
+    @media (max-width: 375px) {
+      height: 740px;
+    }
+
+    @media (max-width: 345px) {
+      height: 790px;
+    }
+
+    .active-slide {
       display: flex;
       flex-direction: row;
       margin: $gutter;
+
       @include tablet {
         flex-direction: column;
       }
+
       .gallery-graphic {
         width: 50%;
-        margin-bottom: $gutter;
-        margin-right: $gutter * 2;
+        min-width: 475px;
+        padding-right: $gutter;
+        padding-top: $gutter;
+
         @include tablet {
           text-align: center;
           margin: auto;
-          padding-bottom: $gutter;
+          padding-right: 0;
+          min-width: 70%;
+        }
+
+        @include phone {
           min-width: 80%;
         }
       }
+
       .gallery-messaging {
         width: 50%;
-        .title {
-          line-height: 1.2;
-        }
-        .gallery-heading {
-          text-transform: uppercase;
-          color: $color-heading;
-          letter-spacing: 2px;
-          padding-bottom: $gutter/2;
-          @include tablet {
-            text-align: center;
-            .title {
-              line-height: 1.2;
+
+        .gallery-text {
+          .gallery-heading {
+            text-transform: uppercase;
+            color: $color-heading;
+            letter-spacing: 2px;
+
+            @include tablet {
+              margin-top: $gutter;
+              text-align: center;
+              .title {
+                line-height: 1.2;
+              }
             }
           }
+
+          .gallery-title {
+            line-height: 1.2;
+            padding: $gutter/4 0;
+          }
+
+          .gallery-description {
+            margin-top: $gutter/2;
+            margin-bottom: $gutter;
+
+            p {
+              margin: $gutter/4 0;
+            }
+
+            p + p {
+              padding-top: 0;
+            }
+          }
+
+          .cta-buttons a {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
         }
-        .gallery-copy {
-          margin-bottom: $gutter * 2;
-        }
+
         @include tablet {
           width: 100%;
           text-align: center;
         }
       }
     }
-    .ml-active {
-      display: flex;
-      flex-direction: row;
-      margin: $gutter;
-      @include tablet {
-        flex-direction: column;
-      }
-      .gallery-graphic {
-        width: 50%;
-        margin-bottom: $gutter;
-        margin-right: $gutter * 2;
-        @include tablet {
-          width: 100%;
-          text-align: center;
-        }
-      }
-      .gallery-messaging {
-        width: 50%;
-        .title {
-          line-height: 1.2;
-        }
-        .gallery-heading {
-          text-transform: uppercase;
-          color: $color-heading;
-          letter-spacing: 2px;
-          padding-bottom: $gutter/2;
-          @include tablet {
-            text-align: center;
-            .title {
-              line-height: 1.2;
-            }
-          }
-        }
-        .gallery-copy {
-          margin-bottom: $gutter * 2;
-        }
-        @include tablet {
-          width: 100%;
-          text-align: center;
-        }
-      }
+
+    .inactive-slide {
+      display: none;
     }
-    .pharma-active {
-      display: flex;
-      flex-direction: row;
-      margin: $gutter;
-      @include tablet {
-        flex-direction: column;
-      }
-      .gallery-graphic {
-        width: 50%;
-        margin-bottom: $gutter;
-        margin-right: $gutter * 2;
-        @include tablet {
-          width: 100%;
-          text-align: center;
-        }
-      }
-      .gallery-messaging {
-        width: 50%;
-        .title {
-          line-height: 1.2;
-        }
-        .gallery-heading {
-          text-transform: uppercase;
-          color: $color-heading;
-          letter-spacing: 2px;
-          padding-bottom: $gutter/2;
-          @include tablet {
-            text-align: center;
-            .title {
-              line-height: 1.2;
-            }
-          }
-        }
-        .gallery-copy {
-          margin-bottom: $gutter * 2;
-        }
-        @include tablet {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    }
-    .slider-container {
-      display: flex;
-      height: 70px;
-      .sliders {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
+
+    .point-container {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 45px);
+
+      .inactive-point {
+        background-color: $point-color;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        display: inline-block;
+
         &:hover {
           cursor: pointer;
         }
-        .oil-slider,
-        .ml-slider,
-        .pharma-slider {
-          padding-right: $gutter;
-        }
       }
-    }
-    .oil-and-gas,
-    .pharma,
-    .ml {
-      display: none;
+
+      .active-point {
+        @extend .inactive-point;
+        background-color: darken($color: $point-color, $amount: 30);
+      }
     }
   }
 }
