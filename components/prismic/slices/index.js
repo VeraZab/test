@@ -28,6 +28,7 @@ import CopyLeftGraphicRight from './CopyLeftGraphicRight';
 import ColumnarCallToAction from './ColumnarCallToAction';
 import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
+import FourBoxesOneRow from './fourBoxesOneRow';
 
 const BlankSlice = () => {
   return null;
@@ -68,6 +69,7 @@ export default class Slices extends React.Component {
       columnar_call_to_action: ColumnarCallToAction,
       footercta: FooterCTA,
       plaintext: PlainText,
+      four_boxes_one_row: FourBoxesOneRow,
     };
 
     return (
