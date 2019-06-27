@@ -16,11 +16,19 @@ $point-color: #bcbcbc;
 
     @include tablet {
       margin: $gutter;
-      height: 800px;
+      height: 740px;
     }
 
-    @media (max-width: 320px) {
-      height: 900px;
+    @media (max-width: 600px) {
+      height: 690px;
+    }
+
+    @media (max-width: 420px) {
+      height: 720px;
+    }
+
+    @media (max-width: 375px) {
+      height: 740px;
     }
 
     .active-slide {
