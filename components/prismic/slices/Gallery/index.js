@@ -28,7 +28,7 @@ class Gallery extends React.Component {
           <div className="gallery-messaging">
             <div className="gallery-text">
               <div className="gallery-heading">{this.props.data.primary.title1}</div>
-              <h2 className="gallery-title">{item.pretitle}</h2>
+              <h1 className="gallery-title">{item.pretitle}</h1>
               <div className="gallery-description">{renderPrismic(item.messaging)}</div>
               <div className="cta-buttons">
                 <a className="button button-primary" href={item.cta_url}>
