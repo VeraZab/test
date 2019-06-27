@@ -1,0 +1,57 @@
+.fourBoxesOneRow-container {
+  .fourBoxesOneRow-content {
+    max-width: $global-width;
+    margin: auto;
+    margin-top: $gutter * 2;
+    margin-bottom: $gutter * 4;
+
+    .fourBoxesOneRow-title {
+      text-align: center;
+    }
+
+    .fourBoxesOneRow-boxes-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: $gutter;
+
+      .box {
+        display: inline-block;
+        width: 23%;
+        padding: $gutter;
+        background-color: rgb(249, 250, 255);
+        min-height: 400px;
+        margin: $gutter/4;
+
+        .header {
+          text-align: center;
+          min-height: 50px;
+
+          img {
+            width: 70px;
+            min-height: 80px;
+            margin: auto;
+          }
+
+          .title {
+          }
+        }
+
+        .content {
+          .description {
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 1050px) {
+          width: 48%;
+          min-height: 350px;
+        }
+
+        @media (max-width: 650px) {
+          width: 98%;
+          min-height: 320px;
+        }
+      }
+    }
+  }
+}
