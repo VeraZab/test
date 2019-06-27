@@ -6,9 +6,9 @@ $point-color: #bcbcbc;
   .gallery {
     max-width: $global-width;
     margin: auto;
-    padding: $gutter * 2 0;
+    padding: $gutter * 3 0;
     position: relative;
-    height: 450px;
+    height: 490px;
 
     // this playing with height is required to keep the point-container
     // always at the bottom at the same spot, regardless of lenght of
@@ -16,19 +16,19 @@ $point-color: #bcbcbc;
 
     @include tablet {
       margin: $gutter;
-      height: 700px;
+      height: 740px;
     }
 
     @media (max-width: 600px) {
-      height: 650px;
+      height: 690px;
     }
 
     @media (max-width: 420px) {
-      height: 680px;
+      height: 720px;
     }
 
     @media (max-width: 375px) {
-      height: 700px;
+      height: 740px;
     }
 
     .active-slide {
