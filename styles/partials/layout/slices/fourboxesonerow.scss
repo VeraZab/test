@@ -13,6 +13,7 @@
       display: flex;
       flex-wrap: wrap;
       padding: $gutter;
+      justify-content: center;
 
       .box {
         display: inline-block;
