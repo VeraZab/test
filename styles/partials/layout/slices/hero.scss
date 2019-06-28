@@ -8,11 +8,12 @@ $hero-content-space: 60px;
 }
 
 #privacy-policy-title {
-  color: $color-rhino-dark;
+  color: white;
   text-align: center;
-  padding-top: 130px;
+  font-size: 40px;
+  padding-top: 180px;
   @include tablet {
-    padding-top: 100px;
+    padding-top: 30px;
   }
 }
 #privacy-policy-hero {
@@ -27,8 +28,7 @@ $hero-content-space: 60px;
   }
 }
 #privacy-policy-bg {
-  background: none;
-  background-image: url('https://prismic-io.s3.amazonaws.com/plotly%2F9473103a-1178-411d-9d01-28962779c360_privacy-policy-large.png');
+  background: linear-gradient(#88d2ff, #120e6a);
   background-repeat: no-repeat;
   background-size: cover;
   @include tablet {
