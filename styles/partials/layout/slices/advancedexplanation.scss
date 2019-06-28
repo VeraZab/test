@@ -1,0 +1,99 @@
+.advancedExplanation-container {
+  background: rgb(249, 250, 254);
+  padding-top: $gutter;
+
+  .advancedExplanation-content {
+    max-width: $global-width;
+    margin: auto;
+    margin-top: $gutter * 2;
+    margin-bottom: $gutter * 4;
+    padding: $gutter;
+
+    h1,
+    h2,
+    .pretitle {
+      text-align: left;
+    }
+
+    .intro {
+      .left {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+
+        .pretitle {
+        }
+
+        .title {
+        }
+
+        .message {
+        }
+
+        .cta_buttons {
+        }
+
+        @media (max-width: 950px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          .title,
+          .subtitle {
+            text-align: center !important;
+          }
+        }
+      }
+
+      .right {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+
+        img {
+          max-width: 400px;
+          margin: auto;
+        }
+
+        @media (max-width: 950px) {
+          display: none;
+        }
+      }
+    }
+
+    .points {
+      margin: $gutter * 2 0;
+
+      .point {
+        width: 47%;
+        display: inline-block;
+        vertical-align: top;
+        margin: $gutter 0;
+
+        .left {
+          img {
+          }
+        }
+
+        .right {
+          .title {
+          }
+          .subtitle {
+            font-weight: bold;
+          }
+          .message {
+          }
+        }
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+
+      .point:nth-child(odd) {
+        margin-right: $gutter;
+      }
+    }
+  }
+}
