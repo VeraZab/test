@@ -35,10 +35,14 @@ const AdvancedExplanation = props => {
         <div className="points">
           {props.data.items.map((item, index) => (
             <div className="point" key={index}>
-              <div className="left">{item.icon.url ? <img src={item.icon.url} /> : null}</div>
-              <div className="right">
-                <h2 className="title">{item.title1}</h2>
-                <div className="subtitle">{item.subtitle}</div>
+              {item.icon.url && (
+                <div className="left">
+                  <img src={item.icon.url} />
+                </div>
+              )}
+              <div className="right" style={{width: item.icon.url ? '75%' : 'auto'}}>
+                {item.title1 && <h2 className="title">{item.title1}</h2>}
+                {item.subtitle && <div className="subtitle">{item.subtitle}</div>}
                 <div className="message">{renderPrismic(item.message)}</div>
               </div>
             </div>
