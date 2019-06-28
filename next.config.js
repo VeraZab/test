@@ -22,6 +22,12 @@ module.exports = {
         slug: 'privacy-policy',
       },
     },
+    '/terms-of-service': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'terms-of-service',
+      },
+    },
     '/dashboards-and-reports': {
       page: '/prismic-generator',
       query: {
