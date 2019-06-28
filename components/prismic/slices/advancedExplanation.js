@@ -17,7 +17,7 @@ const AdvancedExplanation = props => {
             <div className="message">{renderPrismic(props.data.primary.message)}</div>
             <div className="cta-buttons">
               {props.data.primary.cta_label1 && (
-                <a className="button button-secondary" href={props.data.primary.cta_url1}>
+                <a className="button button-primary" href={props.data.primary.cta_url1}>
                   <div className="button-label">{props.data.primary.cta_label1}</div>
                 </a>
               )}
