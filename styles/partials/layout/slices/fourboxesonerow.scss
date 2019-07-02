@@ -1,8 +1,10 @@
 .fourBoxesOneRow-container {
+  margin: $gutter;
+
   .fourBoxesOneRow-content {
     max-width: $global-width;
     margin: auto;
-    margin-top: $gutter * 2;
+    margin-top: $gutter * 3;
     margin-bottom: $gutter * 4;
 
     .fourBoxesOneRow-title {
@@ -12,12 +14,12 @@
     .fourBoxesOneRow-boxes-container {
       display: flex;
       flex-wrap: wrap;
-      padding: $gutter;
+      padding: $gutter 0;
       justify-content: center;
 
       .box {
         display: inline-block;
-        width: 23%;
+        width: 24%;
         padding: $gutter;
         background-color: rgb(249, 250, 255);
         min-height: 400px;
@@ -43,7 +45,7 @@
           }
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1150px) {
           width: 48%;
           min-height: 350px;
         }

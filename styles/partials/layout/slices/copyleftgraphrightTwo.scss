@@ -1,5 +1,5 @@
 .copy-left-graphic-right-two-container {
-  margin-top: $space-between/2;
+  margin: $gutter 0;
 
   .copy-left-graphic-right-two {
     max-width: $global-width;
@@ -19,9 +19,7 @@
       }
       img {
         @include tablet {
-          width: 90%;
-          margin: auto;
-          padding-top: 0;
+          display: none;
         }
       }
 
@@ -31,24 +29,22 @@
         .copy-container {
           display: flex;
           flex-direction: column;
-          margin: $gutter/2;
+          padding: $gutter;
           margin-top: 0;
           @include tablet {
             flex-direction: column;
           }
           p {
-            padding-top: 0;
+            margin: 0;
           }
-          .subtitle {
+          h1 {
+            text-align: left;
             @include tablet {
               text-align: center;
-              margin: auto;
-              ul {
-                li {
-                  padding-left: $gutter;
-                }
-              }
             }
+          }
+          .subtitle {
+            padding: $gutter 0;
           }
         }
       }

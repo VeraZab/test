@@ -5,9 +5,7 @@
   .advancedExplanation-content {
     max-width: $global-width;
     margin: auto;
-    margin-top: $gutter * 1.5;
-    margin-bottom: $gutter * 4;
-    padding: $gutter;
+    padding: $gutter * 2 $gutter;
 
     h1,
     h2,
