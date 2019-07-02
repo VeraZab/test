@@ -1,5 +1,5 @@
 .copy-left-graphic-right-two-container {
-  margin-top: $space-between/2;
+  margin: $gutter 0;
 
   .copy-left-graphic-right-two {
     max-width: $global-width;
@@ -35,9 +35,10 @@
             flex-direction: column;
           }
           p {
-            padding-top: 0;
+            margin: 0;
           }
           .subtitle {
+            padding: $gutter 0;
             @include tablet {
               text-align: center;
               margin: auto;
