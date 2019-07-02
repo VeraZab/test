@@ -29,11 +29,8 @@ import ColumnarCallToAction from './ColumnarCallToAction';
 import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
-<<<<<<< HEAD
 import AdvancedExplanation from './advancedExplanation';
-=======
 import RelatedPosts from './RelatedPosts';
->>>>>>> f0b78361... starting to redesign
 
 const BlankSlice = () => {
   return null;
@@ -76,7 +73,7 @@ export default class Slices extends React.Component {
       plaintext: PlainText,
       four_boxes_one_row: FourBoxesOneRow,
       advancedexplanation: AdvancedExplanation,
-      relatedposts: RelatedPosts
+      relatedposts: RelatedPosts,
     };
 
     return (
