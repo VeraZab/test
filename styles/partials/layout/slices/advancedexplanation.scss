@@ -1,0 +1,132 @@
+.advancedExplanation-container {
+  background: rgb(249, 250, 254);
+  padding-top: $gutter;
+
+  .advancedExplanation-content {
+    max-width: $global-width;
+    margin: auto;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 4;
+    padding: $gutter;
+
+    h1,
+    h2,
+    .pretitle {
+      text-align: left;
+    }
+
+    .intro {
+      h1 {
+        padding-bottom: 0;
+      }
+      .left {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+
+        .pretitle {
+        }
+
+        .title {
+        }
+
+        .message {
+          margin-bottom: $gutter;
+        }
+
+        .cta-buttons {
+        }
+
+        @media (max-width: 950px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          .title,
+          .subtitle {
+            text-align: center !important;
+          }
+        }
+      }
+
+      .right {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+
+        img {
+          max-width: 400px;
+          margin: auto;
+        }
+
+        @media (max-width: 950px) {
+          display: none;
+        }
+      }
+    }
+
+    .points {
+      margin-top: $gutter;
+      margin-bottom: $gutter * 2;
+
+      .point {
+        width: 47%;
+        display: inline-block;
+        vertical-align: top;
+        margin: $gutter 0;
+
+        .left {
+          display: inline-block;
+          margin-right: $gutter;
+
+          img {
+            width: 70px;
+          }
+
+          @media (max-width: 850px) {
+            margin-right: 0;
+          }
+        }
+
+        .right {
+          display: inline-block;
+          vertical-align: top;
+
+          h2.title {
+            @media (max-width: 850px) {
+              text-align: center !important;
+            }
+          }
+          .subtitle {
+            font-weight: bold;
+          }
+          .message {
+          }
+        }
+
+        @media (max-width: 850px) {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          width: 100%;
+          margin: $gutter 0;
+        }
+      }
+
+      .point:nth-child(odd) {
+        margin-right: $gutter;
+        @media (max-width: 850px) {
+          margin: $gutter 0;
+        }
+      }
+
+      @media (max-width: 850px) {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
