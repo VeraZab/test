@@ -14,7 +14,7 @@ import GithubStars from './github-stars';
 import CodeExplorer from './code-explorer';
 import IFrame from './iframe';
 import GraphicText from './graphic-text';
-import Newsroom from './newsroom';
+import Resources from './Resources';
 import ComboCTA from './ComboCTA';
 import GraphicLeftCopyRight from './GraphicLeftCopyRight';
 import OverlapGraphic from './OverlapGraphic';
@@ -29,7 +29,11 @@ import ColumnarCallToAction from './ColumnarCallToAction';
 import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
+<<<<<<< HEAD
 import AdvancedExplanation from './advancedExplanation';
+=======
+import RelatedPosts from './RelatedPosts';
+>>>>>>> f0b78361... starting to redesign
 
 const BlankSlice = () => {
   return null;
@@ -56,7 +60,7 @@ export default class Slices extends React.Component {
       'cs-github-stars': GithubStars,
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
-      newsroom: Newsroom,
+      newsroom: Resources,
       an_open_source_company: TwoColumn,
       globalcta: GraphicLeftCopyRight,
       dash_cta: OverlapGraphic,
@@ -72,6 +76,7 @@ export default class Slices extends React.Component {
       plaintext: PlainText,
       four_boxes_one_row: FourBoxesOneRow,
       advancedexplanation: AdvancedExplanation,
+      relatedposts: RelatedPosts
     };
 
     return (

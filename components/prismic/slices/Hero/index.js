@@ -33,7 +33,9 @@ const Hero = props => {
           >
             <div className="hero-copy-container">
               <h1
-                className="hero-title"
+                className={
+                  props.content.keywords === 'resources' ? 'hero-title padded' : 'hero-title'
+                }
                 id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
               >
                 {props.content.hero_title}

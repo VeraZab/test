@@ -55,6 +55,16 @@ const MENU = {
     ],
     RIGHT: [],
   },
+  RESOURCES: [
+    {
+      title: 'Blog',
+      link: 'https://blog.plot.ly',
+    },
+    {
+      title: 'Content & News',
+      link: '/resources',
+    },
+  ],
   SIGNUP: [
     {
       title: 'Community Forum',
@@ -182,14 +192,12 @@ export default class Navigation extends React.Component {
         <div onClick={this.toggleMobileMenu.bind(this)} className="mobile-navigation-anchor">
           <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
         </div>
-
         <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.toggleProductSubmenu.bind(this)}>
               Products
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
-
             <div
               id="productsDropdown"
               className={
@@ -235,7 +243,6 @@ export default class Navigation extends React.Component {
               Pricing
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
-
             <div
               id="pricingDropdown"
               className={
@@ -278,10 +285,35 @@ export default class Navigation extends React.Component {
           </div>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+              RESOURCES & NEWS
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
+            </div>
+            <div
+              id="signUpDropdown"
+              className={
+                this.state.signUpSubmenuActive
+                  ? 'navigation-product-submenu submenu-active'
+                  : 'navigation-product-submenu'
+              }
+            >
+              {MENU.RESOURCES.map((p, i) => (
+                <div key={i} className="navigation-product-submenu-section">
+                  <a
+                    href={p.link}
+                    target={p.link.includes('resources') ? '' : '_blank'}
+                    className="navigation-product-submenu-section-title"
+                  >
+                    {p.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="navigation-product-item-with-submenu">
+            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
               Sign Up
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
-
             <div
               id="signUpDropdown"
               className={
@@ -299,6 +331,7 @@ export default class Navigation extends React.Component {
               ))}
             </div>
           </div>
+
           <div className="navigation-product-item-with-submenu">
             <div className="cta-buttons">
               <a
