@@ -36,6 +36,9 @@
           }
           p {
             margin: 0;
+            @include tablet {
+              text-align: center;
+            }
           }
           .subtitle {
             padding: $gutter 0;
