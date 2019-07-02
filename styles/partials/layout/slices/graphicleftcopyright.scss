@@ -15,8 +15,7 @@
       flex-direction: row;
       img {
         @include tablet {
-          width: 90%;
-          margin: auto;
+          display: none;
         }
       }
       @include tablet {

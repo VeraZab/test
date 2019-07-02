@@ -19,9 +19,7 @@
       }
       img {
         @include tablet {
-          width: 90%;
-          margin: auto;
-          padding-top: 0;
+          display: none;
         }
       }
 
