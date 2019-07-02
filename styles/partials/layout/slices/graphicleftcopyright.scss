@@ -43,13 +43,19 @@
         .copy-container {
           display: flex;
           flex-direction: column;
-          margin: $gutter/2;
+          padding: $gutter;
           margin-top: 0;
-          justify-content: center;
           text-align: left;
 
           p {
             margin: 0;
+          }
+
+          h1 {
+            text-align: left;
+            @include tablet {
+              text-align: center;
+            }
           }
 
           .subtitle {
@@ -58,13 +64,6 @@
           }
 
           @include tablet {
-            text-align: center;
-
-            ul {
-              padding-bottom: $gutter;
-              padding-left: $gutter * 5;
-            }
-
             margin-top: $gutter;
           }
         }

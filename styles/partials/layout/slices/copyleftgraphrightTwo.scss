@@ -29,28 +29,22 @@
         .copy-container {
           display: flex;
           flex-direction: column;
-          margin: $gutter/2;
+          padding: $gutter;
           margin-top: 0;
           @include tablet {
             flex-direction: column;
           }
           p {
             margin: 0;
+          }
+          h1 {
+            text-align: left;
             @include tablet {
               text-align: center;
             }
           }
           .subtitle {
             padding: $gutter 0;
-            @include tablet {
-              text-align: center;
-              margin: auto;
-              ul {
-                li {
-                  padding-left: $gutter;
-                }
-              }
-            }
           }
         }
       }
