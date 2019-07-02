@@ -108,6 +108,12 @@ module.exports = {
       },
     },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
+    '/products/dash/ddk': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-ddk',
+      },
+    },
     '/chart-studio/on-premise': {
       page: '/prismic-generator',
       query: {
