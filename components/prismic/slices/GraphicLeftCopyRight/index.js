@@ -10,8 +10,12 @@ const GraphicLeftCopyRight = props => {
           </div>
           <div className="copy-wrapper">
             <div className="copy-container">
-              {props.data.primary.cta_title && (
-                <h1 className="hero-title">{props.data.primary.cta_title}</h1>
+              {props.data.primary.pretitle && (
+                <div className="pretitle">{props.data.primary.pretitle}</div>
+              )}
+              {props.data.primary.cta_title && <h1>{props.data.primary.cta_title}</h1>}
+              {props.data.primary.cta_title_rich && (
+                <h1>{renderPrismic(props.data.primary.cta_title_rich)}</h1>
               )}
               {props.data.primary.cta_messaging && (
                 <p className="subtitle">{renderPrismic(props.data.primary.cta_messaging)}</p>
