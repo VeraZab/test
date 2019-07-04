@@ -93,6 +93,7 @@
             @include phone {
               margin: auto;
               width: 50%;
+              max-width: 100px;
             }
           }
           .customer-testimonial {
