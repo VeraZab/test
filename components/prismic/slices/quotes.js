@@ -39,9 +39,9 @@ class Quotes extends React.Component {
                     this.state.customerQuoteIndex === i ? 'customer-quote-active' : 'customer-quote'
                   }
                 >
-                  <div onClick={this.handleLeftClick} className="customer-quotes-arrow">
+                  {items.length > 1 && <div onClick={this.handleLeftClick} className="customer-quotes-arrow">
                     <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />{' '}
-                  </div>
+                  </div>}
                   <div className="quotes-copy-container">
                     <div className="customer-logo-container">
                       <img alt="client logo" src={item.logo.url} />
@@ -51,12 +51,14 @@ class Quotes extends React.Component {
                       <div>{item.quote1[0].text}</div>
                     </div>
                   </div>
+                  {items.length > 1 &&
                   <div onClick={this.handleRightClick} className="customer-quotes-arrow">
                     <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
-                  </div>
+                  </div>}
                 </div>
               );
             })}
+            {items.length > 1 &&
             <div className="customer-quotes-arrow-container-mobile">
               <div onClick={this.handleLeftClick} className="customer-quotes-arrow-mobile">
                 <img src="https://prismic-io.s3.amazonaws.com/plotly%2Fd1efff3f-30da-4ed1-ad6c-4c861b9203fa_left+arrow.png" />
@@ -64,7 +66,7 @@ class Quotes extends React.Component {
               <div onClick={this.handleRightClick} className="customer-quotes-arrow-mobile">
                 <img src="https://prismic-io.s3.amazonaws.com/plotly%2F3bc0f6a5-9d15-44de-8432-cfd56ee5bdc8_right+arrow.png" />
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
