@@ -17,7 +17,10 @@
       display: flex;
       flex-direction: row;
 
-      img {
+      .graphic-container {
+        margin: auto;
+        padding: $gutter;
+
         @include tablet {
           display: none;
         }
