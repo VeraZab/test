@@ -29,7 +29,6 @@
       .copy-wrapper {
         display: flex;
         justify-content: center;
-        padding-left: $gutter * 2;
         min-width: 50%;
 
         @include tablet {
