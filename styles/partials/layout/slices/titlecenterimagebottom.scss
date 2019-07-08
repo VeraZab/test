@@ -1,0 +1,29 @@
+.titlecenterimagebottom-container {
+  padding: $gutter 0;
+
+  .titlecenterimagebottom-content {
+    max-width: $global-width;
+    margin: auto;
+    padding: $gutter * 2 $gutter;
+    text-align: center;
+
+    h1 {
+      font-family: Asap, sans-serif;
+      font-weight: 500;
+      margin: 0;
+      color: #2a3f5f;
+      padding-bottom: $gutter;
+      font-size: 2em;
+    }
+
+    img {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .copy {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+}

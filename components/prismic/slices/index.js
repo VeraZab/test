@@ -30,6 +30,7 @@ import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
 import AdvancedExplanation from './advancedExplanation';
+import TitleCenterImageBottom from './titleCenterImageBottom';
 
 const BlankSlice = () => {
   return null;
@@ -72,6 +73,7 @@ export default class Slices extends React.Component {
       plaintext: PlainText,
       four_boxes_one_row: FourBoxesOneRow,
       advancedexplanation: AdvancedExplanation,
+      titlecenterimagebottom: TitleCenterImageBottom,
     };
 
     return (

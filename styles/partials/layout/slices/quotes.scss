@@ -1,6 +1,6 @@
 .customer-quotes-container {
-  margin-top: $space-between;
-  margin-bottom: $space-between;
+  margin-top: $gutter;
+  margin-bottom: $gutter * 3;
 
   .customer-quotes-wrapper {
     max-width: $global-width;
@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: 15% 70%;
     padding: $gutter * 3;
-    padding-top: 100px;
+
     @include tablet {
       background-position: 10% 10%;
       padding: $gutter;
