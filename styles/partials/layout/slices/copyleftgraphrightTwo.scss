@@ -8,11 +8,11 @@
     @include tablet {
       flex-direction: column;
     }
-    
+
     .content-container {
       display: flex;
       flex-direction: row;
-      
+
       @include tablet {
         flex-direction: column;
       }
@@ -21,14 +21,16 @@
         min-width: 50%;
         margin: auto;
         padding: $gutter;
+        padding-right: 0;
 
-        img {}
-        
+        img {
+        }
+
         @include tablet {
           display: none;
         }
       }
-      
+
       .copy-wrapper {
         padding-top: $gutter;
         min-width: 50%;
@@ -42,11 +44,11 @@
           @include tablet {
             flex-direction: column;
           }
-          
+
           p {
             margin: 0;
           }
-          
+
           h1 {
             text-align: left;
 
