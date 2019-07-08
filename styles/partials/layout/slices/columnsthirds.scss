@@ -3,7 +3,7 @@
   margin: $gutter * 2 auto;
 
   .title-container {
-    margin: $gutter * 2 auto $gutter * 1.5 auto;
+    margin: $gutter * 3 auto;
     text-align: center;
 
     .title {
@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     flex-wrap: wrap;
 
     @include tablet {
@@ -105,7 +104,6 @@
       justify-content: space-between;
       text-align: top;
       padding: $gutter * 1.5;
-      padding-top: $gutter;
 
       a {
         justify-content: flex-end;
