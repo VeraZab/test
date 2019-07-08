@@ -50,9 +50,14 @@
     }
     .graphic-r-container {
       margin: auto;
+      min-width: 43%;
 
       img {
         margin: auto;
+        padding: $gutter;
+        @include tablet {
+          width: 80%;
+        }
       }
     }
   }
