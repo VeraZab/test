@@ -1,6 +1,5 @@
 const GraphicLeftCopyRightCenter = props => {
   const primary = props.data.primary;
-  console.log(primary);
 
   return (
     <div className="graphic-left-copy-right-center-container">
@@ -10,7 +9,7 @@ const GraphicLeftCopyRightCenter = props => {
         </div>
         <div className="graphic-left-copy-right-center-copy">
           <div className="copy-container">
-            <h3 className="copy">{primary.copy}</h3>
+            <h2 className="copy">{primary.copy}</h2>
           </div>
         </div>
       </div>

@@ -17,13 +17,21 @@
     }
 
     img {
-      max-width: 800px;
+      max-width: 70%;
       margin: auto;
+
+      @include tablet {
+        max-width: 90%;
+      }
     }
 
     .copy {
       max-width: 70%;
       margin: auto;
+
+      @include tablet {
+        max-width: 90%;
+      }
     }
   }
 }
