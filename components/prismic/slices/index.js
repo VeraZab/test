@@ -34,7 +34,6 @@ import TitleCenterImageBottom from './titleCenterImageBottom';
 import GraphicLeftCopyRightCenter from './GraphicLeftCopyRightCenter';
 import GraphicRightCopyLeftCenter from './GraphicRightCopyLeftCenter';
 
-
 const BlankSlice = () => {
   return null;
 };
@@ -76,13 +75,9 @@ export default class Slices extends React.Component {
       plaintext: PlainText,
       four_boxes_one_row: FourBoxesOneRow,
       advancedexplanation: AdvancedExplanation,
-<<<<<<< HEAD
-      titlecenterimagebottom: TitleCenterImageBottom,
-=======
       graphicleftcopyrightcenter: GraphicLeftCopyRightCenter,
       graphicrightcopyleftcenter: GraphicRightCopyLeftCenter,
-      titlecenterimagebottom: BlankSlice,
->>>>>>> adding slices for center aligned text with graphics
+      titlecenterimagebottom: TitleCenterImageBottom,
     };
 
     return (
