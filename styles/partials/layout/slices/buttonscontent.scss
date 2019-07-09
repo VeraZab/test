@@ -1,0 +1,78 @@
+.buttonscontent-container {
+  padding: $gutter 0;
+
+  .buttonscontent-content {
+    max-width: $global-width;
+    margin: auto;
+    padding: 0 $gutter;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+
+    .left {
+      img {
+        display: inline-block;
+        width: 59px;
+      }
+
+      .label {
+        vertical-align: top;
+        padding: $gutter * 0.65;
+        display: inline-block;
+      }
+
+      .label-container-active {
+        border: 1px solid $color-aqua-shade;
+        box-shadow: 1px 1px 10px #dde7f2;
+        border-radius: 2px;
+        margin-bottom: $gutter;
+        width: 300px;
+        height: 60px;
+        transition: border-color 0.1s ease-in-out;
+        cursor: pointer;
+      }
+
+      .label-container-inactive {
+        @extend .label-container-active;
+        border-color: $color-rhino-light-1;
+      }
+    }
+
+    .right {
+      padding: $gutter;
+      padding-top: 0;
+      padding-left: $gutter * 1.5;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 1000px;
+        padding: $gutter;
+        padding-top: 10px;
+      }
+
+      .content-container-active {
+        display: block;
+
+        .right-text {
+          .title {
+            padding-bottom: 0;
+          }
+          @include tablet {
+            text-align: center;
+            margin-top: $gutter;
+          }
+        }
+      }
+
+      .content-container-inactive {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

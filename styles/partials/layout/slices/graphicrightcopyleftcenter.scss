@@ -1,18 +1,19 @@
 $m: 900px;
 
-.graphic-left-copy-right-center-container {
+.graphic-right-copy-left-center-container {
   max-width: $global-width;
   margin: $space-between/2 auto;
 
-  .graphic-left-copy-right-center {
+  .graphic-right-copy-left-center {
     display: flex;
 
     @media (max-width: $m) {
       flex-direction: column;
     }
 
-    .graphic-left-copy-right-center-graphic {
+    .graphic-right-copy-left-center-graphic {
       width: 150%;
+      padding: $gutter;
 
       @media (max-width: $m) {
         width: 100%;
@@ -20,15 +21,25 @@ $m: 900px;
       }
     }
 
-    .graphic-left-copy-right-center-copy {
-      text-align: right;
+    .graphic-right-copy-left-center-copy {
+      text-align: left;
       margin-top: 15%;
       padding: $gutter;
 
       @media (max-width: $m) {
-        margin: auto;
+        display: none;
+      }
+    }
+
+    .graphic-right-copy-left-center-copy-mobile {
+      display: none;
+
+      @media (max-width: $m) {
+        display: block;
         text-align: center;
         margin-top: $gutter * 2;
+        width: 100%;
+        margin: auto;
       }
     }
   }

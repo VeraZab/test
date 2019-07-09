@@ -6,11 +6,16 @@ const GraphicRightCopyLeftCenter = props => {
       <div className="graphic-right-copy-left-center">
         <div className="graphic-right-copy-left-center-copy">
           <div className="copy-container">
-            <h3 className="copy">{primary.copy}</h3>
+            <h2 className="copy">{primary.copy}</h2>
           </div>
         </div>
         <div className="graphic-right-copy-left-center-graphic">
           <img src={primary.graphic.url} />
+        </div>
+        <div className="graphic-right-copy-left-center-copy-mobile">
+          <div className="copy-container">
+            <h2 className="copy">{primary.copy}</h2>
+          </div>
         </div>
       </div>
     </div>
