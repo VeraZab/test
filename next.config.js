@@ -108,6 +108,24 @@ module.exports = {
       },
     },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
+    '/products/dash/design-kit': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-ddk',
+      },
+    },
+    '/products/dash/app-manager': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-app-manager',
+      },
+    },
+    '/products/dash/snapshot-engine': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-snapshot-engine',
+      },
+    },
     '/chart-studio/on-premise': {
       page: '/prismic-generator',
       query: {

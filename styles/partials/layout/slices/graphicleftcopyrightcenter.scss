@@ -1,0 +1,39 @@
+.graphic-left-copy-right-center-container,
+.graphic-right-copy-left-center-container {
+  max-width: $global-width;
+  margin: auto;
+  margin-top: $space-between/2;
+  .graphic-left-copy-right-center,
+  .graphic-right-copy-left-center {
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+    .graphic-left-copy-right-center-graphic,
+    .graphic-right-copy-left-center-graphic {
+      width: 50%;
+      @include tablet {
+        width: 90%;
+        margin: auto;
+      }
+    }
+    .graphic-right-copy-left-center-copy,
+    .graphic-left-copy-right-center-copy {
+      width: 50%;
+      @include tablet {
+        width: 90%;
+        margin: auto;
+      }
+      .copy-container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+        .copy {
+          align-self: center;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
