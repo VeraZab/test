@@ -30,14 +30,11 @@ import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
 import AdvancedExplanation from './advancedExplanation';
-<<<<<<< HEAD
 import RelatedPosts from './RelatedPosts';
-=======
 import TitleCenterImageBottom from './titleCenterImageBottom';
 import GraphicLeftCopyRightCenter from './GraphicLeftCopyRightCenter';
 import GraphicRightCopyLeftCenter from './GraphicRightCopyLeftCenter';
 import ButtonsContent from './buttonscontent';
->>>>>>> master
 
 const BlankSlice = () => {
   return null;
