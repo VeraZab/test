@@ -1,5 +1,6 @@
 .buttonscontent-container {
-  padding: $gutter 0;
+  padding: $gutter * 3 0;
+  background-color: #f9fafe;
 
   .buttonscontent-content {
     max-width: $global-width;
@@ -12,7 +13,9 @@
     .left {
       img {
         display: inline-block;
-        width: 59px;
+        width: 40px;
+        margin-top: 8px;
+        margin-left: 5px;
       }
 
       .label {
@@ -22,6 +25,7 @@
       }
 
       .label-container-active {
+        background-color: white;
         border: 1px solid $color-aqua-shade;
         box-shadow: 1px 1px 10px #dde7f2;
         border-radius: 2px;
@@ -41,14 +45,14 @@
     .right {
       padding: $gutter;
       padding-top: 0;
-      padding-left: $gutter * 1.5;
+      padding-left: $gutter * 2;
       display: flex;
       align-items: center;
 
       img {
-        width: 1000px;
+        width: 500px;
         padding: $gutter;
-        padding-top: 10px;
+        margin: auto;
       }
 
       .content-container-active {

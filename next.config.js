@@ -88,7 +88,14 @@ module.exports = {
         slug: 'company-fr',
       },
     },
+    // old link, but keeping this here, in case some links still have this url
     '/products/dash': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-product',
+      },
+    },
+    '/dash': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-product',
@@ -108,19 +115,19 @@ module.exports = {
       },
     },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
-    '/products/dash/design-kit': {
+    '/dash/design-kit': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-products-ddk',
       },
     },
-    '/products/dash/app-manager': {
+    '/dash/app-manager': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-products-app-manager',
       },
     },
-    '/products/dash/snapshot-engine': {
+    '/dash/snapshot-engine': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-products-snapshot-engine',

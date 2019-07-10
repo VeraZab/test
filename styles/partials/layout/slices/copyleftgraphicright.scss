@@ -1,5 +1,5 @@
 .copy-left-graphic-right-container {
-  background: linear-gradient(90deg, #000075 65%, #fff 25%);
+  background: linear-gradient(90deg, #000075 75%, #fff 25%);
 
   .copy-left-graphic-right {
     display: flex;
@@ -17,6 +17,10 @@
       color: white;
       display: flex;
       padding: $gutter 0;
+
+      h1 {
+        padding-bottom: 0;
+      }
 
       .copy-l {
         margin: auto;

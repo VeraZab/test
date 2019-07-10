@@ -47,6 +47,7 @@ $hero-content-space: 60px;
     justify-content: center;
     align-items: center;
     max-height: 850px;
+    min-height: 560px;
     padding-top: $gutter * 3.5;
     @include tablet {
       flex-direction: column;
