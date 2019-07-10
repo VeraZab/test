@@ -1,10 +1,8 @@
 .copy-left-graphic-right-two-container {
   margin: $gutter 0;
-
   .copy-left-graphic-right-two {
     max-width: $global-width;
     margin: auto;
-
     @include tablet {
       flex-direction: column;
     }
@@ -16,7 +14,6 @@
       @include tablet {
         flex-direction: column;
       }
-
       .graphic-container {
         min-width: 50%;
         margin: auto;
@@ -30,23 +27,22 @@
           display: none;
         }
       }
-
       .copy-wrapper {
         padding-top: $gutter;
         min-width: 50%;
-
         .copy-container {
           display: flex;
           flex-direction: column;
           padding: $gutter;
           margin-top: 0;
-
           @include tablet {
             flex-direction: column;
           }
-
           p {
             margin: 0;
+            @include tablet {
+              text-align: center;
+            }
           }
 
           h1 {
