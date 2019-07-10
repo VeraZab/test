@@ -16,6 +16,7 @@
     .copy-l-container {
       color: white;
       display: flex;
+      padding: $gutter 0;
 
       .copy-l {
         margin: auto;
@@ -24,6 +25,8 @@
         @include tablet {
           width: 100%;
           margin: $gutter;
+          margin-bottom: 0;
+          padding-bottom: 0;
         }
 
         @include phone {
@@ -50,9 +53,14 @@
     }
     .graphic-r-container {
       margin: auto;
+      min-width: 43%;
 
       img {
         margin: auto;
+        padding: $gutter;
+        @include tablet {
+          width: 80%;
+        }
       }
     }
   }

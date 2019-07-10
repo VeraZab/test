@@ -20,6 +20,7 @@
       .graphic-container {
         margin: auto;
         padding: $gutter;
+        padding-left: 0;
 
         @include tablet {
           display: none;

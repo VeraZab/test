@@ -1,0 +1,46 @@
+$m: 900px;
+
+.graphic-right-copy-left-center-container {
+  max-width: $global-width;
+  margin: $space-between/2 auto;
+
+  .graphic-right-copy-left-center {
+    display: flex;
+
+    @media (max-width: $m) {
+      flex-direction: column;
+    }
+
+    .graphic-right-copy-left-center-graphic {
+      width: 150%;
+      padding: $gutter;
+
+      @media (max-width: $m) {
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .graphic-right-copy-left-center-copy {
+      text-align: left;
+      margin-top: 15%;
+      padding: $gutter;
+
+      @media (max-width: $m) {
+        display: none;
+      }
+    }
+
+    .graphic-right-copy-left-center-copy-mobile {
+      display: none;
+
+      @media (max-width: $m) {
+        display: block;
+        text-align: center;
+        margin-top: $gutter * 2;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+}

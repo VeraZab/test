@@ -1,0 +1,35 @@
+$m: 900px;
+
+.graphic-left-copy-right-center-container {
+  max-width: $global-width;
+  margin: $space-between/2 auto;
+
+  .graphic-left-copy-right-center {
+    display: flex;
+
+    @media (max-width: $m) {
+      flex-direction: column;
+    }
+
+    .graphic-left-copy-right-center-graphic {
+      width: 150%;
+
+      @media (max-width: $m) {
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .graphic-left-copy-right-center-copy {
+      text-align: right;
+      margin-top: 15%;
+      padding: $gutter;
+
+      @media (max-width: $m) {
+        margin: auto;
+        text-align: center;
+        margin-top: $gutter * 2;
+      }
+    }
+  }
+}

@@ -6,9 +6,11 @@
     @include tablet {
       flex-direction: column;
     }
+
     .content-container {
       display: flex;
       flex-direction: row;
+
       @include tablet {
         flex-direction: column;
       }
@@ -16,6 +18,11 @@
         min-width: 50%;
         margin: auto;
         padding: $gutter;
+        padding-right: 0;
+
+        img {
+        }
+
         @include tablet {
           display: none;
         }
