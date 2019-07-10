@@ -30,7 +30,14 @@ import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
 import AdvancedExplanation from './advancedExplanation';
+<<<<<<< HEAD
 import RelatedPosts from './RelatedPosts';
+=======
+import TitleCenterImageBottom from './titleCenterImageBottom';
+import GraphicLeftCopyRightCenter from './GraphicLeftCopyRightCenter';
+import GraphicRightCopyLeftCenter from './GraphicRightCopyLeftCenter';
+import ButtonsContent from './buttonscontent';
+>>>>>>> master
 
 const BlankSlice = () => {
   return null;
@@ -74,6 +81,10 @@ export default class Slices extends React.Component {
       four_boxes_one_row: FourBoxesOneRow,
       advancedexplanation: AdvancedExplanation,
       relatedposts: RelatedPosts,
+      graphicleftcopyrightcenter: GraphicLeftCopyRightCenter,
+      graphicrightcopyleftcenter: GraphicRightCopyLeftCenter,
+      titlecenterimagebottom: TitleCenterImageBottom,
+      buttonscontent: ButtonsContent,
     };
 
     return (

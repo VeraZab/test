@@ -1,3 +1,5 @@
+import {renderPrismic} from 'lib/renderPrismicRichText';
+
 const CopyLeftGraphicRight = props => {
   const primary = props.data.primary;
   return (
@@ -6,7 +8,8 @@ const CopyLeftGraphicRight = props => {
         <div className="copy-l-container">
           <div className="copy-l">
             <h1 className="title">{primary.title1}</h1>
-            <div className="copy">{primary.copy}</div>
+            {primary.copy && <div className="copy">{primary.copy}</div>}
+            {primary.copy_rich && <div className="copy">{renderPrismic(primary.copy_rich)}</div>}
           </div>
         </div>
         <div className="graphic-r-container">

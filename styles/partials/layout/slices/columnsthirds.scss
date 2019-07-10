@@ -1,16 +1,17 @@
 .columns-thirds {
   max-width: $global-width;
-  margin: auto;
+  margin: $gutter * 2 auto;
+
   .title-container {
-    margin: auto;
+    margin: $gutter * 3 auto;
     text-align: center;
+
     .title {
-      padding: $gutter * 4 0 $gutter/4 0;
     }
+
     .subtitle {
       margin: auto;
       width: 70%;
-      padding-bottom: $gutter * 2;
       color: #2a3f5e;
     }
   }
@@ -18,9 +19,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: auto;
-
     flex-wrap: wrap;
+
     @include tablet {
       flex-direction: column;
     }
@@ -29,7 +29,6 @@
       background-size: cover;
       background-repeat: no-repeat;
       width: 30%;
-      height: 500px;
       display: flex;
       flex-direction: column;
 
@@ -37,12 +36,16 @@
         width: 90%;
         margin: auto;
       }
+
       .intro-copy-container {
         margin: auto;
+        text-align: left;
+
         .pretitle {
           font-size: 16px;
           line-height: 26px;
           font-weight: 300;
+
           @include tablet {
             padding-top: $gutter * 2;
           }
@@ -51,6 +54,7 @@
           padding: $gutter;
           color: white;
           margin: auto;
+
           @include tablet {
             width: 100%;
             text-align: center;
@@ -62,6 +66,7 @@
           p {
             margin: 0;
           }
+
           @include tablet {
             text-align: center;
             margin-bottom: $gutter;
@@ -70,32 +75,35 @@
         .title {
           color: $color-rhino-core;
           text-align: left;
+
           p {
             margin: 0;
             padding: 0;
           }
+
           @include tablet {
             width: 100%;
             text-align: center;
           }
         }
         .cta-buttons {
+          margin: auto;
+
           a {
             margin-right: 0;
           }
-          margin: auto;
         }
       }
     }
+
     .repeatable-column-wrapper {
-      border: 1px solid #f2f5fa;
-      box-sizing: border-box;
-      padding: $gutter;
       width: 30%;
-      height: 500px;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: top;
+      padding: $gutter * 1.5;
 
       a {
         justify-content: flex-end;
@@ -105,40 +113,55 @@
         width: 90%;
         margin: auto;
       }
+
       .repeatable-column {
-        margin-top: $gutter * 3;
         @include tablet {
           margin-top: 0;
         }
+
+        img {
+          margin-top: 0;
+          margin-bottom: $gutter;
+          width: 90px;
+
+          @include tablet {
+            margin: auto;
+          }
+        }
+
         .pretitle {
           text-align: left;
           align-self: flex-start;
-          margin-top: -$gutter * 3;
+
           @include tablet {
             text-align: center;
             margin-top: -$gutter * 3;
             margin-top: 0;
           }
         }
-        img {
-          margin: auto;
-          margin-top: 0;
-          margin-bottom: 20px;
-          height: 90px;
-        }
+
         .title {
           color: #119dff;
           font-size: 1.4em;
+
           @include tablet {
             text-align: center;
           }
         }
+
         .copy {
           font-size: 14px;
           @include tablet {
             text-align: center;
           }
         }
+      }
+    }
+    .repeatable-column-wrapper:nth-child(4n) {
+      padding-left: 0;
+
+      @include tablet {
+        padding-left: $gutter;
       }
     }
   }

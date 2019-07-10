@@ -5,28 +5,30 @@ const ColumnsThirds = props => {
   const items = props.data.items;
   return (
     <div className="columns-thirds">
-      {Boolean(primary.section_title !== null) && (
+      {primary.section_title && (
         <div className="title-container">
           <h1 className="title">{primary.section_title}</h1>
           <div className="subtitle">{renderPrismic(primary.section_subtitle)}</div>
         </div>
       )}
       <div className="columns-container">
-        {Boolean(items) && (
+        {items && (
           <>
-            {Boolean(primary.pretitle !== null) && (
+            {primary.section_subtitle2 && (
               <div
                 className="intro-column"
                 style={primary.bg_graphic ? {backgroundImage: `url(${primary.bg_graphic.url}`} : {}}
               >
                 <div className="intro-copy-container">
-                  {Boolean(primary.section_pretitle) && (
+                  {primary.section_pretitle && (
                     <h2 className="pretitle">{primary.section_pretitle}</h2>
                   )}
-                  <h1 className={primary.bg_graphic.url ? 'subtitle-white' : 'subtitle-dark'}>
-                    {renderPrismic(primary.section_subtitle2)}
-                  </h1>
-                  {Boolean(primary.cta_url) && (
+                  {primary.section_subtitle2 && (
+                    <h1 className={primary.bg_graphic.url ? 'subtitle-white' : 'subtitle-dark'}>
+                      {renderPrismic(primary.section_subtitle2)}
+                    </h1>
+                  )}
+                  {primary.cta_url && (
                     <div className="cta-buttons">
                       <a
                         id="columns-thirds-button"
@@ -40,16 +42,17 @@ const ColumnsThirds = props => {
                 </div>
               </div>
             )}
+
             {items.map((item, i) => {
               return (
                 <div className="repeatable-column-wrapper" key={i}>
                   <div className="repeatable-column">
-                    {Boolean(item.pretitle) && <div className="pretitle">{item.pretitle}</div>}
-                    <img src={item.graphic.url} />
-                    <h2 className="title">{item.title1}</h2>
-                    <div className="copy">{item.messaging}</div>
+                    {item.pretitle && <div className="pretitle">{item.pretitle}</div>}
+                    {item.graphic.url && <img src={item.graphic.url} />}
+                    {item.title1 && <h2 className="title">{item.title1}</h2>}
+                    {item.messaging && <div className="copy">{item.messaging}</div>}
                   </div>
-                  {Boolean(item.cta_label) && (
+                  {item.cta_label && (
                     <div className="cta-buttons">
                       <a
                         className="button button-primary"

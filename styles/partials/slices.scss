@@ -22,6 +22,10 @@
 @import './layout/slices/plaintext';
 @import './layout/slices/fourboxesonerow';
 @import './layout/slices/advancedexplanation';
+@import './layout/slices/titlecenterimagebottom';
+@import './layout/slices/graphicleftcopyrightcenter';
+@import './layout/slices/graphicrightcopyleftcenter';
+@import './layout/slices/buttonscontent';
 
 .slices {
   &-wrapper {

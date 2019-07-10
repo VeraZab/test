@@ -1,32 +1,43 @@
 .copy-left-graphic-right-container {
   background: linear-gradient(90deg, #000075 65%, #fff 25%);
+
   .copy-left-graphic-right {
     display: flex;
     flex-direction: row;
     max-width: $global-width;
     margin: auto;
+
     @include tablet {
       flex-direction: column;
       background: #000075;
       margin: auto;
     }
+
     .copy-l-container {
       color: white;
       display: flex;
-      margin: $gutter;
+      padding: $gutter 0;
+
       .copy-l {
         margin: auto;
+        padding: $gutter;
+
         @include tablet {
           width: 100%;
           margin: $gutter;
+          margin-bottom: 0;
+          padding-bottom: 0;
         }
+
         @include phone {
           margin-left: 0;
         }
+
         .title {
           color: white;
           font-size: 2em;
           margin-right: 100px;
+
           @include tablet {
             padding-top: $gutter * 2;
             margin: auto;
@@ -42,8 +53,14 @@
     }
     .graphic-r-container {
       margin: auto;
+      min-width: 43%;
+
       img {
         margin: auto;
+        padding: $gutter;
+        @include tablet {
+          width: 80%;
+        }
       }
     }
   }

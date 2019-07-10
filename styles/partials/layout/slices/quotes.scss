@@ -1,6 +1,6 @@
 .customer-quotes-container {
-  margin-top: $space-between;
-  margin-bottom: $space-between;
+  margin-top: $gutter;
+  margin-bottom: $gutter * 3;
 
   .customer-quotes-wrapper {
     max-width: $global-width;
@@ -9,7 +9,8 @@
     background-repeat: no-repeat;
     background-position: 15% 70%;
     padding: $gutter * 3;
-    padding-top: 100px;
+    padding-bottom: $gutter * 2;
+
     @include tablet {
       background-position: 10% 10%;
       padding: $gutter;
@@ -32,7 +33,6 @@
         max-width: 100%;
       }
       @include tablet {
-        width: 80%;
         margin: auto;
       }
       .customer-quotes-arrow-container-mobile {
@@ -79,7 +79,7 @@
           @include phone {
             flex-direction: column;
             text-align: center;
-            height: 300px;
+            height: 380px;
           }
           .customer-logo-container {
             width: 10%;
@@ -97,6 +97,7 @@
             @include phone {
               margin: auto;
               width: 50%;
+              max-width: 100px;
             }
           }
           .customer-testimonial {

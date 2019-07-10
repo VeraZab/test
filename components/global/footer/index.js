@@ -149,10 +149,6 @@ const Footer = props => {
         labelColor: '#119DFF',
         links: [
           {
-            label: 'Chart Studio Cloud',
-            url: '/products/cloud/',
-          },
-          {
             label: 'Chart Studio Enterprise',
             url: '/products/on-premise',
           },

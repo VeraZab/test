@@ -28,6 +28,12 @@ module.exports = {
         slug: 'privacy-policy',
       },
     },
+    '/terms-of-service': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'terms-of-service',
+      },
+    },
     '/dashboards-and-reports': {
       page: '/prismic-generator',
       query: {
@@ -108,6 +114,24 @@ module.exports = {
       },
     },
     '/products/consulting-and-oem': {page: '/products/consulting-and-oem'},
+    '/products/dash/design-kit': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-ddk',
+      },
+    },
+    '/products/dash/app-manager': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-app-manager',
+      },
+    },
+    '/products/dash/snapshot-engine': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'dash-products-snapshot-engine',
+      },
+    },
     '/chart-studio/on-premise': {
       page: '/prismic-generator',
       query: {

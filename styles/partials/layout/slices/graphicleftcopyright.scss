@@ -1,5 +1,7 @@
 .graphic-left-copy-right-container {
-  padding-bottom: $space-between/2;
+  padding: $gutter 0;
+  margin: $gutter 0;
+
   .graphic-left-copy-right {
     display: flex;
     flex-direction: row;
@@ -10,45 +12,61 @@
       flex-direction: column;
       height: auto;
     }
+
     .content-container {
       display: flex;
       flex-direction: row;
-      img {
+
+      .graphic-container {
+        margin: auto;
+        padding: $gutter;
+        padding-left: 0;
+
         @include tablet {
-          width: 90%;
-          margin: auto;
+          display: none;
         }
       }
-      @include tablet {
-        flex-direction: column;
-      }
+
       .copy-wrapper {
         display: flex;
         justify-content: center;
-        padding-left: $gutter * 2;
         min-width: 50%;
+
         @include tablet {
           padding-left: 0;
         }
+
         a {
           width: 250px;
-          margin-top: -20px;
           @include tablet {
             margin: auto;
           }
         }
+
         .copy-container {
           display: flex;
           flex-direction: column;
-          margin: $gutter/2;
+          padding: $gutter;
           margin-top: 0;
-          justify-content: center;
-          @include tablet {
-            text-align: center;
-            ul {
-              padding-bottom: $gutter;
-              padding-left: $gutter * 5;
+          text-align: left;
+
+          p {
+            margin: 0;
+          }
+
+          h1 {
+            text-align: left;
+            @include tablet {
+              text-align: center;
             }
+          }
+
+          .subtitle {
+            margin: $gutter 0;
+            text-align: left;
+          }
+
+          @include tablet {
             margin-top: $gutter;
           }
         }

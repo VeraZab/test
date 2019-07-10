@@ -38,11 +38,6 @@ const MENU = {
   PRICING: {
     LEFT: [
       {
-        title: 'Chart Studio Cloud',
-        text: "Host and share charts in Plotly's cloud.",
-        link: '/products/cloud',
-      },
-      {
         title: 'Chart Studio Enterprise',
         text: 'Data visualization behind your firewall.',
         link: '/products/on-premise',
