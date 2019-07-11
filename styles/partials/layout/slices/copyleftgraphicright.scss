@@ -28,8 +28,8 @@
 
         @include tablet {
           width: 100%;
-          margin: $gutter;
-          margin-bottom: 0;
+          margin: 0;
+          margin-bottom: $gutter;
           padding-bottom: 0;
         }
 
@@ -63,7 +63,7 @@
         margin: auto;
         padding: $gutter;
         @include tablet {
-          width: 80%;
+          display: none;
         }
       }
     }

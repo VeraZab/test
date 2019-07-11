@@ -65,7 +65,7 @@ $hero-content-space: 60px;
       .dash-stars-wrapper {
         padding-top: $gutter/2;
         width: 140px;
-        @include tablet {
+        @include media('<1100px') {
           margin: auto;
         }
         iframe {
@@ -91,6 +91,7 @@ $hero-content-space: 60px;
       }
       @include phone {
         padding: calc(#{$hero-content-space} * 0.05);
+        padding-top: $gutter * 3.5;
       }
     }
     .hero-right {

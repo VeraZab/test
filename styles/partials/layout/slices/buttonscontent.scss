@@ -1,6 +1,7 @@
 .buttonscontent-container {
   padding: $gutter * 3 0;
   background-color: #f9fafe;
+  min-height: 680px;
 
   .buttonscontent-content {
     max-width: $global-width;
@@ -26,6 +27,7 @@
 
       .label-container-active {
         background-color: white;
+        user-select: none;
         border: 1px solid $color-aqua-shade;
         box-shadow: 1px 1px 10px #dde7f2;
         border-radius: 2px;
@@ -49,6 +51,11 @@
       display: flex;
       align-items: center;
 
+      p + p {
+        padding-top: 0;
+        margin-top: 0;
+      }
+
       img {
         width: 500px;
         padding: $gutter;
@@ -62,6 +69,7 @@
           .title {
             padding-bottom: 0;
           }
+
           @include tablet {
             text-align: center;
             margin-top: $gutter;
@@ -71,6 +79,10 @@
 
       .content-container-inactive {
         display: none;
+      }
+
+      @include tablet {
+        padding-left: $gutter;
       }
     }
 
