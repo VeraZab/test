@@ -18,11 +18,10 @@ class Resources extends React.Component {
 
   render() {
     const maxItems = 8;
-    const options = [];
-    options.push({value: 'All', label: 'All'});
+    const options = [{value: 'All', label: 'All'}];
     const items = this.props.data.items;
     const categories = new Set();
-    items.map((item, index) => {
+    items.map(item => {
       categories.add(item.category);
     });
 
@@ -85,7 +84,7 @@ class Resources extends React.Component {
               );
             })}
           {this.state.moreLoaded === 0 &&
-          items.filter((item, index) => {
+          items.filter(item => {
             return (
               item.category === this.state.selectedOption || this.state.selectedOption === 'All'
             );

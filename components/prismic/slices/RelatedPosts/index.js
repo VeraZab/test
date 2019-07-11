@@ -1,10 +1,6 @@
 import React from 'react';
 
 class RelatedPosts extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const items = this.props.data.items;
 
