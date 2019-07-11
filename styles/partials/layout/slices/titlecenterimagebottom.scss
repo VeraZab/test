@@ -1,10 +1,10 @@
 .titlecenterimagebottom-container {
-  padding: $gutter 0;
+  padding-top: $gutter;
 
   .titlecenterimagebottom-content {
     max-width: $global-width;
     margin: auto;
-    padding: $gutter * 2 $gutter;
+    padding: $gutter * 2 $gutter 0 $gutter;
     text-align: center;
 
     h1 {
