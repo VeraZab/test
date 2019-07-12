@@ -79,6 +79,7 @@ $hero-content-space: 60px;
             margin: auto;
             margin-top: $gutter;
           }
+          margin-bottom: $gutter * 2;
         }
       }
       @include media('<1100px') {
