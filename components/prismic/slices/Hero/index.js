@@ -7,6 +7,11 @@ const Hero = props => {
       className="hero-container"
       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-bg' : ''}
     >
+      {props.content.promo_banner && (
+        <div className="promobanner">
+        {renderPrismic(props.content.promo_banner)}
+        </div>
+      )}
       {props.content.hero_title ? (
         <div
           className="hero"
@@ -61,21 +66,7 @@ const Hero = props => {
                 </a>
               ) : null}
             </div>
-            {props.content.hero_rich_message_2 && (
-              <div className="hero-subtitle">
-                {renderPrismic(props.content.hero_rich_message_2)}
-              </div>
-            )}
-            {props.content.cta_rich_message_2_url && props.content.cta_rich_message_2_label && (
-              <div className="cta-buttons">
-                <a
-                  className="button button-primary"
-                  href={props.content.cta_rich_message_2_url.url}
-                >
-                  {props.content.cta_rich_message_2_label}
-                </a>
-              </div>
-            )}
+
             <div className="dash-stars-wrapper">
               {props.content.keywords === 'dash-product' ? (
                 <iframe
