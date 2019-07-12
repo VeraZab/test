@@ -1,5 +1,7 @@
 .copy-left-graphic-right-container {
   background: linear-gradient(90deg, #000075 75%, #fff 25%);
+  margin: $gutter * 2 0;
+  margin-top: $gutter * 3;
 
   .copy-left-graphic-right {
     display: flex;
