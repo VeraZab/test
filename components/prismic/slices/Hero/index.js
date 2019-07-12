@@ -2,12 +2,13 @@ import Browser from 'components/browser';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
+  console.log(props.content.promo_banner)
   return (
     <div
       className="hero-container"
       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-bg' : ''}
     >
-      {props.content.promo_banner && (
+      {props.content.promo_banner && props.content.promo_banner.length > 0 && (
         <div className="promobanner">
         {renderPrismic(props.content.promo_banner)}
         </div>
