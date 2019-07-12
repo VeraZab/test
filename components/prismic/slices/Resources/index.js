@@ -19,12 +19,24 @@ class Resources extends React.Component {
   render() {
     const maxItems = 8;
     const options = [{value: 'All', label: 'All'}];
+    const grid = [
+      'full',
+      'two-thirds',
+      'third',
+      'third',
+      'third',
+      'third',
+      'third',
+      'two-thirds',
+      'third',
+      'two-thirds',
+    ];
     const items = this.props.data.items;
     const categories = new Set();
+
     items.map(item => {
       categories.add(item.category);
     });
-
     for (const item of categories) {
       options.push({value: item, label: item});
     }
@@ -50,7 +62,7 @@ class Resources extends React.Component {
             .map((item, index) => {
               return (
                 <div
-                  className={`resources-item-${item.background_size}`}
+                  className={`resources-item-${grid[index % 10]}`}
                   id={index < maxItems || this.state.moreLoaded === 1 ? 'loaded' : 'notLoaded'}
                   key={index}
                 >
