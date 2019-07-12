@@ -29,6 +29,8 @@ import ColumnarCallToAction from './ColumnarCallToAction';
 import FooterCTA from './FooterCTA';
 import PlainText from './PlainText';
 import FourBoxesOneRow from './fourBoxesOneRow';
+import VideoLeftCopyRight from './VideoLeftCopyRight';
+import VideoRightCopyLeft from './VideoRightCopyLeft';
 import AdvancedExplanation from './advancedExplanation';
 import RelatedPosts from './RelatedPosts';
 import TitleCenterImageBottom from './titleCenterImageBottom';
@@ -76,6 +78,8 @@ export default class Slices extends React.Component {
       footercta: FooterCTA,
       plaintext: PlainText,
       four_boxes_one_row: FourBoxesOneRow,
+      videoleftcopyright: VideoLeftCopyRight,
+      videorightcopyleft: VideoRightCopyLeft,
       advancedexplanation: AdvancedExplanation,
       relatedposts: RelatedPosts,
       graphicleftcopyrightcenter: GraphicLeftCopyRightCenter,

@@ -1,5 +1,5 @@
 .copy-left-graphic-right-container {
-  background: linear-gradient(90deg, #000075 65%, #fff 25%);
+  background: linear-gradient(90deg, #000075 75%, #fff 25%);
 
   .copy-left-graphic-right {
     display: flex;
@@ -18,14 +18,18 @@
       display: flex;
       padding: $gutter 0;
 
+      h1 {
+        padding-bottom: 0;
+      }
+
       .copy-l {
         margin: auto;
         padding: $gutter;
 
         @include tablet {
           width: 100%;
-          margin: $gutter;
-          margin-bottom: 0;
+          margin: 0;
+          margin-bottom: $gutter;
           padding-bottom: 0;
         }
 
@@ -53,13 +57,13 @@
     }
     .graphic-r-container {
       margin: auto;
-      min-width: 43%;
+      min-width: 30%;
 
       img {
         margin: auto;
         padding: $gutter;
         @include tablet {
-          width: 80%;
+          display: none;
         }
       }
     }
