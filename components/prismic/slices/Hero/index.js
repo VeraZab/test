@@ -2,7 +2,6 @@ import Browser from 'components/browser';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
-  console.log(props.content.promo_banner)
   return (
     <div
       className="hero-container"
