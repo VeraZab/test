@@ -51,14 +51,18 @@ $hero-content-space: 60px;
   background: #00004f;
 
   .promobanner {
+    @media (max-width: $shrink-hero-breakpoint) {
+      font-size: 12px;
+      padding-top: 63px;
+    }
     @include phone {
       font-size: 10px;
-      padding-top: 60px;
+      padding-top: 63px;
     }
-    height: 105px;
+    height: 110px;
     background: #119DFF;
     color: white;
-    padding-top: 55px;
+    padding-top: 58px;
     text-align: center;
     p {
       a, a:hover, a:visited {
