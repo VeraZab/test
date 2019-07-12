@@ -88,13 +88,6 @@ module.exports = {
         slug: 'company-fr',
       },
     },
-    // old link, but keeping this here, in case some links still have this url
-    '/products/dash': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'dash-product',
-      },
-    },
     '/dash': {
       page: '/prismic-generator',
       query: {
