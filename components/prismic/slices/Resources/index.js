@@ -5,16 +5,7 @@ class Resources extends React.Component {
   constructor(props) {
     super(props);
     this.state = {moreLoaded: 0, selectedOption: 'All'};
-    this.handleClick = this.handleClick.bind(this);
   }
-
-  handleClick() {
-    this.setState({moreLoaded: 1});
-  }
-
-  handleChange = selectedOption => {
-    this.setState({selectedOption: selectedOption.value});
-  };
 
   render() {
     const maxItems = 8;
@@ -45,7 +36,7 @@ class Resources extends React.Component {
       <div className="resources-wrapper">
         <Select
           value={this.state.selectedOption}
-          onChange={this.handleChange}
+          onChange={selectedOption => this.setState({selectedOption: selectedOption.value})}
           options={options}
           placeholder={
             this.state.selectedOption === 'All' ? 'Categories...' : this.state.selectedOption
@@ -102,7 +93,7 @@ class Resources extends React.Component {
             );
           }).length > maxItems ? (
             <div className="loadMore-button">
-              <a onClick={this.handleClick} className="button button-primary">
+              <a onClick={() => this.setState({moreLoaded: 1})} className="button button-primary">
                 <div className="button-label">LOAD MORE</div>
               </a>
             </div>
