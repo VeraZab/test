@@ -62,7 +62,9 @@ class Resources extends React.Component {
                     <div className="item-graphic">
                       <img
                         src={
-                          'https://plotly.cdn.prismic.io/plotly/b0a61864cbfa3f12a03c74bb95d8f5979159da1e_teal.png'
+                          index === 0
+                            ? item.story_image.url
+                            : 'https://plotly.cdn.prismic.io/plotly/b0a61864cbfa3f12a03c74bb95d8f5979159da1e_teal.png'
                         }
                       />
                     </div>

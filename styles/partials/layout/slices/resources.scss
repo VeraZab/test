@@ -27,6 +27,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
     @include tablet {
       flex-direction: column;
     }
@@ -58,6 +59,9 @@
       flex-direction: column;
       justify-content: flex-start;
       padding-bottom: $gutter;
+      img {
+        height: 200px;
+      }
       @include tablet {
         width: 90%;
         margin: auto;
@@ -73,9 +77,6 @@
           background: $color-dodger;
           margin-left: $gutter;
           width: 130px;
-        }
-        img {
-          height: 200px;
         }
       }
       .shadow-wrapper {
@@ -107,7 +108,6 @@
       display: flex;
       flex-direction: row;
       margin-bottom: $gutter;
-      height: 400px;
       width: 98%;
       @include tablet {
         flex-direction: column;
@@ -129,14 +129,11 @@
           width: 130px;
         }
         img {
-          height: 400px;
-          width: 100%;
+          width: 1350px;
         }
       }
       .shadow-wrapper {
         box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
-        height: 400px;
-        width: 70%;
         @include tablet {
           height: 180px;
           width: 100%;
@@ -147,16 +144,32 @@
           justify-content: center;
           height: 95%;
           margin: $gutter/2;
+          .item-title {
+            width: 80%;
+            margin: auto;
+            @include tablet {
+              width: 100%;
+            }
+          }
           @include tablet {
             justify-content: space-between;
           }
           .meta-wrapper {
             display: flex;
-            justify-content: space-between;
+            width: 80%;
+            margin: auto;
             font-size: 12px;
             padding-top: $gutter;
+            .item-author {
+              padding-right: $gutter;
+              @include tablet {
+                padding: 0;
+              }
+            }
             @include tablet {
               padding-bottom: $gutter;
+              width: 100%;
+              justify-content: space-between;
             }
             .item-author:before {
               content: 'by: ';
