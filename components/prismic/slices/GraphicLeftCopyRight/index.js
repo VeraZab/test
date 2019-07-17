@@ -18,7 +18,7 @@ const GraphicLeftCopyRight = props => {
                 <h1>{renderPrismic(props.data.primary.cta_title_rich)}</h1>
               )}
               {props.data.primary.cta_messaging && (
-                <p className="subtitle">{renderPrismic(props.data.primary.cta_messaging)}</p>
+                <span className="subtitle">{renderPrismic(props.data.primary.cta_messaging)}</span>
               )}
               {props.data.primary.cta_url.link_type === 'Web' && (
                 <span className="cta-buttons">
