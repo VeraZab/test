@@ -19,7 +19,19 @@ const ColumnsThirds = props => {
                 className="intro-column"
                 style={primary.bg_graphic ? {backgroundImage: `url(${primary.bg_graphic.url}`} : {}}
               >
-                <div className="intro-copy-container">
+                <div
+                  className="intro-copy-container"
+                  style={{
+                    textAlign: primary.section_subtitle2_alignment
+                      ? `${primary.section_subtitle2_alignment}`
+                      : 'center',
+                    margin: primary.section_subtitle2_alignment
+                      ? primary.section_subtitle2_alignment === 'center'
+                        ? 'auto'
+                        : 'auto 0'
+                      : 'auto',
+                  }}
+                >
                   {primary.section_pretitle && (
                     <h2 className="pretitle">{primary.section_pretitle}</h2>
                   )}
