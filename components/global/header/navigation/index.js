@@ -35,17 +35,19 @@ const MENU = {
       ],
     },
   },
-  PRICING: {
+  INDUSTRIES: {
     LEFT: [
       {
-        title: 'Chart Studio Enterprise',
-        text: 'Data visualization behind your firewall.',
-        link: '/products/on-premise',
+        title: 'AI & Machine Learning',
+        link: '/industries/AI-and-machine-learning',
       },
       {
-        title: 'Dash',
-        text: 'Build, test and deploy Dash Apps at any scale.',
-        link: '/dash/pricing',
+        title: 'Energy & Transportation',
+        link: '/industries/energy-and-transportation',
+      },
+      {
+        title: 'Manufacturing',
+        link: '/industries/manufacturing',
       },
     ],
     RIGHT: [],
@@ -226,49 +228,26 @@ export default class Navigation extends React.Component {
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.togglePricingSubmenu.bind(this)}>
-              Pricing
+            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+              Industries
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
 
             <div
-              id="pricingDropdown"
+              id="signUpDropdown"
               className={
-                this.state.pricingSubmenuActive
+                this.state.signUpSubmenuActive
                   ? 'navigation-product-submenu submenu-active'
                   : 'navigation-product-submenu'
               }
             >
-              <div className="navigation-product-submenu-left">
-                {MENU.PRICING.LEFT.map((p, i) => (
-                  <div key={i} className="navigation-product-submenu-section">
-                    <a href={p.link}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">{p.title}</span>
-                        <span className="hide-on-desktop">{p.title}</span>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile">
-                        {p.text}
-                      </span>
-                    </a>
-                  </div>
-                ))}
-              </div>
-              <div className="navigation-product-submenu-right">
-                {MENU.PRICING.RIGHT.map((p, i) => (
-                  <div key={i} className="navigation-product-submenu-section">
-                    <a href={p.link}>
-                      <div className="navigation-product-submenu-section-title">
-                        <span className="hide-on-mobile">{p.title}</span>
-                        <span className="hide-on-desktop">{p.title}</span>
-                      </div>
-                      <span className="navigation-product-submenu-item hide-on-mobile button button-secondary">
-                        {p.text}
-                      </span>
-                    </a>
-                  </div>
-                ))}
-              </div>
+              {MENU.INDUSTRIES.LEFT.map((p, i) => (
+                <div key={i} className="navigation-product-submenu-section">
+                  <a href={p.link} className="navigation-product-submenu-section-title">
+                    {p.title}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
