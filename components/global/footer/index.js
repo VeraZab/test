@@ -127,20 +127,15 @@ const Footer = props => {
         links: [
           {
             label: 'Dash',
-            url: '/products/dash/',
+            url: '/dash/',
           },
           {
             label: 'Chart Studio',
             url: '/online-chart-maker',
           },
           {
-            label: 'plotly.js',
-            url: '/plotly-js-scientific-d3-charting-library/',
-          },
-
-          {
-            label: 'plotly.py',
-            url: '/d3-js-for-python-and-pandas-charts/',
+            label: 'Plotly OEM',
+            url: '/products/oem',
           },
         ],
       },
@@ -149,12 +144,8 @@ const Footer = props => {
         labelColor: '#119DFF',
         links: [
           {
-            label: 'Chart Studio Enterprise',
-            url: '/products/on-premise',
-          },
-          {
-            label: 'Dash Deployment Server',
-            url: '/dash/pricing',
+            label: 'Enterprise Pricing',
+            url: 'https://go.plot.ly/get-pricing',
           },
         ],
       },
