@@ -19,11 +19,11 @@ const GraphicLeftCopyRightFeature = props => {
               </p>
             )}
             {props.data.primary.cta_url && props.data.primary.cta_label && (
-              <div className="cta-buttons">
+              <span className="cta-buttons">
                 <a className="button button-primary" href={props.data.primary.cta_url}>
                   <div className="button-label">{props.data.primary.cta_label}</div>
                 </a>
-              </div>
+              </span>
             )}
           </div>
         </div>
