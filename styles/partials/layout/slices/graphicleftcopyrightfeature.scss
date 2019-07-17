@@ -2,7 +2,7 @@
   padding: $gutter;
   margin: $gutter 0;
 
-  .content-container {
+  .graphicleftcopyrightfeature-content-container {
     display: flex;
     flex-direction: row;
     max-width: calc(#{$global-width} - #{$gutter} * 2);
@@ -16,7 +16,7 @@
       height: auto;
     }
 
-    .graphic-container {
+    .graphicleftcopyrightfeature-graphic-container {
       width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -27,7 +27,7 @@
       }
     }
 
-    .copy-wrapper {
+    .graphicleftcopyrightfeature-copy-wrapper {
       display: flex;
       justify-content: center;
       max-width: 60%;
@@ -39,13 +39,12 @@
       }
 
       a {
-        width: 250px;
         @include tablet {
           margin: auto;
         }
       }
 
-      .copy-container {
+      .graphicleftcopyrightfeature-copy-container {
         display: flex;
         flex-direction: column;
         padding: $gutter;
@@ -63,7 +62,7 @@
           }
         }
 
-        .copy {
+        .graphicleftcopyrightfeature-copy {
           margin: $gutter 0;
           text-align: left;
           @include tablet {

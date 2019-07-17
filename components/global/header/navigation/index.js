@@ -12,7 +12,7 @@ const MENU = {
             No Javascript required.
           </>
         ),
-        link: '/products/dash',
+        link: '/dash',
       },
       {
         title: 'Chart Studio',
