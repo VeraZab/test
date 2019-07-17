@@ -176,6 +176,24 @@ module.exports = {
       },
     },
     '/export': {page: '/export'},
+    '/industries/energy-and-transportation': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'industries-energy-and-transportation',
+      },
+    },
+    '/industries/AI-and-machine-learning': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'industries-ai-and-machine-learning',
+      },
+    },
+    '/industries/manufacturing': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'industries-manufacturing',
+      },
+    },
   }),
   webpack: config => {
     config.plugins.push(

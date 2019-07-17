@@ -1,18 +1,13 @@
 .combo-cta-container {
   padding-bottom: 10px;
   border-bottom: 2px solid #f5f8fa;
-  height: 500px;
+
   @include desktop {
     background: linear-gradient(90deg, #000075 39%, #fff 25%);
   }
 
   @include tablet {
     background: none;
-    height: 1200px;
-  }
-
-  @include phone {
-    height: 1000px;
   }
 
   .combo-cta {

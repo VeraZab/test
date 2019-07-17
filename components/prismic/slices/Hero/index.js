@@ -2,16 +2,13 @@ import Browser from 'components/browser';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
-  console.log(props.content.promo_banner)
   return (
     <div
       className="hero-container"
       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-bg' : ''}
     >
       {props.content.promo_banner && props.content.promo_banner.length > 0 && (
-        <div className="promobanner">
-        {renderPrismic(props.content.promo_banner)}
-        </div>
+        <div className="promobanner">{renderPrismic(props.content.promo_banner)}</div>
       )}
       {props.content.hero_title ? (
         <div
@@ -54,21 +51,26 @@ const Hero = props => {
               </div>
             </div>
 
-            <div className="cta-buttons">
-              {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
-                <a className="button button-primary" href={props.content.hero_buttons[0].link.url}>
-                  <div className="button-label">{props.content.hero_buttons[0].label}</div>
-                </a>
-              ) : null}
-              {props.content.hero_buttons[1] ? (
-                <a
-                  className="button button-secondary"
-                  href={props.content.hero_buttons[1].link.url}
-                >
-                  <div className="button-label">{props.content.hero_buttons[1].label}</div>
-                </a>
-              ) : null}
-            </div>
+            {props.content.hero_buttons.some(b => b.link.url) ? (
+              <div className="cta-buttons">
+                {props.content.hero_buttons[0] && props.content.hero_buttons[0] ? (
+                  <a
+                    className="button button-primary"
+                    href={props.content.hero_buttons[0].link.url}
+                  >
+                    <div className="button-label">{props.content.hero_buttons[0].label}</div>
+                  </a>
+                ) : null}
+                {props.content.hero_buttons[1] ? (
+                  <a
+                    className="button button-secondary"
+                    href={props.content.hero_buttons[1].link.url}
+                  >
+                    <div className="button-label">{props.content.hero_buttons[1].label}</div>
+                  </a>
+                ) : null}
+              </div>
+            ) : null}
 
             <div className="dash-stars-wrapper">
               {props.content.keywords === 'dash-product' ? (

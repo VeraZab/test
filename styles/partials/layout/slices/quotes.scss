@@ -1,15 +1,13 @@
 .customer-quotes-container {
-  margin-top: $gutter;
-  margin-bottom: $gutter * 3;
+  margin-top: $gutter * 2;
 
   .customer-quotes-wrapper {
     max-width: $global-width;
     margin: auto;
     background-image: url(https://prismic-io.s3.amazonaws.com/plotly%2F797ce34d-268c-4daf-9583-f2656b6cd5cd_quote.png);
     background-repeat: no-repeat;
-    background-position: 15% 70%;
-    padding: $gutter * 3;
-    padding-bottom: $gutter * 2;
+    background-position: 12% 33%;
+    padding: $gutter * 5;
 
     @include tablet {
       background-position: 10% 10%;

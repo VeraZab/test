@@ -37,6 +37,8 @@ import TitleCenterImageBottom from './titleCenterImageBottom';
 import GraphicLeftCopyRightCenter from './GraphicLeftCopyRightCenter';
 import GraphicRightCopyLeftCenter from './GraphicRightCopyLeftCenter';
 import ButtonsContent from './buttonscontent';
+import SimpleCTACenter from './simpleCTACenter';
+import GraphicLeftCopyRightFeature from './graphicleftcopyrightfeature';
 
 const BlankSlice = () => {
   return null;
@@ -86,6 +88,8 @@ export default class Slices extends React.Component {
       graphicrightcopyleftcenter: GraphicRightCopyLeftCenter,
       titlecenterimagebottom: TitleCenterImageBottom,
       buttonscontent: ButtonsContent,
+      simplectacenter: SimpleCTACenter,
+      graphicleftcopyrightfeature: GraphicLeftCopyRightFeature,
     };
 
     return (

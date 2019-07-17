@@ -21,6 +21,7 @@
         margin: auto;
         padding: $gutter;
         padding-left: 0;
+        min-width: 50%;
 
         @include tablet {
           display: none;
@@ -36,19 +37,20 @@
           padding-left: 0;
         }
 
-        a {
-          width: 250px;
-          @include tablet {
-            margin: auto;
-          }
-        }
-
         .copy-container {
           display: flex;
           flex-direction: column;
           padding: $gutter;
           margin-top: 0;
           text-align: left;
+
+          .cta-buttons {
+            .button {
+              @include tablet {
+                margin: auto;
+              }
+            }
+          }
 
           p {
             margin: 0;

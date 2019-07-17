@@ -7,7 +7,7 @@ const TwoColumn = props => {
         <div className="os-left-container">
           <div className="os-left">
             {props.data.primary.os_title && (
-              <h1 className="hero-title">{props.data.primary.os_title}</h1>
+              <h1 className="title">{props.data.primary.os_title}</h1>
             )}
             {props.data.primary.os_messaging && (
               <span className="os-messaging">{renderPrismic(props.data.primary.os_messaging)}</span>

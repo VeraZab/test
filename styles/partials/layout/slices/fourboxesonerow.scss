@@ -11,6 +11,12 @@
       text-align: center;
     }
 
+    .cta-buttons {
+      .button {
+        margin: $gutter auto;
+      }
+    }
+
     .fourBoxesOneRow-boxes-container {
       display: flex;
       flex-wrap: wrap;

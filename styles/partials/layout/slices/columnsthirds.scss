@@ -38,9 +38,6 @@
       }
 
       .intro-copy-container {
-        margin: auto;
-        text-align: left;
-
         .pretitle {
           font-size: 16px;
           line-height: 26px;
@@ -48,6 +45,7 @@
 
           @include tablet {
             padding-top: $gutter * 2;
+            text-align: center !important;
           }
         }
         .subtitle-white {
@@ -57,7 +55,7 @@
 
           @include tablet {
             width: 100%;
-            text-align: center;
+            text-align: center !important;
             margin-bottom: 0;
             line-height: 1.2;
           }
@@ -68,7 +66,7 @@
           }
 
           @include tablet {
-            text-align: center;
+            text-align: center !important;
             margin-bottom: $gutter;
           }
         }
@@ -83,11 +81,16 @@
 
           @include tablet {
             width: 100%;
-            text-align: center;
+            text-align: center !important;
           }
         }
         .cta-buttons {
-          margin: auto;
+          .button {
+            @include tablet {
+              margin: auto !important;
+              margin-bottom: $gutter * 2 !important;
+            }
+          }
 
           a {
             margin-right: 0;
@@ -122,7 +125,7 @@
         img {
           margin-top: 0;
           margin-bottom: $gutter;
-          width: 90px;
+          width: 60px;
 
           @include tablet {
             margin: auto;
