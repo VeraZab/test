@@ -21,9 +21,11 @@ const GraphicLeftCopyRight = props => {
                 <p className="subtitle">{renderPrismic(props.data.primary.cta_messaging)}</p>
               )}
               {props.data.primary.cta_url.link_type === 'Web' && (
-                <a className="button button-primary" href={props.data.primary.cta_url.url}>
-                  <div className="button-label">{props.data.primary.cta_label}</div>
-                </a>
+                <span className="cta-buttons">
+                  <a className="button button-primary" href={props.data.primary.cta_url.url}>
+                    <div className="button-label">{props.data.primary.cta_label}</div>
+                  </a>
+                </span>
               )}
             </div>
           </div>

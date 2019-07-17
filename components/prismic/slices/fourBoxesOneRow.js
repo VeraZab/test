@@ -8,6 +8,13 @@ const FourBoxesOneRow = props => {
     <div className="fourBoxesOneRow-container">
       <div className="fourBoxesOneRow-content">
         <h1 className="fourBoxesOneRow-title">{sectionTitle}</h1>
+        {props.data.primary.cta_label && props.data.primary.cta_url && (
+          <div className="cta-buttons">
+            <a className="button button-primary" href={props.data.primary.cta_url}>
+              <div className="button-label">{props.data.primary.cta_label}</div>
+            </a>
+          </div>
+        )}
         <div className="fourBoxesOneRow-boxes-container">
           {items.map(i => (
             <div key={i} className="box">
