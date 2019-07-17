@@ -1,0 +1,28 @@
+.simplectacenter-container {
+  background-color: $color-rhino-light-3;
+
+  .simplectacenter-content {
+    max-width: $global-width;
+    margin: auto;
+    padding: $gutter * 3 $gutter $gutter * 4 $gutter;
+    text-align: center;
+
+    h1.title {
+      font-family: Asap, sans-serif;
+      font-weight: 500;
+      margin: 0;
+      color: #2a3f5f;
+      font-size: 2em;
+      padding-bottom: 0;
+    }
+
+    .copy {
+      max-width: 70%;
+      margin: auto;
+
+      @include tablet {
+        max-width: 90%;
+      }
+    }
+  }
+}
