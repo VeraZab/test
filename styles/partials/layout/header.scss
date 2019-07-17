@@ -194,9 +194,9 @@ $nav-padding: $gutter * 0.5;
 
           #signUpDropdown {
             display: block;
-            padding: 12px;
             min-width: 250px;
             text-align: center;
+            padding: 12px;
           }
 
           #signUpDropdown .navigation-product-submenu-section {
@@ -204,15 +204,19 @@ $nav-padding: $gutter * 0.5;
             padding: $gutter;
           }
 
-          #signUpDropdown div:first-child {
+          #signUpDropdown div:not(:last-child) {
             border-bottom: 1px solid #072e68;
-            padding: 12px;
-            padding-bottom: $gutter;
+            padding: $gutter 0;
           }
 
-          #signUpDropdown div:nth-child(2) {
-            padding: 12px;
+          #signUpDropdown div:first-child {
+            border-bottom: 1px solid #072e68;
+            padding-top: 12px;
+          }
+
+          #signUpDropdown div:last-child {
             padding-top: $gutter;
+            padding-bottom: 12px;
           }
 
           #productsDropdown .navigation-product-submenu-right {
