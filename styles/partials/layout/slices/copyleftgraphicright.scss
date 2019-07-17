@@ -55,11 +55,16 @@
             text-align: center;
           }
         }
+        .cta-buttons {
+          padding: 0;
+          padding-top: $gutter;
+        }
       }
     }
     .graphic-r-container {
       margin: auto;
       min-width: 30%;
+      max-width: 50%;
 
       img {
         margin: auto;

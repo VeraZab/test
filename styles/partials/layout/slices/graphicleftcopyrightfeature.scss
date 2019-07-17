@@ -1,0 +1,80 @@
+.graphicleftcopyrightfeature-container {
+  padding: $gutter;
+  margin: $gutter 0;
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    max-width: calc(#{$global-width} - #{$gutter} * 2);
+    margin: auto;
+    border: 1px solid $color-rhino-light-1;
+    box-shadow: 1px 1px 10px #dde7f2;
+    border-radius: 2px;
+
+    @include tablet {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .graphic-container {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .copy-wrapper {
+      display: flex;
+      justify-content: center;
+      max-width: 60%;
+      padding: $gutter;
+      padding-left: $gutter * 1.5;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      a {
+        width: 250px;
+        @include tablet {
+          margin: auto;
+        }
+      }
+
+      .copy-container {
+        display: flex;
+        flex-direction: column;
+        padding: $gutter;
+        margin-top: 0;
+        text-align: left;
+
+        p {
+          margin: 0;
+        }
+
+        h1 {
+          text-align: left;
+          @include tablet {
+            text-align: center;
+          }
+        }
+
+        .copy {
+          margin: $gutter 0;
+          text-align: left;
+          @include tablet {
+            text-align: center;
+          }
+        }
+
+        @include tablet {
+          margin-top: $gutter;
+        }
+      }
+    }
+  }
+}

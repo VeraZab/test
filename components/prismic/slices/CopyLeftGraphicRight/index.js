@@ -10,6 +10,13 @@ const CopyLeftGraphicRight = props => {
             <h1 className="title">{primary.title1}</h1>
             {primary.copy && <div className="copy">{primary.copy}</div>}
             {primary.copy_rich && <div className="copy">{renderPrismic(primary.copy_rich)}</div>}
+            {primary.cta_label && primary.cta_url && (
+              <div className="cta-buttons">
+                <a href={primary.cta_url} className="button button-primary header-button">
+                  <div className="button-label">{primary.cta_label}</div>
+                </a>
+              </div>
+            )}
           </div>
         </div>
         <div className="graphic-r-container">
