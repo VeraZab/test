@@ -39,15 +39,15 @@ const MENU = {
     LEFT: [
       {
         title: 'AI & Machine Learning',
-        link: '/industries/AI-and-machine-learning',
+        link: '/industries/AI-and-machine-learning/',
       },
       {
         title: 'Energy & Transportation',
-        link: '/industries/energy-and-transportation',
+        link: '/industries/energy-and-transportation/',
       },
       {
         title: 'Manufacturing',
-        link: '/industries/manufacturing',
+        link: '/industries/manufacturing/',
       },
     ],
     RIGHT: [],
