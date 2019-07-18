@@ -10,18 +10,7 @@ class Resources extends React.Component {
   render() {
     const maxItems = 8;
     const options = [{value: 'All', label: 'All'}];
-    const grid = [
-      'full',
-      'two-thirds',
-      'third',
-      'third',
-      'third',
-      'third',
-      'third',
-      'two-thirds',
-      'third',
-      'two-thirds',
-    ];
+
     const items = this.props.data.items;
     const categories = new Set();
 
@@ -53,20 +42,14 @@ class Resources extends React.Component {
             .map((item, index) => {
               return (
                 <div
-                  className={`resources-item-${grid[index % 10]}`}
+                  className={index === 0 ? 'resources-item-full' : 'resources-item-third'}
                   id={index < maxItems || this.state.moreLoaded === 1 ? 'loaded' : 'notLoaded'}
                   key={index}
                 >
                   <div className="item-top">
                     <div className="item-category">{item.category}</div>
                     <div className="item-graphic">
-                      <img
-                        src={
-                          index === 0
-                            ? item.story_image.url
-                            : 'https://plotly.cdn.prismic.io/plotly/b0a61864cbfa3f12a03c74bb95d8f5979159da1e_teal.png'
-                        }
-                      />
+                      <img src={item.story_image.url} />
                     </div>
                   </div>
                   <div className="shadow-wrapper">

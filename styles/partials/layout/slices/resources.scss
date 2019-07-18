@@ -36,6 +36,7 @@
       margin: auto;
       margin-bottom: $gutter;
     }
+
     #loaded {
       display: inherit;
     }
@@ -51,6 +52,7 @@
     .resources-item-two-thirds {
       width: 65%;
     }
+
     .resources-item-two-thirds,
     .resources-item-third,
     .resources-item-fourth {
@@ -59,13 +61,18 @@
       flex-direction: column;
       justify-content: flex-start;
       padding-bottom: $gutter;
-      img {
-        height: 200px;
-      }
       @include tablet {
-        width: 90%;
+        width: 70%;
         margin: auto;
       }
+      img {
+        height: 200px;
+        @include tablet {
+          margin: auto;
+          height: auto;
+        }
+      }
+
       .item-top {
         .item-category {
           position: relative;
@@ -112,7 +119,7 @@
       @include tablet {
         flex-direction: column;
         height: auto;
-        width: 90%;
+        width: 70%;
         margin: auto;
         padding-bottom: $gutter;
       }
