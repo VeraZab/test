@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import {useMediaQuery} from 'react-responsive';
 
 class Resources extends React.Component {
   constructor(props) {
@@ -20,6 +21,19 @@ class Resources extends React.Component {
     for (const item of categories) {
       options.push({value: item, label: item});
     }
+
+    const grid = [
+      'full',
+      'two-thirds',
+      'third',
+      'third',
+      'third',
+      'third',
+      'third',
+      'two-thirds',
+      'third',
+      'two-thirds',
+    ];
 
     return (
       <div className="resources-wrapper">
@@ -42,7 +56,7 @@ class Resources extends React.Component {
             .map((item, index) => {
               return (
                 <div
-                  className={index === 0 ? 'resources-item-full' : 'resources-item-third'}
+                  className={`resources-item-${grid[index % 10]}`}
                   id={index < maxItems || this.state.moreLoaded === 1 ? 'loaded' : 'notLoaded'}
                   key={index}
                 >
