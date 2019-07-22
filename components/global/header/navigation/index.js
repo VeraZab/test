@@ -55,7 +55,7 @@ const MENU = {
   RESOURCES: [
     {
       title: 'Blog',
-      link: 'https://blog.plot.ly',
+      link: 'https://medium.com/@plotlygraphs',
     },
     {
       title: 'Content & News',
