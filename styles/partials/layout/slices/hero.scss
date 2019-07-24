@@ -23,16 +23,15 @@ $hero-content-space: 60px;
 #privacy-policy-hero {
   width: 100%;
   margin: auto;
-
   @include media('<1100px') {
     padding-top: $gutter * 5;
   }
-
   @include phone {
     padding-top: 0;
     margin: 0;
   }
 }
+
 #privacy-policy-bg {
   background: linear-gradient(#88d2ff, #120e6a);
   background-repeat: no-repeat;
@@ -50,7 +49,6 @@ $hero-content-space: 60px;
 .hero-container {
   background: #00004f;
   padding-top: 66px;
-
   .promobanner {
     @media (max-width: $shrink-hero-breakpoint) {
       font-size: 12px;
@@ -86,7 +84,6 @@ $hero-content-space: 60px;
     .hero-top {
       display: flex;
       padding-top: $gutter * 2;
-
       justify-content: center;
       align-items: center;
       @include tablet {
@@ -103,15 +100,12 @@ $hero-content-space: 60px;
         flex-direction: column;
         padding: $gutter;
         height: 375px;
-
         .dash-stars-wrapper {
           padding-top: $gutter/2;
           width: 140px;
-
           @include media('<1100px') {
             margin: auto;
           }
-
           iframe {
             margin: auto;
           }
@@ -120,7 +114,6 @@ $hero-content-space: 60px;
         .cta-buttons {
           @media (max-width: $shrink-hero-breakpoint) {
             flex-direction: column;
-
             a {
               margin: auto;
               margin-top: $gutter;
@@ -132,13 +125,11 @@ $hero-content-space: 60px;
         @include media('<1100px') {
           height: auto;
         }
-
         @include tablet {
           width: 100%;
           margin-right: 0;
           padding-top: $gutter * 3.5;
         }
-
         @include phone {
           padding: calc(#{$hero-content-space} * 0.05);
           padding-top: 0;
@@ -149,31 +140,25 @@ $hero-content-space: 60px;
         width: 50%;
         padding: 0 $hero-content-space;
         margin-bottom: $gutter;
-
         @media (max-width: $shrink-hero-breakpoint) {
           display: none;
         }
-
         img {
           margin: auto;
-
           @media (max-width: $shrink-hero-breakpoint) {
             display: none;
           }
         }
       }
     }
-
     .hero-logos {
       margin: $gutter;
       padding-bottom: $gutter * 1.5;
       margin-bottom: 0;
       display: flex;
       justify-content: space-evenly;
-
       .hero-logo-item {
         height: 25px;
-
         @include tablet {
           height: 15px;
         }
