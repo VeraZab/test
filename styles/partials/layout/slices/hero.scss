@@ -101,7 +101,10 @@ $hero-content-space: 60px;
         padding: $gutter;
         height: 375px;
         .dash-stars-wrapper {
+          min-height: 40px;
           padding-top: $gutter/2;
+          margin-top: $gutter;
+
           width: 140px;
           @include media('<1100px') {
             margin: auto;
@@ -112,6 +115,10 @@ $hero-content-space: 60px;
         }
 
         .cta-buttons {
+          .button {
+            height: 40px;
+            margin-bottom: $gutter;
+          }
           @media (max-width: $shrink-hero-breakpoint) {
             flex-direction: column;
             a {
