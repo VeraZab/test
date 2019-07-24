@@ -158,7 +158,7 @@ $hero-content-space: 60px;
       display: flex;
       justify-content: space-evenly;
       .hero-logo-item {
-        height: 25px;
+        height: 35px;
         @include tablet {
           height: 15px;
         }
