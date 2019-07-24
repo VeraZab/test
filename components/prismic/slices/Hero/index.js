@@ -2,8 +2,11 @@ import Browser from 'components/browser';
 import {renderPrismic} from 'lib/renderPrismicRichText';
 
 const Hero = props => {
+  console.log(props);
   const logos =
-    props.content.hero_buttons[0].logo && props.content.hero_buttons.filter(item => item.logo.url);
+    props.content.hero_buttons.length > 1 &&
+    props.content.hero_buttons[0].logo &&
+    props.content.hero_buttons.filter(item => item.logo.url);
   return (
     <div
       className="hero-container"
