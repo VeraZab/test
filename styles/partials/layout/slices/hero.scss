@@ -59,7 +59,7 @@ $hero-content-space: 60px;
       font-size: 10px;
       padding-top: 9px;
     }
-    @include media('<350px') {
+    @include media('<420px') {
       height: 62px;
     }
     height: 42px;
@@ -76,6 +76,10 @@ $hero-content-space: 60px;
         color: white !important;
         text-decoration: underline !important;
         text-transform: uppercase;
+      }
+      @include phone {
+        width: 80%;
+        margin: auto;
       }
     }
   }
