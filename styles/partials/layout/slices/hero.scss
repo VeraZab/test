@@ -107,6 +107,9 @@ $hero-content-space: 60px;
           @include media('<1100px') {
             margin: auto;
           }
+          @include phone {
+            margin-bottom: $gutter;
+          }
           iframe {
             margin: auto;
           }
@@ -133,7 +136,7 @@ $hero-content-space: 60px;
 
         @include phone {
           padding: calc(#{$hero-content-space} * 0.05);
-          padding-top: 0;
+          padding-top: $gutter;
         }
       }
 
