@@ -88,6 +88,7 @@ $hero-content-space: 60px;
     max-width: $global-width;
     margin: auto;
     max-height: 850px;
+
     display: flex;
     flex-direction: column;
     .hero-top {
@@ -120,6 +121,8 @@ $hero-content-space: 60px;
         }
 
         .cta-buttons {
+          margin-top: $gutter/2;
+
           .button {
             height: 40px;
             margin-bottom: $gutter;
@@ -136,11 +139,8 @@ $hero-content-space: 60px;
           width: 100%;
           margin: auto;
           margin-right: 0;
-        }
-
-        @include phone {
-          padding: calc(#{$hero-content-space} * 0.05);
-          padding-top: $gutter;
+          padding-top: $gutter * 2;
+          padding: $gutter;
         }
       }
 
@@ -162,7 +162,7 @@ $hero-content-space: 60px;
     }
     .hero-logos {
       margin: $gutter;
-      margin-top: 0;
+      margin-top: $gutter;
       padding-bottom: $gutter * 1.5;
       margin-bottom: 0;
       display: flex;
