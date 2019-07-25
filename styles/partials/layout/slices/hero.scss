@@ -100,8 +100,10 @@ $hero-content-space: 60px;
         flex-direction: column;
         justify-content: center;
         margin: $gutter;
+        margin-bottom: 0;
         padding: $gutter;
         padding-left: 0;
+        padding-top: 0;
 
         .dash-stars-wrapper {
           height: 40px;
@@ -140,7 +142,6 @@ $hero-content-space: 60px;
           margin: auto;
           margin-right: 0;
           padding: $gutter;
-          padding-top: $gutter * 2;
         }
       }
 
@@ -148,6 +149,7 @@ $hero-content-space: 60px;
         width: 50%;
         align-self: flex-start;
         margin: $gutter;
+        margin-bottom: 0;
         padding: $gutter;
         @media (max-width: $shrink-hero-breakpoint) {
           display: none;
@@ -162,9 +164,9 @@ $hero-content-space: 60px;
     }
     .hero-logos {
       margin: $gutter;
-      margin-top: $gutter;
       padding-bottom: $gutter * 1.5;
       margin-bottom: 0;
+      margin-top: 0;
       display: flex;
       justify-content: space-evenly;
       .hero-logo-item {
