@@ -49,6 +49,7 @@ $hero-content-space: 60px;
 .hero-container {
   background: #00004f;
   padding-top: 66px;
+
   .promobanner {
     @media (max-width: $shrink-hero-breakpoint) {
       font-size: 12px;
@@ -57,6 +58,9 @@ $hero-content-space: 60px;
     @include phone {
       font-size: 10px;
       padding-top: 9px;
+    }
+    @include media('<420px') {
+      height: 62px;
     }
     height: 42px;
     background: #119dff;
@@ -73,6 +77,10 @@ $hero-content-space: 60px;
         text-decoration: underline !important;
         text-transform: uppercase;
       }
+      @include phone {
+        width: 80%;
+        margin: auto;
+      }
     }
   }
 
@@ -80,28 +88,25 @@ $hero-content-space: 60px;
     max-width: $global-width;
     margin: auto;
     max-height: 850px;
-    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
     .hero-top {
       display: flex;
-      padding-top: $gutter * 2;
-      justify-content: center;
-      align-items: center;
-      @include tablet {
-        flex-direction: column;
-        height: auto;
-        padding-top: 0;
-      }
-      @include phone {
-        height: 60vh;
-      }
+
       .hero-left {
         display: flex;
         width: 50%;
         flex-direction: column;
+        justify-content: center;
+        margin: $gutter;
+        margin-bottom: 0;
         padding: $gutter;
-        height: 375px;
+        padding-left: 0;
+        padding-top: 0;
+
         .dash-stars-wrapper {
-          min-height: 40px;
+          height: 40px;
           padding-top: $gutter/2;
           margin-top: $gutter;
 
@@ -109,12 +114,17 @@ $hero-content-space: 60px;
           @include media('<1100px') {
             margin: auto;
           }
+          @include phone {
+            margin-bottom: $gutter;
+          }
           iframe {
             margin: auto;
           }
         }
 
         .cta-buttons {
+          margin-top: $gutter/2;
+
           .button {
             height: 40px;
             margin-bottom: $gutter;
@@ -123,30 +133,24 @@ $hero-content-space: 60px;
             flex-direction: column;
             a {
               margin: auto;
-              margin-top: $gutter;
             }
-            margin-bottom: $gutter * 2;
           }
         }
 
         @include media('<1100px') {
-          height: auto;
-        }
-        @include tablet {
           width: 100%;
+          margin: auto;
           margin-right: 0;
-          padding-top: $gutter * 3.5;
-        }
-        @include phone {
-          padding: calc(#{$hero-content-space} * 0.05);
-          padding-top: 0;
+          padding: $gutter;
         }
       }
 
       .hero-right {
         width: 50%;
-        padding: 0 $hero-content-space;
-        margin-bottom: $gutter;
+        align-self: flex-start;
+        margin: $gutter;
+        margin-bottom: 0;
+        padding: $gutter;
         @media (max-width: $shrink-hero-breakpoint) {
           display: none;
         }
@@ -162,6 +166,7 @@ $hero-content-space: 60px;
       margin: $gutter;
       padding-bottom: $gutter * 1.5;
       margin-bottom: 0;
+      margin-top: 0;
       display: flex;
       justify-content: space-evenly;
       .hero-logo-item {
