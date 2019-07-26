@@ -10,7 +10,14 @@ const JobListing = styled.div`
   }
 `;
 
-const Description = styled.div``;
+const Description = styled.div`
+  p,
+  ul {
+    @media (max-width: 420px) {
+      width: 100%;
+    }
+  }
+`;
 const Requirements = styled.div``;
 const Extras = styled.div``;
 const JobsHeader = styled.div`
@@ -23,6 +30,8 @@ const JobsHeader = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    width: 95%;
+    word-break: break-word;
 
     & > div:not(:last-of-type) {
       padding-bottom: 20px;
@@ -31,6 +40,8 @@ const JobsHeader = styled.div`
 `;
 const Wrapper = styled.div`
   display: flex;
+  width: 80%;
+
   @media (min-width: 900px) {
     justify-content: space-between;
     & > div {
