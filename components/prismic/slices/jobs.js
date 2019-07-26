@@ -37,6 +37,10 @@ const JobsHeader = styled.div`
       padding-bottom: 20px;
     }
   }
+
+  @media (max-width: 500px) {
+    width: 80%;
+  }
 `;
 const Wrapper = styled.div`
   display: flex;
