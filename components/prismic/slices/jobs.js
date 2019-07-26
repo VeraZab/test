@@ -40,8 +40,6 @@ const JobsHeader = styled.div`
 `;
 const Wrapper = styled.div`
   display: flex;
-  width: 80%;
-
   @media (min-width: 900px) {
     justify-content: space-between;
     & > div {
