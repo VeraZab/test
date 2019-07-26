@@ -49,6 +49,7 @@ const Wrapper = styled.div`
   }
   @media (max-width: 899px) {
     flex-direction: column;
+    width: 80%;
     ${Requirements} {
       order: 2 !important;
     }
