@@ -23,7 +23,7 @@ $hero-content-space: 60px;
 #privacy-policy-hero {
   width: 100%;
   margin: auto;
-  @include media('<1100px') {
+  @include media('<=1100px') {
     padding-top: $gutter * 5;
   }
   @include phone {
@@ -111,7 +111,7 @@ $hero-content-space: 60px;
           margin-top: $gutter;
 
           width: 140px;
-          @include media('<1100px') {
+          @include media('<=1100px') {
             margin: auto;
           }
           @include phone {
@@ -137,7 +137,7 @@ $hero-content-space: 60px;
           }
         }
 
-        @include media('<1100px') {
+        @include media('<=1100px') {
           width: 100%;
           margin: auto;
           margin-right: 0;
