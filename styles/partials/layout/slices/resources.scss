@@ -72,6 +72,8 @@
         border: 1px solid #ebf0f8;
         @include tablet {
           margin: auto;
+          height: auto;
+          width: 100%;
         }
       }
 
