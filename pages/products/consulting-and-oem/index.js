@@ -121,7 +121,7 @@ export default class Consulting extends React.Component {
         className="consulting--layout"
       >
         <Hero />
-        <ContentSection style={contentSectionStyles} className="bottom-light-bg">
+        <ContentSection style={contentSectionStyles}>
           <ContentPane full center>
             <Title>
               Plotly's engineering team has deep expertise in technical computing, open technologies
@@ -134,18 +134,8 @@ export default class Consulting extends React.Component {
                 and perspective to ensure that your project is a success. Contact us directly to
                 learn more.
               </p>
-              <div className="cards" style={cardsStyles}>
-                <div className="cards-wrapper center">
-                  <div className="card-simple" style={cardBoxStyles}>
-                    <div className="card-simple-wrapper">
-                      <div className="card-simple-body">
-                        <div className="title-med">Introductory Engagement</div>
-                        <div className="title-med padding-top">$15,000</div>
-                        <Buttons items={buttons} align-center className="padding-top" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div style={{paddingTop: '24px'}}>
+                <Buttons items={buttons} align-center className="padding-top" />
               </div>
             </Body>
           </ContentPane>
@@ -156,6 +146,7 @@ export default class Consulting extends React.Component {
           style={{
             ...contentSectionStyles,
             backgroundColor: '#f2f4f5',
+            paddingTop: '50px',
           }}
         >
           <ContentPane full center>

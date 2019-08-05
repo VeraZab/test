@@ -87,7 +87,6 @@
   &-secondary {
     border: 1px solid $color-dodger;
     color: $color-dodger !important;
-
     &:hover {
       border-color: $color-button-hover !important;
       color: $color-button-hover !important;
@@ -111,8 +110,6 @@
   }
   @include phone {
     margin: auto;
-  }
-  .header-button {
   }
   a {
     margin-right: $gutter;

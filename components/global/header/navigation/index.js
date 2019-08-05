@@ -125,64 +125,6 @@ export default class Navigation extends React.Component {
       .classList.toggle('mobile-menu-active', !this.state.mobileMenu);
   }
 
-  toggleProductSubmenu(event) {
-    event.preventDefault();
-    if (this.state.productSubmenuActive) {
-      this.setState({
-        productSubmenuActive: false,
-      });
-    } else {
-      this.setState({
-        productSubmenuActive: true,
-        pricingSubmenuActive: false,
-        signUpSubMenuActive: false,
-      });
-    }
-  }
-
-  toggleSignUpSubmenu(event) {
-    event.preventDefault();
-
-    if (this.state.signUpSubmenuActive) {
-      this.setState({
-        signUpSubmenuActive: false,
-      });
-    } else {
-      this.setState({
-        signUpSubmenuActive: true,
-        productSubmenuActive: false,
-        pricingSubmenuActive: false,
-      });
-    }
-  }
-
-  togglePricingSubmenu(event) {
-    event.preventDefault();
-    if (this.state.pricingSubmenuActive) {
-      this.setState({
-        pricingSubmenuActive: false,
-      });
-    } else {
-      this.setState({
-        pricingSubmenuActive: true,
-        productSubmenuActive: false,
-        signUpSubMenuActive: false,
-      });
-    }
-  }
-
-  storeSubMenu(title) {
-    this.setState({
-      submenu: title,
-    });
-  }
-
-  closeSubMenu() {
-    this.setState({
-      submenu: '',
-    });
-  }
-
   render() {
     return (
       <>
@@ -191,7 +133,7 @@ export default class Navigation extends React.Component {
         </div>
         <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
           <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.toggleProductSubmenu.bind(this)}>
+            <div className="navigation-product-item">
               Products
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
@@ -236,7 +178,7 @@ export default class Navigation extends React.Component {
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+            <div className="navigation-product-item">
               Industries
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
@@ -258,33 +200,7 @@ export default class Navigation extends React.Component {
             </div>
           </div>
           <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
-              RESOURCES
-              <i className="mdi mdi-chevron-down hide-on-mobile" />
-            </div>
-            <div
-              id="signUpDropdown"
-              className={
-                this.state.signUpSubmenuActive
-                  ? 'navigation-product-submenu submenu-active'
-                  : 'navigation-product-submenu'
-              }
-            >
-              {MENU.RESOURCES.map((p, i) => (
-                <div key={i} className="navigation-product-submenu-section">
-                  <a
-                    href={p.link}
-                    target={p.link.includes('resources') ? '' : '_blank'}
-                    className="navigation-product-submenu-section-title"
-                  >
-                    {p.title}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="navigation-product-item-with-submenu">
-            <div className="navigation-product-item" onClick={this.toggleSignUpSubmenu.bind(this)}>
+            <div className="navigation-product-item">
               Sign Up
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
