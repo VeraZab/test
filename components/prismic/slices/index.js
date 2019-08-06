@@ -88,6 +88,7 @@ export default class Slices extends React.Component {
       buttonscontent: ButtonsContent,
       simplectacenter: SimpleCTACenter,
       graphicleftcopyrightfeature: GraphicLeftCopyRightFeature,
+      relatedposts: BlankSlice,
     };
 
     return (
