@@ -95,11 +95,10 @@
           justify-content: space-between;
           height: 130px;
           margin: $gutter/2;
-          .item-title {
-            color: #2a3f5f !important;
-          }
+          color: #2a3f5f !important;
           .meta-wrapper {
             display: flex;
+
             justify-content: space-between;
             font-size: 12px;
             .item-author:before {
@@ -150,10 +149,10 @@
           justify-content: center;
           height: 95%;
           margin: $gutter/2;
+          color: #2a3f5f !important;
           .item-title {
             width: 80%;
             margin: auto;
-            color: #2a3f5f !important;
             @include tablet {
               width: 100%;
             }
