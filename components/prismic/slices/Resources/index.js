@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import {useMediaQuery} from 'react-responsive';
+import MediaQuery from 'react-responsive';
 
 class Resources extends React.Component {
   constructor(props) {
@@ -64,7 +64,12 @@ class Resources extends React.Component {
                     <div className="item-category">{item.category}</div>
                     <div className="item-graphic">
                       <a href={item.story_url[0].text}>
-                        <img src={item.story_image.url} />
+                        <MediaQuery maxDeviceWidth={900}>
+                          <img src={item.story_image_mobile.url} />
+                        </MediaQuery>
+                        <MediaQuery minDeviceWidth={901}>
+                          <img src={item.story_image.url} />
+                        </MediaQuery>
                       </a>
                     </div>
                   </div>
