@@ -21,7 +21,6 @@ class Resources extends React.Component {
     for (const item of categories) {
       options.push({value: item, label: item});
     }
-
     const grid = [
       'full',
       'two-thirds',
