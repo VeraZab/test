@@ -65,7 +65,7 @@ export default class Slices extends React.Component {
       'cs-github-stars': GithubStars,
       'cs-code-explorer': CodeExplorer,
       'cs-iframe': IFrame,
-      resources: Resources,
+      newsroom: Resources,
       an_open_source_company: TwoColumn,
       globalcta: GraphicLeftCopyRight,
       dash_cta: OverlapGraphic,
