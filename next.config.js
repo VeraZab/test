@@ -142,7 +142,7 @@ module.exports = {
     '/newsroom': {
       page: '/prismic-generator',
       query: {
-        slug: 'newsroom',
+        slug: 'resources',
       },
     },
     '/resources/mitacs': {
