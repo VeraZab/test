@@ -96,9 +96,7 @@
           height: 130px;
           margin: $gutter/2;
           .item-title {
-            a {
-              color: #2a3f5f;
-            }
+            color: #2a3f5f !important;
           }
           .meta-wrapper {
             display: flex;
@@ -155,9 +153,7 @@
           .item-title {
             width: 80%;
             margin: auto;
-            a {
-              color: #2a3f5f !important;
-            }
+            color: #2a3f5f !important;
             @include tablet {
               width: 100%;
             }
