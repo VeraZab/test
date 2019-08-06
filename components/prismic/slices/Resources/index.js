@@ -63,24 +63,24 @@ class Resources extends React.Component {
                   <div className="item-top">
                     <div className="item-category">{item.category}</div>
                     <div className="item-graphic">
-                      <img src={item.story_image.url} />
+                      <a href={item.story_url[0].text}>
+                        <img src={item.story_image.url} />
+                      </a>
                     </div>
                   </div>
                   <div className="shadow-wrapper">
-                    <div className="item-bottom">
-                      <div className="item-title">
-                        <a
-                          target={item.story_url[0].text.includes('newsroom') ? '' : '_blank'}
-                          href={item.story_url[0].text}
-                        >
-                          {item.story_title[0].text}
-                        </a>
+                    <a
+                      target={item.story_url[0].text.includes('newsroom') ? '' : '_blank'}
+                      href={item.story_url[0].text}
+                    >
+                      <div className="item-bottom">
+                        <div className="item-title">{item.story_title[0].text}</div>
+                        <div className="meta-wrapper">
+                          <div className="item-author">{item.story_presenter[0].text}</div>
+                          <div className="item-date">{item.story_date[0].text}</div>
+                        </div>
                       </div>
-                      <div className="meta-wrapper">
-                        <div className="item-author">{item.story_presenter[0].text}</div>
-                        <div className="item-date">{item.story_date[0].text}</div>
-                      </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               );
