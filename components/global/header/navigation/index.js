@@ -131,12 +131,14 @@ export default class Navigation extends React.Component {
         <div onClick={this.toggleMobileMenu.bind(this)} className="mobile-navigation-anchor">
           <a className="navigation-product-item hide-on-desktop">{this.mobileMenuButtonText()}</a>
         </div>
+
         <nav className={'site-header-nav ' + this.mobileMenuClasses()}>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item">
               Products
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="productsDropdown"
               className={
@@ -182,6 +184,7 @@ export default class Navigation extends React.Component {
               Industries
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="signUpDropdown"
               className={
@@ -201,9 +204,33 @@ export default class Navigation extends React.Component {
           </div>
           <div className="navigation-product-item-with-submenu">
             <div className="navigation-product-item">
+              Resources
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
+            </div>
+
+            <div
+              id="signUpDropdown"
+              className={
+                this.state.signUpSubmenuActive
+                  ? 'navigation-product-submenu submenu-active'
+                  : 'navigation-product-submenu'
+              }
+            >
+              {MENU.RESOURCES.map((p, i) => (
+                <div key={i} className="navigation-product-submenu-section">
+                  <a href={p.link} className="navigation-product-submenu-section-title">
+                    {p.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="navigation-product-item-with-submenu">
+            <div className="navigation-product-item">
               Sign Up
               <i className="mdi mdi-chevron-down hide-on-mobile" />
             </div>
+
             <div
               id="signUpDropdown"
               className={
@@ -221,7 +248,6 @@ export default class Navigation extends React.Component {
               ))}
             </div>
           </div>
-
           <div className="navigation-product-item-with-submenu">
             <div className="cta-buttons">
               <a

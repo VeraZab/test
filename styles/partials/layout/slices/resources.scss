@@ -100,7 +100,7 @@
           margin: $gutter/2;
           .item-title {
             a {
-              color: $color-dodger;
+              color: #2a3f5f;
             }
           }
           .meta-wrapper {
@@ -158,6 +158,9 @@
           .item-title {
             width: 80%;
             margin: auto;
+            a {
+              color: #2a3f5f !important;
+            }
             @include tablet {
               width: 100%;
             }
