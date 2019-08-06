@@ -28,8 +28,8 @@ class Resources extends React.Component {
       'third',
       'third',
       'third',
-      'third',
       'two-thirds',
+      'third',
       'third',
       'two-thirds',
     ];
