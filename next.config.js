@@ -145,31 +145,31 @@ module.exports = {
         slug: 'newsroom',
       },
     },
-    '/newsroom/mitacs': {
+    '/resources/mitacs': {
       page: '/prismic-generator',
       query: {
         slug: 'mitacs',
       },
     },
-    '/newsroom/plotcon': {
+    '/resources/plotcon': {
       page: '/prismic-generator',
       query: {
         slug: 'plotcon',
       },
     },
-    '/newsroom/sight-machine': {
+    '/resources/sight-machine': {
       page: '/prismic-generator',
       query: {
         slug: 'sight-machine',
       },
     },
-    '/newsroom/erc': {
+    '/resources/erc': {
       page: '/prismic-generator',
       query: {
         slug: 'dash-for-good-energy-research-centre',
       },
     },
-    '/newsroom/indelphi': {
+    '/resources/indelphi': {
       page: '/prismic-generator',
       query: {
         slug: 'indelphi-dash-app',

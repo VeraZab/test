@@ -44,7 +44,6 @@ const Footer = props => {
   let footerData;
   if (props.nav.items) {
     const footer = props.nav.items;
-    console.log(footer[2]);
     footerData = [
       {
         label: footer[0].label,

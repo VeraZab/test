@@ -14,7 +14,7 @@ class RelatedPosts extends React.Component {
                 <div className="item-top">
                   <div className="item-category">{item.category}</div>
                   <div className="item-graphic">
-                    <img src="https://plotly.cdn.prismic.io/plotly/b0a61864cbfa3f12a03c74bb95d8f5979159da1e_teal.png" />
+                    <img src={item.graphic.url} />
                   </div>
                 </div>
                 <div className="shadow-wrapper">
