@@ -167,7 +167,7 @@ const Footer = props => {
           },
           {
             label: 'Blog',
-            url: 'https://blog.plot.ly/',
+            url: 'https://medium.com/@plotlygraphs',
           },
         ],
       },
