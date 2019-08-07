@@ -32,6 +32,10 @@ class Resources extends React.Component {
       'third',
       'third',
       'two-thirds',
+      'third',
+      'third',
+      'third',
+      'third',
     ];
 
     return (
@@ -55,7 +59,7 @@ class Resources extends React.Component {
             .map((item, index) => {
               return (
                 <div
-                  className={`resources-item-${grid[index % 10]}`}
+                  className={`resources-item-${grid[index % 15]}`}
                   id={index < maxItems || this.state.moreLoaded === 1 ? 'loaded' : 'notLoaded'}
                   key={index}
                 >
