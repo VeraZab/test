@@ -11,7 +11,6 @@ class Resources extends React.Component {
   render() {
     const maxItems = 8;
     const options = [{value: 'All', label: 'All'}];
-
     const items = this.props.data.items;
     const categories = new Set();
 
