@@ -139,6 +139,12 @@ module.exports = {
       },
     },
     '/chart-studio/cloud': {page: '/products/cloud'},
+    '/resources': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'resources',
+      },
+    },
     '/resources/mitacs': {
       page: '/prismic-generator',
       query: {
