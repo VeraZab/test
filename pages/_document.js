@@ -26,16 +26,15 @@ export default class MyDocument extends Document {
               })(window,document,'script','dataLayer','GTM-N6T2RXG');`,
             }}
           />
-          {dev && (
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.prismic = {endpoint: 'https://plotly.prismic.io/api/v2'};`,
-              }}
-            />
-          )}
-          {dev && (
-            <script async type="text/javascript" src="//static.cdn.prismic.io/prismic.min.js" />
-          )}
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.prismic = {endpoint: 'https://plotly.prismic.io/api/v2'};`,
+            }}
+          />
+
+          <script async type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js" />
+
           <script
             id="drift"
             dangerouslySetInnerHTML={{

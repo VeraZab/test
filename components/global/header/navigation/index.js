@@ -52,6 +52,16 @@ const MENU = {
     ],
     RIGHT: [],
   },
+  RESOURCES: [
+    {
+      title: 'Blog',
+      link: 'https://medium.com/@plotlygraphs',
+    },
+    {
+      title: 'Content & News',
+      link: '/resources',
+    },
+  ],
   SIGNUP: [
     {
       title: 'Community Forum',
@@ -184,6 +194,29 @@ export default class Navigation extends React.Component {
               }
             >
               {MENU.INDUSTRIES.LEFT.map((p, i) => (
+                <div key={i} className="navigation-product-submenu-section">
+                  <a href={p.link} className="navigation-product-submenu-section-title">
+                    {p.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="navigation-product-item-with-submenu">
+            <div className="navigation-product-item">
+              Resources
+              <i className="mdi mdi-chevron-down hide-on-mobile" />
+            </div>
+
+            <div
+              id="signUpDropdown"
+              className={
+                this.state.signUpSubmenuActive
+                  ? 'navigation-product-submenu submenu-active'
+                  : 'navigation-product-submenu'
+              }
+            >
+              {MENU.RESOURCES.map((p, i) => (
                 <div key={i} className="navigation-product-submenu-section">
                   <a href={p.link} className="navigation-product-submenu-section-title">
                     {p.title}

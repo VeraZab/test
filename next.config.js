@@ -16,6 +16,12 @@ module.exports = {
         slug: 'home',
       },
     },
+    '/resources': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'resources',
+      },
+    },
     '/privacy-policy': {
       page: '/prismic-generator',
       query: {
@@ -133,12 +139,6 @@ module.exports = {
       },
     },
     '/chart-studio/cloud': {page: '/products/cloud'},
-    '/resources': {
-      page: '/prismic-generator',
-      query: {
-        slug: 'resources',
-      },
-    },
     '/resources/mitacs': {
       page: '/prismic-generator',
       query: {

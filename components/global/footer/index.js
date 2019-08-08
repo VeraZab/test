@@ -98,6 +98,10 @@ const Footer = props => {
             label: footer[2].item2,
             url: footer[2].item_url2,
           },
+          {
+            label: footer[2].item3,
+            url: footer[2].item3_url,
+          },
         ],
       },
       {
@@ -158,8 +162,12 @@ const Footer = props => {
             url: '/company/careers',
           },
           {
-            label: 'Newsroom',
-            url: '/newsroom',
+            label: 'Resources',
+            url: '/resources',
+          },
+          {
+            label: 'Blog',
+            url: 'https://medium.com/@plotlygraphs',
           },
         ],
       },

@@ -30,6 +30,9 @@ class Quotes extends React.Component {
       <div className="customer-quotes-container">
         <div className="customer-quotes-wrapper">
           <h1 className="customer-quotes-title">{this.props.data.primary.title1[0].text}</h1>
+          {this.props.data.primary.graphic && (
+            <img className="title-graphic" src={this.props.data.primary.graphic.url} />
+          )}
           <div className="customer-quotes">
             {items.map((item, i) => {
               return (
@@ -44,7 +47,7 @@ class Quotes extends React.Component {
                   </div>}
                   <div className="quotes-copy-container">
                     <div className="customer-logo-container">
-                      <img alt="client logo" src={item.logo.url} />
+                      {item.logo.url && <img alt="client logo" src={item.logo.url} />}
                     </div>
                     <div className="customer-testimonial">
                       <div className="customer">{item.author1[0].text}</div>

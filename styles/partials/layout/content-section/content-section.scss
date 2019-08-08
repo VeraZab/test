@@ -10,11 +10,11 @@
     @include global-wrapper;
     display: flex;
     position: relative;
-    flex-wrap: wrap;
     $tb-spacing: $unit * 4;
     #{$c}-area {
       padding-top: 0.5 * $tb-spacing;
       padding-bottom: $tb-spacing;
+      padding-right: $tb-spacing;
     }
     min-height: 60vh;
     @include tablet {

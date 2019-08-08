@@ -1,0 +1,187 @@
+.resources-wrapper {
+  max-width: $global-width;
+  margin: auto;
+  .category-select {
+    background-color: #fff;
+    border-color: #d9d9d9 #ccc #b3b3b3;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: default;
+    width: 300px;
+    z-index: 3;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    @include tablet {
+      margin-left: $gutter;
+    }
+  }
+  .resources-title {
+    text-align: center;
+    padding-top: $gutter;
+  }
+  #related-posts {
+    justify-content: space-around;
+  }
+  .resources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @include tablet {
+      flex-direction: column;
+    }
+    .loadMore-button {
+      width: 250px;
+      margin: auto;
+      margin-bottom: $gutter;
+    }
+
+    #loaded {
+      display: inherit;
+    }
+    #notLoaded {
+      display: none;
+    }
+    .resources-item-third {
+      width: 32%;
+    }
+    .resources-item-fourth {
+      width: 23%;
+    }
+    .resources-item-two-thirds {
+      width: 65%;
+    }
+
+    .resources-item-two-thirds,
+    .resources-item-third,
+    .resources-item-fourth {
+      margin: $gutter/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: $gutter;
+
+      @include tablet {
+        width: 70%;
+        margin: auto;
+      }
+      img {
+        margin: auto;
+        border: 1px solid #ebf0f8;
+        @include tablet {
+          width: 100%;
+        }
+      }
+      .item-top {
+        .item-category {
+          position: relative;
+          bottom: -27px;
+          margin-top: -27px;
+          z-index: 2;
+          color: white;
+          text-align: center;
+          background: $color-dodger;
+          margin-left: $gutter;
+          width: 130px;
+        }
+      }
+      .shadow-wrapper {
+        box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
+        .item-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 130px;
+          margin: $gutter/2;
+          color: #2a3f5f !important;
+          .meta-wrapper {
+            display: flex;
+
+            justify-content: space-between;
+            font-size: 12px;
+            .item-author:before {
+              content: 'by: ';
+            }
+          }
+        }
+      }
+    }
+    .resources-item-full {
+      margin: $gutter/4;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: $gutter * 1.5;
+      width: 98%;
+      @include tablet {
+        flex-direction: column;
+        height: auto;
+        width: 70%;
+        margin: auto;
+        padding-bottom: $gutter;
+      }
+      .item-top {
+        .item-category {
+          position: relative;
+          bottom: -27px;
+          margin-top: -27px;
+          z-index: 2;
+          color: white;
+          text-align: center;
+          background: $color-dodger;
+          margin-left: $gutter;
+          width: 130px;
+        }
+        img {
+          width: 1360px;
+        }
+      }
+      .shadow-wrapper {
+        box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
+        @include tablet {
+          height: 180px;
+          width: 100%;
+        }
+        .item-bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 95%;
+          margin: $gutter/2;
+          color: #2a3f5f !important;
+          .item-title {
+            width: 80%;
+            margin: auto;
+            @include tablet {
+              width: 100%;
+            }
+          }
+          @include tablet {
+            justify-content: space-between;
+          }
+          .meta-wrapper {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            font-size: 12px;
+            padding-top: $gutter;
+            .item-author {
+              padding-right: $gutter;
+              @include tablet {
+                padding: 0;
+              }
+            }
+            @include tablet {
+              padding-bottom: $gutter;
+              width: 100%;
+              justify-content: space-between;
+            }
+            .item-author:before {
+              content: 'by: ';
+            }
+          }
+        }
+      }
+    }
+  }
+}
