@@ -75,36 +75,58 @@ const JobsLocation = styled.h3`
 const renderItems = items =>
   items &&
   items.length &&
-  items.map(({description1, requirements, misc_extra_text, location, position, time}, i) => (
-    <JobListing key={i}>
-      <JobsHeader>
-        <div>
-          <JobsTime id={slugify(position)}>
-            {misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}
-          </JobsTime>
-          <a href={`/company/careers#${slugify(position)}`}>
-            <div className="content-section-p-title">
-              <h2>{position}</h2>
-            </div>
-          </a>
-          <JobsLocation>{location}</JobsLocation>
-        </div>
-        <div>
-          <a href={`mailto:jobs@plot.ly?subject=[Job Application] ${position}`}>
-            {misc_extra_text[0].text === 'fr'
-              ? 'Soumettez votre candidature'
-              : 'Apply for this position'}
-          </a>
-        </div>
-      </JobsHeader>
-      <Wrapper>
-        <div>
-          <Description>{renderPrismic(description1)}</Description>
-        </div>
-        <Description>{renderPrismic(requirements)}</Description>
-      </Wrapper>
-    </JobListing>
-  ));
+  items.map(
+    (
+      {
+        description1,
+        requirements,
+        misc_extra_text,
+        location,
+        position,
+        time,
+        greenhouse_url_en,
+        greenhouse_url_fr,
+      },
+      i
+    ) => (
+      <JobListing key={i}>
+        <JobsHeader>
+          <div>
+            <JobsTime id={slugify(position)}>
+              {misc_extra_text[0].text === 'fr' ? 'Temps Plein' : time}
+            </JobsTime>
+            <a href={`/company/careers#${slugify(position)}`}>
+              <div className="content-section-p-title">
+                <h2>{position}</h2>
+              </div>
+            </a>
+            <JobsLocation>{location}</JobsLocation>
+          </div>
+          <div>
+            <a
+              href={
+                greenhouse_url_en && greenhouse_url_fr
+                  ? misc_extra_text[0].text === 'en'
+                    ? greenhouse_url_en
+                    : greenhouse_url_fr
+                  : `mailto:jobs@plot.ly?subject=[Job Application] ${position}`
+              }
+            >
+              {misc_extra_text[0].text === 'fr'
+                ? 'Soumettez votre candidature'
+                : 'Apply for this position'}
+            </a>
+          </div>
+        </JobsHeader>
+        <Wrapper>
+          <div>
+            <Description>{renderPrismic(description1)}</Description>
+          </div>
+          <Description>{renderPrismic(requirements)}</Description>
+        </Wrapper>
+      </JobListing>
+    )
+  );
 
 const Jobs = ({data}) => {
   const items = data.items;
