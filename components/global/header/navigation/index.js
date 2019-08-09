@@ -49,6 +49,10 @@ const MENU = {
         title: 'Manufacturing',
         link: '/industries/manufacturing/',
       },
+      {
+        title: 'Pharma & Bio',
+        link: '/industries/pharma-and-bio/',
+      },
     ],
     RIGHT: [],
   },

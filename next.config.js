@@ -188,6 +188,12 @@ module.exports = {
         slug: 'industries-manufacturing',
       },
     },
+    '/industries/pharma-and-bio': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'industries-pharmabio',
+      },
+    },
   }),
   webpack: config => {
     config.plugins.push(
