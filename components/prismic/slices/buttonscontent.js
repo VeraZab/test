@@ -48,6 +48,18 @@ class ButtonsContent extends React.Component {
                     ) : null}
                   </div>
                 ) : null}
+                {item['cta-label'] && item['cta-url'] && (
+                  <div className="cta-buttons">
+                    <a
+                      id="columns-thirds-button"
+                      className="button button-primary"
+                      href={item['cta-url']}
+                      target="_blank"
+                    >
+                      <div className="button-label">{item['cta-label']}</div>
+                    </a>
+                  </div>
+                )}
                 {item['right-image'] && <img src={item['right-image'].url} />}
               </div>
             ))}

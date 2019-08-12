@@ -94,7 +94,7 @@ const Hero = props => {
               style={props.content.keywords === 'privacy-policy' ? {display: 'none'} : {}}
             >
               {props.content.hero_graphic.url ? (
-                <>
+                <div style={{minHeight: '450px', display: 'flex', alignItems: 'center'}}>
                   {props.content.hero_graphic_style &&
                   props.content.hero_graphic_style === 'browser' ? (
                     <Browser>
@@ -103,7 +103,7 @@ const Hero = props => {
                   ) : (
                     <img src={props.content.hero_graphic.url} />
                   )}
-                </>
+                </div>
               ) : null}
             </div>
           </div>

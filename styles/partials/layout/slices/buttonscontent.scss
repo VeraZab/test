@@ -47,9 +47,10 @@
     .right {
       padding: $gutter;
       padding-top: 0;
-      padding-left: $gutter * 2;
+      padding-left: $gutter * 4;
       display: flex;
       align-items: center;
+      width: 100%;
 
       p + p {
         padding-top: 0;
@@ -62,8 +63,14 @@
         margin: auto;
       }
 
+      .cta-buttons a {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
       .content-container-active {
         display: block;
+        width: 100%;
 
         .right-text {
           .title {
