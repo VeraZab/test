@@ -59,13 +59,13 @@ class MailChimpForm extends React.Component {
           />
 
           <label htmlFor="MERGE0">
-            <div className="footer-main-section-header">Join the Dash Club</div>
+            <div className="footer-main-section-header">Join our mailing list</div>
             {this.state.formSuccess ? (
               <div style={{color: 'white'}}>
                 <div> Thank you for subscribing! </div>
                 <div>
-                  <a href="https://go.plot.ly/subscribe" target="_blank">
-                    You can change your email preferences here.
+                  <a href="https://go.plot.ly/customize" target="_blank">
+                    Click here to customize your email experience.
                   </a>
                 </div>
               </div>
@@ -75,8 +75,7 @@ class MailChimpForm extends React.Component {
               <>
                 <p className="mailchimp-footer-text">
                   {' '}
-                  Dash Club is a no-fluff, twice-a-month email with links and notes on the latest
-                  Dash developments and community happenings.
+                  Sign up to stay in the loop with all things Plotly—from Dash Club to product updates, webinars, and more!
                 </p>
                 <input
                   type="text"
