@@ -1,3 +1,8 @@
+.footer-subscription-section {
+  width: 218px;
+  color: white;
+}
+
 .mailchimp-footer-text {
   margin-block-start: 0em;
   font-size: 80%;
@@ -7,6 +12,7 @@
     width: 90vw;
   }
 }
+
 .mc-input {
   margin-bottom: 20px;
   border: none;
@@ -16,13 +22,18 @@
   border-radius: 25px;
   padding-left: 15px;
 }
+
+.mc-input:focus {
+  outline: none;
+}
+
 #mc-embedded-subscribe {
   color: #fff;
   border: none;
 }
 
 .social-icons-wrapper {
-  padding-left: 50px;
+  padding: $gutter 0;
   .social-icons {
     a {
       color: white !important;
@@ -30,9 +41,5 @@
     .social-icon {
       padding: 5px;
     }
-  }
-  @include tablet {
-    padding: 0;
-    padding-bottom: $gutter;
   }
 }
