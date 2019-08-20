@@ -3,106 +3,96 @@ class MailChimpForm extends React.Component {
     super(props);
     this.state = {
       emailValue: '',
-      formSuccess: false,
       formError: null,
+      formSubmitted: false,
     };
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onSubmit() {
+    const params = {
+      Emailpi_Email: this.state.emailValue,
+    };
+
+    this.setState({formSubmitted: true, subscribing: true});
+
+    fetch('https://go.plot.ly/l/719653/2019-08-15/3fgqv', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      mode: 'no-cors',
+      body: new URLSearchParams(params).toString(),
+    })
+      .catch(() => this.setState({formError: true}))
+      .then(() => {
+        if (!this.state.formError) {
+          // have to use this hack as not receiving response.ok upon success from the handler...
+          this.setState({formError: false});
+        }
+        this.setState({subscribing: false});
+      });
+  }
+
+  renderSubmissionResult() {
+    return (
+      <div style={{minHeight: '80px'}}>
+        {this.state.formError && (
+          <div>
+            <span>Sorry, an unexpected error occured. </span>
+            <a href="https://go.plot.ly/subscribe">Please try again here.</a>
+          </div>
+        )}
+
+        {this.state.formError === false && (
+          <div>
+            <div> Thank you for subscribing! </div>
+            <div>
+              <a href="https://go.plot.ly/customize" target="_blank">
+                Click here to customize your email experience.
+              </a>
+            </div>
+          </div>
+        )}
+        {this.state.subscribing && <div>Subscribing...</div>}
+      </div>
+    );
   }
 
   render() {
     return (
-      <div>
-        <iframe
-          name="hiddenFrame"
-          style={{position: 'absolute', top: '-1px', left: '-1px', width: '1px', height: '1px'}}
-          onLoad={() => this.setState({formSuccess: true})}
-          onError={err => this.setState({formError: err})}
-        ></iframe>
-
-        <form
-          className="footer-main-section"
-          action="https://go.plot.ly/subscribe"
-          method="POST"
-          noValidate
-          target="hiddenFrame"
-        >
-          <input
-            style={{display: 'none'}}
-            type="checkbox"
-            name="719653_26097pi_719653_26097_326347"
-            id="719653_26097pi_719653_26097_326347"
-            value="326347"
-            checked
-          />
-          <input
-            style={{display: 'none'}}
-            type="checkbox"
-            name="719653_26097pi_719653_26097_326349"
-            id="719653_26097pi_719653_26097_326349"
-            value="326349"
-            checked
-          />
-          <input
-            style={{display: 'none'}}
-            type="checkbox"
-            name="719653_26097pi_719653_26097_326351"
-            id="719653_26097pi_719653_26097_326351"
-            value="326351"
-            checked
-          />
-          <input
-            style={{display: 'none'}}
-            type="checkbox"
-            name="719653_26097pi_719653_26097_326353"
-            id="719653_26097pi_719653_26097_326353"
-            value="326353"
-            checked
-          />
-
-          <label htmlFor="MERGE0">
-            <div className="footer-main-section-header">Join our mailing list</div>
-            {this.state.formSuccess ? (
-              <div style={{color: 'white'}}>
-                <div> Thank you for subscribing! </div>
-                <div>
-                  <a href="https://go.plot.ly/customize" target="_blank">
-                    Click here to customize your email experience.
-                  </a>
-                </div>
-              </div>
-            ) : this.state.formError ? (
-              <div>{`Sorry, an unexpected error occured: ${this.state.formError}`}</div>
-            ) : (
-              <>
-                <p className="mailchimp-footer-text">
-                  {' '}
-                  Sign up to stay in the loop with all things Plotly—from Dash Club to product updates, webinars, and more!
-                </p>
-                <input
-                  type="text"
-                  name="Emailpi_Email"
-                  id="Emailpi_Email"
-                  placeholder="Your Email Address"
-                  value={this.state.emailValue}
-                  onChange={e => {
-                    this.setState({emailValue: e.target.value});
-                  }}
-                  autoCapitalize="off"
-                  autoCorrect="off"
-                  className="mc-input"
-                />
-              </>
-            )}
-          </label>
-          {this.state.formSuccess ? null : (
+      <div className="footer-subscription-section">
+        <div className="footer-main-section-header">Join our mailing list</div>
+        {this.state.formSubmitted ? (
+          this.renderSubmissionResult()
+        ) : (
+          <>
+            <p className="mailchimp-footer-text">
+              {' '}
+              Sign up to stay in the loop with all things Plotly—from Dash Club to product updates,
+              webinars, and more!
+            </p>
+            <input
+              type="text"
+              placeholder="Your Email Address"
+              value={this.state.emailValue}
+              onChange={e => {
+                this.setState({emailValue: e.target.value});
+              }}
+              autoCapitalize="off"
+              autoCorrect="off"
+              className="mc-input"
+            />
             <input
               type="submit"
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
               className="button button-primary"
+              onClick={this.onSubmit}
             />
-          )}
-        </form>
+          </>
+        )}
 
         <div className="social-icons-wrapper">
           <div className="social-icons">

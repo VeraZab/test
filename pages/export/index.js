@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import Layout from 'components/global/layout';
 import HeroSection from './hero';
 import Main from './main';
