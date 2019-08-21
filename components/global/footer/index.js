@@ -41,156 +41,68 @@ const Footer = props => {
     });
   };
 
-  let footerData;
-  if (props.nav.items) {
-    const footer = props.nav.items;
-    footerData = [
-      {
-        label: footer[0].label,
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: footer[0].item1,
-            url: footer[0].item_url1,
-          },
-          {
-            label: footer[0].item2,
-            url: footer[0].item_url2,
-          },
-          {
-            label: footer[0].item3,
-            url: footer[0].item3_url,
-          },
-
-          {
-            label: footer[0].item4,
-            url: footer[0].item4_url,
-          },
-        ],
-      },
-      {
-        label: footer[1].label,
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: footer[1].item1,
-            url: footer[1].item_url1,
-          },
-          {
-            label: footer[1].item2,
-            url: footer[1].item_url2,
-          },
-          {
-            label: footer[1].item3,
-            url: footer[1].item3_url,
-          },
-        ],
-      },
-      {
-        label: footer[2].label,
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: footer[2].item1,
-            url: footer[2].item_url1,
-          },
-          {
-            label: footer[2].item2,
-            url: footer[2].item_url2,
-          },
-          {
-            label: footer[2].item3,
-            url: footer[2].item3_url,
-          },
-        ],
-      },
-      {
-        label: footer[3].label,
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: footer[3].item1,
-            url: footer[3].item_url1,
-          },
-          {
-            label: footer[3].item2,
-            url: footer[3].item_url2,
-          },
-          {
-            label: footer[3].item3,
-            url: footer[3].item3_url,
-          },
-        ],
-      },
-    ];
-  } else {
-    footerData = [
-      {
-        label: 'Products',
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: 'Dash',
-            url: '/dash/',
-          },
-          {
-            label: 'Chart Studio',
-            url: '/online-chart-maker',
-          },
-          {
-            label: 'Plotly OEM',
-            url: '/products/oem',
-          },
-        ],
-      },
-      {
-        label: 'Pricing',
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: 'Enterprise Pricing',
-            url: 'https://go.plot.ly/get-pricing',
-          },
-        ],
-      },
-      {
-        label: 'About Us',
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: 'Careers',
-            url: '/company/careers',
-          },
-          {
-            label: 'Resources',
-            url: '/resources',
-          },
-          {
-            label: 'Blog',
-            url: 'https://medium.com/@plotlygraphs',
-          },
-        ],
-      },
-      {
-        label: 'Support',
-        labelColor: '#119DFF',
-        links: [
-          {
-            label: 'Developer Support',
-            url: 'https://support.plot.ly/',
-          },
-          {
-            label: 'Community Support',
-            url: 'https://community.plot.ly',
-          },
-          {
-            label: 'Documentation',
-            url: 'https://plot.ly/graphing-libraries',
-          },
-        ],
-      },
-    ];
-  }
+  const footerData = [
+    {
+      label: 'Products',
+      labelColor: '#119DFF',
+      links: [
+        {
+          label: 'Dash',
+          url: '/dash/',
+        },
+        {
+          label: 'Chart Studio',
+          url: '/online-chart-maker',
+        },
+        {
+          label: 'Plotly OEM',
+          url: '/products/oem',
+        },
+      ],
+    },
+    {
+      label: 'Pricing',
+      labelColor: '#119DFF',
+      links: [
+        {
+          label: 'Enterprise Pricing',
+          url: 'https://go.plot.ly/get-pricing',
+        },
+      ],
+    },
+    {
+      label: 'About Us',
+      labelColor: '#119DFF',
+      links: [
+        {
+          label: 'Careers',
+          url: '/company/careers',
+        },
+        {
+          label: 'Resources',
+          url: '/resources',
+        },
+        {
+          label: 'Blog',
+          url: 'https://medium.com/@plotlygraphs',
+        },
+      ],
+    },
+    {
+      label: 'Support',
+      labelColor: '#119DFF',
+      links: [
+        {
+          label: 'Community Support',
+          url: 'https://community.plot.ly',
+        },
+        {
+          label: 'Documentation',
+          url: 'https://plot.ly/graphing-libraries',
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="footer-container">
