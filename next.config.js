@@ -194,6 +194,12 @@ module.exports = {
         slug: 'industries-pharmabio',
       },
     },
+    '/industries/finance': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'industries-finance',
+      },
+    },
     '/dash/get-started': {
       page: '/prismic-generator',
       query: {

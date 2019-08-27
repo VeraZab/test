@@ -46,6 +46,10 @@ const MENU = {
         link: '/industries/energy-and-transportation/',
       },
       {
+        title: 'Finance & Banking',
+        link: '/industries/finance/',
+      },
+      {
         title: 'Manufacturing',
         link: '/industries/manufacturing/',
       },
@@ -252,6 +256,7 @@ export default class Navigation extends React.Component {
               ))}
             </div>
           </div>
+
           <div className="navigation-product-item-with-submenu">
             <div className="cta-buttons">
               <a
