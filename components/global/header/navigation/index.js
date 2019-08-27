@@ -256,6 +256,7 @@ export default class Navigation extends React.Component {
               ))}
             </div>
           </div>
+
           <div className="navigation-product-item-with-submenu">
             <div className="cta-buttons">
               <a
