@@ -130,6 +130,7 @@ const Hero = props => {
                     <h1
                       className="hero-title"
                       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
+                      style={{marginTop: '-30px'}}
                     >
                       {props.content.hero_title}
                     </h1>
