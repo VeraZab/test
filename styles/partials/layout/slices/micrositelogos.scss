@@ -1,0 +1,44 @@
+.micrositelogos-container {
+  width: 100%;
+  background-size: cover;
+  padding-top: $gutter;
+  padding-bottom: $gutter * 3;
+
+  @include phone {
+    padding-top: 0;
+    padding-bottom: $gutter;
+  }
+
+  h1 {
+    padding-bottom: $gutter;
+  }
+
+  .micrositelogos-content {
+    max-width: $global-width;
+    margin: auto;
+    padding: $gutter;
+
+    .micrositelogos-title {
+      text-align: center;
+    }
+
+    .micrositelogos-logo-container {
+      margin: auto;
+      width: 70%;
+      display: flex;
+      align-items: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        display: inline-block;
+        max-width: 150px;
+        padding: $gutter * 1.25 $gutter * 0.5;
+
+        @include phone {
+          max-width: 90px;
+        }
+      }
+    }
+  }
+}

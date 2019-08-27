@@ -28,6 +28,13 @@ const FourBoxesOneRow = props => {
             </div>
           ))}
         </div>
+        {props.data.primary.cta_label_bottom && props.data.primary.cta_url_bottom && (
+          <div className="cta-buttons">
+            <a className="button button-primary" href={props.data.primary.cta_url_bottom}>
+              <div className="button-label">{props.data.primary.cta_label_bottom}</div>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

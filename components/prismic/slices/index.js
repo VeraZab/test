@@ -39,6 +39,7 @@ import GraphicRightCopyLeftCenter from './GraphicRightCopyLeftCenter';
 import ButtonsContent from './buttonscontent';
 import SimpleCTACenter from './simpleCTACenter';
 import GraphicLeftCopyRightFeature from './graphicleftcopyrightfeature';
+import MicrositeLogos from './micrositeLogos';
 
 const BlankSlice = () => {
   return null;
@@ -91,6 +92,7 @@ export default class Slices extends React.Component {
       simplectacenter: SimpleCTACenter,
       graphicleftcopyrightfeature: GraphicLeftCopyRightFeature,
       relatedposts: BlankSlice,
+      micrositelogos: MicrositeLogos,
     };
 
     return (
