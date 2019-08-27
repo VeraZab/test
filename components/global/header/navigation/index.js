@@ -46,7 +46,7 @@ const MENU = {
         link: '/industries/energy-and-transportation/',
       },
       {
-        title: 'Finance',
+        title: 'Finance & Banking',
         link: '/industries/finance/',
       },
       {
