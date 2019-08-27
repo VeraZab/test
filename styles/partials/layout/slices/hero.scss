@@ -1,58 +1,5 @@
 $hero-content-space: 60px;
 
-.cs-product-hero {
-  margin-bottom: 240px;
-}
-
-#privacy-policy-subtitle {
-  color: $color-rhino-dark;
-  text-align: center;
-}
-
-.padded {
-  padding-top: 100px;
-  @include tablet {
-    padding-top: 0;
-  }
-}
-
-#privacy-policy-title {
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  padding-top: 180px;
-
-  @include tablet {
-    padding-top: 30px;
-  }
-}
-
-#privacy-policy-hero {
-  width: 100%;
-  margin: auto;
-  @include media('<=1100px') {
-    padding-top: $gutter * 5;
-  }
-  @include phone {
-    padding-top: 0;
-    margin: 0;
-  }
-}
-
-#privacy-policy-bg {
-  background: linear-gradient(#88d2ff, #120e6a);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @include tablet {
-    background-size: auto;
-  }
-
-  @include phone {
-    background-size: inherit;
-  }
-}
-
 .hero-container {
   background: #00004f;
   padding-top: 66px;
@@ -158,9 +105,12 @@ $hero-content-space: 60px;
         margin: $gutter;
         margin-bottom: 0;
         padding: $gutter;
+        align-items: center;
+
         @media (max-width: $shrink-hero-breakpoint) {
           display: none;
         }
+
         img {
           margin: auto;
           @media (max-width: $shrink-hero-breakpoint) {
@@ -168,7 +118,32 @@ $hero-content-space: 60px;
           }
         }
       }
+
+      .hero-right-pardot {
+        @extend .hero-right;
+
+        @media (max-width: $shrink-hero-breakpoint) {
+          display: block;
+          margin: 0 auto;
+          width: auto;
+          padding: 0;
+        }
+
+        iframe {
+          border: 0;
+          margin-left: 100px;
+
+          @media (max-width: $shrink-hero-breakpoint) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      @media (max-width: $shrink-hero-breakpoint) {
+        flex-direction: column;
+      }
     }
+
     .hero-logos {
       margin: $gutter;
       padding-bottom: $gutter * 1.5;
@@ -176,6 +151,7 @@ $hero-content-space: 60px;
       margin-top: 0;
       display: flex;
       justify-content: space-evenly;
+
       .hero-logo-item {
         height: 45px;
         @include tablet {
@@ -188,4 +164,57 @@ $hero-content-space: 60px;
 
 #cs-hero {
   background: #00004f;
+}
+
+.cs-product-hero {
+  margin-bottom: 240px;
+}
+
+#privacy-policy-subtitle {
+  color: $color-rhino-dark;
+  text-align: center;
+}
+
+.padded {
+  padding-top: 100px;
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+#privacy-policy-title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 180px;
+
+  @include tablet {
+    padding-top: 30px;
+  }
+}
+
+#privacy-policy-hero {
+  width: 100%;
+  margin: auto;
+  @include media('<=1100px') {
+    padding-top: $gutter * 5;
+  }
+  @include phone {
+    padding-top: 0;
+    margin: 0;
+  }
+}
+
+#privacy-policy-bg {
+  background: linear-gradient(#88d2ff, #120e6a);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    background-size: auto;
+  }
+
+  @include phone {
+    background-size: inherit;
+  }
 }

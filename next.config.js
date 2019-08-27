@@ -194,6 +194,12 @@ module.exports = {
         slug: 'industries-pharmabio',
       },
     },
+    '/microsite/a': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'microsite-dash-a',
+      },
+    },
   }),
   webpack: config => {
     config.plugins.push(
