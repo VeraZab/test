@@ -16,7 +16,7 @@ const Hero = props => {
         {props.content.promo_banner && props.content.promo_banner.length > 0 && (
           <div className="promobanner">{renderPrismic(props.content.promo_banner)}</div>
         )}
-        {props.content.hero_title ? (
+        {props.content.hero_title || props.content.hero_rich_title ? (
           <div
             className="hero"
             id={
@@ -46,7 +46,9 @@ const Hero = props => {
                     className="hero-title"
                     id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
                   >
-                    {props.content.hero_title}
+                    {props.content.hero_title
+                      ? props.content.hero_title
+                      : renderPrismic(props.content.hero_rich_title)}
                   </h1>
                   <div
                     className="hero-subtitle"
@@ -121,8 +123,9 @@ const Hero = props => {
   const renderPardotHero = () => {
     return (
       <>
-        {props.content.hero_title ? (
+        {props.content.hero_title || props.content.hero_rich_title ? (
           <div className="hero">
+            <a name="demoForm"></a>
             <div>
               <div className="hero-top">
                 <div className="hero-left" style={{marginTop: '50px'}}>
@@ -132,7 +135,9 @@ const Hero = props => {
                       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
                       style={{marginTop: '-30px'}}
                     >
-                      {props.content.hero_title}
+                      {props.content.hero_title
+                        ? props.content.hero_title
+                        : renderPrismic(props.content.hero_rich_title)}
                     </h1>
                     <div
                       className="hero-subtitle"
