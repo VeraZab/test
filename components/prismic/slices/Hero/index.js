@@ -129,11 +129,10 @@ const Hero = props => {
             <div>
               <div className="hero-top">
                 <div className="hero-left" style={{marginTop: '50px'}}>
-                  <div className="hero-copy-container">
+                  <div className="hero-copy-container" style={{marginTop: '-50px'}}>
                     <h1
                       className="hero-title"
                       id={props.content.keywords === 'privacy-policy' ? 'privacy-policy-title' : ''}
-                      style={{marginTop: '-30px'}}
                     >
                       {props.content.hero_title
                         ? props.content.hero_title
