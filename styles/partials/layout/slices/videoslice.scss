@@ -1,50 +1,78 @@
-.video-left-copy-right-container,
-.video-right-copy-left-container {
+.video-left-copy-right-container {
   max-width: $global-width;
-  margin: auto;
+  margin: $gutter * 4 auto $gutter * 3;
 
-  .pretitle {
-    margin-top: $gutter;
+  @media (max-width: 1060px) {
+    margin: $gutter * 3 auto $gutter * 4;
   }
+
   p {
     margin-top: 0;
-    @include tablet {
-      margin-bottom: $gutter;
-      text-align: center;
+    @media (max-width: 1060px) {
+      margin: auto;
     }
   }
-  .video-left-copy-right,
-  .video-right-copy-left {
-    display: flex;
-    margin: $gutter;
 
-    @include tablet {
-      flex-direction: column;
+  .video-left-copy-right {
+    margin: $gutter * 2;
+
+    @media (max-width: 1060px) {
+      margin: $gutter;
     }
+
     .video-container {
-      .iframe-container {
+      margin: $gutter;
+      padding: $gutter;
+      position: relative;
+      padding-bottom: 26%;
+      height: 0;
+      width: 50%;
+      display: inline-block;
+
+      @media (max-width: 1060px) {
+        width: 86%;
+        padding-bottom: 41%;
+        margin: auto;
+      }
+
+      iframe {
+        box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
-        iframe {
-          height: 100%;
-          width: 100%;
+
+        @media (max-width: 1060px) {
+          left: 9%;
         }
       }
     }
-    .video-container,
-    .copy-container {
-      width: 50%;
-      margin-right: $gutter;
-      @include tablet {
-        width: auto;
-        margin: auto;
+
+    .copy-container-desktop {
+      width: 45%;
+      display: inline-block;
+      vertical-align: top;
+      padding: $gutter;
+      padding-right: 0px;
+
+      @media (max-width: 1060px) {
+        display: none;
       }
-      iframe {
-        box-shadow: 4px 4px 14px rgba(#ebf0f8, 0.7);
-        border-radius: 10px;
+    }
+
+    .copy-container-tablet {
+      width: 100%;
+      display: none;
+      vertical-align: top;
+      padding: $gutter $gutter $gutter * 2;
+      margin: auto;
+      text-align: center;
+
+      @media (max-width: 1060px) {
+        display: block;
       }
     }
   }
-}
-.video-right-copy-left-container {
-  margin-top: $space-between;
 }
