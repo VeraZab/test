@@ -218,6 +218,18 @@ module.exports = {
         slug: 'microsite-dash-c',
       },
     },
+    '/dash/learn-more': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'microsite-dash-d',
+      },
+    },
+    '/dash/learn_more': {
+      page: '/prismic-generator',
+      query: {
+        slug: 'microsite-dash-e',
+      },
+    },
   }),
   webpack: config => {
     config.plugins.push(
