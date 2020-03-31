@@ -29,7 +29,7 @@
     "mdi-react": "^3.4.0",
     "microtip": "^0.2.2",
     "module-alias": "^2.0.1",
-    "next": "^6.0.3",
+    "next": "^9.3.3",
     "next-cookies": "^1.0.3",
     "node-sass": "^4.6.1",
     "normalize-scss": "^6.0.0",
